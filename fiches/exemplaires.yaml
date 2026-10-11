@@ -15,6 +15,8 @@
 # v2.3.2 : facette `distance` relue selon la règle 7 de la spec §9.7 H (prise de vue, pas écran) ;
 # `note_distance` dans chaque épisode (T22).
 # Droits des images : règle Q15 (éditeur du projet, 2026-10-11) : une image réellement libre (Commons CC, domaine public avéré,
+# série 18 : avéré dans le pays d'origine, l'UE et les États-Unis (critère de l'éditeur du projet) ; série 20 : une image hébergée
+# sur Commons avec licence et balise indiquées suffit, le doute sur le pays d'origine ne bloque plus ;
 # Met Open Access) est reproduite avec son crédit complet ; sinon, lien seulement (credit.usage, credit.lien_externe). Les ids `app:` d'objets et de parties
 # sont des ids d'application (§9.7 I), pas des ids du cœur.
 
@@ -64,17 +66,18 @@ objets:
     auteur_image: Kazimir Malevich (auteur de l'œuvre, selon la page Commons) ; crédit « The Museum of Modern Art »
     regime: tableau
     parties: ["#carre", "#fond"]
-    droits: "PD-Art, domaine public selon Commons, statut selon le pays ; œuvre de Kazimir Malévitch, photographe non nommé ; lien seulement"
-    credit:   # 2.5 (Q15, X16) : relevé par l’API de Wikimedia Commons (extmetadata) le 2026-10-10
-      auteur: "Kazimir Malévitch (auteur de l’œuvre) ; photographe non nommé ; crédit Commons « The Museum of Modern Art »"
-      licence: "domaine public (selon la page Commons)"
-      source: "Wikimedia Commons"
+    droits: "domaine public selon la page Commons (balise {{PD-Art|PD-old-auto-expired|deathyear=1935}}) ; œuvre de Kazimir Malévitch (mort en 1935), reproduction fidèle (PD-Art) ; image reproduite (série 20 ; doute sur le pays d’origine noté, non bloquant)"
+    credit:   # 2.5 (Q15, X16) : relevé par l’API de Wikimedia Commons (extmetadata) le 2026-10-10 ; revu en séries 17, 18 et 20 (2026-10-11 : API et balise relues, docs/droits-exemples-2026-10-11.md)
+      auteur: "Kazimir Malévitch (auteur de l’œuvre) ; auteur de la photo : non nommé (reproduction photographique fidèle) ; source indiquée sur Commons : The Museum of Modern Art"
+      licence: "domaine public (balise Commons : {{PD-Art|PD-old-auto-expired|deathyear=1935}}, marque Public Domain Mark 1.0 ; API : LicenseShortName « Public domain », AttributionRequired false, Restrictions vide)"
+      source: "Wikimedia Commons ; source déclarée : The Museum of Modern Art (n° 817.1935)"
       url: "https://commons.wikimedia.org/wiki/File:Kazimir_Malevich_-_%27Suprematist_Composition-_White_on_White%27,_oil_on_canvas,_1918,_Museum_of_Modern_Art.jpg"
-      date_verification: "2026-10-10"
-      mention_requise: "aucune selon la page Commons ; mention d’usage proposée : « Kazimir Malévitch, 1918, The Museum of Modern Art ; image Wikimedia Commons » ; le statut de domaine public dans le pays de diffusion reste à confirmer (Q15)"
-      usage: lien_seulement   # Q15, série 7 : image_reproduite | lien_seulement
-      lien_externe: "https://commons.wikimedia.org/wiki/File:Kazimir_Malevich_-_%27Suprematist_Composition-_White_on_White%27,_oil_on_canvas,_1918,_Museum_of_Modern_Art.jpg"   # lien seulement : la fiche cite l’objet et pointe vers l’image en ligne, sans copie
-      motif_usage: "page Commons lue le 2026-10-11 : modèles {{PD-Art|PD-old-auto-expired|deathyear=1935}} : domaine public dans les pays où la protection dure 70 ans après la mort de l’auteur ou moins ; le statut de l’œuvre et de la photographie dépend du pays de diffusion : pas avéré partout, donc lien seulement (règle Q15)"
+      url_telechargement: "https://upload.wikimedia.org/wikipedia/commons/5/56/Kazimir_Malevich_-_%27Suprematist_Composition-_White_on_White%27%2C_oil_on_canvas%2C_1918%2C_Museum_of_Modern_Art.jpg"   # fichier original, 1626 × 1686 px, 583 ko (API Commons, 2026-10-11)
+      fichier: maquette/images/exemplaires/malevich-white-on-white-1918.jpg   # nom de stockage (recuperer-images.py : identifiant sans « app: ») ; lieu définitif : docs/depot-public.md
+      date_verification: "2026-10-11"
+      mention_requise: "aucune exigée par la licence ; nommer l’auteur de l’œuvre (droit moral, en France) : fait dans la mention d’usage, « Kazimir Malévitch, Composition suprématiste. Blanc sur blanc, 1918, The Museum of Modern Art, New York ; image Wikimedia Commons, domaine public »"
+      usage: image_reproduite   # Q15, série 7 : image_reproduite | lien_seulement ; série 20 : était lien_seulement (séries 18 et 19)
+      motif_usage: "série 20 (2026-10-11 ; décision de l’éditeur du projet ; pas un avis juridique) : le site reproduit une photo de l’œuvre, pas l’œuvre ; critère (Q15, X16) : image hébergée sur Wikimedia Commons avec licence et balise indiquées. Rempli : page Commons relue par l’API le 2026-10-11 (LicenseShortName « Public domain », AttributionRequired false, Restrictions vide ; balise {{PD-Art|PD-old-auto-expired|deathyear=1935}}) : image reproduite. doute noté, non bloquant (série 20) : pour le pays d’origine (Russie), le modèle {{PD-Russia-expired}} remplace la date de décès par celle d’une réhabilitation posthume ; Malévitch a été arrêté en 1930, dossier classé le 29 novembre 1930 pour absence d’infraction (Otkrytyi spisok, Mémorial) ; aucune source lue ne dit s’il y a eu une réhabilitation après 1935 : doute ni levé ni avéré (en séries 18 et 19, il valait lien seulement ; détail : docs/droits-exemples-2026-10-11.md). UE : domaine public (mort en 1935 ; reproduction fidèle libre, directive (UE) 2019/790, art. 14) ; États-Unis : domaine public selon le modèle (publiée avant 1931)."
   - id: app:malevich-black-square-1915
     description: Kazimir Malévitch, Carré noir (Carré noir suprématiste), 1915, huile sur toile, 79,5 × 79,5 cm, galerie Tretiakov, Moscou
     page_objet: null   # page du musée non vérifiée ; à renseigner
@@ -83,17 +86,18 @@ objets:
     auteur_image: Kazimir Malevich (auteur de l'œuvre, selon la page Commons) ; crédit « Tretyakov Gallery, Moscow »
     regime: tableau
     parties: ["#carre-noir", "#bord-blanc"]
-    droits: "PD-Art (PD-Russia-expired, vérifié sur Commons le 2026-10-11), domaine public selon Commons, statut selon le pays ; œuvre de Kazimir Malévitch, photographe non nommé ; lien seulement"
-    credit:   # 2.5 (Q15, X16) : relevé par l’API de Wikimedia Commons (extmetadata) le 2026-10-10
-      auteur: "Kazimir Malévitch (auteur de l’œuvre) ; photographe non nommé ; crédit Commons « Tretyakov Gallery, Moscow, My Tretyakov »"
-      licence: "domaine public (selon la page Commons)"
-      source: "Wikimedia Commons"
+    droits: "domaine public selon la page Commons (balise {{PD-Art|PD-Russia-expired}}) ; œuvre de Kazimir Malévitch (mort en 1935), reproduction fidèle (PD-Art) ; image reproduite (série 20 ; doute sur le pays d’origine noté, non bloquant)"
+    credit:   # 2.5 (Q15, X16) : relevé par l’API de Wikimedia Commons (extmetadata) le 2026-10-10 ; revu en séries 17, 18 et 20 (2026-10-11 : API et balise relues, docs/droits-exemples-2026-10-11.md)
+      auteur: "Kazimir Malévitch (auteur de l’œuvre) ; auteur de la photo : non nommé (reproduction photographique fidèle) ; source indiquée sur Commons : galerie Tretiakov, Moscou (site de la galerie et « My Tretyakov »)"
+      licence: "domaine public (balise Commons : {{PD-Art|PD-Russia-expired}} ; API : LicenseShortName « Public domain », AttributionRequired false, Restrictions vide)"
+      source: "Wikimedia Commons ; source déclarée : galerie Tretiakov, Moscou"
       url: "https://commons.wikimedia.org/wiki/File:Kazimir_Malevich,_1915,_Black_Suprematic_Square,_oil_on_linen_canvas,_79.5_x_79.5_cm,_Tretyakov_Gallery,_Moscow.jpg"
-      date_verification: "2026-10-10"
-      mention_requise: "aucune selon la page Commons ; mention d’usage proposée : « Kazimir Malévitch, 1915, galerie Tretiakov ; image Wikimedia Commons » ; le statut de domaine public dans le pays de diffusion reste à confirmer (Q15)"
-      usage: lien_seulement   # Q15, série 7 : image_reproduite | lien_seulement
-      lien_externe: "https://commons.wikimedia.org/wiki/File:Kazimir_Malevich,_1915,_Black_Suprematic_Square,_oil_on_linen_canvas,_79.5_x_79.5_cm,_Tretyakov_Gallery,_Moscow.jpg"   # lien seulement : la fiche cite l’objet et pointe vers l’image en ligne, sans copie
-      motif_usage: "page Commons lue le 2026-10-11 : modèles {{PD-Art|PD-Russia-expired}} : domaine public selon le droit russe ; ailleurs, selon le pays ; image reprise du site de la galerie Tretiakov : pas avéré partout, donc lien seulement (règle Q15)"
+      url_telechargement: "https://upload.wikimedia.org/wikipedia/commons/d/dc/Kazimir_Malevich%2C_1915%2C_Black_Suprematic_Square%2C_oil_on_linen_canvas%2C_79.5_x_79.5_cm%2C_Tretyakov_Gallery%2C_Moscow.jpg"   # fichier original, 1718 × 1718 px, 1,45 Mo (API Commons, 2026-10-11)
+      fichier: maquette/images/exemplaires/malevich-black-square-1915.jpg   # nom de stockage (recuperer-images.py : identifiant sans « app: ») ; lieu définitif : docs/depot-public.md
+      date_verification: "2026-10-11"
+      mention_requise: "aucune exigée par la licence ; nommer l’auteur de l’œuvre (droit moral, en France) : fait dans la mention d’usage, « Kazimir Malévitch, Carré noir, 1915, galerie Tretiakov, Moscou ; image Wikimedia Commons, domaine public »"
+      usage: image_reproduite   # Q15, série 7 : image_reproduite | lien_seulement ; série 20 : était lien_seulement (séries 18 et 19)
+      motif_usage: "série 20 (2026-10-11 ; décision de l’éditeur du projet ; pas un avis juridique) : le site reproduit une photo de l’œuvre, pas l’œuvre ; critère (Q15, X16) : image hébergée sur Wikimedia Commons avec licence et balise indiquées. Rempli : page Commons relue par l’API le 2026-10-11 (LicenseShortName « Public domain », AttributionRequired false, Restrictions vide ; balise {{PD-Art|PD-Russia-expired}}, dont le texte porte lui-même la réserve de la réhabilitation) : image reproduite ; image venue du site de la galerie Tretiakov (champ source de Commons). doute noté, non bloquant (série 20) : pour le pays d’origine (Russie), le modèle {{PD-Russia-expired}} remplace la date de décès par celle d’une réhabilitation posthume ; Malévitch a été arrêté en 1930, dossier classé le 29 novembre 1930 pour absence d’infraction (Otkrytyi spisok, Mémorial) ; aucune source lue ne dit s’il y a eu une réhabilitation après 1935 : doute ni levé ni avéré (en séries 18 et 19, il valait lien seulement ; détail : docs/droits-exemples-2026-10-11.md). UE : domaine public (mort en 1935 ; reproduction fidèle libre, directive (UE) 2019/790, art. 14) ; États-Unis : domaine public selon le modèle (publiée avant 1931)."
   - id: app:san-vitale-ravenne
     description: basilique San Vitale, Ravenne, mosaïque de l'abside (Christ entre des anges), VIe siècle, photographiée en 2016
     page_objet: null
@@ -122,38 +126,37 @@ objets:
     auteur_image: Commons ne nomme pas de photographe ; champ auteur « The original uploader was Chick Bowen at English Wikipedia » ; source déclarée « Beinecke Library, Yale University »
     regime: imprimé (page de livre)
     parties: ["#page-de-titre"]
-    droits: "PD-old-100-expired, domaine public selon Commons, statut selon le pays ; photographe non nommé (source : Beinecke Library, Yale University) ; lien seulement"
-    credit:   # 2.5 (Q15, X16) : relevé par l’API de Wikimedia Commons (extmetadata) le 2026-10-10
-      auteur: "à renseigner : Commons ne nomme pas de photographe (champ auteur : « The original uploader was Chick Bowen at English Wikipedia »)"
-      licence: "domaine public (selon la page Commons)"
+    droits: "domaine public : page imprimée de 1851 (Herman Melville, mort en 1891), reproduction fidèle ; vérifié le 2026-10-11 (docs/droits-exemples-2026-10-11.md) ; image reproduite"
+    credit:   # 2.5 (Q15, X16) : relevé par l’API de Wikimedia Commons (extmetadata) le 2026-10-10 ; revu en série 17 (2026-10-11 : modèles de licence lus, docs/droits-exemples-2026-10-11.md)
+      auteur: "Herman Melville (auteur du livre) ; Harper & Brothers (éditeur, 1851) ; numérisation de la Beinecke Library, Yale University (source déclarée), versée sur en.wikipedia par Chick Bowen en 2007 (champ auteur de Commons)"
+      licence: "domaine public (Commons : {{PD-old-100-expired}}, marque Public Domain Mark 1.0 ; champ permission « PD-OLD, PD-US » ; API : LicenseShortName « Public domain », AttributionRequired false)"
       source: "Wikimedia Commons (transféré depuis en.wikipedia) ; source déclarée : Beinecke Library, Yale University"
       url: "https://commons.wikimedia.org/wiki/File:Moby-Dick_FE_title_page.jpg"
-      date_verification: "2026-10-10"
-      mention_requise: "aucune selon la page Commons ; mention d’usage proposée : « Herman Melville, Moby-Dick, 1851, page de titre ; image Wikimedia Commons » ; provenance à confirmer (Q15)"
-      usage: lien_seulement   # Q15, série 7 : image_reproduite | lien_seulement
-      lien_externe: "https://commons.wikimedia.org/wiki/File:Moby-Dick_FE_title_page.jpg"   # lien seulement : la fiche cite l’objet et pointe vers l’image en ligne, sans copie
-      motif_usage: "page Commons lue le 2026-10-11 : modèle {{PD-old-100-expired}} ; la page imprimée de 1851 est du domaine public, mais l’image n’a pas de photographe nommé (« original uploader » de en.wikipedia) et vient de la Beinecke Library, dont les conditions n’ont pas été lues : provenance non avérée, donc lien seulement (règle Q15) ; une numérisation de la même édition est en ligne sur Internet Archive (https://archive.org/details/mobydickorwhale01melv, page ouverte le 2026-10-11, conditions non lues)"
+      date_verification: "2026-10-11"
+      mention_requise: "aucune exigée par la licence ; nommer l’auteur de l’œuvre (droit moral, en France) : fait dans la mention d’usage, « Herman Melville, Moby-Dick; or, The Whale, New York, Harper & Brothers, 1851, page de titre ; exemplaire de la Beinecke Library, Yale University (selon Commons) ; image Wikimedia Commons, domaine public »"
+      usage: image_reproduite   # Q15, série 7 : image_reproduite | lien_seulement ; série 17 : était lien_seulement
+      motif_usage: "série 17 (2026-10-11 ; API Commons et texte du modèle ; pas un avis juridique) : livre publié aux États-Unis en 1851, donc domaine public aux États-Unis (publié avant 1931 : tableau de Cornell, Hirtle, mis à jour le 1er janvier 2026) ; auteur mort en 1891 (Wikidata Q4985) : œuvre du domaine public partout (le modèle {{PD-old-100-expired}} vaut pour toute protection d’au plus vie + 100 ans) ; le modèle donne le fichier « free of known restrictions under copyright law, including all related and neighboring rights » ; la numérisation, si elle vient bien de Yale (Beinecke Library, source déclarée ; provenance non confirmée), est d’usage libre selon sa politique d’accès ouvert, qui permet d’utiliser les images numériques d’œuvres du domaine public de ses collections « by anyone for any purpose » (guides.library.yale.edu/openaccess, lu le 2026-10-11 ; la notice de l’exemplaire n’a pas été retrouvée, le lien de Commons est ancien) ; aucune restriction sur la page : réellement libre, reproduite (règle Q15)"
 
   - id: app:malevich-red-square-1915
-    description: Kazimir Malévitch, Carré rouge (titre de la page Commons « Red Square. Visual Realism of a Peasant Woman in Two Dimensions »), 1915, tableau
-    page_objet: null   # la page Commons ne nomme pas d'institution ; page du musée à renseigner
-    image: https://commons.wikimedia.org/wiki/File:Red_Square._Visual_Realism_of_a_Peasant_Woman_in_Two_Dimensions.jpg
-    licence_affichee: Public domain
-    auteur_image: Kazimir Malevich (auteur de l'œuvre, selon la page Commons) ; crédit « http://www.abcgallery.com/M/malevich/malevich.html »
+    description: Kazimir Malévitch, Carré rouge (titre de l’œuvre sur Commons « Red Square. Visual Realism of a Peasant Woman in Two Dimensions »), 1915, tableau
+    page_objet: null   # institution selon Commons : Musée russe (catégorie « Red square by Malevich (GRM) ») ; page du musée à renseigner
+    image: "https://commons.wikimedia.org/wiki/File:Kazimir_malevich,_quadrato_rosso_(realismo_del_pittore_di_una_campagnola_in_due_dimensioni),_1915.JPG"
+    licence_affichee: CC BY-SA 3.0 (double licence GFDL et CC BY-SA 3.0 sur la page ; CC BY-SA 3.0 retenue)
+    auteur_image: Sailko (photo, « Own work », prise le 2011-09-02)
     regime: tableau
     parties: ["#carre-rouge", "#fond"]
-    droits: "PD-Art, domaine public selon Commons, statut selon le pays ; œuvre de Kazimir Malévitch, photographe non nommé, image reprise d’un site tiers ; lien seulement"
-    credit:   # 2.5 (Q15, X16) : relevé par l’API de Wikimedia Commons (extmetadata) le 2026-10-10
-      auteur: "Kazimir Malévitch (auteur de l’œuvre) ; photographe non nommé ; crédit Commons : un site tiers (abcgallery.com)"
-      licence: "domaine public (selon la page Commons)"
-      source: "Wikimedia Commons ; institution à renseigner"
-      url: "https://commons.wikimedia.org/wiki/File:Red_Square._Visual_Realism_of_a_Peasant_Woman_in_Two_Dimensions.jpg"
-      date_verification: "2026-10-10"
-      mention_requise: "aucune selon la page Commons ; mention d’usage proposée : « Kazimir Malévitch, 1915 ; image Wikimedia Commons » ; provenance de l’image à confirmer (Q15)"
-      usage: lien_seulement   # Q15, série 7 : image_reproduite | lien_seulement
-      lien_externe: "https://commons.wikimedia.org/wiki/File:Red_Square._Visual_Realism_of_a_Peasant_Woman_in_Two_Dimensions.jpg"   # lien seulement : la fiche cite l’objet et pointe vers l’image en ligne, sans copie
-      motif_usage: "page Commons lue le 2026-10-11 : modèles {{PD-Art|PD-old-auto-expired|deathyear=1935}} ; image reprise d’un site tiers (abcgallery.com), institution (Musée russe) sans page vérifiée ; statut selon le pays : pas avéré partout, donc lien seulement (règle Q15)"
-
+    droits: "CC BY-SA 3.0, Sailko (photo d’une œuvre de Kazimir Malévitch, mort en 1935), image reproduite (série 20 ; remplace la reproduction venue de abcgallery.com, 673 × 700 px ; doute sur le pays d’origine noté, non bloquant)"
+    credit:   # 2.5 (Q15, X16) : série 20 (2026-10-11) : nouvelle image, relevée par l’API de Wikimedia Commons (extmetadata et wikicode) ; docs/droits-exemples-2026-10-11.md
+      auteur: "Sailko (auteur de la photo, « Own work », prise le 2011-09-02 ; attribution donnée par la page : « I, Sailko ») ; version éclaircie par Philafrenzy (2013, historique du fichier Commons : original téléversé par Sailko le 2011-09-20 ; fichier actuel téléversé le 2013-05-06 par Philafrenzy, commentaire « brighten a little. ») ; œuvre de Kazimir Malévitch"
+      licence: "CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0) ; balise de la page : {{self|GFDL|Cc-by-sa-3.0}} (double licence, CC BY-SA 3.0 retenue) ; API : LicenseShortName « CC BY-SA 3.0 », AttributionRequired true, Restrictions vide"
+      source: "Wikimedia Commons, « Own work » (modèle Art Photo) ; catégorie Commons « Red square by Malevich (GRM) » (Musée russe)"
+      url: "https://commons.wikimedia.org/wiki/File:Kazimir_malevich,_quadrato_rosso_(realismo_del_pittore_di_una_campagnola_in_due_dimensioni),_1915.JPG"
+      url_telechargement: "https://upload.wikimedia.org/wikipedia/commons/3/36/Kazimir_malevich%2C_quadrato_rosso_%28realismo_del_pittore_di_una_campagnola_in_due_dimensioni%29%2C_1915.JPG"   # fichier original, 1381 × 1380 px, 234 ko (API Commons, 2026-10-11)
+      fichier: maquette/images/exemplaires/malevich-red-square-1915.jpg   # nom de stockage (recuperer-images.py : identifiant sans « app: ») ; lieu définitif : docs/depot-public.md
+      date_verification: "2026-10-11"
+      mention_requise: "« Kazimir malevich, quadrato rosso (realismo del pittore di una campagnola in due dimensioni), 1915 », Sailko (version éclaircie par Philafrenzy, 2013, historique du fichier Commons), https://commons.wikimedia.org/wiki/File:Kazimir_malevich,_quadrato_rosso_(realismo_del_pittore_di_una_campagnola_in_due_dimensioni),_1915.JPG, licence CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0) ; nommer aussi l’auteur de l’œuvre (droit moral, en France) : « Kazimir Malévitch, Carré rouge, 1915, Musée russe » ; indiquer toute modification de l’image (recadrage, retouche) ; une adaptation se diffuse sous la même licence"
+      usage: image_reproduite   # Q15, série 7 : image_reproduite | lien_seulement ; série 20 : était lien_seulement (séries 18 et 19), image changée
+      motif_usage: "série 20 (2026-10-11 ; décision de l’éditeur du projet ; pas un avis juridique) : le site reproduit une photo de l’œuvre, pas l’œuvre ; critère (Q15, X16) : image hébergée sur Wikimedia Commons avec licence et balise indiquées. Rempli : photo « Own work » de Sailko, CC BY-SA 3.0, balise {{self|GFDL|Cc-by-sa-3.0}}, page relue par l’API le 2026-10-11 (AttributionRequired true, Restrictions vide) : reproduite avec la mention complète. Choisie parmi les quatre fichiers de la catégorie Commons « Red square by Malevich (GRM) » (lus le 2026-10-11) : l’ancienne image (https://commons.wikimedia.org/wiki/File:Red_Square._Visual_Realism_of_a_Peasant_Woman_in_Two_Dimensions.jpg, reprise de abcgallery.com, 673 × 700 px, 34 ko, balise {{PD-Art|PD-old-auto-expired|deathyear=1935}}) n’est plus utilisée ; autres candidats écartés : scan du livre « Казимир Малевич в Русском музее » (1654 × 1650 px, PNG de 6,3 Mo, PD-Art, couleurs nettement plus sombres) et photo de shakko (CC BY-SA 4.0, cadre, mur et cartel dans l’image). Limite : la page de la photo ne porte de balise que pour la photo (modèle Art Photo sans champ « artwork license ») ; l’œuvre n’y a pas de balise propre. doute noté, non bloquant (série 20) : pour le pays d’origine (Russie), le modèle {{PD-Russia-expired}} remplace la date de décès par celle d’une réhabilitation posthume ; Malévitch a été arrêté en 1930, dossier classé le 29 novembre 1930 pour absence d’infraction (Otkrytyi spisok, Mémorial) ; aucune source lue ne dit s’il y a eu une réhabilitation après 1935 : doute ni levé ni avéré (en séries 18 et 19, il valait lien seulement ; détail : docs/droits-exemples-2026-10-11.md). UE : domaine public (mort en 1935 ; reproduction fidèle libre, directive (UE) 2019/790, art. 14) ; États-Unis : domaine public selon le modèle (publiée avant 1931)."
   - id: app:commons-beuchaer-gestockt
     description: échantillon de porphyre granitique (roche de la famille du granite) à face bouchardée, environ 25 × 15 cm (description de la page Commons « Bush hammered granite porphyry; sample about 25 x 15 cm » ; catégories « Bush-hammering » et « Granite porphyry samples »), photographié en 2007
     page_objet: null   # échantillon sans institution ; seule la photo est documentée
@@ -241,7 +244,8 @@ episodes:
     note_distance: "reproduction d'un tableau entier, sans repère de prise de vue ; aucun type à distance critique n'y est jugé (prise de vue, spec §9.7 H règle 7 ; avant 2.3.2 : near, qui décrivait l'écran)"
     usesModality: [vision]
     observer: l’équipe (un seul observateur ; aucun accord déclaré)
-    date: "2026-10-10"
+    date: "2026-10-11"   # série 21 : observation sur la photo de Commons (Sailko, version éclaircie en 2013) ; avant : 2026-10-10
+    note: "série 21 : épisode redaté le 2026-10-11, quand l'image de l'objet a changé (série 20) ; l'observation du 2026-10-10 portait sur l'ancienne reproduction (abcgallery.com, via Commons) ; facettes inchangées"
   - id: ppp-e:pilote-08
     target: app:commons-corduroy-fabric
     observedUnder: {presentation: screen, lumiere: unknown, distance: near, angle: unknown, duree: exam}
@@ -429,10 +433,10 @@ assertions:
     inRegion: ppp:hue/red
     inEpisode: ppp-e:pilote-07
     modality: vision
-    source: photo (reproduction en ligne ; conditions de prise de vue inconnues)
+    source: photo de Commons (Sailko, 2011-09-02 ; lumière et balance des couleurs inconnues)   # série 22 : ajustement de formulation après la reconfirmation (« réglages » précisé), sens inchangé
     ontologyVersion: "2.3.1"
     doute: oui
-    note: un rouge qui tire sur l'orange sur cette reproduction ; la région voisine « orange » (orange) se défend aussi
+    note: "sur la photo de Commons vue le 2026-10-11 (Sailko, 2011 ; version éclaircie par Philafrenzy en 2013, historique du fichier Commons), un rouge franc, un peu chaud ; sur l'ancienne reproduction (abcgallery.com, vue le 2026-10-10), il tirait sur l'orange et la région voisine « orange » se défendait aussi ; la couleur vue dépend de la prise de vue, de la lumière et de l'écran (note_conditions de la fiche) : `red` sur les deux images"
   - id: ppp-a:pilote-0701
     about: app:malevich-black-square-1915#carre-noir
     assertedType: ppp:lightness
@@ -481,3 +485,4 @@ relecture_explicative:
     - {assertion: ppp-a:pilote-0103, champ: note, date: "2026-10-10", avant: "(pas de note)", apres: "note ajoutée par la relecture explicative (T24)", remarque: "ce que montre la photo, et ce qu'elle ne permet pas de dire"}
     - {assertion: ppp-a:pilote-0301, champ: note, date: "2026-10-10", avant: "note sans réserve", apres: "réserve T24 ajoutée", remarque: "dépend de 0103"}
     - {assertion: ppp-a:pilote-0105, champ: note, avant: "si l'on juge que ces reliefs ne font pas saillie un à un, on peut aussi défendre la région « moyenne » (medium), et la relecture explicative penche pour elle ; remplace 0103 (T24)", apres: "région « moyenne » (medium) retenue, en suivant la relecture explicative (décision de l’éditeur du projet, 2026-10-10, T24) ; si l'on juge que ces reliefs font saillie un à un, on peut aussi défendre « grosse » (coarse) ; remplace 0103 (T24)", raison: "T24 (décision de l’éditeur du projet, 2026-10-10) : 0105 passe de coarse à medium ; seule la fin de la note change", date: "2026-10-10", remarque: "re-confirmée par la relecture explicative (série 6) ; la note dit d'abord la décision (medium), puis l'autre lecture possible (coarse) ; la description des reliefs, inchangée, convient aux deux ; l'assertion medium est celle que proposait la relecture explicative (T24)"}
+    - {assertion: ppp-a:pilote-0601, champ: "note, source", date: "2026-10-11", avant: "note de la série 20 (rouge tirant sur l'orange sur l'ancienne reproduction ; image changée, assertion à revoir) ; source « photo (reproduction en ligne ; conditions de prise de vue inconnues) »", apres: "note et source actuelles (photo de Commons de Sailko, version éclaircie par Philafrenzy en 2013 ; `red` sur les deux images)", raison: "image de l'objet changée en série 20 ; épisode ppp-e:pilote-07 redaté le 2026-10-11 ; région inchangée (red)"}

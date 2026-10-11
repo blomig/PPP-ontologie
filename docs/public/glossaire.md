@@ -1,6 +1,6 @@
 # Glossaire
 
-Les mots du projet PPP, expliqués simplement. Les exemples viennent des fiches publiées : texture, densité perceptive, contraste de clarté, teinte.
+Les mots du projet PPP, expliqués simplement. Sept fiches sont publiées : texture, densité perceptive, contraste de clarté, teinte, clarté, taille perçue et orientation de la texture. Chaque exemple ci-dessous vient de l'une d'elles.
 
 **Candidat**
 C'est le statut de toutes les fiches aujourd'hui : le type est proposé, mais pas encore admis au « cœur » de l'ontologie. Pour y entrer, il lui faudra une fiche complète, des épreuves réussies sur des objets publics, aucune objection sérieuse en suspens, et une décision prise en commun.

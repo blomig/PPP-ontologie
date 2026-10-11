@@ -362,6 +362,8 @@ objets:
       licence: ""             # ex. CC BY-SA 4.0, CC0 1.0, domaine public (selon la page)
       source: ""              # ex. Wikimedia Commons, « Own work » ; geograph.org.uk ; musée
       url: ""                 # page de l’image
+      url_telechargement: ""  # facultatif (série 20) : adresse du fichier original (Commons : upload.wikimedia.org), lue par l’API
+      fichier: ""             # facultatif (série 20) : nom de stockage de l’image reproduite (identifiant de l’objet sans « app: », .jpg)
       date_verification: ""   # AAAA-MM-JJ
       mention_requise: ""     # mention exigée par la licence (CC BY-SA : titre, auteur, lien, licence et lien vers la licence, modifications) ; « aucune » pour CC0 ou domaine public
       usage: image_reproduite # v2.6 (Q15) : image_reproduite | lien_seulement

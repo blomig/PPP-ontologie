@@ -12,7 +12,7 @@ Lisez d'abord le [glossaire](docs/public/glossaire.md), une page. Puis ouvrez l'
 
 - **Contraste de clarté** : regardez seulement le clair et le sombre, comme sur une photo en noir et blanc. Entre deux zones, l'écart va de deux gris voisins au noir sur du blanc.
 - **Clarté** : une seule zone paraît-elle très sombre, sombre, moyenne, claire ou très claire ? La couleur ne compte pas ici.
-- **Taille perçue** : à côté de votre corps, la chose tient-elle dans la main, est-elle à l'échelle du corps (une chaise) ou le dépasse-t-elle (une maison) ?
+- **Taille perçue** : à côté de votre corps, la chose paraît-elle plus petite que le bout du doigt (comme un grain de riz), tenir dans la main (comme une tasse), être à l'échelle du corps (comme une chaise) ou le dépasser (comme une maison) ?
 - **Densité perceptive** : pour sa taille, la chose contient-elle peu ou beaucoup d'éléments distincts ?
 - **Texture** : à la vue ou sous la main, la surface paraît-elle lisse, ou ses reliefs sont-ils fins, moyens ou gros ?
 - **Teinte** : de quelle couleur est cette zone : rouge, orange, jaune, vert, bleu ou violet ? Un rose pâle et un rouge sombre ont la même teinte, rouge.

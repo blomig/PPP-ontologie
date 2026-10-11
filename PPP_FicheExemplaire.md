@@ -6,7 +6,7 @@
 
 **Règles.**
 - **Objets publics seulement** (Q12). Le dépôt public ne contient que des objets publics ; il n'a pas de statut « interne ». Un objet interne n'est jamais publié et n'existe pas côté public : les objets internes vivent hors du dépôt public, et rien du dépôt ne renvoie à eux.
-- **Images** (Q15) : lien seulement par défaut ; reproduite seulement si la licence est réellement libre, vérifiée, avec le crédit complet (`credit.usage`, `credit.lien_externe`, `credit.motif_usage`).
+- **Images** (Q15) : lien seulement par défaut ; reproduite seulement si la licence est réellement libre, vérifiée, avec le crédit complet (`credit.usage`, `credit.lien_externe`, `credit.motif_usage`) (série 20 : une image hébergée sur Wikimedia Commons avec licence et balise indiquées est utilisable ; X16).
 - **Un ticket n'écrit jamais dans `exemplaires.yaml`.** Un ticket `objet-suggere` recevable donne, après instruction par l'équipe, une entrée d'**objet seul** (id et crédit) ; les assertions s'ajoutent ensuite, par l'équipe ou par un ticket `assertion-exemplaire` (ajout) ou `contestation` (`docs/gouvernance.md`).
 - Une assertion est ordinaire et contestable (§13) ; `doute: oui` est un champ éditorial (X17).
 
@@ -32,6 +32,8 @@ objets:
       licence: "…"
       source: "…"
       url: "…"
+      url_telechargement: "…"     # facultatif : fichier original (série 20)
+      fichier: "…"                # facultatif : nom de stockage, si image_reproduite (série 20)
       date_verification: "AAAA-MM-JJ"
       mention_requise: "…"         # telle que la licence la demande
       usage: lien_seulement        # image_reproduite | lien_seulement (défaut)

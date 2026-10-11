@@ -1,5 +1,5 @@
 # Fiche de type PPP — ppp:perceivedSize — format : PPP_FicheType.md (spec v2.4)
-# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_joint, avertissement_label, note_categories, note_reference, note_dimension, note_conditions, note_echelle, note_porteur, note_base, bloque_par.
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer ; remarque, résumé non compté comme champ), manques, source_de_la_fiche, statut_note, note_joint, avertissement_label, note_categories, note_reference, note_dimension, note_conditions, note_echelle, note_porteur, note_base, bloque_par.
 id: ppp:perceivedSize
 label_fr: taille perçue
 label_en: perceived size
@@ -13,8 +13,9 @@ base_dependance:
   facteurs_non_perceptuels: []
 facettes:
 - forme
-définition: 'Ce que l’élément paraît mesurer à côté du corps de celui qui regarde : de ce qu’on prend d’une main à ce qui dépasse nettement une personne.'
-question_attentionnelle: À côté de mon corps, cet élément paraît-il tenir dans la main, être à l’échelle du corps (comme une chaise) ou dépasser le corps (comme une maison) ?
+définition: 'Ce que l’élément paraît mesurer à côté du corps de celui qui regarde : de ce qui est plus petit que le bout du doigt à ce qui dépasse nettement une personne.'
+question_attentionnelle: À côté de mon corps, cet élément paraît-il plus petit que le bout du doigt (comme un grain de riz), tenir dans la main (comme une tasse), être à l’échelle du corps (comme une chaise)
+  ou dépasser le corps (comme une maison) ?
 contre_exemple: '« La tour paraît bien plus haute que la maison voisine » compare deux éléments : c’est un contraste d’échelle, pas la taille perçue de la tour seule. Sa hauteur en mètres est une mesure,
   pas la taille perçue.'
 grandeur_physique_homonyme: 'dimensions mesurées ; angle visuel : aucune région ne s’en déduit.'
@@ -24,34 +25,46 @@ mode_de_presentation: image
 conditions_critiques:
 - presentation
 - distance
-note_conditions: sur une image, la taille se juge d’après la scène montrée (note_reference) ; de loin ou sur un écran, les repères du corps manquent
+note_conditions: 'sur une image, la taille se juge d’après la scène montrée (note_reference) ; de loin ou sur un écran, les repères du corps manquent ; le cran « plus petit que le bout du doigt » demande
+  de voir l’élément d’assez près (distance `contact` ou `near`) ou sur une image qui le montre de près à côté d’un repère du corps (un doigt, une main) : sinon, l’assertion reste non tranchée'
 porteur: un élément, une partie ou un objet
 arité: 1
 condition_NA: porteur sans étendue perceptible.
 espace_valeurs:
   echelle: ordinale
-  sens_croissant: de `handSized` (rang 1) vers `beyondBody` (rang 3), la taille perçue rapportée au corps de l’observateur augmente
+  sens_croissant: de `fingertipSized` (rang 1) vers `beyondBody` (rang 4), la taille perçue rapportée au corps de l’observateur augmente
   numerique: non
   regions:
+  - cle: fingertipSized
+    label_fr: plus petit que le bout du doigt
+    label_en: smaller than a fingertip
+    rang: 1
+    repere: ce qui tient tout entier sur le bout d’un doigt, sans le dépasser, ou qui est plus petit (une petite perle, un grain de riz, un bouton de chemise, la tête d’une vis)
+    exemplaires: []
   - cle: handSized
     label_fr: tient dans la main
     label_en: hand-sized
-    rang: 1
-    repere: ce qu’on peut prendre d’une main (une tasse, un stylo, une pomme)
+    rang: 2
+    repere: ce qui dépasse le bout du doigt mais se prend d’une main (une tasse, un stylo, une pomme)
     exemplaires: []
   - cle: bodySized
     label_fr: à l’échelle du corps
     label_en: body-sized
-    rang: 2
-    repere: ce qu’on porte à deux bras ou à quoi l’on se mesure (une chaise, une valise, une porte)
+    rang: 3
+    repere: ce qu’on porte à deux bras ou à quoi l’on se mesure (une chaise, un carton de déménagement, une porte)
     exemplaires: []
   - cle: beyondBody
     label_fr: dépasse le corps
     label_en: beyond-body-sized
-    rang: 3
+    rang: 4
     repere: ce qui dépasse nettement la taille d’une personne (une maison, un arbre adulte, une façade)
     exemplaires:
     - ppp-a:pilote-0801
+note_echelle: 'Les crans se jugent d’après des parties du corps de celui qui regarde (le bout du doigt, la main, le corps entier), pas d’après une mesure (T8 ; contre_exemple : « sa hauteur en mètres est
+  une mesure, pas la taille perçue »). Ordres de grandeur seulement indicatifs, pour se repérer : jusqu’à un ou deux centimètres environ ; jusqu’à une vingtaine de centimètres ; jusqu’à la taille d’une
+  personne ; au-delà. Quatrième cran (`fingertipSized`) ajouté en série 17 sur demande de l’éditeur du projet (on perçoit des détails et des objets plus petits que la main) ; découpage confirmé par l’éditeur
+  du projet en série 18, avec le label « plus petit que le bout du doigt » : un élément peut être plus petit sans, à proprement parler, tenir sur le bout d’un doigt (T8). La clé `fingertipSized` est gardée
+  (aucune clé n’est réemployée, spec §9.7 C ; elle n’est pas affichée).'
 note_reference: 'On juge la taille de l’élément dans la scène qu’on voit, pas celle de son image : la photo d’une maison montre un élément qui dépasse le corps (position de l’équipe, révisable ; T8).'
 identite: Taille d’un seul élément, pas la différence de taille entre deux éléments (contraste d’échelle).
 relations:
@@ -85,18 +98,19 @@ etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-forme
 axiomes:
 - conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
   validation: Toute assertion de type ppp:perceivedSize a exactement un ppp:about.
-- conceptuel: Les 3 régions sont deux à deux disjointes et totalement ordonnées par rang.
-  validation: Les 3 ppp:Region de l’échelle du type ont des ppp:rank distincts, de 1 à 3 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Les 4 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 4 ppp:Region de l’échelle du type ont des ppp:rank distincts, de 1 à 4 ; une assertion a au plus un ppp:inRegion.
 - conceptuel: Une région de cet espace n’est pas un sous-type du type.
   validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
-nanay: Oui — passer de « je vois un objet » à « je le rapporte à mon corps (dans la main, à ma taille, au-delà) » change la description (manière de l’approcher, de le prendre ou d’en faire le tour).
+nanay: Oui — passer de « je vois un objet » à « je le rapporte à mon corps (plus petit que le bout du doigt, dans la main, à ma taille, au-delà) » change la description (manière de l’approcher, de le prendre
+  ou d’en faire le tour).
 transfert: objet conçu oui (une tasse, une chaise) | tableau oui (taille des figures dans la scène peinte) | cuisine oui (ustensile, plan de travail) | high-tech oui (téléphone, écran mural) | architecture
   oui (façade)
 enonces_testables:
 - id: E1
   nature: existence
-  enonce: sur 6 à 10 objets publics, accord inter-observateurs exact (échelle à trois régions ou moins, spec §9.7 C, v2.5), au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques
-    (spec §9.7 H)
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs à une région près (échelle à quatre régions depuis la série 17, spec §9.7 C), au-dessus du seuil fixé avant l’épreuve, à régime égal sur les
+    facettes critiques (spec §9.7 H)
   statut_epistemique: non éprouvé
   epreuve: null
 - id: E4
@@ -117,13 +131,14 @@ modifie_en:
 - 2.2.3
 - 2.3.1
 - '2.5'
+- '2.8'
 remplace_par: []
 manques:
-- 'régions sans exemplaire : `handSized`, `bodySized`'
+- 'régions sans exemplaire : `fingertipSized`, `handSized`, `bodySized`'
 bloque_par: []
 a_relire: []
 relecture_explicative:
-  date: '2026-10-10'
+  date: '2026-10-11'
   champs:
   - question_attentionnelle
   - définition
@@ -135,6 +150,15 @@ relecture_explicative:
   - exemplaires
   - etat_de_l_art (série 6)
   - references (série 6)
+  - définition (série 19)
+  - question_attentionnelle (série 19)
+  - espace_valeurs.regions.fingertipSized (label_fr, label_en, repere) (série 19)
+  - espace_valeurs.regions.handSized.repere (série 19)
+  - espace_valeurs.regions.bodySized.repere (série 19)
+  - note_echelle (série 19)
+  - note_conditions (série 19)
+  - nanay (série 19)
+  - enonces_testables (E1) (série 19)
   a_reconfirmer: []
   reconfirme:
   - champ: définition
@@ -154,5 +178,6 @@ relecture_explicative:
     avant: le fait qu'on juge la taille d'un objet d'après sa taille supposée dans le monde, pas d'après l'angle visuel
     apres: le fait, dit dans le résumé, que la taille à laquelle on dessine, imagine et préfère voir un objet dépend de sa taille supposée dans le monde, et se décrit mieux par rapport au cadre qui l’entoure
       que par un angle visuel fixe
-    remarque: 'réduit par la relecture explicative (vérification finale de la série 6) à ce que dit le résumé lu : l’ancien texte (« on juge la taille d’un objet d’après sa taille supposée ») parlait du jugement de
-      taille, dont le résumé ne parle pas (note_verification de l’équipe)'
+    remarque: 'réduit par la relecture explicative (vérification finale de la série 6) à ce que dit le résumé lu : l’ancien texte (« on juge la taille d’un objet d’après sa taille supposée ») parlait du
+      jugement de taille, dont le résumé ne parle pas (note_verification de l’équipe)'
+  remarque: 'série 19 : les 9 champs modifiés en séries 17 et 18 (quatrième cran fingertipSized, repères, note_echelle, note_conditions, E1) validés par la relecture explicative à 27dfd04'

@@ -412,6 +412,23 @@ Sources sur la manière dont des ontologies et vocabulaires ouverts reçoivent l
   - usage : `docs/depot-public.md` (alimente).
 
 <a id="groupe-sources-generales"></a>
+<a id="groupe-droits"></a>
+## Droits des images d'exemplaires (Q15, X16 ; sources lues, pas un avis juridique)
+
+*Série 20* : ces sources documentent un doute qui ne bloque plus la reproduction des trois Malévitch (critère de l'éditeur du projet : image hébergée sur Wikimedia Commons avec licence et balise indiquées) ; elles restent citées pour la trace du doute.
+
+- Mémorial, *Otkrytyi spisok* (« Liste ouverte »), « Малевич Казимир Северинович (1878) ». https://ru.openlist.wiki/Малевич_Казимир_Северинович_(1878)
+  - statut : *vérifiée sur la source* (page lue le 2026-10-11) ; base de données compilée, ici à partir de « données recueillies à Saint-Pétersbourg » : ce n'est pas le dossier lui-même ;
+  - reprend : arrestation le 30 septembre 1930 ; le 29 novembre 1930, affaire classée par l'OGPU pour absence d'infraction ; aucune mention de réhabilitation ;
+  - usage : doute russe sur les trois Malévitch de `exemplaires.yaml` (`docs/droits-exemples-2026-10-11.md`) ; ne dit pas si la mention « réprimé puis réhabilité » du modèle Commons `PD-Russia-expired` s'applique ; depuis la série 20, ce doute est noté mais ne bloque plus la reproduction (image sur Commons avec licence et balise indiquées, décision de l'éditeur du projet).
+- Buksha, K. S., biographie de Kazimir Malévitch, chapitre « Тюрьма ». Texte en ligne : http://sv-scena.ru/Buki/Malyevich.49.html
+  - statut : *vérifiée sur résumé ou source secondaire* (texte reproduit sur un site tiers, lu le 2026-10-11 ; édition imprimée non vérifiée) ;
+  - reprend : arrestation le 20 septembre 1930, détention jusqu'au 6 décembre (dates divergentes avec la Liste ouverte) ;
+  - usage : même doute ; ne parle pas de réhabilitation.
+- Galerie Tretiakov, « 15 faits sur Kazimir Malévitch », *Lavrus*. https://lavrus.tretyakov.ru/publications/15-faktov-o-kazimire-maleviche/
+  - statut : *vérifiée sur résumé ou source secondaire* (extrait lu le 2026-10-11 par un moteur de recherche) ;
+  - reprend : arrestation en septembre 1930, libération au bout de deux mois et demi, aucune preuve trouvée ; mort le 15 mai 1935 ; aucune mention de réhabilitation.
+
 ## Sources générales repérées, non attachées à une fiche
 
 - Arnheim, R. (1954). Art and Visual Perception. Berkeley : University of California Press. https://openlibrary.org/works/OL980214W

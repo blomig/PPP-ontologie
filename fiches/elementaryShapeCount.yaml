@@ -226,11 +226,11 @@ relecture_explicative:
   - nanay
   - transfert
   - enonces_testables
+  - note_base
   a_reconfirmer: []
-  remarque: 'champs validés par la relecture explicative à 5330e2d (série 15) et enonces_testables à 255e824 (série 16, E3 validé), formulations des séries 12 et 14 comprises (voir `remarque` de la fiche)
-    ; reste à relire : note_base (modifiée en séries 15 et 16)'
-a_relire:
-- note_base
+  remarque: champs validés par la relecture explicative à 5330e2d (série 15), enonces_testables à 255e824 (série 16, E3 validé) et note_base à 10ffab0 (série 17), formulations des séries 12 et 14 comprises
+    (voir `remarque` de la fiche) ; plus rien à relire
+a_relire: []
 remarque:
 - 'série 12 : references modifiées (biederman1987.reprend ; hoffman_richards1984 : reprend « rien que le titre » ; kaufman1949.ne_reprend_pas)'
 - 'série 12 (corrections de la relecture explicative) : label_court, définition, contre_exemple, note_conditions, condition_NA, espace_valeurs.regions.oneShape.repere, relations.note (ppp:perceivedSize),
@@ -240,3 +240,4 @@ remarque:
 - 'série 15 : levées validées (relecture_explicative.champs) ; E3 reformulé (contour = netteté du bord) ; note_base complétée (« répertoire » expliqué, E3 mis en défaut, base à compléter, T37 question 6)
   ; à relire'
 - 'série 16 : enonces_testables validé (E3), archivé dans relecture_explicative.champs ; note_base : « base à revoir (… la compléter ou n’en déclarer aucune) » ; à relire'
+- 'série 17 : note_base validée, archivée dans relecture_explicative.champs (19 champs) ; a_relire vide'

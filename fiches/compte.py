@@ -257,6 +257,9 @@ def ligne_familles(fiches):
 # Fiches publiques (série 10, décision de l'éditeur du projet relayée par la coordination) : les fiches des paliers 1 et 2
 # de X17. Le calcul reste fait depuis les fiches ; la liste attendue sert seulement de contrôle : --verifier signale un écart
 # (fiche en plus ou en moins) sans corriger le calcul.
+# Série 19 : `perceivedSize` revient dans la liste (quatrième cran relu ; sortie en série 17, a_relire non vide, X17).
+# Série 21 : `hue` sortie de la liste le temps de reconfirmer son seul exemplaire, ppp-a:pilote-0601 (note et source réécrites
+# après le changement d'image du Carré rouge) ; série 22 : 0601 reconfirmée, `hue` revient.
 FICHES_PUBLIQUES_ATTENDUES = {'hue', 'lightness', 'lightnessContrast', 'perceivedSize', 'perceptualDensity', 'texture',
                               'textureDirectionality'}
 
