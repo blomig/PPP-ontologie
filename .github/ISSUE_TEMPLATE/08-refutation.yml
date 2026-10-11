@@ -1,0 +1,62 @@
+# Formulaire de ticket « refutation » (spec §13, docs/gouvernance.md 2.4). Modèle pour .github/ISSUE_TEMPLATE/ du dépôt public.
+# Syntaxe : GitHub Docs, « Syntax for issue forms » et « Syntax for GitHub's form schema » (consultés le 2026-10-11).
+name: Publier une réfutation
+description: Une épreuve dont le protocole et le seuil ont été fixés avant.
+title: '[refutation] '
+labels:
+- refutation
+body:
+- type: markdown
+  attributes:
+    value: 'Ce ticket est **public**. N''y mettez ni adresse électronique ni donnée personnelle : un pseudonyme suffit. Format et traitement : `docs/gouvernance.md` (reçu, recevable, traité, réponse dans
+      la semaine).'
+- type: input
+  id: cible
+  attributes:
+    label: Énoncé visé
+    description: Par exemple ppp:texture#E1.
+  validations:
+    required: true
+- type: textarea
+  id: protocole
+  attributes:
+    label: Protocole et seuil fixés avant
+    description: Avec la date de fixation.
+  validations:
+    required: true
+- type: textarea
+  id: materiel
+  attributes:
+    label: Matériel
+    description: Publiable, ou décrit de façon suffisante.
+  validations:
+    required: true
+- type: textarea
+  id: resultats
+  attributes:
+    label: Résultats bruts
+    description: ''
+  validations:
+    required: true
+- type: input
+  id: version
+  attributes:
+    label: Version de la spécification
+    description: Affichée en pied de page du site, par exemple 2.8.
+    placeholder: '2.8'
+  validations:
+    required: true
+- type: input
+  id: pseudonyme
+  attributes:
+    label: Pseudonyme (facultatif)
+    description: Repris dans le champ `auteur` du ticket. Jamais d'adresse électronique.
+  validations:
+    required: false
+- type: checkboxes
+  id: licence
+  attributes:
+    label: Licence
+    options:
+    - label: J'accepte que ma contribution soit versée sous les licences du projet (contenu CC BY 4.0, code MIT), sans accord à signer.
+      required: true

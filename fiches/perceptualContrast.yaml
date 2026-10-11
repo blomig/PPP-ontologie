@@ -1,0 +1,173 @@
+# Fiche de type PPP — ppp:perceptualContrast — format : PPP_FicheType.md (spec v2.4)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_joint, avertissement_label, note_categories, note_reference, note_dimension, note_conditions, note_echelle, note_porteur, note_base, bloque_par.
+id: ppp:perceptualContrast
+label_fr: contraste perceptif
+label_en: perceptual contrast
+label_court: contraste
+labels_alternatifs: []
+patron: P2
+sorte: relateur
+sous_sorte: —
+strate: semi-formel
+base_dependance:
+  types: []
+  facteurs_non_perceptuels: []
+  note: 'la dimension comparée (spec §9.7 B, A9) : vérifiée sur chaque spécialisé et, pour une assertion du général, sur la ppp:comparedDimension déclarée'
+facettes:
+- organisation
+définition: 'Différence perçue entre deux zones, parties ou objets sur une seule qualité nommée à l’avance (la dimension comparée : clarté, teinte, texture, taille…), de la différence à peine perceptible
+  à la plus grande possible sur cette qualité.'
+question_attentionnelle: En ne regardant qu’une qualité à la fois (la clarté, la teinte, la texture…), la différence entre ces deux zones est-elle faible (on les distingue à peine), modérée (elle se voit
+  en y regardant), évidente (elle se voit d’emblée, même de loin) ou maximale (les deux zones sont aux deux bouts de cette qualité, comme le noir et le blanc pour la clarté) ?
+contre_exemple: 'Un mur peint d’une seule couleur n’offre pas deux zones à comparer : il n’y a pas de contraste. Une zone très claire, prise seule, a une clarté, pas un contraste : il faut une seconde zone.
+  Et « ces deux zones contrastent » ne suffit pas : on dit toujours sur quelle qualité (clarté, teinte, texture…).'
+grandeur_physique_homonyme: 'contraste mesuré (rapport de luminances, contraste de Weber ou de Michelson) : aucune région ne s’en déduit.'
+modalites:
+- vision
+mode_de_presentation: image
+porteur: deux termes (zones, parties ou objets), rôle `terme` pour chacun
+arité: 2
+dimension_comparee: null
+dimension_comparee_regle: 'libre pour le général : toute assertion de ce type déclare ppp:comparedDimension (un type P1) ; un spécialisé la fixe (spec §9.7 B)'
+condition_NA: moins de deux termes distincts (une seule zone homogène).
+espace_valeurs:
+  echelle: ordinale
+  sens_croissant: de `weak` (rang 1) vers `strong` (rang 4), l’écart perçu entre les deux termes augmente
+  numerique: non
+  regions:
+  - cle: weak
+    label_fr: faible
+    label_en: weak
+    rang: 1
+    repere: les deux termes se distinguent à peine, ou pas, sur la dimension comparée
+    exemplaires: []
+  - cle: moderate
+    label_fr: modéré
+    label_en: moderate
+    rang: 2
+    repere: l’écart se voit à l’examen, sans s’imposer à distance
+    exemplaires: []
+  - cle: marked
+    label_fr: évident
+    label_en: marked
+    rang: 3
+    repere: l’écart se voit d’emblée, à distance de pièce
+    exemplaires: []
+  - cle: strong
+    label_fr: maximal
+    label_en: strong
+    rang: 4
+    repere: les deux termes sont aux extrémités ou près des extrémités de la dimension comparée
+    exemplaires: []
+identite: Un écart entre deux termes, pas une qualité d’un seul porteur (la clarté d’une zone n’est pas un contraste de clarté).
+relations: []
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: peli1990
+  citation: Peli, E. (1990). Contrast in complex images. Journal of the Optical Society of America A, 7(10), 2032–2040.
+  doi_ou_url: https://doi.org/10.1364/JOSAA.7.002032
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-11'
+  verifie_sur: 'métadonnées Crossref et résumé lu (OpenAlex, 2026-10-11) : le contraste physique d’images simples (un réseau, une tache sur un fond uniforme) est bien défini et s’accorde avec le contraste
+    perçu, mais pas pour des images complexes, où le contraste perçu varie beaucoup d’un endroit à l’autre ; l’article propose un contraste local calculé par bandes de fréquences spatiales ; texte non lu'
+  reprend: la différence entre un contraste calculé sur la lumière et le contraste perçu, qui fait de ce type une qualité perçue (grandeur_physique_homonyme)
+  ne_reprend_pas: la définition calculée du contraste et les fréquences spatiales
+- id: haun_peli2013
+  citation: Haun, A. M. & Peli, E. (2013). Perceived contrast in complex images. Journal of Vision, 13(13), 3.
+  doi_ou_url: https://doi.org/10.1167/13.13.3
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-11'
+  verifie_sur: 'métadonnées Crossref et résumé lu (OpenAlex, 2026-10-11) : des observateurs jugent laquelle de deux photographies a le plus de contraste ; le contraste d’ensemble perçu dépend surtout de
+    certaines fréquences spatiales ; les images aux zones sombres plus sombres sont jugées plus contrastées ; texte non lu'
+  reprend: le contraste perçu comme jugement d’observateurs qui comparent, distinct du contraste calculé
+  ne_reprend_pas: les fréquences spatiales, les modèles et les mesures ; le contraste de luminance n’est qu’une des dimensions comparées par ce type
+etat_de_l_art: 'Pour la lumière, le contraste calculé (rapport de luminances : combien de fois une zone est plus lumineuse qu’une autre) ne s’accorde avec le contraste perçu que pour des images simples
+  ; dans une image complexe, le contraste perçu varie d’un endroit à l’autre (Peli 1990, résumé lu) [[peli1990]], et des observateurs qui comparent deux photographies jugent laquelle est la plus contrastée
+  (Haun et Peli 2013) [[haun_peli2013]]. Aucune source trouvée ne propose un contraste perçu général, valable pour toute dimension comparée (recherches du 2026-10-10 et du 2026-10-11 : Crossref, Semantic
+  Scholar, OpenAlex). Les sources des contrastes spécialisés sont dans leurs fiches. Détail : docs/bibliographie-par-type.md#groupe-contrastes.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-contrastes
+axiomes:
+- conceptuel: Tout contraste particulier médie exactement deux termes.
+  validation: Toute assertion de type ppp:perceptualContrast a exactement deux ppp:about, chacun avec un ppp:role.
+- conceptuel: Les 4 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 4 ppp:Region de l’échelle ont des ppp:rank distincts, de 1 à 4 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Tout contraste particulier du type général porte sur une dimension déterminée.
+  validation: Toute assertion dont le ppp:assertedType est ppp:perceptualContrast déclare exactement une ppp:comparedDimension, qui est un ppp:QualityType.
+nanay: Oui — passer de « je vois deux zones » à « je compare leur clarté (ou leur teinte…) et je juge l’écart, de faible à maximal » change la description (ce qui se détache, ce qui se fond).
+transfert: objet conçu oui | tableau oui | cuisine oui | high-tech oui — à éprouver par spécialisé
+enonces_testables:
+- id: contraste-1
+  nature: structure
+  enonce: 'un spécialisé n’hérite pas du statut épistémique du général : l’épreuve E1 se mène par spécialisé (spec §9.7 B)'
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2, CQ8a, CQ8b
+statut: candidat
+statut_epistemique: non éprouvé
+introduit_en: '2.1'
+modifie_en:
+- version: '2.2'
+  motif: général spécialisé par dimension
+  decision: éditeur du projet, 2026-10-10
+- version: '2.5'
+  motif: labels de région « évident » (marked) et « maximal » (strong)
+  decision: éditeur du projet, 2026-10-10 (T3, option A)
+- version: '2.6'
+  motif: série 7
+  decision: éditeur du projet, 2026-10-11
+remplace_par: []
+a_relire: []
+relecture_explicative:
+  date: '2026-10-11'
+  champs:
+  - question_attentionnelle
+  - définition
+  - contre_exemple
+  - exemplaires
+  - etat_de_l_art (série 6)
+  - references (série 6)
+  - etat_de_l_art (re-confirmé en relecture explicative, série 9, 2026-10-11)
+  - references (validé en relecture explicative, série 9, 2026-10-11)
+  a_reconfirmer: []
+  reconfirme:
+  - champ: question_attentionnelle
+    date: '2026-10-10'
+    avant: En ne regardant qu’une qualité à la fois (la clarté, la teinte, la texture…), la différence entre ces deux zones est-elle faible, modérée, marquée ou forte ?
+    apres: En ne regardant qu’une qualité à la fois (la clarté, la teinte, la texture…), la différence entre ces deux zones est-elle faible, modérée, évidente ou maximale ?
+    raison: 'T3, option A (décision de l’éditeur du projet, 2026-10-10) : labels du contraste « faible / modéré / évident / maximal » ; question attentionnelle à reprendre par la relecture explicative ;
+      seuls les mots-labels sont remplacés'
+    retenu: En ne regardant qu’une qualité à la fois (la clarté, la teinte, la texture…), la différence entre ces deux zones est-elle faible (on les distingue à peine), modérée (elle se voit en y regardant),
+      évidente (elle se voit d’emblée, même de loin) ou maximale (les deux zones sont aux deux bouts de cette qualité, comme le noir et le blanc pour la clarté) ?
+    remarque: 'T3 option A : question reprise par la relecture explicative ; chaque mot-label porte entre parenthèses le repère de sa région, pour que « évident » (visible d’emblée) et « maximal » (aux
+      deux bouts de la dimension) ne se lisent pas comme des synonymes de « fort »'
+  - champ: nanay
+    date: '2026-10-10'
+    avant: Oui — passer de « deux zones » à « l’écart de clarté (ou de teinte…) entre elles est fort » modifie la description (ce qui se détache, ce qui se fond).
+    apres: Oui — passer de « deux zones » à « l’écart de clarté (ou de teinte…) entre elles est évident » modifie la description (ce qui se détache, ce qui se fond).
+    raison: 'T3 : « fort » n''est plus un label de région ; remplacé par « évident »'
+    retenu: Oui — passer de « je vois deux zones » à « je compare leur clarté (ou leur teinte…) et je juge l’écart, de faible à maximal » change la description (ce qui se détache, ce qui se fond).
+    remarque: 'T3 : réécrit par la relecture explicative ; le nanay ne doit pas citer une seule région (« évident »), mais l’acte de juger l’écart'
+  - champ: etat_de_l_art
+    date: '2026-10-11'
+    avant: 'Aucune source trouvée ne propose un contraste perçu général, valable pour toute dimension comparée (recherche faite le 2026-10-10 : Crossref, Semantic Scholar). Les sources des contrastes spécialisés
+      sont dans leurs fiches. Détail : docs/bibliographie-par-type.md#contrastes.'
+    apres: 'Pour la lumière, le contraste calculé (rapport de luminances : combien de fois une zone est plus lumineuse qu’une autre) ne s’accorde avec le contraste perçu que pour des images simples ; dans
+      une image complexe, le contraste perçu varie d’un endroit à l’autre (Peli 1990, résumé lu) [[peli1990]], et des observateurs qui comparent deux photographies jugent laquelle est la plus contrastée
+      (Haun et Peli 2013) [[haun_peli2013]]. Aucune source trouvée ne propose un contraste perçu général, valable pour toute dimension comparée (recherches du 2026-10-10 et du 2026-10-11 : Crossref, Semantic
+      Scholar, OpenAlex). Les sources des contrastes spécialisés sont dans leurs fiches. Détail : docs/bibliographie-par-type.md#groupe-contrastes.'
+    raison: 'série 7 (point de la coordination) : sources cherchées et lues (résumés, OpenAlex et Crossref, 2026-10-11) ; « aucune source trouvée » n’est plus exact ; relecture explicative (2026-10-11)
+      : glose de « rapport de luminances » (relecture explicative) ; relecture explicative (2026-10-11) : « combien de fois » (seconde relecture explicative)'
+    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+manques:
+- régions `weak`, `moderate`, `marked` sans exemplaire du général
+- 'région `strong` : exemplaire à renseigner (ppp-a:pilote-0301, Shap Wells, retirée en 2.3.2, T24 : la rugosité de la dalle de droite n’est pas démontrée)'
+- 'nombre et labels des régions : tranchés (T3, option A, décision de l’éditeur du projet, 2026-10-10)'
+- 'ne s’explique pas sans aide (relecture explicative, série 6) : exemple concret à trouver : le type est abstrait (la dimension comparée est libre) et n’a aucun exemplaire ; un exemple concret par dimension
+  comparée, ou un renvoi visible aux contrastes spécialisés'

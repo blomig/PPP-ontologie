@@ -1,0 +1,7 @@
+.DS_Store
+._*
+# Contenus confidentiels (tests sur objets de terrain, matériaux internes) : jamais publiés
+local/
+__pycache__/
+*.pyc
+.noms-prives

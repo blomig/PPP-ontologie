@@ -1,0 +1,272 @@
+# Fiche de type PPP — ppp:scaleContrast — format : PPP_FicheType.md (spec v2.4)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_joint, avertissement_label, note_categories, note_reference, note_dimension, note_conditions, note_echelle, note_porteur, note_base, bloque_par, note_labels_regions.
+id: ppp:scaleContrast
+label_fr: contraste d’échelle
+label_en: scale contrast
+label_court: contraste d’échelle
+labels_alternatifs:
+- contraste de taille
+patron: P2
+sorte: relateur
+sous_sorte: —
+strate: semi-formel
+base_dependance:
+  types:
+  - ppp:perceivedSize
+  facteurs_non_perceptuels: []
+facettes:
+- forme
+définition: Différence perçue de taille entre deux éléments vus ensemble, de deux éléments presque pareils à un très grand élément face à un très petit.
+question_attentionnelle: Entre ces deux éléments vus ensemble, les tailles sont-elles voisines, nettement différentes (l’un nettement plus grand), très différentes (l’un plusieurs fois plus grand) ou sans
+  commune mesure (un très grand élément à côté d’un très petit) ?
+contre_exemple: 'Une tour vue seule dépasse le corps de celui qui la regarde : c’est sa taille perçue. Le contraste d’échelle compare toujours deux éléments vus ensemble (la tour et la maison à son pied),
+  même quand tous deux dépassent le corps.'
+modalites:
+- vision
+mode_de_presentation: image
+porteur: deux termes (zones, parties ou objets), rôle `terme` pour chacun
+arité: 2
+dimension_comparee: ppp:perceivedSize
+condition_NA: moins de deux termes distincts sur cette dimension (une seule zone homogène).
+espace_valeurs:
+  echelle: ordinale
+  meme_echelle_que: ppp:perceptualContrast
+  sens_croissant: de `weak` (rang 1) vers `strong` (rang 4), la différence de taille perçue augmente
+  numerique: non
+  regions:
+  - cle: weak
+    label_fr: faible
+    label_en: weak
+    rang: 1
+    repere: éléments de taille voisine
+    exemplaires: []
+  - cle: moderate
+    label_fr: modéré
+    label_en: moderate
+    rang: 2
+    repere: un élément nettement plus grand que l’autre
+    exemplaires: []
+  - cle: marked
+    label_fr: évident
+    label_en: marked
+    rang: 3
+    repere: un élément plusieurs fois plus grand que l’autre
+    exemplaires: []
+  - cle: strong
+    label_fr: maximal
+    label_en: strong
+    rang: 4
+    repere: 'un très grand élément contre un très petit, vus ensemble, par exemple un pavé à côté d’une façade entière ; la taille n’a pas de bout d’échelle : on peut toujours trouver plus grand ou plus
+      petit ; « sans commune mesure » dit seulement que l’écart est énorme, pas que les deux tailles ne se comparent pas ; la frontière avec « très différentes » n’est pas chiffrée : l’épreuve d’accord
+      (E1) dira où les observateurs la placent'
+    exemplaires: []
+labels_regions_propres:
+- cle: weak
+  label_fr: tailles voisines
+  label_en: similar sizes
+  region_generale: ppp:perceptualContrast/weak
+- cle: moderate
+  label_fr: nettement différentes
+  label_en: clearly different sizes
+  region_generale: ppp:perceptualContrast/moderate
+- cle: marked
+  label_fr: très différentes
+  label_en: very different sizes
+  region_generale: ppp:perceptualContrast/marked
+- cle: strong
+  label_fr: sans commune mesure
+  label_en: vastly different sizes
+  region_generale: ppp:perceptualContrast/strong
+identite: Un écart de taille perçue entre deux termes, pas la taille perçue d’un seul porteur.
+note_dimension: 'Le contraste d’échelle ne se lit pas sur les trois régions de la taille perçue : une tour et la maison à son pied dépassent toutes deux le corps, et leur contraste d’échelle peut être fort.
+  Il se juge directement entre les deux termes (T8).'
+relations:
+- type: specializes
+  cible: ppp:perceptualContrast
+  note: garde l’arité, les rôles, les clés et les rangs du général ; n’ajoute pas de région (A1) ; chaque région correspond à la région de même clé du général
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: mruczek2017
+  citation: 'Mruczek, R. E. B., Blair, C. D., Strother, L. & Caplovitz, G. P. (2017). Size Contrast and Assimilation in the Delboeuf and Ebbinghaus Illusions. In The Oxford Compendium of Visual Illusions
+    (p. 262–268). New York : Oxford University Press.'
+  doi_ou_url: https://doi.org/10.1093/acprof:oso/9780199794607.003.0028
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-11'
+  verifie_sur: 'métadonnées Crossref et résumé lu (OpenAlex, 2026-10-11) : dans les illusions de Delboeuf et d’Ebbinghaus, la taille perçue d’un objet dépend de sa taille relative aux objets qui l’entourent
+    ; « contraste de taille » : des objets paraissent plus différents qu’ils ne sont ; « assimilation » : plus semblables ; les mécanismes restent inconnus ; chapitre non lu'
+  reprend: 'l’écart de taille entre éléments vus ensemble comme objet perçu, qui peut paraître plus grand (contraste) ou plus petit (assimilation) qu’il n’est : appui du jugement direct entre deux termes
+    (note_dimension)'
+  ne_reprend_pas: les illusions comme mesures, et les explications des mécanismes
+- id: girgus1972
+  citation: Girgus, J. S., Coren, S. & Agdern, M. (1972). The interrelationship between the Ebbinghaus and Delboeuf illusions. Journal of Experimental Psychology, 95(2), 453–455.
+  doi_ou_url: https://doi.org/10.1037/h0033606
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-11'
+  verifie_sur: 'métadonnées Crossref et résumé lu (OpenAlex, 2026-10-11) : la taille apparente du cercle central de l’illusion d’Ebbinghaus varie avec la taille des cercles qui l’entourent ; éloigner ces
+    cercles fait diminuer la taille apparente du cercle central, quelle que soit leur taille ; texte non lu'
+  reprend: que la taille vue d’un élément change avec les éléments vus avec lui et avec leur distance
+  ne_reprend_pas: le modèle de jugement comparatif et les mesures
+- id: defockert2007
+  citation: 'de Fockert, J., Davidoff, J., Fagot, J., Parron, C. & Goldstein, J. (2007). More accurate size contrast judgments in the Ebbinghaus Illusion by a remote culture. Journal of Experimental Psychology:
+    Human Perception and Performance, 33(3), 738–742.'
+  doi_ou_url: https://doi.org/10.1037/0096-1523.33.3.738
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-11'
+  verifie_sur: 'métadonnées Crossref et résumé lu (OpenAlex, 2026-10-11) : l’illusion d’Ebbinghaus est moins forte chez les Himba que chez des participants anglais (« English participants »), d’où des jugements
+    de contraste de taille plus exacts ; elle est plus faible quand les figures qui entourent ne ressemblent pas à la cible ; texte non lu'
+  reprend: que les jugements de contraste de taille peuvent varier selon la culture (une étude trouve l’illusion d’Ebbinghaus plus faible chez des Himba que chez des Anglais, d’après le résumé), ce qu’une
+    épreuve d’accord (E1) doit prendre en compte
+  ne_reprend_pas: l’explication par l’analyse des détails locaux, et les mesures
+etat_de_l_art: 'Les illusions de Delboeuf et d’Ebbinghaus, deux illusions de taille connues où un même cercle paraît plus grand ou plus petit selon les figures qui l’entourent, montrent que la taille vue
+  d’un élément dépend des éléments vus avec lui : la taille apparente d’un cercle change avec la taille et la distance des cercles qui l’entourent (Girgus, Coren et Agdern 1972) [[girgus1972]]. On parle
+  de contraste de taille quand deux objets paraissent plus différents qu’ils ne sont, d’assimilation quand ils paraissent plus semblables (Mruczek et al. 2017, résumé lu) [[mruczek2017]] ; ces jugements
+  peuvent varier selon la culture : une étude trouve l’illusion d’Ebbinghaus plus faible chez des Himba que chez des Anglais (de Fockert et al. 2007) [[defockert2007]]. Aucune source trouvée ne propose
+  une échelle perçue de l’écart de taille entre deux éléments vus ensemble (recherches du 2026-10-10 et du 2026-10-11 : Crossref, Semantic Scholar, OpenAlex) ; les labels des régions sont propres à ce contraste
+  (T34). Détail : docs/bibliographie-par-type.md#groupe-contrastes.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-contrastes
+axiomes:
+- conceptuel: Tout contraste particulier médie exactement deux termes.
+  validation: Toute assertion de type ppp:scaleContrast a exactement deux ppp:about, chacun avec un ppp:role.
+- conceptuel: Les 4 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 4 ppp:Region de l’échelle ont des ppp:rank distincts, de 1 à 4 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Tout contraste d’échelle est un contraste perceptif dont la dimension comparée est ppp:perceivedSize.
+  validation: Toute assertion de type ppp:scaleContrast relève aussi de ppp:perceptualContrast ; elle ne déclare pas de ppp:comparedDimension, ou déclare ppp:perceivedSize.
+nanay: Oui — passer de « je vois deux éléments » à « je compare leurs tailles » change la description (lecture d’un rapport de grandeur entre eux).
+transfert: objet conçu oui (grand et petit élément d’un même objet) | tableau oui (figures de tailles différentes) | cuisine oui (grand plat, petites tasses) | high-tech oui (grand écran, petits boutons)
+  | architecture oui (tour et maison)
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs à une région près, au-dessus du seuil fixé avant l’épreuve (épreuve propre à ce spécialisé, spec §9.7 B)
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les objets
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2, CQ8a
+statut: candidat
+statut_epistemique: non éprouvé
+introduit_en: '2.2'
+modifie_en:
+- 2.2.3
+- 2.3.1
+- '2.5'
+- '2.6'
+remplace_par: []
+a_relire: []
+relecture_explicative:
+  date: '2026-10-11'
+  champs:
+  - question_attentionnelle
+  - définition
+  - contre_exemple
+  - nanay
+  - transfert
+  - etat_de_l_art (série 6)
+  - references (série 6)
+  - espace_valeurs.regions.strong.repere (série 6, vérification finale) ; note_labels_regions validée aussi
+  - question_attentionnelle (re-confirmé en relecture explicative, série 9, 2026-10-11)
+  - espace_valeurs.regions.strong.repere (re-confirmé en relecture explicative, série 9, 2026-10-11)
+  - note_labels_regions (re-confirmé en relecture explicative, série 9, 2026-10-11)
+  - etat_de_l_art (re-confirmé en relecture explicative, série 9, 2026-10-11)
+  - references.defockert2007.reprend (re-confirmé en relecture explicative, série 9, 2026-10-11)
+  - labels_regions_propres (validé en relecture explicative, série 9, 2026-10-11)
+  - references (validé en relecture explicative, série 9, 2026-10-11)
+  a_reconfirmer: []
+  reconfirme:
+  - champ: contre_exemple
+    date: '2026-10-10'
+    avant: 'Une tour seule paraît grande ou petite selon ce à quoi on la rapporte : c’est sa taille perçue. Le contraste d’échelle compare toujours deux éléments vus ensemble (la tour et la maison à son
+      pied).'
+    apres: 'Une tour seule paraît plus ou moins grande rapportée à notre corps : c’est sa taille perçue. Le contraste d’échelle compare toujours deux éléments vus ensemble (la tour et la maison à son pied).'
+    retenu: 'Une tour vue seule dépasse le corps de celui qui la regarde : c’est sa taille perçue. Le contraste d’échelle compare toujours deux éléments vus ensemble (la tour et la maison à son pied), même
+      quand tous deux dépassent le corps.'
+    remarque: 'reformulée par la relecture explicative : « plus ou moins grande » était vague ; reprend la région « dépasse le corps » et la note_dimension ; validée'
+  - champ: question_attentionnelle
+    date: '2026-10-10'
+    avant: Entre ces deux éléments, la différence de taille est-elle faible, modérée, marquée ou forte ?
+    apres: Entre ces deux éléments, la différence de taille est-elle faible, modérée, évidente ou maximale ?
+    raison: 'T3, option A (décision de l’éditeur du projet, 2026-10-10) : labels du contraste « faible / modéré / évident / maximal » ; question attentionnelle à reprendre par la relecture explicative ;
+      seuls les mots-labels sont remplacés'
+    retenu: Entre ces deux éléments, la différence de taille est-elle faible (tailles voisines), modérée (l’un nettement plus grand), évidente (l’un plusieurs fois plus grand) ou maximale (un très grand
+      élément à côté d’un très petit) ?
+    remarque: 'T3 option A : question reprise par la relecture explicative ; chaque mot-label porte entre parenthèses le repère de sa région, pour que « évident » (visible d’emblée) et « maximal » (aux
+      deux bouts de la dimension) ne se lisent pas comme des synonymes de « fort »'
+  - champ: question_attentionnelle
+    date: '2026-10-11'
+    avant: Entre ces deux éléments, la différence de taille est-elle faible (tailles voisines), modérée (l’un nettement plus grand), évidente (l’un plusieurs fois plus grand) ou maximale (un très grand
+      élément à côté d’un très petit) ?
+    apres: Entre ces deux éléments vus ensemble, les tailles sont-elles voisines, nettement différentes (l’un nettement plus grand), très différentes (l’un plusieurs fois plus grand) ou sans commune mesure
+      (un très grand élément à côté d’un très petit) ?
+    raison: 'T34 tranché par l’éditeur du projet le 2026-10-11 (option B) : labels propres au contraste d’échelle, clés et rangs inchangés ; la question reprend les labels propres et garde les repères entre
+      parenthèses ; relecture explicative (2026-10-11) : « démesurées » devient « sans commune mesure » (relecture explicative)'
+    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+  - champ: espace_valeurs.regions.strong.repere
+    date: '2026-10-11'
+    avant: 'un très grand élément contre un très petit, vus ensemble, avec l’un des plus grands écarts de taille qu’on voie entre deux éléments d’une scène ; la taille n’a pas de bout d’échelle : « maximal
+      » ne veut pas dire qu’on ne puisse pas trouver plus grand ou plus petit'
+    apres: 'un très grand élément contre un très petit, vus ensemble, par exemple un pavé à côté d’une façade entière ; la taille n’a pas de bout d’échelle : on peut toujours trouver plus grand ou plus
+      petit ; « sans commune mesure » dit seulement que l’écart est énorme, pas que les deux tailles ne se comparent pas ; la frontière avec « très différentes » n’est pas chiffrée : l’épreuve d’accord
+      (E1) dira où les observateurs la placent'
+    raison: 'T34 tranché par l’éditeur du projet le 2026-10-11 (option B) : labels propres au contraste d’échelle, clés et rangs inchangés ; « maximal » remplacé par le label propre « démesurées » dans
+      le repère ; relecture explicative (2026-10-11) : cas concret au lieu de « l’un des plus grands écarts de taille qu’on voie entre deux éléments d’une scène » ; « sans commune mesure » (relecture explicative).
+      Cohérent avec `marked` (« plusieurs fois plus grand ») : une façade fait des dizaines de fois la taille d’un pavé ; relecture explicative (2026-10-11) : fin de phrase reformulée ; frontière marked/strong
+      laissée à E1 (seconde relecture explicative ; plus simple qu’un rapport chiffré non sourcé)'
+    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+  - champ: note_labels_regions
+    date: '2026-10-11'
+    avant: 'Les labels sont ceux de tous les contrastes (T3, option A, décision de l’éditeur du projet). Pour la taille, « maximal » se lit mal : la taille perçue n’a pas de bout d’échelle, alors que la
+      clarté va du noir au blanc. Le repère de `strong` le précise (série 6, partie 7). Des labels propres au contraste d’échelle sont une question ouverte (T34).'
+    apres: 'Labels propres au contraste d’échelle (T34 : l’éditeur du projet a retenu l’option B le 2026-10-11, des labels propres ; les labels eux-mêmes sont une proposition de l’équipe, à valider) : «
+      tailles voisines / nettement différentes / très différentes / sans commune mesure », champ `labels_regions_propres`. « Sans commune mesure » remplace « démesurées », qui peut porter un jugement (l’excès).
+      Label anglais de `strong` : *vastly different sizes*, de même forme que les trois autres (*similar sizes*, *clearly different sizes*, *very different sizes*) ; *no common measure* est un calque, peu
+      idiomatique comme label, et ferait croire que les deux tailles ne se comparent pas, alors que le type les compare. Les régions restent celles de tous les contrastes (mêmes clés, mêmes rangs, labels
+      généraux « faible / modéré / évident / maximal ») : seul l’affichage change. Raison : la taille perçue n’a pas de bout d’échelle (on peut toujours trouver plus grand ou plus petit), alors que la clarté
+      va du noir au blanc et que la teinte a des opposées sur le cercle ; « maximal » se lisait mal pour la taille (spec §9.7 B).'
+    raison: 'T34 tranché par l’éditeur du projet le 2026-10-11 (option B) : labels propres au contraste d’échelle, clés et rangs inchangés ; relecture explicative (2026-10-11) : labels présentés comme une
+      proposition (pas un choix de l’éditeur du projet) ; « sans commune mesure » ; label anglais justifié (relecture explicative)'
+    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+  - champ: etat_de_l_art
+    date: '2026-10-11'
+    avant: 'Aucune source trouvée qui propose une échelle perçue de l''écart de taille entre deux éléments vus ensemble (recherche faite le 2026-10-10 : Crossref, Semantic Scholar). Les labels des régions
+      restent en position de travail (T3). Détail : docs/bibliographie-par-type.md#contrastes.'
+    apres: 'Les illusions de Delboeuf et d’Ebbinghaus, deux illusions de taille connues où un même cercle paraît plus grand ou plus petit selon les figures qui l’entourent, montrent que la taille vue d’un
+      élément dépend des éléments vus avec lui : la taille apparente d’un cercle change avec la taille et la distance des cercles qui l’entourent (Girgus, Coren et Agdern 1972) [[girgus1972]]. On parle
+      de contraste de taille quand deux objets paraissent plus différents qu’ils ne sont, d’assimilation quand ils paraissent plus semblables (Mruczek et al. 2017, résumé lu) [[mruczek2017]] ; ces jugements
+      peuvent varier selon la culture : une étude trouve l’illusion d’Ebbinghaus plus faible chez des Himba que chez des Anglais (de Fockert et al. 2007) [[defockert2007]]. Aucune source trouvée ne propose
+      une échelle perçue de l’écart de taille entre deux éléments vus ensemble (recherches du 2026-10-10 et du 2026-10-11 : Crossref, Semantic Scholar, OpenAlex) ; les labels des régions sont propres à
+      ce contraste (T34). Détail : docs/bibliographie-par-type.md#groupe-contrastes.'
+    raison: 'T34 tranché par l’éditeur du projet le 2026-10-11 (option B) : labels propres au contraste d’échelle, clés et rangs inchangés ; fait devenu faux ; puis : série 7 (point de la coordination)
+      : sources cherchées et lues (résumés, OpenAlex et Crossref, 2026-10-11) ; « aucune source trouvée » n’est plus exact ; relecture explicative (2026-10-11) : glose des illusions de Delboeuf et d’Ebbinghaus
+      ; de Fockert 2007 : variation selon la culture (Himba et Anglais, d’après le résumé) (relecture explicative) ; relecture explicative (2026-10-11) : « peuvent varier », « une étude trouve » (seconde
+      relecture explicative)'
+    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+  - champ: references.defockert2007.reprend
+    date: '2026-10-11'
+    avant: que les jugements de contraste de taille varient selon les observateurs, ce qu’une épreuve d’accord (E1) doit prendre en compte
+    apres: que les jugements de contraste de taille peuvent varier selon la culture (une étude trouve l’illusion d’Ebbinghaus plus faible chez des Himba que chez des Anglais, d’après le résumé), ce qu’une
+      épreuve d’accord (E1) doit prendre en compte
+    raison: 'variation selon la culture, Himba et Anglais (relecture explicative ; le résumé dit « English participants ») ; relecture explicative (2026-10-11) : « peuvent varier », « une étude trouve »
+      (seconde relecture explicative)'
+    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+manques:
+- exemplaires
+- 'ne s’explique pas sans aide (relecture explicative, série 6) : exemple concret à trouver : une paire d’éléments vus ensemble, publique, pour chaque région, et surtout une pour « sans commune mesure »
+  (par exemple un pavé à côté d’une façade entière)'
+bloque_par: []
+note_labels_regions: 'Labels propres au contraste d’échelle (T34 : l’éditeur du projet a retenu l’option B le 2026-10-11, des labels propres ; les labels eux-mêmes sont une proposition de l’équipe, à valider)
+  : « tailles voisines / nettement différentes / très différentes / sans commune mesure », champ `labels_regions_propres`. « Sans commune mesure » remplace « démesurées », qui peut porter un jugement (l’excès).
+  Label anglais de `strong` : *vastly different sizes*, de même forme que les trois autres (*similar sizes*, *clearly different sizes*, *very different sizes*) ; *no common measure* est un calque, peu idiomatique
+  comme label, et ferait croire que les deux tailles ne se comparent pas, alors que le type les compare. Les régions restent celles de tous les contrastes (mêmes clés, mêmes rangs, labels généraux « faible
+  / modéré / évident / maximal ») : seul l’affichage change. Raison : la taille perçue n’a pas de bout d’échelle (on peut toujours trouver plus grand ou plus petit), alors que la clarté va du noir au blanc
+  et que la teinte a des opposées sur le cercle ; « maximal » se lisait mal pour la taille (spec §9.7 B).'

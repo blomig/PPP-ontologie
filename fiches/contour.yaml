@@ -1,0 +1,157 @@
+# Fiche de type PPP — ppp:contour — format : PPP_FicheType.md (spec v2.4)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_joint, avertissement_label, note_categories, note_reference, note_dimension, note_conditions, note_echelle, note_porteur, note_base, bloque_par.
+id: ppp:contour
+label_fr: netteté du bord
+label_en: contour
+labels_alternatifs:
+- contour
+- bord
+- limite
+avertissement_label: 'Label alternatif « contour » : en français courant, il désigne souvent la silhouette. Ce type ne dit rien du tracé ; il qualifie seulement la netteté du bord (franc, progressif, flou).
+  Label canonique « netteté du bord » depuis la spec 2.2.3 (T18).'
+patron: P1
+sorte: qualité
+sous_sorte: —
+strate: formel
+base_dependance:
+  types: []
+  facteurs_non_perceptuels: []
+facettes:
+- forme
+définition: 'Manière dont une zone ou une forme se sépare de ce qui l’entoure : d’un passage franc, sans épaisseur, à un passage flou qu’on ne peut pas situer.'
+question_attentionnelle: Les bords sont-ils francs, progressifs ou flous ?
+contre_exemple: 'Un bord en pointillé (une ligne de points bien nets) est interrompu, mais pas flou : la continuité du bord est une autre question que sa netteté. La silhouette non plus n’est pas en cause
+  : un rond et un carré peuvent avoir tous deux des bords francs, ou tous deux des bords flous.'
+modalites:
+- vision
+mode_de_presentation: image
+conditions_critiques:
+- distance
+note_conditions: de loin, un bord progressif peut paraître franc ; la distance d’observation doit être déclarée
+porteur: une zone ou une forme (le bord qui la délimite)
+arité: 1
+condition_NA: porteur sans bord perceptible (un aplat qui couvre tout le champ).
+espace_valeurs:
+  echelle: ordinale
+  sens_croissant: de `sharp` (rang 1) vers `blurred` (rang 3), la largeur perçue de la transition augmente
+  numerique: non
+  regions:
+  - cle: sharp
+    label_fr: franc
+    label_en: sharp
+    rang: 1
+    repere: la transition est sans épaisseur perceptible (une découpe au cutter)
+    exemplaires: []
+  - cle: gradual
+    label_fr: progressif
+    label_en: gradual
+    rang: 2
+    repere: la transition a une largeur perceptible, mais on peut situer le bord (un chanfrein, un dégradé court)
+    exemplaires: []
+  - cle: blurred
+    label_fr: flou
+    label_en: blurred
+    rang: 3
+    repere: on ne peut pas situer le bord (une ombre portée diffuse)
+    exemplaires: []
+identite: Netteté du bord, pas le tracé de la forme (silhouette), pas la continuité du bord.
+relations:
+- type: confusableWith
+  cible: ppp:curvature
+  note: 'la netteté du bord ne dit rien de son tracé : un bord courbe peut être franc ou flou, un bord droit aussi'
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: mather_smith2002
+  citation: Mather, G. & Smith, D. R. R. (2002). Blur discrimination and its relation to blur-mediated depth perception. Perception, 31(10), 1211–1219.
+  doi_ou_url: https://doi.org/10.1068/p3254
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: métadonnées Crossref et résumé (OpenAlex)
+  reprend: le fait que l'on discrimine mal les degrés de flou, d'où un petit nombre de régions
+  ne_reprend_pas: 'les seuils mesurés (fractions de Weber) : non repris'
+- id: elder_zucker1998
+  citation: Elder, J. H. & Zucker, S. W. (1998). Local scale control for edge detection and blur estimation. IEEE Transactions on Pattern Analysis and Machine Intelligence, 20(7), 699–716.
+  doi_ou_url: https://doi.org/10.1109/34.689301
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: métadonnées Crossref et résumé (OpenAlex)
+  reprend: rien
+  ne_reprend_pas: l'estimation calculée du flou d'un bord sur une image
+etat_de_l_art: 'La netteté d’un bord est étudiée en psychophysique, la mesure de ce que l’on perçoit : Mather et Smith (2002) [[mather_smith2002]] mesurent à quel point on distingue deux degrés de flou,
+  et montrent que cette distinction est grossière. En vision par ordinateur, Elder et Zucker (1998) [[elder_zucker1998]] estiment le flou d’un bord sur une image. Aucune source trouvée ne fixe des régions
+  perçues de netteté ; l’échelle reste ouverte (T7). Détail : docs/bibliographie-par-type.md#groupe-forme.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-forme
+axiomes:
+- conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
+  validation: Toute assertion de type ppp:contour a exactement un ppp:about.
+- conceptuel: Les 3 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 3 ppp:Region de l’échelle du type ont des ppp:rank distincts, de 1 à 3 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Une région de cet espace n’est pas un sous-type du type.
+  validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
+nanay: Oui — passer de « je vois la forme » à « je regarde si ses bords sont francs ou flous » change la description (la forme se détache du fond ou s’y fond).
+transfert: objet conçu oui (arête vive ou adoucie) | tableau oui (contours nets ou fondus) | cuisine oui (bord d’un plan de travail) | high-tech oui (arêtes d’un boîtier, icônes d’écran)
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs exact (échelle à trois régions ou moins, spec §9.7 C, v2.5), au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques
+    (spec §9.7 H)
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les objets
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2
+statut: candidat
+statut_epistemique: non éprouvé
+introduit_en: '2.0'
+modifie_en:
+- 2.2.3
+- 2.3.1
+- '2.5'
+remplace_par: []
+source_de_la_fiche: 'maquette (fiche minimale : définition et question v0.2) ; la définition v0.2 « qualité de la limite entre une forme et son environnement » est resserrée sur la netteté'
+manques:
+- exemplaires
+- 'échelle : position de travail (T7)'
+- label EN « contour » conservé ; à revoir avec la décision T18 (non tranché pour l’anglais)
+bloque_par:
+- 'T7 (échelle : netteté seule, continuité du bord sans id)'
+a_relire: []
+relecture_explicative:
+  date: '2026-10-10'
+  champs:
+  - question_attentionnelle
+  - définition
+  - contre_exemple
+  - nanay
+  - transfert
+  - relations.note
+  - etat_de_l_art (série 6)
+  - references (série 6)
+  a_reconfirmer: []
+  reconfirme:
+  - champ: définition
+    date: '2026-10-10'
+    avant: Netteté du bord perçu d’une zone ou d’une forme, du bord franc au bord flou.
+    apres: 'Manière dont une zone ou une forme se sépare de ce qui l’entoure : d’un passage franc, sans épaisseur, à un passage flou qu’on ne peut pas situer.'
+    remarque: 'relecture après T18 : le label canonique « netteté du bord » rendait l’ancienne définition circulaire ; réécrite par la relecture explicative'
+  - champ: contre_exemple
+    date: '2026-10-10'
+    avant: 'Un bord en pointillé (une ligne de points bien nets) est interrompu, mais pas flou : la continuité du bord est une autre question que sa netteté.'
+    apres: 'Un bord en pointillé (une ligne de points bien nets) est interrompu, mais pas flou : la continuité du bord est une autre question que sa netteté. La silhouette non plus n’est pas en cause :
+      un rond et un carré peuvent avoir tous deux des bords francs, ou tous deux des bords flous.'
+    remarque: 'relecture après T18 : ajout qui écarte la silhouette, sens courant du label alternatif « contour »'
+  - champ: question_attentionnelle
+    date: '2026-10-10'
+    avant: Les bords sont-ils francs, progressifs ou flous ?
+    apres: inchangée
+    remarque: 'relecture après T18 : reste juste avec le nouveau label'

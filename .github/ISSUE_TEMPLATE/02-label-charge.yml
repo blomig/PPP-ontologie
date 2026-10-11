@@ -1,0 +1,67 @@
+# Formulaire de ticket « label-charge » (spec §13, docs/gouvernance.md 2.4). Modèle pour .github/ISSUE_TEMPLATE/ du dépôt public.
+# Syntaxe : GitHub Docs, « Syntax for issue forms » et « Syntax for GitHub's form schema » (consultés le 2026-10-11).
+name: Signaler un mot qui juge ou une mauvaise traduction
+description: Un mot qui évalue au lieu de décrire, une ambiguïté, une erreur de traduction (ouvert à tous).
+title: '[label-charge] '
+labels:
+- label-charge
+body:
+- type: markdown
+  attributes:
+    value: 'Ce ticket est **public**. N''y mettez ni adresse électronique ni donnée personnelle : un pseudonyme suffit. Format et traitement : `docs/gouvernance.md` (reçu, recevable, traité, réponse dans
+      la semaine).'
+- type: input
+  id: cible
+  attributes:
+    label: Ce qui est visé
+    description: 'Fiche, clé, langue : par exemple ppp:texture/smooth, label anglais.'
+  validations:
+    required: true
+- type: dropdown
+  id: probleme
+  attributes:
+    label: Problème
+    options:
+    - valence (le mot évalue)
+    - ambiguïté
+    - homonymie
+    - erreur de traduction
+    - autre
+  validations:
+    required: true
+- type: textarea
+  id: explication
+  attributes:
+    label: Explication
+    description: Ce qui ne va pas.
+  validations:
+    required: true
+- type: textarea
+  id: proposition
+  attributes:
+    label: Proposition (facultative)
+    description: Le mot ou la phrase que vous proposez.
+  validations:
+    required: false
+- type: input
+  id: version
+  attributes:
+    label: Version de la spécification
+    description: Affichée en pied de page du site, par exemple 2.8.
+    placeholder: '2.8'
+  validations:
+    required: true
+- type: input
+  id: pseudonyme
+  attributes:
+    label: Pseudonyme (facultatif)
+    description: Repris dans le champ `auteur` du ticket. Jamais d'adresse électronique.
+  validations:
+    required: false
+- type: checkboxes
+  id: licence
+  attributes:
+    label: Licence
+    options:
+    - label: J'accepte que ma contribution soit versée sous les licences du projet (contenu CC BY 4.0, code MIT), sans accord à signer.
+      required: true

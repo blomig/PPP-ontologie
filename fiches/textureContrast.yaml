@@ -1,0 +1,146 @@
+# Fiche de type PPP — ppp:textureContrast — format : PPP_FicheType.md (spec v2.4)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_joint, avertissement_label, note_categories, note_reference, note_dimension, note_conditions, note_echelle, note_porteur, note_base, bloque_par.
+id: ppp:textureContrast
+label_fr: contraste de texture
+label_en: texture contrast
+label_court: contraste de texture
+labels_alternatifs: []
+patron: P2
+sorte: relateur
+sous_sorte: —
+strate: semi-formel
+base_dependance:
+  types:
+  - ppp:texture
+  facteurs_non_perceptuels: []
+facettes:
+- matiere
+définition: Différence perçue de texture, c’est-à-dire de taille des reliefs, entre deux surfaces, à la vue ou au toucher.
+question_attentionnelle: À la vue ou sous la main, la différence de relief entre ces deux surfaces est-elle faible (même relief, ou presque), modérée (une surface lisse et une à texture fine), évidente
+  (une lisse et une moyenne, ou une fine et une grosse) ou maximale (une lisse et une grosse) ?
+contre_exemple: 'Deux carreaux également lisses, l’un blanc, l’autre noir, ont un contraste de texture faible : ce qui les distingue est un contraste de clarté.'
+modalites:
+- vision
+- toucher
+mode_de_presentation: image
+conditions_critiques:
+- distance
+note_conditions: de loin, des reliefs fins cessent de se voir et deux surfaces paraissent de même texture
+porteur: deux termes (zones, parties ou objets), rôle `terme` pour chacun
+arité: 2
+dimension_comparee: ppp:texture
+condition_NA: moins de deux termes distincts sur cette dimension (une seule zone homogène).
+espace_valeurs:
+  echelle: ordinale
+  meme_echelle_que: ppp:perceptualContrast
+  sens_croissant: de `weak` (rang 1) vers `strong` (rang 4), l’écart perçu de texture augmente
+  numerique: non
+  regions:
+  - cle: weak
+    label_fr: faible
+    label_en: weak
+    rang: 1
+    repere: deux surfaces de même texture, ou presque (deux surfaces lisses)
+    exemplaires: []
+  - cle: moderate
+    label_fr: modéré
+    label_en: moderate
+    rang: 2
+    repere: lisse contre fine
+    exemplaires: []
+  - cle: marked
+    label_fr: évident
+    label_en: marked
+    rang: 3
+    repere: lisse contre moyenne, ou fine contre grosse
+    exemplaires: []
+  - cle: strong
+    label_fr: maximal
+    label_en: strong
+    rang: 4
+    repere: lisse contre grosse
+    exemplaires: []
+identite: Un écart de texture entre deux termes, pas la texture d’un seul porteur.
+relations:
+- type: specializes
+  cible: ppp:perceptualContrast
+  note: garde l’arité, les rôles, les clés et les rangs du général ; n’ajoute pas de région (A1) ; chaque région correspond à la région de même clé du général
+- type: confusableWith
+  cible: ppp:lightnessContrast
+  note: deux carreaux lisses, l’un blanc, l’autre noir, se distinguent par la clarté, pas par la texture
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: tamura1978
+  citation: Tamura, H., Mori, S. & Yamawaki, T. (1978). Textural features corresponding to visual perception. IEEE Transactions on Systems, Man, and Cybernetics, 8(6), 460–473.
+  doi_ou_url: https://doi.org/10.1109/TSMC.1978.4309999
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: métadonnées Crossref et résumé IEEE Xplore ; deux sources secondaires (docs/etat-de-l-art.md §5 bis) ; texte intégral non lu
+  reprend: l'idée de comparer deux textures dimension par dimension
+  ne_reprend_pas: 'les mesures : aucune n''est reprise comme écart perçu'
+etat_de_l_art: 'Les mesures de texture de Tamura, Mori et Yamawaki (1978) [[tamura1978]] permettent de comparer deux surfaces, mais elles ne définissent pas un contraste perçu entre elles. Aucune source
+  trouvée ne propose une échelle perçue du contraste de texture entre deux parties d''un objet ; les labels des régions restent en position de travail (T3). Détail : docs/bibliographie-par-type.md#groupe-contrastes.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-contrastes
+axiomes:
+- conceptuel: Tout contraste particulier médie exactement deux termes.
+  validation: Toute assertion de type ppp:textureContrast a exactement deux ppp:about, chacun avec un ppp:role.
+- conceptuel: Les 4 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 4 ppp:Region de l’échelle ont des ppp:rank distincts, de 1 à 4 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Tout contraste de texture est un contraste perceptif dont la dimension comparée est ppp:texture.
+  validation: Toute assertion de type ppp:textureContrast relève aussi de ppp:perceptualContrast ; elle ne déclare pas de ppp:comparedDimension, ou déclare ppp:texture.
+nanay: Oui — passer de « je vois deux matières » à « je compare la taille de leurs reliefs » change la description (envie de toucher, passage de la main d’une surface à l’autre).
+transfert: objet conçu oui (pierre polie contre pierre brute) | tableau oui (peinture posée en épaisseur à côté d’une couche lisse et mince) | cuisine oui (plan lisse et façade striée) | high-tech oui (coque
+  sablée et écran lisse)
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs à une région près, au-dessus du seuil fixé avant l’épreuve (épreuve propre à ce spécialisé, spec §9.7 B)
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les objets
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2, CQ8a
+statut: candidat
+statut_epistemique: non éprouvé
+introduit_en: '2.2'
+modifie_en:
+- 2.3.1
+- '2.5'
+remplace_par: []
+a_relire: []
+relecture_explicative:
+  date: '2026-10-10'
+  champs:
+  - question_attentionnelle
+  - définition
+  - contre_exemple
+  - nanay
+  - transfert
+  - relations.note
+  - etat_de_l_art (série 6)
+  - references (série 6)
+  a_reconfirmer: []
+  reconfirme:
+  - champ: question_attentionnelle
+    date: '2026-10-10'
+    avant: À la vue ou sous la main, la différence de relief entre ces deux surfaces est-elle faible, modérée, marquée ou forte ?
+    apres: À la vue ou sous la main, la différence de relief entre ces deux surfaces est-elle faible, modérée, évidente ou maximale ?
+    raison: 'T3, option A (décision de l’éditeur du projet, 2026-10-10) : labels du contraste « faible / modéré / évident / maximal » ; question attentionnelle à reprendre par la relecture explicative ; seuls les mots-labels sont
+      remplacés'
+    retenu: À la vue ou sous la main, la différence de relief entre ces deux surfaces est-elle faible (même relief, ou presque), modérée (une surface lisse et une à texture fine), évidente (une lisse et
+      une moyenne, ou une fine et une grosse) ou maximale (une lisse et une grosse) ?
+    remarque: 'T3 option A : question reprise par la relecture explicative ; chaque mot-label porte entre parenthèses le repère de sa région, pour que « évident » (visible d’emblée) et « maximal » (aux deux bouts
+      de la dimension) ne se lisent pas comme des synonymes de « fort »'
+manques:
+- exemplaires (à renseigner ; le seul constat proposé, ppp-a:pilote-0301 sur le contraste général, est retiré en 2.3.2, T24)
+- dépend des régions de la texture, elles-mêmes en position de travail (T1)
+bloque_par: []

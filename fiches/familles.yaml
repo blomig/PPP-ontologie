@@ -1,0 +1,81 @@
+# Registre des familles de lecture (spec §9.7 L, X9 ; point B3 des questions de design).
+# Fichier distinct des fiches de type. Les clés sont les valeurs du champ `facettes` des fiches.
+# Une famille aide à s'orienter ; ce n'est pas une classification (aucun ppp:specializes).
+# Un type peut appartenir à plusieurs familles. Statut : PROPOSITION (introductions à valider
+# par la relecture explicative ; liste des familles à confirmer par l’éditeur du projet, QUESTIONS-A-TRANCHER T4).
+# v2.3.1 : sept nouveaux candidats rangés (spec 2.3) ; les introductions de forme, couleur et
+# matière sont complétées par l’équipe : ajouts à valider par la relecture explicative (champ a_relire ; a_valider avant la série 12).
+
+familles:
+  - cle: forme
+    label_fr: Forme
+    label_en: form
+    introduction: >-
+      Ce qu'on remarque dans le dessin des choses, indépendamment de leur couleur et de leur
+      surface : la netteté des bords, la taille, la symétrie, la différence de taille entre deux
+      éléments, et la façon dont deux parties se rejoignent (écart ou différence de niveau au
+      joint). On y regarde aussi si les bords et les surfaces sont droits ou courbes, si la
+      silhouette entière d'un objet rentre et sort peu ou beaucoup (sa découpure), si les parties
+      se divisent à leur tour en parties plus petites, et si ce qu'on voit s'étage en plans, les
+      uns devant les autres. On peut enfin compter combien de formes simples (cube, cylindre,
+      sphère…) il faudrait pour reconstruire un objet en volume.
+    a_relire: []
+    relecture_explicative: {date: "2026-10-10", champs: [introduction], reconfirme: [{champ: introduction, date: "2026-10-10", remarque: "complétée par la relecture explicative (série 6) : découpure de la silhouette (outlineIndentation)"}, {champ: introduction, date: "2026-10-11", avant: "Ce qu'on remarque dans le dessin des choses, indépendamment de leur couleur et de leur surface : la netteté des bords, la taille, la symétrie, la différence de taille entre deux éléments, et la façon dont deux parties se rejoignent (écart ou différence de niveau au joint). On y regarde aussi si les bords et les surfaces sont droits ou courbes, si la silhouette entière d'un objet rentre et sort peu ou beaucoup (sa découpure), si les parties se divisent à leur tour en parties plus petites, et si ce qu'on voit s'étage en plans, les uns devant les autres.", apres: "Ce qu'on remarque dans le dessin des choses, indépendamment de leur couleur et de leur surface : la netteté des bords, la taille, la symétrie, la différence de taille entre deux éléments, et la façon dont deux parties se rejoignent (écart ou différence de niveau au joint). On y regarde aussi si les bords et les surfaces sont droits ou courbes, si la silhouette entière d'un objet rentre et sort peu ou beaucoup (sa découpure), si les parties se divisent à leur tour en parties plus petites, et si ce qu'on voit s'étage en plans, les uns devant les autres. On peut enfin compter combien de formes simples (cube, cylindre, sphère…) il faudrait pour reconstruire un objet en volume.", remarque: "validée par la relecture explicative (série 15) : phrase ajoutée en série 12 (ppp:elementaryShapeCount), double « et » supprimé en série 14"}]}
+    types: [ppp:contour, ppp:perceivedSize, ppp:symmetry, ppp:scaleContrast, ppp:jointSpacing, ppp:jointLevelOffset,
+            ppp:curvature, ppp:partNesting, ppp:perceivedDepth, ppp:outlineIndentation, ppp:elementaryShapeCount]   # 2.5 : outlineIndentation (crash test 02, C6) ; introduction complétée par la relecture explicative (série 6) ; 2.8 : elementaryShapeCount (crash test 03, T37)
+  - cle: couleur
+    label_fr: Couleur
+    label_en: colour
+    introduction: >-
+      Ce qu'on remarque dans la couleur : la teinte (rouge, bleu…), la clarté (clair ou
+      sombre), la saturation (gris ou très coloré), et les différences de teinte ou de clarté
+      entre deux zones. Ces qualités se jugent zone par zone, quelle que soit leur forme. Dans une
+      même zone, on regarde aussi combien de teintes on voit, et si les teintes, les clartés ou
+      les saturations sont toutes pareilles, proches ou éloignées (des bleus et des verts sont des
+      teintes proches ; des bleus et des oranges, des teintes éloignées).
+    a_relire: []
+    relecture_explicative: {date: "2026-10-10", champs: [introduction], reconfirme: [{champ: introduction, date: "2026-10-10", remarque: "complétée par la relecture explicative (série 6) : nombre de teintes, éventails des clartés et des saturations (hueCount, lightnessRange, saturationRange)"}]}
+    types: [ppp:hue, ppp:lightness, ppp:saturation, ppp:hueContrast, ppp:lightnessContrast, ppp:hueRange,
+            ppp:lightnessRange, ppp:saturationRange, ppp:hueCount]   # 2.5 (crash tests, C6) ; introduction complétée par la relecture explicative (série 6)
+  - cle: matiere
+    label_fr: Matière
+    label_en: material
+    introduction: >-
+      Ce qu'on remarque à la surface d'une matière, à la vue ou au toucher : la taille de ses
+      reliefs, le sens qu'ils suivent (tous dans la même direction, comme un métal brossé, ou
+      dans tous les sens), les endroits où elle s'écarte de sa régularité, et la différence de
+      texture entre deux surfaces. On y regarde aussi la lumière : ce qu'on voit à travers la
+      matière, les reflets de sa surface (du mat au miroir), et l'impression de voir dans son
+      épaisseur. On décrit la surface et l'épaisseur de la matière ; la matière elle-même n'est pas
+      une qualité.
+    a_relire: []
+    relecture_explicative: {date: "2026-10-10", champs: [introduction]}
+    types: [ppp:texture, ppp:localIrregularity, ppp:textureContrast, ppp:textureDirectionality,
+            ppp:translucency, ppp:surfaceGloss, ppp:subsurfaceDepth]
+  - cle: organisation
+    label_fr: Organisation
+    label_en: organisation
+    introduction: >-
+      Ce qu'on remarque dans la disposition des éléments les uns par rapport aux autres :
+      combien il y en a, comment ils se répartissent, si les espaces laissés entre eux se
+      lisent comme des formes, et ce qui les distingue deux à deux (contraste, joint).
+      Plusieurs qualités de cette famille figurent aussi dans une autre.
+    types: [ppp:perceptualDensity, ppp:distribution, ppp:negativeSpace, ppp:symmetry,
+            ppp:perceptualContrast, ppp:lightnessContrast, ppp:jointSpacing, ppp:jointLevelOffset,
+            ppp:partNesting, ppp:perceivedDepth]
+
+hors_registre:
+  - cle: temps
+    raison: >-
+      Citée par la spec (§9.7 L) et prévue par Q1 (organisation temporelle des séquences
+      perçues), mais aucun type V1 n'y appartient. Elle n'entre au registre qu'avec son
+      premier type (règle proposée : pas de famille vide dans l'arbre public).
+  - cle: attention
+    raison: types attentionnels réservés hors V1 (spec §9.9) ; ne pas l'afficher.
+
+correspondance_v02:
+  note: >-
+    La v0.2 groupait les propriétés en catégories « eidétique » (formes, contours, lignes,
+    échelle, texture) et « chromatique ». Elles sont reprises comme familles forme et couleur ;
+    la texture passe en matière. Correspondance indicative, sans dépréciation (les noms v0.2
+    n'ont pas d'id).

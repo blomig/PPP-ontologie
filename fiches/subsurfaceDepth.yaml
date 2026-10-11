@@ -1,0 +1,205 @@
+# Fiche de type PPP — ppp:subsurfaceDepth — format : PPP_FicheType.md (spec v2.4)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_joint, avertissement_label, note_categories, note_reference, note_dimension, note_conditions, note_echelle, note_porteur, note_base, bloque_par.
+id: ppp:subsurfaceDepth
+label_fr: profondeur dans la matière
+label_en: subsurface depth
+labels_alternatifs: []
+patron: P1
+sorte: qualité
+sous_sorte: —
+strate: semi-formel
+base_dependance:
+  types:
+  - ppp:translucency
+  facteurs_non_perceptuels: []
+facettes:
+- matiere
+définition: Degré auquel on a l’impression de voir dans l’épaisseur d’une matière, sous sa surface, de la matière où le regard s’arrête à la surface à celle où il paraît entrer loin.
+question_attentionnelle: Le regard s’arrête-t-il à la surface de cette matière, ou paraît-il entrer un peu, ou loin, dans son épaisseur ?
+contre_exemple: 'Une vitre propre est transparente, mais on regarde à travers, vers ce qui est derrière : on ne voit pas d’épaisseur dans la vitre elle-même ; c’est ce qu’on voit à travers elle (transparence).
+  Un paysage peint qui s’étage en plans relève de l’étagement en plans, pas d’une profondeur dans la matière.'
+modalites:
+- vision
+mode_de_presentation: échantillon
+conditions_critiques:
+- lumiere
+- angle
+note_conditions: 'l’impression de voir dans la matière dépend de la lumière et de l’angle de vue ; sur une photo dont la lumière et l’angle de prise de vue sont inconnus : « non tranché » (spec §9.7 H,
+  règle 4 ; A5)'
+porteur: une partie ou un objet vu avec son épaisseur (une glaçure, un vernis, un bloc de pierre)
+arité: 1
+condition_NA: 'porteur sans matière (une lumière, une ombre). Une matière opaque est applicable : le regard s’arrête à sa surface, elle est dans la région « en surface » (repère « une pierre opaque »),
+  pas non applicable.'
+espace_valeurs:
+  echelle: ordinale
+  sens_croissant: de `atSurface` (rang 1) vers `farInside` (rang 3), le regard paraît entrer plus loin dans l’épaisseur de la matière
+  numerique: non
+  regions:
+  - cle: atSurface
+    label_fr: en surface
+    label_en: at the surface
+    rang: 1
+    repere: le regard s’arrête à la surface (un plâtre, une pierre opaque)
+    exemplaires: []
+  - cle: slightlyInside
+    label_fr: un peu dans l’épaisseur
+    label_en: slightly inside
+    rang: 2
+    repere: on voit un peu sous la surface (un vernis épais sur du bois, une cire)
+    exemplaires: []
+  - cle: farInside
+    label_fr: loin dans l’épaisseur
+    label_en: far inside
+    rang: 3
+    repere: le regard paraît entrer loin dans la matière (un bloc d’ambre, un savon translucide épais)
+    exemplaires: []
+identite: Impression de voir dans l’épaisseur d’une matière, pas ce qu’on voit à travers elle (transparence), pas l’étagement de plans d’une scène (étagement en plans).
+relations:
+- type: confusableWith
+  cible: ppp:perceivedDepth
+  note: 'les deux se disent « profondeur » (« profondeur de la scène », label alternatif de l’étagement en plans ; « profondeur dans la matière ») : l’une est l’étagement des plans d’une scène, l’autre
+    l’épaisseur visible d’une matière (réciproque écrite aussi dans perceivedDepth, T31)'
+- type: confusableWith
+  cible: ppp:surfaceGloss
+  note: un vernis épais montre souvent des reflets nets et laisse voir dans son épaisseur ; les reflets et l’épaisseur visible se jugent séparément
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: fleming_bulthoff2005
+  citation: Fleming, R. W. & Bülthoff, H. H. (2005). Low-level image cues in the perception of translucent materials. ACM Transactions on Applied Perception, 2(3), 346–382.
+  doi_ou_url: https://doi.org/10.1145/1077399.1077409
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: métadonnées Crossref et résumé (OpenAlex)
+  reprend: la diffusion sous la surface comme source d'un aspect propre, distinct de la transparence
+  ne_reprend_pas: la physique de la diffusion et les indices d'image
+- id: fleming2014
+  citation: Fleming, R. W. (2014). Visual perception of materials and their properties. Vision Research, 94, 62–75.
+  doi_ou_url: https://doi.org/10.1016/j.visres.2013.11.004
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: métadonnées Crossref et résumé (OpenAlex)
+  reprend: l’idée que la vue reconnaît les matériaux à leur aspect (des « modèles d’apparence »), sans retrouver leurs propriétés physiques
+  ne_reprend_pas: sa théorie
+etat_de_l_art: 'Fleming et Bülthoff (2005) [[fleming_bulthoff2005]] décrivent la lumière qui entre dans une matière translucide, s’y diffuse et ressort, et l’aspect doux qui en résulte ; Fleming (2014)
+  [[fleming2014]] en fait un cas de la perception des matériaux. Aucune source trouvée ne nomme une qualité perçue de la profondeur à laquelle le regard paraît entrer dans la matière ; savoir s’il faut
+  distinguer une ou deux profondeurs sous la surface reste ouvert (C4). Détail : docs/bibliographie-par-type.md#groupe-matiere.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-matiere
+axiomes:
+- conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
+  validation: Toute assertion de type ppp:subsurfaceDepth a exactement un ppp:about.
+- conceptuel: Les 3 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 3 ppp:Region de l’échelle du type ont des ppp:rank distincts, de 1 à 3 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Une région de cet espace n’est pas un sous-type du type.
+  validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
+nanay: Oui — passer de « je vois une surface » à « je regarde si le regard entre dans la matière » change la description (couches visibles, lumière qui semble venir de l’intérieur).
+transfert: 'objet conçu oui (glaçure, laque, vernis) | tableau oui (glacis : couches de peinture transparentes superposées) | cuisine oui (plan de travail en pierre translucide) | high-tech oui (coque en
+  résine translucide)'
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs exact (échelle à trois régions ou moins, spec §9.7 C, v2.5), au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques
+    (spec §9.7 H)
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les objets
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E3
+  nature: structure
+  enonce: deux matières jugées identiques en transparence ne diffèrent pas en profondeur dans la matière ; si elles diffèrent (épaisseur, couches), la base est incomplète
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2
+statut: candidat
+statut_epistemique: non éprouvé
+introduit_en: '2.3'
+modifie_en:
+- 2.3.1
+- 2.3.2
+- '2.5'
+- '2.6'
+remplace_par: []
+source_de_la_fiche: crash tests, partie 1 (spec 2.3, docs/questions-crash-tests.md C4) ; fiche préremplie le 2026-10-10 par l’équipe, champs en langage courant à valider par la relecture explicative
+manques:
+- 'exemplaires (à renseigner : objets publics vérifiés, un épisode par objet, conditions déclarées)'
+bloque_par:
+- C4 point 4 (une ou deux profondeurs)
+a_relire: []
+relecture_explicative:
+  date: '2026-10-11'
+  champs:
+  - question_attentionnelle
+  - définition
+  - contre_exemple
+  - espace_valeurs.regions.repere
+  - identite
+  - relations.note
+  - nanay
+  - transfert
+  - condition_NA (2.3.2)
+  - etat_de_l_art (série 6)
+  - references (série 6)
+  - contre_exemple (re-confirmé en relecture explicative, série 9, 2026-10-11)
+  - identite (re-confirmé en relecture explicative, série 9, 2026-10-11)
+  - note_conditions (re-confirmé en relecture explicative, série 9, 2026-10-11)
+  a_reconfirmer: []
+  reconfirme:
+  - champ: contre_exemple
+    date: '2026-10-10'
+    avant: 'Une vitre propre est transparente, mais on regarde à travers, vers ce qui est derrière : on ne voit pas d’épaisseur dans la vitre elle-même ; c’est sa translucidité. Un paysage peint qui s’étage
+      en plans relève de la profondeur perçue, pas d’une profondeur dans la matière.'
+    apres: 'Une vitre propre est transparente, mais on regarde à travers, vers ce qui est derrière : on ne voit pas d’épaisseur dans la vitre elle-même ; c’est ce qu’on voit à travers elle (vue à travers).
+      Un paysage peint qui s’étage en plans relève de l’étagement en plans, pas d’une profondeur dans la matière.'
+    raison: 'label canonique de ppp:translucency changé : « translucidité » → « vue à travers » (objection 1, T28) ; « translucidité » aurait désigné ici une vitre transparente ; label canonique de ppp:perceivedDepth
+      changé : « profondeur perçue » → « étagement en plans » (objection 7, T25)'
+    remarque: reconfirmé par la relecture explicative (spec 2.3.2)
+  - champ: identite
+    date: '2026-10-10'
+    avant: Impression de voir dans l’épaisseur d’une matière, pas ce qu’on voit à travers elle (translucidité), pas l’étagement de plans d’une scène (profondeur perçue).
+    apres: Impression de voir dans l’épaisseur d’une matière, pas ce qu’on voit à travers elle (vue à travers), pas l’étagement de plans d’une scène (étagement en plans).
+    raison: 'label canonique de ppp:translucency changé : « translucidité » → « vue à travers » (objection 1, T28) ; label canonique de ppp:perceivedDepth changé : « profondeur perçue » → « étagement en
+      plans » (objection 7, T25)'
+    remarque: reconfirmé par la relecture explicative (spec 2.3.2)
+  - champ: relations.note (ppp:perceivedDepth)
+    date: '2026-10-10'
+    avant: 'les deux disent « profondeur » : l’une est l’étagement des plans d’une scène, l’autre l’épaisseur visible d’une matière'
+    apres: 'les deux se disent « profondeur » (« profondeur de la scène », label alternatif de l’étagement en plans ; « profondeur dans la matière ») : l’une est l’étagement des plans d’une scène, l’autre
+      l’épaisseur visible d’une matière (réciproque écrite aussi dans perceivedDepth, T31)'
+    raison: 'label canonique de ppp:perceivedDepth changé : « profondeur perçue » → « étagement en plans » (objection 7, T25) : le label canonique ne dit plus « profondeur »'
+    remarque: reconfirmé par la relecture explicative (spec 2.3.2)
+  - champ: condition_NA
+    date: '2026-10-10'
+    avant: 'porteur sans matière (une lumière, une ombre). Une matière opaque est applicable : le regard s’arrête à sa surface, elle est en région `atSurface` (repère « une pierre opaque »), pas non applicable.'
+    apres: 'porteur sans matière (une lumière, une ombre). Une matière opaque est applicable : le regard s’arrête à sa surface, elle est dans la région « en surface » (repère « une pierre opaque »), pas
+      non applicable.'
+    remarque: clé technique remplacée par le label FR de la région, après la relecture explicative (spec 2.3.2)
+  - champ: contre_exemple
+    date: '2026-10-11'
+    avant: 'Une vitre propre est transparente, mais on regarde à travers, vers ce qui est derrière : on ne voit pas d’épaisseur dans la vitre elle-même ; c’est ce qu’on voit à travers elle (vue à travers).
+      Un paysage peint qui s’étage en plans relève de l’étagement en plans, pas d’une profondeur dans la matière.'
+    apres: 'Une vitre propre est transparente, mais on regarde à travers, vers ce qui est derrière : on ne voit pas d’épaisseur dans la vitre elle-même ; c’est ce qu’on voit à travers elle (transparence).
+      Un paysage peint qui s’étage en plans relève de l’étagement en plans, pas d’une profondeur dans la matière.'
+    raison: 'T28 tranché par l’éditeur du projet le 2026-10-11 : label canonique de ppp:translucency « transparence » (« vue à travers » en label alternatif) ; seul le nom du type change'
+    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+  - champ: identite
+    date: '2026-10-11'
+    avant: Impression de voir dans l’épaisseur d’une matière, pas ce qu’on voit à travers elle (vue à travers), pas l’étagement de plans d’une scène (étagement en plans).
+    apres: Impression de voir dans l’épaisseur d’une matière, pas ce qu’on voit à travers elle (transparence), pas l’étagement de plans d’une scène (étagement en plans).
+    raison: 'T28 tranché par l’éditeur du projet le 2026-10-11 : label canonique de ppp:translucency « transparence » (« vue à travers » en label alternatif) ; seul le nom du type change'
+    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+  - champ: note_conditions
+    date: '2026-10-11'
+    avant: 'l’impression de voir dans la matière dépend de la lumière et de l’angle de vue ; sur photo, lumière et angle inconnus : « non tranché »'
+    apres: 'l’impression de voir dans la matière dépend de la lumière et de l’angle de vue ; sur une photo dont la lumière et l’angle de prise de vue sont inconnus : « non tranché » (spec §9.7 H, règle
+      4 ; A5)'
+    raison: formule précisée et renvoi ajouté (seconde relecture explicative)
+    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)

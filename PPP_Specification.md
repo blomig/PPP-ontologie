@@ -1,0 +1,1369 @@
+# PPP — Spécification d’ontologie
+
+**Version** : 2.8 (branche `spec-v2`)
+**Statut** : brouillon de travail (ORSD léger), amendé après le recadrage du 2026-10-08, les décisions du 2026-10-10 et les crash tests (partie 1, v2.3)
+**Date** : 2026-10-11 (v1 : 2026-09-16)
+**Sources** : brief d’usage (équipes d’innovation / design / création) ; atelier matières / nuanciers ; direction de création (formes) ; poster des assemblages de deux matières ; documents v0 / v0.1 / v0.2 ; `docs/etat-de-l-art.md` ; `docs/critique-spec-v1.md`
+**Ce document n’est pas l’ontologie.** L’ontologie est publique et amendable (§13). Ce document fixe le statut épistémologique du programme (§0), le but, le périmètre, les questions que l’ontologie doit pouvoir soutenir, et les engagements qu’on prend (ou qu’on refuse). L’appareil d’ingénierie ontologique est au §9 ; les exigences minimales pour les dérivés (site, cartes, outils) au §12 ; le patron d’entrée de type est `PPP_FicheType.md`. Les décisions réservées à l’éditeur du projet sont listées dans `docs/questions-pour-l-editeur.md`.
+
+## Changelog
+
+**2.8 — 2026-10-11** (séries 9 à 16 : corrections de la relecture explicative de la 2.7 et décisions de l’éditeur du projet relayées par la coordination) :
+- **Série 16 — reconfirmation à 255e824** : `ppp:elementaryShapeCount` : `enonces_testables` validé (E3), archivé dans `relecture_explicative.champs` ; `note_base` : la base est « à revoir (T37, question 6 : la compléter ou n’en déclarer aucune) » ; T37, question 6 : introduction pour l’éditeur (base, formel, semi-formel), options A et B mises en défaut par E3 (deux étagères de même taille, à trois et à quatre tablettes), objection du §0.3 contre l’option C, position de travail : aucune option ne passe E3 tant que la question 1 n’est pas tranchée ; `familles.yaml` : introduction de la famille forme archivée en entier (avant, après).
+- **Série 15 — reconfirmation à 5330e2d** : `fiches/compte.py --verifier` contrôle la liste fermée des rôles de références (`PPP_FicheType.md`, §9.7 P) ; `ppp:elementaryShapeCount` : E3 reformulé (`ppp:contour` est la netteté du bord), `note_base` complétée (« répertoire » expliqué ; E3 mis en défaut par cette seule base, base à compléter), nouvelle question 6 de T37 (base de dépendance, trois options, position de travail, *à trancher*) ajoutée à `bloque_par` ; champs validés par la relecture explicative archivés dans `relecture_explicative.champs`, restent `note_base` et `enonces_testables` ; introduction de la famille forme validée, archivée dans `reconfirme`.
+- **Série 14 — reconfirmation de la relecture explicative** : `ppp:elementaryShapeCount` : rôle `voisine`, hors liste fermée, remplacé par `contraste` pour trois références (bibliographie alignée ; `fiches/compte.py --verifier` contrôle désormais la liste fermée des rôles, depuis la série 15 ; le `check.py` de travail, hors dépôt, le fait aussi), E3 reformulé selon le modèle d’E3 (indiscernables sur la base `ppp:contour`, au même régime, avec le même répertoire de formes simples, son facteur non perceptuel), E2, `identite` et relation à `ppp:symmetry` (T37), relation à `ppp:curvature`, `grandeur_physique_homonyme`, définition (renvoi au §9.7 H déplacé dans `note_conditions`), `note_conditions` ; `a_relire` réduit à des noms de champs, résumés dans un champ `remarque` (`PPP_FicheType.md`) ; introduction de la famille forme (double « et ») ; formulaire « Suggérer un objet » aligné sur le texte public (version, exemple), champ image en une ligne, descriptions vides retirées ; `CITATION.cff` garde `license: CC-BY-4.0` (une liste vaut « au choix » en CFF 1.2.0).
+- **Série 13 — décisions de l’éditeur du projet** : dépôt public sans historique ; titulaire des droits : l’éditeur du projet seul, avec mention des contributeurs du projet (`LICENSE`, `LICENSE-CONTENT.md` ; noms au §13), le co-auteur restant crédité dans `CITATION.cff`, `CONTRIBUTORS.md` ; tout le dépôt sous licence, fiches non publiques listées « en préparation » (X17) ; quatre types ouverts à tous retenus (§13) ; modalité et régime : position de travail, à trancher (Q13, E5) ; note sur les pilotes (Q7, trois depuis la 2.2).
+- **Série 12 — corrections de la relecture explicative de la série 9** : entrées `a_reconfirmer` levées archivées dans `reconfirme` (neuf fiches) ; `a_valider` → `a_relire` dans `familles.yaml` et `exemplaires.yaml` ; famille forme et `ppp:elementaryShapeCount` reformulées (champs en `a_relire` ; label court « nombre de formes ») ; X13 renommée « Gestes de contribution depuis une fiche » ; « Signaler un problème de formulation » devient deux gestes, « Signaler un mot qui juge ou une mauvaise traduction » et « Signaler une erreur » (huit gestes, neuf types) ; formulaire `objet-suggere` sans codes, libellés du texte public (table libellé → code : `docs/gouvernance.md`) ; README public = texte d’accueil, descriptif technique dans `docs/`.
+- **Série 11 — date d’un objet suggéré** (position de travail de la coordination et de l’éditeur du projet) : la date peut être « inconnue » seulement si la variante (« Quelle version exactement ? ») identifie l’objet (§13, `PPP_FicheExemplaire.md`) ; formulaire `objet-suggere` aligné sur le texte public `docs/public/formulaire-objet.md`.
+- **Série 10 — journal des épreuves affiché** (décision) : le site a une page du journal des épreuves, et chaque fiche renvoie à ses épreuves (§13, X8) ; modèles `epreuves/README.md` et `epreuves/0000-modele.md` du futur dépôt dans `docs/depot-public/epreuves/`.
+- **Série 10 — fiches publiques** : 7 fiches publiques (paliers 1 et 2 de X17, calculés par `fiches/compte.py`) : `hue`, `lightness`, `lightnessContrast`, `perceivedSize`, `perceptualDensity`, `texture`, `textureDirectionality` ; `--verifier` signale tout écart avec cette liste.
+- **Série 10 — adresses retenues** : dépôt public `PPP-ontologie`, https://github.com/blomig/PPP-ontologie ; site https://blomig.github.io/PPP-ontologie ; `CITATION.cff` (`repository-code`, `url`) et la citation les donnent ; seul le DOI reste à renseigner (Zenodo).
+- **Corrections de la relecture explicative** : T36 (prémisse corrigée : quatre énoncés E5 nomment des sortes d’objets, les 30 listes `transfert` sont des exemples) ; T35 (second régime = autre `presentation` ou autre valeur d’une facette critique) ; §9.7 G (homogénéité à l’intérieur d’un régime) ; §13 (sept gestes, neuf types de tickets, quatre types ouverts à tous ; référence fautive = ticket `correction` ; délai : recevabilité jugée dans la semaine, ticket recevable ouvert jusqu’à l’épreuve) ; « régime d’observation » remplacé par « condition de perception » / « régime déclaré » ; ticket `objet-suggere` : régime complet (cinq facettes, `unknown`) ; syntaxe de cible `ppp:<type>#E<n>` ; `ontologyVersion` = version de l’ontologie au moment de l’assertion ; citation unique, celle de `CITATION.cff`.
+- **Nombre de formes élémentaires (T37)** : fiche `fiches/elementaryShapeCount.yaml` créée (candidat, bloquée par les questions 1, 4 et 5 de T37), id `ppp:elementaryShapeCount` inscrit à l’annexe A ; texte révisé de T37 ; cinq références vérifiées sur Crossref, OpenAlex ou PubMed ; tous les champs en langage courant en attente de la relecture explicative (`a_relire`).
+- **Gouvernance (§13)** : dépôt public neuf, site par GitHub Pages, tickets par formulaires GitHub (compte GitHub requis), équipe fermée, délai d’une semaine (décisions de l’éditeur du projet) ; conversion des tickets en fichiers, conflit d’intérêts, entrée dans l’équipe, identifiant pérenne (Zenodo), journal affiché : positions de travail, à trancher ; adresse du dépôt public à renseigner à la publication ; `CITATION.cff` sans `repository-code` jusque-là (journal affiché et adresses : décidés en série 10, ci-dessus).
+- **Dépôt public (§13)** : structure du futur dépôt, liste fichier par fichier (publié / interne / à décider), étapes de mise en place et vérifications avant publication : `docs/depot-public.md` ; modèles de `README.md`, `CONTRIBUTING.md` et des neuf formulaires de tickets GitHub : `docs/depot-public/`.
+- **Licences (§13)** : `LICENSE-CONTENT.md` nommait deux titulaires (remplacé en série 13 : titulaire unique, l’éditeur du projet, mention des contributeurs) et liste les images d’exemplaires reproduites, avec leur propre licence (hors CC BY 4.0).
+- **Noms (§13)** : prénoms et noms d’agents retirés de tous les documents du dépôt, internes compris, hors liste blanche (citation, licences, §13) ; le fichier des questions réservées à l’éditeur, dont le nom portait un prénom, renommé `docs/questions-pour-l-editeur.md` (et `docs/questions-de-la-maquette.md`, `docs/reponses-maquette-serie8.md`) ; contrôle `fiches/compte.py --noms` étendu à tout le dépôt.
+- **Clés de relecture renommées** (décision relayée par la coordination) : `valide_par_le_professeur` → `relecture_explicative`, `a_valider_par_le_professeur` → `a_relire`, dans les 30 fiches, `exemplaires.yaml`, `familles.yaml`, `PPP_FicheType.md` (section « Champs de travail »), `PPP_FicheExemplaire.md` et `fiches/compte.py`.
+- **Relecture explicative** : les champs à re-confirmer ou à valider de neuf fiches sont relus et levés (`hue`, `hueContrast`, `hueCount`, `hueRange`, `translucency`, `subsurfaceDepth`, `surfaceGloss`, `scaleContrast`, `perceptualContrast`).
+**2.7 — 2026-10-11** (décisions de l’éditeur du projet du 11/10, série 8 ; `fiches/QUESTIONS-A-TRANCHER.md` v2.1) :
+- **T35 tranché (option A)** : critère de première publication en trois paliers calculés (publiable / publiable avec exemplaires incomplets / pas publiable), écrit en **X17** (§12) ; calcul : `fiches/compte.py --paliers`.
+- **E5 tranché** : un régime est une combinaison de facettes de la condition de perception (§9.7 H) ; **deux régimes** diffèrent au moins sur `presentation` ou sur une facette critique du type ; les sortes d’objets sont des exemples de cas où les régimes diffèrent (ligne E5, X12, §9.7 G et M). Alignement proposé des énoncés E5 et du champ `transfert` des 30 fiches : T36 (non appliqué).
+- **Teinte (T6)** : les cas limites du brun et du rose (teinte voisine la plus proche) passent en règle (confirmés par l’éditeur du projet).
+- **Gouvernance (§13)** : équipe et éditeur du projet nommés au §13 (arbitrage final à l’éditeur du projet), équipe fermée qui instruit seule, tickets traités dans la semaine ; rôles de travail sans nom ; noms publics limités à « Qui sommes-nous ? », au §13 et à la citation ; conflit d’intérêts, entrée dans l’équipe, adresse de dépôt : positions de travail, à trancher. Bonnes pratiques d’OBO Foundry, de schema.org et de SKOS : `docs/gouvernance.md`.
+- **Tickets (§13)** : file `tickets/`, quatre types publics (`suggestion-type`, `contestation`, `label-charge`, `correction`) et trois types experts, états reçu / recevable / traité (accepté ou rejeté avec motif), fichier `tickets/<nnnn>-<type>.md` (en-tête YAML, corps Markdown).
+- **Objets suggérés (§13, X13)** : ticket `objet-suggere` (nom, créateur, date, variante, lien public, images en lien par défaut, conditions de perception) et `assertion-exemplaire` ; le registre des objets est `fiches/exemplaires.yaml` ; un ticket n’y écrit jamais ; objets internes hors dépôt public ; gabarit `PPP_FicheExemplaire.md` (fiche d’exemplaire standard).
+- **Distance (§9.7 H)** : « plusieurs mètres », « dans une pièce » = `room` (crash test 03).
+- **Nombre de formes élémentaires (crash test 03)** : formes répétées et percements comptent comme des formes en plus (décision de l’éditeur du projet) ; la fiche n’existe pas encore (proposition du rapport 03) : T37.
+- **Journal des épreuves (§13)** : défini (registre des épreuves dans `epreuves/`, un fichier par épreuve, protocole et seuil écrits avant) ; il ne double ni le changelog ni les tickets.
+- **Comment citer (§13)** : forme recommandée, `docs/comment-citer.md`, `CITATION.cff` (CFF 1.2.0).
+- **Noms** : prénoms et noms d’agents retirés des sources publiées (fiches, exemplaires, familles, bibliographie) et du reste de la spec ; fonctions à la place ; contrôle `fiches/compte.py --noms`.
+- **Complétude (But 1, X13, §13)** : PPP vise un ensemble complet et cohérent de descripteurs factuels de tous les aspects perceptibles d’un objet ; c’est un horizon, non un état atteint ; critères de recevabilité d’une suggestion de type (aspect décrit, non couvert, factuel ; un redécoupage est une demande de spécialisation ou de révision).
+- **Shap Wells (T15)** : le nom de l’hôtel reste dans le crédit (mention requise par CC BY-SA 2.0) ; point réglé, remplacement non retenu.
+**2.6 — 2026-10-11** (décisions de l’éditeur du projet du 11/10, série 7 ; `fiches/QUESTIONS-A-TRANCHER.md` v2.0) :
+- **Teinte (T6, tranché)** : six teintes (`red`, `orange`, `yellow`, `green`, `blue`, `purple`) ; brun = orange sombre et terne, rose = rouge clair et peu vif, gris, noir et blanc non applicables ; règle définitive dans la fiche (annexe A) ; cas limites (brun qui tire vers le rouge ou le jaune, rose qui tire vers le violet : teinte voisine la plus proche) : proposition, à confirmer par l’éditeur du projet (T6). Cercle à six teintes pour `ppp:hueContrast` : repères en pas (0, 1, 2, 3 ; trois pas = teintes opposées). Blocages levés : `ppp:hue`, `ppp:hueRange`, `ppp:hueCount` (C22).
+- **Contraste d’échelle (T34, tranché, option B)** : §9.7 B autorise des labels propres à un spécialisé dont la dimension n’a pas de bout d’échelle ; champ d’affichage `labels_regions_propres` (clé, label FR, label EN, `region_generale`), défini ici et dans `PPP_FicheType.md` ; `ppp:scaleContrast` : « tailles voisines / nettement différentes / très différentes / sans commune mesure » (proposition de l’équipe, à valider ; EN *vastly different sizes*), clés et rangs inchangés (annexe A).
+- **Images d’exemplaires (Q15, règle de l’éditeur du projet)** : une image non réellement libre n’est pas reproduite ; la fiche cite l’objet et pointe vers l’image en ligne (`credit.usage` : `image_reproduite` | `lien_seulement`, `credit.lien_externe`, `credit.motif_usage` ; X16, `PPP_FicheType.md`). Classement des neuf objets (`fiches/exemplaires.yaml`) : cinq reproduites (bol du Met, CC0 ; granite de Shap Wells, San Vitale, porphyre bouchardé, velours côtelé, CC BY-SA), quatre en lien seulement (Blanc sur blanc, Carré noir, Carré rouge de Malévitch ; page de titre de Moby-Dick).
+- **E5 clarifié** (relecture explicative ; *position de travail, à confirmer par l’éditeur du projet, le sens change*) : la spec employait « régime » en deux sens : sortes d’objets dans la ligne E5 (« un objet conçu, plus un tableau… »), combinaisons de facettes de la condition de perception dans X12, §9.7 G, §9.7 M (condition 1) et T35. Lecture retenue : un régime est une combinaison de facettes (§9.7 H) ; les sortes d’objets sont des exemples de cas où les régimes diffèrent. Ligne E5 et geste « Proposer un type » reformulés ; les énoncés E5 des fiches et leur champ `transfert` parlent encore de sortes d’objets, ainsi que le champ `regime` des objets de `exemplaires.yaml` : à aligner après la décision.
+- **Deux régimes (E5, X12)** : *position de travail, à trancher par l’éditeur du projet (sous-question de T35)* : deux régimes diffèrent au moins sur `presentation` ou sur une facette critique du type ; une seule autre facette ne suffit pas.
+- **Exemplaires discutables** (§9.7 G, T35) : champ éditorial `doute: oui` dans `fiches/exemplaires.yaml`, à la place du mot « contestable » en tête de note (douze assertions migrées) ; « contestable » garde le sens du §13.
+- **Annexe A** : « facettes critiques pressenties » remplacées par un renvoi aux `conditions_critiques` des fiches (`ppp:translucency`, `ppp:surfaceGloss`, `ppp:perceivedDepth`, `ppp:subsurfaceDepth`) ; §9.7 C, échelle nominale : mention de version mise à jour (v2.6, la teinte).
+- **T35 ouvert** (point de la coordination) : critère réaliste de première publication, en trois paliers calculés (publiable / publiable avec exemplaires incomplets / pas publiable ; révisés après la relecture explicative : exemplaires relus, non contestables, deux régions non voisines, image reproduite ou mention « exemplaires en lien seulement ») ; position de travail dans `fiches/QUESTIONS-A-TRANCHER.md` ; X12, E5 et les statuts inchangés ; aucune règle écrite dans la spec tant que T35 est ouvert.
+- **Comptes du README calculés** (point de la coordination) : `fiches/compte.py` calcule depuis les fiches les états, les références (30 fiches sur 30, comptées par DOI ou URL), les relectures en attente (état distinct « en attente de la relecture explicative », qui passe avant « explicabilité validée »), les fiches sans exemplaire et les paliers de T35 ; `--verifier` contrôle le bloc de `fiches/README.md` et les appels `[[id]]` (l’ancien compte « 24 sur 26 » était périmé).
+- **Sources du contraste général et du contraste d’échelle** (point de la coordination) : Peli 1990, Haun et Peli 2013 ; Girgus, Coren et Agdern 1972, de Fockert et al. 2007, Mruczek et al. 2017 (résumés lus) ; état de l’art réécrit, à re-confirmer.
+- **§9.7 P, appel des références** (point 4 bis) : `[[id]]` après la mention en clair, dans `etat_de_l_art` et les `note…` ; 30 fiches converties (88 appels, après la relecture explicative) ; règles de validation : l’id existe dans `references` de la fiche ; toute mention nominative d’une référence de la fiche, dans `etat_de_l_art` et les `note…`, a son appel après sa première mention dans le champ (contrôle automatique).
+- **§9.7 P, renvoi de l’état de l’art** : champ `etat_de_l_art_renvoi`, au format `docs/bibliographie-par-type.md#groupe-…` ; ancres stables définies dans la bibliographie ; les 30 fiches au format.
+- **Transparence (T28, tranché)** : label canonique de `ppp:translucency` « transparence » ; « vue à travers » et « translucidité » en labels alternatifs ; régions opaque / translucide / transparent inchangées ; id et label EN inchangés (annexe A).
+
+**2.5 — 2026-10-10** (décisions de l’éditeur du projet du 10/10, série 6 ; `fiches/QUESTIONS-A-TRANCHER.md` v1.8) :
+- **Labels du contraste (T3, option A)** : « faible / modéré / évident / maximal » pour `ppp:perceptualContrast` et les quatre spécialisés, clés `weak`, `moderate`, `marked`, `strong` inchangées (§9.7 B, annexe A, glossaire, exemples de la spec).
+- **Texture (T1)** : « grain » devient label alternatif de `ppp:texture` (§0.3, annexe A) ; homonyme granulométrie déclaré (§9.7 J).
+- **Distribution (T21)** : label de `scattered` « aléatoire », « au hasard » et « sans ordre apparent » en alternatifs (§0.3, annexe A).
+- **Brillance de surface (T29, T33)** : régions « mat / satiné / brillant / miroir », clés inchangées, après recherche d'une catégorisation reconnue des niveaux (aucune ; `docs/bibliographie-par-type.md`) ; avertissement de label corrigé.
+- Exemplaire 0105 en `ppp:texture/medium` (T24).
+- **Condition de perception (C1, C3)** : nom canonique (« condition d’observation » en label alternatif) ; « régime de perception » pour une combinaison de facettes ; ids `ppp:ObservationCondition` et `ppp:observedUnder` inchangés, sans alias (A11) ; compatible avec Q3 et N1 (§9.7 H, glossaire, A5, A6, annexe A.2).
+- **Teinte (T6, proposition, sans décision)** : état de l'art vérifié des catégorisations (Munsell, NCS, Berlin et Kay, ISCC-NBS, Hering, Itten, CIE) dans `docs/couleur-teinte-etat-de-l-art.md` ; règle provisoire du brun et du rose dans la fiche, clés inchangées ; alignements Munsell et NCS. **Vue à travers (T28)** : recommandation « transparence », label canonique inchangé en attendant la décision de l’éditeur du projet.
+- **§12** : X12 (fiche rédigée = état calculé ; grisé des seules fiches minimales ; un seul badge ; T12) ; X9 (dépréciés et `attente` hors de l’arbre, index et recherche, page courte ; T13) ; **X16 (nouveau)** : section « Droits et crédits » ; champ `credit` des objets d’exemplaires (Q15, droits à confirmer par l’éditeur du projet).
+- **Crash tests 01 et 02 (C6)** : quatre candidats à fiche minimale, `ppp:lightnessRange`, `ppp:saturationRange`, `ppp:hueCount`, `ppp:outlineIndentation` (annexe A) ; les autres trous sont à instruire (`docs/crash-tests-suites.md`) ; « profond » ne reçoit pas d’id (décision de l’éditeur du projet). **§9.7 C** : accord exact pour E1 sur une échelle de trois régions ou moins, comparaison appariée pour un pas décisif (E1b de `ppp:hueRange`). **§9.2 point 7** : `tendsToProduce` à une seule source, jamais vers un type qui a la source dans sa base. Aucun `integralWith` ajouté : aucun cas relevé ne satisfait le sens fort.
+- **Relecture de la relecture explicative, série 6 (partie 7 ; spec non renumérotée, corrections de sources et de fiches)** : attribution GDT de « brillance » corrigée (fiche « brillance » : luminosité, emploi déconseillé pour la confusion avec « brillant » ; fiche « luminance lumineuse » : autrefois brillance, désuet) ; état de l'art de la teinte réécrit en langage courant ; `etat_de_l_art` et `reprend` ramenés à ce que `verifie_sur` soutient ; audit des statuts de vérification (notes Noy, Gruber, NeOn ; Munsell ; CIE : entrée CIELAB du vocabulaire international de l'éclairage) ; repère de `scaleContrast/strong` précisé (T34 ouvert) ; `hueContrast` : la coupure évident / maximal dépend du cercle (T6) ; README : explicabilité validée, aucune fiche rédigée au sens de X12.
+
+**2.4 — 2026-10-10** (exigence de l’éditeur du projet sur les sources) :
+- **§0.1, point 7** : tout emprunt à un travail existant (classification, ontologie, théorie, étude) est cité ; aucune référence inventée ; une source non vérifiée est marquée comme telle.
+- **§9.7 P (nouveau)** : champs de fiche `references` (citation, DOI ou URL, rôle, statut de vérification, date, ce qui a été vu, ce que PPP en reprend et n’en reprend pas), `references_statut` et `etat_de_l_art` ; trois statuts de vérification ; état de l’art par groupe dans `docs/bibliographie-par-type.md`.
+- **§9.7 M, condition 1** : une fiche promue au cœur a au moins une référence dont le statut n’est pas « non vérifiée », ou une recherche sans résultat datée. **§9.7 O** : l’alignement renvoie à une entrée de `references` (`reference_id`).
+- **§12, X15** : le site affiche les références de chaque fiche avec leur statut de vérification ; une source non vérifiée n’est jamais affichée comme vérifiée. **§13** : une référence fautive se signale par « Signaler un problème de formulation ».
+- **Notes et section « Références »** : les emprunts explicites de la spec sont appelés en note ; les emprunts encore non vérifiés y sont listés comme tels.
+- Fiches : les 26 fiches actives reçoivent `references`, `references_statut` et `etat_de_l_art` (champs en langage courant à valider par la relecture explicative) ; `PPP_FicheType.md` v2.4.
+
+**2.3.2 — 2026-10-10** (objections de structure de la relecture explicative sur les fiches de la partie 2 ; positions de travail, révisables par l’éditeur du projet) :
+- **Annexe A, labels** : `ppp:translucency` prend le label canonique « vue à travers » (« translucidité » devient label alternatif : il entrait en collision avec la région médiane « translucide », A2, et se lisait tantôt « laisse passer la lumière », tantôt « laisse voir à travers » ; T28). `ppp:perceivedDepth` prend le label canonique « étagement en plans », label alternatif « profondeur de la scène » (T25). Ids inchangés (A11).
+- **Annexe A, `ppp:surfaceGloss`** : avertissement sur « brillance » (vivacité en français courant ; ancien nom de la luminance en photométrie) ; labels de région proposés « mat / satiné / à reflet net / comme un miroir », clés inchangées (C4, T29).
+- **Annexe A, `ppp:partNesting`** : base ramenée à `ppp:contour`, plus une relation non typée entre parties (une partie paraît contenue dans une autre, plus grande qu’elle) ; `ppp:perceivedSize`, rapportée au corps, est retirée de la base (T25, C4).
+- **§9.7 H, règle 7** : pour une assertion sur l’objet via une image, `lumiere`, `distance` et `angle` décrivent la prise de vue (la scène montrée), pas l’écran ; la distance peut s’estimer d’après le cadrage, notée comme telle (T22).
+- Fiches : `ppp:curvature` jugée localement, `distance` critique (T30) ; relations symétriques écrites des deux côtés pour deux paires, à la demande de l’éditeur du projet, contre la lettre de §9.2 point 7 (T31) ; exemplaires de Shap Wells 0103, 0301, 0502 retirés (T24).
+
+**2.3.1 — 2026-10-10** (décisions de l’éditeur du projet rapportées par le design ; objections de structure de la relecture explicative ; fiches de la partie 2, `fiches/`) :
+- **X11** : l’id `ppp:` d’un type est **visible sous le titre** de sa fiche, pas replié dans les champs techniques (décision de l’éditeur du projet).
+- **X13 et §13** : le geste public s’appelle « **Suggérer un type** » (au lieu de « suggérer un candidat », décision de l’éditeur du projet) ; il reste distinct du geste expert « Proposer un type » (fiche complète), dont le nom est à confirmer (`fiches/QUESTIONS-A-TRANCHER.md`, T27).
+- **§0.3** : régions de la distribution alignées sur la fiche (« groupée, au hasard, régulière », T5).
+- **§9.7 H** : valeur `backlit` (contre-jour) ajoutée à la facette `lumiere`, pour la translucidité (position de travail, révisable par l’éditeur du projet ; T23).
+- **Annexe A** : `ppp:textureDirectionality` limité aux reliefs (objection de la relecture explicative) ; les sept candidats de la 2.3 ont une fiche préremplie (`fiches/`), champs en langage courant à valider par la relecture explicative.
+
+**2.3 — 2026-10-10** (crash tests, partie 1 : niveau de la spec ; aucun rapport écrit des tests sur objets publics trouvé dans les dépôts, travail sur la description transmise ; chaque décision ci-dessous est une **position de travail, révisable par l’éditeur du projet**, points ouverts dans `docs/questions-crash-tests.md`) :
+- **Condition de perception** : pas de nouvelle classe ; c’est la condition de perception déclarée par l’épisode (`ppp:observedUnder`, §9.7 H), complété d’une cinquième facette `angle` et de la valeur `unknown` sur chaque facette. Une région est attribuée sous un régime (lecture de P1, §9.3 ; A6). Une fiche déclare ses `conditions_critiques` ; une facette critique `unknown` impose « non tranché » (A5) ; E1 se mesure à régime égal sur les facettes critiques ; CQ20 et CQ31 en tiennent compte.
+- **Trous relevés** : sept candidats dans l’annexe A, sans fiche (partie 2) : `ppp:translucency`, `ppp:surfaceGloss`, `ppp:curvature`, `ppp:partNesting`, `ppp:hueRange`, `ppp:perceivedDepth`, `ppp:subsurfaceDepth`. La matité est la région basse de `ppp:surfaceGloss`, pas un type.
+- **`tendsToProduce`** ouvert à tout type P1 ou P2 (§9.2, 7) : tendance perceptive sous conditions déclarées, avec un énoncé testable ; jamais vers un id en `attente` (A12).
+- **« Complexité »** : grille d’analyse croisant plusieurs types, pas un type (nouvelle §9.10) ; page d’analyse dans les dérivés (X14).
+- Patron de fiche : champ optionnel `conditions_critiques` ; champs `depuis` et `sous_conditions` pour `tendsToProduce` (`PPP_FicheType.md`).
+
+**2.2.3 — 2026-10-10** (décisions de l’éditeur du projet, `fiches/QUESTIONS-A-TRANCHER.md`) : `ppp:contour` a pour label FR canonique « netteté du bord » (« contour » en alternatif, T18) ; `ppp:perceptualIntensity` passe en `attente`, réservé hors V1 avec la saillance (§9.9, T10), d'où E2 « densité `separableFrom` saturation » (§10) et A12 précisé ; nouvelle §9.7 O (classifications existantes : alignement SKOS, pas d'import) ; nouveau candidat `ppp:textureDirectionality` (Tamura, Mori et Yamawaki 1978, T1). Régions de la distribution et de la taille perçue : dans les fiches (T5, T8).
+
+**2.2.2 — 2026-10-10** : labels FR des régions de `ppp:perceptualDensity` neutralisés (décision de l’éditeur du projet, T17 de `fiches/QUESTIONS-A-TRANCHER.md`) : `sparse` « clairsemé » (ex-« aéré »), `dense` « dense » (ex-« chargé »), `veryDense` « très dense » (ex-« très chargé ») ; ids et clés inchangés ; « chargé » et « aéré » ne sont pas gardés comme labels alternatifs. Exemples alignés (§0.4, §1–2, glossaire, A2) ; « trop chargé » reste seulement comme exemple de jugement ; « chargé de valence » reformulé « porteur de valence » (E4, A10, §11, X13, annexe A).
+
+**2.2.1 — 2026-10-10** : §9.7 M (ids réservés `attente` et dépréciés exclus de « tous `candidat` ») ; A6 reformulé (« épisode d’observation ») ; mentions de P3 précisées comme sans type actif en V1 (§0.3, §9.2, A5, §9.7 C, §10, A.2) ; Q6 : précision du 2026-10-08 marquée remplacée.
+
+**2.2 — 2026-10-10** (décisions de l’éditeur du projet du 10/10)
+- **Assemblages** : le mode d’assemblage n’est plus une catégorie ; le joint est une partie de l’objet, décrit par ses qualités formelles (§9.7 A). `ppp:assemblyMode` est **déprécié** (A11) ; l’« hybride » de S0c disparaît ; candidats non éprouvés `ppp:jointSpacing`, `ppp:jointLevelOffset` (S0c, CQ8, §1, §4, §8, §11).
+- **Contraste** : `ppp:perceptualContrast` général, spécialisé par dimension via `ppp:specializes` (`ppp:lightnessContrast`, `ppp:hueContrast`, `ppp:textureContrast`, `ppp:scaleContrast`, avec `ppp:perceivedSize`) ; un spécialisé fixe `dimension_comparee`, une assertion du général déclare `ppp:comparedDimension` (§9.7 B, Annexes A et A.2). Pilote : `ppp:lightnessContrast`.
+- **Saillance hors V1** : saillance, distributions d’attention, régime d’exploration et `ppp:whatIsSalient` passent en `attente`, sans fiche v1, dans la nouvelle §9.9 « Hors scope de la V1 (réservé) ». L’épisode et le patron P3 restent (cible, conditions, modalités, observateurs). Trois pilotes : texture, densité, contraste de clarté (§10). A5, A12, §0.3, §5, §9.3, §9.7 D, exemples S2, S3, S7, S8, §8 alignés.
+- **§12** : exigences d’interface X9–X13 (familles navigables, réglette des valeurs, ordre de la fiche, candidats grisés et badge unique, deux gestes de contribution) ; registre des familles (§9.7 L), sans nouveau champ de fiche.
+
+**2.1.9 — 2026-10-08**
+- **Assertion P3 sans `ppp:about`** : elle porte sur son épisode, l’objet est le `ppp:target` de l’épisode ; la cible interne d’une saillance passe par `ppp:whatIsSalient` (partie du target, ou assertion P1/P2 du même épisode), les distributions d’attention n’en ont pas (§9.3, A5, Annexe A.2).
+
+**2.1.8 — 2026-10-08** (cohérence avec §9.8)
+- **Deux niveaux explicites** : OntoClean et les énoncés sur des instances (qualités ou relateurs particuliers) se lisent dans la lecture conceptuelle ; chacun se traduit en règle de validation sur les assertions (§9.8, A5, fiche).
+- **Attribution P3** = `ppp:Assertion` dont le type est un `ppp:EpisodeRegimeType` ; `ppp:whatIsSalient` réservé à ces assertions ; l’id `hasAttribution` de la v2.1.7 est supprimé, sans avoir été publié (inverse redondant de `ppp:inEpisode`). Les distributions d’attention sont des assertions P3, pas des relations (§9.3).
+- **Ids ajoutés** : `ppp:hasScale`, `ppp:date`, et les relations conceptuelles `ppp:inheresIn`, `ppp:hasValue` ; `ppp:mediates` marqué conceptuel. Le jugement reste hors ontologie (Annexe A.2).
+
+**2.1.7 — 2026-10-08**
+- **§9.8 (nouveau) — Position de travail : métamodélisation**, validée par l’éditeur du projet, sans OWL dans ce cycle : types = individus de trois métaclasses ; `ppp:specializes` à la place d’is-a (A1, A3, A4 reformulés) ; régions et vocabulaires contrôlés = individus ; axiomes = règles de validation (SHACL, SPARQL). Punning OWL 2 écarté pour l’instant ; SKOS cité comme parent proche.
+- **Relations d’ABox** : ids anglais (Q9), labels français conservés (§9.3, §9.7 D, Annexe A.2). A4 corrigé au passage : le critère d’identité s’hérite du type général vers le type spécialisé (OntoClean), et non l’inverse.
+
+**2.1.6 — 2026-10-08**
+- **Q6 précisée** (« formel et semi-formel, les pilotes actuels restent ») : le cycle 1 couvre les deux strates ; les quatre pilotes sont maintenus (trois depuis la 2.2 : la saillance est sortie du premier cycle, §9.9), la saillance (P3) comme épreuve du modèle d’épisode, sans étendre le périmètre des propriétés d’objet (§5, §7, §10).
+
+**2.1.5 — 2026-10-08**
+- **Réfutation par énoncé** : le statut épistémique se trace par énoncé ; le type n’est `réfuté` que si un **énoncé d’existence** (E1, E4, E5, E6) l’est. Un énoncé de **structure** réfuté (E2, E3) mène à une correction mineure (relation, base), qui ne remet pas le type à `non éprouvé` ; la conséquence éditoriale dépend de l’énoncé (§0.2, §9.7 F, M, N).
+- **Modalité `indistincte`** : admise seulement si l’épisode compte plusieurs modalités (§9.3).
+- **« Catégorie d’œuvre »** (au sens de Walton 1970) remplace « catégorie » parmi les facteurs non perceptuels ; « catégorie » seul désigne une région d’une échelle nominale.
+
+**2.1.4 — 2026-10-08**
+- **Modalité** : une par assertion (`—modalite→`) ; l’épisode déclare l’ensemble des modalités mobilisées (`—modalites→`), un épisode multimodal restant possible (§9.3, §9.7 H, fiche, Q13 ; Q13 non tranchée).
+- **Statuts** : statut éditorial et statut épistémique séparés, une seule règle de dérivation pour candidats et types du cœur, avec un tableau de transitions (§9.7 F, M, N).
+- **« Modalité »** réservé au sens sensoriel ; les valeurs d’une échelle nominale sont des **catégories** (N5, §9.7 C ; les modes d’assemblage sont les catégories de `ppp:assemblyMode`).
+
+**2.1.3 — 2026-10-08** (points relevés en écrivant `docs/guide-structure-ontologie.md`)
+- **Deux strates, pas trois** : formel et semi-formel. L’attentionnel est un régime d’épisode (P3), hors strates ; un type P3 déclare `strate: —` (§0.3, A9, fiche, questions).
+- **`dependsOn`** va d’un semi-formel vers **tout type de sa base** (formel ou semi-formel), un formel devant être atteint directement ou transitivement (§9.2 n° 7, aligné sur §0.3 et A9).
+- **`ppp:distribution`** est une **qualité P1, sous-sorte gestalt**, d’une configuration de zones, pas un relateur P2 (§0.3, A7, Annexe A). La base de la densité reste `[ppp:contour, ppp:distribution]`, conforme à A9.
+- **Ceinture** (§0.2) : `organizedBy` retiré (relation d’ABox), `confusableWith` ajouté.
+- **Statuts** : la table du §9.5 et le §9.7 E citent les cinq statuts ; S8 dit « différence à l’expérience », comme N3.
+- **Promotion et rétrogradation** d’un type (§9.7 M) ; **échec d’épreuve** articulé avec la réfutation reproduite du §13 (§9.7 N, E1–E6, §13).
+- **Conditions d’observation** : `presentation` couvre les objets vus en place et les espaces parcourus ; `distance: touch` devient `contact` ; la **modalité** est déclarée à part, sans trancher Q13 (§9.7 H). Q13 reformulée pour un non-ontologue ; Q6 marquée « à préciser » sur le sens de « formel au sens large ».
+
+**2.1.2 — 2026-10-08** (décisions de l’éditeur du projet sur Q6–Q12)
+- **Q6 décidée** : le périmètre du cycle 1 se définit par **strate**, pas par modalité : le formel au sens large d’abord (§5, §7, §10, §11). Le choix des modalités des épreuves reste une position de travail. Q13 (identité des types entre modalités) reste ouverte ; la réponse à Q6 penche vers des types formels valables d’une modalité à l’autre, sans que ce soit une décision.
+- **Q7 décidée** : épreuve minimale sur les quatre pilotes (§10) ; *note de la série 13* : depuis la 2.2, les pilotes sont trois (texture, densité, contraste de clarté) : la saillance (P3) est sortie du premier cycle (§9.9, §10), et l’épreuve minimale porte sur ces trois. **Q8 décidée** : labels neutres canoniques, jargon en labels alternatifs (A10, §11).
+- **Q9 décidée** pour la langue (ids en anglais, labels FR + EN, documents en français) ; la visée (article, ressource communautaire, les deux) reste une sous-question ouverte (§7).
+- **Q10 décidée** : consensus sur le dépôt, arbitrage final de l’éditeur du projet ; délai de traitement et conflit d’intérêts restent en position de travail (§13).
+- **Q11 décidée** : CC BY 4.0 pour l’ontologie et les documents, MIT pour le code du site et des outils, pas d’accord de contribution (§7, §13) ; fichiers `LICENSE` et `LICENSE-CONTENT.md` ajoutés à la racine.
+- **Q12 décidée** : les épreuves du programme se font sur des **objets publics** et comptent pleinement ; les tests sur objets confidentiels sont hors programme et ne comptent pas (§0.1, §5, §7, §11, §13). Q15 reste ouverte, réduite à la provenance et aux droits des images d’objets publics.
+
+**2.1.1 — 2026-10-08** (décisions de l’éditeur du projet sur Q2–Q5)
+- **Q2 décidée** : les facteurs non perceptuels (catégorie d’œuvre, titre, fonction, contexte…) sont admis dans la base d’un semi-formel sans liste fermée de sortes, à condition de déclarer leur lien à au moins un trait perceptible de l’objet ; le critère est l’ancrage perceptuel, pas le typage. Touchés : §0.3 (semi-formel), E3 (indiscernabilité étendue aux facteurs déclarés), A9 (clause sur les facteurs non perceptuels), CQ27, §7, champ `facteurs_non_perceptuels` de la fiche. La règle « au moins un type formel dans la base » est inchangée.
+- **Q3, Q4, Q5 décidées** dans le sens des positions de travail (silence métaphysique avec conditions d’observation déclarées ; expressifs et concepts épais hors du cœur, traduits vers des types neutres ; thèse attentionnelle de Nanay descriptive seulement) : renvois mis à jour en N1, §0.3 et §7.
+
+**2.1 — 2026-10-08** (batterie de tests de `docs/questions-de-la-maquette.md`, notée D…)
+
+- **Incohérences corrigées.**
+  - *Densité* : une surface uniforme est applicable, région `uniform` (pôle bas) ; N/A seulement sans porteur étendu (D1.4).
+  - Les ids cités sans être définis sont soit inscrits au registre (Annexe A, statut `candidat`), soit retirés (D1.12, X5).
+  - La base de la densité passe A9 : `ppp:contour` (formel) + `ppp:distribution` (semi-formel, de base formelle), et la frontière du formel est précisée (§0.3).
+  - La gestalt n’est plus admise en P2 (A7).
+  - Le `~R` résiduel de la fiche est supprimé.
+  - §9.5 ne déprécie plus d’ids inexistants : une table de correspondance « noms v0.2 → ids v2 » remplace la dépréciation (D4.6).
+- **Confidentialité.** Les exemples qui, réunis, désignaient un terrain sont remplacés par des exemples d’architecture, de mobilier, de céramique, de typographie, de musique et de cinéma. Le nom d’un mode d’assemblage trop associé à un savoir-faire particulier est remplacé par *entrelacement* dans tous les fichiers suivis.
+- **Décisions de structure (§9.7)**, chacune justifiée :
+  - mode d’assemblage = un type, modes = régions ;
+  - contraste paramétré par une dimension ;
+  - saillance et distributions = types P3 avec un champ « ce qui est saillant » ;
+  - régions : clé, rang, sens croissant, adjacence ;
+  - deux cases de carte en plus (« non évalué », « non tranché ») ;
+  - vocabulaire de statuts unique avec « contesté » ;
+  - exemplaires = assertions contestables, page publiée versionnée dans le protocole E1 ;
+  - nuancier : paramètre / axe visé / axes constatés, assertion de groupe ;
+  - homonymes de grandeurs physiques ;
+  - vocabulaire minimal des conditions d’observation ;
+  - désignation des parties ;
+  - image ou objet ;
+  - relations : symétrie, sens fort de `integralWith`, `organizedBy` déplacé dans l’ABox ;
+  - bloc application sorti du fichier de type.
+- **§13** : deux gestes légers ouverts au grand public (« suggérer un candidat », « signaler un problème de formulation »), une procédure de contestation d’une assertion, des états de recevabilité avant tout affichage « contesté », et un minimum « reproductible ».
+- **§12** : deux familles de cartes reconnues (rendu d’un type ; opération sur des ids) ; convention de clés de région.
+- **Q1 décidée par l’éditeur du projet** : l’organisation temporelle des séquences perçues entre dans le cœur, l’histoire racontée n’y entre pas ; un module « récit » séparé, hors cœur, est prévu pour la suite (§0.3, §7).
+- **Nouvelles questions** pour l’éditeur du projet : Q13 (modalités et identité des types), Q14 (neutralité des cartes d’exploration), Q15 (droits et provenance des exemplaires).
+- **`PPP_FicheType.md`** :
+  - nouveaux champs : `regions` structurées, `exemplaires`, `statut_epistemique`, `introduit_en` / `modifie_en`, `grandeur_physique_homonyme`, `mode_de_presentation`, `label_court`, `facettes` ;
+  - `remplace_par` devient multivalué ;
+  - le bloc `application` sort du fichier de type ;
+  - l’exemple *densité* est refait.
+
+**2.0 — 2026-10-08** (recadrage décidé par l’éditeur du projet ; critique détaillée dans `docs/critique-spec-v1.md`)
+
+- **Ajout §0 Fondements** :
+  - §0.1 le recadrage ;
+  - §0.2 le programme de recherche (noyau dur N1–N5, ceinture protectrice, heuristiques, énoncés réfutables E1–E6, critères de progressivité et de dégénérescence) ;
+  - §0.3 l’articulation formel / semi-formel (Nanay) et la place du volet attentionnel (épisode à deux axes, ciblage d’une partie, conditions d’observation) ;
+  - §0.4 la neutralité axiologique (valeur dimensionnelle ≠ valeur axiologique, test de neutralité, interface avec l’axiologie).
+- **§1–§3, §5, §7** : l’ontologie devient le cœur du projet, **publique et à visée universelle**. Contexte, utilisateurs et scénarios sont réécrits en termes généraux (designers, créatifs, critiques, amateurs, chercheurs, outils), sans référence à une maison particulière. Les terrains d’application ne servent qu’à l’épreuve ; le contenu propre à un terrain est déplacé hors du dépôt public (`local/`, ignoré par git). Les buts 2 et 3 deviennent des *conséquences à rendre possibles* et ne sont plus spécifiés.
+- **§4** : critère de Nanay corrigé. La pertinence reprend la *structure* du critère, pas son orientation évaluative.
+- **§6** : CQ4d reformulée (indiscernables) ; ajout des CQ26–CQ31 (strate, base, neutralité, épreuve, attention, conditions) ; règle de numérotation des CQ.
+- **§7** : terminologie (« semi-formel » est réservé au sens de Nanay ; le niveau de formalisation est la « langue contrainte ») ; décisions de cadrage mises à jour ; cas limites (récits, propriétés expressives, contexte non perceptuel) renvoyés aux questions pour l’éditeur du projet.
+- **§8** : ajout des conditions d’observation, de la cible partielle d’un épisode, du jugement axiologique (hors cœur) et de l’intention de cadrage.
+- **§9** :
+  - sortes ramenées à trois, alignées sur les patrons (qualité, dont la gestalt ; relateur, dont le mode d’assemblage ; régime d’épisode) ;
+  - champs `strate`, `base_dependance`, `enonces_testables` ajoutés ;
+  - P3 précisé ;
+  - A7 corrigé, A9–A11 ajoutés ;
+  - critère d’entrée « perceptible » remplacé par « ancré perceptuellement » ;
+  - principes de réfutabilité et de neutralité contrôlée ajoutés.
+- **§10** : ajout d’une épreuve minimale (E1, E2, E4) sur les pilotes ; avertissement de neutralité sur *vide actif*.
+- **§9.3** : ajout d’un **modèle d’assertion** (qui affirme quoi, de quel objet ou de quelle partie, dans quel épisode, de quelle source, contre quelle version) et d’un **patron d’application « nuancier »** (hors cœur).
+- **§9.5** : les régions érigées en types par v0.2 (saillance immédiate / progressive, etc.) sont explicitement listées comme contraires à A2.
+- **§12 (nouveau)** : exigences minimales pour le site, le jeu de cartes et les outils (identifiants, typage, séparation type / région / jugement, versionnement, dépréciation). Convention d’identifiants fixée (X1) ; l’incohérence `ppp:density` / `ppp:perceptualDensity` est corrigée.
+- **§13 (nouveau)** : contestation et amendement public (proposer un type, signaler une anomalie, publier une réfutation ; critère d’acceptation lakatosien ; preuves publiques et preuves locales).
+- **`PPP_FicheType.md` (ajustement minimal)** :
+  - champs `strate`, `base_dependance`, `enonces_testables` et `remplace_par` ajoutés ;
+  - `operations_but2` et `partition_C` déplacés dans un bloc `application` optionnel ;
+  - liste des sortes corrigée, statut `déprécié` ajouté ;
+  - exemple *densité* complété ;
+  - étiquettes OntoClean de l’exemple corrigées : elles qualifient le *type de qualité*, pas la propriété de l’objet « être chargé ».
+
+---
+
+## 0. Fondements
+
+### 0.1 Recadrage (décision de l’éditeur du projet, 2026-10-08)
+
+1. **L’ontologie est le cœur du projet.** Elle doit être une originalité réelle, robuste et à jour des travaux récents (positionnement : `docs/etat-de-l-art.md`, §5 « Constat »).
+2. **Elle couvre le formel et le semi-formel au sens de Nanay**[^nanay], et le volet attentionnel y est situé (§0.3).
+3. **Posture réaliste (Popper, Lakatos)**[^popper-lakatos] : PPP est un programme de recherche, avec un noyau dur, une ceinture protectrice, des énoncés réfutables et des critères de progressivité (§0.2).
+4. **Neutralité axiologique assumée** : l’ontologie complète l’axiologie, elle ne la remplace pas (§0.4).
+5. **Le site de navigation et le jeu de cartes sont des conséquences.** La spec les rend possibles (§12) ; elle ne les spécifie pas.
+6. **Ontologie publique, ouverte, amendable, à visée universelle** (consigne complémentaire du même jour). Les terrains d’application ne sont que des terrains d’épreuve ; les épreuves du programme portent sur des objets publics (§13, Q12).
+7. **Tout emprunt est cité** (décision de l’éditeur du projet, 2026-10-10 ; v2.4). Chaque fois que la spec, une fiche ou la documentation s’appuie sur un travail existant (classification, ontologie, théorie, étude), elle le dit : en note dans la spec et la documentation, dans le champ `references` de la fiche (§9.7 P). Aucune référence n’est inventée ; une source non vérifiée est marquée comme telle, jamais présentée comme vérifiée.
+
+### 0.2 PPP comme programme de recherche
+
+**Noyau dur.** Il n’est révisé que par une refondation, avec changement de version majeure. Heuristique négative : on ne répond pas à une anomalie en touchant au noyau. On ajuste la ceinture.
+
+| # | Thèse |
+|---|---|
+| **N1 — Réalisme des qualités perceptuelles** | Les objets ont des qualités perceptuelles qui ne dépendent pas de l’opinion qu’on en a. Une attribution PPP (objet ou partie, type, région, conditions de perception) est vraie, fausse ou non tranchée, et d’autres observations peuvent la corriger. Le réalisme est ici épistémique : il n’engage aucune thèse sur la nature métaphysique des qualités sensibles, et les conditions de perception sont déclarées (Q3, décidée). |
+| **N2 — Stratification formel / semi-formel** | Toute qualité ou relation du cœur est formelle ou semi-formelle. Toute semi-formelle dépend constitutivement d’une base déclarée qui contient au moins un type formel (§0.3). |
+| **N3 — Pertinence située** | « Être PPP » est un rôle : une qualité le joue *dans un épisode* si y prêter attention fait une différence à l’expérience. La pertinence n’est ni une sorte ni une propriété intrinsèque. |
+| **N4 — Neutralité axiologique** | Aucun type, aucune région, aucune relation du cœur n’exprime une évaluation. Les jugements relèvent d’une autre couche (§0.4). |
+| **N5 — Géométrie des qualités** | Chaque type a un espace de valeurs explicite (échelle, pôles ou catégories). Décrire, c’est situer ; comparer, c’est comparer des positions dans un même espace. |
+
+**Ceinture protectrice** (révisable à chaque version mineure) :
+- l’inventaire des types et leurs définitions ;
+- les échelles, pôles et régions nommées ;
+- l’affectation à un patron et à une strate ;
+- les bases de dépendance ;
+- les étiquettes OntoClean ;
+- les relations de TBox `integralWith`, `separableFrom`, `confusableWith`, `tendsToProduce` (`dependsOn` relève des bases ; `organizedBy` est une relation d’ABox entre parties, §9.2) ;
+- les labels ;
+- les seuils des épreuves ;
+- les sources de candidats (v0.1/v0.2, Alexander[^alexander], Greimas[^greimas], AAT[^aat], poster d’assemblages) ;
+- le choix des pilotes.
+
+**Heuristique positive** :
+- partir des usages (middle-out) ;
+- pour chaque type, chercher au moins un énoncé testable ;
+- ré-ingénierer les ressources existantes (nuanciers, poster) ;
+- chercher activement des contre-exemples de transfert.
+
+**Énoncés réfutables.** Chaque type du cœur, et chaque candidat au cœur, engage au moins un énoncé de cette forme, consigné dans sa fiche (`enonces_testables`). Pour un candidat, l’épreuve décide de sa promotion ; pour un type du cœur, de son maintien (§9.7 M et N). E1, E4, E5 et E6 sont des **énoncés d’existence** (ils mettent en cause la place du type dans le cœur) ; E2 et E3 sont des **énoncés de structure** (ils mettent en cause une relation ou une base, pas le type). La conséquence ci-dessous s’applique après une réfutation reproduite (§9.7 N).
+
+| # | Énoncé | Ce qui le réfute | Conséquence |
+|---|---|---|---|
+| **E1 Accord** | Devant les mêmes objets, dans un même régime de perception déclaré (au moins sur les facettes critiques du type, §9.7 H ; v2.3), des observateurs qui ont lu la fiche placent les objets dans la même région ou dans des régions adjacentes (la même région sur une échelle de trois régions ou moins, §9.7 C, v2.5), avec un accord supérieur à un seuil fixé *avant* l’épreuve | Accord sous le seuil, reproduit après une révision de la fiche (§9.7 N) | Le type sort du cœur, ou n’y entre pas (attente ou application) |
+| **E2 Séparabilité** | Si A `separableFrom` B, on peut fabriquer un nuancier qui fait varier A pendant que les observateurs jugent B constant | Impossible de tenir B | Requalifier en `integralWith`, ou fusionner |
+| **E3 Dépendance** | Si S `dependsOn` une base, deux objets jugés indiscernables sur toute la base perceptuelle, et égaux sur ses facteurs non perceptuels déclarés, ne diffèrent pas sur S | Deux objets égaux sur la base mais distincts sur S | La base déclarée est incomplète et doit être corrigée |
+| **E4 Neutralité** | L’accord sur un type ne baisse pas significativement entre observateurs en désaccord axiologique sur les objets (l’un aime, l’autre non) | L’accord s’effondre avec le désaccord axiologique | Le type est porteur de valence : refonte (§9.7 F) ou sortie |
+| **E5 Transfert** | Un type du cœur s’applique sans redéfinition sous au moins deux **régimes de perception** (combinaisons nommées des facettes de la condition de perception, §9.7 H : par ex. une photo vue à l’écran et l’objet tenu en main ; ou, pour un type dont la lumière est critique, une lumière diffuse et une lumière dirigée). Les sortes d’objets (un objet conçu, plus un tableau, un ustensile ou un objet high-tech ; champ `transfert` de la fiche) sont des exemples de cas où les régimes diffèrent : elles ne comptent pas seules (deux sortes d’objets vues sous le même régime font un seul régime). *v2.7, tranché par l’éditeur du projet (11/10)* : c’est aussi la lecture de X12, §9.7 G et §9.7 M (condition 1). **Deux régimes** (tranché, v2.7, T35) : deux régimes qui diffèrent au moins sur `presentation`, ou sur une facette critique du type (`conditions_critiques`) ; une autre facette seule ne suffit pas (deux photos sous deux éclairages ne font pas deux régimes pour un type où la lumière n’est pas critique). **Modalité et régime** (*position de travail, à trancher (Q13)*, série 13) : la modalité n’est pas une facette du §9.7 H ; changer de modalité ne crée pas à elle seule un second régime (« vu en main » et « touché en main » font un seul régime) ; la modalité reste déclarée à part sur chaque assertion. Raisons : les régimes sont définis par les seules facettes, et y ajouter la modalité trancherait Q13 (un type ou un par sens) sans épreuve ; une assertion par modalité garde l’information pour le jour où Q13 sera tranchée. | Redéfinition nécessaire | Le type passe en application |
+| **E6 Pertinence** | Dans un épisode, orienter l’attention vers P par la question attentionnelle de la fiche modifie la description de l’expérience ou la décision (S0, S3), par rapport au même épisode sans orientation | Aucune différence, de façon répétée | Le type n’est pas candidat au rôle de PPP ; il peut rester descriptif d’application |
+
+**Progressivité.** Le programme est progressif si, d’une version à la suivante :
+- *théoriquement*, une modification (type, relation, base) entraîne au moins une prédiction nouvelle : une séparabilité, un transfert, un accord sur des objets non encore décrits ;
+- *empiriquement*, certaines de ces prédictions sont corroborées (atelier, nuancier, corpus de transfert).
+
+Indicateurs pratiques, qui ne sont pas des critères : couverture des CQ ; nuanciers qui déclarent leurs axes ; désaccords d’atelier localisés (S3).
+
+**Dégénérescence** (signaux à surveiller) :
+- ajouts *ad hoc* : un type, une région ou une exception N/A ajoutés pour absorber un contre-exemple, sans prédiction nouvelle ;
+- redéfinitions répétées après des échecs d’accord, sans que l’accord progresse ;
+- un nombre de types qui croît plus vite que celui des énoncés corroborés ;
+- glissement axiologique des labels ou des régions ;
+- un cœur qui ne se transfère plus hors du premier terrain.
+
+Le changelog de chaque version indique les énoncés mis à l’épreuve et leur issue.
+
+### 0.3 Formel, semi-formel, attentionnel
+
+**Deux strates, pas trois.** Un type P1 ou P2 appartient à l’une des **deux strates** : formel ou semi-formel. L’attentionnel n’est pas une strate : c’est un **régime d’épisode** (P3), et un type P3 n’a pas de strate (`strate: —`) ; aucun type P3 n’est actif en V1 (§9.9). Partout dans la spec, la fiche et les questions, « strate » désigne seulement ce partage formel / semi-formel.
+
+
+- **Formel** : type dont l’instance est une qualité sensible d’un porteur (surface, volume, trait, son…), attribuable par la seule inspection perceptive de ce porteur, sans qu’il faille d’abord attribuer un autre type PPP. Base de dépendance vide. Exemples candidats : teinte, clarté, saturation, brillance, texture (label alternatif « grain », v2.5, T1), contour. *Frontière* : le contour (bord perçu d’une zone) est formel ; la **distribution** (manière dont les zones d’une configuration se répartissent : groupée, aléatoire, régulière ; v2.3.1, label « aléatoire » v2.5, T21) ne l’est pas, puisqu’elle présuppose des contours. Elle est semi-formelle, de base `ppp:contour`. C’est une **qualité P1 de la configuration**, sous-sorte gestalt[^gestalt], et non un relateur : elle n’a ni rôles nommés ni arité fixe, et sa valeur qualifie le tout (A7). La frontière exacte appartient à la ceinture et s’éprouve par E3.
+- **Semi-formel** (Nanay) : type qui **dépend constitutivement** d’une base déclarée contenant au moins un type formel. La base peut aussi contenir d’autres semi-formels ou des relations entre parties. Elle peut contenir des **facteurs non perceptuels** (catégorie d’œuvre au sens de Walton 1970[^walton], titre, fonction, contexte d’usage…), sans liste fermée de sortes admissibles, à condition que chacun soit **déclaré avec son lien à au moins un trait perceptible de l’objet**, c’est-à-dire à un type perceptuel de la même base (Q2, décidée : « des caractéristiques sont pertinentes du point de vue esthétique si elles sont reliables d’une manière ou d’une autre à quelque chose de perceptible dans l’objet »). Le critère est l’ancrage perceptuel, pas le typage. Un facteur non perceptuel ne compte jamais comme le type formel requis : une base faite seulement de facteurs non perceptuels est invalide. Exemples candidats : densité perceptive, contraste, hiérarchie, espacement au joint.
+- **Strate et patron sont orthogonaux.** Un formel est normalement P1. Un semi-formel peut être P1 (densité) ou P2 (contraste).
+- **Le critère d’entrée est l’ancrage perceptuel**, pas la perception au sens strict. Un type est ancré s’il est formel, ou si sa base contient un formel. PPP n’a ainsi pas à trancher le débat sur le contenu perceptuel riche ou pauvre (Siegel, Logue, Stokes, Majeed)[^contenu].
+- **L’attentionnel n’est pas une troisième strate de propriétés d’objet.** C’est le **régime d’épisode** (P3), décrit par :
+  - une *cible* (objet ou **partie** d’objet) ;
+  - des *conditions de perception* (label alternatif : conditions d’observation ; présentation, lumière, distance, angle, durée ; §9.7 H) ;
+  - des *modalités* mobilisées ;
+  - des *observateurs*.
+
+  Les configurations de l’attention elle-même (distributions sur les objets et sur les propriétés, trajectoire) sont **réservées hors V1** (§9.9) : leurs conditions de perception sont complexes et les différences individuelles fortes. En V1, on décrit précisément la forme dont on parle, et l’épisode dit qui regarde, quoi, comment et dans quelles conditions.
+
+  L’« attention esthétique » de Nanay[^attention] (focalisée sur l’objet, distribuée sur les propriétés) est **une configuration d’épisode**, descriptive (types réservés, §9.9), pas un critère d’entrée ni une thèse du programme (Q5, décidée). Les objections (attention sur des intra-objets, attention distribuée non esthétique) deviennent ainsi des épisodes descriptibles plutôt que des réfutations du modèle.
+- **Séquences perçues et récits** (Q1, décidée) : l’**organisation temporelle des séquences perçues** (rythme, tempo, découpage, ellipse *perçue* d’une séquence vue, entendue ou manipulée : plan de cinéma, phrase musicale, parcours, ouverture d’un objet) entre dans le cœur, sous forme de types semi-formels dont la base contient des types formels de la modalité concernée. **L’histoire racontée** (personnages, intrigue, sens) n’y entre pas. Un **module « récit » séparé**, hors cœur, est prévu pour un cycle ultérieur ; il pourra référencer les ids du cœur sans les modifier (X7).
+- La **pertinence** (N3) est attribuée, dans un épisode, à une qualité formelle ou semi-formelle.
+
+### 0.4 Neutralité axiologique
+
+- **Principe.** Le cœur décrit, il n’évalue pas. Aucun type, aucune région, aucune relation, aucun label du cœur n’exprime une approbation, une désapprobation, une réussite ou un échec.
+- **Deux sens de « valeur »**, à ne plus confondre :
+  - la **valeur dimensionnelle** est une région d’un espace de qualités (*dense*, *clairsemé*) ; on écrit « région » dès qu’il y a un risque d’ambiguïté ;
+  - la **valeur axiologique** est un jugement (beau, réussi, conforme à une identité de marque).
+
+  Le label v0.2 « Valeur (luminosité) » devient « clarté ».
+- **Test de neutralité** (pour tout label, toute région, toute définition) : on peut dire sans contradiction ni sous-entendu « X est [région] et c’est un défaut » comme « X est [région] et c’est une qualité ». S’y ajoute l’énoncé E4.
+- **Complémentarité.** L’ontologie ne remplace pas l’axiologie, elle lui donne des prises. Un jugement porte *sur* une assertion PPP (assertion : « ce proto est *très dense* » ; jugement : « trop chargé pour ce projet »). Ce jugement est une entité d’une autre couche (axiologie, projet) qui pointe vers l’identifiant de l’assertion. Une « région visée » dans un cadrage est une **intention de projet** : elle reste dans l’application.
+- **La pertinence n’est pas une valeur.** « Faire une différence » ne dit pas dans quel sens. PPP reprend la *structure* du critère de Nanay, mais pas son orientation vers l’évaluation (Nanay parle de propriétés pertinentes *pour l’évaluation esthétique*).
+
+---
+
+## 1. Contexte
+
+PPP est une ontologie **publique, ouverte et amendable**, à visée universelle : elle doit permettre de caractériser ce qui, dans une forme, se donne à la perception, quel que soit le domaine (objet conçu, tableau, image, ustensile, objet technique, espace, matière brute).
+
+Elle est née de pratiques de **conception** (design d’objets, couleur, dessin, matière), où l’on fait un gros effort sur la **forme** et où l’on se soucie de l’**usage final**. Les objets seront tenus, portés, ouverts, usés. Tout ce qui permet de *caractériser une forme* y est utile : silhouette, volume, matière, et aussi couleur et dessin. Mais PPP sert aussi bien les **critiques**, les **amateurs**, les **chercheurs** (esthétique, psychologie de la perception, ingénierie des connaissances) et les **outils** qui ont besoin d’un vocabulaire précis des qualités perçues.
+
+PPP n’est l’ontologie d’aucune marque, d’aucune maison ni d’aucun style (valeurs de marque, codes, héritage). Les terrains d’application (ateliers de conception, collections, corpus d’images) servent à **éprouver** le modèle ; ils ne délimitent pas l’univers du discours. Les épreuves sur des objets confidentiels restent locales et ne sont pas versionnées (§13).
+
+Un exemple typique de ressource d’atelier : un **poster des assemblages de deux matières** (juxtaposition, articulation, fixation en dur, entrelacement, etc.), inventaire graphique assez exhaustif. Ce n’est pas une liste de consignes (« il faut entrelacer »). C’est une **morphologie** : un échantillon des manières dont deux matières se rencontrent. Dans le langage des ateliers, ce genre de collection s’appelle souvent « principes plastiques ». PPP doit pouvoir l’*accueillir* : non comme des slogans ni comme une liste de modes, mais en décrivant chaque assemblage par les **qualités formelles de son joint** (espacement, décalage de niveau, contraste entre les parties qui se rejoignent ; §9.7 A).
+
+Dans les phases créatives — **inspiration, cadrage, prototypage, validation** — on échange sur des pistes de matière, de savoir-faire, de forme, d’idée. Une scène récurrente : on regarde **ensemble des échantillons de matière** et on doit dire vers quoi faire évoluer la matière. On fabrique alors des **nuanciers**. Faire un nuancier, c’est déjà avoir nommé *ce qu’on fait varier* : une ou plusieurs PPP dont on veut voir l’étendue des possibles. La critique, la médiation et la recherche ont des scènes analogues : comparer deux œuvres, décrire un écart, aligner des annotateurs.
+
+Ces discussions **manquent souvent de précision** : on y superpose jugement, émotion, référence floue et description perceptive. Sans PPP identifiée, un nuancier confond plusieurs dimensions et n’oriente plus l’itération. Une critique confond « ce que c’est » et « ce que ça vaut ».
+
+PPP vise d’abord une **ontologie** robuste des propriétés perceptuelles formelles et semi-formelles (§0). De cette ontologie découlent un langage commun assez précis pour orienter la recherche et enrichir ces discussions, puis, en conséquence, un levier de conception par combinaison (jeu de cartes), un site de navigation, et un **composant** pour d’autres outils, IA ou non (pont texte / image, base de connaissances dans un exercice C-K). La spec rend ces conséquences possibles (§12) ; elle ne les spécifie pas.
+
+---
+
+## 2. Buts
+
+### But 1 — Ontologie et langage commun (cœur)
+
+Construire une **ontologie** des propriétés perceptuelles formelles et semi-formelles, conduite comme un programme de recherche (§0.2). Elle doit fournir un **lexique ontologiquement tenu** des propriétés perceptuelles pertinentes, pour :
+
+**Visée de complétude** (v2.7, décision de l’éditeur du projet). PPP vise un ensemble **complet et cohérent** de descripteurs qui décrivent factuellement tous les aspects perceptibles d’un objet. La complétude est un **horizon**, non un état atteint : on ne peut pas prouver que tout est couvert (un aspect non nommé ne se voit pas comme manque) ; on la poursuit en accueillant des suggestions recevables (critères : X13, §13) et en traitant les anomalies (E3, §13). Elle ne justifie aucun type ajouté sans épreuve : un type entre par le test d’entrée (§9.6) et sort s’il est réfuté (E1–E6) ; à contenu égal, on préfère moins de types (§13).
+
+- nommer ce à quoi l’attention peut se prendre, sans passer par « c’est beau / pas beau » ;
+- rendre les échanges plus discriminants (deux personnes peuvent désigner la même chose, ou constater qu’elles n’en parlent pas) ;
+- orienter les recherches (références, matières, savoir-faire, precedents) vers des propriétés, pas seulement vers des styles ou des goûts ;
+- **nommer la dimension d’un nuancier** : ce qu’on fait varier, l’étendue qu’on veut voir, la direction de la prochaine itération matière ;
+- **caractériser une forme** d’objet / de produit : silhouette et volume, couleur, dessin, matière, assemblages — sans passer par le jugement de réussite ;
+- **loger les morphologies déjà faites** (poster d’assemblages, nuanciers) comme ressources décrites avec les types et leurs valeurs, pas comme décor ;
+- constituer, à terme, une mémoire collective de références décrites dans le même langage ;
+- **dresser la carte d’identité esthétique** d’un objet concret : pour chaque type du cœur, dire s’il s’applique, s’il est pertinent, et quelle valeur (verbale ou, si l’espace le permet, numérique) ;
+- **rester transférable** : les mêmes types doivent pouvoir décrire un tableau, un ustensile, un objet high-tech, sans forker l’ontologie.
+
+### But 2 — Outil de conception (conséquence, non spécifiée ici)
+
+Une fois les unités du langage stables, **combiner** des éléments (propriétés, valeurs, conditions de perception, fragments de références) pour :
+
+- ouvrir des pistes qui n’étaient pas sur la table ;
+- provoquer des pas de côté (hybridation, déplacement d’attention, transfert d’une propriété d’un objet vers un autre) ;
+- servir les phases d’inspiration et de prototypage, pas seulement le commentaire.
+
+Le but 2 **dépend** du but 1. Sans types stables et combinables, la génération n’est qu’un jeu de mots. Les cartes d’exploration (inspiration Oblique Strategies) et le site de navigation sont des **conséquences** de l’ontologie, pas une partie de celle-ci. La spec n’en fixe que les conditions de possibilité (§12).
+
+### But 3 — Composant d’outils et base K (conséquence, contraint le modèle)
+
+L’ontologie doit pouvoir être **consommée** comme module, pas seulement lue par des humains.
+
+Deux sous-usages :
+
+1. **Pont texte ↔ image / matière.** PPP sert d’interlangue : une description textuelle, une photo, et un échantillon physique visent les mêmes types de qualités, les mêmes espaces de valeurs. Un outil (IA ou non) peut alors relier une légende, une note d’atelier, une photo de référence, un proto, un nuancier — sans passer par « beau » ou par un embedding opaque.
+2. **Base de connaissances (espace K) pour un exercice C-K** (Hatchuel, Weil, Le Masson)[^ck]. L’ontologie + les fiches fournissent des *propositions* (ce type existe ; cet objet a telle valeur sur telle dimension). Les combinaisons encore sans objet connu (« un x qui a la rugosité de A et le vide de B ») appartiennent à l’espace C. PPP ne fait pas C-K à lui seul ; il peuple K et fournit des **attributs de partition** pour expanser C.
+
+Le but 3 **dépend** du but 1 autant que le but 2. Il n’exige pas OWL dès ce cycle. Il exige que le modèle soit *déjà* : identifiants stables, types distincts des valeurs, assertions évaluables (vrai / faux / non tranché *à propos d’un objet*), relations exportables.
+
+### Hiérarchie
+
+On conçoit d’abord pour le but 1 : l’ontologie. On **contraint** déjà le modèle pour que les buts 2 et 3 restent possibles (unités combinables, espaces de valeurs, identifiants, TBox ≠ ABox ; §12). On ne spécifie ni ne construit le moteur génératif, le jeu de cartes, le site, le pont IA ni un atelier C-K.
+
+---
+
+## 3. Utilisateurs
+
+| Rôle | Rapport à PPP |
+|---|---|
+| Designers, créatifs (objet, couleur, dessin, matière, espace) | Décrit, compare, explore, prototype des formes |
+| Direction artistique / de création | Caractérise des formes ; oriente par des morphologies (modes, nuanciers) et des cadrages |
+| Équipe projet / atelier | Discussion collective devant un objet, une matière, une référence, un proto |
+| Critique, médiateur, conservateur | Décrit et compare des œuvres et des objets sans confondre description et évaluation |
+| Amateur, public | Apprend à voir : nomme ce qui retient son attention |
+| Chercheur (esthétique, perception, ingénierie des connaissances) | Discute, conteste, met à l’épreuve les types et les énoncés (§0.2, §13) |
+| (en vue) Usage final | L’objet sera tenu, porté, ouvert, usé : la perception n’est pas seulement contemplative |
+| Contributeur public | Propose des types, signale des anomalies, publie des réfutations (§13) |
+| (plus tard) Outil / IA | Consomme PPP comme schéma et comme graphe d’assertions |
+| (plus tard) Atelier C-K | Utilise l’ontologie + les fiches comme espace K |
+
+Utilisateurs primaires de ce cycle : **les équipes en situation de conception**, qui sont aussi le premier **terrain d’épreuve** des énoncés E1–E6, et **les lecteurs critiques** de l’ontologie publique. Les usages outil / C-K / site / cartes **contraignent le modèle** ; ils ne sont pas livrés ici.
+
+---
+
+## 4. Ce que PPP est / n’est pas
+
+### PPP est
+
+- Une ontologie **descriptive** de propriétés perceptibles auxquelles l’attention peut se distribuer, pour **caractériser des formes**.
+- Un langage d’**alignement** et d’**orientation de recherche**.
+- Un socle pour des outils (fiches, nuanciers, cartes, combinaisons, ponts texte / image, espace K).
+- Un ensemble d’**assertions** : le type *densité* existe ; *cette* forme est plutôt dense — pas seulement une liste de mots.
+- Un vocabulaire **concret et transférable** : assez près de la table d’atelier pour servir en conception ; assez général pour un tableau, un produit de cuisine, un objet high-tech, sans changer de types.
+
+Critère de pertinence (d’après Nanay, N3) : une qualité *joue le rôle* de PPP dans un épisode si y prêter attention **fait une différence à l’expérience**, quelle qu’elle soit, positive ou non. PPP reprend la structure du critère de Nanay (dont les propriétés pertinentes le sont *pour l’évaluation esthétique*), mais pas son orientation évaluative (§0.4).
+
+### PPP n’est pas
+
+- Un barème de beauté, de qualité, ou de « vie » des formes. Ni un **substitut à l’axiologie** : il lui fournit des prises (§0.4).
+- Un vocabulaire émotionnel (« ça émeut », « c’est Wouah »).
+- Un jugement de goût partagé (« c’est réussi »).
+- Une théorie de l’art, ni une ontologie de marque (codes, récit, héritage d’une maison).
+- Un barème de « grande qualité » ou de savoir-faire. La qualité d’exécution est hors PPP ; ses *effets perceptibles* (régularité d’une trame, netteté d’un dessin, tenue d’une couleur) peuvent y entrer s’ils sont des qualités visables.
+- Un outil de génération autonome (le but 2 assiste le concepteur ; il ne remplace pas la conception).
+- Un modèle de vision par ordinateur, ni un espace d’embeddings. PPP peut *ancrer* un pont texte / image ; il n’est pas ce pont.
+- Une théorie C-K. PPP peut occuper (une partie de) K ; l’expansion C reste l’exercice de conception.
+- Un recueil de **consignes** (« il faut plus de présence »). Une consigne peut *s’appuyer* sur PPP ; elle n’est pas une PPP.
+- Un poster ou un nuancier « à côté » de l’ontologie. Ce sont des **ressources** à ré-ingénierer : le poster d’assemblages se ré-ingénière en qualités du joint (§9.7 A).
+
+**Point délicat — « beau », qualité, usage.** La conception vise souvent des objets beaux, très bien faits et utilisables. PPP ne définit ni le beau, ni la qualité, ni l’usage. Il caractérise ce qui, dans la forme (y compris couleur, dessin, matière, assemblage, toucher), peut faire l’objet d’une attention et oriente une itération. L’usage final **contraint le porteur** (objet tenu, porté, ouvert) : des qualités tactiles, de tenue, de vieillissement perceptible peuvent entrer si elles sont visables. PPP n’est pas une ontologie de l’affordances ou du parcours d’usage.
+
+**Point délicat — « principes plastiques ».** Dans les ateliers de conception, ça désigne souvent des **inventaires de modes** (comment deux matières s’assemblent, comment des formes se relient) — et non des préceptes à la manière d’Alexander ou d’un brief de direction artistique. PPP n’en fait pas une catégorie (§9.7 A) : il retient l’**effet perceptible** d’un assemblage, décrit par des qualités formelles ou semi-formelles du joint et de ses parties (y prêter attention fait une différence sur la forme). La face savoir-faire (fixer, entrelacer) reste hors ontologie, liée par un pointeur.
+
+Deux objets à ne plus confondre :
+
+| | Quoi | Exemple |
+|---|---|---|
+| **Mode / morphologie** | Type de relation, souvent discret et combinable | juxtaposition, entrelacement, articulation |
+| **Consigne de conception** | Orientation (« viser ça ») | « les limites doivent être actives » |
+
+**Point délicat — concret *et* général.** Ambition assumée, pas contradiction. Deux couches :
+
+| Couche | Contenu | Exemple |
+|---|---|---|
+| **Cœur PPP** (TBox) | Types, espaces de valeurs, sortes d’entités — sans marque, sans métier | `densité`, `contraste`, `espacement au joint` |
+| **Application** (ABox + éventuelles extensions) | Fiches, nuanciers, poster d’assemblages, cadrages d’équipe | *cette* série de carreaux émaillés ; *ce* proto de chaise |
+
+Test d’entrée d’un type dans le **cœur** :
+1. Se voit sur une forme réelle d’un terrain d’épreuve (ancrage concret).
+2. Se reprend **sans changer de sens** sur au moins un autre régime : autre matière ou autre famille d’objets, *ou* un tableau, *ou* un produit cuisine / high-tech.
+3. Ce qui ne passe que (1) reste dans l’application (fiche, extension métier). Trop savant sans ancrage atelier → n’entre pas.
+
+On ne construit pas trois ontologies. On construit un cœur, on l’éprouve sur plusieurs terrains, on refuse ce qui ne survole pas.
+
+---
+
+## 5. Scénarios motivants
+
+*S0 et S0c sont des scènes d’atelier observées. S0b est un usage déclaré par une direction de création. S1–S8 sont déduits d’usages typiques. Aucun scénario ne dépend d’une maison particulière.*
+
+### S0 — Atelier matière : nuancier et prochaine itération *(scène réelle)*
+
+L’équipe a des échantillons sur la table. Il faut décider **vers quoi** faire évoluer la matière. On fabrique un **nuancier** : une série d’échantillons qui font varier quelque chose, pour voir l’étendue des possibles et orienter l’itération suivante.
+
+Sans PPP nommée, on ne sait pas ce que le nuancier *mesure*. On fait varier à la fois le grain, la densité, le contraste, la brillance — puis on ne sait plus pourquoi on préfère la plage 3. Avec une ou deux PPP identifiées, le nuancier a un axe (ou deux) : « on explore la rugosité, le reste autant que possible tenu » ; ou « on veut voir l’étendue de la densité perceptive de cette recette ».
+
+**Issue attendue.**
+- On a nommé la ou les dimensions variées, et celles qu’on tient constantes.
+- Chaque échantillon est une valeur (ou une région) sur cet espace.
+- La discussion d’orientation porte sur *où aller ensuite sur cet axe* (plus loin, entre deux plages, changer d’axe), pas sur « je préfère celui-là » tout court.
+- Un nuancier illisible (trop d’axes à la fois, axes non dits) est un échec de langage, pas un échec de matière.
+
+### S0b — Caractériser une forme *(usage de direction de création)*
+
+Les équipes créent des **formes**. Tout langage qui permet de les caractériser (qualités *et* manières dont les parties / matières se relient) est utile, d’une matière à l’autre.
+
+**Issue attendue.** Une forme se décrit par un petit faisceau de qualités et de relations entre parties, transférable à une autre forme, sans passer par « réussie / belle ».
+
+### S0c — Poster des assemblages *(artefact réel)*
+
+Un poster, réalisé pour une équipe de conception, montre graphiquement des **assemblages de deux matières** : juxtaposition, articulation, fixation en dur, entrelacement, etc. Collection assez exhaustive, analogue à un nuancier : elle échantillonne les manières dont deux matières se rencontrent.
+
+**Issue attendue** (v2.2).
+- Le mode d’assemblage n’est pas un type (§9.7 A). On décrit chaque assemblage par les **qualités formelles de son joint**, qui est une partie de l’objet (§9.7 I) : espacement (`ppp:jointSpacing`), décalage de niveau (`ppp:jointLevelOffset`), contraste de clarté ou de teinte entre les deux parties qui se rejoignent (`ppp:lightnessContrast`, `ppp:hueContrast`).
+- Un joint qui mêle plusieurs configurations n’appelle pas de notion d’« hybride » : il a plusieurs qualités, chacune une assertion.
+- On peut s’en servir pour orienter une itération (« et si le joint était affleurant plutôt que décalé ? ») — but 2 / partition C-K.
+- La face perceptive (limite, interpénétration, contraste de matières) est dans PPP. La face technique (procédé, quel adhésif) reste hors ontologie, liée par un pointeur.
+
+Le poster est une **ressource non ontologique** à ré-ingénierer, pas un livrable à refaire.
+
+### S1 — Inspiration : nommer une référence
+
+Une équipe rassemble des images, matières, objets. Quelqu’un dit « j’aime ça ». Un autre : « trop chargé ». Personne ne sait si on parle de densité, de contraste, d’irrégularité, ou d’un souvenir de marque.
+
+**Issue attendue.** On identifie 2–4 qualités effectivement en jeu, on situe l’objet sur leurs espaces (ex. densité : plutôt dense ; irrégularité locale : marquée), on peut chercher d’*autres* références qui partagent *cette* configuration, pas le style global.
+
+### S2 — Cadrage : aligner ce qui compte pour *ce* produit
+
+Le brief dit « on veut quelque chose de beau, de simple, de présent ». Trois personnes entendent trois choses. Il faut cadrer sans figer un goût.
+
+**Issue attendue.** L’équipe choisit un petit faisceau de propriétés pertinentes *pour ce projet* (ex. espace négatif + irrégularité locale + contraste de clarté faible), et peut dire lesquelles sont hors cadrage. Ce n’est pas un score ; c’est un contrat perceptif.
+
+### S3 — Prototypage : décrire l’écart
+
+Un proto matière est sur la table. « C’est pas ça. » — « Si, c’est plus raffiné. » Le désaccord est réel mais illisible.
+
+**Issue attendue.** On décrit le proto *et* l’intention dans les mêmes termes : des **régions visées** (intention de cadrage, application) contre des **régions constatées** (assertions, avec épisode). L’écart devient local, par exemple : densité visée `moderate`, constatée `moderate` ; à la jonction assise–pied (partie), contour visé « progressif », constaté « franc » ; décalage de niveau au joint visé « affleurant », constaté « marqué », en main, examen d’une minute. Le jugement « trop » est isolé dans la couche axiologique. On sait quoi modifier.
+
+### S4 — Validation : discuter sans s’effondrer sur le goût
+
+Revue avec des gens qui n’ont pas suivi tout le process. « Je trouve ça froid. »
+
+**Issue attendue.** On peut demander : froid par rapport à quelle propriété ? (saturation, rugosité, vide, hiérarchie…). Soit on confirme un manque par rapport au cadrage, soit on constate un jugement qui n’est pas dans PPP — et on le laisse hors langage commun.
+
+### S5 — Conception par combinaison (but 2)
+
+Quelqu’un prend la *rugosité* d’un mur de pierre, le *vide actif* d’une mise en page, et le *rythme* d’un parcours muséal, et demande : « et si notre objet faisait ça ? »
+
+**Issue attendue.** La combinaison est dicible, pas nécessairement réalisable. L’ontologie dit ce qui est combiné (types + valeurs). Les cartes / opérations suggèrent le pas de côté. La faisabilité reste au concepteur.
+
+### S6 — Pont texte / image
+
+Une note d’atelier (« trop dense, la limite est morte, ça saute aux yeux ») doit pouvoir pointer vers les mêmes unités qu’une photo de référence annotée, et qu’un proto photographié. Un outil propose d’autres images qui partagent *cette* configuration PPP, pas le même style visuel global.
+
+**Issue attendue.** Texte et image sont des *modes d’accès* au même graphe (objet → qualités → valeurs). L’ontologie fournit les nœuds et les types ; l’outil fait l’alignement. Si le texte dit « serré » et l’image a été annotée « densité : dense », c’est la même assertion.
+
+### S7 — PPP comme K dans un C-K
+
+En atelier C-K, K contient : (a) les types PPP et leurs espaces ; (b) des fiches (« le grès émaillé X a une irrégularité locale marquée et un contraste de clarté faible entre émail et tesson »). C contient des concepts encore indécidables dans K : « un objet nomade qui a la rugosité de X *et* le vide actif d’une page Ma *et* un joint sans décalage de niveau ». Partitionner C, c’est choisir une dimension PPP et en disjoindre les valeurs (dense vs clairsemé, contraste de clarté faible vs fort).
+
+**Issue attendue.** On sait ce qui, dans PPP, est **K** (définition, objet décrit, valeur attribuée) et ce qui est **C** (conjonction de propriétés sans objet connu). On ne met pas dans K « c’est beau ». On peut mettre dans K « dans tel épisode, telle qualité a fait une différence ».
+
+### S8 — Carte d’identité esthétique d’un objet *(usage visé)*
+
+Un objet concret existe (produit, proto, tableau, ustensile). On veut **lister**, pour les types du cœur : ceux qui s’appliquent, ceux qui ne s’appliquent pas, ceux qui sont *pertinents* pour le décrire, et pour chacun une **valeur** — verbale (dense / clairsemé) ou numérique si l’espace le permet. Ça dresse une carte d’identité esthétique : profil, pas jugement.
+
+**Issue attendue.** Pour chaque type du cœur, une et une seule de ces cases (cinq statuts, §9.7, E) :
+
+| Statut | Sens | Exemple |
+|---|---|---|
+| **Non applicable** | La qualité n’inhère pas (pas de porteur, pas de second terme) | espacement au joint sur un objet d’une seule pièce, sans joint ; teinte sur un gris |
+| **Applicable, non pertinent** | L’objet *a* cette qualité, y prêter attention ne fait pas (ici) de différence à l’expérience (N3) | une densité moyenne que personne ne remarque |
+| **Applicable et pertinent** | Y prêter attention fait une différence ; on renseigne la région | irrégularité locale : marquée ; contraste de clarté : évident |
+| **Non évalué** | Personne n’a examiné ce type dans cet épisode (ce n’est pas une assertion sur l’objet) | la plupart des types d’une revue de 20 min |
+| **Non tranché** | Examiné, sans accord : les propositions divergentes sont conservées | densité : `moderate` pour l’un, `dense` pour l’autre |
+
+La carte est un **profil d’assertions** contre le TBox *courant* (monde clos vis-à-vis de l’ontologie d’aujourd’hui, monde ouvert vis-à-vis du réel : un nouveau type demain rallonge la carte). Ce n’est pas l’essence éternelle de l’objet. La carte est remplie **pour une cible** (objet ou partie) et **dans un régime de perception déclaré** (vocabulaire du §9.7, H). Deux cartes ne se comparent (CQ4e) qu’à régime égal ou explicitement différent.
+
+---
+
+## 6. Questions de compétence (informelles)
+
+L’ontologie (plus les fiches) doit permettre de poser et de distinguer ces questions. Elles évaluent le modèle ; elles ne le dictent pas.
+
+### Décrire un objet / une référence
+
+- CQ1. Quelles qualités perceptives de cet objet peuvent faire l’objet d’une attention ?
+- CQ2. Pour une qualité donnée, où se situe l’objet sur son espace de valeurs ?
+- CQ3. Cette qualité est-elle une propriété du tout, d’une partie, ou d’une relation entre parties ?
+- CQ4. Quelles qualités sont *intégrales* (on ne juge pas l’une sans l’autre) et lesquelles sont *séparables* ?
+
+### Carte d’identité esthétique (S8)
+
+- CQ4a. Pour chaque type du cœur : non applicable / applicable non pertinent / applicable et pertinent / non évalué / non tranché ?
+- CQ4b. Si pertinent : quelle valeur, dans quel format (étiquette verbale, ordinal, numérique) autorisé par l’espace de ce type ?
+- CQ4c. La carte est-elle *complète vis-à-vis du TBox courant* : chaque type a-t-il l’un des cinq statuts (« non évalué » compris), sans prétendre à l’exhaustivité du réel ?
+- CQ4d. Si deux objets ont des cartes distinctes, sont-ils perceptivement discernables ? (L’inverse ne vaut pas : deux objets perceptivement indiscernables ont la même carte, et la carte ne fixe pas l’identité de l’objet.)
+- CQ4e. Peut-on comparer deux cartes dimension par dimension (écart, transfert, nuancier) ?
+
+### Épisode d’attention / discussion d’équipe
+
+- CQ5. Dans cet échange ou cette observation, à quelles propriétés l’attention s’est-elle portée ?
+- CQ6. Lesquelles ont fait une différence (pertinence effective, rôle PPP) ?
+- CQ7. L’attention était-elle focalisée sur un objet et distribuée sur plusieurs de ses propriétés — ou autre régime ? *(Réservée hors V1, §9.9.)*
+- CQ8. Deux personnes parlent-elles de la même qualité, ou de deux qualités distinctes sous le même mot ?
+
+### Formes (S0b)
+
+- CQ8a. Par quelles qualités *et quelles relations entre parties* cette forme se caractérise-t-elle (distinctement d’un jugement : réussie, belle, présente) ?
+
+### Assemblages / morphologies (S0c)
+
+- CQ8b. Quelles qualités formelles décrivent le joint entre ces deux matières (espacement, décalage de niveau, contraste entre les parties qui se rejoignent) ?
+- CQ8c. Une configuration du poster se décrit-elle entièrement par des types déjà là (limite, interpénétration, contraste…), ou révèle-t-elle une qualité du joint qui manque ?
+- CQ8d. Quelles qualités perceptives une configuration de joint tend-elle à produire (contraste au joint, interpénétration, etc.) ?
+- CQ8e. Les qualités du joint suffisent-elles à décrire les configurations du poster pour les formes du terrain considéré, et où sont les trous ?
+- CQ8f. Une qualité du joint se reprend-elle d’une paire de matières à une autre sans changer de sens ?
+
+### Cadrage de projet
+
+- CQ9. Quelles qualités / quels modes sont déclarés pertinents *pour ce projet* ?
+- CQ10. Quelle valeur visée sur chaque dimension retenue ?
+- CQ11. Qu’est-ce qui est explicitement hors cadrage perceptif ?
+
+### Nuancier et itération matière (S0)
+
+- CQ12a. Quelle(s) PPP ce nuancier fait-il varier ? Lesquelles sont tenues (autant que possible) constantes ?
+- CQ12b. Quelle est l’étendue visée — les pôles, le pas, les trous dans l’espace de valeurs ?
+- CQ12c. Deux échantillons adjacents diffèrent-ils *sur l’axe déclaré*, ou aussi sur une autre qualité (confondue) ?
+- CQ12d. La prochaine itération est-elle : aller plus loin sur le même axe, interpoler, changer d’axe, ou combiner deux axes ?
+- CQ12e. Les dimensions co-variées sont-elles *intégrales* (on ne peut pas varier l’une sans l’autre) ou *séparables* (un nuancier à un axe est lisible) ?
+
+### Comparer et écarter
+
+- CQ12. En quoi deux objets (référence vs proto, proto A vs proto B, échantillon n vs n+1) diffèrent-ils *perceptivement* ?
+- CQ13. L’écart porte-t-il sur le type de qualité, sur la valeur, ou sur l’épisode (cible, conditions, modalité) ?
+
+### Combiner (préparer le but 2)
+
+- CQ14. Peut-on transférer la valeur d’une qualité d’un objet vers un autre objet / un proto ?
+- CQ15. Quelles unités sont combinables (qualité, valeur, configuration, régime) ?
+- CQ16. Quelle opération d’exploration s’applique à quelle unité (« augmenter », « fragmenter », « déplacer l’attention ») ?
+
+### Pont texte / image et consommation par un outil (but 3)
+
+- CQ19. Cette mention textuelle (« trop chargé », « ça saute aux yeux ») se résout-elle en un type PPP + une région de valeurs ?
+- CQ20. Cette annotation d’image et cette phrase d’atelier sont-elles la *même* assertion, ou deux assertions distinctes ?
+- CQ21. Quels objets / images du corpus partagent une configuration PPP donnée (requête par types + valeurs, pas par style) ?
+- CQ22. L’identifiant d’un type est-il stable à travers les outils (fiche humaine, annotateur, prompt, graphe) ?
+
+### Espace K / espace C (but 3)
+
+- CQ23. Cette proposition est-elle évaluable dans K (vrai, faux, non tranché à propos d’un objet) ou est-ce un concept C (indécidable : aucun objet connu ne l’instancie encore) ?
+- CQ24. Quelles dimensions PPP peuvent servir d’**attributs de partition** pour expanser C ?
+- CQ25. Quelle connaissance K (fiche, type, contrainte) autorise ou interdit une conjonction dans C ?
+
+### Transfert hors du premier terrain
+
+- CQ16a. Ce type s’applique-t-il, *sans redéfinition*, à un tableau ? à un ustensile de cuisine ? à un objet high-tech ?
+- CQ16b. Ce qui ne se transfère pas est-il un type du cœur, ou un fait d’application (cette matière, ce terrain) ?
+- CQ16c. Une fiche tableau / cuisine / high-tech peut-elle se remplir avec les mêmes cases qu’une fiche d’objet conçu en atelier ?
+
+### Gouvernance du lexique
+
+- CQ17. Pourquoi ce terme entre-t-il dans le *cœur* (test Nanay + non-redondance + transfert) ?
+- CQ18. Ce terme est-il un type de qualité, une région de valeurs, une relation, une gestalt, ou un régime d’épisode ?
+
+### Strates, neutralité, épreuve (v2)
+
+- CQ26. Ce type est-il formel ou semi-formel ? S’il est semi-formel, quelle est sa base de dépendance déclarée, et contient-elle au moins un type formel ?
+- CQ27. Cette base contient-elle des facteurs non perceptuels (catégorie d’œuvre, titre, fonction, contexte) ? Lesquels, et à quel trait perceptible de l’objet chacun est-il relié ?
+- CQ28. Ce label, cette région, cette définition passent-ils le test de neutralité (§0.4) ? Cette phrase d’atelier mêle-t-elle une assertion PPP et un jugement ? Si oui, lesquels ?
+- CQ29. Quels énoncés testables (E1–E6) ce type engage-t-il ? Lesquels ont été mis à l’épreuve, avec quelle issue ?
+- CQ30. Dans cet épisode, quelle est la cible (objet ou partie), sous quelles conditions et par quelles modalités ? *(La distribution de l’attention sur les objets et sur les propriétés est réservée hors V1, §9.9.)*
+- CQ31. Dans quelles conditions de perception (présentation, lumière, distance, angle, durée ; §9.7 H) cette attribution a-t-elle été faite ? Ces conditions étaient-elles connues sur les facettes critiques du type ?
+
+Règle de numérotation : un numéro de CQ n’est jamais réattribué ; les nouvelles CQ continuent la série (CQ26 et suivantes). Les numéros v1 sont conservés tels quels, même quand ils sont irréguliers.
+
+Si une construction du modèle n’aide à répondre à aucune de ces questions, elle n’entre pas.
+
+---
+
+## 7. Périmètre
+
+### Dans le périmètre de ce cycle
+
+- Ontologie conceptuelle **semi-informelle** (langue contrainte, pas OWL). *Terminologie* : « semi-formel » est réservé au sens de Nanay (§0.3) ; il ne désigne jamais le niveau de formalisation.
+- Univers des **propriétés** : formelles et semi-formelles ancrées perceptuellement (§0.3) ; l’attentionnel est traité comme régime d’épisode.
+- **Découpage du cycle 1 par strate, pas par modalité** (Q6, décidée : « se concentrer sur les caractéristiques formelles (au sens large) et pas uniquement sensorielles »). L’éditeur du projet a précisé : « formel et semi-formel, les pilotes actuels restent ». Le périmètre du cycle 1 couvre donc les **deux strates, formel et semi-formel** (forme, organisation, relations entre parties), qu’elles se donnent à la vue, au toucher ou autrement. Les types attentionnels sortent du premier cycle (décision du 2026-10-10, §9.9) ; l’épisode reste éprouvé comme cadre de toute assertion (cible, conditions de perception, modalités).
+- Univers du discours du **cœur** : formes et artefacts auxquels une attention esthétique peut se distribuer (objets, images, tableaux, espaces, produits de tous secteurs).
+- **Terrains d’épreuve** : ateliers de conception d’objets (forme, couleur, dessin, matière, assemblage, échantillons), plus au moins un corpus non conçu en atelier (tableaux, objets du quotidien). C’est là qu’on cale les pilotes et les fiches. Aucun terrain ne restreint le cœur. Les épreuves portent sur des **objets publics** (Q12) ; ce qui touche à des objets confidentiels est hors programme.
+- Trois types pilotes (voir §10) pour caler le patron, puis reclassement du stock v0.1 / v0.2.
+- Fiche d’observation / **esquisse de carte d’identité** alignée sur le modèle (pas l’inverse) : pour les 3 pilotes, les cinq statuts + valeur.
+- Préparer, sans les construire, les opérations du but 2.
+- Préparer, sans les construire, la consommabilité outil / C-K (identifiants, TBox ≠ ABox, assertions).
+
+### Hors périmètre (ce cycle)
+
+- Moteur génératif, cartes éditées, interface logicielle, pont IA texte / image, atelier C-K outillé.
+- Formalisation OWL / raisonnement automatique (le modèle doit *pouvoir* y aller ; on n’y va pas maintenant).
+- Vocabulaire émotionnel, jugements de valeur, « vie » alexanderienne comme norme (neutralité, §0.4).
+- Spécification du site de navigation et du jeu de cartes (§12 n’en fixe que les conditions de possibilité).
+- Contenu narratif (personnages, intrigue, sens d’un récit) : module « récit » ultérieur, hors cœur (Q1).
+- Théorie sémiotique complète (Floch, carré sémiotique) — réexaminée seulement si une CQ l’exige.
+- Couverture exhaustive des 15 propriétés d’Alexander, de Greimas, ou de tous les domaines sensoriels.
+
+### Décisions de cadrage (provisoires, à confirmer)
+
+| Décision | Position de travail | Commentaire |
+|---|---|---|
+| Posture | **Réalisme épistémique, programme de recherche (Popper, Lakatos), neutralité axiologique** (§0) | Nanay = source du critère de pertinence et du semi-formalisme, pas de sa visée évaluative ; Alexander = source de *candidats*, pas de norme |
+| Cartes, site | **Conséquences, hors ontologie et hors spec** | La spec garantit seulement ids, typage, séparation type / région / jugement (§12) |
+| Formel / semi-formel | **Strate obligatoire ; base déclarée pour tout semi-formel** | **Décidé (Q2)** : facteurs non perceptuels admis sans liste fermée, si leur lien à un trait perceptible est déclaré |
+| Attentionnel | **Régime d’épisode (P3), pas une strate de qualités** | **Décidé (Q5)** : attention esthétique de Nanay = une configuration d’épisode, descriptive seulement, pas un critère d’entrée ; types attentionnels réservés hors V1 (§9.9) |
+| Récits | **Décidé (Q1)** : organisation temporelle des séquences perçues dans le cœur ; histoire racontée hors cœur ; module « récit » séparé plus tard | §0.3 |
+| Propriétés expressives | **Décidé (Q4)** : hors du cœur, traduites vers des types neutres (S4) | Concepts épais idem |
+| Terrains | **Terrains d’épreuve, pas domaine** | Le cœur doit servir objets conçus, tableaux, cuisine, high-tech ; **décidé (Q12)** : épreuves sur objets publics uniquement |
+| Publicité | **Ontologie publique, amendable (§13)** | **Décidé (Q11)** : CC BY 4.0 (ontologie, documents), MIT (code), pas d’accord de contribution. **Décidé (Q9)** : ids en anglais, labels FR + EN, documents en français ; visée (article, ressource communautaire, les deux) ouverte |
+| Cœur vs application | **Types généraux ; fiches et morphologies locales** | Poster assemblages, nuanciers : ressources d’application, candidats au cœur si transférables |
+| Modalités | **Décidé (Q6)** : pas de découpage par modalité ; le cycle 1 est défini par strate : formel et semi-formel (Q6 précisée) | Modalités des épreuves pilotes : vision et toucher (position de travail, pas décision). Identité des types entre modalités : Q13, ouverte |
+| « Beau » | **Enjeu de projet, pas classe ontologique** | PPP déplie, ne note pas |
+| Consommation outil / C-K | **Contraint le modèle, pas un livrable** | Identifiants, assertions, K ≠ C |
+| Pont texte / image | **Même graphe, deux accès** | Texte et image n’ajoutent pas de classes |
+
+---
+
+## 8. Univers du discours
+
+L’ontologie doit distinguer au moins ces sortes d’entités. « PPP » n’est **pas** un type général que d’autres spécialiseraient.
+
+| Sorte | Rôle | Exemple |
+|---|---|---|
+| **Objet d’attention** | Forme ou artefact visable (conçu ou non) | objet de créateur, tableau, casserole, téléphone, photo de référence, échantillon |
+| **Forme / produit** | Cas d’objet *conçu* : volume, couleur, dessin, matière, assemblages ; souvent destiné à un usage | proto, série, affiche typographique, chaise, ustensile, objet high-tech |
+| **Nuancier** | Série d’objets conçue pour échantillonner un (ou peu de) espaces de valeurs PPP | 8 carreaux d’un même émail cuits à des températures différentes |
+| **Type de qualité** | Dimension perceptive, avec un espace de valeurs | densité, texture, contraste |
+| **Qualité particulière** | Instance qui inhère à *cet* objet | la densité de *ce* proto |
+| **Espace / région de valeurs** | Où la qualité se situe (valeur *dimensionnelle*, jamais axiologique) | dense ←→ clairsemé ; faible ←→ maximal (contraste) |
+| **Relation / gestalt** | Propriété qui porte sur plusieurs éléments ou sur une configuration | contraste entre A et B ; hiérarchie |
+| **Joint** | Partie de l’objet où deux matières ou éléments se rencontrent ; décrit par ses qualités formelles, pas par un mode (§9.7 A) | espacement au joint, décalage de niveau, contraste de clarté entre les deux parties |
+| **Épisode attentionnel** | Situation : qui observe, quelle cible (objet ou partie), quand, sous quelles conditions, par quelles modalités (distributions de l’attention réservées, §9.9) | une revue de proto de 20 min |
+| **Conditions de perception** (alt. conditions d’observation) | Paramètres de l’épisode qui conditionnent l’attribution | lumière rasante, à bout de bras, en main, 5 s vs 5 min |
+| **Pertinence (rôle)** | Une qualité *joue le rôle* de PPP dans un épisode si y prêter attention fait une différence | la rugosité devient pertinente pendant la revue |
+| **Cadrage de projet** | Sous-ensemble de types + valeurs visées, pour *ce* produit | « espace négatif marqué + densité : clairsemé » |
+| **Consigne de conception** | Orientation de projet (hors ontologie cœur) | « viser une limite active » |
+| **Intention de cadrage** | Région visée pour un projet (application, pas une propriété) | « densité visée : clairsemé » |
+| **Jugement (axiologie)** | Évaluation qui *porte sur* une assertion PPP ; autre couche, pointe vers l’id de l’assertion | « trop chargé pour ce projet » |
+| **Opération d’exploration** | (but 2, hors ontologie cœur) acte sur une unité | augmenter la densité ; déplacer l’attention |
+| **Assertion (K)** | Proposition évaluable : type, ou objet + qualité + valeur | « ce proto est très dense » (densité perceptive, région `veryDense`) |
+| **Carte d’identité esthétique** | Profil d’un individu : pour chaque type du cœur, statut + valeur le cas échéant | la fiche complète d’un objet concret |
+| **Concept (C)** | Conjonction de propriétés encore sans objet connu | « un x rugosité(A) ∧ vide(B) » |
+
+Conséquence : le même format de fiche ne peut pas servir tel quel à une qualité d’objet et à un épisode d’observation. Deux patrons, reliés.
+
+Conséquence C-K : l’ontologie (TBox) et les fiches (ABox) sont **K**. Une combinaison inédite est **C**. La pertinence Nanay entre dans K seulement *située* (« dans l’épisode E, P a fait une différence ») — pas comme essence de l’objet.
+
+Conséquence nuancier : un nuancier est un **échantillonage conçu d’un espace de valeurs**. Le nommer, c’est faire un acte ontologique (quel type, quels pôles, quel pas). C-K : remplir le nuancier **expanse K** (on sait désormais ce que cette matière fait sur cet axe) ; choisir l’axe **partitionne C** (on explore *cette* propriété, pas une autre). Un nuancier à trop d’axes non dits n’est ni bon K ni bonne partition.
+
+---
+
+## 9. Appareil d’ingénierie ontologique
+
+La v0.1 / v0.2 est un **vocabulaire** : mêmes fiches, liste de noms, relations en vrac. L’ingénierie ontologique (OE) ne sert pas à allonger la liste. Elle la transforme en **graphe typé** : chaque terme a une sorte, un porteur, un espace, des relations à domaine/portée, des contraintes. C’est ce qui rend la liste utile pour une carte d’identité, un nuancier, un C-K, un outil.
+
+On reste **semi-informel** (langue contrainte). Pas d’OWL dans ce cycle. Le modèle doit pouvoir y aller.
+
+Le patron de fiche de *type* est dans `PPP_FicheType.md`. Ci-dessous : l’appareil.
+
+### 9.1 Ce qu’on reprend (pile courte)
+
+| Source | Ce qu’on en fait |
+|---|---|
+| **Gruber (1995)**[^gruber] | Clarté, cohérence, extensibilité, biais d’encodage minimal, engagement minimal |
+| **Uschold & King / Grüninger & Fox**[^methodes] | Purpose, scénarios, questions de compétence, évaluation par les CQ |
+| **Noy & McGuinness (OD101)**[^noy] | Classes ≠ slots ≠ instances ; is-a strict ; disjointness ; cardinalité ; middle-out |
+| **METHONTOLOGY / NeOn**[^neon] | Glossaire → conceptualisation → (plus tard) formalisation. Ré-ingénierie des ressources non ontologiques (poster, nuanciers) |
+| **OntoClean (Guarino & Welty)**[^ontoclean] | Rigidité, identité, unité, dépendance. « PPP » = rôle, pas genre |
+| **DOLCE / UFO + Gärdenfors**[^dolce-ufo] | Qualité / quale / espace de valeurs ; dimensions intégrales vs séparables ; relateurs |
+| **ODP**[^odp] | Trois patrons : Entity–Quality–Value ; Relator ; Situation (épisode) |
+
+### 9.2 Ce qui enrichit vraiment la liste
+
+Un nom dans v0.2 (« Densité perceptive ») devient un **type** avec au minimum :
+
+1. **Identifiant** stable (`ppp:perceptualDensity`) ≠ label FR/EN, selon la convention X1 (§12).
+2. **Sorte** (une seule, alignée sur le patron) : qualité (P1, dont la *gestalt* : qualité d’un porteur complexe, une configuration) | relateur (P2, ex. le contraste) | régime d’épisode (P3 ; aucun type actif en V1, §9.9). Une région de valeurs n’est pas un type.
+2b. **Strate** (P1, P2) : formel | semi-formel ; pour un semi-formel, **base de dépendance** déclarée (§0.3, A9).
+3. **Porteur** : à quoi ça inhère ou entre quels termes ça relie (domaine / portée).
+4. **Espace de valeurs** : type d’échelle (nominale, ordinale, intervalle, ratio), pôles, éventuellement pas.
+5. **Condition de non-application** : quand la case de la carte d’identité est N/A.
+6. **Critère d’identité** : en quoi ce n’est pas le voisin (densité ≠ saturation ≠ texture).
+7. **Relations typées** — plus « Relations : contraste, hiérarchie » :
+   - `dependsOn` (d’un semi-formel vers **chaque type de sa base**, formel ou semi-formel ; au moins un formel atteint directement ou transitivement, sans cycle, A9 ; non symétrique ; **une seule source** : le champ `base_dependance`, pas de doublon dans `relations`). Ex. : `ppp:perceptualDensity` → `ppp:contour` (formel) et → `ppp:distribution` (semi-formel) → `ppp:contour` ;
+   - `integralWith` (**symétrique, sens fort** de Garner et Gärdenfors[^garner] : on ne peut pas percevoir l’une sans l’autre ; jamais pour une simple corrélation) et `separableFrom` (symétrique). Une relation symétrique s’écrit sur une seule fiche, et le site l’affiche des deux côtés ;
+   - `tendsToProduce` (région → type ou région ; non symétrique ; un exemple par fiche qui l’emploie). *v2.3, position de travail, révisable par l’éditeur du projet* : la relation n’est plus pensée pour les seuls modes d’assemblage (dépréciés) ; elle vaut pour tout type P1 ou P2. Elle déclare une **tendance perceptive**, pas une loi causale : sur les objets observés, la région source du type A va avec le type B (applicable) ou avec une région de B, **sous les conditions déclarées**. Elle s’écrit sur la fiche du type source, avec la clé de la région source (`depuis`) et les facettes de régime concernées (`sous_conditions`), et engage un énoncé testable de structure (réfuté par des objets de la région source sans l’effet, dans le même régime). Elle ne vise jamais un id en `attente` (A12) : « tend à rendre saillant » ne s’écrit pas en V1. Ex. : `ppp:texture/coarse` → `ppp:lightnessContrast` sous `lumiere: raking` (ombres portées du grain). *Règles de validation (v2.5, crash test 01 ; position de travail, révisable par l’éditeur du projet)* : (a) **une seule source** : `depuis` est une seule clé de région, celle d’une région du type de la fiche ; une conjonction (« A et B et C tendent à produire D ») ne s’écrit pas en une relation : elle se porte dans l’énoncé testable d’une relation à une source, les autres sources y figurant comme conditions de l’épreuve, ou dans la couche d’application (`app:`) ; (b) **jamais vers sa propre dépendante** : un type ne `tendsToProduce` pas un type dont il est dans la base, directe ou indirecte, puisque `base_dependance` dit déjà ce lien (A9) ; (c) la cible est définie et n’est pas en `attente` (A12) ;
+   - `confusableWith` (symétrique ; remplace `voisins_a_ne_pas_confondre`) ;
+   - `organizedBy` n’est **pas** une relation de TBox : un centre organise des *parties* d’un objet, c’est donc une relation d’ABox entre parties.
+8. **Méta-propriétés OntoClean** : rigide / anti-rigide ; dépendant ; (non) sortal.
+9. **Assertions types** : ce qui est toujours vrai du type (axiomes légers).
+10. **Opérations** (but 2) et **partition C** (but 3) : jamais dans le fichier du type ; dans des fichiers `op:` / `app:` qui référencent le type (X7). Une partition C dérivable des régions n’est pas saisie.
+11. **Tests** : Nanay, transfert, CQ, neutralité.
+12. **Énoncés testables** (E1–E6) engagés par le type, avec leur statut épistémique (vocabulaire unique, §9.7, F).
+
+Sans (2)–(7) et (12), ce n’est pas une entrée d’ontologie : c’est un mot.
+
+### 9.3 Trois patrons (on n’en invente pas un quatrième sans besoin)
+
+**P1 — Entity–Quality–Value** (qualités monadiques : texture, densité, rugosité, teinte…)
+
+```
+Qualité particulière  —ppp:inheresIn→  Objet      Qualité particulière  —ppp:hasValue→  Région d’espace
+sa densité                              ce vase    sa densité                            ppp:perceptualDensity/dense
+```
+
+*Lecture conceptuelle.* `ppp:inheresIn` (« inhère ») et `ppp:hasValue` (« a pour valeur ») sont des relations **conceptuelles** : la qualité particulière n’est pas un objet du modèle machine. Leur correspondance machine est l’**assertion** (ci-dessous, §9.8) : `ppp:inheresIn` ↦ `ppp:about`, `ppp:hasValue` ↦ `ppp:inRegion`.
+
+*Indexation aux conditions de perception* (v2.3, position de travail, révisable par l’éditeur du projet). La qualité particulière inhère à l’objet ; sa **région est attribuée sous un régime de perception**, celui que déclare l’épisode (`ppp:observedUnder`, §9.7 H). Conceptuellement, « a pour valeur » est relatif au régime : la densité de ce vase est `dense` *sous* `tableTop+diffuse+near+frontal+exam`. Côté machine, rien de nouveau : l’`ppp:inRegion` d’une assertion se lit avec le régime de son `ppp:inEpisode`. Une même surface jugée `smooth` en lumière diffuse et `fine` en lumière rasante donne deux assertions dans deux épisodes, pas une contradiction ; il n’y a désaccord qu’à régime égal sur les facettes critiques du type (`conditions_critiques`, §9.7 H). Cette lecture garde le silence métaphysique de Q3 : elle ne dit pas que la qualité est relationnelle, dispositionnelle ou intrinsèque ; elle dit seulement qu’aucune région n’est affirmée hors de conditions déclarées. Elle vaut de même pour la région d’un relateur (P2).
+
+**P2 — Relator** (contraste, interpénétration…)
+
+```
+Partie A   ←ppp:mediates—  Relateur              —ppp:mediates→  Partie B   (« médie », avec rôle ; conceptuel)
+béton                contraste de clarté                     verre
+                     ppp:lightnessContrast/strong
+```
+
+Un relateur a une *arité* (≥ 2). Il n’inhère pas à un seul porteur. Sa valeur est une région de son espace, le plus souvent ordinale (contraste faible / maximal). Le joint entre A et B est lui-même une partie, qui porte ses qualités P1 (`ppp:jointSpacing`, `ppp:jointLevelOffset`, §9.7 A). Comme la qualité particulière, le relateur particulier relève de la lecture conceptuelle : `ppp:mediates` ↦ un `ppp:about` par relatum, avec son `ppp:role`. Un contraste porte sur une dimension comparée, fixée par un type spécialisé ou déclarée par l’assertion (§9.7, B).
+
+**P3 — Situation / épisode** (cadre de toute assertion ; types de régime réservés hors V1, §9.9)
+
+```
+Épisode         —ppp:target→         Objet ou partie                        (cible)
+                —ppp:observedUnder→  régime de perception (§9.7, H)         (conditions)
+                —ppp:usesModality→   modalités mobilisées (≥ 1 ; §9.7, H)   (modalités)
+                —ppp:observer→       observateurs                           (observateurs)
+                —ppp:date→           date                                   (date)
+
+Assertion P3    —ppp:inEpisode→      Épisode                                (dans l’épisode)
+                —ppp:assertedType→   individu de ppp:EpisodeRegimeType   (aucun en V1, §9.9)
+                —ppp:inRegion→       région de ce type
+                (pas de ppp:about : l’objet est le ppp:target de l’épisode)
+```
+
+L’épisode n’est pas une qualité du vase : il dit **qui** observe, **quoi** (la cible, objet ou partie), **comment** (modalités) et **dans quelles conditions**. Il est le cadre de toute assertion P1 et P2 (`ppp:inEpisode`), et c’est à ce titre qu’il reste dans la V1. Un épisode porte au minimum : cible, date, observateurs, conditions de perception (un régime complet : une valeur par facette de §9.7 H, `unknown` permis ; v2.3) et modalités. Une **attribution P3**, si un type de régime est un jour admis, est une `ppp:Assertion` ordinaire dont le `ppp:assertedType` est un individu de `ppp:EpisodeRegimeType` ; elle se rattache à son épisode par `ppp:inEpisode`, sans relation inverse déclarée, et **n’a pas de `ppp:about`** : elle porte sur son épisode, l’objet étant donné par le `ppp:target`. En V1, la métaclasse `ppp:EpisodeRegimeType` n’a **aucun individu au premier cycle** : les types attentionnels et leurs règles propres sont réservés (§9.9). L’attention reste une configuration d’épisode, descriptive (Q5).
+
+Règle : **un type, un patron**. Si on hésite entre P1 et P2, ce n’est pas encore un type.
+
+**Modèle d’assertion (ABox).** Les trois patrons décrivent des *types*. Ce qu’on affirme d’un objet est une **assertion**, entité distincte et identifiée :
+
+```
+Assertion  —ppp:about→             Objet (ou partie)          (porte sur ; pour P2 : les relata, chacun avec ppp:role ; absent pour P3)
+           —ppp:assertedType→      ppp:<type>                 (type)
+           —ppp:cardStatus→        non applicable | applicable non pertinent | applicable et pertinent | non tranché   (statut de carte)
+           —ppp:inRegion→          ppp:<type>/<région>        (région ; si applicable ; ou ppp:numericValue si l’échelle le permet)
+           —ppp:inEpisode→         Épisode (observateurs, cible, régime de perception, modalités, date)   (dans l’épisode ; le régime indexe la région, v2.3)
+           —ppp:modality→          vision | toucher | audition… | indistincte   (modalité ; une seule : l’une des modalités de l’épisode, ou `indistincte` si l’épisode en compte plusieurs)
+           —ppp:source→            observation directe | photo | texte | annotation outil   (source)
+           —ppp:assertedBy→        qui affirme (peut différer des observateurs)   (auteur)
+           —ppp:ontologyVersion→   version de l’ontologie     (version)
+           —ppp:epistemicStatus→   non éprouvé | corroboré | contesté | réfuté   (statut épistémique ; vocabulaire unique, §9.7, F)
+           —ppp:withdrawn→         oui | non   (retirée ; retrait par l’auteur, distinct de la réfutation)
+```
+
+*Minimum d’atelier* : objet ou partie, type, statut, région, modalité, épisode réduit (date, observateurs, régime de perception). `source`, `auteur` et `version` se complètent après coup. **Image ou objet** : une assertion porte soit *sur l’image* (objet d’attention à part entière), soit *sur l’objet via l’image* ; dans ce second cas, `source: photo` est obligatoire avec les conditions de prise de vue, qui remplissent les facettes du régime (lumière, distance, angle ; `unknown` si on les ignore), et un type à forte dépendance aux conditions (brillance, profondeur) y est marqué « non tranché » plutôt que déduit : c’est la règle générale des facettes critiques inconnues (§9.7 H, A5). **Assertion de groupe** : une seule assertion peut porter sur un ensemble d’échantillons (« sur les échantillons 1 à 8, B est jugé constant à une région près, par X, dans tel régime »). Elle sert au nuancier (E2). **« Non évalué »** n’est pas une assertion : c’est l’absence d’assertion, rendue explicite sur la carte.
+
+La pertinence est toujours une assertion *dans* un épisode (A6). Deux assertions sont la *même* (CQ20) si elles ont le même objet, le même type et la même région, quel que soit leur mode d’accès (texte, image), et, depuis v2.3 (position de travail, révisable par l’éditeur du projet), le même régime sur les facettes critiques du type. Elles restent deux enregistrements si leurs épisodes diffèrent. Un **jugement** (axiologie, §0.4) est un enregistrement d’une autre couche qui pointe vers l’id d’une assertion ; il n’en est jamais un champ. Ce lien appartient à la couche axiologique, hors ontologie : il n’a pas d’id `ppp:`.
+
+**Patron d’application — Nuancier (hors cœur).** Un nuancier n’est pas un type PPP, c’est un artefact d’application composé à partir d’assertions P1 :
+
+```
+Nuancier  —app:parameter→      paramètre de fabrication (hors PPP : température, pression, finition…)   (paramètre)
+          —app:targetAxis→     ppp:<type> (1 ou 2)                                              (axe visé)
+          —app:heldConstant→   ppp:<type>* (tolérance : même région)                            (tient constant)
+          —app:member→         Échantillon, avec app:rank (attribut d’application, pas une région)   (membre)
+          —app:observedAxes→   assertions P1 par échantillon sur l’axe visé, et assertions de groupe sur les types tenus   (axes constatés)
+```
+
+Le nuancier distingue ainsi ce qu’on **fait varier** (paramètre), ce qu’on **vise** (axe) et ce qu’on **constate** (assertions). Un nuancier qui vise l’irrégularité locale et produit surtout un écart de brillance se décrit honnêtement : axe visé ≠ axe constaté. E2 (séparabilité) se teste sur un nuancier. Un nuancier est **confondu** (CQ12c) si une assertion de groupe constate qu’un type tenu sort de sa région. Le rang 3 de deux nuanciers n’est pas la même densité : on compare par régions. Le poster d’assemblages n’est pas un nuancier d’un type : chaque configuration s’y décrit par plusieurs qualités du joint (§9.7 A).
+
+### 9.4 Contraintes (axiomes légers — langue contrainte)
+
+À vérifier à chaque entrée et à chaque spécialisation (règles de validation, §9.8) :
+
+- **A1.** Spécialisation : « B `ppp:specializes` A » signifie que tout ce qui relève de B relève de A. La relation est transitive et ne relie que des types de même métaclasse (§9.8). Interdit : un contraste `specializes` texture (métaclasses différentes) ; « PPP » `specializes` quoi que ce soit.
+- **A2.** Une région de valeurs n’est pas un sous-type (« très dense » n’est pas un sous-type de densité ; c’est une région de son espace).
+- **A3.** Un type rigide ne spécialise pas un rôle anti-rigide (OntoClean). « Être PPP » n’est spécialisé par rien.
+- **A4.** Si B `ppp:specializes` A et que A porte un critère d’identité, B le porte aussi (héritage OntoClean).
+- **A5.** Cardinalité du porteur. *Lecture conceptuelle* : une qualité particulière (P1) inhère à exactement un porteur ; un relateur particulier (P2) médie au moins deux relata ; un régime d’épisode (P3, aucun en V1) caractérise un épisode, qui a exactement une cible. *Règle de validation* : toute assertion dont le `ppp:assertedType` est un `ppp:QualityType` a exactement un `ppp:about` ; un `ppp:EpisodeRegimeType`, aucun `ppp:about` (l’objet est le `ppp:target` de son épisode ; règles propres aux types réservés : §9.9) ; un `ppp:RelatorType`, au moins deux `ppp:about`, chacun avec un `ppp:role` ; toute assertion a exactement un `ppp:inEpisode`, dont l’épisode a exactement un `ppp:observedUnder`, avec une valeur par facette de §9.7 H (`unknown` permis) ; une assertion dont l’épisode n’a pas de régime est invalide. Si une facette listée dans les `conditions_critiques` du type vaut `unknown`, l’assertion a le statut de carte « non tranché » et pas de `ppp:inRegion` (v2.3, position de travail, révisable par l’éditeur du projet).
+- **A6.** Pertinence et région : seulement *dans* un épisode d’observation (l’épisode du patron P3, qui existe en V1 sans type de régime actif, §9.9), sous son régime de perception déclaré (§9.7 H). Pas de « densité pertinente » flottante, ni de région flottante : « ce vase est dense » s’enregistre toujours sous un régime (lecture de P1, §9.3 ; v2.3, position de travail, révisable par l’éditeur du projet).
+- **A7.** Disjointness : les trois sortes cœur (qualité, relateur, régime d’épisode) sont deux à deux disjointes. La gestalt est une sous-sorte de **qualité seulement** (P1 sur une configuration, ex. `ppp:distribution`, `ppp:negativeSpace`). Une relation entre parties est un relateur (P2), pas une gestalt. Un joint est une partie de l’objet : ses qualités sont des P1, ses rapports aux parties voisines des P2 (§9.7 A).
+- **A8.** TBox ≠ ABox : le type `ppp:perceptualDensity` n’est pas l’échantillon n°3 du nuancier.
+- **A9.** Strate : tout type P1/P2 déclare une strate. Formel ⇒ base vide. Semi-formel ⇒ `dependsOn` vers chaque type de sa base (formel ou semi-formel), dont au moins un formel atteint directement ou transitivement. Aucun cycle de `dependsOn`. Les facteurs non perceptuels de la base ne sont pas des types PPP : ils ne comptent pas pour cette condition, et chacun déclare son lien à un type perceptuel de la base (Q2). Un type P3 n’a pas de strate.
+- **A10.** Neutralité : aucun label, aucune région, aucune définition du cœur ne porte de valence (test §0.4). Les labels d’atelier porteurs de valence (*vide actif*, *limite active*) ne sont admis que comme labels alternatifs, sous une définition neutre.
+- **A11.** Identifiants : un identifiant n’est jamais réattribué. Une entrée fusionnée, scindée, renommée ou rejetée est dépréciée (`remplace_par`, multivalué, pouvant viser un type ou une région, avec motif et décision), pas supprimée. **Aucun id n’est publié pour un candidat dont le label ou la clé échoue au test de neutralité** : l’id fixerait la valence à jamais.
+- **A12.** Tout id cité par une fiche (relation, base, voisin, remplacement) est défini : fiche publiée ou entrée du registre (Annexe A, avec son statut éditorial : `candidat`, `attente` ou `déprécié`). Un id en `attente` n'est cité ni comme base ni comme cible de relation par une fiche active : il n'apparaît que dans la §9.9 et l'Annexe A (v2.2.3). Cela vaut pour la cible d’un `tendsToProduce` (v2.3). Une grille d’analyse (« complexité », §9.10) n’a pas d’id `ppp:` : aucune fiche ne la cite comme base ou comme cible. X5.
+
+### 9.5 Ce que ça change pour le stock v0.2
+
+| Avant (liste) | Après (OE) |
+|---|---|
+| Une fiche unique | Fiche selon le patron P1 / P2 / P3 |
+| « Relations : contraste, hiérarchie » | Relations nommées, avec domaine et portée |
+| Greimas comme taxonomie | Greimas = *facette* (vue), pas `specializes` |
+| Alexander comme 15 types à plat | Chaque propriété : type P1/P2 *ou* consigne (hors cœur) *ou* région |
+| « Centre fort » cité, jamais défini | Soit un type, soit un rôle organisationnel, soit on l’ôte |
+| Formelles et attentionnelles dans le même arbre | Arbres disjoints (A7) |
+| Présence / absence d’une carte | Carte d’identité : cinq statuts (N/A / non pertinent / pertinent + valeur / non évalué / non tranché, §9.7 E) |
+| Des **régions érigées en types** (contraire à A2) : *saillance immédiate / progressive*, *attention focalisée / distribuée*, *exploration linéaire / libre* (v0.2) ; *symétrie / asymétrie*, *équilibre / déséquilibre*, *centralité / périphéricité*, *saillance latente*, *lisibilité immédiate / graduelle* (liste de cartes) | Un type par dimension (`ppp:symmetry`…), les pôles devenant des régions ; les dimensions attentionnelles ont des ids réservés hors V1 (§9.9). Les noms v0.2 **n’ont jamais eu d’id** : rien n’est déprécié. Une **table de correspondance** (label v0.2 → id ou région v2) est publiée avec le reclassement. La dépréciation (A11) ne vaut qu’à partir des ids v2. |
+
+Reclassement : garder / fusionner / déplacer de patron / mettre en région / mettre en attente / sortir (consigne).
+
+### 9.6 Principes de conception (Gruber + PPP)
+
+1. **Clarté** — Un terme, une sorte. Définition + contre-exemple + question attentionnelle.
+2. **Cohérence** — A1–A8. Pas de spécialisation illégitime.
+3. **Extensibilité** — Ajouter un type sans casser les types existants.
+4. **Engagement minimal** — Pas de thèse sur le beau ou la « vie » des formes. Pas de marque dans le cœur.
+5. **Combinabilité** — Espace de valeurs assez explicite pour transférer, comparer, hybridé, partitionner C.
+6. **Test d’entrée** — Ancré perceptuellement (§0.3) ; visable ; sans jugement ; non redondant ; utile à une CQ ; transfert ; au moins un énoncé testable.
+7. **Middle-out** — Usages (formes, nuanciers, poster) d’abord ; Alexander / Greimas = candidats. Ré-ingénierie des morphologies déjà là.
+8. **Consommabilité** — ID stable ; labels distincts de l’ID ; TBox ≠ ABox.
+9. **Évaluabilité K** — Attribution vraie / fausse / non tranchée. « Beau » n’en est pas une.
+10. **Profil, pas essence** — Carte complète *contre le cœur actuel*. Pertinence ≠ application. Numérique seulement si l’échelle le permet.
+11. **Réfutabilité** — Chaque type du cœur s’expose à au moins un énoncé E1–E6 ; on corrige la ceinture, pas le noyau (§0.2).
+12. **Neutralité contrôlée** — Test de neutralité et E4, pas seulement une déclaration d’intention (§0.4).
+
+---
+
+### 9.7 Décisions de structure (v2.1 ; M et N en v2.1.3)
+
+Chaque décision appartient à la **ceinture** : elle est révisable selon §13. Elle est prise ici pour que les dérivés (pages, cartes, grilles d’atelier) ne l’inventent pas chacun de leur côté. Les D… renvoient à `docs/questions-de-la-maquette.md`.
+
+**A. Assemblages : pas de type de mode, le joint se décrit par ses qualités formelles** (D2.2 ; décision de l’éditeur du projet du 2026-10-10, v2.2). Le mode d’assemblage n’est pas une catégorie du cœur. Ce qui compte est son effet sur des éléments formels ou semi-formels qui jouent sur l’appréciation : espacement, couleurs, décalage de niveau au joint…, décrits factuellement. Un assemblage est une **configuration de parties ayant des qualités** ; le **joint** est une partie de l’objet (`app:<objet>#joint-…`, I), dont on décrit les qualités formelles par des P1, et les rapports aux parties voisines par des P2 (contraste, B). *Justification* :
+- un mode (juxtaposition, entrelacement…) nomme un schéma de construction, pas une qualité perçue ; deux joints du même mode peuvent se percevoir très différemment, et c’est cette différence qui compte (N3) ;
+- on évite une échelle nominale à catégories ouvertes, sans adjacence, où E1 est le plus fragile ;
+- le poster reste une ressource d’application (§11) : chaque configuration s’y décrit par les qualités de son joint.
+
+Exemples de types, **candidats, non éprouvés** : `ppp:jointSpacing` (espacement au joint : écart perçu entre les deux parties ; P1 sur la partie joint, semi-formel, base `ppp:contour`) et `ppp:jointLevelOffset` (décalage de niveau au joint : différence de niveau perçue entre les surfaces de part et d’autre ; P1, semi-formel, base `ppp:contour`). Le contraste de couleur au joint n’est **pas** un type propre : c’est une assertion `ppp:hueContrast` ou `ppp:lightnessContrast` dont les relata sont les deux parties qui se rejoignent ; un type propre « contraste de couleur au joint » dupliquerait le contraste (E2) et ne reçoit pas d’id. Il n’y a plus d’« hybride » : un joint qui combine plusieurs configurations a simplement plusieurs qualités. `ppp:assemblyMode`, cité depuis la v2.1, est **déprécié** (A11), avec `remplace_par` : `ppp:jointSpacing`, `ppp:jointLevelOffset`, `ppp:perceptualContrast` (motif : décision du 2026-10-10).
+
+**B. Contraste : un type général, des spécialisations par dimension** (D2.3 ; décision de l’éditeur du projet du 2026-10-10, v2.2). `ppp:perceptualContrast` est un relateur P2, semi-formel, d’arité 2 (zones, parties ou objets), d’espace ordinal (`weak` … `strong` ; labels « faible / modéré / évident / maximal », v2.5, T3, communs aux contrastes spécialisés, sauf labels propres d’un spécialisé dont la dimension n’a pas de bout d’échelle, v2.6, T34). Les contrastes par dimension en sont des **cas particuliers** reliés par `ppp:specializes` (A1) : `ppp:lightnessContrast` (clarté, `ppp:lightness`), `ppp:hueContrast` (teinte, `ppp:hue`), `ppp:textureContrast` (texture, `ppp:texture`), `ppp:scaleContrast` (taille perçue, `ppp:perceivedSize`), tous **candidats**. Règle :
+- un type spécialisé **fixe** `dimension_comparee` (fiche) à un type P1 ; sa base est ce type ;
+- le général laisse `dimension_comparee` **libre** ; toute assertion dont le `ppp:assertedType` est `ppp:perceptualContrast` lui-même déclare `ppp:comparedDimension` (un type P1). Une assertion d’un spécialisé n’en déclare pas, ou déclare la même (règle de validation) ;
+- A1 : tout ce qui relève d’un spécialisé relève du général, avec sa dimension ; un spécialisé garde l’arité, les rôles et l’échelle du général, et n’ajoute pas de région ;
+- **labels propres** (v2.6, décision de l’éditeur du projet, T34) : quand la dimension comparée n’a pas de bout d’échelle (la taille perçue : on peut toujours trouver plus grand ou plus petit), « maximal » se lit mal ; le spécialisé peut alors déclarer `labels_regions_propres` : pour chaque région, sa `cle`, un `label_fr`, un `label_en` et `region_generale` (l’id de la région du général, de même clé). Les régions restent celles du général (mêmes individus, clés et rangs ; A1, C) ; seul l’affichage change. Le site affiche le label propre sur la fiche du spécialisé et dans ses assertions, et peut montrer le label du général à côté (« tailles voisines · faible »). Les labels propres passent A2 et A10 comme des labels de région. Cas en 2.6 : `ppp:scaleContrast` ;
+- A9 : la base du général est « la dimension comparée » ; la condition est vérifiée sur chaque spécialisé et, pour une assertion du général, sur la `ppp:comparedDimension` déclarée.
+
+*Justification* : « renforcer le contraste » devient déterminé (de quelle dimension, entre quelles parties) ; chaque spécialisé a ses exemplaires et son épreuve E1 propres, sans nouveau patron ; le général reste disponible pour une dimension pas encore déclinée (brillance, saturation…), sans attendre un nouvel id. Un spécialisé n’hérite pas du statut épistémique du général.
+
+**C. Régions : clé, ordre, adjacence** (D1.5, D1.6, D2.6). Chaque région a :
+- une `cle` (anglais, lowerCamelCase, qui passe le test de neutralité et n’est jamais réemployée) ;
+- `label_fr` / `label_en` ;
+- un `repere` (une phrase) ;
+- au moins un exemplaire (G).
+
+Selon l’échelle :
+- **Ordinale** : `rang` (1 = pôle bas) et `sens_croissant` déclaré. Deux régions sont *adjacentes* si leurs rangs diffèrent de 1. E1 exige l’accord à une région près. *v2.5 (crash test 01 ; position de travail, révisable par l’éditeur du projet)* : sur une échelle de **trois régions ou moins**, E1 exige l’accord **exact** : « à une région près » y serait presque toujours atteint, puisque seuls les deux pôles s’opposent. Un pas décisif entre deux régions adjacentes (ex. `ppp:hueRange`, `singleHue` / `neighbouringHues`) s’éprouve en plus par **comparaison appariée** : on montre les deux membres côte à côte, sous chaque régime testé, et l’on demande s’ils diffèrent (énoncé E1b de la fiche).
+- **Nominale** : ses régions sont des **catégories** (en v2.6, une seule échelle nominale : la teinte, `ppp:hue`, avec ses `voisinages` en cercle, T6 ; aucune n’est pilote). Pas d’adjacence, sauf `voisinages` déclarés explicitement. E1 exige l’accord exact, avec un seuil propre fixé avant l’épreuve.
+
+*Terminologie* : « modalité » est réservé au sens par lequel une qualité est saisie (H) ; on ne l’emploie jamais pour les valeurs d’une échelle.
+
+Opérations admises (pour `op:`) : sur une ordinale, augmenter, réduire, interpoler ; sur une nominale, substituer ; sur un type P3 (aucun en V1, §9.9), l’opération porterait sur l’épisode.
+
+**D. Types attentionnels : réservés hors V1** (D2.4 ; décision de l’éditeur du projet du 2026-10-10, v2.2). Voir §9.9. Les **paramètres** de l’épisode (cible, observateurs, conditions, modalités, durée) ne sont pas des types et restent dans la V1. Une **intention** de cadrage déclare les mêmes conditions qu’un épisode (D3.8).
+
+**E. Carte d’identité : cinq statuts** (D3.4). Aux trois statuts de la v1 (non applicable, applicable non pertinent, applicable et pertinent) s’ajoutent **non évalué** (aucune assertion) et **non tranché** (examiné, sans accord ; les propositions sont conservées). Une carte est complète (CQ4c) quand chaque type a l’un des cinq. *Justification* : N1 admet le non-tranché, et une revue n’examine jamais tout ; sans ces deux cases, une carte complète serait une carte fausse.
+
+**F. Vocabulaire de statuts unique** (D1.8, D4.4). Deux énumérations fermées, et deux seulement :
+- `statut` (éditorial, types et régions) : `candidat | cœur | application | attente | rejeté | déprécié` ;
+- `statut_epistemique` (types, énoncés, assertions) : `non éprouvé | corroboré | contesté | réfuté`.
+
+Les deux statuts sont **indépendants**. Le statut éditorial dit *où en est le type dans l’ontologie* et ne change que par décision (M, Q10). Le statut épistémique dit *ce que les épreuves en disent* : il se trace **par énoncé** (champ `statut_epistemique` de chaque énoncé de la fiche), et celui du type en est **dérivé**, avec la même règle pour un candidat et pour un type du cœur, dans cet ordre :
+1. `réfuté` si un **énoncé d’existence** (E1, E4, E5, E6, §0.2) a subi une réfutation reproduite (N) sur la version courante de la fiche ;
+2. sinon `contesté` s’il a une anomalie *recevable* ouverte (§13) : premier échec d’épreuve, ou énoncé de structure (E2, E3) réfuté et pas encore corrigé ;
+3. sinon `corroboré` si au moins un énoncé l’est ;
+4. sinon `non éprouvé`.
+
+Un énoncé propre d’une fiche déclare sa nature (`existence` ou `structure`) ; par défaut, `structure`.
+
+**Trois degrés de modification.** Une *révision* (formulation, repères, exemplaires, N) et une *correction de structure* (requalifier une relation, compléter ou corriger une base, après E2 ou E3) sont **mineures** : le type garde son statut ; seul l’énoncé corrigé repart à `non éprouvé`. Une *refonte* (changement de patron, de strate, d’espace de valeurs ou de critère d’identité) crée une nouvelle version de la fiche, motivée au changelog : tous ses énoncés repartent à `non éprouvé`, l’historique garde les statuts antérieurs. Une fusion (E2) est une dépréciation (A11). « Candidat cœur » n’est pas un statut : on écrit `candidat`.
+
+| Événement | Statut épistémique (type) | Statut éditorial d’un candidat | Statut éditorial d’un type du cœur |
+|---|---|---|---|
+| Épreuve réussie | `corroboré` | reste `candidat` ; promotion possible (M) | reste `cœur` |
+| Anomalie recevable, ou premier échec | `contesté` | reste `candidat` ; révision (N) | reste `cœur` |
+| Seconde épreuve réussie | anomalie close → `corroboré` | inchangé | inchangé |
+| Réfutation reproduite d’E2 ou E3 | `contesté` jusqu’à la correction, puis selon les autres énoncés | inchangé ; correction ou fusion (`déprécié`) | inchangé ; correction ou fusion (`déprécié`) |
+| Réfutation reproduite d’E1 ou E4 | `réfuté` | → `attente` | → `attente`, `application` ou `rejeté` |
+| Réfutation reproduite d’E5 ou E6 | `réfuté` | → `application` | → `application` |
+| Refonte | `non éprouvé` | `candidat` | `candidat` (nouvel examen, M) |
+
+**G. Exemplaires = assertions contestables ; la page publiée fait partie du protocole** (D1.1–D1.3, D4.3). Le champ `exemplaires` d’une fiche liste des **ids d’assertions** ordinaires de l’ABox : au moins un par région nommée, sur au moins deux régimes (au sens de E5 : qui diffèrent sur `presentation` ou sur une facette critique du type ; v2.7). Ils se contestent comme toute assertion (§13). Un exemplaire que son auteur juge lui-même discutable porte le champ éditorial `doute: oui` dans `fiches/exemplaires.yaml` (v2.6, T35 ; hors ontologie, sans id, comme `note`) : « contestable » garde son seul sens du §13. Les exemplaires d’une même échelle sont **homogènes** à l’intérieur d’un même régime (même soin de présentation) ; d’un régime à l’autre, seule change la facette déclarée ; cela évite d’introduire une valence (E4). Une épreuve E1 ou E4 cite trois versions : celle de la fiche, celle de la **page publiée** (rendu) et celle du **matériel montré**. Un changement de rendu ouvre une nouvelle version de page. Aucun objet confidentiel ne sert d’exemplaire public (§13). Droits et provenance : Q15.
+
+**H. Conditions de perception (label alternatif : conditions d’observation) : vocabulaire minimal** (D3.5, D4.5 ; v2.3 : facette `angle`, valeur `unknown` partout ; v2.5 : nom canonique, C1). On déclare cinq facettes, chacune extensible dans la ceinture :
+- `presentation` : `inHand | tableTop | wallOrShowcase | screen | printedImage | inSitu | walkThrough | unknown` (`inSitu` : objet, façade ou installation vu sur place, depuis un point de vue déclaré ; `walkThrough` : espace parcouru de l’intérieur) ;
+- `lumiere` : `diffuse | directional | raking | backlit | unknown` (`backlit` : à contre-jour, la source derrière le porteur ; v2.3.1, position de travail, révisable par l’éditeur du projet) ;
+- `distance` : `contact | near (<1 m) | room (1–5 m) | far (>5 m) | unknown` ; « plusieurs mètres », « dans une pièce » se notent `room` (v2.7, décision de l’éditeur du projet sur le crash test 03) ;
+- `angle` : `frontal | oblique | grazing | varied | unknown` (angle du regard sur la surface visée : `frontal`, de face ; `grazing`, presque parallèle à la surface ; `varied`, l’observateur fait varier l’angle en tournant l’objet ou en se déplaçant) ;
+- `duree` : `glance (<5 s) | exam (≈1 min) | prolonged (>5 min) | unknown`.
+
+Un **régime de perception** est une combinaison nommée, dans l’ordre des facettes (ex. `inHand+diffuse+contact+varied+exam`, `inSitu+directional+far+frontal+glance`). La carte, le cadrage, l’épisode et le minimum reproductible de §13 réutilisent ce vocabulaire.
+
+**Règles des conditions** (v2.3, crash tests ; position de travail, révisable par l’éditeur du projet) :
+1. **Nom** (v2.5, décision de l’éditeur du projet, C1). « Condition de perception » est le nom canonique : l’observation n’est qu’une manière de percevoir. « Condition d’observation » reste label alternatif. Une combinaison nommée des cinq facettes est un **régime de perception** (« régime d’observation » dans les textes antérieurs à 2.5 : même notion). Pas de nouvelle classe ni de second champ ; les ids `ppp:ObservationCondition` et `ppp:observedUnder` (annexe A.2) sont **inchangés** : un label change, l’id reste (X1, A11) ; pas d’id alias, qui doublerait l’entrée sans rien ajouter. Le nom ne touche pas Q3 : la région reste celle de l’objet, attribuée sous des conditions publiques et reproductibles (N1).
+2. Tout épisode déclare un régime complet : une valeur par facette, `unknown` permis. Un épisode sans régime est invalide, et ses assertions avec lui (A5).
+3. Une fiche déclare dans `conditions_critiques` (optionnel) les facettes dont la région du type dépend fortement (ex. brillance : `lumiere`, `angle` ; densité : `distance`). Champ vide : aucune facette n’est déclarée critique ; le régime est tout de même enregistré.
+4. Une facette critique `unknown` ne rend pas l’assertion invalide : elle lui impose le statut de carte « non tranché », sans région. Il n’y a pas d’assertion « hors condition » : le régime est celui de l’épisode, et une région affirmée en général ne s’enregistre pas.
+5. E1 compare des assertions à régime égal sur les facettes critiques, sens par sens. Un écart entre régimes différents n’est pas un désaccord ; il peut fonder un énoncé de structure propre à la fiche (« la région change avec `lumiere` »).
+6. Une condition dit dans quelles circonstances on observe, pas ce qui ressort : elle ne réintroduit ni la saillance ni un type P3 (§9.9).
+7. **Image d’un objet** (v2.3.2, position de travail, révisable par l’éditeur du projet ; T22). Pour une assertion *sur l’objet via l’image* (§9.3), `presentation` dit comment l’image est montrée (`screen`, `printedImage`) ; `lumiere`, `distance` et `angle` décrivent la **prise de vue**, c’est-à-dire la scène montrée, et non la place de l’observateur devant l’écran : la distance de l’écran n’est notée par aucune facette. Faute de donnée de prise de vue, la distance peut être **estimée d’après le cadrage** (ce que l’image montre : un objet qu’on tiendrait en main → `near`, un pan de mur → `room`, une façade ou une voûte vue du sol → `far`), l’épisode le notant comme estimation ; sinon `unknown`. Une assertion *sur l’image* (objet d’attention à part entière) déclare au contraire la distance de l’écran ou de l’imprimé.
+
+**Condition de perception ≠ modalité.** Une *condition de perception* dit **dans quelles circonstances** on perçoit (tenue en main, lumière, distance, angle, durée). Une *modalité* dit **par quel sens** la qualité est saisie (vision, toucher, audition…). Les deux sont indépendantes : on peut tenir un objet en main et seulement le regarder ; `contact` est une distance, pas le toucher. Trois niveaux, trois champs :
+- l’**assertion** déclare **une** `modalite` : le sens par lequel cette qualité a été saisie ;
+- l’**épisode** déclare l’**ensemble** des `modalites` mobilisées. Un épisode où l’on regarde et touche à la fois est permis : il porte `{vision, toucher}`, et chaque assertion qu’il contient dit par quel sens elle a été faite (une assertion par sens si l’observateur juge les deux). Si l’observateur ne peut pas attribuer son jugement à un seul sens, l’assertion déclare `indistincte` ; elle est conservée, mais ne compte pas dans une épreuve d’accord menée sens par sens ;
+- la **fiche** liste dans `modalites` les sens pour lesquels le type est décrit et éprouvé. Cette distinction ne tranche pas Q13 : elle dit *comment noter* la modalité, pas si la densité vue et la densité touchée sont un même type.
+
+**I. Parties** (D3.6). Une partie a un id relatif à son objet (`app:<objet>#<partie>`, ex. `#assise`, `#jonction-pied`). Une carte d’identité porte sur **une cible** (objet entier ou partie) : une carte par cible.
+
+**J. Homonymes de grandeurs physiques** (D5). Quand un label désigne aussi une grandeur mesurée, la fiche déclare `grandeur_physique_homonyme` (par ex. *densité* et masse volumique, *rugosité* et rugosité de surface mesurée, *brillance* et brillance spéculaire mesurée en unités de brillance, *grain* et granulométrie). Le label canonique lève l’ambiguïté (« densité perceptive ») ; le `label_court` (« densité ») n’est utilisé que dans un contexte PPP explicite. Une région PPP ne se déduit pas d’une mesure ; la corrélation éventuelle est un énoncé testable de la ceinture. Une clé ou un label de région qui entre en collision avec un type (« saturé » face à `ppp:saturation`) est renommé.
+
+**K. Fichiers : le type seul** (D5). Le fichier d’un type ne contient que le cœur. Opérations, partitions C-K, lexique d’atelier (mots du brief → ids à interroger, D3.9) et incompatibilités utiles en C-K (D3.11, sous forme d’assertions K ordinaires) vivent dans des fichiers `app:` / `op:`.
+
+**L. Facettes** (D2.5). Un champ `facettes` optionnel et multivalué (couleur, forme, matière, organisation, temps…), hors axiomes, sert au regroupement des dérivés : ce sont les **familles de lecture** de l’arborescence (X9). Ce n’est pas une classification (aucun `ppp:specializes`) ; un type peut appartenir à plusieurs familles. Les valeurs du champ sont les clés d’un **registre des familles** (fichier distinct des fiches de type ; pour chaque famille : `cle`, `label_fr`, `label_en`, une introduction de deux ou trois phrases sans jugement).
+
+**M. Promotion et rétrogradation** (statut éditorial). Tous les types actuels sont `candidat`, sauf les ids réservés (`attente`, §9.9) ou dépréciés (`ppp:assemblyMode`, Annexe A). Un candidat est promu `cœur` quand quatre conditions sont réunies :
+1. sa fiche est complète et conforme (A1–A12, test de neutralité, exemplaires sur au moins deux régimes au sens de E5) ; elle a au moins une référence dont le statut n’est pas « non vérifiée », ou `references_statut` « aucune source trouvée » avec la date et les bases consultées (P, v2.4) ;
+2. **E1 et E4 sont corroborés** par une épreuve dont le protocole et le seuil ont été fixés avant, sur des **objets publics** (Q12) — pour les pilotes, l’épreuve minimale du §10 (Q7) ; les autres énoncés déclarés dans la fiche ne sont pas réfutés ;
+3. aucune anomalie recevable n’est ouverte (statut épistémique ≠ `contesté`) ;
+4. la promotion est décidée **par consensus sur le dépôt, avec arbitrage final de l’éditeur du projet** (Q10), et consignée au changelog avec les versions de la fiche, de la page et du matériel.
+
+Un type du cœur est **rétrogradé** (`attente` ou `application`) ou **rejeté** seulement après la réfutation reproduite d’un **énoncé d’existence** (§9.7 N, §13), par la même procédure de décision ; un énoncé de structure réfuté appelle une correction, pas une rétrogradation (tableau de F). Être `contesté` ne rétrograde pas. Un candidat qui échoue reste `candidat` (épistémiquement `contesté`) le temps d’une révision ; si l’échec reproduit porte sur un énoncé d’existence, il devient `réfuté` et passe en `attente` ou en `application` selon l’énoncé (N, tableau de F). *Justification* : une promotion sur épreuve publique et une sortie sur réfutation reproduite rendent le statut de chaque type lisible et contestable, sans geler le cœur sur un seul essai.
+
+**N. Échec d’épreuve : révision, puis reproduction** (E1–E6, §13). Un premier échec sous le seuil ne retire rien. Il ouvre une **anomalie** (le type passe `contesté`, qu’il soit candidat ou du cœur, F) et autorise **une révision de la fiche** (définition, repères, exemplaires), sans toucher au seuil. Une **seconde épreuve indépendante** (autres observateurs ou autres objets publics) est faite avec la fiche révisée. Si elle échoue aussi, c’est la **réfutation reproduite** du §13 de cet énoncé. La suite **dépend de l’énoncé** (tableau de F) : pour un énoncé d’existence, le type devient `réfuté` et la conséquence éditoriale suit (M) ; pour un énoncé de structure (E2, E3), on corrige la relation ou la base (correction mineure), sans retirer le type. Si elle réussit, l’anomalie est close et le changelog note la révision. *Justification* : on distingue une fiche mal écrite d’un type mal fondé, sans permettre des révisions sans fin (dégénérescence, §0.2).
+
+**O. Classifications existantes : alignement, pas import** (v2.2.3 ; décision de l’éditeur du projet du 2026-10-10 d'intégrer les classifications existantes, à commencer par Tamura, Mori et Yamawaki 1978[^tamura]). Une dimension d'une classification publiée (mesure de texture, système de couleur, catégorie d'histoire de l'art) n'entre pas telle quelle dans le cœur. (1) Elle est d'abord rapprochée d'un type existant ; un nouvel id n'est créé que si aucun type ne la couvre, avec une fiche ordinaire (définition neutre, question attentionnelle, régions à repères publics, base A9) et le statut `candidat`. (2) Le lien est déclaré dans le champ optionnel `alignements_externes` de la fiche : `skos:closeMatch` (même qualité visée, définitions différentes) ou `skos:relatedMatch` (qualité voisine, autre découpage), avec la référence vérifiée, déclarée dans `references` et appelée par `reference_id` (P, v2.4) ; jamais `skos:exactMatch` pour une mesure calculée sur une image, puisqu'un type PPP est une qualité perçue (comme pour les homonymes, J). (3) Une mesure ne fournit pas de régions : les régions restent perceptives, à repères publics. (4) Ce qui est composé dans la source (une somme d'autres mesures) n'a pas d'id propre. Les classifications repérées pour une intégration future sont listées sans être intégrées (`fiches/QUESTIONS-A-TRANCHER.md`, T20).
+
+**P. Références et état de l’art** (v2.4 ; décision de l’éditeur du projet du 2026-10-10 ; §0.1, point 7). Tout emprunt d’une fiche à un travail existant est cité dans la fiche ; une classification reconnue (Tamura pour la texture, Munsell pour la couleur) est nommée dans la fiche elle-même, pas seulement en note.
+1. **`references`** : liste d’entrées, chacune avec `id` (clé courte), `citation`, `doi_ou_url`, `role`, `statut_verification`, `verifie_le`, `verifie_sur` (ce qui a été vu), `reprend` et `ne_reprend_pas` (en langage courant) ; `note_verification` optionnelle pour une affirmation de la fiche que la source vue ne confirme pas. Les rôles : `fonde` (le type ou la structure en dépend), `alimente` (fournit des distinctions, des repères ou un alignement repris), `discute` (position discutée ou en partie écartée), `contraste` (notion voisine dont PPP se distingue, par ex. une norme de mesure, J).
+2. **Trois statuts de vérification** : *vérifiée sur la source* (le contenu cité a été lu dans la source) ; *vérifiée sur résumé ou source secondaire* (existence et objet vérifiés sur une notice, un résumé ou une source secondaire, dit dans `verifie_sur`) ; *non vérifiée*. Une entrée autre que « non vérifiée » a un DOI ou une URL de vérification. Une source non vérifiée n’est jamais présentée comme vérifiée, ni dans la fiche ni sur le site (X15).
+3. **`references_statut`** : `renseignées`, `à renseigner` (fiche bloquée, sans effet sur les autres champs), ou « aucune source trouvée » avec la date et les bases consultées. Une recherche sans résultat est un résultat : elle s’écrit.
+4. **`etat_de_l_art`** : deux à cinq phrases en langage courant sur ce qui existe pour ce type, avec le lien vers son groupe dans `docs/bibliographie-par-type.md`. Champ en langage courant : validé par la relecture explicative. **Renvoi** (v2.6, série 7) : le champ `etat_de_l_art_renvoi` donne le lien, au format `docs/bibliographie-par-type.md#groupe-<groupe>` ; l’ancre est stable (balise `<a id="groupe-…"></a>` au-dessus du titre du groupe, indépendante du titre). Ancres : `groupe-texture`, `groupe-couleur`, `groupe-forme`, `groupe-organisation`, `groupe-matiere`, `groupe-joint`, `groupe-etagement`, `groupe-contrastes` (et, hors groupes de types, `groupe-sources-generales`, `groupe-non-verifiees`, `groupe-spec`). Le texte peut redire le lien (« Détail : … ») ; le site suit `etat_de_l_art_renvoi`. Règle de validation : l’ancre existe dans le document.
+4 bis. **Appel des références dans le texte** (v2.6, série 7, point de la coordination) : dans `etat_de_l_art` et les champs `note…` d’une fiche, une référence est appelée par son `id` entre doubles crochets, juste après la mention en clair de l’auteur et de l’année : « Tamura, Mori et Yamawaki (1978) [[tamura1978]] ont proposé… ». L’appel ne remplace pas la mention en clair (le texte se lit sans lui) ; il se met à la première mention de la référence dans le champ ; plusieurs appels se suivent, séparés d’une espace (« (ISO 2813, ASTM D523) [[iso2813]] [[astm_d523]] »). Règles de validation : tout `[[id]]` d’une fiche désigne une entrée de `references` de la même fiche ; toute mention nominative d’une référence de la fiche (auteur, ou sigle d’un organisme : CIE, NCS, ISO, ASTM, OQLF) dans `etat_de_l_art` ou un `note…` a son appel après sa première mention dans le champ. Le site rend l’appel en lien vers l’entrée (X15) et ne devine plus les références par auteur et année. Une référence de la liste que le texte ne nomme pas peut rester sans appel. Les sources de la spec, qui n’ont pas d’`id`, restent citées en clair (`docs/bibliographie-par-type.md#groupe-spec`). L’ajout d’un appel ne change pas le texte en langage courant : il ne demande pas de re-validation.
+5. **Lien avec O et M** : un alignement (`alignements_externes`) renvoie à une entrée de `references` par `reference_id` ; la condition 1 de la promotion (M) demande au moins une référence vérifiée, ou une recherche sans résultat datée.
+6. **Documentation** : `docs/etat-de-l-art.md` situe le cadre (Nanay, Gärdenfors, OntoClean, Popper, Lakatos…) ; `docs/bibliographie-par-type.md` donne l’état de l’art par groupe de types, avec ce qui a été vérifié pour chaque référence.
+
+*Justification* : un programme de recherche public (§0.2, §13) doit dire d’où viennent ses distinctions, pour qu’on puisse les contester à la source ; et un statut de vérification explicite évite qu’une référence rapportée de mémoire passe pour lue.
+
+### 9.8 Position de travail : métamodélisation
+
+Validée par l’éditeur du projet pour la formalisation future. Elle **n’impose pas OWL dans ce cycle** : elle dit seulement quelle forme prendra le modèle machine, pour que les dérivés (§12) ne la choisissent pas chacun de leur côté.
+
+1. **Les types sont des individus de métaclasses.** Un type sert à classer, mais c’est aussi un objet de débat, avec un id, une version, un statut, des tickets et des relations : c’est le problème classique de la métamodélisation. Chaque type est donc un **individu** de l’une de trois métaclasses : `ppp:QualityType` (P1), `ppp:RelatorType` (P2), `ppp:EpisodeRegimeType` (P3). *Justification* : tout ce que la spec dit d’un type (statut, version, `remplace_par`, tickets) devient une propriété ordinaire d’un individu, sans artifice.
+2. **`ppp:specializes` remplace is-a.** C’est une relation transitive entre types (A1). Les qualités particulières ne sont pas modélisées comme objets : l’**assertion**, relation n-aire réifiée (cible, type, région, épisode, modalité, auteur, source, version, §9.3), porte l’attribution. **Deux niveaux, une correspondance fixe** : les méta-propriétés OntoClean (rigidité, identité, unité, dépendance) s’évaluent dans la *lecture conceptuelle*, où qualités et relateurs particuliers existent ; dans le *modèle machine*, tout énoncé portant sur ces instances se traduit en règle de validation sur les assertions (`ppp:inheresIn` ↦ `ppp:about`, `ppp:hasValue` ↦ `ppp:inRegion`, `ppp:mediates` ↦ `ppp:about` + `ppp:role` ; ex. A5). *Justification* : on débat d’attributions, pas d’entités invisibles ; l’assertion est déjà l’unité de contestation (§13).
+3. **Les régions et les vocabulaires contrôlés sont des individus.** Une région est un individu de `ppp:Region`, reliée à son échelle (`ppp:onScale`, individu de `ppp:Scale` ; le type pointe vers son échelle par `ppp:hasScale`) et, sur une échelle ordinale, munie d’un `ppp:rank`. L’adjacence s’en déduit (rangs à 1 près ; voisinages déclarés pour une nominale, §9.7 C). Sont aussi des individus : modalités (`ppp:Modality`), statuts (`ppp:EditorialStatus`, `ppp:EpistemicStatus`, `ppp:CardStatus`), conditions de perception (`ppp:ObservationCondition` : presentation, lumière, distance, durée) et catégories d’œuvre (`ppp:ArtworkCategory`). *Justification* : c’est la traduction directe d’A2 (une région n’est pas un sous-type), et un vocabulaire fermé se valide mieux comme liste d’individus que comme texte libre.
+4. **Les axiomes deviennent des règles de validation.** A1–A12 sont pour la plupart écrits comme des formes SHACL, avec des contraintes SPARQL quand une forme ne suffit pas : acyclicité de `dependsOn` et atteinte d’un formel (A9), existence des ids cités (A12), cardinalités (A5), disjonction des métaclasses (A7). Ce ne sont pas des axiomes OWL dont on tirerait des inférences. *Justification* : une règle de validation est un test explicite, qui échoue ou passe ; cela colle à la posture réfutationniste (§0.2).
+
+**Alternative écartée pour l’instant.** Le *punning* d’OWL 2, qui permet de déclarer un même id comme classe et comme individu, n’est pas retenu ; on le reconsidérera seulement si un vrai besoin de raisonnement de classe apparaît. **Parent proche** : SKOS, pour les vocabulaires et les schémas de concepts (labels préférés et alternatifs, notes) ; PPP s’en inspire sans en faire une dépendance.
+
+Recommandations W3C citées :
+- OWL 2, *New Features and Rationale* (2e éd., 2012), § Punning : https://www.w3.org/TR/owl2-new-features/#F12:_Punning ; *Structural Specification*, § Metamodeling : https://www.w3.org/TR/owl2-syntax/#Metamodeling
+- SHACL (2017), dont les contraintes SPARQL : https://www.w3.org/TR/shacl/#sparql-constraints
+- SPARQL 1.1 Query Language (2013) : https://www.w3.org/TR/sparql11-query/
+- SKOS Reference (2009) : https://www.w3.org/TR/skos-reference/
+
+### 9.9 Hors scope de la V1 (réservé)
+
+Décision de l’éditeur du projet du 2026-10-10 : la **saillance** sort du premier cycle. Ses conditions de perception sont complexes et les différences individuelles fortes ; en V1, on décrit précisément la forme dont on parle, sans passer par la saillance. Ce qui ne sert qu’aux types attentionnels est **réservé, pas supprimé** : les ids restent attribués (A11), au statut éditorial **`attente`**, **sans fiche v1**. Leur retour suppose une décision (M, Q10) et un protocole qui traite les différences individuelles.
+
+| Id réservé | Contenu conservé |
+|---|---|
+| `ppp:salience` | type P3, régions `immediate`, `progressive`, `latent` |
+| `ppp:explorationRegime` | type P3, régions `linear`, `free` |
+| `ppp:objectAttentionDistribution` | type P3, régions `focused` ↔ `distributed` |
+| `ppp:propertyAttentionDistribution` | type P3, régions `focused` ↔ `distributed` |
+| `ppp:perceptualIntensity` | type P1 (intensité perceptive) ; décision de l’éditeur du projet du 2026-10-10 (v2.2.3) : sans base possible tant qu'on ne dit pas de quelle qualité elle est la force (A9), et trop proche de la saillance ; ses usages se décrivent par la saturation, la clarté, la texture ou le contraste. Fiche conservée pour trace : `fiches/reserve/perceptualIntensity.yaml` |
+| `ppp:whatIsSalient` | relation d’une assertion de type `ppp:salience` vers une partie du `ppp:target` de l’épisode (id `app:<objet>#<partie>`) ou une assertion P1/P2 du même épisode |
+
+Règles conservées pour un retour éventuel :
+- les deux distributions sont deux types, parce que Nanay les fait varier indépendamment ; son « attention esthétique » est la conjonction `objectAttentionDistribution/focused` ∧ `propertyAttentionDistribution/distributed` (Q5 : descriptive seulement) ; elles n’ont pas de cible interne ;
+- toute attribution de saillance déclare `ppp:whatIsSalient` ; `ppp:whatIsSalient` ne s’emploie que sur une assertion de type `ppp:salience` ; toute partie visée est une partie du `ppp:target` de l’épisode, toute assertion visée appartient au même épisode (règles de validation, à joindre à A5) ;
+- la « saillance de l’objet » est une généralisation sur des épisodes d’un type déclaré (observateurs, conditions) ; aucune sorte nouvelle n’est nécessaire ;
+- le champ de fiche `ce_qui_est_saillant` est réservé (fiche type).
+
+Les **13 cartes attentionnelles** du jeu existant (`PPP_Proprietes_Perceptuelles_Pertinentes.md`, §3 : saillance immédiate, progressive, latente ; attention focalisée, distribuée, oscillante ; exploration immédiate, progressive, émergente ; lisibilité immédiate, graduelle ; multiplicité des points d’entrée ; profondeur exploratoire) sont mises en attente avec ces ids. Elles ne sont ni reclassées ni rejetées en V1. Une carte de ce groupe qui décrirait en fait une qualité de la forme (par exemple la multiplicité des points d’entrée comme organisation de la composition) pourra être reprise comme candidat formel ou semi-formel, par une suggestion ordinaire (§13).
+
+### 9.10 Grilles d’analyse : la « complexité » n’est pas un type (v2.3)
+
+*Position de travail, révisable par l’éditeur du projet.* « Complexe » est un mot courant d’atelier. Il ne désigne pas une qualité qu’on placerait dans une région : on n’obtient pas d’accord (E1) sur « complexe » sans dire *en quoi*, et le mot porte souvent une valence (« trop complexe », « riche »), ce qui le fait échouer au test de neutralité (A10). PPP le traite comme une **grille d’analyse** : une liste nommée de types qu’on parcourt pour dire en quoi un objet est complexe. La grille ne crée ni type, ni région, ni id `ppp:` ; elle vit dans la couche d’application (`app:`, X7) et cite des ids du cœur. Une mesure publiée de « complexité » composée d’autres mesures (par ex. *complexity* d’Amadasun et King 1989, `fiches/QUESTIONS-A-TRANCHER.md`, T20) n’a pas d’id propre (§9.7 O, 4).
+
+| Ce qu’on dit en atelier | Types croisés |
+|---|---|
+| beaucoup d’éléments | `ppp:perceptualDensity`, `ppp:distribution` |
+| des parties dans des parties, plusieurs échelles | `ppp:partNesting` (v2.3), `ppp:perceivedSize`, `ppp:scaleContrast` |
+| des formes qui changent souvent de direction | `ppp:curvature` (v2.3), `ppp:outlineIndentation` (v2.5), `ppp:contour`, `ppp:symmetry`, `ppp:localIrregularity` |
+| beaucoup de couleurs | `ppp:hueRange` (v2.3), `ppp:hueCount`, `ppp:lightnessRange`, `ppp:saturationRange` (v2.5), `ppp:hueContrast`, `ppp:lightnessContrast` |
+| plusieurs matières, des effets de matière | `ppp:texture`, `ppp:textureContrast`, `ppp:textureDirectionality`, `ppp:surfaceGloss` (v2.3), `ppp:translucency` (v2.3), `ppp:subsurfaceDepth` (v2.3) |
+| des plans, de la profondeur, des vides | `ppp:perceivedDepth` (v2.3), `ppp:negativeSpace` |
+
+**Conséquences.** (1) Interface : « complexité » ouvre une **page d’analyse** (X14), pas une fiche de type : un texte court qui explique la grille, la liste des types croisés avec un lien vers chaque fiche, et, pour un objet, ses assertions sur ces types côte à côte, chacune avec son régime de perception. Pas de réglette, pas de région « complexe », pas de score agrégé. (2) Le mot « complexité » (et « complexe ») mène à cette page par le lexique d’atelier (§9.7 K). (3) D’autres mots courants du même genre pourront recevoir une grille ; ce n’est pas décidé (`docs/questions-crash-tests.md`).
+
+## 10. Premier cycle de construction
+
+Pas une v0.3 encyclopédique. Un calibrage.
+
+### Trois types pilotes
+
+Choisir un exemplaire par strate et par patron de propriété d’objet, les analyser à fond, *puis* reclasser le stock existant.
+
+| Sorte | Candidat | Pourquoi |
+|---|---|---|
+| Qualité formelle / de surface | **Texture** (matière = porteur, à confirmer) | le nuancier force la distinction porteur / qualités |
+| Qualité semi-formelle monadique | **Densité perceptive** | déjà centrale, espace assez clair |
+| Qualité relationnelle | **Contraste de clarté** (`ppp:lightnessContrast`, spécialisation de `ppp:perceptualContrast`) | force à modéliser un porteur multiple, la spécialisation (A1) et la dimension comparée |
+
+Les pilotes actuels sont maintenus (Q6 : « formel et semi-formel, les pilotes actuels restent »), sauf la saillance, sortie du premier cycle le 2026-10-10 (§9.9). Le pilote retiré **n’est pas remplacé par un nouveau type** : la texture, déjà pilote, tient la case du formel, la densité celle du P1 semi-formel, le contraste de clarté celle du P2 ; un pilote par case strate × patron suffit à éprouver le modèle sans ajouter un candidat non instruit. Le modèle d’épisode reste éprouvé par toutes les assertions des pilotes, qui déclarent cible, conditions de perception et modalités. Les pilotes n’ont pas été choisis par modalité.
+
+Strates attendues : texture = formel (à éprouver : son grain dépend-il d’une distribution ?) ; densité, contraste de clarté = semi-formels, avec base déclarée (pour le contraste : `ppp:lightness`).
+
+Pour chacun : remplir `PPP_FicheType.md` (patron P1 ou P2 pour les trois pilotes, pas une fiche narrative).
+
+### Livrables de ce cycle
+
+1. Cette spécification, amendée.
+2. Analyse des 3 pilotes **sur la fiche de type OE** (`PPP_FicheType.md`). Densité : exemple déjà esquissé.
+3. Reclassement commenté du stock v0.1 / v0.2 (garder / fusionner / déplacer / mettre en attente).
+4. Esquisse de **carte d’identité** (but 1, S8) sur les 3 pilotes, plus liste d’opérations candidates (but 2), sans les éditer.
+5. Esquisse d’identifiants + forme d’assertion (pour but 3), sans implémenter d’outil (§12).
+6. **Épreuve minimale** sur les pilotes (Q7, décidée), sur des objets publics (Q12) : E1 (accord) sur 6 à 10 objets ; E2 (densité `separableFrom` saturation ; ex-intensité, en `attente` depuis la v2.2.3) sur un nuancier ; E4 (neutralité) en croisant des observateurs en désaccord de goût. Les seuils sont fixés avant l’épreuve, et les résultats consignés dans le changelog.
+
+---
+
+## 11. Ouvert — ce qui manque encore pour figer la spec
+
+- **D’autres scènes réelles** (S0 est calé ; S1–S7 restent déduits).
+- **5–10 objets / références / nuanciers publics** qu’un terrain d’épreuve veut vraiment pouvoir décrire (Q12 : rien de confidentiel) — un nuancier déjà fait, même « illisible », serait idéal.
+- **Modalités des épreuves** (position de travail) : vision et toucher pour les pilotes ; le périmètre est fixé par strate (Q6), l’identité des types entre modalités reste ouverte (Q13).
+- **Texture vs matière** : *matière* = porteur (l’échantillon) ; *texture*, *rugosité*, *brillance*, etc. = qualités. À confirmer. Le nuancier pousse fort dans ce sens.
+- Confirmation des 3 pilotes, ou substitution (ex. *rugosité* ou *vide actif* à la place de texture / densité, si c’est l’axe réel des nuanciers). Attention : *vide actif* et la *rugosité* de v0.2 ont des définitions porteuses de valence. Ils sont réservés sous des ids neutres (`ppp:negativeSpace`, `ppp:localIrregularity`, Annexe A), le jargon devenant un label alternatif (A10, A11 ; Q8, décidée).
+- **Axes typiques des nuanciers déjà faits** : quelles PPP avez-vous *déjà* fait varier, même sans les nommer ainsi ?
+- **Le poster d’assemblages** (photo, liste des configurations, trous connus) : ressource n°1 à ré-ingénierer, en décrivant chaque joint par ses qualités formelles (§9.7 A), pas comme un espace de modes.
+- D’autres morphologies du même genre déjà produites en atelier (pas des consignes : des inventaires de configurations).
+- **Priorité du but 3** : simple contrainte de modèle (ce cycle) vs. maquette texte / image ou atelier C-K plus tôt. Position de travail : contrainte de modèle seulement.
+- Un **contre-exemple de transfert** volontaire dès les pilotes : une image de tableau *et* un objet ordinaire (cuisine ou high-tech) décrits avec les mêmes types, pour empêcher le cœur de coller au premier terrain.
+- Les **décisions de posture et de périmètre** réservées à l’éditeur du projet (récits, contexte non perceptuel, réalisme, propriétés expressives, etc.) : `docs/questions-pour-l-editeur.md`.
+
+---
+
+## 12. Exigences minimales pour les dérivés (site, cartes, outils)
+
+La spec ne spécifie ni le site de navigation ni le jeu de cartes. Elle garantit qu’ils sont **possibles** sans retoucher le cœur.
+
+| # | Exigence |
+|---|---|
+| **X1 — Identifiants stables** | Chaque type, région nommée, relation, CQ et énoncé a un identifiant stable, distinct du label. Convention : préfixe `ppp:` ; types en *lowerCamelCase* anglais formé sur le label canonique complet, sans abréviation (`ppp:perceptualDensity`, jamais `ppp:density`) ; relations en verbe *lowerCamelCase* (`dependsOn`) ; régions `<id du type>/<clé>` (`ppp:perceptualDensity/dense`), clés soumises au test de neutralité (§9.7, C) ; assertions et épisodes avec un id opaque (`ppp-a:…`, `ppp-e:…`) ; application en `app:` / `op:`. Une fois publié, un id n’est jamais modifié, même si le label change, ni réattribué (A11). |
+| **X2 — Typage explicite** | Chaque entrée déclare sa sorte, son patron et sa strate. Un consommateur distingue type, région, relation, épisode et assertion sans lire la définition. |
+| **X3 — Types ≠ régions ≠ jugements** | Une région n’est jamais présentée comme un type. Aucun champ axiologique dans une fiche de type. Les jugements vivent dans une autre couche et pointent vers des ids (§0.4). |
+| **X4 — Labels séparés** | Label FR obligatoire, EN recommandé, labels alternatifs (jargon d’atelier) marqués comme tels. |
+| **X5 — Fiches lisibles par machine** | Le bloc de la fiche de type (`PPP_FicheType.md`) est du YAML valide, un fichier par type. Les relations pointent vers des ids existants ou dépréciés, ce qui est vérifiable automatiquement. |
+| **X6 — Versionnement** | L’ontologie porte un numéro de version. Toute carte d’identité ou annotation cite la version contre laquelle elle a été remplie. |
+| **X7 — Cœur ≠ application** | Opérations (cartes), partitions C-K, consignes et cadrages vivent dans des fichiers ou espaces de noms distincts (`app:`, `op:`). Ils référencent les ids du cœur sans les modifier. |
+| **X8 — Statut visible** | `statut` et `statut_epistemique` (§9.7, F), énoncés testables avec leur issue, `introduit_en` / `modifie_en`, pour qu’un site puisse afficher le degré de corroboration et l’historique d’un type. Les épreuves qui fondent ce statut sont au **journal des épreuves** (`epreuves/`, §13) : le site l’affiche sur une page à part, et chaque fiche renvoie à ses épreuves (v2.8, série 10, décision de l’éditeur du projet). |
+| **X9 — Familles navigables** | Une arborescence de **familles de lecture** (`facettes`, §9.7 L) ; un clic sur un type ouvre sa fiche. Un type peut apparaître dans plusieurs branches. Chaque famille a une fiche d’introduction courte (registre des familles). Les familles ne sont pas une classification (D2.5). **Dépréciés et réservés hors de l’arbre** (v2.5, décision de l’éditeur du projet, T13) : un type `déprécié` ou `attente` n’est dans aucune branche ; on l’atteint par la recherche et par un index hors familles (« Types dépréciés », « Réservés hors V1 ») ; son id résout vers une page courte (déprécié : motif, `remplace_par`, décision ; `attente` : « réservé hors V1 », §9.9), jamais vers rien (A11). |
+| **X10 — Valeurs en réglette** | Les régions s’affichent sur la fiche du type, en réglette ordonnée par `rang` (ordinale) ou en liste de catégories (nominale), **jamais comme nœuds de l’arbre** (A2, X3). |
+| **X11 — Ordre de la fiche** | Ordre d’affichage (pas celui du YAML) : titre (label FR), avec **l’id `ppp:` visible juste sous le titre**, jamais replié (v2.3.1, décision de l’éditeur du projet) ; informations générales en langage courant (`question_attentionnelle`, `définition`) ; exemples (`exemplaires`, obligatoires, assertions contestables, §9.7 G ; D1.1–D1.3) ; `contre_exemple` ; voisins à ne pas confondre (`confusableWith`) ; valeurs (X10) ; relations ; statut ; historique (`introduit_en`, `modifie_en`, changelog) ; champs techniques repliés (patron, strate, base, OntoClean, axiomes, ids des régions et des relations ; l’id du type reste sous le titre). |
+| **X12 — Fiche rédigée ou minimale ; un seul badge** | (v2.5, décision de l’éditeur du projet, T12.) L’état *rédigée* / *minimale* est **calculé** sur les champs, jamais déclaré (ni champ, ni statut de plus, §9.7 F). Une fiche est **rédigée** si elle a une définition, une question attentionnelle, un contre-exemple, des régions avec repères, au moins un exemplaire par région sur au moins deux régimes de perception (au sens de E5 : différence sur `presentation` ou sur une facette critique du type ; v2.7), et des énoncés E1 et E4 déclarés ; sinon elle est **minimale**. Une fiche minimale s’affiche **grisée** (label, définition, question attentionnelle, statut ; le reste quand il est rempli) ; une fiche rédigée ne l’est pas, même au statut `candidat` (cas des pilotes rédigés). **Un seul badge de statut** visible : le statut éditorial, suffixé du statut épistémique seulement s’il est `contesté` ou `réfuté` (« candidat · contesté ») ; « rédigée » ou « minimale » n’est pas un badge, c’est le grisé ; le détail (X8) est dans la section Statut (D1.8). |
+| **X13 — Gestes de contribution depuis une fiche** | (v2.7 : la page des exemplaires propose aussi « Suggérer un objet », ticket `objet-suggere`, §13.) Depuis chaque fiche : un geste d’entrée léger, « **Suggérer un type** » (un mot, une phrase, deux exemples ; nom fixé par l’éditeur du projet en v2.3.1), et des gestes séparés, « **Signaler un mot qui juge ou une mauvaise traduction** » (label porteur de valence, mauvaise traduction… ; libellé du texte public, série 12, ex-« signaler un problème de formulation ») et « **Signaler une erreur** » (erreur de fait). Contenus minimaux et traitement : §13 (D4.1, D4.2). **Recevabilité d’une suggestion de type** (v2.7, visée de complétude, But 1) : la suggestion (1) dit **quel aspect perceptible** elle décrit ; (2) montre qu’**aucun type existant** ne le couvre (en nommant le plus proche et ce qui lui manque) ; (3) reste **factuelle** (pas de jugement de valeur : « beau », « réussi », « élégant » ne décrivent pas un aspect). Une proposition qui **redécoupe un aspect déjà couvert** n’est pas un type nouveau : elle est reçue comme demande de **spécialisation** (sous-type, région, label) ou de **révision** du type existant, et traitée comme telle (§13). |
+| **X14 — Pages d’analyse** | Une grille d’analyse (§9.10, ex. « complexité ») s’affiche comme une page à part, jamais comme une fiche de type ni comme un nœud de l’arbre : introduction, types croisés (liens vers leurs fiches) et, pour un objet, ses assertions sur ces types avec leur régime de perception. Aucun score agrégé. (v2.3) |
+| **X15 — Références visibles** | Chaque fiche affiche ses références (`references`, §9.7 P) avec leur rôle, leur lien (DOI ou URL) et leur **statut de vérification**, en clair ; une source non vérifiée est affichée comme telle, jamais comme vérifiée. L’état de l’art (`etat_de_l_art`) s’affiche en langage courant, avec le lien vers son groupe (`etat_de_l_art_renvoi`) ; un appel `[[id]]` s’affiche comme un renvoi à l’entrée de la référence (v2.6). Une fiche sans source trouvée le dit, avec la date de la recherche. Place dans l’ordre de X11 : position de travail, révisable par l’éditeur du projet (T32). (v2.4) |
+| **X16 — Droits et crédits** | Chaque fiche a une section « **Droits et crédits** » : pour chaque image montrée (exemplaires), le crédit que sa licence demande, tiré du champ `credit` de l’objet (`fiches/exemplaires.yaml` : `auteur`, `licence`, `source`, `url`, `date_verification`, `mention_requise`) ; la mention requise (par ex. CC BY-SA : auteur, titre, lien vers l’image, licence et lien vers la licence) s’affiche telle quelle près de l’image ou dans la section. Un champ « à renseigner » s’affiche comme tel. **Règle d’usage** (v2.6, décision de l’éditeur du projet, Q15) : une image qui n’est pas réellement libre de droits, quel que soit le statut précis de partage affiché, n’est **pas reproduite** : la fiche cite l’objet et pointe vers la page où l’image se trouve en ligne (`credit.usage: lien_seulement`, `credit.lien_externe`), sans copie. Seules les images réellement libres (Commons sous licence CC, domaine public avéré, Met Open Access) sont reproduites (`usage: image_reproduite`), avec leur crédit complet et la mention requise. Un domaine public « selon le pays », une provenance non avérée (photographe non nommé, image reprise d’un site tiers) valent « lien seulement » tant que le statut n’est pas avéré ; le motif est écrit (`motif_usage`). Un lien peut mourir : une épreuve qui s’appuie sur une image en lien seulement en note la version vue (date, page) dans son protocole (§9.7 G). (v2.5 ; règle d’usage v2.6) |
+
+| **X17 — Première publication : trois paliers** | (v2.7, décision de l’éditeur du projet, T35, option A.) Le site publie une fiche selon un **palier calculé** sur les champs, jamais déclaré (§9.7 F) ; X12 (rédigée / minimale, grisé) reste la cible et s’applique aux fiches publiées. **Publiable** : (a) définition, question attentionnelle, contre-exemple, repère pour chaque région ; (b) `bloque_par` vide ; (c) rien en attente de relecture, ni dans la fiche ni pour ses exemplaires (un exemplaire compte s’il est relu et que rien ne l’attend) ; (d) références renseignées ou « aucune source trouvée » datée, aucune référence non vérifiée ; (e) E1 et E4 déclarés (sauf `ppp:perceptualContrast`, §9.7 B) ; (f) des exemplaires relus, non marqués `doute: oui`, dans deux régions qui montrent l’écart (rangs séparés d’au moins une région ; sur une échelle nominale, régions non voisines) ; (g) au moins une image reproduite, sinon la mention « exemplaires en lien seulement ». **Publiable avec exemplaires incomplets** : (a) à (e) et au moins un exemplaire relu, sans (f) ; la fiche dit quelles régions sont illustrées. **Pas publiable** : sinon ; nœud « en préparation » dans l’arbre et dans la liste du site, sans page, avec la raison (série 13, décision de l’éditeur du projet ; libellé d’affichage, ex-« en travail »). Tout le dépôt public est sous licence, fiches non publiques comprises : le site expose les fiches publiques et liste les autres « en préparation ». Publier ne change aucun statut (éditorial ou épistémique) et n’ajoute aucun badge. Calcul de référence : `fiches/compte.py --paliers`. **Fiches publiques** (paliers 1 et 2, calcul du 2026-10-11, série 10) : 7 fiches, `ppp:hue`, `ppp:lightness`, `ppp:lightnessContrast`, `ppp:perceivedSize`, `ppp:perceptualDensity`, `ppp:texture`, `ppp:textureDirectionality` ; `fiches/compte.py --verifier` signale tout écart entre le calcul et cette liste. |
+
+X9–X13 et X17 ne demandent aucun nouveau champ de fiche : `facettes`, `exemplaires`, `contre_exemple`, `confusableWith`, `regions` (avec `rang`), `statut`, `statut_epistemique`, `introduit_en` / `modifie_en` existent déjà. Seul le registre des familles (§9.7 L) s’ajoute, hors fiches de type. X14 n’en demande pas non plus : une grille est un fichier `app:`. X15 demande les champs `references`, `references_statut` et `etat_de_l_art` (§9.7 P, v2.4). X16 demande le champ `credit` des objets d’exemplaires (`fiches/exemplaires.yaml`, v2.5 ; `usage`, `lien_externe`, `motif_usage` en v2.6), hors fiches de type ; X12 et le grisé se calculent sur les champs existants.
+
+Conséquence : un site de navigation est un rendu des fiches et de leurs relations. Le jeu reconnaît **deux familles de cartes** : la *carte de type* (rendu d’une fiche : label court, question attentionnelle, régions, exemplaires) et la *carte d’opération* (`op:`, appliquée à un ou plusieurs ids). La neutralité des cartes d’opération est la question Q14. Un export pour outil (but 3) est une sérialisation des mêmes fiches.
+
+---
+
+## 13. Contestation et amendement public
+
+L’ontologie est **publique** : chacun peut la lire, la discuter, la contester et proposer des amendements. C’est la traduction institutionnelle de la posture de §0.2. Un programme de recherche n’est progressif que si ses réfutations sont publiques et ses ajustements contrôlés.
+
+**Huit gestes, neuf types de tickets** (v2.8 ; « Suggérer un objet » ajouté en v2.7 ; série 12 : « Signaler un problème de formulation » devient deux gestes, comme dans le texte public). Chaque geste prend la forme d’un ou deux types de tickets (format : `docs/gouvernance.md`) :
+
+| Geste | Type(s) de ticket |
+|---|---|
+| Suggérer un type | `suggestion-type` |
+| Signaler un mot qui juge ou une mauvaise traduction | `label-charge` (valence, traduction) |
+| Signaler une erreur | `correction` (erreur de fait : référence, crédit, coquille, lien) |
+| Suggérer un objet | `objet-suggere` |
+| Contester une assertion (ou en ajouter une) | `contestation` (exemplaire ou énoncé) ; `assertion-exemplaire` (ajout) |
+| Proposer un type | `proposition-type` |
+| Signaler une anomalie | `anomalie` |
+| Publier une réfutation | `refutation` |
+
+**Les quatre premiers types** (`suggestion-type`, `label-charge`, `correction`, `objet-suggere`) sont ouverts à tous, sans compétence technique ; les cinq autres demandent le minimum reproductible ou une fiche complète (*retenu*, série 13 : les formulaires sont prêts ; l’éditeur du projet peut le changer). Contenu minimal par geste :
+
+| Geste | Contenu minimal exigé |
+|---|---|
+| **Suggérer un type** (grand public ; v2.3.1, ex-« suggérer un candidat ») | Un label, une phrase, deux exemples (images ou descriptions), le type existant le plus proche. Recevable si elle dit quel aspect perceptible elle décrit, montre qu’aucun type existant ne le couvre et reste factuelle (X13, v2.7) ; si elle redécoupe un aspect couvert, elle devient une demande de spécialisation ou de révision du type existant. L’équipe instruit ensuite la fiche ; la suggestion n’a pas de statut épistémique. À ne pas confondre avec « Proposer un type » ci-dessous, qui exige une fiche complète (nom à confirmer, T27) |
+| **Signaler un mot qui juge ou une mauvaise traduction** (grand public) | Le label, la clé, la traduction, l’illustration ou la phrase visés, et le problème : valence, ambiguïté, homonymie, erreur de traduction, exemplaire trompeur, accessibilité. Traité en édition, hors critère lakatosien ; un échec au test de neutralité renvoie à A10 |
+| **Signaler une erreur** (grand public) | La fiche ou la page, le champ ou l’`id` visé, l’erreur (référence fautive, statut de vérification surévalué, crédit d’image, coquille, lien mort), la source qui la montre si elle existe. Traité en édition (voir « Références » ci-dessous) |
+| **Suggérer un objet** (grand public ; v2.7) | Nom, créateur (ou « inconnu »), date ou période (ou « inconnue », admise seulement si la variante identifie l’objet), variante précise, obligatoire et jamais « inconnue » (« Quelle version exactement ? »), lien source public, images en lien par défaut (Q15), conditions de perception (régime complet du §9.7 H). Détail : « Objets suggérés et registre des objets » ci-dessous |
+| **Contester une assertion** (exemplaire ou fiche publique) | L’id de l’assertion, la région proposée à la place, l’épisode du contestataire (régime de perception). L’assertion passe à `contesté` si le signalement est recevable ; elle est corrigée ou retirée si d’autres observateurs confirment |
+| **Proposer un type** (ou une région, une relation) | Fiche de type remplie (`PPP_FicheType.md`), avec patron, strate, base, espace, identité vis-à-vis des voisins, au moins un énoncé testable, au moins deux transferts (sortes d’objets, champ `transfert`) et, pour E5, deux régimes de perception, CQ couvertes, test de neutralité |
+| **Signaler une anomalie** | Type(s) visé(s), objets ou situations décrits de façon reproductible, ce que la fiche prédit, ce qui est observé (ex. deux objets égaux sur la base mais distincts sur S, contre E3) |
+| **Publier une réfutation** | Énoncé visé (E1–E6, ou énoncé propre d’une fiche), protocole et seuil fixés avant l’épreuve, matériel publiable ou décrit de façon suffisante, résultats bruts |
+
+**Références** (v2.4). Une référence fautive (citation erronée, statut de vérification surévalué, emprunt non cité) se signale par un ticket `correction`, en citant la fiche et l’`id` de la référence. Traitée en éditorial : la correction met à jour `statut_verification` et `verifie_le` (§9.7 P) et se note au changelog.
+
+**Recevabilité.** Tout ticket passe par les états `reçu` → `recevable` (contenu minimal vérifié) → `traité` (accepté ou rejeté, avec motif). Seul un ticket **recevable** a un effet affiché : un simple ticket ne rend rien « contesté ».
+
+**Minimum reproductible** (anomalie, réfutation, contestation d’assertion) :
+- objets décrits (photo et description, ou référence publique) ;
+- régime de perception (vocabulaire du §9.7, H) ;
+- observateurs (nombre, pseudonymes) ;
+- versions de la fiche, de la page et du matériel montré ;
+- prédiction ou région citée.
+
+**Traitement.**
+- Une anomalie recevable ouverte fait passer l’entrée au statut épistémique *contesté*, visible sur le site (X8). Elle ne l’exclut pas encore : un programme tolère des anomalies.
+- Une réfutation **reproduite**, par une seconde épreuve indépendante ou sur un second terrain, déclenche la conséquence prévue au tableau E1–E6 (sortie du cœur, requalification, correction de la base). Pour un échec d’accord, la seconde épreuve se fait avec la fiche révisée (§9.7 N). Promotion et rétrogradation : §9.7 M.
+- Chaque décision est motivée publiquement et consignée dans le changelog ; le ticket qui l’a demandée passe à `traité` avec son motif ; l’épreuve qui l’a fondée est au journal des épreuves (défini ci-dessous).
+
+**Critère d’acceptation d’un amendement de la ceinture.** Un amendement est accepté s’il remplit les quatre conditions suivantes :
+1. il est **cohérent** avec le noyau N1–N5 et les axiomes A1–A12 ;
+2. il passe le **test d’entrée** (§9.6, n° 6) ;
+3. il est **progressif** : il apporte au moins un énoncé testable *nouveau*, ou résout une anomalie enregistrée sans perdre de contenu corroboré ;
+4. il n’est **pas ad hoc** : il ne se contente pas d’absorber un contre-exemple par une exception, une région ou un type supplémentaire sans prédiction nouvelle.
+
+À contenu corroboré égal, on préfère l’amendement qui ajoute le moins de types (engagement minimal).
+
+**Amendement du noyau.** Il n’est recevable que comme **proposition de refondation** (version majeure). La proposition doit montrer que le programme amendé serait plus progressif que l’actuel : il expliquerait les succès corroborés et résoudrait des anomalies que la ceinture ne résout pas.
+
+**Épreuves sur objets publics** (Q12, décidée). Les épreuves du programme se font sur des objets publics, dont le matériel est publiable ; elles comptent pleinement pour le statut (corroboré, contesté, réfuté). Les tests sur des objets confidentiels sont **hors programme** : ils ne comptent pas et ne sont pas versionnés.
+
+**Équipe et gouvernance** (Q10, décidée ; complétée en v2.7 par les décisions de l’éditeur du projet du 11/10 ; détail : `docs/gouvernance.md`).
+- **Équipe** : Lomig Unger et Grok Bot. **Éditeur du projet** : Lomig Unger, qui prend l’arbitrage final.
+- **Décision** : par consensus sur le dépôt public, avec arbitrage final de l’éditeur du projet.
+- **Équipe fermée** pour l’instant : elle instruit **seule** les suggestions et les contestations.
+- **Délai** : les tickets sont **reçus et jugés recevables ou non dans la semaine** (sept jours à compter de la réception) ; un ticket recevable reste ouvert jusqu’à l’épreuve qui le traite ; *position de travail, à trancher* : il reçoit dans la semaine une réponse motivée qui dit ce qui est ouvert (anomalie, épreuve). Raisons : une épreuve reproduite ne se fait pas en sept jours ; le visiteur doit savoir sans attendre ce qui est ouvert.
+- **Rôles de travail** (sans nom propre) : conception de l’ontologie, relecture explicative (une fiche s’explique-t-elle à un non-spécialiste ; les sources citées sont-elles exactes), tests sur objets publics, design du site, coordination. Ce sont des fonctions, pas des personnes ; les contenus publiés citent la fonction (« relu en relecture explicative », « décision de l’éditeur du projet »), jamais un prénom ni un nom d’agent.
+- **Noms publics** : les noms de l’équipe ne figurent que sur la page « Qui sommes-nous ? », dans ce §13, dans la citation (« Comment citer » ci-dessous, `CITATION.cff`, `docs/comment-citer.md`) et dans les fichiers de licence (`LICENSE`, `LICENSE-CONTENT.md`). Aucun autre document du dépôt, interne ou publié, ne nomme une personne ni un agent ; on écrit « l’éditeur du projet », « l’équipe », « la relecture explicative », « la coordination », « la maquette » (v2.8). Contrôle : `fiches/compte.py --noms` (tout le dépôt, liste blanche ; exceptions comptées : rapports de crash test, guide de structure, `maquette/`).
+- **Dépôt et site** (décidé, v2.8) : un **dépôt public neuf** sur GitHub, `PPP-ontologie`, adresse retenue https://github.com/blomig/PPP-ontologie ; le site est publié par **GitHub Pages** depuis ce dépôt, adresse retenue https://blomig.github.io/PPP-ontologie (constat du 2026-10-11, 14 h 58 (heure de Paris) : les deux adresses répondent 404 sans connexion, ce qui ne prouve pas l’absence d’un dépôt privé). Structure, contenu publié et étapes : `docs/depot-public.md`.
+- **Adresse de dépôt des tickets** (décidé, v2.8) : les **formulaires de tickets GitHub** du dépôt public (*issue forms*, un formulaire par type, `.github/ISSUE_TEMPLATE/*.yml`) ; ouvrir un ticket demande donc un **compte GitHub**. Source : GitHub Docs, « Syntax for issue forms », « Syntax for GitHub's form schema », « Configuring issue templates for your repository » (consultés le 2026-10-11) ; les formulaires y sont en « public preview », et les champs obligatoires ne sont appliqués que dans un dépôt public.
+- **Conflit d’intérêts** : *position de travail, à trancher* : l’équipe ne tranche pas seule une contestation qui la vise ; l’issue épistémique repose sur une épreuve reproduite par des observateurs indépendants (§9.7 N), et le motif est publié avec le ticket. Raisons : une équipe fermée de deux membres serait juge et partie ; l’épreuve reproduite est déjà le critère du programme ; le ticket public rend la décision contrôlable. Qui fait la revue extérieure : à trancher.
+- **Rejoindre l’équipe** : fermée (décidé) ; *position de travail, à trancher* : pas de procédure d’entrée tant que personne ne la demande ; on contribue par les tickets. Raisons : une procédure sans candidat serait du texte sans usage ; les tickets ouvrent déjà chaque geste à tous.
+- **Identifiant pérenne** : *position de travail, à trancher* : archiver le dépôt public dans **Zenodo**, qui attribue un DOI à chaque version publiée (*release* GitHub) et lit `CITATION.cff` ; jusque-là, citer la version et l’adresse du dépôt. Raisons : procédure documentée par GitHub et gratuite ; un DOI par version colle à X6 (citer la version) ; elle demande un dépôt public, donc vient après la publication. Sources : GitHub Docs, « Referencing and citing content » ; Zenodo, « CITATION.cff file » (consultés le 2026-10-11).
+
+**Tickets** (v2.7, circuit fixé en v2.8 ; format complet et exemples : `docs/gouvernance.md`). Un ticket s’ouvre par un formulaire de ticket GitHub du dépôt public (le site renvoie vers le formulaire du geste) ; *position de travail, à trancher* : quand elle juge sa recevabilité (dans la semaine), l’équipe convertit le ticket à la main en fichier Markdown dans la file **`tickets/`**, recevable ou rejeté avec motif (numéro = numéro du ticket GitHub ; `source: github`, `github_issue`) ; une conversion automatique (workflow) viendra si le volume le demande. Raisons : c’est le circuit le plus simple ; le fichier garde le ticket si GitHub change ; la conversion se fait à l’étape où l’équipe lit déjà le ticket.
+- **Types** : `suggestion-type` (Suggérer un type), `contestation` (d’un exemplaire, c’est-à-dire d’une assertion, ou d’un énoncé), `label-charge` (Signaler un mot qui juge ou une mauvaise traduction : label porteur de valence ou mauvaise traduction), `correction` (erreur de fait : référence fautive, crédit, coquille, lien), `objet-suggere` (proposer un objet public pour les épreuves, ci-dessous), `assertion-exemplaire` (ajouter une assertion sur un objet du registre ; la contester passe par `contestation`). Les gestes experts du tableau ci-dessus (`anomalie`, `refutation`, `proposition-type`) prennent le même format.
+- **États** : `reçu` → `recevable` (contenu minimal vérifié) → `traité`, avec l’issue `accepté` ou `rejeté` et un motif. Un ticket non recevable est traité et rejeté avec son motif (contenu minimal manquant) ; aucun ticket n’est fermé sans réponse.
+- **Fichier** : `tickets/<nnnn>-<type>.md` (numéro à quatre chiffres, unique, jamais réattribué ; le fichier ne change pas de nom quand l’état change) ; en-tête YAML (`id`, `type`, `etat`, `issue`, `motif`, dates, `cible`, versions, `source`) et corps Markdown. Aucune adresse électronique dans le fichier (le dépôt est public) : un pseudonyme au plus.
+
+**Objets suggérés et registre des objets** (v2.7). Le **registre des objets** est `fiches/exemplaires.yaml` (sections `objets`, `episodes`, `assertions`) ; gabarit : `PPP_FicheExemplaire.md`. Un ticket `objet-suggere` propose un **objet public** (œuvre, meuble, bâtiment…) pour les épreuves. Recevable s’il donne : le nom ; le créateur (ou « inconnu ») ; la date ou la période, ou « inconnue » (« je ne sais pas »), **admise seulement si la variante identifie l’objet** à elle seule, sinon le ticket n’est pas recevable (série 11, position de travail de la coordination et de l’éditeur du projet) ; la **variante** précise, **obligatoire, jamais « inconnue »** (libellé public : « Quelle version exactement ? » ; seule la date peut être inconnue ; version, exemplaire, état, édition : ce qui identifie exactement l’objet vu) ; un **lien source public** (obligatoire) ; les images en **lien seulement** par défaut, reproduites seulement si la licence est réellement libre, vérifiée, avec le crédit complet (Q15 : `credit.usage`, `credit.lien_externe`) ; les **conditions de perception** de l’observation : le régime complet du §9.7 H (`presentation`, `lumiere`, `distance`, `angle`, `duree` ; `unknown` pour une facette inconnue). Seul le statut public existe dans le dépôt public : un objet interne n’est jamais publié et n’existe pas côté public ; les objets internes vivent hors du dépôt public (Q12). Après instruction, un ticket recevable et accepté donne une entrée d’**objet seul** dans le registre (id `app:…` et crédit) ; les assertions par type (région, régime déclaré (conditions de perception, §9.7 H), `doute`, note) sont ajoutées ensuite par l’équipe, ou par un ticket `assertion-exemplaire` (ajout) ou `contestation`. **Un ticket n’écrit jamais directement dans `exemplaires.yaml`** : l’équipe le fait, et le commit cite le ticket.
+
+**Journal des épreuves** (v2.7, défini). Le changelog consigne les décisions et les changements de la spécification et des fiches ; la file `tickets/` consigne les signalements et leur issue. Ni l’un ni l’autre ne consigne une **épreuve** : protocole et seuil fixés avant, objets publics, observateurs, versions (fiche, page, matériel), résultats bruts, conséquence (E1–E6, §9.7 N). Le journal des épreuves est ce registre : un fichier par épreuve dans **`epreuves/`** (`epreuves/<nnnn>-<type-visé>.md`, en-tête YAML et corps Markdown), écrit **avant** l’épreuve (protocole, seuil, date de fixation) puis complété (résultats, conséquence), sans réécriture de la partie fixée avant. Une épreuve qui ne fixe pas son seuil avant (par ex. les premiers tests sur objets publics, `docs/crash-test-0*.md`) y est notée **exploratoire** : elle ne compte pas pour le statut (§9.7 M). Une épreuve née d’un ticket renvoie à lui, et inversement. Publication du journal (décidé, série 10) : il est public dans le dépôt (`epreuves/`, avec un `README.md` qui en donne le format et un fichier modèle `0000-modele.md`) et **affiché sur le site** : une page du journal liste les épreuves (nature `programme` ou `exploratoire`, types et énoncés visés, seuil et date de fixation, conséquence), et chaque fiche renvoie à ses épreuves (X8).
+
+**Comment citer** (v2.7, forme unifiée en v2.8 ; détail : `docs/comment-citer.md`, `CITATION.cff`). L’ontologie est sous CC BY 4.0 : l’attribution est obligatoire. Forme recommandée, la même que dans `CITATION.cff` (auteurs, titre, version, date) : *Unger, Lomig et Grok Bot. PPP — Propriétés Perceptuelles Pertinentes : spécification d’ontologie, version 2.8, 2026-10-11. Licence CC BY 4.0. https://github.com/blomig/PPP-ontologie.* Toujours citer la version (X6) ; pour une fiche, ajouter son identifiant (`ppp:…`, X1) ; pour un exemplaire, l’identifiant de l’assertion (`ppp-a:…`) et le crédit de l’image (X16). Adresses retenues (série 10) : dépôt https://github.com/blomig/PPP-ontologie, site https://blomig.github.io/PPP-ontologie, données aussi dans `CITATION.cff` (`repository-code`, `url`). Le DOI reste à renseigner : il dépend de l’archive Zenodo (position de travail, voir « Équipe et gouvernance »).
+
+**Licences** (Q11, décidée) : ontologie, fiches et documents sous **CC BY 4.0** (`LICENSE-CONTENT.md`) ; code du site et des outils sous **MIT** (`LICENSE`). Titulaire des droits du contenu et du code (décision de l’éditeur du projet, série 13) : Lomig Unger, mention « Copyright (c) 2026 Lomig Unger et contributeurs du projet PPP » (`LICENSE`, `LICENSE-CONTENT.md`) ; Grok Bot reste co-auteur dans `CITATION.cff` et dans la citation, au titre du crédit, pas comme titulaire ; équipe et rôles : `CONTRIBUTORS.md`. Tout le dépôt public est sous licence, y compris les fiches non encore publiées sur le site (X17). Les **images d’exemplaires** reproduites ne sont pas sous CC BY 4.0 : chacune garde sa licence et son crédit (`LICENSE-CONTENT.md`, X16). Pas d’accord de contribution (pas de DCO) : une contribution versée au dépôt l’est sous ces licences.
+
+---
+
+## Annexe A — Registre des identifiants réservés
+
+Ids cités par la spec ou par une fiche (A12). Sauf mention dans la note, leur statut éditorial est `candidat` ; ils n’ont pas encore de fiche complète, et le reclassement peut les déprécier. Aucun n’est encore `cœur` : la promotion suit §9.7 M. Aucun n’est publié sous un label porteur de valence.
+
+| Id | Label FR (court) | Sorte / strate | Note |
+|---|---|---|---|
+| `ppp:perceptualDensity` | densité perceptive (densité) | P1 / semi-formel | pilote, fiche d’exemple |
+| `ppp:texture` | texture | P1 / formel | pilote ; « grain » en label alternatif (v2.5, T1 ; homonyme granulométrie, §9.7 J) |
+| `ppp:perceptualContrast` | contraste perceptif (contraste) | P2 / semi-formel | type général, dimension libre ; régions « faible / modéré / évident / maximal » (clés `weak`, `moderate`, `marked`, `strong` ; v2.5, T3), les mêmes pour les quatre contrastes spécialisés, sauf labels propres d’affichage du contraste d’échelle (v2.6, T34) ; une assertion du général déclare `ppp:comparedDimension` (§9.7, B) |
+| `ppp:lightnessContrast` | contraste de clarté | P2 / semi-formel | pilote ; `ppp:specializes` `ppp:perceptualContrast` ; dimension `ppp:lightness` |
+| `ppp:hueContrast` | contraste de teinte | P2 / semi-formel | candidat ; spécialise le contraste ; dimension `ppp:hue` |
+| `ppp:textureContrast` | contraste de texture | P2 / semi-formel | candidat ; spécialise le contraste ; dimension `ppp:texture` |
+| `ppp:scaleContrast` | contraste d’échelle | P2 / semi-formel | candidat ; spécialise le contraste ; dimension `ppp:perceivedSize` ; labels propres « tailles voisines / nettement différentes / très différentes / sans commune mesure » (`labels_regions_propres`, v2.6, T34 ; clés et rangs du général) |
+| `ppp:perceivedSize` | taille perçue | P1 / formel | candidat ; dimension de `ppp:scaleContrast` ; référence : le corps de l'observateur (v2.2.3, trois régions) |
+| `ppp:jointSpacing` | espacement au joint | P1 / semi-formel | candidat, non éprouvé ; porteur : la partie joint ; base `ppp:contour` (§9.7, A) |
+| `ppp:jointLevelOffset` | décalage de niveau au joint | P1 / semi-formel | candidat, non éprouvé ; porteur : la partie joint ; base `ppp:contour` (§9.7, A) |
+| `ppp:salience` | saillance | P3 / — (pas de strate) | **`attente`**, réservé hors V1, sans fiche (§9.9) |
+| `ppp:objectAttentionDistribution` | distribution de l’attention sur les objets | P3 | **`attente`**, réservé hors V1 (§9.9) |
+| `ppp:propertyAttentionDistribution` | distribution de l’attention sur les propriétés | P3 | **`attente`**, réservé hors V1 (§9.9) |
+| `ppp:explorationRegime` | régime d’exploration | P3 | **`attente`**, réservé hors V1 (§9.9) |
+| `ppp:perceptualIntensity` | intensité perceptive | P1 | **`attente`**, réservé hors V1 (v2.2.3, §9.9) ; n'est plus cité par la fiche de la densité |
+| `ppp:assemblyMode` | mode d’assemblage | — | **`déprécié`** (v2.2, A11) ; `remplace_par` : `ppp:jointSpacing`, `ppp:jointLevelOffset`, `ppp:perceptualContrast` ; motif : le mode n’est pas une catégorie, le joint se décrit par ses qualités (§9.7, A) |
+| `ppp:contour` | netteté du bord | P1 / formel | base de la densité et de la distribution ; « contour » en label alternatif (v2.2.3 : en français courant, « contour » dit la silhouette) ; label EN inchangé |
+| `ppp:distribution` | distribution | P1 (gestalt) / semi-formel | qualité d’une configuration de zones ; base : `ppp:contour` ; régions « groupée / aléatoire / régulière » (`scattered` : « aléatoire », alternatifs « au hasard », « sans ordre apparent », v2.5, T21) |
+| `ppp:lightness` | clarté | P1 / formel | ex-« Valeur (luminosité) » v0.2 |
+| `ppp:hue` | teinte | P1 / formel | six catégories nominales en cercle ; v2.6 : T6 tranché par l’éditeur du projet (catégories chromatiques de base de Berlin et Kay ; brun = orange sombre et terne, rose = rouge clair et peu vif, gris, noir et blanc non applicables, règle de la fiche ; `skos:closeMatch` *Hue* de Munsell, `skos:relatedMatch` cercle NCS ; `docs/couleur-teinte-etat-de-l-art.md`), clés inchangées ; cercle à six teintes, repères du contraste de teinte en pas (v2.6) |
+| `ppp:saturation` | saturation | P1 / formel | |
+| `ppp:symmetry` | symétrie | P1 / semi-formel | régions de la paire v0.2 « symétrie / asymétrie » |
+| `ppp:localIrregularity` | irrégularité locale | P1 / semi-formel | ex-« rugosité » v0.2 ; « rugosité » en label alternatif |
+| `ppp:negativeSpace` | espace négatif | P1 (gestalt) / semi-formel | ex-« vide actif » ; « vide actif » en label alternatif |
+| `ppp:textureDirectionality` | orientation de la texture | P1 / semi-formel | candidat (v2.2.3) ; base `ppp:texture`, `ppp:contour` ; `skos:closeMatch` *directionality* de Tamura, Mori et Yamawaki 1978 (§9.7 O) ; limité aux reliefs (v2.3.1, objection de la relecture explicative : un motif imprimé orienté n’en relève pas) |
+| `ppp:translucency` | transparence (labels alternatifs : vue à travers, translucidité) | P1 / formel | candidat (v2.3, crash tests ; label canonique « vue à travers » en 2.3.2, « transparence » en 2.6, décision de l’éditeur du projet, T28 ; parenté avec la région « transparent » traitée dans l’avertissement de la fiche, comme « symétrie / symétrique ») ; famille matière ; ce qu’on voit à travers la matière, d’opaque à transparent ; qualité perçue, `grandeur_physique_homonyme` : transmittance lumineuse et trouble (*haze*) mesurés (par ex. ASTM D1003[^astm]), indice de réfraction ; facettes critiques : celles de `conditions_critiques` de la fiche ; fiche préremplie `fiches/translucency.yaml` (v2.3.1) |
+| `ppp:surfaceGloss` | brillance de surface (brillance) | P1 / formel | candidat (v2.3) ; famille matière ; la **matité** en est la région basse (« mat »), pas un type ; avertissement de label (2.3.2) : « brillance » se lit « vivacité » en français courant (saturation) et désigne en photométrie l’ancien nom de la luminance ; régions « mat / satiné / brillant / miroir » (clés `matte`, `satin`, `lustrous`, `mirror` ; v2.5, décision de l’éditeur du projet, T29, après recherche d’une catégorisation reconnue des niveaux, non trouvée : Hunter 1937 distingue des sortes de brillance, pas des niveaux) ; « brillant » désigne ici une surface qui renvoie des reflets nets, pas une couleur vive (avertissement de la fiche) ; `grandeur_physique_homonyme` : brillance spéculaire mesurée en unités de brillance (par ex. ISO 2813[^iso2813], géométries 20°, 60°, 85°) ; facettes critiques : celles de `conditions_critiques` de la fiche ; fiche préremplie `fiches/surfaceGloss.yaml` (v2.3.1) |
+| `ppp:curvature` | courbure | P1 / formel | candidat (v2.3) ; famille forme ; porteur : un bord, un trait ou une surface ; `grandeur_physique_homonyme` : courbure géométrique (inverse du rayon) ; fiche préremplie `fiches/curvature.yaml` (v2.3.1) |
+| `ppp:partNesting` | emboîtement des parties | P1 (gestalt) / semi-formel | candidat (v2.3) ; familles organisation, forme ; parties perçues contenues dans des parties, sur plusieurs niveaux ; base `ppp:contour` et une relation non typée entre parties (taille relative des parties, §9.7 I ; `ppp:perceivedSize` retirée en 2.3.2, T25) ; recouvre peut-être le stock *hiérarchie* / *niveaux d’échelle* (T14, à confirmer) ; la partonomie elle-même reste en ABox (§9.7 I) ; fiche préremplie `fiches/partNesting.yaml` (v2.3.1) |
+| `ppp:hueRange` | éventail des teintes | P1 (gestalt) / semi-formel | candidat (v2.3) ; famille couleur ; dispersion des teintes sur une zone, d’une seule teinte à des teintes éloignées ; base `ppp:hue` ; ≠ `ppp:hueContrast` (P2, entre deux zones) ; fiche préremplie `fiches/hueRange.yaml` (v2.3.1) |
+| `ppp:lightnessRange` | éventail des clartés | P1 (gestalt) / semi-formel | candidat (v2.5, crash tests 01 et 02, C6) ; famille couleur ; écart des clartés vues dans une même zone ; base `ppp:lightness` ; régions « une seule clarté / clartés proches / clartés éloignées » ; `skos:relatedMatch` *contrast* de Tamura et al. 1978 ; fiche minimale `fiches/lightnessRange.yaml` |
+| `ppp:saturationRange` | éventail des saturations | P1 (gestalt) / semi-formel | candidat (v2.5, crash test 01, C6) ; famille couleur ; écart des saturations vues dans une même zone ; base `ppp:saturation` ; régions « une seule saturation / saturations proches / saturations éloignées » ; fiche minimale `fiches/saturationRange.yaml` |
+| `ppp:hueCount` | nombre de teintes | P1 (gestalt) / semi-formel | candidat (v2.5, crash test 02, C6) ; famille couleur ; nombre de catégories de teinte vues dans une zone (≠ `ppp:hueRange`, qui en dit l’écart) ; base `ppp:hue` ; régions « une / deux ou trois / quatre ou plus » ; compte les six teintes de T6 (tranché en 2.6 : un brun compte comme un orange, un rose comme un rouge) ; fiche minimale `fiches/hueCount.yaml` |
+| `ppp:outlineIndentation` | découpure de la silhouette | P1 (gestalt) / semi-formel | candidat (v2.5, crash test 02, C6) ; famille forme ; silhouette entière qui rentre et sort, par des courbes ou des angles ; base `ppp:contour` (le tracé n’a pas de type, T14) ; régions « sans découpure / découpée / très découpée » ; fiche minimale `fiches/outlineIndentation.yaml` |
+| `ppp:perceivedDepth` | étagement en plans (label alternatif : profondeur de la scène) | P1 / formel (à vérifier) | candidat (v2.3 ; stock *profondeur*, T14 ; label canonique depuis 2.3.2, T25) ; familles forme, organisation ; étagement perçu en plans ; facettes critiques : celles de `conditions_critiques` de la fiche ; fiche préremplie `fiches/perceivedDepth.yaml` (v2.3.1) |
+| `ppp:elementaryShapeCount` | nombre de formes élémentaires nécessaires (label court : nombre de formes) | P1 (gestalt) / semi-formel | candidat (v2.8, crash test 03, T37) ; famille forme ; base proposée `ppp:contour` ; formes répétées et percements comptent (décision de l’éditeur du projet) ; bloquée (T37, questions 1, 4, 5 et 6 ; base à revoir : la compléter ou n’en déclarer aucune) |
+| `ppp:subsurfaceDepth` | profondeur dans la matière | P1 / semi-formel | candidat (v2.3) ; famille matière ; impression de voir dans l’épaisseur, sous la surface ; base `ppp:translucency` ; à distinguer de `ppp:perceivedDepth` (`confusableWith`) ; facettes critiques : celles de `conditions_critiques` de la fiche ; fiche préremplie `fiches/subsurfaceDepth.yaml` (v2.3.1) |
+
+
+### A.2 Métamodèle et relations d’ABox (§9.3, §9.8)
+
+Ids anglais (Q9), labels français. Les relations du nuancier sont d’application (`app:`, hors cœur). Une attribution P3 est une `ppp:Assertion` (pas de classe propre ; aucune en V1, §9.9). Le lien jugement → assertion relève de la couche axiologique et n’a pas d’id `ppp:`.
+
+| Id | Label FR | Nature |
+|---|---|---|
+| `ppp:QualityType` | type de qualité | métaclasse (P1) |
+| `ppp:RelatorType` | type de relateur | métaclasse (P2) |
+| `ppp:EpisodeRegimeType` | type de régime d’épisode | métaclasse (P3) |
+| `ppp:specializes` | spécialise | relation entre types, transitive (A1) |
+| `ppp:comparedDimension` | dimension comparée | type de contraste spécialisé, ou assertion du contraste général → type P1 (§9.7, B) |
+| `ppp:Region` | région | classe ; `ppp:onScale` (sur l’échelle), `ppp:rank` (rang) |
+| `ppp:hasScale` | a pour échelle | type → `ppp:Scale` |
+| `ppp:Scale` | échelle | classe |
+| `ppp:Modality` | modalité | vocabulaire contrôlé |
+| `ppp:EditorialStatus` | statut éditorial | vocabulaire contrôlé |
+| `ppp:EpistemicStatus` | statut épistémique | vocabulaire contrôlé |
+| `ppp:CardStatus` | statut de carte | vocabulaire contrôlé |
+| `ppp:ObservationCondition` | condition de perception (label alternatif : condition d’observation ; v2.5, C1 ; id inchangé) | vocabulaire contrôlé ; cinq facettes, `angle` ajoutée en v2.3 (§9.7 H) |
+| `ppp:ArtworkCategory` | catégorie d’œuvre | vocabulaire contrôlé |
+| `ppp:Assertion` | assertion | classe (relation n-aire réifiée) |
+| `ppp:Episode` | épisode | classe |
+| `ppp:about` | porte sur | assertion P1/P2 → objet ou partie (absent sur une assertion P3) |
+| `ppp:role` | rôle | relatum d’une assertion P2 → rôle |
+| `ppp:assertedType` | type | assertion → type |
+| `ppp:cardStatus` | statut de carte | assertion → `ppp:CardStatus` |
+| `ppp:inRegion` | région | assertion → région |
+| `ppp:numericValue` | valeur numérique | assertion → nombre |
+| `ppp:inEpisode` | dans l’épisode | assertion → épisode |
+| `ppp:modality` | modalité | assertion → `ppp:Modality` (une seule) |
+| `ppp:source` | source | assertion → source |
+| `ppp:assertedBy` | auteur | assertion → agent |
+| `ppp:ontologyVersion` | version | assertion → version |
+| `ppp:epistemicStatus` | statut épistémique | assertion → `ppp:EpistemicStatus` |
+| `ppp:withdrawn` | retirée | assertion → booléen |
+| `ppp:inheresIn` | inhère | **conceptuel** : qualité particulière → porteur ; machine : `ppp:about` |
+| `ppp:hasValue` | a pour valeur | **conceptuel** : qualité particulière → région ; machine : `ppp:inRegion` |
+| `ppp:mediates` | médie | **conceptuel** : relateur particulier → relatum (P2) ; machine : `ppp:about` + `ppp:role` |
+| `ppp:target` | cible | épisode → objet ou partie |
+| `ppp:observedUnder` | conditions de perception | épisode → régime de perception (id inchangé, v2.5) |
+| `ppp:usesModality` | modalités mobilisées | épisode → `ppp:Modality` (≥ 1) |
+| `ppp:observer` | observateur | épisode → agent |
+| `ppp:date` | date | épisode → date |
+| `ppp:whatIsSalient` | ce qui est saillant | **réservé hors V1, `attente`** (§9.9) : assertion de type `ppp:salience` seulement → partie du `ppp:target` de l’épisode, ou assertion P1/P2 du même épisode |
+| `ppp:organizedBy` | organisé par | partie → partie (ABox, §9.2) |
+
+---
+
+## Références
+
+État de l’art du cadre : `docs/etat-de-l-art.md` (§7, bibliographie vérifiée le 2026-10-08, ajouts du 2026-10-10). État de l’art par type ou groupe de types : `docs/bibliographie-par-type.md` (§9.7 P). Références des fiches : champ `references` de chaque fiche. Statuts de vérification : §9.7 P, point 2.
+
+[^nanay]: Nanay, B. (2016). *Aesthetics as Philosophy of Perception*. Oxford University Press. https://doi.org/10.1093/acprof:oso/9780199658442.001.0001 — vérifiée sur résumé ou source secondaire (2026-10-08, `docs/etat-de-l-art.md` §1, §7). PPP reprend la distinction formel / semi-formel et la structure du critère de pertinence, pas son orientation évaluative (§0.4).
+[^popper-lakatos]: Popper, K. (1934). *Logik der Forschung* ; trad. angl. *The Logic of Scientific Discovery*, 1959 ; rééd. Routledge, https://doi.org/10.4324/9780203994627. Lakatos, I. (1978). *The Methodology of Scientific Research Programmes*. Cambridge University Press. https://doi.org/10.1017/CBO9780511621123 — vérifiées sur résumé ou source secondaire (`docs/etat-de-l-art.md` §6, §7).
+[^gestalt]: Wagemans, J. et al. (2012). A century of Gestalt psychology in visual perception: I. Perceptual grouping and figure–ground organization. *Psychological Bulletin*, 138(6), 1172–1217. https://doi.org/10.1037/a0029333 — vérifiée sur résumé ou source secondaire (`docs/etat-de-l-art.md` §2.3).
+[^walton]: Walton, K. L. (1970). Categories of art. *The Philosophical Review*, 79(3), 334–367. https://doi.org/10.2307/2183933 — vérifiée sur résumé ou source secondaire (`docs/etat-de-l-art.md` §7).
+[^contenu]: Siegel, S. (2010). *The Contents of Visual Experience*. Oxford University Press, https://doi.org/10.1093/acprof:oso/9780195305296.001.0001 ; Logue, H. (2018) et Stokes, D. (2018), in *Evaluative Perception*, Oxford University Press, https://doi.org/10.1093/oso/9780198786054.003.0003 et https://doi.org/10.1093/oso/9780198786054.003.0002 ; Majeed, R. (2018). *Analysis*, 78(3), 440–450, https://doi.org/10.1093/analys/any002 — vérifiées sur résumé ou source secondaire (`docs/etat-de-l-art.md` §2.2, §7).
+[^attention]: Nanay, B. (2015). Aesthetic attention. *Journal of Consciousness Studies*, 22(5–6), 96–118. https://philpapers.org/rec/NANAA-2 — vérifiée sur résumé ou source secondaire (notice PhilPapers ; `docs/etat-de-l-art.md` §1).
+[^ck]: Hatchuel, A. & Weil, B. (2008, date Crossref). C-K design theory: an advanced formulation. *Research in Engineering Design*, 19(4), 181–192. https://doi.org/10.1007/s00163-008-0043-4 ; Le Masson, P., Weil, B. & Hatchuel, A. (2017). *Design Theory*. Springer. https://doi.org/10.1007/978-3-319-50277-9 — vérifiées sur résumé ou source secondaire (métadonnées Crossref, 2026-10-10).
+[^alexander]: Alexander, C. *The Nature of Order*. Center for Environmental Structure. https://openlibrary.org/works/OL3923607W — vérifiée sur résumé ou source secondaire (notice Open Library, 2026-10-10). Source de candidats, pas de norme (§7). Les « 15 propriétés » (§7) n’ont pas été vérifiées sur le texte.
+[^greimas]: Greimas, A. J., Collins, F. & Perron, P. (1989). Figurative semiotics and the semiotics of the plastic arts. *New Literary History*, 20(3), 627. https://doi.org/10.2307/469358 — vérifiée sur résumé ou source secondaire (métadonnées Crossref, 2026-10-10). Utilisée comme facette (vue), pas comme taxonomie (§9.5).
+[^aat]: Getty Research Institute, *Art & Architecture Thesaurus*, facette « Physical Attributes » : http://vocab.getty.edu/aat/300264087 — vérifiée sur résumé ou source secondaire (référence reprise de `docs/etat-de-l-art.md` §7, vérifiée le 2026-10-08 ; page non joignable le 2026-10-10).
+[^gruber]: Gruber, T. R. (1995). Toward principles for the design of ontologies used for knowledge sharing. *International Journal of Human-Computer Studies*, 43(5–6), 907–928. https://doi.org/10.1006/ijhc.1995.1081 — vérifiée sur la source (version de l'auteur, révision du 23 août 1993, rapport technique KSL 93-04, https://tomgruber.org/writing/onto-design.pdf, lue le 2026-10-10 : les cinq critères *clarity*, *coherence*, *extendibility*, *minimal encoding bias*, *minimal ontological commitment* ; la version publiée de 1995 n'a pas été lue).
+[^methodes]: Uschold & King et Grüninger & Fox : **non vérifiées** (communications d’atelier, aucune notice avec DOI ou URL stable trouvée le 2026-10-10). Référence voisine vérifiée : Uschold, M. & Gruninger, M. (1996). Ontologies: principles, methods and applications. *The Knowledge Engineering Review*, 11(2), 93–136. https://doi.org/10.1017/S0269888900007797 (métadonnées et résumé Crossref).
+[^noy]: Noy, N. F. & McGuinness, D. L. *Ontology Development 101: A Guide to Creating Your First Ontology*. Stanford University. https://protege.stanford.edu/publications/ontology_development/ontology101.pdf — vérifiée sur la source (PDF lu le 2026-10-10 pour les points repris : classes, *slots* et instances distingués ; hiérarchie de classes comme relation « is-a », transitive ; *slot cardinality* ; *disjoint subclasses* ; processus de développement « combination », qui part des concepts saillants, souvent « in the middle » ; le mot « middle-out » n'y figure pas ; la date ne figure pas sur le PDF consulté). Jusqu'en série 6, seuls le titre et les auteurs avaient été lus : statut alors surévalué.
+[^neon]: Suárez-Figueroa, M. C., Gómez-Pérez, A. & Fernández-López, M. (2011). The NeOn methodology for ontology engineering. In *Ontology Engineering in a Networked World*, Springer, 9–34. https://doi.org/10.1007/978-3-642-24794-1_2 — vérifiée sur résumé ou source secondaire (résumé lu sur la page de l'éditeur, 2026-10-10 : neuf scénarios, dont la ré-ingénierie et l'intégration de ressources non ontologiques comme les folksonomies ou les thésaurus ; un glossaire des processus et activités). METHONTOLOGY : Fernández-López, M., Gómez-Pérez, A. & Juristo, N. (1997). METHONTOLOGY: From ontological art towards ontological engineering (support indiqué par la notice : AAAI) — vérifiée sur résumé ou source secondaire (notice Semantic Scholar, corpus 10550105 : https://www.semanticscholar.org/paper/68fad5eb18749f1495bb4ecbe7ae5a1d99f33699), sans DOI ; contenu non lu : la suite « glossaire → conceptualisation → formalisation » attribuée à METHONTOLOGY au §9.1 n'est **pas vérifiée** sur le texte (série 6, partie 7).
+[^ontoclean]: Guarino, N. & Welty, C. (2002). Evaluating ontological decisions with OntoClean. *Communications of the ACM*, 45(2), 61–65. https://doi.org/10.1145/503124.503150 ; Guarino, N. & Welty, C. A. (2009). An overview of OntoClean. In *Handbook on Ontologies*, Springer, 201–220. https://doi.org/10.1007/978-3-540-92673-3_9 — vérifiées sur résumé ou source secondaire (`docs/etat-de-l-art.md` §4). Le champ `ontoClean` des fiches en reprend les méta-propriétés.
+[^dolce-ufo]: Borgo, S. et al. (2022). DOLCE: A descriptive ontology for linguistic and cognitive engineering. *Applied Ontology*, 17(1), 45–69. https://doi.org/10.3233/AO-210259 ; Guizzardi, G. et al. (2022). UFO: Unified Foundational Ontology. *Applied Ontology*, 17(1), 167–210. https://doi.org/10.3233/AO-210256 ; Gärdenfors, P. (2000). *Conceptual Spaces*. MIT Press. https://doi.org/10.7551/mitpress/2076.001.0001 — vérifiées sur résumé ou source secondaire (`docs/etat-de-l-art.md` §3, §4).
+[^odp]: Gangemi, A. & Presutti, V. (2009). Ontology design patterns. In *Handbook on Ontologies*, Springer, 221–243. https://doi.org/10.1007/978-3-540-92673-3_10 — vérifiée sur résumé ou source secondaire (`docs/etat-de-l-art.md` §7).
+[^garner]: Garner, W. R. (1974). *The Processing of Information and Structure*. Lawrence Erlbaum ; rééd. Psychology Press, 2014. https://doi.org/10.4324/9781315802862 ; Gärdenfors 2000 (note dolce-ufo) — vérifiées sur résumé ou source secondaire (`docs/etat-de-l-art.md` §3).
+[^tamura]: Tamura, H., Mori, S. & Yamawaki, T. (1978). Textural features corresponding to visual perception. *IEEE Transactions on Systems, Man, and Cybernetics*, 8(6), 460–473. https://doi.org/10.1109/TSMC.1978.4309999 — vérifiée sur résumé ou source secondaire (métadonnées Crossref, résumé IEEE Xplore ; `docs/etat-de-l-art.md` §5 bis). Mesures calculées, non reprises comme régions (O).
+[^astm]: ASTM D1003-21. *Standard Test Method for Haze and Luminous Transmittance of Transparent Plastics*. ASTM International. https://store.astm.org/d1003-21.html — vérifiée sur résumé ou source secondaire (page de l’éditeur, 2026-10-10 ; texte de la norme non lu).
+[^iso2813]: ISO 2813:2014. *Paints and varnishes — Determination of gloss value at 20°, 60° and 85°*. ISO. https://www.iso.org/standard/56807.html — vérifiée sur résumé ou source secondaire (page de l’éditeur, 2026-10-10 ; texte de la norme non lu).
+
+**Emprunts encore non cités ou non vérifiés** (2026-10-10) :
+- Uschold & King, Grüninger & Fox (§9.1) : non vérifiées (note methodes).
+- Le Masson pour C-K (§2) : vérifié par un ouvrage commun de 2017 (note ck), pas par l’article fondateur.
+- Les « 15 propriétés » d’Alexander (§7) : nombre non vérifié sur le texte.
+- Sibley (1959, `docs/etat-de-l-art.md` §2.1) n’est pas nommé dans la spec ; l’emprunt éventuel (propriétés esthétiques qui dépendent de propriétés non esthétiques) reste implicite.
+- Les autres usages de Nanay (§0.3 attention, §0.4, §4 critère de pertinence) renvoient aux notes nanay et attention, sans nouvel appel.
+- Les recommandations W3C (OWL 2, SHACL, SPARQL, SKOS) sont citées avec leur URL en §9.8.
+
+---
+
+*PPP Specification v2.5 — document de travail*
+*À amender après l’analyse des types pilotes et l’épreuve minimale (§10).*

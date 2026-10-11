@@ -1,0 +1,147 @@
+# Fiche de type PPP — ppp:hueCount — format : PPP_FicheType.md (spec v2.5)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_joint, avertissement_label, note_categories, note_reference, note_dimension, note_conditions, note_echelle, note_porteur, note_base, bloque_par.
+id: ppp:hueCount
+label_fr: nombre de teintes
+label_en: hue count
+labels_alternatifs: []
+patron: P1
+sorte: qualité
+sous_sorte: gestalt
+strate: semi-formel
+base_dependance:
+  types:
+  - ppp:hue
+  facteurs_non_perceptuels: []
+facettes:
+- couleur
+définition: Nombre de teintes différentes (rouge, orange, jaune, vert, bleu, violet) qu’on voit dans une même zone ou une composition, quelles que soient leur clarté et leur saturation.
+question_attentionnelle: 'Combien de teintes différentes voit-on dans cette zone : une, deux ou trois, quatre ou plus ?'
+contre_exemple: 'Un camaïeu de bleus, du bleu nuit au bleu ciel, ne compte qu’une teinte. Une zone faite d’un rouge et d’un vert compte deux teintes, même si elles sont éloignées sur le cercle : l’écart
+  est l’affaire de l’éventail des teintes. Les gris, le noir et le blanc ne comptent pas comme des teintes.'
+modalites:
+- vision
+mode_de_presentation: image
+conditions_critiques:
+- presentation
+- distance
+note_conditions: de loin, des petites taches de teintes différentes se mêlent et le nombre vu baisse ; sur un écran ou un imprimé, les teintes peuvent différer
+porteur: une zone ou une composition
+arité: 1
+condition_NA: 'zone achromatique (blanc, gris, noir) : aucune teinte.'
+note_categories: 'On compte les six teintes de la fiche teinte (T6, décision de l’éditeur du projet du 2026-10-11) : un brun compte comme un orange, un rose comme un rouge ; un brun et un orange côte à
+  côte font une seule teinte (la différence est de clarté et de saturation), un rose et un rouge aussi. Les gris, le noir et le blanc ne comptent pas.'
+espace_valeurs:
+  echelle: ordinale
+  sens_croissant: de `oneHue` (rang 1) vers `fourOrMoreHues` (rang 3), on voit davantage de teintes différentes
+  numerique: non
+  regions:
+  - cle: oneHue
+    label_fr: une
+    label_en: one hue
+    rang: 1
+    repere: une seule teinte, quelles que soient les clartés (un camaïeu de bleus, un mur ocre)
+    exemplaires: []
+  - cle: twoOrThreeHues
+    label_fr: deux ou trois
+    label_en: two or three hues
+    rang: 2
+    repere: deux ou trois teintes (une faïence bleu et jaune ; un drapeau bleu, blanc, rouge n’en compte que deux, car le blanc n’est pas une teinte)
+    exemplaires: []
+  - cle: fourOrMoreHues
+    label_fr: quatre ou plus
+    label_en: four or more hues
+    rang: 3
+    repere: quatre teintes ou davantage (un étal de fruits et légumes, un vitrail)
+    exemplaires: []
+identite: Nombre des teintes vues dans une zone, pas leur écart sur le cercle (éventail des teintes), pas la teinte elle-même, pas le nombre d’éléments (densité).
+relations:
+- type: confusableWith
+  cible: ppp:hueRange
+  note: 'l’éventail dit la distance entre les teintes vues, ce type leur nombre : un rouge et un vert font deux teintes éloignées ; un rouge et un orange, deux teintes voisines'
+- type: confusableWith
+  cible: ppp:perceptualDensity
+  note: beaucoup d’éléments d’une seule teinte font une zone dense, pas beaucoup de teintes
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: halberda2006
+  citation: Halberda, J., Sires, S. A. & Feigenson, L. (2006). Multiple spatially overlapping sets can be enumerated in parallel. Psychological Science, 17(7), 572–576.
+  doi_ou_url: https://doi.org/10.1111/j.1467-9280.2006.01746.x
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: 'métadonnées Crossref et résumé (OpenAlex) : devant des points de nombreuses couleurs mêlés, les adultes sélectionnent des sous-ensembles par couleur et en dénombrent environ trois d’un seul
+    coup d’œil ; texte non lu'
+  reprend: le regroupement par couleur, et la limite d’environ trois ensembles saisis d’un coup d’œil, qui appuie la coupure entre « deux ou trois » et « quatre ou plus »
+  ne_reprend_pas: l’estimation approximative du nombre de points ; les mesures
+etat_de_l_art: 'Halberda, Sires et Feigenson (2006) [[halberda2006]] montrent que l’on regroupe des points par couleur et que l’on dénombre environ trois de ces ensembles d’un coup d’œil. Aucune source
+  trouvée ne propose une qualité perçue du nombre de teintes d’une zone, ni des degrés. Les teintes comptées sont les catégories de la teinte (T6). Détail : docs/bibliographie-par-type.md#groupe-couleur.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-couleur
+axiomes:
+- conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
+  validation: Toute assertion de type ppp:hueCount a exactement un ppp:about.
+- conceptuel: Les 3 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 3 ppp:Region de l’échelle du type ont des ppp:rank distincts, de 1 à 3 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Une région de cet espace n’est pas un sous-type du type.
+  validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
+nanay: 'Oui — passer de « c’est coloré » à « je compte les teintes : une, deux ou trois, quatre ou plus » change la description (une palette restreinte ou large).'
+transfert: objet conçu oui (textile imprimé, céramique peinte) | tableau oui (palette) | cuisine oui (vaisselle) | high-tech oui (interface)
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs exact (échelle à trois régions, spec §9.7 C, v2.5), au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques (spec
+    §9.7 H)
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les objets
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E3
+  nature: structure
+  enonce: deux zones dont on juge les teintes une à une identiques ne diffèrent pas en nombre de teintes (sinon la base est incomplète)
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2
+statut: candidat
+statut_epistemique: non éprouvé
+introduit_en: '2.5'
+modifie_en:
+- '2.6'
+remplace_par: []
+source_de_la_fiche: crash tests 01 et 02 (docs/crash-test-01-couleur-profonde.md §3.3 ; docs/crash-test-02-complexite-de-forme.md §3.3) ; verdict dans docs/questions-crash-tests.md C6, C7–C25 ; fiche minimale
+  du 2026-10-10 (série 6) par l’équipe, champs en langage courant validés depuis par la relecture explicative (série 6)
+manques:
+- 'exemplaires (à renseigner : objets publics vérifiés, un épisode par objet, conditions déclarées)'
+- 'fiche minimale (C6, 2.5) : langage courant, état de l’art et références validés par la relecture explicative (série 6) ; restent les exemplaires ; T6 tranché le 2026-10-11, C22 levé (sa seule dépendance
+  était T6)'
+bloque_par: []
+a_relire: []
+relecture_explicative:
+  date: '2026-10-11'
+  champs:
+  - définition (série 6)
+  - question_attentionnelle (série 6)
+  - contre_exemple (série 6)
+  - espace_valeurs.regions.repere (série 6)
+  - identite (série 6)
+  - relations.note (série 6)
+  - nanay (série 6)
+  - transfert (série 6)
+  - etat_de_l_art (série 6)
+  - references (série 6)
+  - relations.confusableWith(ppp:hueRange).note (re-confirmé en relecture explicative, série 9, 2026-10-11)
+  - note_categories (validé en relecture explicative, série 9, 2026-10-11)
+  a_reconfirmer: []
+  reconfirme:
+  - champ: relations.confusableWith(ppp:hueRange).note
+    date: '2026-10-11'
+    avant: 'l’éventail dit la distance entre les teintes vues, ce type leur nombre : un rouge et un vert font deux teintes éloignées ; un rouge, un orange et un jaune, trois teintes voisines'
+    apres: 'l’éventail dit la distance entre les teintes vues, ce type leur nombre : un rouge et un vert font deux teintes éloignées ; un rouge et un orange, deux teintes voisines'
+    raison: 'fait faux corrigé (relecture explicative, 2026-10-11) : rouge et jaune sont à deux pas sur le cercle de T6, donc éloignés'
+    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)

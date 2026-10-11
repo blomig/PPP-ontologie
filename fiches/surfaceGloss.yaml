@@ -1,0 +1,341 @@
+# Fiche de type PPP — ppp:surfaceGloss — format : PPP_FicheType.md (spec v2.4)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_joint, avertissement_label, note_categories, note_reference, note_dimension, note_conditions, note_echelle, note_porteur, note_base, bloque_par, note_labels_regions.
+id: ppp:surfaceGloss
+label_fr: brillance de surface
+label_en: surface gloss
+label_court: brillance
+labels_alternatifs: []
+avertissement_label: '« Brillance » et « brillant » ont d’autres sens que ce type. En français courant, « une couleur brillante » veut souvent dire une couleur vive : c’est la saturation, pas ce type. Ici,
+  « brillant » désigne une surface qui renvoie un reflet net de la lumière. « Brillance » a aussi un sens technique ancien. Le Grand dictionnaire terminologique de l’OQLF le donne comme l’ancien nom de
+  la luminance (la lumière qu’une surface émet ou renvoie dans une direction), « désuet » sauf en astronomie (fiche « luminance lumineuse ») ; dans le vocabulaire des peintures, il le donne comme une appellation
+  ancienne de la luminosité d’une surface qui émet de la lumière, et en déconseille l’emploi parce qu’on peut confondre « brillance » et « brillant », qui désigne le reflet net (fiche « brillance », 1983).
+  L’Académie française note : « on dit plutôt Luminance ». Ces sens parlent de la quantité de lumière, plus proche de la clarté, pas de la netteté des reflets. Ce type ne qualifie que la netteté des reflets
+  : c’est pourquoi son nom complet est « brillance de surface », et « brillance » seul ne s’emploie que là où l’on sait qu’on parle de ce type. Position de travail, révisable par l’éditeur du projet (T29).'
+patron: P1
+sorte: qualité
+sous_sorte: —
+strate: formel
+base_dependance:
+  types: []
+  facteurs_non_perceptuels: []
+facettes:
+- matiere
+définition: 'Netteté des reflets que montre une surface : de la surface sans aucun reflet à celle où l’on voit, comme dans un miroir, des images nettes de ce qui l’entoure.'
+question_attentionnelle: En bougeant un peu la tête ou l’objet, voit-on sur cette surface aucun reflet, un reflet doux et étalé, le reflet net d’une lampe ou d’une fenêtre, ou des images comme dans un miroir
+  ?
+contre_exemple: 'Une couleur vive n’est pas brillante pour autant : un papier rouge vif peut être tout à fait mat ; ce qui est vif, c’est sa saturation. Et une surface claire ne renvoie pas plus de reflets
+  qu’une sombre : un carrelage noir poli montre des reflets nets, un plâtre blanc n’en montre aucun.'
+grandeur_physique_homonyme: 'brillance spéculaire mesurée en unités de brillance (GU) au brillancemètre, sous les géométries 20°, 60° et 85° d’ISO 2813 (« Paints and varnishes — Determination of gloss value
+  at 20°, 60° and 85° ») ; la norme ASTM D523, qui emploie les mêmes géométries, note que peu de résultats publiés relient les intervalles mesurés aux intervalles perçus (« Little information about the
+  relation of numerical-to-perceptual intervals of specular gloss has been published », § 5.3) : aucune région ne s’en déduit.'
+modalites:
+- vision
+mode_de_presentation: échantillon
+conditions_critiques:
+- lumiere
+- angle
+note_conditions: les reflets dépendent de la lumière et de l’angle de vue ; un jugement fait sur une photo dont l’angle et la lumière de prise de vue sont inconnus est « non tranché » (spec §9.7 H, règle
+  4 ; A5)
+porteur: une surface, celle d’un objet ou d’une partie
+arité: 1
+condition_NA: porteur sans surface perceptible (une lumière, un son).
+espace_valeurs:
+  echelle: ordinale
+  sens_croissant: de `matte` (rang 1) vers `mirror` (rang 4), les reflets deviennent plus nets
+  numerique: non
+  regions:
+  - cle: matte
+    label_fr: mat
+    label_en: matte
+    rang: 1
+    repere: aucun reflet, sous aucun angle (un plâtre, un papier buvard)
+    exemplaires: []
+  - cle: satin
+    label_fr: satiné
+    label_en: satin
+    rang: 2
+    repere: un reflet doux et étalé, sans bord net (une coquille d’œuf, une peinture satinée)
+    exemplaires: []
+  - cle: lustrous
+    label_fr: brillant
+    label_en: lustrous
+    rang: 3
+    repere: un reflet net de la source de lumière, mais pas d’image (une céramique émaillée, une pomme frottée)
+    exemplaires: []
+    labels_alternatifs:
+    - à reflet net
+    - lustré
+  - cle: mirror
+    label_fr: miroir
+    label_en: mirror
+    rang: 4
+    repere: on voit des images nettes de ce qui entoure (un miroir, un métal poli, une eau calme)
+    exemplaires: []
+    labels_alternatifs:
+    - comme un miroir
+identite: Netteté des reflets d’une surface, pas la vivacité de sa couleur (saturation), pas sa clarté, pas ce qu’on voit à travers (transparence). La matité est le pôle bas de ce type, pas un autre type.
+relations:
+- type: confusableWith
+  cible: ppp:saturation
+  note: 'en français courant, « une couleur brillante » veut souvent dire une couleur vive : c’est la saturation'
+- type: separableFrom
+  cible: ppp:lightness
+  note: 'à éprouver (E2) : des surfaces de même clarté, du mat au miroir (un carrelage noir mat et un noir poli)'
+- type: tendsToProduce
+  cible: ppp:lightnessContrast
+  depuis: mirror
+  sous_conditions:
+  - 'lumiere: directional'
+  note: sous une lumière dirigée, une surface qui reflète comme un miroir montre des reflets très clairs à côté de zones sombres ; énoncé de structure surfaceGloss-1
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: pellacini2000
+  citation: Pellacini, F., Ferwerda, J. A. & Greenberg, D. P. (2000). Toward a psychophysically-based light reflection model for image synthesis. In Proceedings of the 27th Annual Conference on Computer
+    Graphics and Interactive Techniques (SIGGRAPH 2000), ACM Press, 55–64.
+  doi_ou_url: https://doi.org/10.1145/344779.344812
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: métadonnées Crossref et résumé (Semantic Scholar)
+  reprend: le brillant perçu comme qualité à dimensions établies par des jugements humains
+  ne_reprend_pas: le modèle de réflexion pour la synthèse d'image
+- id: motoyoshi2007
+  citation: Motoyoshi, I., Nishida, S., Sharan, L. & Adelson, E. H. (2007). Image statistics and the perception of surface qualities. Nature, 447(7141), 206–209.
+  doi_ou_url: https://doi.org/10.1038/nature05724
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: métadonnées Crossref et résumé PubMed (PMID 17443193)
+  reprend: le brillant comme qualité jugée à la vue, sur image
+  ne_reprend_pas: 'la statistique d''image (asymétrie de l''histogramme) : non reprise comme régions'
+- id: fleming2014
+  citation: Fleming, R. W. (2014). Visual perception of materials and their properties. Vision Research, 94, 62–75.
+  doi_ou_url: https://doi.org/10.1016/j.visres.2013.11.004
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: métadonnées Crossref et résumé (OpenAlex)
+  reprend: le brillant perçu n'est pas un paramètre physique, ce qui appuie un type perçu distinct de la mesure
+  ne_reprend_pas: sa théorie des modèles d'apparence
+- id: iso2813
+  citation: 'ISO 2813:2014. Paints and varnishes — Determination of gloss value at 20°, 60° and 85°. Genève : ISO.'
+  doi_ou_url: https://www.iso.org/standard/56807.html
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: 'page de l''éditeur (résumé : méthode de mesure du brillant des revêtements, géométries 20°, 60° ou 85°, revêtements non texturés sur substrat plan et opaque) ; texte payant non lu'
+  reprend: rien
+  ne_reprend_pas: la valeur de brillant mesurée (grandeur_physique_homonyme) ; la phrase non vérifiée qu'on lui prêtait est retirée en 2.5 (T33)
+  note_verification: l’ancienne phrase de grandeur_physique_homonyme (« la norme elle-même avertit… ») n’était pas vérifiée (texte payant) ; elle est remplacée en 2.5 par la phrase vérifiée d’ASTM D523
+    § 5.3 ; les classes « haute / moyenne / basse brillance » associées aux angles 20°, 60°, 85° ne sont pas vérifiées sur le texte de la norme
+- id: oqlf_brillance
+  citation: Office québécois de la langue française, Grand dictionnaire terminologique, fiches « brillance » (peinture, contrôle de la qualité des peintures, 1983) et « luminance lumineuse » (physique,
+    photométrie et colorimétrie, mise à jour 1993).
+  doi_ou_url: https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8885899/brillance ; https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8876545/luminance-lumineuse
+  role: contraste
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-10-10'
+  verifie_sur: 'fiches lues en ligne le 2026-10-10. Fiche 8885899 « brillance » (peinture, 1983) : appellation ancienne, encore quelquefois utilisée, de la luminosité d’une surface qui émet un rayonnement
+    lumineux ; la CIE ne retient que « luminosité » ; emploi déconseillé pour la confusion entre « brillance » (réflexion diffuse) et « brillant » (réflexion régulière). Fiche 8876545 « luminance lumineuse
+    » : « brillance », marqué désuet, ancien nom de la luminance lumineuse, encore en usage en astronomie'
+  reprend: 'l’avertissement de label : « brillance », ancien nom de la luminance, désuet sauf en astronomie (fiche « luminance lumineuse ») ; dans le vocabulaire des peintures, appellation ancienne de la
+    luminosité d’une surface qui émet de la lumière, emploi déconseillé pour la confusion avec « brillant », réflexion régulière (fiche « brillance »)'
+  ne_reprend_pas: rien d’autre ; en particulier, aucune des deux fiches ne parle de la netteté des reflets ni de niveaux de brillance
+  note_verification: 'corrigé en série 6, partie 7 : en 2.5 (T33), « emploi déconseillé » était rattaché à la fiche « brillance » comme si elle parlait de la luminance ; elle parle de la luminosité (le
+    correspondant perçu de la luminance, selon sa note) et motive le déconseil par la confusion avec « brillant » ; c’est la fiche « luminance lumineuse » qui donne « brillance » comme ancien nom de la
+    luminance. Domaine de la fiche « brillance » corrigé (peinture, pas éclairage). Re-confirmé par la relecture explicative (série 6, vérification finale)'
+- id: academie_brillance
+  citation: Académie française, Dictionnaire de l'Académie française, 9e édition, article « brillance ».
+  doi_ou_url: https://www.dictionnaire-academie.fr/article/A9B2144
+  role: contraste
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-10-10'
+  verifie_sur: 'article lu en ligne : physique, astronomie, « on dit plutôt Luminance »'
+  reprend: 'l''avertissement de label : sens physique de « brillance » (on dit plutôt luminance)'
+  ne_reprend_pas: rien d'autre
+  note_verification: l'Académie dit « on dit plutôt Luminance », pas « déconseillé »
+- id: hunter1937
+  citation: Hunter, R. S. (1937). Methods of determining gloss. Journal of Research of the National Bureau of Standards, 18(1), 19 et suiv.
+  doi_ou_url: https://doi.org/10.6028/jres.018.006
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: 'métadonnées Crossref et résumé (OpenAlex) : six sortes de brillance (specular gloss, sheen, contrast gloss, absence-of-bloom gloss, distinctness-of-reflected-image gloss, absence-of-surface-texture
+    gloss) ; texte intégral non lu'
+  reprend: l’idée que la brillance a plusieurs sortes ; la netteté des reflets de PPP est voisine de la *distinctness-of-reflected-image gloss* (skos:relatedMatch, alignements_externes)
+  ne_reprend_pas: 'les six sortes comme types ou comme régions : ce sont des sortes de brillance, pas des degrés ; les méthodes de mesure'
+- id: astm_d523
+  citation: ASTM D523-14(2018). Standard Test Method for Specular Gloss. ASTM International.
+  doi_ou_url: https://store.astm.org/d0523-14r18.html
+  role: contraste
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-10-10'
+  verifie_sur: 'sections 1.1 (géométries 60°, 20° et 85°) et 5.1–5.4 (signification et usage) lues sur la page de l’éditeur ; DOI de la série : 10.1520/D0523 (Crossref)'
+  reprend: 'rien : la phrase citée dans grandeur_physique_homonyme (§ 5.3)'
+  ne_reprend_pas: la valeur de brillance mesurée et ses géométries ; aucune classe de niveaux n’y est lue
+- id: leloup2014
+  citation: 'Leloup, F. B., Obein, G., Pointer, M. R. & Hanselaer, P. (2014). Toward the soft metrology of surface gloss: A review. Color Research & Application, 39(6), 559–570.'
+  doi_ou_url: https://doi.org/10.1002/col.21846
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: 'métadonnées Crossref (en ligne 2013) et résumé : la perception de la brillance est multidimensionnelle, et le brillancemètre spéculaire ne donne pas une base fiable pour estimer l’aspect
+    brillant'
+  reprend: la distinction entre brillance mesurée et brillance vue
+  ne_reprend_pas: les méthodes de mesure proposées
+- id: fleming2003
+  citation: Fleming, R. W., Dror, R. O. & Adelson, E. H. (2003). Real-world illumination and the perception of surface reflectance properties. Journal of Vision, 3(5), 3.
+  doi_ou_url: https://doi.org/10.1167/3.5.3
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: 'métadonnées Crossref et résumé : l’estimation de la réflectance (dont la brillance) est fiable sous un éclairage réaliste, et se dégrade sinon'
+  reprend: la dépendance du jugement à l’éclairage, qui appuie `lumiere` comme facette critique
+  ne_reprend_pas: le modèle de statistiques d’éclairage
+- id: wendt2010
+  citation: Wendt, G., Faul, F., Ekroll, V. & Mausfeld, R. (2010). Disparity, motion, and color information improve gloss constancy performance. Journal of Vision, 10(9), 7.
+  doi_ou_url: https://doi.org/10.1167/10.9.7
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: 'métadonnées Crossref et résumé : le mouvement, la disparité et la couleur améliorent la constance de la brillance perçue'
+  reprend: 'le fait que bouger la tête ou l’objet aide à juger la brillance (question attentionnelle, `angle: varied`)'
+  ne_reprend_pas: le modèle de Phong et les stimuli de synthèse
+etat_de_l_art: 'La brillance perçue a une littérature récente : Pellacini, Ferwerda et Greenberg (2000) [[pellacini2000]] dégagent ses dimensions perçues à partir de jugements humains ; Motoyoshi et al.
+  (2007) [[motoyoshi2007]] relient le brillant perçu à des mesures simples calculées sur l''image ; Fleming (2014) [[fleming2014]] soutient que la vue reconnaît les matériaux à leur aspect, sans retrouver
+  leurs propriétés physiques. Hunter (1937) [[hunter1937]] distingue six sortes de brillance, dont la netteté de l''image réfléchie, voisine de ce type ; Leloup et al. (2014) [[leloup2014]] rappellent que
+  la mesure de brillant faite par un appareil ne prédit pas bien la brillance vue, et Fleming, Dror et Adelson (2003) [[fleming2003]] que le jugement dépend de l''éclairage. Dans ce qui en a été lu (résumés,
+  pages d''éditeur), aucune ne nomme des niveaux perçus. La mesure de brillant des normes (ISO 2813, ASTM D523) [[iso2813]] [[astm_d523]] porte le même nom sans être ce type ; le mot « brillance » est aussi
+  l''ancien nom de la luminance (OQLF, Académie française) [[oqlf_brillance]] [[academie_brillance]]. Détail : docs/bibliographie-par-type.md#groupe-matiere.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-matiere
+axiomes:
+- conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
+  validation: Toute assertion de type ppp:surfaceGloss a exactement un ppp:about.
+- conceptuel: Les 4 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 4 ppp:Region de l’échelle du type ont des ppp:rank distincts, de 1 à 4 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Une région de cet espace n’est pas un sous-type du type.
+  validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
+nanay: Oui — passer de « je vois une surface » à « je regarde ses reflets en bougeant » change la description (ce que la surface renvoie de la pièce, changement d’aspect avec le point de vue).
+transfert: objet conçu oui (émail, vernis, métal) | tableau oui (un vernis, ou une toile laissée sans vernis) | cuisine oui (inox poli, faïence) | high-tech oui (coque mate ou laquée, écran)
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs à une région près, au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques (spec §9.7 H)
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E2
+  nature: structure
+  enonce: on peut faire varier la brillance de surface en tenant la clarté constante (des surfaces de même clarté, du mat au miroir)
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les objets
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: surfaceGloss-1
+  nature: structure
+  enonce: sous une lumière dirigée, une surface de la région `mirror` montre entre reflets et zones voisines un contraste de clarté au moins « marqué » (tendsToProduce)
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2
+statut: candidat
+statut_epistemique: non éprouvé
+introduit_en: '2.3'
+modifie_en:
+- 2.3.1
+- 2.3.2
+- '2.5'
+- '2.6'
+remplace_par: []
+source_de_la_fiche: crash tests, partie 1 (spec 2.3, docs/questions-crash-tests.md C4) ; fiche préremplie le 2026-10-10 par l’équipe, champs en langage courant à valider par la relecture explicative
+manques:
+- 'exemplaires (à renseigner : objets publics vérifiés, un épisode par objet, conditions déclarées)'
+- 'labels de région : « mat / satiné / brillant / miroir », tranchés (T29, décision de l’éditeur du projet, 2026-10-10 ; clés inchangées)'
+- 'ne s’explique pas sans aide (relecture explicative, série 6) : exemple concret à trouver : l’avertissement est lourd et « brillant » est ambigu (couleur vive ou reflet net) ; un objet public par région,
+  et en tête un exemple concret qui montre la différence entre « brillant » (reflet net) et « vif » (saturation)'
+bloque_par: []
+a_relire: []
+relecture_explicative:
+  date: '2026-10-11'
+  champs:
+  - question_attentionnelle
+  - définition
+  - contre_exemple
+  - espace_valeurs.regions.repere
+  - identite
+  - relations.note
+  - nanay
+  - transfert
+  - avertissement_label (2.3.2)
+  - etat_de_l_art (série 6, vérification finale)
+  - references (série 6, vérification finale)
+  - identite (re-confirmé en relecture explicative, série 9, 2026-10-11)
+  - note_conditions (re-confirmé en relecture explicative, série 9, 2026-10-11)
+  a_reconfirmer: []
+  reconfirme:
+  - champ: identite
+    date: '2026-10-10'
+    avant: Netteté des reflets d’une surface, pas la vivacité de sa couleur (saturation), pas sa clarté, pas ce qu’on voit à travers (translucidité). La matité est le pôle bas de ce type, pas un autre type.
+    apres: Netteté des reflets d’une surface, pas la vivacité de sa couleur (saturation), pas sa clarté, pas ce qu’on voit à travers (vue à travers). La matité est le pôle bas de ce type, pas un autre type.
+    raison: 'label canonique de ppp:translucency changé : « translucidité » → « vue à travers » (objection 1, T28)'
+    remarque: reconfirmé par la relecture explicative (spec 2.3.2)
+  - champ: contre_exemple
+    date: '2026-10-10'
+    avant: 'Une couleur vive n’est pas brillante pour autant : un papier rouge vif peut être tout à fait mat ; ce qui est vif, c’est sa saturation. Et une surface claire ne renvoie pas plus de reflets qu’une
+      sombre : un carrelage noir poli montre des reflets nets, un plâtre blanc n’en montre aucun.'
+    apres: (inchangé ; à relire avec le label de région « brillant »)
+    raison: 'T29 : « brillante » y est employé au sens de la région `lustrous` ou plus ; la phrase reste juste, à confirmer'
+    remarque: 're-confirmé tel quel : « n’est pas brillante pour autant » se lit maintenant au sens de la région « brillant » (reflet net), ce qui est voulu ; les deux confusions courantes (vif, clair)
+      sont écartées par des objets publics'
+  - champ: avertissement_label
+    date: '2026-10-10'
+    avant: '« Brillance » a deux sens qui ne sont pas ce type. En français courant, « une couleur brillante » veut souvent dire une couleur vive : c’est la saturation (relation confusableWith). En photométrie,
+      « brillance » est l’ancien nom de la luminance (terme déconseillé ; OQLF, Grand dictionnaire terminologique, fiche « luminance lumineuse » ; Académie française, Dictionnaire, 9e édition, art. « brillance
+      ») : c’est une grandeur de lumière émise ou réfléchie, plus proche de la clarté que de la netteté des reflets. Ce type ne qualifie que la netteté des reflets. Le label canonique « brillance de surface
+      » le rappelle ; le label court « brillance » n’est utilisé que dans un contexte PPP explicite (spec §9.7 J). Position de travail, révisable par l’éditeur du projet (T29).'
+    apres: '« Brillance » et « brillant » ont d’autres sens que ce type. En français courant, « une couleur brillante » veut souvent dire une couleur vive : c’est la saturation, pas ce type. Ici, « brillant
+      » désigne une surface qui renvoie un reflet net de la lumière. « Brillance » a aussi un sens technique ancien. Le Grand dictionnaire terminologique de l’OQLF le donne comme l’ancien nom de la luminance
+      (la lumière qu’une surface émet ou renvoie dans une direction), « désuet » sauf en astronomie (fiche « luminance lumineuse ») ; dans le vocabulaire des peintures, il le donne comme une appellation
+      ancienne de la luminosité d’une surface qui émet de la lumière, et en déconseille l’emploi parce qu’on peut confondre « brillance » et « brillant », qui désigne le reflet net (fiche « brillance »,
+      1983). L’Académie française note : « on dit plutôt Luminance ». Ces sens parlent de la quantité de lumière, plus proche de la clarté, pas de la netteté des reflets. Ce type ne qualifie que la netteté
+      des reflets : c’est pourquoi son nom complet est « brillance de surface », et « brillance » seul ne s’emploie que là où l’on sait qu’on parle de ce type. Position de travail, révisable par l’éditeur
+      du projet (T29).'
+    raison: 'T33, objection de la relecture explicative (série 6) : l’attribution GDT était mal faite. Pages revérifiées le 2026-10-10 : fiche 8885899 « brillance » (peinture, contrôle de la qualité des
+      peintures, 1983) : « appellation ancienne, encore quelquefois utilisée, pour désigner la luminosité d’une surface qui émet un rayonnement lumineux » ; emploi déconseillé « en regard aux confusions
+      possibles entre le terme « brillance » qui évoque la réflexion diffuse et le terme « brillant » qui évoque la réflexion régulière » ; fiche 8876545 « luminance lumineuse » (photométrie, 1993) : «
+      brillance », terme « désuet », « La luminance lumineuse était appelée autrefois brillance », « reste toujours utilisé en astronomie ». Avertissement simplifié : sans nom de relation, de clé de région
+      ni de renvoi à la spec. T29 : rappel que « brillant » désigne ici les reflets'
+    remarque: 're-confirmé par la relecture explicative (vérification finale de la série 6) : chaque affirmation correspond aux fiches GDT 8885899 et 8876545 relues le 2026-10-10 (« appellation ancienne…
+      luminosité d’une surface qui émet un rayonnement lumineux », déconseillé pour la confusion avec « brillant » qui évoque la réflexion régulière ; « La luminance lumineuse était appelée autrefois brillance
+      », désuet, « toujours utilisé en astronomie » ; luminance : lumière « émise » ou « renvoyée » dans une direction) et à l’article de l’Académie (« on dit plutôt Luminance »), relu le même jour ; texte
+      clair pour un profane'
+  - champ: identite
+    date: '2026-10-11'
+    avant: Netteté des reflets d’une surface, pas la vivacité de sa couleur (saturation), pas sa clarté, pas ce qu’on voit à travers (vue à travers). La matité est le pôle bas de ce type, pas un autre type.
+    apres: Netteté des reflets d’une surface, pas la vivacité de sa couleur (saturation), pas sa clarté, pas ce qu’on voit à travers (transparence). La matité est le pôle bas de ce type, pas un autre type.
+    raison: 'T28 tranché par l’éditeur du projet le 2026-10-11 : label canonique de ppp:translucency « transparence » (« vue à travers » en label alternatif) ; seul le nom du type change'
+    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+  - champ: note_conditions
+    date: '2026-10-11'
+    avant: les reflets dépendent de la lumière et de l’angle de vue ; un jugement fait sur une photo, angle et lumière inconnus, est « non tranché » (spec §9.3)
+    apres: les reflets dépendent de la lumière et de l’angle de vue ; un jugement fait sur une photo dont l’angle et la lumière de prise de vue sont inconnus est « non tranché » (spec §9.7 H, règle 4 ;
+      A5)
+    raison: 'renvoi corrigé (relecture explicative) : la règle « facette critique inconnue = non tranché » est §9.7 H, règle 4 (avec A5), pas §9.3 ; relecture explicative (2026-10-11) : « dont l’angle et
+      la lumière de prise de vue sont inconnus » (seconde relecture explicative)'
+    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+alignements_externes:
+- relation: skos:relatedMatch
+  cible: distinctness-of-reflected-image gloss (Hunter 1937)
+  reference: Hunter, R. S. (1937). Methods of determining gloss. Journal of Research of the National Bureau of Standards, 18(1), 19 et suiv. doi:10.6028/jres.018.006
+  reference_id: hunter1937
+  note: une des six sortes de brillance de Hunter, mesurée ; PPP qualifie la netteté des reflets vue, du mat au miroir ; ne fournit pas de régions ; non déclaré exact (spec §9.7 O)
+note_labels_regions: 'Labels de région « mat / satiné / brillant / miroir » (décision de l’éditeur du projet, 2026-10-10, T29), après recherche d’une catégorisation reconnue des niveaux de brillance : les
+  sources vérifiées donnent des sortes de brillance (Hunter 1937) [[hunter1937]] ou des géométries de mesure (ISO 2813, ASTM D523) [[iso2813]] [[astm_d523]], pas des niveaux perçus nommés (docs/bibliographie-par-type.md#groupe-matiere).
+  « Brillant » et « brillance » sont de même racine dans le même type, comme « symétrique » et « symétrie » : pas de collision A2 au sens de §9.7 J (qui vise un label d’un autre type) ; le sens « couleur
+  vive » est traité par avertissement_label.'

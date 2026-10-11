@@ -1,0 +1,164 @@
+# Fiche de type PPP — ppp:lightnessRange — format : PPP_FicheType.md (spec v2.5)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_joint, avertissement_label, note_categories, note_reference, note_dimension, note_conditions, note_echelle, note_porteur, note_base, bloque_par.
+id: ppp:lightnessRange
+label_fr: éventail des clartés
+label_en: lightness range
+labels_alternatifs: []
+patron: P1
+sorte: qualité
+sous_sorte: gestalt
+strate: semi-formel
+base_dependance:
+  types:
+  - ppp:lightness
+  facteurs_non_perceptuels: []
+facettes:
+- couleur
+définition: 'Écart entre les clartés (du plus sombre au plus clair) qu’on voit dans une même zone : une seule clarté, des clartés proches, ou des clartés éloignées, quelles que soient leurs teintes.'
+question_attentionnelle: Dans cette zone, voit-on une seule clarté, des clartés proches (des gris moyens un peu différents) ou des clartés éloignées (du presque noir et du presque blanc) ?
+contre_exemple: 'Un tissu rouge et vert de même clarté ne montre qu’une clarté : il varie en teinte, pas en clarté. Deux zones qu’on montre du doigt, l’une claire, l’autre sombre, se comparent par un contraste
+  de clarté ; l’éventail des clartés dit ce qu’on voit dans toute une zone, sans en choisir deux.'
+modalites:
+- vision
+mode_de_presentation: image
+conditions_critiques:
+- presentation
+- lumiere
+- distance
+note_conditions: 'une ombre ou un reflet sur un objet courbe fait varier ce qu’on voit : on juge les clartés de la matière, pas celles de l’éclairage (à éprouver) ; de loin, de petites taches claires et
+  sombres se mêlent'
+porteur: une zone ou une composition
+arité: 1
+condition_NA: zone trop petite pour montrer plus d’une clarté (un point).
+espace_valeurs:
+  echelle: ordinale
+  sens_croissant: de `singleLightness` (rang 1) vers `distantLightnesses` (rang 3), les clartés vues s’éloignent davantage, du plus sombre au plus clair
+  numerique: non
+  regions:
+  - cle: singleLightness
+    label_fr: une seule clarté
+    label_en: single lightness
+    rang: 1
+    repere: toute la zone a la même clarté (un mur peint uniformément, sous une lumière égale)
+    exemplaires: []
+  - cle: closeLightnesses
+    label_fr: clartés proches
+    label_en: close lightnesses
+    rang: 2
+    repere: des clartés un peu différentes, sans très clair ni très sombre côte à côte (un enduit nuageux, un lin chiné)
+    exemplaires: []
+  - cle: distantLightnesses
+    label_fr: clartés éloignées
+    label_en: distant lightnesses
+    rang: 3
+    repere: du très sombre et du très clair dans la même zone (un damier, une gravure en noir et blanc)
+    exemplaires: []
+identite: Écart des clartés vues dans une même zone, pas la clarté elle-même (claire ou sombre), pas l’écart entre deux zones qu’on compare (contraste de clarté), pas les écarts de teinte (éventail des
+  teintes).
+relations:
+- type: confusableWith
+  cible: ppp:lightnessContrast
+  note: deux zones qu’on montre du doigt se comparent par un contraste de clarté ; l’éventail dit l’écart des clartés vues dans toute une zone
+- type: confusableWith
+  cible: ppp:hueRange
+  note: une zone peut varier en teinte sans varier en clarté, et l’inverse (un camaïeu de bleus, du bleu nuit au bleu ciel)
+alignements_externes:
+- relation: skos:relatedMatch
+  cible: contrast (Tamura, Mori et Yamawaki 1978)
+  reference: Tamura, H., Mori, S. & Yamawaki, T. (1978). Textural features corresponding to visual perception. IEEE Transactions on Systems, Man, and Cybernetics, 8(6), 460–473. doi:10.1109/TSMC.1978.4309999
+  reference_id: tamura1978
+  note: étalement des niveaux de gris dans une texture, mesuré sur une image ; PPP dit l’écart des clartés vues ; ne fournit pas de régions ; non déclaré exact (spec §9.7 O)
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: virtanen2026
+  citation: Virtanen, L., Saarela, T. & Olkkonen, M. (2026). Complex interactions between lightness, chroma, and hue in color ensemble perception. Vision Research, 246, 108868.
+  doi_ou_url: https://doi.org/10.1016/j.visres.2026.108868
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: 'métadonnées Crossref et résumé (OpenAlex) : effet de la variation spatiale de clarté, de chroma et de teinte d''une plage de couleur sur la couleur moyenne perçue ; texte non lu'
+  reprend: la variation spatiale de clarté dans une même plage comme objet d'étude perceptive, distinct de la clarté moyenne
+  ne_reprend_pas: la couleur moyenne perçue, les seuils et les mesures
+- id: tamura1978
+  citation: Tamura, H., Mori, S. & Yamawaki, T. (1978). Textural features corresponding to visual perception. IEEE Transactions on Systems, Man, and Cybernetics, 8(6), 460–473.
+  doi_ou_url: https://doi.org/10.1109/TSMC.1978.4309999
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: métadonnées Crossref et résumé IEEE Xplore ; deux sources secondaires (docs/etat-de-l-art.md §5 bis) ; texte intégral non lu
+  reprend: la dimension *contrast* (étalement des niveaux de gris à l'intérieur d'une texture), rapprochée de ce type (skos:relatedMatch, alignements_externes)
+  ne_reprend_pas: la mesure calculée sur une image ; aucune région n'en est tirée
+- id: chubb1994
+  citation: Chubb, C., Econopouly, J. & Landy, M. S. (1994). Histogram contrast analysis and the visual segregation of IID textures. Journal of the Optical Society of America A, 11(9), 2350.
+  doi_ou_url: https://doi.org/10.1364/JOSAA.11.002350
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: 'métadonnées Crossref et résumé lu en entier (OpenAlex, 2026-10-10) : méthode psychophysique (analyse du contraste d’histogramme) ; textures de petites cases unies, de gris tirés au hasard
+    ; à gris moyen et variance fixés, deux textures se distinguent seulement si la moyenne d’une certaine fonction des gris diffère ; texte non lu'
+  reprend: l'idée, appuyée par le résumé, que la vue distingue des plages par la répartition de leurs gris, et pas seulement par leur gris moyen
+  ne_reprend_pas: la méthode et ses mesures
+etat_de_l_art: 'Tamura, Mori et Yamawaki (1978) [[tamura1978]] calculent l’étalement des niveaux de gris à l’intérieur d’une texture (leur *contrast*), proche de ce type ; Chubb, Econopouly et Landy (1994)
+  [[chubb1994]] montrent, sur des textures faites de petites cases grises, que la vue peut distinguer deux plages de même gris moyen et de même dispersion selon la répartition de leurs gris (résumé lu)
+  ; Virtanen, Saarela et Olkkonen (2026) [[virtanen2026]] étudient l’effet de la variation de clarté, de chroma (saturation) et de teinte d’une plage sur la couleur moyenne perçue. Aucune source trouvée
+  ne nomme des degrés perçus de cet écart. Détail : docs/bibliographie-par-type.md#groupe-couleur.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-couleur
+axiomes:
+- conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
+  validation: Toute assertion de type ppp:lightnessRange a exactement un ppp:about.
+- conceptuel: Les 3 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 3 ppp:Region de l’échelle du type ont des ppp:rank distincts, de 1 à 3 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Une région de cet espace n’est pas un sous-type du type.
+  validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
+nanay: Oui — passer de « cette zone est grise » à « je regarde si ses clartés sont une seule, proches ou éloignées » change la description (une zone égale ou tachetée).
+transfert: objet conçu oui (enduit, pierre, textile chiné) | tableau oui (clairs et sombres d’une zone) | cuisine oui (plan de travail) | high-tech oui (coque mouchetée)
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs exact (échelle à trois régions, spec §9.7 C, v2.5), au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques (spec
+    §9.7 H)
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les objets
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E3
+  nature: structure
+  enonce: deux zones dont on juge les clartés une à une identiques ne diffèrent pas en éventail des clartés (sinon la base est incomplète)
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2
+statut: candidat
+statut_epistemique: non éprouvé
+introduit_en: '2.5'
+modifie_en: []
+remplace_par: []
+source_de_la_fiche: crash tests 01 et 02 (docs/crash-test-01-couleur-profonde.md §3.3 ; docs/crash-test-02-complexite-de-forme.md §3.3) ; verdict dans docs/questions-crash-tests.md C6, C7–C25
+  ; fiche minimale du 2026-10-10 (série 6) par l’équipe, champs en langage courant validés depuis par la relecture explicative (série 6)
+manques:
+- 'exemplaires (à renseigner : objets publics vérifiés, un épisode par objet, conditions déclarées)'
+- 'fiche minimale (C6, 2.5) : langage courant, état de l’art et références validés par la relecture explicative (série 6) ; restent les exemplaires et C7 (bloque_par)'
+bloque_par:
+- C7 (type par dimension ou type général de dispersion ; docs/questions-crash-tests.md)
+a_relire: []
+relecture_explicative:
+  date: '2026-10-10'
+  champs:
+  - définition (série 6)
+  - question_attentionnelle (série 6)
+  - contre_exemple (série 6)
+  - espace_valeurs.regions.repere (série 6)
+  - identite (série 6)
+  - relations.note (série 6)
+  - nanay (série 6)
+  - transfert (série 6)
+  - etat_de_l_art (série 6, vérification finale)
+  - references (série 6, vérification finale)
+  a_reconfirmer: []

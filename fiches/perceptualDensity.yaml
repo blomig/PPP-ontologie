@@ -1,0 +1,148 @@
+# Fiche de type PPP — ppp:perceptualDensity — format : PPP_FicheType.md (spec v2.4)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_joint, avertissement_label, note_categories, note_reference, note_dimension, note_conditions, note_echelle, note_porteur, note_base, bloque_par.
+id: ppp:perceptualDensity
+label_fr: densité perceptive
+label_en: perceptual density
+label_court: densité
+labels_alternatifs: []
+patron: P1
+sorte: qualité
+sous_sorte: —
+strate: semi-formel
+base_dependance:
+  types:
+  - ppp:contour
+  - ppp:distribution
+  facteurs_non_perceptuels: []
+facettes:
+- organisation
+définition: 'Quantité d’éléments ou de détails distincts qu’on perçoit dans un objet ou une zone, rapportée à sa taille : d’aucun élément distinct à des éléments qui couvrent presque tout le fond.'
+question_attentionnelle: Pour sa taille, l’objet ou la zone contient-il peu ou beaucoup d’éléments distincts ?
+contre_exemple: 'Une seule tache rouge très saturée sur un mur blanc attire le regard, mais elle ne fait qu’un élément : le mur compte très peu d’éléments pour sa taille, et ce qui frappe tient à la saturation
+  et au contraste. Un enduit finement granuleux ne montre pas d’éléments distincts : sa texture est fine, mais il ne compte pas pour autant beaucoup d’éléments.'
+grandeur_physique_homonyme: masse volumique (densité au sens physique), aucune région ne s’en déduit.
+modalites:
+- vision
+mode_de_presentation: image
+conditions_critiques:
+- distance
+note_conditions: de loin, des éléments distincts se fondent et la zone paraît moins dense ou uniforme
+porteur: un objet d’attention, ou une partie / une zone
+arité: 1
+condition_NA: porteur sans étendue perceptible (point, instant isolé). Une surface uniforme est APPLICABLE, en région `uniform`.
+espace_valeurs:
+  echelle: ordinale
+  sens_croissant: de `uniform` (rang 1) vers `veryDense` (rang 5), le nombre d’éléments distincts perçus augmente
+  numerique: non
+  regions:
+  - cle: uniform
+    label_fr: uniforme
+    label_en: uniform
+    rang: 1
+    repere: aucun élément distinct, variation imperceptible (un mur enduit, un aplat)
+    exemplaires: []
+  - cle: sparse
+    label_fr: clairsemé
+    label_en: sparse
+    rang: 2
+    repere: quelques éléments isolés sur un fond qui domine (une page de titre)
+    exemplaires:
+    - ppp-a:pilote-0203
+  - cle: moderate
+    label_fr: moyen
+    label_en: moderate
+    rang: 3
+    repere: éléments et fond à parts comparables (une page de texte courant)
+    exemplaires: []
+  - cle: dense
+    label_fr: dense
+    label_en: dense
+    rang: 4
+    repere: les éléments dominent le fond (un parement de briques à motifs)
+    exemplaires:
+    - ppp-a:pilote-0202
+  - cle: veryDense
+    label_fr: très dense
+    label_en: very dense
+    rang: 5
+    repere: le fond n’est presque plus perceptible (une mosaïque serrée)
+    exemplaires: []
+identite: Quantité d’éléments perçus, pas force d’une couleur (saturation), pas taille des reliefs d’une surface (texture).
+relations:
+- type: separableFrom
+  cible: ppp:saturation
+  note: une zone peut être très saturée et clairsemée (une seule tache saturée sur fond uniforme)
+- type: confusableWith
+  cible: ppp:texture
+  note: une texture fine peut faire paraître une surface dense ; la texture, c’est la taille des reliefs d’une surface, la densité compte des éléments distincts
+- type: confusableWith
+  cible: ppp:negativeSpace
+  note: l’espace négatif dit si les espaces entre les éléments se lisent comme des formes ; une zone peu dense peut en avoir peu ou beaucoup
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: durgin1995
+  citation: 'Durgin, F. H. (1995). Texture density adaptation and the perceived numerosity and distribution of texture. Journal of Experimental Psychology: Human Perception and Performance, 21(1), 149–169.'
+  doi_ou_url: https://doi.org/10.1037/0096-1523.21.1.149
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: métadonnées Crossref et résumé (OpenAlex)
+  reprend: la densité perçue comme dimension distincte du nombre d'éléments et de leur répartition
+  ne_reprend_pas: les mesures d'adaptation et les champs de points
+etat_de_l_art: 'Durgin (1995) [[durgin1995]] étudie la densité de texture perçue, qu’il distingue du nombre d’éléments et de leur répartition, et montre qu’elle s’adapte : après une longue exposition, la
+  densité vue change. La densité au sens physique (masse volumique) est un homonyme. Aucune source trouvée ne fixe des régions perçues de densité. Détail : docs/bibliographie-par-type.md#groupe-organisation.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-organisation
+axiomes:
+- conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
+  validation: Toute assertion de type ppp:perceptualDensity a exactement un ppp:about.
+- conceptuel: Les 5 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 5 ppp:Region de l’échelle du type ont des ppp:rank distincts, de 1 à 5 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Une région de cet espace n’est pas un sous-type du type.
+  validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
+nanay: Oui — passer de « je regarde la forme » à « je vois combien c’est dense ou clairsemé » modifie la description de l’expérience (place du fond, parcours du regard).
+transfert: objet conçu oui | tableau oui (composition) | cuisine oui (décor vs lisse) | high-tech oui (face clairsemée vs face très dense en informations)
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs à une région près, au-dessus du seuil fixé avant l’épreuve
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E2
+  nature: structure
+  enonce: on peut faire varier la densité en tenant la saturation constante (une tache saturée sur fond uniforme vs un semis serré de taches de même saturation)
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas entre observateurs qui aiment et n’aiment pas les objets très denses
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2, CQ4a–e, CQ12a–e, CQ14, CQ16a, CQ23, CQ24
+statut: candidat
+statut_epistemique: non éprouvé
+introduit_en: '2.1'
+modifie_en:
+- 2.2.2
+- 2.2.3
+- 2.3.1
+remplace_par: []
+source_de_la_fiche: 'reprise de l’exemple rempli de PPP_FicheType.md (v2.2), puis relue en relecture explicative et corrigée (2026-10-10) ; cette fiche fait foi et l’exemple de PPP_FicheType.md est réaligné sur
+  elle ; ajoutés : exemplaires, champs `nature` et `epreuve` des énoncés'
+a_relire: []
+relecture_explicative:
+  date: '2026-10-10'
+  champs:
+  - question_attentionnelle
+  - définition
+  - contre_exemple
+  - exemplaires
+  - etat_de_l_art (série 6)
+  - references (série 6)
+  a_reconfirmer: []
+manques:
+- régions `uniform`, `moderate`, `veryDense` sans exemplaire

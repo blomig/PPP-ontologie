@@ -1,0 +1,227 @@
+# Fiche de type PPP — ppp:hueContrast — format : PPP_FicheType.md (spec v2.4)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_joint, avertissement_label, note_categories, note_reference, note_dimension, note_conditions, note_echelle, note_porteur, note_base, bloque_par, note_cercle.
+id: ppp:hueContrast
+label_fr: contraste de teinte
+label_en: hue contrast
+label_court: contraste de teinte
+labels_alternatifs: []
+patron: P2
+sorte: relateur
+sous_sorte: —
+strate: semi-formel
+base_dependance:
+  types:
+  - ppp:hue
+  facteurs_non_perceptuels: []
+facettes:
+- couleur
+définition: Différence perçue de teinte (rouge, jaune, bleu…) entre deux zones, parties ou objets, quelles que soient leur clarté et leur saturation.
+question_attentionnelle: Si l’on ne regarde que la teinte (rouge, jaune, bleu…), la différence entre ces deux zones est-elle faible (deux bleus), modérée (un bleu et un vert), évidente (un bleu et un jaune)
+  ou maximale (deux teintes opposées sur le cercle des couleurs, comme un bleu et un orange) ?
+contre_exemple: 'Un bleu marine et un bleu ciel ont presque la même teinte : leur contraste de teinte est faible, leur contraste de clarté est évident.'
+modalites:
+- vision
+mode_de_presentation: image
+conditions_critiques:
+- presentation
+note_conditions: sur un écran ou un imprimé, les teintes peuvent différer de celles de l’objet
+porteur: deux termes (zones, parties ou objets), rôle `terme` pour chacun
+arité: 2
+dimension_comparee: ppp:hue
+condition_NA: moins de deux termes distincts sur cette dimension (une seule zone homogène).
+espace_valeurs:
+  echelle: ordinale
+  meme_echelle_que: ppp:perceptualContrast
+  sens_croissant: de `weak` (rang 1) vers `strong` (rang 4), l’écart perçu de teinte augmente
+  numerique: non
+  regions:
+  - cle: weak
+    label_fr: faible
+    label_en: weak
+    rang: 1
+    repere: deux nuances d’une même teinte, à zéro pas sur le cercle des six teintes (deux bleus)
+    exemplaires: []
+  - cle: moderate
+    label_fr: modéré
+    label_en: moderate
+    rang: 2
+    repere: deux teintes voisines, à un pas sur le cercle des six teintes (un bleu et un vert)
+    exemplaires: []
+  - cle: marked
+    label_fr: évident
+    label_en: marked
+    rang: 3
+    repere: deux teintes à deux pas sur le cercle des six teintes, une teinte entre elles (un bleu et un jaune, un rouge et un jaune)
+    exemplaires: []
+  - cle: strong
+    label_fr: maximal
+    label_en: strong
+    rang: 4
+    repere: deux teintes opposées, à trois pas sur le cercle des six teintes (un bleu et un orange, un rouge et un vert, un jaune et un violet)
+    exemplaires: []
+note_cercle: 'Cercle retenu (décision de l’éditeur du projet, 2026-10-11, T6) : les six teintes de la fiche teinte en cercle, dans l’ordre rouge, orange, jaune, vert, bleu, violet, puis de nouveau rouge.
+  L’écart se compte en pas sur ce cercle, par le plus court des deux chemins : zéro pas (même teinte), faible ; un pas (teintes voisines), modéré ; deux pas, évident ; trois pas (teintes opposées), maximal.
+  On n’est jamais à plus de trois pas. Le bleu est à deux pas du jaune (par le vert) et à trois pas de l’orange dans les deux sens (par le vert et le jaune, ou par le violet et le rouge) : c’est l’orange
+  qui lui est opposé. Dans la tradition de Hering, reprise par NCS, le bleu et le jaune sont souvent donnés comme opposés (non vérifié sur les textes) : ce n’est pas le cercle retenu. Un brun se compte
+  comme un orange, un rose comme un rouge (règle de la teinte).'
+identite: Un écart de teinte entre deux termes, pas la teinte d’un seul porteur.
+relations:
+- type: specializes
+  cible: ppp:perceptualContrast
+  note: garde l’arité, les rôles, les clés et les rangs du général ; n’ajoute pas de région (A1) ; chaque région correspond à la région de même clé du général
+- type: confusableWith
+  cible: ppp:hueRange
+  note: le contraste de teinte compare deux zones qu’on montre ; l’éventail des teintes dit ce qu’on voit dans toute une zone
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: munsell1905
+  citation: 'Munsell, A. H. (1905). A Color Notation. Boston : G. H. Ellis ; 2e éd. 1907, Project Gutenberg n° 26054.'
+  doi_ou_url: https://www.gutenberg.org/ebooks/26054
+  role: alimente
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-10-10'
+  verifie_sur: 'texte du Project Gutenberg n° 26054 lu pour les passages cités : « Color has three dimensions » (§ 8) ; « a circuit of hues » (un cercle de teintes, chapitre I) ; cinq teintes principales
+    et cinq intermédiaires ; texte non lu en entier'
+  reprend: les teintes situées sur un cercle, d'où l'écart entre deux teintes
+  ne_reprend_pas: la notation chiffrée
+- id: itten1961
+  citation: 'Itten, J. (1961). Kunst der Farbe. Ravensburg : Otto Maier Verlag (éditeur des éditions allemandes de 1967, 1971 et 1979 ; celui de 1961 non vérifié) ; trad. angl. The Art of Color, New York
+    : Reinhold, 1961.'
+  doi_ou_url: https://openlibrary.org/works/OL3134338W
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: 'notice Open Library lue le 2026-10-10 (œuvre OL3134338W) : titre, auteur, première publication 1961 ; éditions allemandes chez O. Maier / Otto Maier Verlag, Ravensburg, en 1967, 1971 et
+    1979 ; éditions anglaises The Art of Color chez Reinhold, New York, dès 1961 ; aucune édition allemande de 1961 n’y est listée, l’éditeur de 1961 n’est donc pas vérifié ; contenu non lu'
+  reprend: 'rien de son contenu (non lu) ; cité comme ouvrage repéré sur la couleur (titre ; sujets de la notice : couleur, esthétique, peinture)'
+  ne_reprend_pas: tout son contenu (non lu) ; une règle d'harmonie, s'il en donne, serait axiologique (§0.4)
+  note_verification: 'série 6, partie 7 : l’ancien verifie_sur disait « 1961, éditeurs dont Otto Maier Verlag », ce qui laissait croire l’édition de 1961 vérifiée chez Otto Maier ; la notice ne le dit pas
+    (mis en cohérence avec docs/couleur-teinte-etat-de-l-art.md)'
+- id: albers1963
+  citation: 'Albers, J. (1963). Interaction of Color. New Haven : Yale University Press.'
+  doi_ou_url: https://openlibrary.org/works/OL43516944W
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: notice Open Library (titre, auteur, éditeur, 1963, OCLC 30247970 ; pas de description) ; contenu non lu
+  reprend: rien de son contenu (non lu) ; cité comme ouvrage repéré sur l’interaction des couleurs (titre)
+  ne_reprend_pas: tout son contenu, exercices et conclusions compris (non lu)
+etat_de_l_art: 'Itten (*Kunst der Farbe*, 1961) [[itten1961]] et Albers (*Interaction of Color*, 1963) [[albers1963]] sont des ouvrages repérés sur la couleur (notices seules, contenu non lu). Le système
+  de Munsell (1905) [[munsell1905]] situe les teintes sur un cercle (« a circuit of hues », passage lu), ce qui donne un sens à « teintes éloignées ». Aucune source trouvée ne propose une échelle perçue
+  du contraste de teinte entre deux zones ; les labels des régions sont ceux de tous les contrastes (T3). Détail : docs/bibliographie-par-type.md#groupe-contrastes.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-contrastes
+axiomes:
+- conceptuel: Tout contraste particulier médie exactement deux termes.
+  validation: Toute assertion de type ppp:hueContrast a exactement deux ppp:about, chacun avec un ppp:role.
+- conceptuel: Les 4 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 4 ppp:Region de l’échelle ont des ppp:rank distincts, de 1 à 4 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Tout contraste de teinte est un contraste perceptif dont la dimension comparée est ppp:hue.
+  validation: Toute assertion de type ppp:hueContrast relève aussi de ppp:perceptualContrast ; elle ne déclare pas de ppp:comparedDimension, ou déclare ppp:hue.
+nanay: Oui — passer de « je vois deux couleurs » à « je ne compare que leur teinte » change la description (le clair et le sombre cessent de compter).
+transfert: objet conçu oui (deux parties de couleurs différentes) | tableau oui (couleurs complémentaires) | cuisine oui (façade et plan de travail) | high-tech oui (touches de couleur sur un boîtier)
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs à une région près, au-dessus du seuil fixé avant l’épreuve (épreuve propre à ce spécialisé, spec §9.7 B)
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les objets
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2, CQ8a
+statut: candidat
+statut_epistemique: non éprouvé
+introduit_en: '2.2'
+modifie_en:
+- 2.3.1
+- '2.5'
+- '2.6'
+remplace_par: []
+a_relire: []
+relecture_explicative:
+  date: '2026-10-11'
+  champs:
+  - question_attentionnelle
+  - définition
+  - contre_exemple
+  - nanay
+  - transfert
+  - relations.note
+  - etat_de_l_art (série 6, vérification finale)
+  - references (série 6, vérification finale)
+  - note_cercle (série 6, vérification finale)
+  - espace_valeurs.regions.weak.repere (re-confirmé en relecture explicative, série 9, 2026-10-11)
+  - espace_valeurs.regions.moderate.repere (re-confirmé en relecture explicative, série 9, 2026-10-11)
+  - espace_valeurs.regions.marked.repere (re-confirmé en relecture explicative, série 9, 2026-10-11)
+  - espace_valeurs.regions.strong.repere (re-confirmé en relecture explicative, série 9, 2026-10-11)
+  - note_cercle (re-confirmé en relecture explicative, série 9, 2026-10-11)
+  a_reconfirmer: []
+  reconfirme:
+  - champ: question_attentionnelle
+    date: '2026-10-10'
+    avant: Si l’on ne regarde que la teinte (rouge, jaune, bleu…), la différence entre ces deux zones est-elle faible, modérée, marquée ou forte ?
+    apres: Si l’on ne regarde que la teinte (rouge, jaune, bleu…), la différence entre ces deux zones est-elle faible, modérée, évidente ou maximale ?
+    raison: 'T3, option A (décision de l’éditeur du projet, 2026-10-10) : labels du contraste « faible / modéré / évident / maximal » ; question attentionnelle à reprendre par la relecture explicative ;
+      seuls les mots-labels sont remplacés'
+    retenu: Si l’on ne regarde que la teinte (rouge, jaune, bleu…), la différence entre ces deux zones est-elle faible (deux bleus), modérée (un bleu et un vert), évidente (un bleu et un jaune) ou maximale
+      (deux teintes opposées sur le cercle des couleurs, comme un bleu et un orange) ?
+    remarque: 'T3 option A : question reprise par la relecture explicative ; chaque mot-label porte entre parenthèses le repère de sa région, pour que « évident » (visible d’emblée) et « maximal » (aux
+      deux bouts de la dimension) ne se lisent pas comme des synonymes de « fort »'
+  - champ: contre_exemple
+    date: '2026-10-10'
+    avant: 'Un bleu marine et un bleu ciel ont presque la même teinte : leur contraste de teinte est faible, leur contraste de clarté est fort.'
+    apres: 'Un bleu marine et un bleu ciel ont presque la même teinte : leur contraste de teinte est faible, leur contraste de clarté est évident.'
+    raison: 'T3 : « fort » n''est plus un label de région ; remplacé par « évident » (repère `marked` : écart visible d''emblée), à vérifier'
+    remarque: 're-confirmé tel quel : « évident » est juste pour l’écart de clarté entre un bleu marine et un bleu ciel (il se voit d’emblée) ; « maximal » serait faux (ce serait du noir contre du blanc)'
+  - champ: espace_valeurs.regions.weak.repere
+    date: '2026-10-11'
+    avant: deux nuances d’une même teinte (deux bleus)
+    apres: deux nuances d’une même teinte, à zéro pas sur le cercle des six teintes (deux bleus)
+    raison: 'T6 : cercle retenu par l’éditeur du projet (2026-10-11), six teintes en cercle, rouge, orange, jaune, vert, bleu, violet ; repère recalculé en pas sur ce cercle (plus court chemin) ; exemples
+      inchangés, comptage dit'
+    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+  - champ: espace_valeurs.regions.moderate.repere
+    date: '2026-10-11'
+    avant: deux teintes voisines sur le cercle (un bleu et un vert)
+    apres: deux teintes voisines, à un pas sur le cercle des six teintes (un bleu et un vert)
+    raison: 'T6 : cercle retenu par l’éditeur du projet (2026-10-11), six teintes en cercle, rouge, orange, jaune, vert, bleu, violet ; repère recalculé en pas sur ce cercle (plus court chemin) ; exemples
+      inchangés, comptage dit'
+    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+  - champ: espace_valeurs.regions.marked.repere
+    date: '2026-10-11'
+    avant: deux teintes éloignées sur le cercle (un bleu et un jaune)
+    apres: deux teintes à deux pas sur le cercle des six teintes, une teinte entre elles (un bleu et un jaune, un rouge et un jaune)
+    raison: 'T6 : cercle retenu par l’éditeur du projet (2026-10-11), six teintes en cercle, rouge, orange, jaune, vert, bleu, violet ; repère recalculé en pas sur ce cercle (plus court chemin) ; exemples
+      inchangés, comptage dit'
+    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+  - champ: espace_valeurs.regions.strong.repere
+    date: '2026-10-11'
+    avant: deux teintes opposées sur le cercle (un bleu et un orange)
+    apres: deux teintes opposées, à trois pas sur le cercle des six teintes (un bleu et un orange, un rouge et un vert, un jaune et un violet)
+    raison: 'T6 : cercle retenu par l’éditeur du projet (2026-10-11), six teintes en cercle, rouge, orange, jaune, vert, bleu, violet ; repère recalculé en pas sur ce cercle (plus court chemin) ; exemples
+      inchangés, comptage dit'
+    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+  - champ: note_cercle
+    date: '2026-10-11'
+    avant: 'La coupure entre « évident » (un bleu et un jaune) et « maximal » (un bleu et un orange) dépend du cercle de couleurs retenu pour la teinte (T6). Sur le cercle à six teintes proposé (rouge,
+      orange, jaune, vert, bleu, violet), le bleu est à deux pas du jaune d’un côté et à quatre de l’autre : c’est l’orange, à trois pas des deux côtés, qui lui est opposé. Dans la tradition de Hering,
+      reprise par NCS, le bleu et le jaune sont souvent donnés comme une paire opposée (non vérifié sur les textes) : sur un tel cercle, un bleu et un jaune relèveraient du contraste « maximal ». Si l’éditeur
+      du projet retient un autre cercle en T6, les repères de `marked` et de `strong` sont à revoir (docs/couleur-teinte-etat-de-l-art.md, « Conséquence pour le contraste de teinte »).'
+    apres: 'Cercle retenu (décision de l’éditeur du projet, 2026-10-11, T6) : les six teintes de la fiche teinte en cercle, dans l’ordre rouge, orange, jaune, vert, bleu, violet, puis de nouveau rouge.
+      L’écart se compte en pas sur ce cercle, par le plus court des deux chemins : zéro pas (même teinte), faible ; un pas (teintes voisines), modéré ; deux pas, évident ; trois pas (teintes opposées),
+      maximal. On n’est jamais à plus de trois pas. Le bleu est à deux pas du jaune (par le vert) et à trois pas de l’orange dans les deux sens (par le vert et le jaune, ou par le violet et le rouge) :
+      c’est l’orange qui lui est opposé. Dans la tradition de Hering, reprise par NCS, le bleu et le jaune sont souvent donnés comme opposés (non vérifié sur les textes) : ce n’est pas le cercle retenu.
+      Un brun se compte comme un orange, un rose comme un rouge (règle de la teinte).'
+    raison: 'T6 tranché par l’éditeur du projet (2026-10-11) : la note ne dit plus que la coupure est en attente ; elle donne le cercle retenu et le comptage en pas ; relecture explicative (2026-10-11)
+      : « les six teintes de la teinte » devient « les six teintes de la fiche teinte »'
+    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+manques:
+- exemplaires
+bloque_par: []

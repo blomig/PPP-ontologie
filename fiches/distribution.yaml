@@ -1,0 +1,163 @@
+# Fiche de type PPP — ppp:distribution — format : PPP_FicheType.md (spec v2.4)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_joint, avertissement_label, note_categories, note_reference, note_dimension, note_conditions, note_echelle, note_porteur, note_base, bloque_par.
+id: ppp:distribution
+label_fr: distribution
+label_en: distribution
+labels_alternatifs: []
+patron: P1
+sorte: qualité
+sous_sorte: gestalt
+strate: semi-formel
+base_dependance:
+  types:
+  - ppp:contour
+  facteurs_non_perceptuels: []
+facettes:
+- organisation
+définition: Manière dont des éléments qu’on distingue déjà se répartissent dans un ensemble, du groupement en paquets à l’espacement régulier.
+question_attentionnelle: Les éléments sont-ils groupés en paquets, répartis de façon aléatoire (sans ordre apparent), ou régulièrement espacés ?
+contre_exemple: Un élément unique n’a pas de distribution (non applicable). Le nombre d’éléments relève de la densité.
+modalites:
+- vision
+mode_de_presentation: image
+porteur: une configuration de zones ou d’éléments
+arité: 1
+condition_NA: moins de trois éléments distincts.
+espace_valeurs:
+  echelle: ordinale
+  sens_croissant: 'de `clustered` (rang 1) vers `regular` (rang 3) : de plus en plus régulièrement espacé. Groupée = en paquets ; aléatoire = ni en paquets ni à intervalles réguliers, l’entre-deux ; régulière
+    = à intervalles égaux (analogie : indice du plus proche voisin de Clark et Evans 1954, doi:10.2307/1931034, sans mesure)'
+  numerique: non
+  regions:
+  - cle: clustered
+    label_fr: groupée
+    label_en: clustered
+    rang: 1
+    repere: les éléments forment des groupes séparés par des espaces laissés libres
+    exemplaires: []
+  - cle: scattered
+    label_fr: aléatoire
+    label_en: scattered
+    labels_alternatifs:
+    - au hasard
+    - sans ordre apparent
+    rang: 2
+    repere: 'les éléments ne forment ni paquets ni intervalles réguliers : ils paraissent placés au hasard'
+    exemplaires: []
+  - cle: regular
+    label_fr: régulière
+    label_en: regular
+    rang: 3
+    repere: les éléments paraissent à égale distance les uns des autres
+    exemplaires: []
+identite: Répartition des éléments, pas leur nombre (densité), pas la correspondance de part et d’autre d’un axe (symétrie).
+relations:
+- type: confusableWith
+  cible: ppp:perceptualDensity
+  note: 'la densité compte les éléments ; la distribution dit comment ils se répartissent : peu d’éléments peuvent être groupés, beaucoup peuvent être réguliers'
+- type: confusableWith
+  cible: ppp:symmetry
+  note: des éléments répétés à intervalles égaux, tous tournés dans le même sens, font une distribution régulière ; une symétrie demande que deux moitiés se répondent comme dans un miroir
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: clark_evans1954
+  citation: Clark, P. J. & Evans, F. C. (1954). Distance to nearest neighbor as a measure of spatial relationships in populations. Ecology, 35(4), 445–453.
+  doi_ou_url: https://doi.org/10.2307/1931034
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: métadonnées Crossref (titre, revue, pages) ; aucun résumé (Crossref, OpenAlex, 2026-10-10) ; texte non lu
+  reprend: 'le titre seulement : la distance au plus proche voisin comme mesure de la répartition ; PPP s''en sert comme analogie pour l''ordre de ses régions (sens_croissant), sans mesure ; que l''article
+    distingue le groupé, l''aléatoire et le régulier n''est pas vérifié (texte non lu)'
+  ne_reprend_pas: 'l''indice du plus proche voisin : aucune mesure ; le contenu de l''article (non lu)'
+- id: wagemans2012
+  citation: 'Wagemans, J., Elder, J. H., Kubovy, M., Palmer, S. E., Peterson, M. A., Singh, M. & von der Heydt, R. (2012). A century of Gestalt psychology in visual perception: I. Perceptual grouping and
+    figure–ground organization. Psychological Bulletin, 138(6), 1172–1217.'
+  doi_ou_url: https://doi.org/10.1037/a0029333
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: 'métadonnées Crossref et résumé lu (OpenAlex, 2026-10-10) : bilan d’un siècle de psychologie de la Gestalt ; principes de groupement, classiques (proximité, similarité, destin commun, bonne
+    continuité, fermeture, symétrie, parallélisme) et nouveaux ; recherches actuelles sur le groupement et l’organisation figure-fond ; texte intégral non lu'
+  reprend: le groupement par proximité comme base empirique d'une qualité d'organisation
+  ne_reprend_pas: le bilan des mécanismes
+etat_de_l_art: 'Clark et Evans (1954) [[clark_evans1954]] proposent, d''après le titre de leur article, la distance au plus proche voisin comme mesure de la répartition des individus d''une population (texte
+  non lu) ; PPP ne reprend aucune mesure, et ses régions (groupé, aléatoire, régulier) sont des repères perçus, pas tirés de l''article. Wagemans et al. (2012) [[wagemans2012]] font le bilan d''un siècle
+  de recherches sur le groupement perceptif, dont le groupement par proximité (résumé lu). Détail : docs/bibliographie-par-type.md#groupe-organisation.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-organisation
+axiomes:
+- conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
+  validation: Toute assertion de type ppp:distribution a exactement un ppp:about.
+- conceptuel: Les 3 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 3 ppp:Region de l’échelle du type ont des ppp:rank distincts, de 1 à 3 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Une région de cet espace n’est pas un sous-type du type.
+  validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
+nanay: Oui — passer de « je vois des éléments » à « je regarde s’ils sont en paquets, sans ordre apparent ou à intervalles égaux » change la description (parcours du regard, repérage d’un rythme).
+transfert: objet conçu oui (motif sur une céramique) | tableau oui (personnages groupés ou répartis) | cuisine oui (boutons d’une plaque) | high-tech oui (icônes sur un écran) | architecture oui (fenêtres
+  d’une façade)
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs exact (échelle à trois régions ou moins, spec §9.7 C, v2.5), au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques
+    (spec §9.7 H)
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les objets
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2
+statut: candidat
+statut_epistemique: non éprouvé
+introduit_en: '2.1'
+modifie_en:
+- 2.2.3
+- 2.3.1
+- '2.5'
+remplace_par: []
+manques:
+- exemplaires
+- 'label de la région `scattered` : proposition d’adjectif à l’éditeur du projet, non appliquée (T21)'
+bloque_par: []
+a_relire: []
+relecture_explicative:
+  date: '2026-10-10'
+  champs:
+  - question_attentionnelle
+  - définition
+  - contre_exemple
+  - nanay
+  - transfert
+  - relations.note
+  - etat_de_l_art (série 6, vérification finale)
+  - references (série 6, vérification finale)
+  a_reconfirmer: []
+  reconfirme:
+  - champ: question_attentionnelle
+    date: '2026-10-10'
+    avant: Les éléments sont-ils groupés, dispersés sans régularité, ou régulièrement espacés ?
+    apres: Les éléments sont-ils groupés, répartis au hasard, ou régulièrement espacés ?
+    retenu: Les éléments sont-ils groupés en paquets, répartis au hasard, ou régulièrement espacés ?
+    remarque: '« en paquets » ajouté par la relecture explicative : « groupés » seul peut se lire « tous ensemble » ; validée'
+  - champ: question_attentionnelle
+    date: '2026-10-10'
+    avant: Les éléments sont-ils groupés en paquets, répartis au hasard, ou régulièrement espacés ?
+    apres: (inchangé ; à reprendre par la relecture explicative)
+    raison: 'T21 (décision de l’éditeur du projet, 2026-10-10) : le label de `scattered` devient « aléatoire », « au hasard » et « sans ordre apparent » en alternatifs ; le champ contient l''ancien label « au hasard
+      »'
+    retenu: Les éléments sont-ils groupés en paquets, répartis de façon aléatoire (sans ordre apparent), ou régulièrement espacés ?
+    remarque: 'T21 : reprise par la relecture explicative ; « aléatoire » est glosé tout de suite par « sans ordre apparent », pour qu’on ne le lise pas au sens technique (un tirage au hasard)'
+  - champ: nanay
+    date: '2026-10-10'
+    avant: Oui — passer de « je vois des éléments » à « je regarde s’ils sont en paquets, au hasard ou à intervalles égaux » change la description (parcours du regard, repérage d’un rythme).
+    apres: (inchangé ; à reprendre par la relecture explicative)
+    raison: 'T21 (décision de l’éditeur du projet, 2026-10-10) : le label de `scattered` devient « aléatoire », « au hasard » et « sans ordre apparent » en alternatifs ; le champ contient l''ancien label « au hasard
+      »'
+    retenu: Oui — passer de « je vois des éléments » à « je regarde s’ils sont en paquets, sans ordre apparent ou à intervalles égaux » change la description (parcours du regard, repérage d’un rythme).
+    remarque: 'T21 : reprise par la relecture explicative ; « sans ordre apparent » dit ce qu’on voit, sans affirmer un hasard réel'

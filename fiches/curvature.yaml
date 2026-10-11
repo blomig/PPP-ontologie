@@ -1,0 +1,145 @@
+# Fiche de type PPP — ppp:curvature — format : PPP_FicheType.md (spec v2.4)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_joint, avertissement_label, note_categories, note_reference, note_dimension, note_conditions, note_echelle, note_porteur, note_base, bloque_par.
+id: ppp:curvature
+label_fr: courbure
+label_en: curvature
+labels_alternatifs: []
+patron: P1
+sorte: qualité
+sous_sorte: —
+strate: formel
+base_dependance:
+  types: []
+  facteurs_non_perceptuels: []
+facettes:
+- forme
+définition: Degré auquel un bord, un trait ou une surface paraît s’écarter de la ligne droite ou du plan, du tracé droit à la courbe serrée.
+question_attentionnelle: Ce bord, ce trait ou cette surface paraît-il droit, légèrement courbe ou très courbe ?
+contre_exemple: 'Une ligne en zigzag change de direction, mais chacun de ses segments est droit : ses angles ne sont pas une courbure. Un trait tremblé autour d’une ligne droite s’en écarte par endroits
+  : c’est une irrégularité locale, pas une courbure.'
+grandeur_physique_homonyme: 'courbure géométrique (inverse du rayon de courbure) : aucune région ne s’en déduit.'
+modalites:
+- vision
+- toucher
+mode_de_presentation: image
+conditions_critiques:
+- angle
+- distance
+note_conditions: 'vu de biais, un cercle paraît une ellipse et une courbe peut paraître droite ; de loin, une courbe large paraît droite (le repère de `slightlyCurved` dit « vu de près ») : angle et distance
+  sont critiques (à la vue ; au toucher : T22)'
+porteur: un tronçon de bord, de trait ou de surface, d’un objet ou d’une partie, désigné dans l’assertion (jugement local, note_porteur)
+note_porteur: 'La courbure se juge localement, sur le tronçon que désigne l’assertion, pas sur toute la silhouette : un contour dont la courbure change (un S, un vase au col droit et à la panse ronde) reçoit
+  une assertion par tronçon (`#col`, `#panse`), sans moyenne (A5 : une assertion, un porteur). Un tronçon qui paraît à la fois droit et courbe est à découper. Position de travail, révisable par l’éditeur du projet (T30).'
+arité: 1
+condition_NA: porteur sans bord, trait ni surface perceptible (une lumière diffuse).
+espace_valeurs:
+  echelle: ordinale
+  sens_croissant: de `straight` (rang 1) vers `stronglyCurved` (rang 3), le bord, le trait ou la surface s’écarte davantage de la droite ou du plan
+  numerique: non
+  regions:
+  - cle: straight
+    label_fr: droit
+    label_en: straight
+    rang: 1
+    repere: aucune courbe perceptible (une règle, l’arête d’une table, une vitre plane)
+    exemplaires: []
+  - cle: slightlyCurved
+    label_fr: légèrement courbe
+    label_en: slightly curved
+    rang: 2
+    repere: une courbe large, qu’on voit à peine s’écarter de la droite (le bord d’une grande table ronde vu de près, une voile peu gonflée)
+    exemplaires: []
+  - cle: stronglyCurved
+    label_fr: très courbe
+    label_en: strongly curved
+    rang: 3
+    repere: une courbe serrée (l’anse d’une tasse, une boucle de ruban)
+    exemplaires: []
+identite: Écart à la droite ou au plan, pas la netteté du bord (franc ou flou), pas les écarts locaux à une régularité (irrégularité locale), pas les angles d’une ligne brisée.
+relations:
+- type: confusableWith
+  cible: ppp:localIrregularity
+  note: un trait tremblé s’écarte par endroits de sa régularité ; un trait courbe suit une courbe régulière
+- type: separableFrom
+  cible: ppp:contour
+  note: 'à éprouver (E2) : un même tracé courbe, au bord franc ou flou'
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: pont1997
+  citation: Pont, S. C., Kappers, A. M. L. & Koenderink, J. J. (1997). Haptic curvature discrimination at several regions of the hand. Perception & Psychophysics, 59(8), 1225–1240.
+  doi_ou_url: https://doi.org/10.3758/BF03214210
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: métadonnées Crossref et résumé PubMed (PMID 9401457)
+  reprend: la dépendance du jugement à la longueur du tronçon touché, qui appuie le jugement local (T30) et la modalité toucher
+  ne_reprend_pas: les seuils mesurés et le modèle d'inclinaison de surface
+etat_de_l_art: 'La courbure est étudiée en psychophysique (la mesure de ce que l’on perçoit), à la vue comme au toucher. Pont, Kappers et Koenderink (1997) [[pont1997]] montrent qu’au toucher, distinguer
+  deux courbures dépend surtout de la longueur de contact, ce qui va dans le sens d’un jugement local, sur un tronçon déclaré (T30). Aucune source trouvée ne propose des régions perçues de courbure. Détail
+  : docs/bibliographie-par-type.md#groupe-forme.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-forme
+axiomes:
+- conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
+  validation: Toute assertion de type ppp:curvature a exactement un ppp:about.
+- conceptuel: Les 3 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 3 ppp:Region de l’échelle du type ont des ppp:rank distincts, de 1 à 3 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Une région de cet espace n’est pas un sous-type du type.
+  validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
+nanay: Oui — passer de « je vois une forme » à « je regarde si ses bords et ses surfaces sont droits ou courbes » change la description (on suit le bord des yeux, ou de la main).
+transfert: objet conçu oui (vase, chaise) | tableau oui (lignes droites ou courbes d’une composition) | cuisine oui (bord d’un plat, poignée) | high-tech oui (angles arrondis d’un boîtier) | architecture
+  oui (voûte, façade)
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs exact (échelle à trois régions ou moins, spec §9.7 C, v2.5), au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques
+    (spec §9.7 H) ; vision et toucher éprouvés séparément
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E2
+  nature: structure
+  enonce: on peut faire varier la courbure en tenant la netteté du bord constante
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les objets
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2
+statut: candidat
+statut_epistemique: non éprouvé
+introduit_en: '2.3'
+modifie_en:
+- 2.3.1
+- 2.3.2
+- '2.5'
+remplace_par: []
+source_de_la_fiche: crash tests, partie 1 (spec 2.3, docs/questions-crash-tests.md C4) ; fiche préremplie le 2026-10-10 par l’équipe, champs en langage courant à valider par la relecture explicative
+manques:
+- 'exemplaires (à renseigner : objets publics vérifiés, un épisode par objet, conditions déclarées)'
+- 'angles d’une ligne brisée (zigzag) : pas une courbure (contre-exemple) ; stock *ligne* / *orientation*, T14'
+bloque_par:
+- 'T30 (jugement local, distance critique : position de travail)'
+a_relire: []
+relecture_explicative:
+  date: '2026-10-10'
+  champs:
+  - question_attentionnelle
+  - définition
+  - contre_exemple
+  - espace_valeurs.regions.repere
+  - identite
+  - relations.note
+  - nanay
+  - transfert
+  - porteur (2.3.2)
+  - note_porteur (2.3.2)
+  - note_conditions (2.3.2)
+  - etat_de_l_art (série 6)
+  - references (série 6)
+  a_reconfirmer: []

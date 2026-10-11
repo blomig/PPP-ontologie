@@ -1,0 +1,141 @@
+# Fiche de type PPP — ppp:outlineIndentation — format : PPP_FicheType.md (spec v2.5)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_joint, avertissement_label, note_categories, note_reference, note_dimension, note_conditions, note_echelle, note_porteur, note_base, bloque_par.
+id: ppp:outlineIndentation
+label_fr: découpure de la silhouette
+label_en: outline indentation
+labels_alternatifs: []
+patron: P1
+sorte: qualité
+sous_sorte: gestalt
+strate: semi-formel
+base_dependance:
+  types:
+  - ppp:contour
+  facteurs_non_perceptuels: []
+facettes:
+- forme
+définition: 'Degré auquel la silhouette d’un objet ou d’une partie, vue en entier contre son fond, rentre et sort : une silhouette sans découpure, découpée, ou très découpée, que ses bords soient courbes
+  ou anguleux.'
+question_attentionnelle: En regardant la silhouette entière de cet objet contre son fond, est-elle sans découpure, découpée, ou très découpée ?
+contre_exemple: 'Une silhouette ronde reste sans découpure, que son bord soit net ou flou (netteté du bord) et quelle que soit sa taille. Les reliefs et les creux de la surface ne comptent pas : seule compte
+  la ligne qui sépare l’objet du fond. Un tronçon de bord plus ou moins courbe relève de la courbure, pas de la silhouette entière.'
+grandeur_physique_homonyme: 'mesures géométriques de la forme d’un contour (rapport du périmètre à l’aire, par exemple) : aucune région ne s’en déduit.'
+modalites:
+- vision
+mode_de_presentation: image
+conditions_critiques:
+- angle
+- distance
+note_conditions: la silhouette change avec le point de vue ; de loin, les petites découpures disparaissent
+porteur: un objet ou une partie vu en entier contre un fond
+arité: 1
+condition_NA: objet ou partie dont on ne voit pas la silhouette entière (vu de trop près, ou sans fond distinct).
+espace_valeurs:
+  echelle: ordinale
+  sens_croissant: de `unindented` (rang 1) vers `deeplyIndented` (rang 3), la silhouette rentre et sort davantage
+  numerique: non
+  regions:
+  - cle: unindented
+    label_fr: sans découpure
+    label_en: unindented
+    rang: 1
+    repere: la silhouette ne rentre nulle part (un galet, un œuf, un ballon)
+    exemplaires: []
+  - cle: indented
+    label_fr: découpée
+    label_en: indented
+    rang: 2
+    repere: quelques creux et saillies sur le tour (une feuille de chêne, une chaise vue de profil)
+    exemplaires: []
+  - cle: deeplyIndented
+    label_fr: très découpée
+    label_en: deeply indented
+    rang: 3
+    repere: des creux et des saillies tout autour, jusqu’à de petits détails (une feuille de fougère, un arbre sans feuilles)
+    exemplaires: []
+identite: Découpure de la silhouette entière, pas la netteté du bord, pas la courbure d’un tronçon, pas la symétrie (une feuille de chêne est découpée et presque symétrique), pas le nombre de parties contenues
+  dans des parties (emboîtement des parties), pas les vides laissés entre des éléments (espace négatif).
+relations:
+- type: confusableWith
+  cible: ppp:curvature
+  note: la courbure se juge sur un tronçon désigné ; la découpure, sur le tour entier de la silhouette, qu’il soit fait de courbes ou d’angles
+- type: confusableWith
+  cible: ppp:negativeSpace
+  note: les creux d’une silhouette très découpée laissent voir le fond ; l’espace négatif dit les vides d’une composition, pas la découpure d’une silhouette
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: attneave1957
+  citation: Attneave, F. (1957). Physical determinants of the judged complexity of shapes. Journal of Experimental Psychology, 53(4), 221–227.
+  doi_ou_url: https://doi.org/10.1037/h0043921
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: 'métadonnées Crossref et début du texte (OpenAlex) : jugements de complexité de formes non figuratives par de nombreux sujets, rapportés à des caractéristiques physiques mesurables des formes
+    ; résultats non lus'
+  reprend: l’idée qu’un jugement porté à la vue sur une forme se rapporte à des caractères physiques mesurables de la forme (début du texte) ; quels caractères (le contour, ses angles…) n’est pas vérifié
+  ne_reprend_pas: le mot « complexité » (valence, spec §9.10) et les variables mesurées, non lues
+etat_de_l_art: 'Attneave (1957) [[attneave1957]] a fait juger la complexité de formes non figuratives par de nombreux sujets et a rapporté ces jugements à des caractères physiques mesurables des formes
+  (début du texte lu ; résultats non lus) ; PPP n’en reprend pas le mot « complexité », qui porte un jugement de valeur (spec §9.10), mais un caractère visible de la silhouette. Aucune source trouvée ne
+  nomme des degrés perçus de la découpure. Détail : docs/bibliographie-par-type.md#groupe-forme.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-forme
+axiomes:
+- conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
+  validation: Toute assertion de type ppp:outlineIndentation a exactement un ppp:about.
+- conceptuel: Les 3 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 3 ppp:Region de l’échelle du type ont des ppp:rank distincts, de 1 à 3 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Une région de cet espace n’est pas un sous-type du type.
+  validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
+nanay: Oui — passer de « une forme » à « je suis le tour de la silhouette et je regarde s’il rentre et sort » change la description (une forme ramassée, ou toute en pointes et en creux).
+transfert: objet conçu oui (luminaire, chaise) | tableau oui (silhouette d’une figure) | cuisine oui (ustensile) | high-tech oui (coque)
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs exact (échelle à trois régions, spec §9.7 C, v2.5), au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques (spec
+    §9.7 H)
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les objets
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E3
+  nature: structure
+  enonce: 'la découpure ne se juge que là où un bord est perçu : sur un porteur dont on ne perçoit pas le bord contre le fond, les observateurs la déclarent non applicable plutôt que de lui donner une région
+    (sinon la base `ppp:contour` n’est pas la bonne) ; la base ne contient pas le tracé, qui n’a pas de type (T14) : à instruire'
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2
+statut: candidat
+statut_epistemique: non éprouvé
+introduit_en: '2.5'
+modifie_en: []
+remplace_par: []
+source_de_la_fiche: crash tests 01 et 02 (docs/crash-test-01-couleur-profonde.md §3.3 ; docs/crash-test-02-complexite-de-forme.md §3.3) ; verdict dans docs/questions-crash-tests.md C6, C7–C25
+  ; fiche minimale du 2026-10-10 (série 6) par l’équipe, champs en langage courant validés depuis par la relecture explicative (série 6)
+manques:
+- 'exemplaires (à renseigner : objets publics vérifiés, un épisode par objet, conditions déclarées)'
+- 'fiche minimale (C6, 2.5) : langage courant, état de l’art et références validés par la relecture explicative (série 6) ; restent les exemplaires et C19, T14 (bloque_par)'
+bloque_par:
+- C19 (silhouette, lignes brisées ; docs/questions-crash-tests.md)
+- 'T14 (stock « forme », « ligne » : le tracé n’a pas de type)'
+a_relire: []
+relecture_explicative:
+  date: '2026-10-10'
+  champs:
+  - définition (série 6)
+  - question_attentionnelle (série 6)
+  - contre_exemple (série 6)
+  - espace_valeurs.regions.repere (série 6)
+  - identite (série 6)
+  - relations.note (série 6)
+  - nanay (série 6)
+  - transfert (série 6)
+  - etat_de_l_art (série 6, vérification finale)
+  - references (série 6, vérification finale)
+  a_reconfirmer: []

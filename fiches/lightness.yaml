@@ -1,0 +1,177 @@
+# Fiche de type PPP — ppp:lightness — format : PPP_FicheType.md (spec v2.4)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_joint, avertissement_label, note_categories, note_reference, note_dimension, note_conditions, note_echelle, note_porteur, note_base, bloque_par.
+id: ppp:lightness
+label_fr: clarté
+label_en: lightness
+labels_alternatifs:
+- valeur
+patron: P1
+sorte: qualité
+sous_sorte: —
+strate: formel
+base_dependance:
+  types: []
+  facteurs_non_perceptuels: []
+facettes:
+- couleur
+définition: Degré auquel une zone paraît claire ou sombre, indépendamment de sa teinte.
+question_attentionnelle: Cette zone paraît-elle très sombre, sombre, moyenne, claire ou très claire ?
+contre_exemple: '« Le texte noir se détache de la page blanche » parle de l’écart entre deux zones : c’est un contraste de clarté. La clarté se dit d’une seule zone (la page est très claire, le texte très
+  sombre).'
+grandeur_physique_homonyme: 'luminance mesurée ; clarté L* (CIELAB) : aucune région ne s’en déduit.'
+modalites:
+- vision
+mode_de_presentation: image
+conditions_critiques:
+- presentation
+note_conditions: un écran ou un imprimé resserre l’écart entre les plus clairs et les plus sombres de l’objet
+porteur: une zone, une partie ou un objet
+arité: 1
+condition_NA: porteur sans surface ni lumière perceptible.
+espace_valeurs:
+  echelle: ordinale
+  sens_croissant: de `veryDark` (rang 1) vers `veryLight` (rang 5), la clarté perçue augmente
+  numerique: non
+  regions:
+  - cle: veryDark
+    label_fr: très sombre
+    label_en: very dark
+    rang: 1
+    repere: proche du noir
+    exemplaires:
+    - ppp-a:pilote-0701
+  - cle: dark
+    label_fr: sombre
+    label_en: dark
+    rang: 2
+    repere: nettement plus sombre qu’un gris moyen
+    exemplaires: []
+  - cle: mid
+    label_fr: moyenne
+    label_en: mid
+    rang: 3
+    repere: un gris moyen
+    exemplaires: []
+  - cle: light
+    label_fr: claire
+    label_en: light
+    rang: 4
+    repere: nettement plus clair qu’un gris moyen
+    exemplaires: []
+  - cle: veryLight
+    label_fr: très claire
+    label_en: very light
+    rang: 5
+    repere: proche du blanc
+    exemplaires: []
+identite: Clair ou sombre, pas la teinte, pas la saturation.
+relations:
+- type: separableFrom
+  cible: ppp:hue
+  note: 'à éprouver (E2) : une série de bleus du plus sombre au plus clair, de même teinte'
+- type: confusableWith
+  cible: ppp:lightnessContrast
+  note: la clarté se dit d’une seule zone ; l’écart entre deux zones est un contraste de clarté
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: munsell1905
+  citation: 'Munsell, A. H. (1905). A Color Notation. Boston : G. H. Ellis ; 2e éd. 1907, Project Gutenberg n° 26054.'
+  doi_ou_url: https://www.gutenberg.org/ebooks/26054
+  role: alimente
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-10-10'
+  verifie_sur: 'texte du Project Gutenberg n° 26054 lu pour le passage cité : « Color has three dimensions » (§ 8) : la teinte, la valeur (« the amount of light », la quantité de lumière) et le chroma (la
+    pureté) ; texte non lu en entier'
+  reprend: la clarté (valeur) comme dimension séparée de la teinte et du chroma
+  ne_reprend_pas: l'échelle de valeur chiffrée
+- id: gilchrist2006
+  citation: Gilchrist, A. (2006). Seeing Black and White. Oxford University Press.
+  doi_ou_url: https://doi.org/10.1093/acprof:oso/9780195187168.001.0001
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: 'métadonnées Crossref et résumé de l’éditeur lu (OpenAlex, 2026-10-10) : la lumière renvoyée par une surface ne révèle pas sa nuance de gris ; selon l’éclairage, une surface de n’importe
+    quel gris peut renvoyer n’importe quelle quantité de lumière ; le livre fait l’historique des recherches et des théories de la clarté ; contenu non lu'
+  reprend: le fait, dit dans le résumé, que la clarté vue d'une surface ne se lit pas dans la lumière qu'elle renvoie
+  ne_reprend_pas: la théorie de l’auteur et le reste du livre (non lus)
+- id: cie015
+  citation: 'CIE (2018). CIE 015:2018 Colorimetry, 4th Edition. Vienne : Commission Internationale de l''Éclairage.'
+  doi_ou_url: https://doi.org/10.25039/TR.015.2018
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: métadonnées et résumé Crossref (observateurs de référence, illuminants, coordonnées d'espace couleur, écarts de couleur) ; texte payant non lu
+  reprend: rien
+  ne_reprend_pas: tout son contenu (non lu) ; la clarté L*, cité dans grandeur_physique_homonyme, est vérifié sur le vocabulaire de la CIE (cie_ilv_cielab) ; aucune région ne s’en déduit
+- id: cie_ilv_cielab
+  citation: 'CIE S 017:2020, ILV : International Lighting Vocabulary, 2e éd., entrée 17-23-076 « CIE 1976 L*a*b* colour space ». Vienne : CIE (accès libre en ligne, e-ILV).'
+  doi_ou_url: https://cie.co.at/eilvterm/17-23-076
+  role: contraste
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-10-10'
+  verifie_sur: 'entrée lue en ligne le 2026-10-10 : espace couleur CIELAB, coordonnées L*, a*, b* ; note 1 : correspondants approchés de la clarté (L*, « CIE 1976 lightness »), du chroma (« CIE 1976 a,b
+    chroma ») et de la teinte (« CIE 1976 a,b hue angle », h_ab = arctan(b*/a*))'
+  reprend: 'rien : L* y est un correspondant approché, calculé, de la clarté ; il est cité dans grandeur_physique_homonyme comme grandeur mesurée homonyme'
+  ne_reprend_pas: l’espace CIELAB et ses formules ; aucune région ne s’en déduit
+etat_de_l_art: 'La clarté correspond à la valeur du système de Munsell (1905) [[munsell1905]], « la quantité de lumière » d''une couleur selon lui, et la colorimétrie de la CIE [[cie015]] en calcule un
+  correspondant approché, L* (vocabulaire international de l''éclairage [[cie_ilv_cielab]]). Gilchrist (2006) [[gilchrist2006]] consacre un livre à la perception du clair et du sombre ; son résumé rappelle
+  que la lumière renvoyée par une surface ne dit pas, à elle seule, si elle est blanche, grise ou noire, puisqu''elle dépend de l''éclairage (livre non lu). PPP ne reprend aucune échelle mesurée : les régions
+  sont des repères perçus. Détail : docs/bibliographie-par-type.md#groupe-couleur.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-couleur
+axiomes:
+- conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
+  validation: Toute assertion de type ppp:lightness a exactement un ppp:about.
+- conceptuel: Les 5 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 5 ppp:Region de l’échelle du type ont des ppp:rank distincts, de 1 à 5 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Une région de cet espace n’est pas un sous-type du type.
+  validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
+nanay: Oui — passer de « je vois une couleur » à « je regarde si elle est claire ou sombre » change la description (ce qui ressort la nuit, en photo noir et blanc).
+transfert: objet conçu oui (céramique claire ou sombre) | tableau oui (zones claires et sombres) | cuisine oui (plan de travail) | high-tech oui (mode clair ou sombre d’un écran)
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs à une région près, au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques (spec §9.7 H)
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E2
+  nature: structure
+  enonce: on peut faire varier la clarté en tenant la teinte constante (une série de bleus du plus sombre au plus clair)
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les objets
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2
+statut: candidat
+statut_epistemique: non éprouvé
+introduit_en: '2.0'
+modifie_en:
+- 2.3.1
+remplace_par: []
+source_de_la_fiche: ex-« valeur (luminosité) » v0.2 ; « valeur » seul gardé en label alternatif (« luminosité » retiré, 2026-10-10)
+manques:
+- 'régions sans exemplaire : `dark`, `mid`, `light`, `veryLight`'
+bloque_par: []
+a_relire: []
+relecture_explicative:
+  date: '2026-10-10'
+  champs:
+  - question_attentionnelle
+  - définition
+  - contre_exemple
+  - nanay
+  - transfert
+  - relations.note
+  - exemplaires
+  - etat_de_l_art (série 6)
+  - references (série 6, vérification finale)
+  - etat_de_l_art (série 6, vérification finale)
+  - references.cie_ilv_cielab (série 6, vérification finale)
+  a_reconfirmer: []

@@ -1,0 +1,159 @@
+# Fiche de type PPP — ppp:saturation — format : PPP_FicheType.md (spec v2.4)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_joint, avertissement_label, note_categories, note_reference, note_dimension, note_conditions, note_echelle, note_porteur, note_base, bloque_par.
+id: ppp:saturation
+label_fr: saturation
+label_en: saturation
+labels_alternatifs: []
+patron: P1
+sorte: qualité
+sous_sorte: —
+strate: formel
+base_dependance:
+  types: []
+  facteurs_non_perceptuels: []
+facettes:
+- couleur
+définition: Degré auquel une couleur paraît s’écarter du gris de même clarté.
+question_attentionnelle: Cette couleur paraît-elle grise, peu colorée, moyennement ou très colorée ?
+contre_exemple: 'Une couleur claire n’est pas pour autant peu saturée : clarté et saturation varient séparément.'
+grandeur_physique_homonyme: 'chroma C* (CIELCh), pureté d’excitation : aucune région ne s’en déduit.'
+modalites:
+- vision
+mode_de_presentation: image
+conditions_critiques:
+- presentation
+note_conditions: un écran ou un imprimé peut rendre une couleur plus ou moins vive que sur l’objet
+porteur: une zone, une partie ou un objet
+arité: 1
+condition_NA: porteur sans surface ni lumière perceptible. Un gris est APPLICABLE, en région `neutral`.
+espace_valeurs:
+  echelle: ordinale
+  sens_croissant: de `neutral` (rang 1) vers `high` (rang 4), l’écart perçu au gris augmente
+  numerique: non
+  regions:
+  - cle: neutral
+    label_fr: neutre
+    label_en: neutral
+    rang: 1
+    repere: un gris, sans couleur perceptible
+    exemplaires: []
+  - cle: low
+    label_fr: faible
+    label_en: low
+    rang: 2
+    repere: une couleur grisée
+    exemplaires: []
+  - cle: medium
+    label_fr: moyenne
+    label_en: medium
+    rang: 3
+    repere: une couleur franche mais non vive
+    exemplaires: []
+  - cle: high
+    label_fr: forte
+    label_en: high
+    rang: 4
+    repere: la couleur la plus vive qu’on puisse voir à cette clarté
+    exemplaires: []
+identite: Écart au gris, pas la teinte, pas la clarté.
+relations:
+- type: separableFrom
+  cible: ppp:lightness
+  note: 'à éprouver (E2) : des couleurs de même clarté, du gris à la plus vive'
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: munsell1905
+  citation: 'Munsell, A. H. (1905). A Color Notation. Boston : G. H. Ellis ; 2e éd. 1907, Project Gutenberg n° 26054.'
+  doi_ou_url: https://www.gutenberg.org/ebooks/26054
+  role: alimente
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-10-10'
+  verifie_sur: 'texte du Project Gutenberg n° 26054 lu pour le passage cité : « Color has three dimensions » (§ 8) : la teinte, la valeur et le chroma (« the purity or CHROMA », la pureté) ; texte non lu
+    en entier'
+  reprend: le chroma comme dimension séparée de la teinte et de la valeur
+  ne_reprend_pas: l'échelle chiffrée du chroma
+- id: fairchild2013
+  citation: Fairchild, M. D. (2013). Color Appearance Models. Wiley.
+  doi_ou_url: https://doi.org/10.1002/9781118653128
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: métadonnées Crossref (titre, auteur, 2013) ; contenu non lu
+  reprend: l'existence de modèles d'apparence de la couleur
+  ne_reprend_pas: 'leurs attributs et formules : non repris (contenu non lu)'
+- id: cie015
+  citation: 'CIE (2018). CIE 015:2018 Colorimetry, 4th Edition. Vienne : Commission Internationale de l''Éclairage.'
+  doi_ou_url: https://doi.org/10.25039/TR.015.2018
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: métadonnées et résumé Crossref (observateurs de référence, illuminants, coordonnées d'espace couleur, écarts de couleur) ; texte payant non lu
+  reprend: rien
+  ne_reprend_pas: tout son contenu (non lu) ; le chroma C*, cité dans grandeur_physique_homonyme, est vérifié sur le vocabulaire de la CIE (cie_ilv_cielab) ; aucune région ne s’en déduit
+- id: cie_ilv_cielab
+  citation: 'CIE S 017:2020, ILV : International Lighting Vocabulary, 2e éd., entrée 17-23-076 « CIE 1976 L*a*b* colour space ». Vienne : CIE (accès libre en ligne, e-ILV).'
+  doi_ou_url: https://cie.co.at/eilvterm/17-23-076
+  role: contraste
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-10-10'
+  verifie_sur: 'entrée lue en ligne le 2026-10-10 : espace couleur CIELAB, coordonnées L*, a*, b* ; note 1 : correspondants approchés de la clarté (L*, « CIE 1976 lightness »), du chroma (« CIE 1976 a,b
+    chroma ») et de la teinte (« CIE 1976 a,b hue angle », h_ab = arctan(b*/a*))'
+  reprend: 'rien : le chroma y est un correspondant approché, calculé, du chroma (que PPP range sous la saturation) ; il est cité dans grandeur_physique_homonyme comme grandeur mesurée homonyme'
+  ne_reprend_pas: l’espace CIELAB et ses formules ; aucune région ne s’en déduit
+etat_de_l_art: 'La saturation correspond au chroma du système de Munsell (1905) [[munsell1905]] et au chroma C* de la colorimétrie CIE [[cie015]]. Les modèles d''apparence des couleurs font l''objet d''un
+  ouvrage de Fairchild (2013) [[fairchild2013]], non lu ici. PPP retient une seule dimension perçue, à repères publics. Détail : docs/bibliographie-par-type.md#groupe-couleur.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-couleur
+axiomes:
+- conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
+  validation: Toute assertion de type ppp:saturation a exactement un ppp:about.
+- conceptuel: Les 4 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 4 ppp:Region de l’échelle du type ont des ppp:rank distincts, de 1 à 4 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Une région de cet espace n’est pas un sous-type du type.
+  validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
+nanay: Oui — passer de « je vois une couleur » à « je regarde si elle est grise ou vive » change la description (une couleur paraît plus grise ou plus vive à côté d’une autre).
+transfert: objet conçu oui (émail, textile) | tableau oui (couleurs grisées ou vives) | cuisine oui (ustensile de couleur) | high-tech oui (voyants, coques)
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs à une région près, au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques (spec §9.7 H)
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E2
+  nature: structure
+  enonce: on peut faire varier la saturation en tenant la clarté constante (des couleurs de même clarté, du gris à la plus vive)
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les objets
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2
+statut: candidat
+statut_epistemique: non éprouvé
+introduit_en: '2.0'
+modifie_en:
+- 2.3.1
+remplace_par: []
+manques:
+- exemplaires
+bloque_par: []
+a_relire: []
+relecture_explicative:
+  date: '2026-10-10'
+  champs:
+  - question_attentionnelle
+  - définition
+  - contre_exemple
+  - nanay
+  - transfert
+  - relations.note
+  - etat_de_l_art (série 6)
+  - references (série 6)
+  - references.cie_ilv_cielab (série 6, vérification finale)
+  a_reconfirmer: []

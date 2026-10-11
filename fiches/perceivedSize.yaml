@@ -1,0 +1,158 @@
+# Fiche de type PPP — ppp:perceivedSize — format : PPP_FicheType.md (spec v2.4)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_joint, avertissement_label, note_categories, note_reference, note_dimension, note_conditions, note_echelle, note_porteur, note_base, bloque_par.
+id: ppp:perceivedSize
+label_fr: taille perçue
+label_en: perceived size
+labels_alternatifs: []
+patron: P1
+sorte: qualité
+sous_sorte: —
+strate: formel
+base_dependance:
+  types: []
+  facteurs_non_perceptuels: []
+facettes:
+- forme
+définition: 'Ce que l’élément paraît mesurer à côté du corps de celui qui regarde : de ce qu’on prend d’une main à ce qui dépasse nettement une personne.'
+question_attentionnelle: À côté de mon corps, cet élément paraît-il tenir dans la main, être à l’échelle du corps (comme une chaise) ou dépasser le corps (comme une maison) ?
+contre_exemple: '« La tour paraît bien plus haute que la maison voisine » compare deux éléments : c’est un contraste d’échelle, pas la taille perçue de la tour seule. Sa hauteur en mètres est une mesure,
+  pas la taille perçue.'
+grandeur_physique_homonyme: 'dimensions mesurées ; angle visuel : aucune région ne s’en déduit.'
+modalites:
+- vision
+mode_de_presentation: image
+conditions_critiques:
+- presentation
+- distance
+note_conditions: sur une image, la taille se juge d’après la scène montrée (note_reference) ; de loin ou sur un écran, les repères du corps manquent
+porteur: un élément, une partie ou un objet
+arité: 1
+condition_NA: porteur sans étendue perceptible.
+espace_valeurs:
+  echelle: ordinale
+  sens_croissant: de `handSized` (rang 1) vers `beyondBody` (rang 3), la taille perçue rapportée au corps de l’observateur augmente
+  numerique: non
+  regions:
+  - cle: handSized
+    label_fr: tient dans la main
+    label_en: hand-sized
+    rang: 1
+    repere: ce qu’on peut prendre d’une main (une tasse, un stylo, une pomme)
+    exemplaires: []
+  - cle: bodySized
+    label_fr: à l’échelle du corps
+    label_en: body-sized
+    rang: 2
+    repere: ce qu’on porte à deux bras ou à quoi l’on se mesure (une chaise, une valise, une porte)
+    exemplaires: []
+  - cle: beyondBody
+    label_fr: dépasse le corps
+    label_en: beyond-body-sized
+    rang: 3
+    repere: ce qui dépasse nettement la taille d’une personne (une maison, un arbre adulte, une façade)
+    exemplaires:
+    - ppp-a:pilote-0801
+note_reference: 'On juge la taille de l’élément dans la scène qu’on voit, pas celle de son image : la photo d’une maison montre un élément qui dépasse le corps (position de l’équipe, révisable ; T8).'
+identite: Taille d’un seul élément, pas la différence de taille entre deux éléments (contraste d’échelle).
+relations:
+- type: confusableWith
+  cible: ppp:scaleContrast
+  note: la taille perçue se dit d’un seul élément rapporté au corps ; le contraste d’échelle compare deux éléments vus ensemble
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: konkle_oliva2011
+  citation: 'Konkle, T. & Oliva, A. (2011). Canonical visual size for real-world objects. Journal of Experimental Psychology: Human Perception and Performance, 37(1), 23–37.'
+  doi_ou_url: https://doi.org/10.1037/a0020413
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: 'métadonnées Crossref et résumé lu (OpenAlex, 2026-10-10) : les objets réels ont une taille vue constante à laquelle on les dessine, les imagine et préfère les voir ; elle est proportionnelle
+    au logarithme de leur taille supposée dans le monde, et se caractérise mieux par le rapport entre l’objet et le cadre qui l’entoure que par un angle visuel fixe'
+  reprend: le fait, dit dans le résumé, que la taille à laquelle on dessine, imagine et préfère voir un objet dépend de sa taille supposée dans le monde, et se décrit mieux par rapport au cadre qui l’entoure
+    que par un angle visuel fixe
+  ne_reprend_pas: la loi logarithmique et les tâches de dessin et d'imagerie
+  note_verification: 'série 6, partie 7 : le résumé parle de la taille à laquelle on dessine, imagine et préfère voir un objet (« taille canonique »), pas du jugement de taille ; « on juge la taille d’un
+    objet d’après sa taille supposée dans le monde » allait plus loin que le résumé ; reprend réduit à ce que le résumé soutient'
+etat_de_l_art: 'Konkle et Oliva (2011) [[konkle_oliva2011]] montrent que les objets réels ont une taille vue « canonique » (celle à laquelle on tend à les dessiner ou à les imaginer), proportionnelle au
+  logarithme de leur taille supposée dans le monde : elle croît avec cette taille, mais de moins en moins vite. Cela appuie une taille perçue rapportée à un repère (ici le corps de l’observateur, T8), plutôt
+  qu’à la place que l’objet occupe dans le champ de vision (l’angle visuel). Détail : docs/bibliographie-par-type.md#groupe-forme.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-forme
+axiomes:
+- conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
+  validation: Toute assertion de type ppp:perceivedSize a exactement un ppp:about.
+- conceptuel: Les 3 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 3 ppp:Region de l’échelle du type ont des ppp:rank distincts, de 1 à 3 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Une région de cet espace n’est pas un sous-type du type.
+  validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
+nanay: Oui — passer de « je vois un objet » à « je le rapporte à mon corps (dans la main, à ma taille, au-delà) » change la description (manière de l’approcher, de le prendre ou d’en faire le tour).
+transfert: objet conçu oui (une tasse, une chaise) | tableau oui (taille des figures dans la scène peinte) | cuisine oui (ustensile, plan de travail) | high-tech oui (téléphone, écran mural) | architecture
+  oui (façade)
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs exact (échelle à trois régions ou moins, spec §9.7 C, v2.5), au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques
+    (spec §9.7 H)
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les objets
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E5
+  nature: existence
+  enonce: le type s’applique sans redéfinition à au moins deux régimes (un objet conçu et une architecture ou un tableau)
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2
+statut: candidat
+statut_epistemique: non éprouvé
+introduit_en: '2.2'
+modifie_en:
+- 2.2.3
+- 2.3.1
+- '2.5'
+remplace_par: []
+manques:
+- 'régions sans exemplaire : `handSized`, `bodySized`'
+bloque_par: []
+a_relire: []
+relecture_explicative:
+  date: '2026-10-10'
+  champs:
+  - question_attentionnelle
+  - définition
+  - contre_exemple
+  - nanay
+  - transfert
+  - relations.note
+  - espace_valeurs.regions.label_en
+  - exemplaires
+  - etat_de_l_art (série 6)
+  - references (série 6)
+  a_reconfirmer: []
+  reconfirme:
+  - champ: définition
+    date: '2026-10-10'
+    avant: Place qu’un élément paraît occuper, rapportée à ce qu’on voit autour ou à son propre corps (tenir dans la main, dépasser la tête).
+    apres: 'Taille qu’un élément paraît avoir, rapportée au corps de celui qui regarde : de ce qui tient dans la main à ce qui dépasse le corps.'
+    retenu: 'Ce que l’élément paraît mesurer à côté du corps de celui qui regarde : de ce qu’on prend d’une main à ce qui dépasse nettement une personne.'
+    remarque: 'reformulée par la relecture explicative : « taille qu’un élément paraît avoir » redisait le label (taille perçue) ; validée'
+  - champ: question_attentionnelle
+    date: '2026-10-10'
+    avant: Cet élément paraît-il petit ou grand, et par rapport à quoi ?
+    apres: Cet élément paraît-il tenir dans la main, être à l’échelle du corps, ou dépasser le corps ?
+    retenu: À côté de mon corps, cet élément paraît-il tenir dans la main, être à l’échelle du corps (comme une chaise) ou dépasser le corps (comme une maison) ?
+    remarque: précisée par la relecture explicative (deux repères courants) ; validée
+  - champ: references.konkle_oliva2011.reprend
+    date: '2026-10-10'
+    avant: le fait qu'on juge la taille d'un objet d'après sa taille supposée dans le monde, pas d'après l'angle visuel
+    apres: le fait, dit dans le résumé, que la taille à laquelle on dessine, imagine et préfère voir un objet dépend de sa taille supposée dans le monde, et se décrit mieux par rapport au cadre qui l’entoure
+      que par un angle visuel fixe
+    remarque: 'réduit par la relecture explicative (vérification finale de la série 6) à ce que dit le résumé lu : l’ancien texte (« on juge la taille d’un objet d’après sa taille supposée ») parlait du jugement de
+      taille, dont le résumé ne parle pas (note_verification de l’équipe)'

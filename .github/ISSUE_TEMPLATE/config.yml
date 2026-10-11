@@ -1,0 +1,8 @@
+# Sélecteur de formulaires (GitHub Docs, « Configuring issue templates for your repository », consulté le 2026-10-11).
+# blank_issues_enabled: false : seuls les membres avec droit d'écriture voient le ticket vierge.
+# contact_links : liens affichés sous les formulaires (name, url, about). Adresse du site retenue en série 10.
+blank_issues_enabled: false
+contact_links:
+  - name: Site de PPP
+    url: https://blomig.github.io/PPP-ontologie
+    about: "Les fiches publiques, le journal des épreuves et la page « Comment citer »."

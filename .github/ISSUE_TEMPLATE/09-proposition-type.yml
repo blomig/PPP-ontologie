@@ -1,0 +1,48 @@
+# Formulaire de ticket « proposition-type » (spec §13, docs/gouvernance.md 2.4). Modèle pour .github/ISSUE_TEMPLATE/ du dépôt public.
+# Syntaxe : GitHub Docs, « Syntax for issue forms » et « Syntax for GitHub's form schema » (consultés le 2026-10-11).
+name: Proposer un type
+description: Une fiche de type complète, au patron PPP_FicheType.md.
+title: '[proposition-type] '
+labels:
+- proposition-type
+body:
+- type: markdown
+  attributes:
+    value: 'Ce ticket est **public**. N''y mettez ni adresse électronique ni donnée personnelle : un pseudonyme suffit. Format et traitement : `docs/gouvernance.md` (reçu, recevable, traité, réponse dans
+      la semaine).'
+- type: textarea
+  id: fiche
+  attributes:
+    label: Fiche de type
+    description: Fiche complète au patron PPP_FicheType.md, avec au moins un énoncé testable et le test de neutralité.
+  validations:
+    required: true
+- type: textarea
+  id: remarques
+  attributes:
+    label: Remarques (facultatif)
+    description: ''
+  validations:
+    required: false
+- type: input
+  id: version
+  attributes:
+    label: Version de la spécification
+    description: Affichée en pied de page du site, par exemple 2.8.
+    placeholder: '2.8'
+  validations:
+    required: true
+- type: input
+  id: pseudonyme
+  attributes:
+    label: Pseudonyme (facultatif)
+    description: Repris dans le champ `auteur` du ticket. Jamais d'adresse électronique.
+  validations:
+    required: false
+- type: checkboxes
+  id: licence
+  attributes:
+    label: Licence
+    options:
+    - label: J'accepte que ma contribution soit versée sous les licences du projet (contenu CC BY 4.0, code MIT), sans accord à signer.
+      required: true

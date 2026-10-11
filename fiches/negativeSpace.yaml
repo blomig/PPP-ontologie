@@ -1,0 +1,143 @@
+# Fiche de type PPP — ppp:negativeSpace — format : PPP_FicheType.md (spec v2.4)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_joint, avertissement_label, note_categories, note_reference, note_dimension, note_conditions, note_echelle, note_porteur, note_base, bloque_par.
+id: ppp:negativeSpace
+label_fr: espace négatif
+label_en: negative space
+labels_alternatifs:
+- vide actif (jargon d’atelier)
+patron: P1
+sorte: qualité
+sous_sorte: gestalt
+strate: semi-formel
+base_dependance:
+  types:
+  - ppp:contour
+  - ppp:distribution
+  facteurs_non_perceptuels: []
+facettes:
+- organisation
+définition: Degré auquel les espaces laissés libres entre les éléments d’une composition se lisent eux-mêmes comme des formes, et non comme un simple fond.
+question_attentionnelle: Les espaces laissés libres entre les éléments se lisent-ils, eux aussi, comme des formes ?
+contre_exemple: 'Une page blanche sans rien dessus n’a pas d’espace négatif : sans éléments, il n’y a pas d’intervalles à lire comme des formes (sa densité est « uniforme »). Une page peu dense n’a pas
+  pour autant un espace négatif marqué : tout dépend de la forme des intervalles.'
+modalites:
+- vision
+mode_de_presentation: image
+porteur: une configuration (composition, objet, façade)
+arité: 1
+condition_NA: composition sans espace laissé libre entre les éléments.
+espace_valeurs:
+  echelle: ordinale
+  sens_croissant: de `none` (rang 1) vers `marked` (rang 3), la lecture des espaces laissés libres comme des formes s’impose davantage
+  numerique: non
+  regions:
+  - cle: none
+    label_fr: absent
+    label_en: none
+    rang: 1
+    repere: les espaces laissés libres se lisent comme un simple fond
+    exemplaires: []
+  - cle: slight
+    label_fr: faible
+    label_en: slight
+    rang: 2
+    repere: certains espaces laissés libres se lisent comme des formes, à l’examen
+    exemplaires: []
+  - cle: marked
+    label_fr: marqué
+    label_en: marked
+    rang: 3
+    repere: les espaces laissés libres se lisent d’emblée comme des formes
+    exemplaires: []
+identite: Lecture des espaces laissés libres comme des formes, pas la région « clairsemé » de la densité.
+relations:
+- type: confusableWith
+  cible: ppp:perceivedDepth
+  note: les espaces laissés libres qui se lisent comme des formes restent dans le même plan ; quand les choses paraissent se ranger les unes devant les autres, c’est l’étagement en plans
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: rubin1915
+  citation: 'Rubin, E. (1915). Synsoplevede Figurer. Copenhague : Gyldendal.'
+  doi_ou_url: https://openlibrary.org/works/OL42725131W
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: notice Open Library (titre, auteur, 1915, Gyldendal ; pas de description) ; contenu non lu
+  reprend: rien de son contenu (non lu) ; cité comme ouvrage classique repéré sur les figures vues (titre)
+  ne_reprend_pas: tout son contenu et sa théorie (non lus)
+- id: wagemans2012
+  citation: 'Wagemans, J., Elder, J. H., Kubovy, M., Palmer, S. E., Peterson, M. A., Singh, M. & von der Heydt, R. (2012). A century of Gestalt psychology in visual perception: I. Perceptual grouping and
+    figure–ground organization. Psychological Bulletin, 138(6), 1172–1217.'
+  doi_ou_url: https://doi.org/10.1037/a0029333
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: 'métadonnées Crossref et résumé lu (OpenAlex, 2026-10-10) : bilan d’un siècle de psychologie de la Gestalt ; principes de groupement, classiques (proximité, similarité, destin commun, bonne
+    continuité, fermeture, symétrie, parallélisme) et nouveaux ; recherches actuelles sur le groupement et l’organisation figure-fond ; texte intégral non lu'
+  reprend: l'organisation figure-fond comme objet établi de la recherche perceptive (résumé)
+  ne_reprend_pas: le bilan des mécanismes
+etat_de_l_art: 'L''espace négatif touche à l''organisation figure-fond. Rubin (1915, *Synsoplevede Figurer*) [[rubin1915]] est un ouvrage classique sur les figures vues (titre ; notice seule, contenu non
+  lu) ; Wagemans et al. (2012) [[wagemans2012]] font le bilan des recherches sur le groupement perceptif et l''organisation figure-fond (résumé lu). Aucune source trouvée ne nomme une qualité perçue des
+  espaces laissés libres lus comme des formes ; la base reste ouverte (T11). Détail : docs/bibliographie-par-type.md#groupe-organisation.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-organisation
+axiomes:
+- conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
+  validation: Toute assertion de type ppp:negativeSpace a exactement un ppp:about.
+- conceptuel: Les 3 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 3 ppp:Region de l’échelle du type ont des ppp:rank distincts, de 1 à 3 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Une région de cet espace n’est pas un sous-type du type.
+  validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
+nanay: Oui — passer de « je regarde les éléments » à « je regarde les espaces laissés libres entre eux » change la description (des formes apparaissent dans les intervalles).
+transfert: objet conçu oui (chaise ajourée) | tableau oui (fond entre les figures) | cuisine oui (étagère ouverte) | high-tech oui (mise en page d’un écran) | architecture oui (vides entre bâtiments)
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs exact (échelle à trois régions ou moins, spec §9.7 C, v2.5), au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques
+    (spec §9.7 H)
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les objets
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2
+statut: candidat
+statut_epistemique: non éprouvé
+introduit_en: '2.0'
+modifie_en:
+- 2.3.1
+- 2.3.2
+- '2.5'
+remplace_par: []
+source_de_la_fiche: ex-« vide actif » v0.2 ; définition et question v0.2 non reprises (valence de « actif »)
+manques:
+- exemplaires
+bloque_par:
+- 'T11 (base proposée : netteté du bord, distribution)'
+a_relire: []
+relecture_explicative:
+  date: '2026-10-10'
+  champs:
+  - question_attentionnelle
+  - définition
+  - contre_exemple
+  - nanay
+  - transfert
+  - relations.note
+  - etat_de_l_art (série 6, vérification finale)
+  - references (série 6, vérification finale)
+  a_reconfirmer: []
+  reconfirme:
+  - champ: relations.note (ppp:perceivedDepth)
+    date: '2026-10-10'
+    avant: les espaces laissés libres qui se lisent comme des formes restent dans le même plan ; l’étagement en plans relève de la profondeur perçue
+    apres: les espaces laissés libres qui se lisent comme des formes restent dans le même plan ; l’étagement en plans relève de l’étagement en plans
+    raison: 'label canonique de ppp:perceivedDepth changé : « profondeur perçue » → « étagement en plans » (objection 7, T25)'
+    retenu: les espaces laissés libres qui se lisent comme des formes restent dans le même plan ; quand les choses paraissent se ranger les unes devant les autres, c’est l’étagement en plans
+    remarque: 'corrigée par la relecture explicative : la nouvelle phrase disait « l’étagement en plans relève de l’étagement en plans » (tautologie)'

@@ -1,0 +1,200 @@
+# Fiche de type PPP — ppp:textureDirectionality — format : PPP_FicheType.md (spec v2.4)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_joint, avertissement_label, note_categories, note_reference, note_dimension, note_conditions, note_echelle, note_porteur, note_base, bloque_par.
+id: ppp:textureDirectionality
+label_fr: orientation de la texture
+label_en: texture directionality
+labels_alternatifs:
+- directionnalité
+patron: P1
+sorte: qualité
+sous_sorte: —
+strate: semi-formel
+base_dependance:
+  types:
+  - ppp:texture
+  - ppp:contour
+  facteurs_non_perceptuels: []
+facettes:
+- matiere
+définition: Degré auquel les reliefs d’une surface (stries, sillons, côtes) paraissent aller tous dans le même sens, comme les fines stries d’un métal brossé ou les côtes d’un velours côtelé, à l’opposé
+  d’un crépi où aucun sens ne se dégage.
+question_attentionnelle: Les reliefs de cette surface vont-ils tous dans le même sens, seulement par endroits, ou dans tous les sens ?
+contre_exemple: 'Une rangée de piquets alignés va dans un sens, mais ce sont des objets distincts : cela relève de leur distribution, pas de l’orientation d’une texture. Un métal brossé et un velours côtelé
+  vont tous deux dans un sens, l’un à reliefs fins, l’autre à reliefs plus gros : la taille des reliefs relève de la texture. Et que les stries soient horizontales ou verticales ne change rien à ce degré.
+  Un motif imprimé ou peint sans relief, même orienté (les veines d’un stratifié imprimé « bois »), n’a pas d’orientation de texture : la main n’y sent aucun relief, c’est un motif de teinte et de clarté.'
+modalites:
+- vision
+- toucher
+mode_de_presentation: échantillon
+conditions_critiques:
+- distance
+note_conditions: de loin, des reliefs fins cessent de se voir ; la lumière rasante les révèle à la vue, mais n’est pas critique au toucher (T22)
+porteur: une surface, celle d’un objet ou d’une partie
+arité: 1
+condition_NA: surface sans relief perceptible (un verre poli, un stratifié imprimé lisse) ; un motif imprimé ou peint sans relief ne rend pas le type applicable.
+espace_valeurs:
+  echelle: ordinale
+  sens_croissant: de `nonOriented` (rang 1) vers `oriented` (rang 3), une direction commune des reliefs s’impose davantage
+  numerique: non
+  regions:
+  - cle: nonOriented
+    label_fr: sans orientation
+    label_en: non-oriented
+    rang: 1
+    repere: aucune direction ne se dégage (un crépi projeté, du papier de verre)
+    exemplaires:
+    - ppp-a:pilote-0503
+  - cle: partlyOriented
+    label_fr: en partie orientée
+    label_en: partly oriented
+    rang: 2
+    repere: une direction se dégage par endroits (des coups de pinceau en relief qui suivent à peu près le même sens)
+    exemplaires: []
+  - cle: oriented
+    label_fr: orientée
+    label_en: oriented
+    rang: 3
+    repere: toute la surface suit une même direction (un métal brossé, un velours côtelé)
+    exemplaires:
+    - ppp-a:pilote-0501
+identite: Direction commune des reliefs d’une surface, pas leur taille (texture), pas la répartition d’éléments distincts (distribution), pas l’orientation d’un motif imprimé sans relief (teinte, clarté).
+relations:
+- type: confusableWith
+  cible: ppp:distribution
+  note: des éléments distincts alignés relèvent de la distribution ; l’orientation de la texture qualifie une surface
+- type: separableFrom
+  cible: ppp:texture
+  note: 'à éprouver (E2) : une texture fine peut être orientée (un métal brossé), une grosse sans orientation (un crépi)'
+- type: confusableWith
+  cible: ppp:localIrregularity
+  note: une surface « en partie orientée » perd sa direction par endroits ; l’irrégularité locale dit qu’une surface régulière s’écarte par endroits de sa régularité (une éraflure isolée en travers d’un
+    métal brossé)
+alignements_externes:
+- relation: skos:closeMatch
+  cible: directionality (Tamura, Mori et Yamawaki 1978)
+  reference: Tamura, H., Mori, S. & Yamawaki, T. (1978). Textural features corresponding to visual perception. IEEE Trans. SMC 8(6), 460–473. doi:10.1109/TSMC.1978.4309999
+  reference_id: tamura1978
+  note: dans la source, netteté des pics de l’histogramme des directions des bords locaux ; mesure calculée sur une image en niveaux de gris, comparée par les auteurs à des classements humains de 16 textures
+    de l’album de Brodatz ; ne fournit pas de régions ; non déclaré exact (spec §9.7 O)
+- relation: skos:relatedMatch
+  cible: line-likeness (Tamura, Mori et Yamawaki 1978)
+  reference: Tamura, H., Mori, S. & Yamawaki, T. (1978). Textural features corresponding to visual perception. IEEE Trans. SMC 8(6), 460–473. doi:10.1109/TSMC.1978.4309999
+  reference_id: tamura1978
+  note: dans la source, concordance des directions de bords voisins (traits plutôt que taches) ; pas de type propre en PPP pour l’instant (T1)
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: tamura1978
+  citation: Tamura, H., Mori, S. & Yamawaki, T. (1978). Textural features corresponding to visual perception. IEEE Transactions on Systems, Man, and Cybernetics, 8(6), 460–473.
+  doi_ou_url: https://doi.org/10.1109/TSMC.1978.4309999
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: métadonnées Crossref et résumé IEEE Xplore ; deux sources secondaires (docs/etat-de-l-art.md §5 bis) ; texte intégral non lu
+  reprend: la dimension *directionality*, rapprochée de ce type (skos:closeMatch, alignements_externes)
+  ne_reprend_pas: la mesure calculée, qui vaut aussi pour un motif imprimé sans relief ; elle n'est pas reprise comme régions
+- id: liu_picard1996
+  citation: 'Liu, F. & Picard, R. W. (1996). Periodicity, directionality, and randomness: Wold features for image modeling and retrieval. IEEE Transactions on Pattern Analysis and Machine Intelligence,
+    18(7), 722–733.'
+  doi_ou_url: https://doi.org/10.1109/34.506794
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: 'métadonnées Crossref et résumé lu (OpenAlex, 2026-10-10) : modèle d’image (décomposition de Wold) en trois composantes orthogonales, « periodicity », « directionality » et « randomness »,
+    présentées comme approchant les trois dimensions les plus importantes de la perception de la texture ; texte intégral non lu'
+  reprend: la direction comme composante séparée de la texture d'une image
+  ne_reprend_pas: 'le modèle de Wold et ses mesures : non repris'
+etat_de_l_art: 'La direction commune des reliefs est l''une des six dimensions de Tamura, Mori et Yamawaki (1978) [[tamura1978]], mesurée sur une image (*directionality*). Liu et Picard (1996) [[liu_picard1996]]
+  en font l''une des trois composantes d''un modèle d''image (périodicité, direction, caractère aléatoire). Aucune source trouvée ne limite l''orientation aux reliefs, comme le fait PPP (T26). Détail :
+  docs/bibliographie-par-type.md#groupe-texture.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-texture
+axiomes:
+- conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
+  validation: Toute assertion de type ppp:textureDirectionality a exactement un ppp:about.
+- conceptuel: Les 3 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 3 ppp:Region de l’échelle du type ont des ppp:rank distincts, de 1 à 3 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Une région de cet espace n’est pas un sous-type du type.
+  validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
+nanay: Oui — passer de « je vois une surface striée » à « je regarde si ses reliefs suivent tous un même sens » change la description (sens dans lequel la main glisse, reflet qui file le long des stries).
+transfert: objet conçu oui (métal brossé, bois raboté) | tableau oui (coups de pinceau en relief) | cuisine oui (inox brossé) | high-tech oui (coque en aluminium brossé)
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs exact (échelle à trois régions ou moins, spec §9.7 C, v2.5), au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques
+    (spec §9.7 H) ; vision et toucher éprouvés séparément
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E2
+  nature: structure
+  enonce: on peut faire varier l’orientation en tenant la taille des reliefs constante (une même tôle, brossée dans un sens ou en tous sens)
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les objets
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2
+statut: candidat
+statut_epistemique: non éprouvé
+introduit_en: 2.2.3
+modifie_en:
+- 2.3.1
+- 2.3.2
+- '2.5'
+remplace_par: []
+source_de_la_fiche: proposée le 2026-10-10 après la décision de l’éditeur du projet d’intégrer les dimensions de Tamura, Mori et Yamawaki 1978 (T1) ; stock v0.2 « orientation » (T14) sans id
+manques:
+- 'régions sans exemplaire : `partlyOriented`'
+- '`nonOriented` : ppp-a:pilote-0502 (Shap Wells) retirée en 2.3.2 (T24), remplacée par ppp-a:pilote-0503 (échantillon bouchardé)'
+bloque_par: []
+a_relire: []
+relecture_explicative:
+  date: '2026-10-10'
+  champs:
+  - question_attentionnelle
+  - définition
+  - contre_exemple
+  - nanay
+  - transfert
+  - relations.note
+  - exemplaires
+  - etat_de_l_art (série 6)
+  - references (série 6)
+  a_reconfirmer: []
+  reconfirme:
+  - champ: définition
+    date: '2026-10-10'
+    avant: Degré auquel les reliefs ou les fines marques répétées d’une surface paraissent aller tous dans le même sens, comme les rayures d’un métal brossé ou les côtes d’un velours côtelé, à l’opposé
+      d’un crépi où aucun sens ne se dégage.
+    apres: Degré auquel les reliefs d’une surface (rayures, sillons, côtes) paraissent aller tous dans le même sens, comme les rayures d’un métal brossé ou les côtes d’un velours côtelé, à l’opposé d’un
+      crépi où aucun sens ne se dégage.
+    raison: 'objection 1 de la relecture explicative : « fines marques » retiré, le type est limité aux reliefs'
+    retenu: Degré auquel les reliefs d’une surface (stries, sillons, côtes) paraissent aller tous dans le même sens, comme les fines stries d’un métal brossé ou les côtes d’un velours côtelé, à l’opposé
+      d’un crépi où aucun sens ne se dégage.
+    remarque: 'reconfirmée après T26 (limitée aux reliefs) ; « rayures » remplacé par « stries » par la relecture explicative : en français courant, un tissu « à rayures » est souvent imprimé, sans relief'
+  - champ: question_attentionnelle
+    date: '2026-10-10'
+    avant: Les reliefs ou les fines marques de cette surface vont-ils tous dans le même sens, seulement par endroits, ou dans tous les sens ?
+    apres: Les reliefs de cette surface vont-ils tous dans le même sens, seulement par endroits, ou dans tous les sens ?
+    raison: 'même objection : « ou les fines marques » retiré'
+    remarque: reconfirmée telle quelle (T26)
+  - champ: contre_exemple
+    date: '2026-10-10'
+    avant: 'Une rangée de piquets alignés va dans un sens, mais ce sont des objets distincts : cela relève de leur distribution, pas de l’orientation d’une texture. Un métal brossé et un velours côtelé
+      vont tous deux dans un sens, l’un à reliefs fins, l’autre à reliefs plus gros : la taille des reliefs relève de la texture. Et que les rayures soient horizontales ou verticales ne change rien à ce
+      degré.'
+    apres: 'Une rangée de piquets alignés va dans un sens, mais ce sont des objets distincts : cela relève de leur distribution, pas de l’orientation d’une texture. Un métal brossé et un velours côtelé
+      vont tous deux dans un sens, l’un à reliefs fins, l’autre à reliefs plus gros : la taille des reliefs relève de la texture. Et que les rayures soient horizontales ou verticales ne change rien à ce
+      degré. Un motif imprimé ou peint sans relief, même orienté (les veines d’un stratifié imprimé « bois »), n’a pas d’orientation de texture : la main n’y sent aucun relief, c’est un motif de teinte
+      et de clarté.'
+    raison: 'même objection : ajout du motif imprimé orienté, aligné sur le contre-exemple de la texture'
+    retenu: 'Une rangée de piquets alignés va dans un sens, mais ce sont des objets distincts : cela relève de leur distribution, pas de l’orientation d’une texture. Un métal brossé et un velours côtelé
+      vont tous deux dans un sens, l’un à reliefs fins, l’autre à reliefs plus gros : la taille des reliefs relève de la texture. Et que les stries soient horizontales ou verticales ne change rien à ce
+      degré. Un motif imprimé ou peint sans relief, même orienté (les veines d’un stratifié imprimé « bois »), n’a pas d’orientation de texture : la main n’y sent aucun relief, c’est un motif de teinte
+      et de clarté.'
+    remarque: reconfirmé après T26 ; « rayures » remplacé par « stries » (même raison que la définition)

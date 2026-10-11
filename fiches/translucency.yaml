@@ -1,0 +1,202 @@
+# Fiche de type PPP — ppp:translucency — format : PPP_FicheType.md (spec v2.4)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_joint, avertissement_label, note_categories, note_reference, note_dimension, note_conditions, note_echelle, note_porteur, note_base, bloque_par.
+id: ppp:translucency
+label_fr: transparence
+label_en: translucency
+labels_alternatifs:
+- vue à travers
+- translucidité
+avertissement_label: 'Le mot « transparence » nomme toute l’échelle : ce que la matière laisse voir de ce qui est derrière elle. Une matière opaque s’y range aussi, tout en bas (région « opaque ») ; « transparent
+  » nomme seulement le haut de l’échelle (on voit nettement à travers). Les deux mots sont de la même famille, comme « symétrie » et « symétrique » ; aucune région ne s’appelle « transparence ». Le sens
+  figuré (« la transparence d’une institution ») ne vaut pas ici. « Vue à travers » et « translucidité » sont des labels alternatifs (décision de l’éditeur du projet, 2026-10-11, T28). Label anglais `translucency`
+  inchangé.'
+patron: P1
+sorte: qualité
+sous_sorte: —
+strate: formel
+base_dependance:
+  types: []
+  facteurs_non_perceptuels: []
+facettes:
+- matiere
+définition: 'Ce que la matière laisse voir de ce qui est derrière elle : rien du tout, seulement de la lumière sans les formes, ou les formes nettes de ce qui est derrière.'
+question_attentionnelle: 'Peut-on voir à travers cette matière : pas du tout, seulement une lueur ou des formes floues, ou nettement ?'
+contre_exemple: 'Un verre teinté sombre reste transparent : on voit nettement à travers, même si tout paraît plus sombre ; ce sont sa clarté et sa teinte qui changent. Un miroir renvoie des images mais
+  ne laisse rien voir à travers : il est opaque ; ce qu’il a de particulier, ce sont ses reflets nets (brillance de surface).'
+grandeur_physique_homonyme: 'transmittance lumineuse et trouble (haze) mesurés sur une plaque, par exemple selon ASTM D1003 (« Standard Test Method for Haze and Luminous Transmittance of Transparent Plastics
+  », ASTM International) ; indice de réfraction : aucune région ne s’en déduit.'
+modalites:
+- vision
+mode_de_presentation: échantillon
+conditions_critiques:
+- lumiere
+- presentation
+note_conditions: la transparence se juge à contre-jour ou devant un fond ; valeur `backlit` de la facette lumière proposée en spec 2.3.1 (T23)
+porteur: une partie ou un objet vu avec son épaisseur (une plaque, une paroi, un récipient)
+arité: 1
+condition_NA: 'porteur sans matière (une lumière, une ombre). Une matière qu’on ne peut voir ni à contre-jour ni devant un fond reste applicable : « non tranché » plutôt que non applicable.'
+espace_valeurs:
+  echelle: ordinale
+  sens_croissant: de `opaque` (rang 1) vers `transparent` (rang 3), on voit de mieux en mieux à travers la matière
+  numerique: non
+  regions:
+  - cle: opaque
+    label_fr: opaque
+    label_en: opaque
+    rang: 1
+    repere: on ne voit rien à travers, même à contre-jour (une planche de bois, une tôle)
+    exemplaires: []
+  - cle: translucent
+    label_fr: translucide
+    label_en: translucent
+    rang: 2
+    repere: la lumière passe, mais on ne distingue pas les formes derrière (un verre dépoli, un abat-jour en papier)
+    exemplaires: []
+  - cle: transparent
+    label_fr: transparent
+    label_en: transparent
+    rang: 3
+    repere: on voit nettement les formes derrière (une vitre propre, l’eau claire d’un verre)
+    exemplaires: []
+identite: Ce qu’on voit à travers une matière, pas sa clarté (un verre sombre peut être transparent), pas ses reflets (brillance de surface), pas l’impression de voir dans son épaisseur (profondeur dans
+  la matière).
+relations:
+- type: separableFrom
+  cible: ppp:surfaceGloss
+  note: 'à éprouver (E2) : un verre dépoli laisse passer la lumière sans reflet net ; un carrelage noir poli ne laisse rien passer mais montre des reflets nets'
+- type: confusableWith
+  cible: ppp:lightness
+  note: un verre teinté sombre paraît sombre, mais on voit toujours à travers ; une matière claire n’est pas pour autant translucide
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: metelli1974
+  citation: Metelli, F. (1974). The perception of transparency. Scientific American, 230(4), 90–98.
+  doi_ou_url: https://doi.org/10.1038/scientificamerican0474-90
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: métadonnées Crossref ; résumé non disponible ; décrit comme modèle des filtres minces par une source secondaire (résumé de Fleming et Bülthoff 2005) ; texte non lu
+  reprend: la transparence perçue comme objet d'étude
+  ne_reprend_pas: le modèle des filtres minces
+- id: fleming_bulthoff2005
+  citation: Fleming, R. W. & Bülthoff, H. H. (2005). Low-level image cues in the perception of translucent materials. ACM Transactions on Applied Perception, 2(3), 346–382.
+  doi_ou_url: https://doi.org/10.1145/1077399.1077409
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: métadonnées Crossref et résumé (OpenAlex)
+  reprend: l'opposition translucide / opaque comme jugement perçu
+  ne_reprend_pas: les indices d'image et la simulation
+- id: motoyoshi2010
+  citation: Motoyoshi, I. (2010). Highlight–shading relationship as a cue for the perception of translucent and transparent materials. Journal of Vision, 10(9), 6.
+  doi_ou_url: https://doi.org/10.1167/10.9.6
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: métadonnées Crossref et résumé (Semantic Scholar)
+  reprend: la distinction perçue entre translucide et transparent, qui appuie les régions `translucent` et `transparent`
+  ne_reprend_pas: les indices d'image et les stimuli de synthèse
+- id: astm_d1003
+  citation: 'ASTM D1003-21. Standard Test Method for Haze and Luminous Transmittance of Transparent Plastics. West Conshohocken : ASTM International.'
+  doi_ou_url: https://store.astm.org/d1003-21.html
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: 'page de l''éditeur (domaine d''application, usage : mesure du trouble et de la transmittance lumineuse) ; texte payant non lu'
+  reprend: rien
+  ne_reprend_pas: le trouble et la transmittance lumineuse mesurés (grandeur_physique_homonyme)
+etat_de_l_art: 'La perception de la transparence a été modélisée par Metelli (1974) [[metelli1974]] pour des filtres minces ; Fleming et Bülthoff (2005) [[fleming_bulthoff2005]] montrent que les indices
+  de ce modèle ne valent pas pour les objets translucides pleins ; Motoyoshi (2010) [[motoyoshi2010]] étudie les indices d’image qui distinguent translucide et transparent. La mesure de la lumière transmise
+  (transmittance) et du trouble (ASTM D1003) [[astm_d1003]] est un homonyme. Détail : docs/bibliographie-par-type.md#groupe-matiere.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-matiere
+axiomes:
+- conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
+  validation: Toute assertion de type ppp:translucency a exactement un ppp:about.
+- conceptuel: Les 3 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 3 ppp:Region de l’échelle du type ont des ppp:rank distincts, de 1 à 3 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Une région de cet espace n’est pas un sous-type du type.
+  validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
+nanay: Oui — passer de « je vois une matière » à « je regarde si la lumière la traverse » change la description (ce qu’on voit derrière, effet d’une lumière placée derrière).
+transfert: 'objet conçu oui (verre, porcelaine fine, papier) | tableau oui (glacis : couches de peinture transparentes superposées) | cuisine oui (bocal, verre dépoli) | high-tech oui (voyant derrière une
+  coque translucide) | architecture oui (vitrage, vitrail)'
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs exact (échelle à trois régions ou moins, spec §9.7 C, v2.5), au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques
+    (spec §9.7 H)
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E2
+  nature: structure
+  enonce: on peut faire varier la transparence en tenant la brillance de surface constante (des plaques de même finition, de l’opaque au transparent)
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les objets
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2
+statut: candidat
+statut_epistemique: non éprouvé
+introduit_en: '2.3'
+modifie_en:
+- 2.3.1
+- 2.3.2
+- '2.5'
+- '2.6'
+remplace_par: []
+source_de_la_fiche: crash tests, partie 1 (spec 2.3, docs/questions-crash-tests.md C4) ; fiche préremplie le 2026-10-10 par l’équipe, champs en langage courant à valider par la relecture explicative
+manques:
+- 'exemplaires (à renseigner : objets publics vérifiés, un épisode par objet, conditions déclarées)'
+bloque_par:
+- 'C4 (docs/questions-crash-tests.md : verdicts et labels des nouveaux candidats)'
+a_relire: []
+relecture_explicative:
+  date: '2026-10-11'
+  champs:
+  - question_attentionnelle
+  - définition
+  - contre_exemple
+  - espace_valeurs.regions.repere
+  - identite
+  - relations.note
+  - nanay
+  - transfert
+  - avertissement_label (2.3.2)
+  - etat_de_l_art (série 6)
+  - references (série 6)
+  - avertissement_label (re-confirmé en relecture explicative, série 9, 2026-10-11)
+  - note_conditions (re-confirmé en relecture explicative, série 9, 2026-10-11)
+  a_reconfirmer: []
+  reconfirme:
+  - champ: définition
+    date: '2026-10-10'
+    avant: 'Degré auquel on voit à travers une matière : de la matière qui ne laisse rien passer, à celle qui laisse passer la lumière sans laisser voir les formes, puis à celle à travers laquelle on voit
+      nettement ce qui est derrière.'
+    apres: 'Ce que la matière laisse voir de ce qui est derrière elle : rien du tout, seulement de la lumière sans les formes, ou les formes nettes de ce qui est derrière.'
+    remarque: 'la relecture explicative corrige sa propre définition : avec le label « vue à travers » (T28), « on voit à travers » redisait le label'
+  - champ: avertissement_label
+    date: '2026-10-11'
+    avant: 'Label canonique « vue à travers » depuis la spec 2.3.2 (T28, position de travail, révisable par l’éditeur du projet) : « translucidité » (désormais label alternatif) avait presque le même nom
+      que la région du milieu, « translucide » (règle A2 : un type et ses régions ne portent pas le même nom), et se lit tantôt « laisse passer la lumière », tantôt « laisse voir à travers ». Le label suit
+      la définition et la question : on juge ce qu’on voit à travers la matière. Label EN `translucency` inchangé (à revoir, T28).'
+    apres: 'Le mot « transparence » nomme toute l’échelle : ce que la matière laisse voir de ce qui est derrière elle. Une matière opaque s’y range aussi, tout en bas (région « opaque ») ; « transparent
+      » nomme seulement le haut de l’échelle (on voit nettement à travers). Les deux mots sont de la même famille, comme « symétrie » et « symétrique » ; aucune région ne s’appelle « transparence ». Le
+      sens figuré (« la transparence d’une institution ») ne vaut pas ici. « Vue à travers » et « translucidité » sont des labels alternatifs (décision de l’éditeur du projet, 2026-10-11, T28). Label anglais
+      `translucency` inchangé.'
+    raison: 'T28 tranché par l’éditeur du projet le 2026-10-11 : label canonique de ppp:translucency « transparence » (« vue à travers » en label alternatif) ; seul le nom du type change ; avertissement
+      réécrit : la parenté « transparence / transparent » y est traitée comme « symétrie / symétrique » ; relecture explicative (2026-10-11) : réécrit sans jargon (relecture explicative) : la parenté transparence
+      / transparent reste dite ; la règle A2 n’est plus citée dans le texte'
+    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+  - champ: note_conditions
+    date: '2026-10-11'
+    avant: la vue à travers se juge à contre-jour ou devant un fond ; valeur `backlit` de la facette lumière proposée en spec 2.3.1 (T23)
+    apres: la transparence se juge à contre-jour ou devant un fond ; valeur `backlit` de la facette lumière proposée en spec 2.3.1 (T23)
+    raison: 'T28 tranché par l’éditeur du projet le 2026-10-11 : label canonique de ppp:translucency « transparence » (« vue à travers » en label alternatif) ; seul le nom du type change'
+    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)

@@ -1,0 +1,242 @@
+# Fiche de type PPP — ppp:elementaryShapeCount — format : PPP_FicheType.md (spec v2.8)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, remarque (résumés des modifications, non compté comme champ), note_base, note_conditions, note_tolerance, bloque_par.
+id: ppp:elementaryShapeCount
+label_fr: nombre de formes élémentaires nécessaires
+label_en: number of elementary shapes needed
+label_court: nombre de formes
+labels_alternatifs: []
+patron: P1
+sorte: qualité
+sous_sorte: gestalt
+strate: semi-formel
+base_dependance:
+  types:
+  - ppp:contour
+  facteurs_non_perceptuels:
+  - facteur: répertoire de formes simples connu de l’annotateur (géométrie, modélisation en volume)
+    lien_perceptible: ppp:contour
+note_base: 'Base proposée par le rapport du crash test 03 (position de travail, à trancher) : `ppp:contour` (formel, A9), parce qu’il faut des bords perçus pour voir des volumes. Le « répertoire », c’est
+  la liste des formes simples qu’on s’autorise pour décrire l’objet (cube, sphère, cylindre…) ; il est un facteur non perceptuel tant qu’il n’est pas une liste fermée (bloque_par, question 1). Avec cette
+  seule base, E3 est déjà mis en défaut (un morceau de sucre et une chaise ont tous deux des bords nets) : la base est à revoir (T37, question 6 : la compléter ou n’en déclarer aucune).'
+facettes:
+- forme
+définition: Nombre de formes simples (élémentaires), comme le cube, la sphère, le cylindre, le cône ou le pavé, qu’il faudrait assembler, ou retirer, pour décrire cet objet en volume, à la tolérance que
+  permet le régime déclaré (les conditions dans lesquelles on le regarde). Chaque forme répétée compte une fois de plus ; chaque percement ou creux compte comme une forme.
+question_attentionnelle: Pour reconstruire cet objet en volume avec des formes simples (cube, sphère, cylindre…), en faudrait-il une, quelques-unes, beaucoup, ou plus qu’on ne peut en compter ?
+contre_exemple: 'Une sphère est très courbe et n’a besoin que d’une forme : la courbure n’est pas le nombre de formes. Un motif imprimé sur un cube ne change pas le nombre de formes du cube. La densité
+  n’est pas le nombre de formes : douze briques serrées sur un petit mur et douze briques espacées sur un grand mur demandent le même nombre de formes, douze, mais n’ont pas la même densité.'
+grandeur_physique_homonyme: 'nombre de formes de base (« primitives ») qu’un logiciel de modélisation 3D assemble : un compte de l’outil, dont aucune région ne se déduit.'
+modalites:
+- vision
+- toucher
+mode_de_presentation: séquence
+conditions_critiques:
+- distance
+- angle
+- presentation
+note_conditions: 'le compte dépend de ce qu’on voit de l’objet : toutes ses faces (en main, angle `varied`) ou une seule (image, angle `frontal`) ; de loin, les petites formes se fondent dans la masse.
+  Deux régimes (l’objet en main, ou vu à quelques mètres) peuvent donner deux régions pour un même objet. Avec un angle `unknown`, l’assertion reste non tranchée. Au toucher, le compte peut différer : il
+  est à éprouver à part (T22, à trancher). Le « régime déclaré » de la définition renvoie aux conditions de perception (spec §9.7 H).'
+note_tolerance: une forme simple suffit quand l’écart avec la forme réelle est invisible au régime déclaré ; pour l’épreuve, une valeur numérique unique, commune à tous les annotateurs, est à fixer avant
+  E1 (rapport du crash test 03, §4.1 ; aucune valeur proposée).
+porteur: un objet ou une partie vu dans son ensemble (une seule configuration par assertion)
+arité: 1
+condition_NA: porteur sans volume perceptible (un trait, un aplat) ; sur une photo, le porteur est l’objet photographié, pas l’image.
+espace_valeurs:
+  echelle: ordinale
+  sens_croissant: de `oneShape` (rang 1) vers `beyondCount` (rang 4), il faut davantage de formes simples pour décrire l’objet
+  numerique: non
+  regions:
+  - cle: oneShape
+    label_fr: une forme
+    label_en: one shape
+    rang: 1
+    repere: un cube plein (un morceau de sucre), un galet sphérique, une brique pleine ; une brique percée d’un trou compte déjà deux formes
+    exemplaires: []
+  - cle: fewShapes
+    label_fr: quelques formes
+    label_en: a few shapes
+    rang: 2
+    repere: 'de deux à environ cinq formes, percements compris (une table à plateau et à quatre pieds droits : cinq) ; seuil à fixer avant l’épreuve'
+    exemplaires: []
+  - cle: manyShapes
+    label_fr: beaucoup de formes
+    label_en: many shapes
+    rang: 3
+    repere: de six à environ vingt formes, répétitions et percements compris, qu’on peut encore compter une à une ; seuil à fixer avant l’épreuve
+    exemplaires: []
+  - cle: beyondCount
+    label_fr: plus qu’on ne peut en compter
+    label_en: more than one can count
+    rang: 4
+    repere: formes trop nombreuses, ou trop irrégulières, pour être décrites par des formes simples en nombre raisonnable ; la limite n’est pas un nombre (bloque_par, question 5)
+    exemplaires: []
+identite: Nombre de formes simples nécessaires à une description en volume, pas la courbure d’un tronçon (courbure), pas les niveaux de parties contenues dans des parties (emboîtement), pas la taille perçue
+  d’un élément (taille perçue), pas la différence de taille entre deux éléments (contraste d’échelle), pas la quantité d’éléments rapportée à la taille (densité). Deux parties symétriques comptent chacune
+  ; une forme symétrique à elle seule (une sphère) reste une forme.
+relations:
+- type: confusableWith
+  cible: ppp:curvature
+  note: une sphère est très courbe et tient en une forme ; un amas de cubes (tout en faces planes) en demande beaucoup
+- type: confusableWith
+  cible: ppp:partNesting
+  note: « des formes et des sous-formes » mêle deux idées ; l’emboîtement compte des niveaux, ce type compte des formes, quel que soit leur niveau (bloque_par, question 4)
+- type: confusableWith
+  cible: ppp:symmetry
+  note: 'deux parties symétriques comptent chacune : une forme répétée compte une fois de plus ; une forme symétrique à elle seule (une sphère) reste une forme (décision de l’éditeur du projet, T37)'
+- type: confusableWith
+  cible: ppp:perceivedSize
+  note: 'un grand objet n’a pas besoin de plus de formes : un grand bloc plein (une dalle, un monolithe) tient en une forme'
+- type: confusableWith
+  cible: ppp:scaleContrast
+  note: des formes de tailles très différentes font un contraste d’échelle ; elles peuvent se compter pour peu ou beaucoup de formes
+- type: confusableWith
+  cible: ppp:perceptualDensity
+  note: la densité est un nombre d’éléments perçus pour la taille d’une zone ; ici on compte des volumes pour décrire un objet
+- type: separableFrom
+  cible: ppp:curvature
+  note: 'à éprouver (E2) : un objet de peu de formes très courbes contre un objet de beaucoup de formes droites'
+references_statut: partielles
+references:
+- id: biederman1987
+  citation: 'Biederman, I. (1987). Recognition-by-components: A theory of human image understanding. Psychological Review, 94(2), 115–147.'
+  doi_ou_url: https://doi.org/10.1037/0033-295X.94.2.115
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-11'
+  verifie_sur: métadonnées Crossref et résumé (OpenAlex) ; texte non lu
+  reprend: l’idée qu’un objet se décrit comme un assemblage de volumes simples, tirés d’un petit répertoire (blocs, cylindres, coins, cônes)
+  ne_reprend_pas: la théorie de la reconnaissance, la liste des composants et la découpe aux concavités
+- id: hoffman_richards1984
+  citation: Hoffman, D. D. & Richards, W. A. (1984). Parts of recognition. Cognition, 18(1–3), 65–96.
+  doi_ou_url: https://doi.org/10.1016/0010-0277(84)90022-2
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-11'
+  verifie_sur: métadonnées Crossref (auteurs, titre, revue, pages) ; titre seulement, contenu non lu
+  reprend: rien que le titre
+  ne_reprend_pas: le contenu (non lu)
+- id: kaufman1949
+  citation: Kaufman, E. L., Lord, M. W., Reese, T. W. & Volkmann, J. (1949). The discrimination of visual number. The American Journal of Psychology, 62(4), 498–525.
+  doi_ou_url: https://doi.org/10.2307/1418556
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-11'
+  verifie_sur: métadonnées Crossref (page initiale 498) ; début du texte (OpenAlex) ; résultats non lus
+  reprend: la « numérosité », ce qu’on discrimine d’une collection sans compter
+  ne_reprend_pas: les résultats et les seuils (non lus) ; ils portent sur des collections d’éléments séparés, pas sur les volumes qui composent un objet
+- id: mandler_shebo1982
+  citation: 'Mandler, G. & Shebo, B. J. (1982). Subitizing: An analysis of its component processes. Journal of Experimental Psychology: General, 111(1), 1–22.'
+  doi_ou_url: https://doi.org/10.1037/0096-3445.111.1.1
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-11'
+  verifie_sur: métadonnées Crossref et notice PubMed (PMID 6460833), sans résumé ; contenu non lu
+  reprend: 'rien que le titre : une étude de la saisie immédiate d’un petit nombre (subitizing)'
+  ne_reprend_pas: le contenu (non lu)
+- id: dehaene1992
+  citation: Dehaene, S. (1992). Varieties of numerical abilities. Cognition, 44(1–2), 1–42.
+  doi_ou_url: https://doi.org/10.1016/0010-0277(92)90049-N
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-11'
+  verifie_sur: métadonnées Crossref et résumé (PubMed, PMID 1511583) ; texte non lu
+  reprend: la distinction entre dénombrer, saisir d’un coup un petit nombre et estimer une quantité
+  ne_reprend_pas: le modèle du triple code et les données sur les animaux et les nourrissons
+etat_de_l_art: 'Biederman (1987) [[biederman1987]] décrit la reconnaissance des objets comme un découpage de l’image en un assemblage de volumes simples, tirés d’un petit répertoire (blocs, cylindres, coins,
+  cônes) ; voir aussi Hoffman et Richards (1984), « Parts of recognition » (titre seulement, contenu non lu) [[hoffman_richards1984]]. Pour le compte lui-même, les travaux sur la perception du nombre distinguent
+  dénombrer, saisir d’un coup un petit nombre et estimer une quantité sans compter : Kaufman et al. (1949) [[kaufman1949]] définissent la « numérosité » comme ce qu’on discrimine d’une collection sans la
+  compter ; Mandler et Shebo (1982) [[mandler_shebo1982]] étudient la saisie immédiate d’un petit nombre (titre seulement) ; Dehaene (1992) [[dehaene1992]] en fait la revue. Ces travaux portent sur des
+  collections d’éléments séparés, pas sur les volumes qui composent un objet. Aucune source trouvée (recherche du 2026-10-11 sur Crossref, OpenAlex et PubMed) ne fixe des régions perçues du nombre de formes
+  simples nécessaires. Détail : docs/bibliographie-par-type.md#groupe-forme.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-forme
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+axiomes:
+- conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
+  validation: Toute assertion de type ppp:elementaryShapeCount a exactement un ppp:about.
+- conceptuel: Les 4 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 4 ppp:Region de l’échelle du type ont des ppp:rank distincts, de 1 à 4 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Une région de cet espace n’est pas un sous-type du type.
+  validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
+nanay: Oui — passer de « je vois un objet » à « je regarde de combien de formes simples il est fait » change la description (on suit les volumes au lieu de la silhouette ou de la matière).
+transfert: objet conçu oui (meuble, vase) | tableau non (pas de volume) | cuisine oui (ustensile, plat) | high-tech oui (boîtier) | architecture oui (bâtiment, volumétrie)
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs à une région près, au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques et à tolérance égale (spec §9.7 H ; note_tolerance)
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E2
+  nature: structure
+  enonce: on peut faire varier le nombre de formes en tenant la courbure constante (cubes empilés contre cube unique ; une sphère contre un amas de sphères de même taille)
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E3
+  nature: structure
+  enonce: 'deux objets qu’on ne distingue pas par la netteté de leurs bords (`ppp:contour`), vus de la même façon et décrits avec la même liste de formes simples permises (le « répertoire » : cube, sphère,
+    cylindre…), ne diffèrent pas sur le nombre de formes ; sinon la base déclarée est incomplète'
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les objets
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: à fixer
+statut: candidat
+statut_epistemique: non éprouvé
+introduit_en: '2.8'
+modifie_en: []
+remplace_par: []
+source_de_la_fiche: 'crash test 03 (docs/crash-test-03-annotation-deux-objets.md §4, proposition de texte) ; décisions de l’éditeur du projet du 2026-10-11 (T37 : formes répétées et percements comptent,
+  « plusieurs mètres » = room) ; fiche créée le 2026-10-11 (série 9) par l’équipe, sur décision relayée par la coordination ; texte révisé de T37'
+manques:
+- 'exemplaires (aucun ; à renseigner : objets publics vérifiés, un épisode par objet, conditions déclarées)'
+- répertoire fermé des formes simples (question 1)
+- seuils numériques entre régions et tolérance numérique de l’épreuve
+- cq_couvertes
+bloque_par:
+- 'T37, question 1 (répertoire de formes simples : sans liste fermée, le compte dépend de qui annote ; c’est aussi un facteur non perceptuel)'
+- 'T37, question 4 (« formes et sous-formes » : niveaux ou compte à plat ? lien avec partNesting)'
+- 'T37, question 5 (deux sources de « plus de formes » : beaucoup de pièces, ou écart à toute forme simple : un type ou deux ?)'
+- 'T37, question 6 (base de dépendance du nombre de formes : `ppp:contour` seul ne suffit pas, E3 ; base à revoir : la compléter ou n’en déclarer aucune ; options et position de travail dans QUESTIONS-A-TRANCHER.md,
+  à trancher)'
+relecture_explicative:
+  date: '2026-10-11'
+  champs:
+  - label_fr
+  - label_en
+  - label_court
+  - définition
+  - question_attentionnelle
+  - contre_exemple
+  - grandeur_physique_homonyme
+  - note_conditions
+  - note_tolerance
+  - condition_NA
+  - espace_valeurs.regions (labels et repères)
+  - identite
+  - relations.note
+  - references
+  - etat_de_l_art
+  - nanay
+  - transfert
+  - enonces_testables
+  a_reconfirmer: []
+  remarque: 'champs validés par la relecture explicative à 5330e2d (série 15) et enonces_testables à 255e824 (série 16, E3 validé), formulations des séries 12 et 14 comprises (voir `remarque` de la fiche)
+    ; reste à relire : note_base (modifiée en séries 15 et 16)'
+a_relire:
+- note_base
+remarque:
+- 'série 12 : references modifiées (biederman1987.reprend ; hoffman_richards1984 : reprend « rien que le titre » ; kaufman1949.ne_reprend_pas)'
+- 'série 12 (corrections de la relecture explicative) : label_court, définition, contre_exemple, note_conditions, condition_NA, espace_valeurs.regions.oneShape.repere, relations.note (ppp:perceivedSize),
+  etat_de_l_art modifiés selon les formulations demandées ; à re-confirmer'
+- 'série 14 (reconfirmation de la relecture explicative) : references (rôle contraste pour hoffman_richards1984, mandler_shebo1982, dehaene1992), enonces_testables (E2, E3), identite, relations.note (ppp:curvature,
+  ppp:symmetry), grandeur_physique_homonyme, définition, note_conditions modifiés selon les formulations demandées ; à re-confirmer'
+- 'série 15 : levées validées (relecture_explicative.champs) ; E3 reformulé (contour = netteté du bord) ; note_base complétée (« répertoire » expliqué, E3 mis en défaut, base à compléter, T37 question 6)
+  ; à relire'
+- 'série 16 : enonces_testables validé (E3), archivé dans relecture_explicative.champs ; note_base : « base à revoir (… la compléter ou n’en déclarer aucune) » ; à relire'

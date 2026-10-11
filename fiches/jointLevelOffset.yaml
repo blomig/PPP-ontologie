@@ -1,0 +1,134 @@
+# Fiche de type PPP — ppp:jointLevelOffset — format : PPP_FicheType.md (spec v2.4)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_joint, avertissement_label, note_categories, note_reference, note_dimension, note_conditions, note_echelle, note_porteur, note_base, bloque_par.
+id: ppp:jointLevelOffset
+label_fr: décalage de niveau au joint
+label_en: joint level offset
+labels_alternatifs: []
+patron: P1
+sorte: qualité
+sous_sorte: —
+strate: semi-formel
+base_dependance:
+  types:
+  - ppp:contour
+  facteurs_non_perceptuels: []
+facettes:
+- forme
+- organisation
+définition: À l’endroit où deux parties d’un objet se rejoignent (le joint), différence de niveau perçue entre leurs deux surfaces, du même plan à une surface qui dépasse nettement l’autre.
+question_attentionnelle: Au joint, les deux surfaces sont-elles au même niveau, ou l’une dépasse-t-elle un peu ou nettement ?
+contre_exemple: 'Une ligne peinte à la jonction de deux surfaces de même niveau n’est pas un décalage. Un écart ouvert entre deux surfaces de même niveau non plus : c’est un espacement au joint.'
+modalites:
+- vision
+- toucher
+mode_de_presentation: image
+conditions_critiques:
+- angle
+note_conditions: 'à la vue, un léger décalage se voit surtout sous un regard rasant ; au toucher, aucune facette n’est critique (une seule liste pour toutes les modalités : T22)'
+porteur: la partie « joint » de l’objet (app:<objet>#joint-…)
+arité: 1
+condition_NA: objet d’une seule pièce, sans joint perceptible.
+espace_valeurs:
+  echelle: ordinale
+  sens_croissant: de `flush` (rang 1) vers `marked` (rang 3), la différence de niveau perçue augmente
+  numerique: non
+  regions:
+  - cle: flush
+    label_fr: affleurant
+    label_en: flush
+    rang: 1
+    repere: les deux surfaces paraissent dans le même plan
+    exemplaires: []
+  - cle: slight
+    label_fr: léger
+    label_en: slight
+    rang: 2
+    repere: une différence de niveau perceptible de près ou au doigt
+    exemplaires: []
+  - cle: marked
+    label_fr: marqué
+    label_en: marked
+    rang: 3
+    repere: une différence de niveau visible à distance d’examen
+    exemplaires: []
+identite: Différence de niveau entre deux surfaces, pas l’écart qui les sépare (espacement au joint).
+relations:
+- type: confusableWith
+  cible: ppp:lightnessContrast
+  note: une ligne peinte à la jonction de deux surfaces de même niveau se voit par la clarté, sans décalage
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: frascari1983
+  citation: Frascari, M. (1983). The tell-the-tale detail. In Semiotics 1981, Springer, 325–336.
+  doi_ou_url: https://doi.org/10.1007/978-1-4615-9328-7_32
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: métadonnées Crossref (titre, recueil Semiotics 1981, pages) ; aucun résumé (Crossref, OpenAlex, 2026-10-10) ; texte non lu
+  reprend: 'rien de son contenu (non lu) ; cité comme texte repéré sur le détail de construction (titre : « le détail qui raconte »)'
+  ne_reprend_pas: tout son contenu (non lu)
+- id: frampton1995
+  citation: 'Frampton, K. (1995). Studies in Tectonic Culture: The Poetics of Construction in Nineteenth and Twentieth Century Architecture. Cambridge (MA) : MIT Press.'
+  doi_ou_url: https://openlibrary.org/works/OL80267W
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: 'notice Open Library (titre, auteur, 1995, MIT Press, OCLC 32131870) avec la description de l’éditeur, lue le 2026-10-10 : la tectonique comme attention à l’architecture en tant que métier
+    de la construction, et l’histoire d’une « poétique de la structure et de la construction » ; recensions indexées par Crossref ; contenu non lu'
+  reprend: la construction et l’assemblage comme objet de l’attention en architecture (description de l’éditeur)
+  ne_reprend_pas: la poétique de la construction, qui engage une valeur (§0.4) ; le reste du livre (non lu)
+etat_de_l_art: 'Comme pour l''écart au joint, les seules sources trouvées viennent de l''architecture (Frascari 1983 [[frascari1983]], titre seul ; Frampton 1995 [[frampton1995]], description de l''éditeur),
+  et rien de ce qui en a été lu ne vise une qualité perçue. Aucune source perceptive trouvée sur le décalage de niveau vu au joint (recherche faite le 2026-10-10 : Crossref, Semantic Scholar). Détail :
+  docs/bibliographie-par-type.md#groupe-joint.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-joint
+axiomes:
+- conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
+  validation: Toute assertion de type ppp:jointLevelOffset a exactement un ppp:about.
+- conceptuel: Les 3 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 3 ppp:Region de l’échelle du type ont des ppp:rank distincts, de 1 à 3 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Une région de cet espace n’est pas un sous-type du type.
+  validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
+nanay: Oui — passer de « je vois un joint » à « je regarde si les deux surfaces sont au même niveau » change la description (ombre au joint, arête qui accroche le doigt).
+transfert: objet conçu oui (couvercle et boîte) | tableau non (sauf cadre) | cuisine oui (plan de travail et évier) | high-tech oui (écran et coque) | architecture oui (dalles de sol)
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs exact (échelle à trois régions ou moins, spec §9.7 C, v2.5), au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques
+    (spec §9.7 H) ; vision et toucher éprouvés séparément
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les objets
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2, CQ8a, CQ8b
+statut: candidat
+statut_epistemique: non éprouvé
+introduit_en: '2.2'
+modifie_en:
+- 2.3.1
+- '2.5'
+remplace_par: []
+statut_note: candidat, non éprouvé (spec §9.7 A)
+manques:
+- exemplaires
+bloque_par: []
+a_relire: []
+relecture_explicative:
+  date: '2026-10-10'
+  champs:
+  - question_attentionnelle
+  - définition
+  - contre_exemple
+  - nanay
+  - transfert
+  - relations.note
+  - etat_de_l_art (série 6, vérification finale)
+  - references (série 6, vérification finale)
+  a_reconfirmer: []

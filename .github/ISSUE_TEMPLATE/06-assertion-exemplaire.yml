@@ -1,0 +1,139 @@
+# Formulaire de ticket « assertion-exemplaire » (spec §13, docs/gouvernance.md 2.4). Modèle pour .github/ISSUE_TEMPLATE/ du dépôt public.
+# Syntaxe : GitHub Docs, « Syntax for issue forms » et « Syntax for GitHub's form schema » (consultés le 2026-10-11).
+name: Ajouter une assertion
+description: Ajouter une assertion sur un objet déjà au registre.
+title: '[assertion-exemplaire] '
+labels:
+- assertion-exemplaire
+body:
+- type: markdown
+  attributes:
+    value: 'Ce ticket est **public**. N''y mettez ni adresse électronique ni donnée personnelle : un pseudonyme suffit. Format et traitement : `docs/gouvernance.md` (reçu, recevable, traité, réponse dans
+      la semaine).'
+- type: input
+  id: objet
+  attributes:
+    label: Objet
+    description: Identifiant au registre (app:…).
+  validations:
+    required: true
+- type: input
+  id: type
+  attributes:
+    label: Type
+    description: Par exemple ppp:texture.
+  validations:
+    required: true
+- type: input
+  id: region
+  attributes:
+    label: Région proposée
+    description: Par exemple ppp:texture/smooth.
+  validations:
+    required: true
+- type: dropdown
+  id: presentation
+  attributes:
+    label: Présentation
+    description: Facette `presentation` (§9.7 H).
+    options:
+    - inHand (en main)
+    - tableTop (sur une table)
+    - wallOrShowcase (au mur ou en vitrine)
+    - screen (à l’écran)
+    - printedImage (image imprimée)
+    - inSitu (sur place)
+    - walkThrough (en parcourant)
+    - unknown (inconnue)
+  validations:
+    required: true
+- type: dropdown
+  id: lumiere
+  attributes:
+    label: Lumière
+    description: Facette `lumiere`.
+    options:
+    - diffuse
+    - directional (dirigée)
+    - raking (rasante)
+    - backlit (contre-jour)
+    - unknown (inconnue)
+  validations:
+    required: true
+- type: dropdown
+  id: distance
+  attributes:
+    label: Distance
+    description: Facette `distance` ; « plusieurs mètres », « dans une pièce » = room.
+    options:
+    - contact
+    - near (moins d’un mètre)
+    - room (1 à 5 m, dans une pièce)
+    - far (loin)
+    - unknown (inconnue)
+  validations:
+    required: true
+- type: dropdown
+  id: angle
+  attributes:
+    label: Angle
+    description: Facette `angle`.
+    options:
+    - frontal (de face)
+    - oblique
+    - grazing (rasant)
+    - varied (plusieurs angles)
+    - unknown (inconnu)
+  validations:
+    required: true
+- type: dropdown
+  id: duree
+  attributes:
+    label: Durée
+    description: Facette `duree`.
+    options:
+    - glance (un coup d’œil)
+    - exam (un examen)
+    - prolonged (prolongée)
+    - unknown (inconnue)
+  validations:
+    required: true
+- type: textarea
+  id: note
+  attributes:
+    label: Note factuelle
+    description: ''
+  validations:
+    required: true
+- type: dropdown
+  id: doute
+  attributes:
+    label: Doute
+    description: Hésitez-vous ?
+    options:
+    - non
+    - oui
+  validations:
+    required: true
+- type: input
+  id: version
+  attributes:
+    label: Version de la spécification
+    description: Affichée en pied de page du site, par exemple 2.8.
+    placeholder: '2.8'
+  validations:
+    required: true
+- type: input
+  id: pseudonyme
+  attributes:
+    label: Pseudonyme (facultatif)
+    description: Repris dans le champ `auteur` du ticket. Jamais d'adresse électronique.
+  validations:
+    required: false
+- type: checkboxes
+  id: licence
+  attributes:
+    label: Licence
+    options:
+    - label: J'accepte que ma contribution soit versée sous les licences du projet (contenu CC BY 4.0, code MIT), sans accord à signer.
+      required: true

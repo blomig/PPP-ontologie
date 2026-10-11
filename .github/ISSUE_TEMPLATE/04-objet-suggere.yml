@@ -1,0 +1,154 @@
+# Formulaire de ticket « objet-suggere » (spec §13, docs/gouvernance.md 2.4). Modèle pour .github/ISSUE_TEMPLATE/ du dépôt public.
+# Syntaxe : GitHub Docs, « Syntax for issue forms » et « Syntax for GitHub's form schema » (consultés le 2026-10-11).
+name: Suggérer un objet
+description: Proposer un objet public pour les épreuves (ouvert à tous).
+title: '[objet-suggere] '
+labels:
+- objet-suggere
+body:
+- type: markdown
+  attributes:
+    value: 'Ce ticket est **public**. N''y mettez ni adresse électronique ni donnée personnelle : un pseudonyme suffit. Format et traitement : `docs/gouvernance.md` (reçu, recevable, traité, réponse dans
+      la semaine).'
+- type: input
+  id: nom
+  attributes:
+    label: Nom de l'objet
+    description: 'Son titre ou son nom courant. Exemple : Pont du Gard.'
+  validations:
+    required: true
+- type: input
+  id: createur
+  attributes:
+    label: Qui l'a fait ?
+    description: Artiste, architecte, fabricant… ou tapez « je ne sais pas ».
+  validations:
+    required: false
+- type: input
+  id: date
+  attributes:
+    label: Quand ?
+    description: Une date ou une période suffit. Vous pouvez taper « je ne sais pas », mais seulement si votre réponse à « Quelle version exactement ? » permet de retrouver l'objet ; sinon, nous ne pourrons
+      pas retenir la suggestion.
+    placeholder: Ier siècle
+  validations:
+    required: false
+- type: textarea
+  id: variante
+  attributes:
+    label: Quelle version exactement ?
+    description: 'Ce qui permet de savoir quel objet précis vous avez vu : l''exemplaire de quel musée, quelle édition, quel modèle ou quelle couleur, avant ou après une restauration. Cette réponse permet
+      à d''autres de retrouver exactement le même objet, et de le regarder à leur tour. Si vous ne connaissez pas la date, cette réponse doit suffire, à elle seule, à retrouver l''objet.'
+    placeholder: le pont tel qu'il est en 2026
+  validations:
+    required: true
+- type: input
+  id: lien
+  attributes:
+    label: Une page publique qui le montre
+    description: 'Une page que tout le monde peut ouvrir : musée, encyclopédie en ligne, médiathèque libre, fabricant.'
+  validations:
+    required: true
+- type: input
+  id: images
+  attributes:
+    label: Une image
+    description: Facultatif. Un lien vers une image, pas un fichier. L'équipe vérifie toujours elle-même la licence avant de reprendre une image.
+  validations:
+    required: false
+- type: dropdown
+  id: image_libre
+  attributes:
+    label: Savez-vous si elle est libre ?
+    description: Seulement si vous donnez une image.
+    options:
+    - Oui, une licence libre est indiquée sur la page
+    - Je ne sais pas
+    - Non
+  validations:
+    required: false
+- type: dropdown
+  id: presentation
+  attributes:
+    label: Comment l'avez-vous vu ?
+    options:
+    - Sur place
+    - En main
+    - Posé sur une table
+    - Au mur ou en vitrine
+    - À l'écran, en photo
+    - Sur une image imprimée
+    - En le parcourant de l'intérieur, une pièce, un bâtiment
+    - Je ne sais plus
+  validations:
+    required: false
+- type: dropdown
+  id: distance
+  attributes:
+    label: À quelle distance ?
+    description: 'Si vous l''avez vu en photo : sur la photo, l''objet tient-il dans la main, remplit-il un pan de mur, ou est-ce une façade vue du sol ? Nous en déduirons une distance approximative.'
+    options:
+    - Assez près pour le toucher
+    - À moins d'un mètre
+    - Dans la même pièce, à quelques mètres
+    - De loin, à plus de 5 mètres
+    - Je ne sais pas
+  validations:
+    required: false
+- type: dropdown
+  id: lumiere
+  attributes:
+    label: Quelle lumière ?
+    options:
+    - Douce et égale
+    - Venant d'un côté, soleil ou lampe
+    - 'Rasante : elle fait ressortir les reliefs'
+    - 'À contre-jour : la lumière vient de derrière l''objet'
+    - Je ne sais pas
+  validations:
+    required: false
+- type: dropdown
+  id: angle
+  attributes:
+    label: Sous quel angle ?
+    options:
+    - De face
+    - De biais
+    - Presque à ras de la surface
+    - En tournant autour, ou en le tournant dans les mains
+    - Je ne sais pas
+  validations:
+    required: false
+- type: dropdown
+  id: duree
+  attributes:
+    label: Combien de temps ?
+    description: Facultatif.
+    options:
+    - Un coup d'œil, quelques secondes
+    - Environ une minute
+    - Longtemps, plus de cinq minutes
+    - Je ne sais pas
+  validations:
+    required: false
+- type: textarea
+  id: remarques
+  attributes:
+    label: Ce que vous remarquez
+    description: 'Facultatif. Ce qu''on voit : formes, couleurs, matière, organisation. Décrivez sans juger : « beau » ou « réussi » ne décrivent rien.'
+  validations:
+    required: false
+- type: input
+  id: pseudonyme
+  attributes:
+    label: Pseudonyme
+    description: Facultatif. Le nom sous lequel vous voulez apparaître. Jamais d'adresse électronique.
+  validations:
+    required: false
+- type: checkboxes
+  id: licence
+  attributes:
+    label: Licence
+    options:
+    - label: J'accepte que ma contribution soit versée sous les licences du projet (contenu CC BY 4.0, code MIT), sans accord à signer.
+      required: true

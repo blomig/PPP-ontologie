@@ -1,0 +1,164 @@
+# Fiche de type PPP — ppp:partNesting — format : PPP_FicheType.md (spec v2.4)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_joint, avertissement_label, note_categories, note_reference, note_dimension, note_conditions, note_echelle, note_porteur, note_base, bloque_par.
+id: ppp:partNesting
+label_fr: emboîtement des parties
+label_en: part nesting
+labels_alternatifs: []
+patron: P1
+sorte: qualité
+sous_sorte: gestalt
+strate: semi-formel
+base_dependance:
+  types:
+  - ppp:contour
+  facteurs_non_perceptuels: []
+note_base: 'Base (2.3.2, position de travail, révisable par l’éditeur du projet ; T25, C4 point 5) : `ppp:contour` (formel, A9), parce qu’il faut des bords perçus pour voir des parties ; plus une relation entre parties,
+  non typée : une partie paraît contenue dans une autre, plus grande qu’elle (taille relative des parties entre elles). Cette relation n’est pas une qualité : elle relève de la description de l’objet (spec
+  §9.7 I) et n’a pas d’id. `ppp:perceivedSize` est retiré de la base : il rapporte la taille au corps de l’observateur, alors que l’emboîtement ne dépend que de la taille des parties les unes par rapport
+  aux autres (une façade et une boîte à bijoux peuvent avoir le même emboîtement). `ppp:scaleContrast` n’est pas une base non plus : il compare deux éléments vus côte à côte (contre-exemple).'
+facettes:
+- organisation
+- forme
+définition: Degré auquel les parties d’un objet ou d’une composition paraissent contenir elles-mêmes des parties plus petites, sur un ou plusieurs niveaux, comme une façade faite de fenêtres faites de carreaux.
+question_attentionnelle: Les parties de cet objet se divisent-elles à leur tour en parties plus petites, et sur combien de niveaux ?
+contre_exemple: 'Une rangée de vingt boutons identiques compte beaucoup d’éléments, tous au même niveau : c’est la densité, pas l’emboîtement. Une grande forme posée à côté d’une petite diffère d’elle par
+  la taille sans la contenir : c’est un contraste d’échelle.'
+modalites:
+- vision
+mode_de_presentation: image
+conditions_critiques:
+- distance
+note_conditions: de loin, les plus petites parties cessent de se voir et des niveaux disparaissent
+porteur: une configuration (objet, composition, façade)
+arité: 1
+condition_NA: porteur sans parties perceptibles (un galet uni).
+espace_valeurs:
+  echelle: ordinale
+  sens_croissant: de `oneLevel` (rang 1) vers `threeOrMoreLevels` (rang 3), le nombre de niveaux de parties emboîtées augmente
+  numerique: non
+  regions:
+  - cle: oneLevel
+    label_fr: un seul niveau
+    label_en: one level
+    rang: 1
+    repere: des parties qui ne se divisent pas à leur tour (un tabouret à trois pieds)
+    exemplaires: []
+  - cle: twoLevels
+    label_fr: deux niveaux
+    label_en: two levels
+    rang: 2
+    repere: des parties elles-mêmes divisées une fois (une fenêtre à petits carreaux dans un mur nu)
+    exemplaires: []
+  - cle: threeOrMoreLevels
+    label_fr: trois niveaux ou plus
+    label_en: three or more levels
+    rang: 3
+    repere: 'des parties dans des parties, sur trois niveaux ou plus (une façade de cathédrale : portails, voussures, statues ; un chou romanesco)'
+    exemplaires: []
+identite: 'Nombre de niveaux de parties contenues dans des parties, pas le nombre d’éléments (densité), pas la différence de taille entre deux éléments (contraste d’échelle). Quelle partie contient quelle
+  autre n’est pas une qualité : c’est une description de l’objet lui-même, notée à part (spec §9.7 I).'
+relations:
+- type: confusableWith
+  cible: ppp:perceptualDensity
+  note: beaucoup d’éléments au même niveau font une zone dense, pas un emboîtement
+- type: confusableWith
+  cible: ppp:scaleContrast
+  note: deux éléments de tailles différentes posés côte à côte ne s’emboîtent pas
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: navon1977
+  citation: 'Navon, D. (1977). Forest before trees: The precedence of global features in visual perception. Cognitive Psychology, 9(3), 353–383.'
+  doi_ou_url: https://doi.org/10.1016/0010-0285(77)90012-3
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: métadonnées Crossref (titre, revue) ; résumé non disponible, texte non lu
+  reprend: la différence entre traits globaux et locaux
+  ne_reprend_pas: l'ordre de traitement (contenu non lu)
+- id: palmer1977
+  citation: Palmer, S. E. (1977). Hierarchical structure in perceptual representation. Cognitive Psychology, 9(4), 441–474.
+  doi_ou_url: https://doi.org/10.1016/0010-0285(77)90016-0
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: métadonnées Crossref (titre, revue) ; résumé non disponible, texte non lu
+  reprend: une représentation perceptive faite de parties emboîtées
+  ne_reprend_pas: son formalisme (contenu non lu)
+- id: hoffman_richards1984
+  citation: Hoffman, D. D. & Richards, W. A. (1984). Parts of recognition. Cognition, 18(1–3), 65–96.
+  doi_ou_url: https://doi.org/10.1016/0010-0277(84)90022-2
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: métadonnées Crossref et notice PubMed (PMID 6543164), sans résumé ; contenu non lu
+  reprend: la décomposition d'une forme en parties
+  ne_reprend_pas: la règle de découpage (contenu non lu)
+etat_de_l_art: 'La perception de structures hiérarchiques (des parties dans des parties) est étudiée depuis Navon (1977) [[navon1977]], qui compare traits globaux et locaux (l’ensemble et les détails),
+  et Palmer (1977) [[palmer1977]], qui décrit la représentation perceptive comme hiérarchique. Hoffman et Richards (1984) [[hoffman_richards1984]] étudient la décomposition d’une forme en parties. Aucune
+  source trouvée ne fixe des régions perçues du nombre de niveaux. Détail : docs/bibliographie-par-type.md#groupe-organisation.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-organisation
+axiomes:
+- conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
+  validation: Toute assertion de type ppp:partNesting a exactement un ppp:about.
+- conceptuel: Les 3 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 3 ppp:Region de l’échelle du type ont des ppp:rank distincts, de 1 à 3 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Une région de cet espace n’est pas un sous-type du type.
+  validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
+nanay: Oui — passer de « je vois un objet et ses parties » à « je regarde si ses parties se divisent à leur tour » change la description (va-et-vient du regard entre l’ensemble et le détail).
+transfert: objet conçu oui (meuble à tiroirs et poignées) | tableau oui (scène, groupes, figures, détails) | cuisine oui (meuble de cuisine) | high-tech oui (interface à fenêtres, panneaux, boutons) | architecture
+  oui (façade)
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs exact (échelle à trois régions ou moins, spec §9.7 C, v2.5), au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques
+    (spec §9.7 H)
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les objets
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E3
+  nature: structure
+  enonce: deux configurations jugées indiscernables en netteté des bords et dans la façon dont leurs parties paraissent contenues les unes dans les autres ne diffèrent pas en emboîtement (sinon la base
+    est incomplète)
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2
+statut: candidat
+statut_epistemique: non éprouvé
+introduit_en: '2.3'
+modifie_en:
+- 2.3.1
+- 2.3.2
+- '2.5'
+remplace_par: []
+source_de_la_fiche: crash tests, partie 1 (spec 2.3, docs/questions-crash-tests.md C4) ; fiche préremplie le 2026-10-10 par l’équipe, champs en langage courant à valider par la relecture explicative
+manques:
+- 'exemplaires (à renseigner : objets publics vérifiés, un épisode par objet, conditions déclarées)'
+bloque_par:
+- 'T14 (stock v0.2 « hiérarchie », « niveaux d’échelle » : fusion ou deux candidats ?)'
+- C4 point 5
+- 'T25 (base proposée en 2.3.2 : `ppp:contour` et une relation non typée entre parties)'
+a_relire: []
+relecture_explicative:
+  date: '2026-10-10'
+  champs:
+  - question_attentionnelle
+  - définition
+  - contre_exemple
+  - espace_valeurs.regions.repere
+  - identite
+  - relations.note
+  - nanay
+  - transfert
+  - note_base (2.3.2)
+  - etat_de_l_art (série 6)
+  - references (série 6)
+  a_reconfirmer: []

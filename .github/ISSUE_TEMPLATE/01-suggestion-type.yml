@@ -1,0 +1,76 @@
+# Formulaire de ticket « suggestion-type » (spec §13, docs/gouvernance.md 2.4). Modèle pour .github/ISSUE_TEMPLATE/ du dépôt public.
+# Syntaxe : GitHub Docs, « Syntax for issue forms » et « Syntax for GitHub's form schema » (consultés le 2026-10-11).
+name: Suggérer un type
+description: Proposer un aspect perceptible que l’ontologie ne décrit pas encore (ouvert à tous).
+title: '[suggestion-type] '
+labels:
+- suggestion-type
+body:
+- type: markdown
+  attributes:
+    value: 'Ce ticket est **public**. N''y mettez ni adresse électronique ni donnée personnelle : un pseudonyme suffit. Format et traitement : `docs/gouvernance.md` (reçu, recevable, traité, réponse dans
+      la semaine).'
+- type: input
+  id: label
+  attributes:
+    label: Label
+    description: Le nom que vous proposez.
+  validations:
+    required: true
+- type: textarea
+  id: phrase
+  attributes:
+    label: Une phrase
+    description: Ce que l’on regarde, en une phrase.
+  validations:
+    required: true
+- type: textarea
+  id: exemples
+  attributes:
+    label: Deux exemples
+    description: Deux objets ou situations (images en lien, ou descriptions).
+  validations:
+    required: true
+- type: input
+  id: type_proche
+  attributes:
+    label: Type existant le plus proche
+    description: Identifiant ou nom, par exemple ppp:texture.
+  validations:
+    required: true
+- type: textarea
+  id: aspect
+  attributes:
+    label: Aspect perceptible décrit
+    description: Ce qu’on perçoit, sans jugement de valeur.
+  validations:
+    required: true
+- type: textarea
+  id: non_couvert
+  attributes:
+    label: Pourquoi aucun type ne le couvre
+    description: Ce qui manque aux types existants.
+  validations:
+    required: true
+- type: input
+  id: version
+  attributes:
+    label: Version de la spécification
+    description: Affichée en pied de page du site, par exemple 2.8.
+    placeholder: '2.8'
+  validations:
+    required: true
+- type: input
+  id: pseudonyme
+  attributes:
+    label: Pseudonyme (facultatif)
+    description: Repris dans le champ `auteur` du ticket. Jamais d'adresse électronique.
+  validations:
+    required: false
+- type: checkboxes
+  id: licence
+  attributes:
+    label: Licence
+    options:
+    - label: J'accepte que ma contribution soit versée sous les licences du projet (contenu CC BY 4.0, code MIT), sans accord à signer.
+      required: true

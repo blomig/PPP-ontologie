@@ -1,0 +1,55 @@
+# RÉSERVÉ HORS V1 — ppp:perceptualIntensity — statut `attente` (spec §9.9, v2.2.3 ; décision de l’éditeur du projet, T10).
+# Hors de la liste active : aucune fiche active ne le cite (A12). Conservé pour trace, non tenu à jour.
+id: ppp:perceptualIntensity
+label_fr: intensité perceptive
+label_en: perceptual intensity
+label_court: intensité
+labels_alternatifs: []
+patron: P1
+sorte: qualité
+sous_sorte: —
+strate: semi-formel
+base_dependance:
+  types: []
+  facteurs_non_perceptuels: []
+  note: 'à déclarer : A9 non satisfait en l’état (T10)'
+facettes: []
+définition: Force avec laquelle une qualité donnée se manifeste dans une zone (une couleur très saturée et très claire, un relief très marqué).
+question_attentionnelle: Dans cette zone, la qualité considérée se manifeste-t-elle faiblement ou fortement ?
+contre_exemple: 'Le nombre d’éléments relève de la densité : on peut être intense et clairsemé.'
+modalites:
+- vision
+mode_de_presentation: image
+porteur: une zone, une partie ou un objet
+arité: 1
+condition_NA: à définir.
+espace_valeurs:
+  echelle: ordinale
+  sens_croissant: à définir
+  numerique: non
+  regions: []
+identite: Force d’une qualité, pas nombre d’éléments (densité) ; à distinguer de la saillance, réservée hors V1 (spec §9.9).
+relations: []
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+axiomes:
+- conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
+  validation: Toute assertion de type ppp:perceptualIntensity a exactement un ppp:about.
+- conceptuel: Une région de cet espace n’est pas un sous-type du type.
+  validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
+enonces_testables: []
+cq_couvertes: CQ1, CQ2
+statut: attente
+statut_epistemique: non éprouvé
+introduit_en: '2.0'
+modifie_en: []
+remplace_par: []
+manques:
+- 'réservé hors V1 (spec §9.9, v2.2.3) : pas de fiche V1 ; conservé pour trace'
+a_relire:
+- question_attentionnelle
+- définition
+- contre_exemple

@@ -1,0 +1,202 @@
+# Fiche de type PPP — ppp:texture — format : PPP_FicheType.md (spec v2.4)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_joint, avertissement_label, note_categories, note_reference, note_dimension, note_conditions, note_echelle, note_porteur, note_base, bloque_par, note_label_alternatif.
+id: ppp:texture
+label_fr: texture
+label_en: texture
+label_court: texture
+labels_alternatifs:
+- grain
+patron: P1
+sorte: qualité
+sous_sorte: —
+strate: formel
+base_dependance:
+  types: []
+  facteurs_non_perceptuels: []
+facettes:
+- matiere
+définition: Taille perçue des reliefs d’une surface, à la vue ou au toucher, de la surface sans relief perceptible à la surface à gros reliefs.
+question_attentionnelle: À la vue ou sous la main, la surface paraît-elle lisse, ou ses reliefs sont-ils fins, moyens ou gros ?
+contre_exemple: 'Un stratifié imprimé « bois » montre des veines, mais la main n’y sent aucun relief : c’est un motif de teinte et de clarté, et la texture est lisse. Une tôle gaufrée a de gros reliefs
+  tous pareils : sa texture est grosse, sans irrégularité locale. Une page de journal en petits caractères compte beaucoup d’éléments, mais son papier peut être lisse : le nombre d’éléments relève de la
+  densité, pas de la texture.'
+grandeur_physique_homonyme: 'rugosité de surface mesurée (profilométrie), granulométrie, et « texture » au sens de la science des matériaux (orientation cristalline) ou des sols : aucune région ne s’en
+  déduit.'
+modalites:
+- vision
+- toucher
+mode_de_presentation: échantillon
+conditions_critiques:
+- distance
+note_conditions: 'la taille perçue des reliefs dépend de la distance (les repères des régions la nomment) ; la lumière rasante révèle les reliefs à la vue, mais n’est pas critique au toucher : non déclarée
+  critique (T22)'
+porteur: 'une surface : celle d’un objet ou d’une partie (la matière vue ou touchée). « Matière = porteur » : à confirmer (spec §10, §11).'
+arité: 1
+condition_NA: porteur sans surface perceptible (une lumière, un son). Une surface sans relief perceptible est APPLICABLE, en région `smooth`.
+espace_valeurs:
+  echelle: ordinale
+  sens_croissant: de `smooth` (rang 1) vers `coarse` (rang 4), la taille perçue des reliefs de surface augmente
+  numerique: non
+  regions:
+  - cle: smooth
+    label_fr: lisse
+    label_en: smooth
+    rang: 1
+    repere: aucun relief perceptible à distance d’examen (une glaçure, une pierre polie)
+    exemplaires:
+    - ppp-a:pilote-0101
+    - ppp-a:pilote-0102
+  - cle: fine
+    label_fr: fine
+    label_en: fine
+    rang: 2
+    repere: relief perceptible de près, à peine visible à bout de bras (un papier à dessin, une toile fine)
+    exemplaires: []
+  - cle: medium
+    label_fr: moyenne
+    label_en: medium
+    rang: 3
+    repere: relief visible à distance d’examen, sans relief individuel saillant (un enduit taloché)
+    exemplaires:
+    - ppp-a:pilote-0104
+    - ppp-a:pilote-0105
+  - cle: coarse
+    label_fr: grosse
+    label_en: coarse
+    rang: 4
+    repere: reliefs individuels visibles et palpables (une pierre brute éclatée, une écorce)
+    exemplaires: []
+identite: Taille des reliefs de surface, pas le nombre d’éléments d’une composition (densité), pas l’écart à une régularité (irrégularité locale), pas le motif de couleur (teinte, clarté).
+relations:
+- type: confusableWith
+  cible: ppp:localIrregularity
+  note: une surface à gros relief régulier (une tôle gaufrée) n’est pas irrégulière ; l’irrégularité locale qualifie l’écart à une régularité
+- type: separableFrom
+  cible: ppp:hue
+  note: 'à éprouver (E2) : un nuancier de glaçures de même teinte, de lisse à grosse'
+- type: confusableWith
+  cible: ppp:textureDirectionality
+  note: la texture dit la taille des reliefs ; l’orientation de la texture dit s’ils suivent une même direction
+alignements_externes:
+- relation: skos:closeMatch
+  cible: coarseness (Tamura, Mori et Yamawaki 1978)
+  reference: Tamura, H., Mori, S. & Yamawaki, T. (1978). Textural features corresponding to visual perception. IEEE Trans. SMC 8(6), 460–473. doi:10.1109/TSMC.1978.4309999
+  reference_id: tamura1978
+  note: taille des éléments qui forment la texture ; mesure calculée sur une image en niveaux de gris, comparée par les auteurs à des classements humains de 16 textures de l’album de Brodatz ; ne fournit
+    pas de régions ; non déclaré exact (spec §9.7 O)
+- relation: skos:relatedMatch
+  cible: roughness (Tamura, Mori et Yamawaki 1978)
+  reference: Tamura, H., Mori, S. & Yamawaki, T. (1978). Textural features corresponding to visual perception. IEEE Trans. SMC 8(6), 460–473. doi:10.1109/TSMC.1978.4309999
+  reference_id: tamura1978
+  note: somme des mesures de coarseness et de contrast dans la source, visant la rugosité tactile ; pas de type propre en PPP (spec §9.7 O, point 4 ; label « rugosité » écarté, T19)
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: tamura1978
+  citation: Tamura, H., Mori, S. & Yamawaki, T. (1978). Textural features corresponding to visual perception. IEEE Transactions on Systems, Man, and Cybernetics, 8(6), 460–473.
+  doi_ou_url: https://doi.org/10.1109/TSMC.1978.4309999
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: métadonnées Crossref et résumé IEEE Xplore ; deux sources secondaires (docs/etat-de-l-art.md §5 bis) ; texte intégral non lu
+  reprend: la dimension *coarseness*, rapprochée de ce type (skos:closeMatch, alignements_externes) ; le découpage en dimensions séparées
+  ne_reprend_pas: 'la mesure calculée sur une image : elle n''est pas reprise comme régions ; les régions restent des repères perçus (spec §9.7 O)'
+- id: rao_lohse1996
+  citation: 'Rao, A. R. & Lohse, G. L. (1996). Towards a texture naming system: Identifying relevant dimensions of texture. Vision Research, 36(11), 1649–1669.'
+  doi_ou_url: https://doi.org/10.1016/0042-6989(95)00202-2
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: 'métadonnées Crossref et résumé lu (OpenAlex, 2026-10-10) : vingt sujets notent et classent 56 images de l’album de Brodatz ; trois dimensions perçues de la texture (répétitif ou non ; contrasté
+    et non orienté ou peu contrasté et orienté ; granuleux, grossier et peu complexe ou non) ; texte intégral non lu'
+  reprend: l'idée que la texture perçue a plusieurs dimensions, établie par des jugements humains
+  ne_reprend_pas: 'leurs dimensions et leur espace : non repris (texte non lu)'
+- id: bhushan1997
+  citation: 'Bhushan, N., Rao, A. R. & Lohse, G. L. (1997). The texture lexicon: Understanding the categorization of visual texture terms and their relationship to texture images. Cognitive Science, 21(2),
+    219–246.'
+  doi_ou_url: https://doi.org/10.1207/s15516709cog2102_4
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: 'métadonnées Crossref et résumé lu (OpenAlex, 2026-10-10) : classement des mots anglais de la texture en onze groupes, de « random » à « repetitive » ; trois dimensions (répétitif ou non,
+    orientation linéaire ou circulaire, simple ou complexe) ; forte association entre mots et images de texture ; texte intégral non lu'
+  reprend: l'existence d'un lexique courant de la texture, relié à des images
+  ne_reprend_pas: 'les termes du lexique : non repris comme labels (texte non lu)'
+- id: haralick1973
+  citation: Haralick, R. M., Shanmugam, K. & Dinstein, I. (1973). Textural features for image classification. IEEE Transactions on Systems, Man, and Cybernetics, SMC-3(6), 610–621.
+  doi_ou_url: https://doi.org/10.1109/TSMC.1973.4309314
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: 'métadonnées Crossref et résumé lu (OpenAlex, 2026-10-10) : mesures de texture calculées sur les dépendances spatiales des niveaux de gris, appliquées à la classification de photos de grès,
+    de photos aériennes et d’images satellite ; texte intégral non lu'
+  reprend: rien
+  ne_reprend_pas: les mesures de cooccurrence (GLCM), qui classent des images sans viser la qualité perçue
+etat_de_l_art: 'La perception de la texture est étudiée depuis les années 1970 en vision par ordinateur et en psychologie. Tamura, Mori et Yamawaki (1978) [[tamura1978]] ont proposé six mesures calculées
+  sur une image, comparées à des jugements humains ; la *coarseness* (le caractère plus ou moins gros du grain) correspond à la taille des reliefs. Rao et Lohse (1996) [[rao_lohse1996]] et Bhushan, Rao
+  et Lohse (1997) [[bhushan1997]] ont cherché les dimensions perçues et le lexique de la texture. Les mesures de Haralick et al. (1973) [[haralick1973]] servent à classer des images par calcul, sans viser
+  la perception. Détail : docs/bibliographie-par-type.md#groupe-texture.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-texture
+axiomes:
+- conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
+  validation: Toute assertion de type ppp:texture a exactement un ppp:about.
+- conceptuel: Les 4 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 4 ppp:Region de l’échelle du type ont des ppp:rank distincts, de 1 à 4 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Une région de cet espace n’est pas un sous-type du type.
+  validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
+nanay: Oui — passer de « je regarde la couleur » à « je vois si c’est lisse ou à gros relief » modifie la description (prise de la lumière, envie de toucher, distance).
+transfert: objet conçu oui (glaçure, textile, enduit) | tableau oui (empâtement, toile) | cuisine oui (plan de travail) | high-tech oui (finition sablée ou polie)
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs à une région près, au-dessus du seuil fixé avant l’épreuve ; vision et toucher éprouvés séparément (Q13 reste ouverte)
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les objets
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E5
+  nature: existence
+  enonce: le type s’applique sans redéfinition à au moins deux régimes (un objet conçu et un matériau ou une œuvre)
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: texture-1
+  nature: structure
+  enonce: 'la texture est formelle : deux surfaces jugées identiques en texture ne diffèrent pas seulement parce que leurs reliefs sont autrement répartis ; si la répartition change la texture perçue, la
+    texture devient semi-formelle de base ppp:distribution (spec §10)'
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2, CQ4a–e, CQ12a–e
+statut: candidat
+statut_epistemique: non éprouvé
+introduit_en: '2.0'
+modifie_en:
+- 2.2.3
+- 2.3.1
+- 2.3.2
+- '2.5'
+remplace_par: []
+a_relire: []
+relecture_explicative:
+  date: '2026-10-10'
+  champs:
+  - question_attentionnelle
+  - définition
+  - contre_exemple
+  - exemplaires
+  - etat_de_l_art (série 6)
+  - references (série 6)
+  a_reconfirmer: []
+manques:
+- région `fine` sans exemplaire
+- 'région `coarse` sans exemplaire : ppp-a:pilote-0105 (porphyre bouchardé) passe en `medium` (décision de l’éditeur du projet, 2026-10-10, T24, en suivant la relecture explicative) ; exemplaire de « grosse » à renseigner'
+- aucun exemplaire tactile (photos seulement)
+- porteur « matière = surface » à confirmer (T2)
+note_label_alternatif: '« grain » est un label alternatif (décision de l’éditeur du projet, 2026-10-10, T1) : aucun type ni aucune région n''a « grain » pour label canonique (A2) ; le sens physique (taille des grains,
+  granulométrie) est traité par grandeur_physique_homonyme (spec §9.7 J).'

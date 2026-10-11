@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "Si vous utilisez l'ontologie PPP, citez-la avec ces métadonnées, en indiquant la version (CC BY 4.0 : attribution obligatoire)."
+type: dataset
+title: "PPP — Propriétés Perceptuelles Pertinentes : spécification d'ontologie"
+abstract: "Ontologie descriptive et axiologiquement neutre des propriétés perceptuelles pertinentes pour l'esthétique, conduite comme un programme de recherche : spécification, patron de fiche, fiches de types et exemplaires."
+authors:
+  - given-names: Lomig
+    family-names: Unger
+  - name: Grok Bot   # co-auteur au sens du crédit (instruction, rédaction de la spécification), pas titulaire des droits : titulaire Lomig Unger (LICENSE, LICENSE-CONTENT.md, CONTRIBUTORS.md)
+version: "2.8"
+date-released: "2026-10-11"
+license: CC-BY-4.0   # série 14 : une seule valeur. En CFF 1.2.0, une liste [CC-BY-4.0, MIT] est valide mais vaut « au choix » (OR, guide du schéma 1.2.0, champ license) : elle offrirait le contenu sous MIT. Le code du site et des outils reste sous MIT (LICENSE).
+# Adresses retenues (série 10) ; 404 sans connexion le 2026-10-11 : le dépôt public n'était pas encore visible. DOI : à renseigner (Zenodo).
+repository-code: "https://github.com/blomig/PPP-ontologie"
+url: "https://blomig.github.io/PPP-ontologie"
+keywords:
+  - ontologie
+  - perception
+  - esthétique
+  - propriétés perceptuelles

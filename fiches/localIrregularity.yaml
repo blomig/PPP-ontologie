@@ -1,0 +1,145 @@
+# Fiche de type PPP — ppp:localIrregularity — format : PPP_FicheType.md (spec v2.4)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_joint, avertissement_label, note_categories, note_reference, note_dimension, note_conditions, note_echelle, note_porteur, note_base, bloque_par.
+id: ppp:localIrregularity
+label_fr: irrégularité locale
+label_en: local irregularity
+labels_alternatifs: []
+patron: P1
+sorte: qualité
+sous_sorte: —
+strate: semi-formel
+base_dependance:
+  types:
+  - ppp:texture
+  - ppp:contour
+  facteurs_non_perceptuels: []
+facettes:
+- matiere
+définition: Présence et ampleur des endroits où une surface, un trait ou un bord s’écarte de la régularité qu’il a dans l’ensemble (un trait tremblé, des carreaux posés à la main qui ne s’alignent pas tout
+  à fait).
+question_attentionnelle: La surface, le trait ou le bord s’écarte-t-il par endroits de sa régularité d’ensemble, et ces écarts sont-ils légers ou marqués ?
+contre_exemple: Une surface à gros relief régulier (tôle gaufrée) a une texture grosse, sans irrégularité locale.
+grandeur_physique_homonyme: aucune pour le label canonique ; l’ancien label v0.2 « rugosité », retiré, était homonyme de la rugosité de surface mesurée, qui relève de la texture.
+modalites:
+- vision
+- toucher
+mode_de_presentation: image
+conditions_critiques:
+- distance
+note_conditions: de loin, des écarts légers cessent de se voir
+porteur: une surface, un trait ou un bord
+arité: 1
+condition_NA: porteur sans régularité d’ensemble perceptible (rien par rapport à quoi un écart se lirait).
+espace_valeurs:
+  echelle: ordinale
+  sens_croissant: de `none` (rang 1) vers `marked` (rang 3), l’ampleur des écarts augmente
+  numerique: non
+  regions:
+  - cle: none
+    label_fr: aucune
+    label_en: none
+    rang: 1
+    repere: aucun écart local perceptible
+    exemplaires: []
+  - cle: slight
+    label_fr: légère
+    label_en: slight
+    rang: 2
+    repere: des écarts perceptibles à l’examen
+    exemplaires: []
+  - cle: marked
+    label_fr: marquée
+    label_en: marked
+    rang: 3
+    repere: des écarts visibles d’emblée
+    exemplaires: []
+identite: Écart à une régularité, pas la taille du relief (texture).
+relations: []
+alignements_externes:
+- relation: skos:relatedMatch
+  cible: regularity (Tamura, Mori et Yamawaki 1978)
+  reference: Tamura, H., Mori, S. & Yamawaki, T. (1978). Textural features corresponding to visual perception. IEEE Trans. SMC 8(6), 460–473. doi:10.1109/TSMC.1978.4309999
+  reference_id: tamura1978
+  note: 'dans la source, régularité globale : 1 moins la somme normalisée des écarts types des autres mesures entre sous-images ; polarité inverse et portée globale, alors que l’irrégularité locale vise
+    des écarts par endroits ; mesure calculée sur une image en niveaux de gris, comparée par les auteurs à des classements humains de 16 textures de l’album de Brodatz ; ne fournit pas de régions ; non
+    déclaré exact (spec §9.7 O)'
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: tamura1978
+  citation: Tamura, H., Mori, S. & Yamawaki, T. (1978). Textural features corresponding to visual perception. IEEE Transactions on Systems, Man, and Cybernetics, 8(6), 460–473.
+  doi_ou_url: https://doi.org/10.1109/TSMC.1978.4309999
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: métadonnées Crossref et résumé IEEE Xplore ; deux sources secondaires (docs/etat-de-l-art.md §5 bis) ; texte intégral non lu
+  reprend: la dimension *regularity*, rapprochée de ce type (skos:relatedMatch, alignements_externes)
+  ne_reprend_pas: 'la mesure, composée d''autres mesures dans la source : pas d''id propre (spec §9.7 O, point 4)'
+- id: liu_picard1996
+  citation: 'Liu, F. & Picard, R. W. (1996). Periodicity, directionality, and randomness: Wold features for image modeling and retrieval. IEEE Transactions on Pattern Analysis and Machine Intelligence,
+    18(7), 722–733.'
+  doi_ou_url: https://doi.org/10.1109/34.506794
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: 'métadonnées Crossref et résumé lu (OpenAlex, 2026-10-10) : modèle d’image (décomposition de Wold) en trois composantes orthogonales, « periodicity », « directionality » et « randomness »,
+    présentées comme approchant les trois dimensions les plus importantes de la perception de la texture ; texte intégral non lu'
+  reprend: le caractère aléatoire comme composante distincte de la direction
+  ne_reprend_pas: 'la mesure : non reprise'
+etat_de_l_art: 'La régularité d''une texture est une dimension de Tamura, Mori et Yamawaki (1978) [[tamura1978]], mais composée d''autres mesures ; Liu et Picard (1996) [[liu_picard1996]] traitent le caractère
+  aléatoire d''une texture comme une composante séparée. Aucune source trouvée ne nomme l''écart local à une régularité comme qualité perçue. La base du type reste ouverte (T11). Détail : docs/bibliographie-par-type.md#groupe-texture.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-texture
+axiomes:
+- conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
+  validation: Toute assertion de type ppp:localIrregularity a exactement un ppp:about.
+- conceptuel: Les 3 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 3 ppp:Region de l’échelle du type ont des ppp:rank distincts, de 1 à 3 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Une région de cet espace n’est pas un sous-type du type.
+  validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
+nanay: Oui — passer de « je vois une surface ou un trait » à « je cherche où il s’écarte de sa régularité » change la description (repérage de la trace de la main, des écarts de pose).
+transfert: objet conçu oui (céramique tournée, carrelage posé à la main) | tableau oui (trait tremblé) | cuisine oui (plan de travail en pierre) | high-tech oui (petites marques sur une coque lisse)
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs exact (échelle à trois régions ou moins, spec §9.7 C, v2.5), au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques
+    (spec §9.7 H) ; vision et toucher éprouvés séparément
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les objets
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2
+statut: candidat
+statut_epistemique: non éprouvé
+introduit_en: '2.0'
+modifie_en:
+- 2.2.3
+- 2.3.1
+- '2.5'
+remplace_par: []
+source_de_la_fiche: 'ex-« rugosité » v0.2 ; la définition v0.2 portait une valence (« imperfections », « augmentent la présence ») et n’est pas reprise ; « rugosité » retiré des labels alternatifs (2026-10-10)
+  : c’est de la texture (voir T19 pour l’annexe A)'
+manques:
+- exemplaires
+- 'base de dépendance : proposition (texture, contour)'
+bloque_par:
+- 'T11 (base proposée : texture, netteté du bord)'
+- T19 (note « rugosité » de l’annexe A)
+a_relire: []
+relecture_explicative:
+  date: '2026-10-10'
+  champs:
+  - question_attentionnelle
+  - définition
+  - contre_exemple
+  - nanay
+  - transfert
+  - etat_de_l_art (série 6)
+  - references (série 6)
+  a_reconfirmer: []

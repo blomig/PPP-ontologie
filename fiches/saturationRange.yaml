@@ -1,0 +1,137 @@
+# Fiche de type PPP — ppp:saturationRange — format : PPP_FicheType.md (spec v2.5)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_joint, avertissement_label, note_categories, note_reference, note_dimension, note_conditions, note_echelle, note_porteur, note_base, bloque_par.
+id: ppp:saturationRange
+label_fr: éventail des saturations
+label_en: saturation range
+labels_alternatifs: []
+patron: P1
+sorte: qualité
+sous_sorte: gestalt
+strate: semi-formel
+base_dependance:
+  types:
+  - ppp:saturation
+  facteurs_non_perceptuels: []
+facettes:
+- couleur
+définition: 'Écart entre les saturations qu’on voit dans une même zone : une seule saturation, des saturations proches, ou des saturations éloignées (du grisé au très coloré), quelles que soient leurs teintes
+  et leurs clartés.'
+question_attentionnelle: Dans cette zone, les couleurs sont-elles toutes aussi vives (ou aussi grisées), un peu plus ou moins vives, ou voit-on à la fois du très grisé et du très vif ?
+contre_exemple: 'Un aplat rouge vif et un aplat vert aussi vif ne montrent qu’une saturation : ils varient en teinte. Une zone toute grise n’a qu’une saturation, nulle. Deux zones qu’on montre du doigt
+  se comparent par un contraste, en ne regardant que la saturation ; l’éventail dit ce qu’on voit dans toute une zone.'
+modalites:
+- vision
+mode_de_presentation: image
+conditions_critiques:
+- presentation
+- lumiere
+note_conditions: sur un écran ou un imprimé, la saturation vue peut différer ; une lumière vive peut faire paraître une couleur plus grisée ou plus vive
+porteur: une zone ou une composition
+arité: 1
+condition_NA: zone trop petite pour montrer plus d’une couleur (un point).
+espace_valeurs:
+  echelle: ordinale
+  sens_croissant: de `singleSaturation` (rang 1) vers `distantSaturations` (rang 3), les saturations vues s’éloignent davantage, du grisé au très coloré
+  numerique: non
+  regions:
+  - cle: singleSaturation
+    label_fr: une seule saturation
+    label_en: single saturation
+    rang: 1
+    repere: toutes les couleurs de la zone sont aussi vives, ou aussi grisées (une affiche en aplats vifs, une photo en noir et blanc)
+    exemplaires: []
+  - cle: closeSaturations
+    label_fr: saturations proches
+    label_en: close saturations
+    rang: 2
+    repere: des couleurs un peu plus ou un peu moins vives (un mur passé au soleil par endroits)
+    exemplaires: []
+  - cle: distantSaturations
+    label_fr: saturations éloignées
+    label_en: distant saturations
+    rang: 3
+    repere: du grisé et du très vif dans la même zone (un fond gris semé de taches de couleur pure)
+    exemplaires: []
+identite: Écart des saturations vues dans une même zone, pas la saturation elle-même, pas l’écart entre deux zones qu’on compare (un contraste, sur la seule saturation), pas les écarts de teinte ou de clarté.
+relations:
+- type: confusableWith
+  cible: ppp:lightnessRange
+  note: 'une couleur grisée n’est pas forcément plus sombre ou plus claire qu’une couleur vive : on juge le vif et le grisé, pas le clair et le sombre'
+- type: confusableWith
+  cible: ppp:hueRange
+  note: des teintes éloignées peuvent avoir toutes la même saturation
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: virtanen2026
+  citation: Virtanen, L., Saarela, T. & Olkkonen, M. (2026). Complex interactions between lightness, chroma, and hue in color ensemble perception. Vision Research, 246, 108868.
+  doi_ou_url: https://doi.org/10.1016/j.visres.2026.108868
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: 'métadonnées Crossref et résumé (OpenAlex) : effet de la variation spatiale de clarté, de chroma et de teinte d''une plage de couleur sur la couleur moyenne perçue ; texte non lu'
+  reprend: la variation spatiale de chroma dans une même plage comme objet d'étude perceptive, distinct de la saturation moyenne
+  ne_reprend_pas: la couleur moyenne perçue, les seuils et les mesures
+etat_de_l_art: 'Virtanen, Saarela et Olkkonen (2026) [[virtanen2026]] étudient l’effet de la variation de chroma (saturation), de clarté et de teinte d’une plage sur la couleur moyenne perçue. Aucune autre
+  source trouvée (recherche du 2026-10-10 : Crossref, OpenAlex) ne propose une qualité perçue de l’écart des saturations dans une même zone, ni des degrés de cet écart. Détail : docs/bibliographie-par-type.md#groupe-couleur.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-couleur
+axiomes:
+- conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
+  validation: Toute assertion de type ppp:saturationRange a exactement un ppp:about.
+- conceptuel: Les 3 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 3 ppp:Region de l’échelle du type ont des ppp:rank distincts, de 1 à 3 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Une région de cet espace n’est pas un sous-type du type.
+  validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
+nanay: Oui — passer de « ces couleurs » à « je regarde si elles sont aussi vives, un peu plus ou moins vives, ou à la fois grisées et vives » change la description (une zone égale ou piquée de couleurs
+  vives).
+transfert: objet conçu oui (textile, céramique émaillée) | tableau oui (taches de couleur pure sur un fond grisé) | cuisine oui (vaisselle dépareillée) | high-tech oui (interface)
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs exact (échelle à trois régions, spec §9.7 C, v2.5), au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques (spec
+    §9.7 H)
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les objets
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E3
+  nature: structure
+  enonce: deux zones dont on juge les saturations une à une identiques ne diffèrent pas en éventail des saturations (sinon la base est incomplète)
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2
+statut: candidat
+statut_epistemique: non éprouvé
+introduit_en: '2.5'
+modifie_en: []
+remplace_par: []
+source_de_la_fiche: crash tests 01 et 02 (docs/crash-test-01-couleur-profonde.md §3.3 ; docs/crash-test-02-complexite-de-forme.md §3.3) ; verdict dans docs/questions-crash-tests.md C6, C7–C25
+  ; fiche minimale du 2026-10-10 (série 6) par l’équipe, champs en langage courant validés depuis par la relecture explicative (série 6)
+manques:
+- 'exemplaires (à renseigner : objets publics vérifiés, un épisode par objet, conditions déclarées)'
+- 'fiche minimale (C6, 2.5) : langage courant, état de l’art et références validés par la relecture explicative (série 6) ; restent les exemplaires et C7, C25 (bloque_par)'
+bloque_par:
+- C7 (type par dimension ou type général de dispersion ; docs/questions-crash-tests.md)
+- C25 (labels de région reprenant « saturation »)
+a_relire: []
+relecture_explicative:
+  date: '2026-10-10'
+  champs:
+  - définition (série 6)
+  - question_attentionnelle (série 6)
+  - contre_exemple (série 6)
+  - espace_valeurs.regions.repere (série 6)
+  - identite (série 6)
+  - relations.note (série 6)
+  - nanay (série 6)
+  - transfert (série 6)
+  - etat_de_l_art (série 6)
+  - references (série 6)
+  a_reconfirmer: []

@@ -1,0 +1,183 @@
+# Fiche de type PPP — ppp:hueRange — format : PPP_FicheType.md (spec v2.4)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_joint, avertissement_label, note_categories, note_reference, note_dimension, note_conditions, note_echelle, note_porteur, note_base, bloque_par.
+id: ppp:hueRange
+label_fr: éventail des teintes
+label_en: hue range
+labels_alternatifs: []
+patron: P1
+sorte: qualité
+sous_sorte: gestalt
+strate: semi-formel
+base_dependance:
+  types:
+  - ppp:hue
+  facteurs_non_perceptuels: []
+facettes:
+- couleur
+définition: 'Distance qui sépare, sur le cercle des couleurs (rouge, orange, jaune, vert, bleu, violet), les teintes qu’on voit dans une même zone ou une composition : une seule teinte, des teintes proches,
+  ou des teintes éloignées, quelles que soient leur clarté et leur saturation.'
+question_attentionnelle: Dans cette zone, voit-on une seule teinte, des teintes voisines (des bleus et des verts) ou des teintes éloignées (des bleus et des oranges) ?
+contre_exemple: 'Un camaïeu de bleus, du bleu nuit au bleu ciel, ne montre qu’une teinte : il varie en clarté, pas en teinte. Deux zones qu’on montre du doigt, l’une rouge, l’autre verte, se comparent par
+  un contraste de teinte ; l’éventail des teintes dit ce qu’on voit dans toute une zone, sans en choisir deux.'
+modalites:
+- vision
+mode_de_presentation: image
+conditions_critiques:
+- presentation
+- distance
+note_conditions: sur un écran ou un imprimé, les teintes peuvent différer ; de loin, des petites taches de teintes différentes se mêlent
+porteur: une zone ou une composition
+arité: 1
+condition_NA: zone achromatique (blanc, gris, noir).
+espace_valeurs:
+  echelle: ordinale
+  sens_croissant: de `singleHue` (rang 1) vers `distantHues` (rang 3), les teintes vues s’éloignent davantage sur le cercle des couleurs
+  numerique: non
+  regions:
+  - cle: singleHue
+    label_fr: une seule teinte
+    label_en: single hue
+    rang: 1
+    repere: toutes les couleurs de la zone ont la même teinte (un camaïeu de bleus, un ciel bleu sans nuage)
+    exemplaires: []
+  - cle: neighbouringHues
+    label_fr: teintes voisines
+    label_en: neighbouring hues
+    rang: 2
+    repere: des teintes voisines sur le cercle (un sous-bois en verts et jaunes sans feuilles brunes, une mer en bleus et verts)
+    exemplaires: []
+  - cle: distantHues
+    label_fr: teintes éloignées
+    label_en: distant hues
+    rang: 3
+    repere: des teintes éloignées ou opposées sur le cercle (un étal de fruits et légumes, un vitrail)
+    exemplaires: []
+note_echelle: 'L’échelle mesure la distance, sur le cercle des couleurs, entre les teintes vues les plus éloignées, pas le nombre de teintes : une zone faite d’un rouge et d’un vert seulement, et une zone
+  de six teintes réparties sur tout le cercle, tombent toutes deux dans `distantHues`. Le nombre de teintes n’est pas noté par ce type. Position de travail, révisable par l’éditeur du projet (T31). Sur
+  le cercle des six teintes (T6) : des teintes voisines sont à un pas l’une de l’autre ; des teintes éloignées, à deux ou trois pas (trois pas : teintes opposées).'
+identite: Écart des teintes vues dans une même zone, pas la teinte elle-même (de quelle couleur est la zone), pas l’écart entre deux zones qu’on compare (contraste de teinte), pas les écarts de clarté (un
+  camaïeu).
+relations:
+- type: confusableWith
+  cible: ppp:lightnessContrast
+  note: un camaïeu montre de forts écarts de clarté dans une seule teinte
+- type: confusableWith
+  cible: ppp:hueContrast
+  note: deux zones qu’on montre du doigt, l’une rouge, l’autre verte, se comparent par un contraste de teinte ; l’éventail dit l’écart des teintes vues dans toute une zone, sans en choisir deux (réciproque
+    écrite aussi dans hueContrast, T31)
+- type: confusableWith
+  cible: ppp:hue
+  note: '« quelle teinte ? » se demande pour une couleur, « quelles teintes, et à quelle distance ? » pour toute une zone : une zone rouge et orange montre deux teintes voisines, pas une seule teinte «
+    rouge-orange » ; l’éventail se juge à partir des teintes vues (la teinte est la base de ce type)'
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: munsell1905
+  citation: 'Munsell, A. H. (1905). A Color Notation. Boston : G. H. Ellis ; 2e éd. 1907, Project Gutenberg n° 26054.'
+  doi_ou_url: https://www.gutenberg.org/ebooks/26054
+  role: alimente
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-10-10'
+  verifie_sur: 'texte du Project Gutenberg n° 26054 lu pour les passages cités : « a circuit of hues » (un cercle de teintes, chapitre I) ; cinq teintes principales et cinq intermédiaires ; texte non lu
+    en entier'
+  reprend: le cercle des teintes, sur lequel se lit la distance entre les teintes vues
+  ne_reprend_pas: la notation chiffrée ; aucune règle d'harmonie
+etat_de_l_art: 'Le système de Munsell (1905) [[munsell1905]] situe les teintes sur un cercle ; l''éventail des teintes d''une zone s''y lit comme une distance sur ce cercle. Aucune source trouvée ne propose
+  une qualité perçue de l''écart des teintes dans une même zone, distincte du contraste entre deux zones et du nombre de couleurs. Les teintes et le cercle sont ceux de la teinte (six teintes, T6, tranché
+  par l’éditeur du projet le 2026-10-11). Détail : docs/bibliographie-par-type.md#groupe-couleur.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-couleur
+axiomes:
+- conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
+  validation: Toute assertion de type ppp:hueRange a exactement un ppp:about.
+- conceptuel: Les 3 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 3 ppp:Region de l’échelle du type ont des ppp:rank distincts, de 1 à 3 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Une région de cet espace n’est pas un sous-type du type.
+  validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
+nanay: Oui — passer de « je vois des couleurs » à « je regarde si leurs teintes sont une seule, proches ou éloignées » change la description (unité ou éclatement de la couleur de la zone).
+transfert: objet conçu oui (textile imprimé, céramique peinte) | tableau oui (palette d’une toile) | cuisine oui (ensemble de vaisselle) | high-tech oui (interface colorée)
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs exact (échelle à trois régions ou moins, spec §9.7 C, v2.5), au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques
+    (spec §9.7 H)
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E1b
+  nature: existence
+  enonce: 'comparaison appariée du pas `singleHue` / `neighbouringHues` (crash test 01, §6 point 6) : on montre côte à côte, sous R-loin puis R-près, un membre jugé `singleHue` et un membre jugé `neighbouringHues`,
+    et l’on demande s’ils diffèrent en teintes ; part des observateurs qui voient un écart, au-dessus d’un seuil fixé avant l’épreuve'
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les objets
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E3
+  nature: structure
+  enonce: deux zones dont on juge les teintes une à une identiques ne diffèrent pas en éventail des teintes (sinon la base est incomplète)
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2
+statut: candidat
+statut_epistemique: non éprouvé
+introduit_en: '2.3'
+modifie_en:
+- 2.3.1
+- 2.3.2
+- '2.5'
+- '2.6'
+remplace_par: []
+source_de_la_fiche: crash tests, partie 1 (spec 2.3, docs/questions-crash-tests.md C4) ; fiche préremplie le 2026-10-10 par l’équipe, champs en langage courant à valider par la relecture explicative
+manques:
+- 'exemplaires (à renseigner : objets publics vérifiés, un épisode par objet, conditions déclarées)'
+bloque_par: []
+a_relire: []
+relecture_explicative:
+  date: '2026-10-11'
+  champs:
+  - question_attentionnelle
+  - définition
+  - contre_exemple
+  - espace_valeurs.regions.repere
+  - identite
+  - relations.note
+  - nanay
+  - transfert
+  - relations.note (ppp:hueContrast, ppp:hue) (2.3.2)
+  - note_echelle (2.3.2)
+  - etat_de_l_art (série 6)
+  - references (série 6)
+  - etat_de_l_art (re-confirmé en relecture explicative, série 9, 2026-10-11)
+  - note_echelle (re-confirmé en relecture explicative, série 9, 2026-10-11)
+  - espace_valeurs.regions.neighbouringHues.repere (re-confirmé en relecture explicative, série 9, 2026-10-11)
+  a_reconfirmer: []
+  reconfirme:
+  - champ: etat_de_l_art
+    date: '2026-10-11'
+    avant: 'Le système de Munsell (1905) situe les teintes sur un cercle ; l''éventail des teintes d''une zone s''y lit comme une distance sur ce cercle. Aucune source trouvée ne propose une qualité perçue
+      de l''écart des teintes dans une même zone, distincte du contraste entre deux zones et du nombre de couleurs. Les catégories de teinte restent ouvertes (T6). Détail : docs/bibliographie-par-type.md#couleur.'
+    apres: 'Le système de Munsell (1905) [[munsell1905]] situe les teintes sur un cercle ; l''éventail des teintes d''une zone s''y lit comme une distance sur ce cercle. Aucune source trouvée ne propose
+      une qualité perçue de l''écart des teintes dans une même zone, distincte du contraste entre deux zones et du nombre de couleurs. Les teintes et le cercle sont ceux de la teinte (six teintes, T6, tranché
+      par l’éditeur du projet le 2026-10-11). Détail : docs/bibliographie-par-type.md#groupe-couleur.'
+    raison: 'fait devenu faux : T6 tranché le 2026-10-11'
+    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9) ; `apres` = texte actuel, qui diffère du texte proposé alors
+  - champ: note_echelle
+    date: '2026-10-11'
+    avant: 'L’échelle mesure la distance, sur le cercle des couleurs, entre les teintes vues les plus éloignées, pas le nombre de teintes : une zone faite d’un rouge et d’un vert seulement, et une zone
+      de six teintes réparties sur tout le cercle, tombent toutes deux dans `distantHues`. Le nombre de teintes n’est pas noté par ce type. Position de travail, révisable par l’éditeur du projet (T31).'
+    apres: 'L’échelle mesure la distance, sur le cercle des couleurs, entre les teintes vues les plus éloignées, pas le nombre de teintes : une zone faite d’un rouge et d’un vert seulement, et une zone
+      de six teintes réparties sur tout le cercle, tombent toutes deux dans `distantHues`. Le nombre de teintes n’est pas noté par ce type. Position de travail, révisable par l’éditeur du projet (T31).
+      Sur le cercle des six teintes (T6) : des teintes voisines sont à un pas l’une de l’autre ; des teintes éloignées, à deux ou trois pas (trois pas : teintes opposées).'
+    raison: 'T6 tranché : le cercle retenu donne le compte des pas des régions (phrase ajoutée)'
+    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+  - champ: espace_valeurs.regions.neighbouringHues.repere
+    date: '2026-10-11'
+    avant: des teintes voisines sur le cercle (un sous-bois en verts et jaunes, une mer en bleus et verts)
+    apres: des teintes voisines sur le cercle (un sous-bois en verts et jaunes sans feuilles brunes, une mer en bleus et verts)
+    raison: 'précision (relecture explicative, 2026-10-11) : un brun compte comme un orange (T6), et orange–vert fait deux pas'
+    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)

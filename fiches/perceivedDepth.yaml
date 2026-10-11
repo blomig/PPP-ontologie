@@ -1,0 +1,164 @@
+# Fiche de type PPP — ppp:perceivedDepth — format : PPP_FicheType.md (spec v2.4)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_joint, avertissement_label, note_categories, note_reference, note_dimension, note_conditions, note_echelle, note_porteur, note_base, bloque_par.
+id: ppp:perceivedDepth
+label_fr: étagement en plans
+label_en: perceived depth
+labels_alternatifs:
+- profondeur de la scène
+avertissement_label: Label canonique « étagement en plans » depuis la spec 2.3.2 (position de travail, révisable par l’éditeur du projet, T25) ; label alternatif « profondeur de la scène ». L’ancien label « profondeur
+  perçue » se confondait avec la profondeur dans la matière (`ppp:subsurfaceDepth`), qui est aussi perçue. Label EN `perceived depth` inchangé (à revoir, T25).
+patron: P1
+sorte: qualité
+sous_sorte: —
+strate: formel
+base_dependance:
+  types: []
+  facteurs_non_perceptuels: []
+facettes:
+- forme
+- organisation
+définition: 'Degré auquel les choses qu’on voit paraissent se ranger les unes devant les autres, à des distances différentes du regard : du tout à plat à de nombreux plans successifs jusqu’au lointain.'
+question_attentionnelle: Ce qu’on voit paraît-il à plat, sur quelques plans (un devant et un fond), ou étagé sur de nombreux plans jusqu’au lointain ?
+contre_exemple: 'Un bas-relief à peine saillant reste presque à plat, même s’il est en volume : c’est l’étagement vu qui compte. L’impression de voir dans l’épaisseur d’un émail ou d’une pierre translucide
+  est une profondeur dans la matière, pas un étagement de plans.'
+modalites:
+- vision
+mode_de_presentation: image
+conditions_critiques:
+- presentation
+- distance
+- angle
+note_conditions: une image fige un seul point de vue ; la distance et l’angle changent les plans qu’on distingue
+porteur: une scène, une composition ou un objet vu dans son ensemble
+arité: 1
+condition_NA: porteur sans étendue perceptible.
+espace_valeurs:
+  echelle: ordinale
+  sens_croissant: de `flat` (rang 1) vers `manyPlanes` (rang 3), ce qu’on voit s’étage sur davantage de plans
+  numerique: non
+  regions:
+  - cle: flat
+    label_fr: à plat
+    label_en: flat
+    rang: 1
+    repere: tout paraît dans un même plan (une affiche à deux couleurs, un mur vu de face)
+    exemplaires: []
+  - cle: fewPlanes
+    label_fr: quelques plans
+    label_en: a few planes
+    rang: 2
+    repere: un premier plan et un fond (une nature morte sur une table devant un mur)
+    exemplaires: []
+  - cle: manyPlanes
+    label_fr: nombreux plans
+    label_en: many planes
+    rang: 3
+    repere: des plans successifs jusqu’au lointain (un paysage de vallée, une longue rue en perspective)
+    exemplaires: []
+identite: Étagement en plans de ce qu’on voit, pas l’impression de voir dans l’épaisseur d’une matière (profondeur dans la matière), pas les espaces laissés libres lus comme des formes (espace négatif).
+relations:
+- type: confusableWith
+  cible: ppp:scaleContrast
+  note: un petit élément peut paraître loin plutôt que petit ; le contraste d’échelle compare deux tailles vues ensemble
+- type: confusableWith
+  cible: ppp:subsurfaceDepth
+  note: 'les deux se disent « profondeur » : l’étagement en plans range les choses d’une scène à des distances différentes ; la profondeur dans la matière est l’impression de voir dans l’épaisseur d’une
+    matière (réciproque écrite aussi dans subsurfaceDepth, T31)'
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: gibson1950
+  citation: 'Gibson, J. J. (1950). The Perception of the Visual World. Boston : Houghton Mifflin.'
+  doi_ou_url: https://openlibrary.org/works/OL5589052W
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: 'notice Open Library (titre, auteur, 1950, Houghton Mifflin, OCLC 560396 ; sujets : perception, vision, perception visuelle, perception de l’espace) ; contenu non lu'
+  reprend: la perception de l'espace et de la profondeur comme objet d'étude
+  ne_reprend_pas: sa théorie (contenu non lu)
+- id: cutting_vishton1995
+  citation: Cutting, J. E. & Vishton, P. M. (1995). Perceiving layout and knowing distances. In Perception of Space and Motion, Academic Press (Elsevier), 69–117.
+  doi_ou_url: https://doi.org/10.1016/B978-012240530-3/50005-5
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: métadonnées Crossref (titre court, ouvrage, pages) ; résumé non disponible ; texte non lu
+  reprend: la perception de l'agencement en profondeur comme objet d'étude
+  ne_reprend_pas: leur analyse des indices (contenu non lu)
+- id: mather_smith2002
+  citation: Mather, G. & Smith, D. R. R. (2002). Blur discrimination and its relation to blur-mediated depth perception. Perception, 31(10), 1211–1219.
+  doi_ou_url: https://doi.org/10.1068/p3254
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: métadonnées Crossref et résumé (OpenAlex)
+  reprend: le flou comme indice grossier de l'ordre en profondeur
+  ne_reprend_pas: les seuils mesurés
+etat_de_l_art: 'La perception de l’espace et de la profondeur est étudiée notamment par Gibson (1950) [[gibson1950]] ; Cutting et Vishton (1995) [[cutting_vishton1995]] traitent de la perception de l’agencement
+  et des distances. Mather et Smith (2002) [[mather_smith2002]] montrent que le flou n’est qu’un indice grossier de l’ordre en profondeur. PPP ne nomme pas les indices (ce qui, dans l’image, permet de voir
+  la profondeur) : il qualifie l’étagement vu, et la strate reste ouverte (T25). Détail : docs/bibliographie-par-type.md#groupe-etagement.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-etagement
+axiomes:
+- conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
+  validation: Toute assertion de type ppp:perceivedDepth a exactement un ppp:about.
+- conceptuel: Les 3 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 3 ppp:Region de l’échelle du type ont des ppp:rank distincts, de 1 à 3 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Une région de cet espace n’est pas un sous-type du type.
+  validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
+nanay: Oui — passer de « je vois une image » à « je regarde ce qui est devant et derrière » change la description (parcours du regard du premier plan au lointain).
+transfert: objet conçu oui (vitrine, meuble à étagères) | tableau oui (perspective, plans successifs) | cuisine oui (étagères ouvertes) | high-tech oui (fenêtres qui se superposent sur un écran) | architecture
+  oui (enfilade de pièces)
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs exact (échelle à trois régions ou moins, spec §9.7 C, v2.5), au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques
+    (spec §9.7 H)
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les objets
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E5
+  nature: existence
+  enonce: le type s’applique sans redéfinition à un tableau et à une scène réelle
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2
+statut: candidat
+statut_epistemique: non éprouvé
+introduit_en: '2.3'
+modifie_en:
+- 2.3.1
+- 2.3.2
+- '2.5'
+remplace_par: []
+source_de_la_fiche: crash tests, partie 1 (spec 2.3, docs/questions-crash-tests.md C4) ; fiche préremplie le 2026-10-10 par l’équipe, champs en langage courant à valider par la relecture explicative
+manques:
+- 'exemplaires (à renseigner : objets publics vérifiés, un épisode par objet, conditions déclarées)'
+- 'strate : formelle ou semi-formelle (base netteté du bord, taille perçue : option de T25) ? (T25)'
+bloque_par:
+- C4 point 4 (une ou deux profondeurs)
+- T25 (strate ; label canonique « étagement en plans »)
+a_relire: []
+relecture_explicative:
+  date: '2026-10-10'
+  champs:
+  - question_attentionnelle
+  - définition
+  - contre_exemple
+  - espace_valeurs.regions.repere
+  - identite
+  - relations.note
+  - nanay
+  - transfert
+  - avertissement_label (2.3.2)
+  - relations.note (ppp:subsurfaceDepth) (2.3.2)
+  - etat_de_l_art (série 6)
+  - references (série 6)
+  a_reconfirmer: []

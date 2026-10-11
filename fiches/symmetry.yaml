@@ -1,0 +1,164 @@
+# Fiche de type PPP — ppp:symmetry — format : PPP_FicheType.md (spec v2.4)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_joint, avertissement_label, note_categories, note_reference, note_dimension, note_conditions, note_echelle, note_porteur, note_base, bloque_par.
+id: ppp:symmetry
+label_fr: symétrie
+label_en: symmetry
+labels_alternatifs: []
+patron: P1
+sorte: qualité
+sous_sorte: gestalt
+strate: semi-formel
+base_dependance:
+  types:
+  - ppp:contour
+  facteurs_non_perceptuels: []
+facettes:
+- forme
+- organisation
+définition: Degré auquel une forme ou une composition paraît se correspondre, comme dans un miroir, de part et d’autre d’un axe, ou en tournant autour d’un centre.
+question_attentionnelle: La forme paraît-elle symétrique, presque symétrique ou asymétrique ?
+contre_exemple: 'Une frise de motifs identiques qui se suivent dans le même sens (une file d’oiseaux tous tournés vers la droite) est une répétition, pas une symétrie : elle relève de la distribution.'
+modalites:
+- vision
+mode_de_presentation: image
+conditions_critiques:
+- angle
+note_conditions: vue de biais, une forme symétrique paraît déformée ; l’angle de vue doit être déclaré
+porteur: une configuration (forme, objet, composition)
+arité: 1
+condition_NA: porteur sans configuration de parties perceptibles (un aplat).
+espace_valeurs:
+  echelle: ordinale
+  sens_croissant: de `asymmetric` (rang 1) vers `symmetric` (rang 3), la correspondance perçue de part et d’autre augmente
+  numerique: non
+  regions:
+  - cle: asymmetric
+    label_fr: asymétrique
+    label_en: asymmetric
+    rang: 1
+    repere: aucune correspondance perçue entre deux moitiés
+    exemplaires: []
+  - cle: nearSymmetric
+    label_fr: presque symétrique
+    label_en: near-symmetric
+    rang: 2
+    repere: correspondance d’ensemble, avec des écarts visibles
+    exemplaires: []
+  - cle: symmetric
+    label_fr: symétrique
+    label_en: symmetric
+    rang: 3
+    repere: les deux moitiés paraissent se correspondre exactement
+    exemplaires: []
+identite: Correspondance de part et d’autre d’un axe ou d’un centre, pas la régularité d’une répartition (distribution).
+relations:
+- type: confusableWith
+  cible: ppp:distribution
+  note: une frise de motifs tournés dans le même sens montre d’abord une répartition régulière (distribution) ; la symétrie au sens de cette fiche demande un axe ou un centre ; savoir si le même motif répété
+    en glissant (une translation) est aussi une symétrie reste ouvert (T9)
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: treder2010
+  citation: 'Treder, M. S. (2010). Behind the looking-glass: A review on human symmetry perception. Symmetry, 2(3), 1510–1543.'
+  doi_ou_url: https://doi.org/10.3390/sym2031510
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: 'métadonnées Crossref et résumé lu (OpenAlex, 2026-10-10) : revue des travaux sur la perception de la symétrie ; la vue extrait la symétrie bilatérale avec beaucoup d’aisance ; la détection
+    de la symétrie est un processus souple, en interaction avec d’autres ; article en accès libre, texte intégral non lu'
+  reprend: la symétrie bilatérale comme qualité que la vue saisit avec beaucoup d’aisance (résumé)
+  ne_reprend_pas: 'les mécanismes neuronaux : PPP ne modélise pas les mécanismes'
+  note_verification: 'série 6, partie 7 : « rapide » et « à degrés » ne sont pas dans le résumé (qui dit « highly proficient », très habile) ; reprend réduit à ce que le résumé soutient'
+- id: koning_wagemans2009
+  citation: Koning, A. & Wagemans, J. (2009). Detection of symmetry and repetition in one and two objects. Experimental Psychology, 56(1), 5–17.
+  doi_ou_url: https://doi.org/10.1027/1618-3169.56.1.5
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: métadonnées Crossref et résumé
+  reprend: la distinction perçue entre symétrie et répétition (T9)
+  ne_reprend_pas: leur interprétation par le codage structural ; T9 reste ouvert
+- id: wagemans2012
+  citation: 'Wagemans, J., Elder, J. H., Kubovy, M., Palmer, S. E., Peterson, M. A., Singh, M. & von der Heydt, R. (2012). A century of Gestalt psychology in visual perception: I. Perceptual grouping and
+    figure–ground organization. Psychological Bulletin, 138(6), 1172–1217.'
+  doi_ou_url: https://doi.org/10.1037/a0029333
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: 'métadonnées Crossref et résumé lu (OpenAlex, 2026-10-10) : bilan d’un siècle de psychologie de la Gestalt ; principes de groupement, classiques (proximité, similarité, destin commun, bonne
+    continuité, fermeture, symétrie, parallélisme) et nouveaux ; recherches actuelles sur le groupement et l’organisation figure-fond ; texte intégral non lu'
+  reprend: la symétrie comme facteur d'organisation perceptive
+  ne_reprend_pas: le bilan des mécanismes
+etat_de_l_art: 'La perception de la symétrie a une littérature abondante : Treder (2010) [[treder2010]] en fait la revue, centrée sur la symétrie bilatérale (en miroir, de part et d’autre d’un axe). Koning
+  et Wagemans (2009) [[koning_wagemans2009]] montrent que symétrie et répétition se détectent différemment selon qu’elles portent sur un objet ou sur deux, ce qui touche directement T9 (la répétition par
+  glissement, ou translation). Wagemans et al. (2012) [[wagemans2012]] situent la symétrie parmi les facteurs de groupement. Détail : docs/bibliographie-par-type.md#groupe-forme.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-forme
+axiomes:
+- conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
+  validation: Toute assertion de type ppp:symmetry a exactement un ppp:about.
+- conceptuel: Les 3 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 3 ppp:Region de l’échelle du type ont des ppp:rank distincts, de 1 à 3 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Une région de cet espace n’est pas un sous-type du type.
+  validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
+nanay: Oui — passer de « je vois la forme » à « je cherche si ses deux moitiés se répondent » change la description (recherche d’un axe ou d’un centre, repérage des écarts).
+transfert: objet conçu oui (vase, chaise) | tableau oui (composition centrée ou décentrée) | cuisine oui (vaisselle) | high-tech oui (façade d’un appareil) | architecture oui (façade)
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs exact (échelle à trois régions ou moins, spec §9.7 C, v2.5), au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques
+    (spec §9.7 H)
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les objets
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2
+statut: candidat
+statut_epistemique: non éprouvé
+introduit_en: '2.0'
+modifie_en:
+- 2.3.1
+- 2.3.2
+- '2.5'
+remplace_par: []
+source_de_la_fiche: paire v0.2 « symétrie / asymétrie », reclassée en régions (spec §9.5)
+manques:
+- 'sorte de symétrie (axiale, centrale…) : facette ou autre type ? (T9)'
+- exemplaires
+bloque_par:
+- 'T9 (sorte de symétrie : axiale, centrale, par translation)'
+a_relire: []
+relecture_explicative:
+  date: '2026-10-10'
+  champs:
+  - question_attentionnelle
+  - définition
+  - contre_exemple
+  - nanay
+  - transfert
+  - relations.note
+  - etat_de_l_art (série 6)
+  - references (série 6)
+  a_reconfirmer: []
+  reconfirme:
+  - champ: relations.note (ppp:distribution)
+    date: '2026-10-10'
+    avant: une répétition dans le même sens (une frise) relève de la distribution, pas de la symétrie
+    apres: une frise de motifs tournés dans le même sens montre d’abord une répartition régulière (distribution) ; la symétrie au sens de cette fiche demande un axe ou un centre ; savoir si une répétition
+      par translation est aussi une symétrie reste ouvert (T9)
+    raison: 'objection 9 : la note tranchait T9 (translation) ; reformulée sans le trancher'
+    retenu: une frise de motifs tournés dans le même sens montre d’abord une répartition régulière (distribution) ; la symétrie au sens de cette fiche demande un axe ou un centre ; savoir si le même motif
+      répété en glissant (une translation) est aussi une symétrie reste ouvert (T9)
+    remarque: reconfirmée ; « répétition par translation » expliqué en mots courants par la relecture explicative, sans trancher T9
+  - champ: references.treder2010.reprend
+    date: '2026-10-10'
+    avant: la symétrie bilatérale comme qualité perçue rapide, à degrés
+    apres: la symétrie bilatérale comme qualité que la vue saisit avec beaucoup d’aisance (résumé)
+    remarque: 'réduit par la relecture explicative (vérification finale de la série 6) : « rapide » et « à degrés » ne sont pas dans le résumé, qui dit « highly proficient » (note_verification de l’équipe)'

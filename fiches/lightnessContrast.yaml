@@ -1,0 +1,195 @@
+# Fiche de type PPP — ppp:lightnessContrast — format : PPP_FicheType.md (spec v2.4)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_joint, avertissement_label, note_categories, note_reference, note_dimension, note_conditions, note_echelle, note_porteur, note_base, bloque_par.
+id: ppp:lightnessContrast
+label_fr: contraste de clarté
+label_en: lightness contrast
+label_court: contraste de clarté
+labels_alternatifs: []
+patron: P2
+sorte: relateur
+sous_sorte: —
+strate: semi-formel
+base_dependance:
+  types:
+  - ppp:lightness
+  facteurs_non_perceptuels: []
+facettes:
+- couleur
+- organisation
+définition: 'Différence perçue entre deux zones, parties ou objets sur une seule qualité, la clarté : combien chacun paraît clair ou sombre, quelle que soit sa couleur ; de deux gris presque identiques
+  au noir contre le blanc.'
+question_attentionnelle: Si l’on ne regarde que le clair et le sombre (comme sur une photo en noir et blanc), la différence entre ces deux zones est-elle faible (deux gris voisins), modérée (un gris moyen
+  sur un gris clair), évidente (un gris foncé sur un fond clair) ou maximale (du noir sur du blanc) ?
+contre_exemple: 'Un rouge et un vert qui donneraient le même gris sur une photo en noir et blanc diffèrent fortement de teinte, mais leur contraste de clarté est faible. Une surface claire unie, prise seule,
+  a une clarté élevée : ce n’est pas un contraste, il faut une seconde zone.'
+grandeur_physique_homonyme: 'contraste de luminance mesuré (Weber, Michelson) : aucune région ne s’en déduit.'
+modalites:
+- vision
+mode_de_presentation: image
+conditions_critiques:
+- presentation
+note_conditions: 'un écran ou un imprimé resserre les écarts de clarté ; un éclairage rasant crée des écarts de clarté sur les reliefs (ppp-a:pilote-0402), mais pas entre deux zones planes : lumiere non
+  déclarée critique (T22)'
+porteur: deux termes (zones, parties ou objets), rôle `terme` pour chacun
+arité: 2
+dimension_comparee: ppp:lightness
+condition_NA: moins de deux termes distincts sur cette dimension (une seule zone homogène).
+espace_valeurs:
+  echelle: ordinale
+  meme_echelle_que: ppp:perceptualContrast
+  sens_croissant: de `weak` (rang 1) vers `strong` (rang 4), l’écart perçu de clarté augmente
+  numerique: non
+  regions:
+  - cle: weak
+    label_fr: faible
+    label_en: weak
+    rang: 1
+    repere: deux zones de clarté très proche, qu’on distingue à peine (deux gris voisins)
+    exemplaires:
+    - ppp-a:pilote-0401
+    - ppp-a:pilote-0402
+  - cle: moderate
+    label_fr: modéré
+    label_en: moderate
+    rang: 2
+    repere: écart de clarté visible à l’examen (un gris moyen sur un gris clair)
+    exemplaires: []
+  - cle: marked
+    label_fr: évident
+    label_en: marked
+    rang: 3
+    repere: écart visible d’emblée (un gris foncé sur un fond clair)
+    exemplaires: []
+  - cle: strong
+    label_fr: maximal
+    label_en: strong
+    rang: 4
+    repere: une zone très sombre contre une zone très claire (noir sur blanc)
+    exemplaires:
+    - ppp-a:pilote-0403
+identite: Un écart de clarté entre deux termes, pas la clarté d’un seul porteur.
+relations:
+- type: specializes
+  cible: ppp:perceptualContrast
+  note: garde l’arité, les rôles, les clés et les rangs du général ; n’ajoute pas de région (A1)
+- type: confusableWith
+  cible: ppp:hueContrast
+  note: deux couleurs très différentes peuvent être de même clarté ; pour juger la clarté seule, imaginer chaque zone convertie en gris
+- type: separableFrom
+  cible: ppp:hueContrast
+  note: 'à éprouver (E2) : nuancier de paires de même écart de teinte, à écart de clarté croissant'
+alignements_externes:
+- relation: skos:relatedMatch
+  cible: contrast (Tamura, Mori et Yamawaki 1978)
+  reference: Tamura, H., Mori, S. & Yamawaki, T. (1978). Textural features corresponding to visual perception. IEEE Trans. SMC 8(6), 460–473. doi:10.1109/TSMC.1978.4309999
+  reference_id: tamura1978
+  note: dans la source, étalement des niveaux de gris d’une seule texture (écart type rapporté à la racine quatrième du kurtosis) ; en PPP, c’est un contraste de clarté entre les reliefs ou marques d’une
+    surface et leur fond (assertion P2 sur deux parties), pas un contraste de texture (ppp:textureContrast compare deux surfaces) ; mesure calculée sur une image en niveaux de gris, comparée par les auteurs
+    à des classements humains de 16 textures de l’album de Brodatz ; ne fournit pas de régions ; non déclaré exact (spec §9.7 O)
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: tamura1978
+  citation: Tamura, H., Mori, S. & Yamawaki, T. (1978). Textural features corresponding to visual perception. IEEE Transactions on Systems, Man, and Cybernetics, 8(6), 460–473.
+  doi_ou_url: https://doi.org/10.1109/TSMC.1978.4309999
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: métadonnées Crossref et résumé IEEE Xplore ; deux sources secondaires (docs/etat-de-l-art.md §5 bis) ; texte intégral non lu
+  reprend: la dimension *contrast*, rapprochée de ce type (skos:relatedMatch, alignements_externes)
+  ne_reprend_pas: la mesure calculée sur une image ; elle n'est pas reprise comme régions
+- id: gilchrist2006
+  citation: Gilchrist, A. (2006). Seeing Black and White. Oxford University Press.
+  doi_ou_url: https://doi.org/10.1093/acprof:oso/9780195187168.001.0001
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: 'métadonnées Crossref et résumé de l’éditeur lu (OpenAlex, 2026-10-10) : la lumière renvoyée par une surface ne révèle pas sa nuance de gris ; selon l’éclairage, une surface de n’importe
+    quel gris peut renvoyer n’importe quelle quantité de lumière ; le livre fait l’historique des recherches et des théories de la clarté ; contenu non lu'
+  reprend: le fait, dit dans le résumé, que la lumière renvoyée par une surface ne dit pas sa nuance de gris ; PPP en tire, sans que le résumé le dise, que l'écart de clarté vu entre deux zones n'est pas
+    un écart de lumière mesuré
+  ne_reprend_pas: la théorie de l’auteur et le reste du livre (non lus)
+- id: albers1963
+  citation: 'Albers, J. (1963). Interaction of Color. New Haven : Yale University Press.'
+  doi_ou_url: https://openlibrary.org/works/OL43516944W
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: notice Open Library (titre, auteur, éditeur, 1963, OCLC 30247970 ; pas de description) ; contenu non lu
+  reprend: rien de son contenu (non lu) ; cité comme ouvrage repéré sur l’interaction des couleurs (titre)
+  ne_reprend_pas: tout son contenu, exercices et conclusions compris (non lu)
+etat_de_l_art: 'Le contraste de clarté entre deux zones touche à la perception du clair et du sombre, sujet du livre de Gilchrist (2006) [[gilchrist2006]], dont le résumé rappelle que la lumière renvoyée
+  par une surface ne dit pas sa nuance de gris (livre non lu). Tamura, Mori et Yamawaki (1978) [[tamura1978]] ont une mesure de contraste calculée sur une image, rapprochée de ce type. Albers (*Interaction
+  of Color*, 1963) [[albers1963]] est un ouvrage repéré sur l''interaction des couleurs (titre ; contenu non lu). Détail : docs/bibliographie-par-type.md#groupe-contrastes.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-contrastes
+axiomes:
+- conceptuel: Tout contraste particulier médie exactement deux termes.
+  validation: Toute assertion de type ppp:lightnessContrast a exactement deux ppp:about, chacun avec un ppp:role.
+- conceptuel: Les 4 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 4 ppp:Region de l’échelle ont des ppp:rank distincts, de 1 à 4 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Tout contraste de clarté est un contraste perceptif dont la dimension comparée est ppp:lightness.
+  validation: Toute assertion de type ppp:lightnessContrast relève aussi de ppp:perceptualContrast ; elle ne déclare pas de ppp:comparedDimension, ou déclare ppp:lightness.
+nanay: Oui — passer de « deux couleurs » à « l’écart de clarté entre elles » modifie la description (ce qui se détache à distance, ce qui se fond).
+transfert: objet conçu oui (céramique) | tableau oui | cuisine oui (façade et plan) | high-tech oui (texte sur écran)
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs à une région près, au-dessus du seuil fixé avant l’épreuve (épreuve propre à ce spécialisé, spec §9.7 B)
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E2
+  nature: structure
+  enonce: on peut faire varier le contraste de clarté en tenant constant le contraste de teinte
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les objets
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E5
+  nature: existence
+  enonce: le type s’applique sans redéfinition à au moins deux régimes (un tableau et un objet conçu)
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2, CQ8a, CQ8b, CQ12a
+statut: candidat
+statut_epistemique: non éprouvé
+introduit_en: '2.2'
+modifie_en:
+- 2.2.3
+- 2.3.1
+- '2.5'
+remplace_par: []
+a_relire: []
+relecture_explicative:
+  date: '2026-10-10'
+  champs:
+  - question_attentionnelle
+  - définition
+  - contre_exemple
+  - exemplaires
+  - etat_de_l_art (série 6, vérification finale)
+  - references (série 6, vérification finale)
+  a_reconfirmer: []
+  reconfirme:
+  - champ: question_attentionnelle
+    date: '2026-10-10'
+    avant: Si l’on ne regarde que le clair et le sombre (comme sur une photo en noir et blanc), la différence entre ces deux zones est-elle faible, modérée, marquée ou forte ?
+    apres: Si l’on ne regarde que le clair et le sombre (comme sur une photo en noir et blanc), la différence entre ces deux zones est-elle faible, modérée, évidente ou maximale ?
+    raison: 'T3, option A (décision de l’éditeur du projet, 2026-10-10) : labels du contraste « faible / modéré / évident / maximal » ; question attentionnelle à reprendre par la relecture explicative ; seuls les mots-labels sont
+      remplacés'
+    retenu: Si l’on ne regarde que le clair et le sombre (comme sur une photo en noir et blanc), la différence entre ces deux zones est-elle faible (deux gris voisins), modérée (un gris moyen sur un gris
+      clair), évidente (un gris foncé sur un fond clair) ou maximale (du noir sur du blanc) ?
+    remarque: 'T3 option A : question reprise par la relecture explicative ; chaque mot-label porte entre parenthèses le repère de sa région, pour que « évident » (visible d’emblée) et « maximal » (aux deux bouts
+      de la dimension) ne se lisent pas comme des synonymes de « fort »'
+manques:
+- régions `moderate` et `marked` sans exemplaire
+- 'repères propres à la clarté : proposition'
+note_joint: 'Au joint de deux parties, le contraste de couleur n’est pas un type propre : on écrit une assertion de contraste de clarté (ou de teinte) dont les deux termes sont les deux parties qui se rejoignent
+  (spec §9.7 A). Exemple : le joint entre un plateau clair et un piétement sombre a un contraste de clarté évident ; le joint lui-même a, en plus, un espacement (ppp:jointSpacing) et un décalage de niveau
+  (ppp:jointLevelOffset).'
