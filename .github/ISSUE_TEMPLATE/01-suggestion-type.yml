@@ -5,10 +5,11 @@ description: Proposer un aspect perceptible que l’ontologie ne décrit pas enc
 title: '[suggestion-type] '
 labels:
 - suggestion-type
+- reçu
 body:
 - type: markdown
   attributes:
-    value: 'Ce ticket est **public**. N''y mettez ni adresse électronique ni donnée personnelle : un pseudonyme suffit. Format et traitement : `docs/gouvernance.md` (reçu, recevable, traité, réponse dans
+    value: 'Ce ticket est **public**. N''y mettez ni adresse électronique ni donnée personnelle : un pseudonyme suffit. Format et traitement : `docs/gouvernance.md` (reçu, recevable, précision demandée, traité ; réponse dans
       la semaine).'
 - type: input
   id: label

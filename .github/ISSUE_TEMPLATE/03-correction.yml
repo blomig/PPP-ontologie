@@ -5,10 +5,11 @@ description: Une référence fautive, un crédit d’image, une coquille, un lie
 title: '[correction] '
 labels:
 - correction
+- reçu
 body:
 - type: markdown
   attributes:
-    value: 'Ce ticket est **public**. N''y mettez ni adresse électronique ni donnée personnelle : un pseudonyme suffit. Format et traitement : `docs/gouvernance.md` (reçu, recevable, traité, réponse dans
+    value: 'Ce ticket est **public**. N''y mettez ni adresse électronique ni donnée personnelle : un pseudonyme suffit. Format et traitement : `docs/gouvernance.md` (reçu, recevable, précision demandée, traité ; réponse dans
       la semaine).'
 - type: input
   id: cible

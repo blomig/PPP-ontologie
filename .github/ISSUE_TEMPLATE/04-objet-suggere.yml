@@ -5,11 +5,16 @@ description: Proposer un objet public pour les épreuves (ouvert à tous).
 title: '[objet-suggere] '
 labels:
 - objet-suggere
+- reçu
 body:
 - type: markdown
   attributes:
-    value: 'Ce ticket est **public**. N''y mettez ni adresse électronique ni donnée personnelle : un pseudonyme suffit. Format et traitement : `docs/gouvernance.md` (reçu, recevable, traité, réponse dans
+    value: 'Ce ticket est **public**. N''y mettez ni adresse électronique ni donnée personnelle : un pseudonyme suffit. Format et traitement : `docs/gouvernance.md` (reçu, recevable, précision demandée, traité ; réponse dans
       la semaine).'
+- type: markdown
+  attributes:
+    value: 'L''objet peut être **une image** : une photo, une affiche, une gravure. Dans ce cas, c''est l''image elle-même que vous proposez, et « Qui l''a fait ? » désigne son auteur. Pour un **objet
+      naturel** (un arbre, une pierre, un coquillage), dites où il se trouve, ou dans quelle collection.'
 - type: input
   id: nom
   attributes:
@@ -21,7 +26,8 @@ body:
   id: createur
   attributes:
     label: Qui l'a fait ?
-    description: Artiste, architecte, fabricant… ou tapez « je ne sais pas ».
+    description: 'L''auteur de l''objet lui-même : artiste, architecte, fabricant… ou tapez « je ne sais pas ». Pour un objet naturel, tapez « objet naturel ». Ne mettez pas ici l''auteur d''une photo de
+      l''objet : il a son propre champ plus bas.'
   validations:
     required: false
 - type: input
@@ -42,6 +48,16 @@ body:
     placeholder: le pont tel qu'il est en 2026
   validations:
     required: true
+- type: textarea
+  id: objet_naturel
+  attributes:
+    label: Pour un objet naturel, où le trouver ?
+    description: 'Seulement pour un objet qui n''a pas été fait par quelqu''un (arbre, pierre, coquillage, paysage). Il faut de quoi retrouver ce spécimen précis, pas seulement son espèce : le lieu
+      (commune, parc, adresse, coordonnées), ou la collection qui le conserve (muséum, jardin botanique) avec son numéro s''il en a un, et l''espèce si vous la connaissez. « Une écorce d''arbre »
+      désigne une catégorie : nous ne pourrions pas la retenir.'
+    placeholder: platane du parc X à Lyon, près de l'entrée nord ; ou muséum Y, spécimen n° …
+  validations:
+    required: false
 - type: input
   id: lien
   attributes:
@@ -65,6 +81,15 @@ body:
     - Oui, une licence libre est indiquée sur la page
     - Je ne sais pas
     - Non
+  validations:
+    required: false
+- type: input
+  id: credit_image
+  attributes:
+    label: Qui a fait l'image, et sous quelle licence ?
+    description: 'Seulement si vous donnez une image. L''auteur de la photo (ou du scan) et la licence indiquée sur sa page, si vous les voyez. Ce n''est pas l''auteur de l''objet : la photo d''un tableau a
+      son propre auteur. Si l''objet proposé est l''image elle-même, répétez ici son auteur.'
+    placeholder: photo de …, licence CC BY-SA 4.0, Wikimedia Commons
   validations:
     required: false
 - type: dropdown

@@ -5,10 +5,11 @@ description: Une fiche de type complète, au patron PPP_FicheType.md.
 title: '[proposition-type] '
 labels:
 - proposition-type
+- reçu
 body:
 - type: markdown
   attributes:
-    value: 'Ce ticket est **public**. N''y mettez ni adresse électronique ni donnée personnelle : un pseudonyme suffit. Format et traitement : `docs/gouvernance.md` (reçu, recevable, traité, réponse dans
+    value: 'Ce ticket est **public**. N''y mettez ni adresse électronique ni donnée personnelle : un pseudonyme suffit. Format et traitement : `docs/gouvernance.md` (reçu, recevable, précision demandée, traité ; réponse dans
       la semaine).'
 - type: textarea
   id: fiche
