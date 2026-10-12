@@ -145,6 +145,17 @@ body:
     description: Facultatif. Le nom sous lequel vous voulez apparaître. Jamais d'adresse électronique.
   validations:
     required: false
+- type: dropdown
+  id: langue
+  attributes:
+    label: Langue / Language
+    description: Langue du ticket (facultatif) / Language of the ticket (optional).
+    options:
+    - fr
+    - en
+    default: 0
+  validations:
+    required: false
 - type: checkboxes
   id: licence
   attributes:
