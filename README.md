@@ -57,4 +57,4 @@ Les fiches, la spécification, les textes et les documents sont sous licence **C
 
 Le code du site et des outils est sous licence **MIT** (voir [LICENSE](LICENSE)).
 
-Les images d'exemples ne sont pas sous licence CC BY 4.0 : chacune garde sa propre licence, celle que donne sa source, et son crédit doit être repris tel quel. Une image n'est reproduite que si sa licence est vraiment libre ; sinon, la fiche donne seulement un lien vers sa source.
+Les images d'exemples ne sont pas sous licence CC BY 4.0 : chacune garde sa propre licence, celle que donne sa source, et son crédit doit être repris tel quel. Une image n'est reproduite que si sa licence est vraiment libre ; sinon, la fiche donne seulement un lien vers sa source. Si vous modifiez une image sous licence CC BY-SA (recadrage, retouche), la nouvelle version doit rester sous cette même licence, et vous devez signaler la modification.
