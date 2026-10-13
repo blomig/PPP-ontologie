@@ -11,7 +11,7 @@ Tout passe par un **ticket GitHub**, ouvert avec l'un des formulaires du dépôt
 | Suggérer un type | un aspect perceptible qu'aucune fiche ne décrit | rien de plus : ouvert à tous |
 | Signaler un mot qui juge ou une mauvaise traduction | un mot qui évalue au lieu de décrire, une ambiguïté, une erreur de traduction | rien de plus : ouvert à tous |
 | Signaler une erreur | une référence fautive, un crédit d'image, une coquille, un lien mort | rien de plus : ouvert à tous |
-| Suggérer un objet | un objet public pour les épreuves (page publique obligatoire ; la date peut rester « je ne sais pas » si « Quelle version exactement ? » permet de retrouver l'objet) | ouvert à tous ; une page publique de l'objet |
+| Suggérer un objet | un objet public pour les épreuves (page publique obligatoire ; la date peut rester « je ne sais pas » si « Quelle version exactement ? » permet de retrouver l'objet ; l'objet peut être une photo publiée : c'est alors l'image elle-même, avec son lien précis et son crédit, sans avoir à identifier ce qu'elle montre) | ouvert à tous ; une page publique de l'objet |
 | Contester un exemple ou un énoncé | une assertion ou un énoncé, avec une observation reproductible | observation reproductible |
 | Ajouter une assertion | une assertion sur un objet déjà au registre | observation décrite |
 | Signaler une anomalie | un cas reproductible que la fiche ne prévoit pas | observation reproductible |
@@ -23,7 +23,7 @@ Le contenu minimal de chaque formulaire est celui de `docs/gouvernance.md` (sect
 ## Ce qui se passe ensuite
 
 1. **Dans la semaine**, l'équipe juge si le ticket est recevable (le contenu minimal est là).
-2. Un ticket recevable est versé dans `tickets/` comme fichier (`tickets/<numéro>-<type>.md`) et reste ouvert jusqu'à sa décision, ou jusqu'à l'épreuve qui le traite. Un ticket non recevable est fermé avec son motif.
+2. Un ticket recevable est versé dans `tickets/` comme fichier (`tickets/<numéro>-<type>.md`) et reste ouvert jusqu'à sa décision, ou jusqu'à l'épreuve qui le traite. Un ticket presque complet peut recevoir le label `précision-demandée` : l'équipe pose sa question avec une date limite, et sans réponse à cette date le ticket est fermé, avec la possibilité d'en ouvrir un nouveau. Un ticket non recevable est fermé avec son motif ; un ticket traité porte le label `accepté` ou `rejeté`.
 3. Chaque décision est motivée publiquement ; un changement de la spécification ou d'une fiche est noté au changelog ; une épreuve va au journal des épreuves (`epreuves/`, format dans `epreuves/README.md`), affiché sur le site.
 
 Un ticket simplement ouvert ne change rien sur le site : seul un ticket recevable peut faire passer un exemple ou une fiche à « contesté ».
@@ -32,7 +32,7 @@ Un ticket simplement ouvert ne change rien sur le site : seul un ticket recevabl
 
 - **Pas de données personnelles** : un ticket est public. Pas d'adresse électronique ; un pseudonyme suffit.
 - **Décrire, ne pas juger** : les fiches décrivent ce qu'on perçoit ; « beau », « réussi » ne décrivent pas un aspect.
-- **Objets publics seulement** : un objet confidentiel n'est pas recevable ; une image n'est reproduite que si sa licence est réellement libre et vérifiée.
+- **Objets publics seulement** : un objet confidentiel n'est pas recevable ; une image n'est reproduite que si sa licence est réellement libre et vérifiée, ou, en miniature avec son crédit complet, si sa licence permet gratuitement et sans autorisation de la copier et de l'afficher, pour tout usage, même commercial (par exemple la licence Unsplash).
 - **Sources vérifiables** : une référence se donne avec son DOI ou son adresse.
 
 ## Modifications directes (*pull requests*)

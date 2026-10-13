@@ -9,12 +9,13 @@ labels:
 body:
 - type: markdown
   attributes:
-    value: 'Ce ticket est **public**. N''y mettez ni adresse électronique ni donnée personnelle : un pseudonyme suffit. Format et traitement : `docs/gouvernance.md` (reçu, recevable, précision demandée, traité ; réponse dans
-      la semaine).'
+    value: 'Ce ticket est **public**. N''y mettez ni adresse électronique ni donnée personnelle : un pseudonyme suffit. Format et traitement : `docs/gouvernance.md` (reçu, recevable, précision demandée,
+      traité ; réponse dans la semaine).'
 - type: markdown
   attributes:
-    value: 'L''objet peut être **une image** : une photo, une affiche, une gravure. Dans ce cas, c''est l''image elle-même que vous proposez, et « Qui l''a fait ? » désigne son auteur. Pour un **objet
-      naturel** (un arbre, une pierre, un coquillage), dites où il se trouve, ou dans quelle collection.'
+    value: 'L''objet peut être **une image** : une photo, une affiche, une gravure. Dans ce cas, l''exemple est l''image elle-même, pas ce qu''elle montre : « Qui l''a fait ? » désigne son auteur, « Quelle
+      version exactement ? » le lien précis de l''image, et le crédit de l''image est obligatoire. Vous n''avez pas besoin d''identifier ce que la photo montre. Une photo ne sert que pour ce qui se voit,
+      jamais pour le toucher ; pour la taille perçue, l''équipe vérifie le repère d''échelle. Pour une photo, le même lien suffit dans les trois champs de lien (« Quelle version exactement ? », « Une page publique qui le montre », « Une image »). Pour un **objet naturel** proposé lui-même (un arbre, une pierre, un coquillage), dites où il se trouve, ou dans quelle collection.'
 - type: input
   id: nom
   attributes:
@@ -34,8 +35,9 @@ body:
   id: date
   attributes:
     label: Quand ?
-    description: Une date ou une période suffit. Vous pouvez taper « je ne sais pas », mais seulement si votre réponse à « Quelle version exactement ? » permet de retrouver l'objet ; sinon, nous ne pourrons
-      pas retenir la suggestion.
+    description: 'Une date ou une période suffit. Pour une photo : la date de la photo, si vous la connaissez. Pour un objet naturel : la date où vous l''avez observé, si vous la connaissez. Vous pouvez
+      taper « je ne sais pas », mais seulement si votre réponse à « Quelle version exactement ? » permet de retrouver l''objet (pour une photo, son lien précis suffit) ; sinon, nous ne pourrons pas retenir
+      la suggestion.'
     placeholder: Ier siècle
   validations:
     required: false
@@ -44,17 +46,18 @@ body:
   attributes:
     label: Quelle version exactement ?
     description: 'Ce qui permet de savoir quel objet précis vous avez vu : l''exemplaire de quel musée, quelle édition, quel modèle ou quelle couleur, avant ou après une restauration. Cette réponse permet
-      à d''autres de retrouver exactement le même objet, et de le regarder à leur tour. Si vous ne connaissez pas la date, cette réponse doit suffire, à elle seule, à retrouver l''objet.'
+      à d''autres de retrouver exactement le même objet, et de le regarder à leur tour. Si vous ne connaissez pas la date, cette réponse doit suffire, à elle seule, à retrouver l''objet. Si l''objet est
+      une photo : le lien précis de la page de l''image (pas une recherche ni une galerie).'
     placeholder: le pont tel qu'il est en 2026
   validations:
     required: true
 - type: textarea
   id: objet_naturel
   attributes:
-    label: Pour un objet naturel, où le trouver ?
-    description: 'Seulement pour un objet qui n''a pas été fait par quelqu''un (arbre, pierre, coquillage, paysage). Il faut de quoi retrouver ce spécimen précis, pas seulement son espèce : le lieu
-      (commune, parc, adresse, coordonnées), ou la collection qui le conserve (muséum, jardin botanique) avec son numéro s''il en a un, et l''espèce si vous la connaissez. « Une écorce d''arbre »
-      désigne une catégorie : nous ne pourrions pas la retenir.'
+    label: Que montre l'image, ou où trouver l'objet naturel ?
+    description: 'Facultatif. Si vous proposez une photo, vous pouvez dire ce qu''elle montre, si vous le savez : ce n''est pas obligatoire. Si vous proposez un objet naturel lui-même (pas en photo), dites
+      où le trouver : le lieu (commune, parc, adresse, coordonnées), ou la collection qui le conserve avec son numéro s''il en a un, et l''espèce si vous la connaissez. « Un chêne » désigne une catégorie
+      : pour un objet naturel proposé lui-même, il faut ce spécimen précis.'
     placeholder: platane du parc X à Lyon, près de l'entrée nord ; ou muséum Y, spécimen n° …
   validations:
     required: false
@@ -79,6 +82,7 @@ body:
     description: Seulement si vous donnez une image.
     options:
     - Oui, une licence libre est indiquée sur la page
+    - Gratuite à réutiliser, mais avec sa propre licence (par exemple Unsplash)
     - Je ne sais pas
     - Non
   validations:
@@ -87,8 +91,7 @@ body:
   id: credit_image
   attributes:
     label: Qui a fait l'image, et sous quelle licence ?
-    description: 'Seulement si vous donnez une image. L''auteur de la photo (ou du scan) et la licence indiquée sur sa page, si vous les voyez. Ce n''est pas l''auteur de l''objet : la photo d''un tableau a
-      son propre auteur. Si l''objet proposé est l''image elle-même, répétez ici son auteur.'
+    description: 'Obligatoire si l''objet proposé est une image ; sinon, seulement si vous donnez une image. L''auteur de la photo (ou du scan) et la page où elle se trouve sont obligatoires ; la licence, si vous la voyez. Ce n''est pas l''auteur de l''objet : la photo d''un tableau a son propre auteur. Si l''objet proposé est l''image elle-même, répétez ici son auteur.'
     placeholder: photo de …, licence CC BY-SA 4.0, Wikimedia Commons
   validations:
     required: false
