@@ -80,7 +80,7 @@ assertions:
 
 Champs communs (`assertedBy`, `epistemicStatus`, `withdrawn`) : bloc `commun` du registre.
 
-La relecture des assertions et des objets est consignée dans `fiches/exemplaires.yaml`, sous la clé `relecture_explicative` (`assertions`, `objets`, `a_relire`, `a_reconfirmer` ; clé nommée `valide_par_le_professeur` jusqu'à la série 8). Une assertion compte pour les paliers de publication (X17) seulement si elle y est relue.
+La relecture des assertions et des objets est consignée dans `fiches/exemplaires.yaml`, sous la clé `relecture_explicative` (`assertions`, `objets`, `a_relire`, `a_reconfirmer` ; clé nommée `valide_par_la_relecture` jusqu'à la série 8). Une assertion compte pour les paliers de publication (X17) seulement si elle y est relue.
 
 ## 4. Ce qu'une fiche d'exemplaire affiche (site)
 

@@ -25,8 +25,8 @@
 | `QUESTIONS-A-TRANCHER.md` | décisions demandées à l’éditeur du projet (T1–T38), avec position de travail ; ce qui est tranché dans le cadre de la spec y est marqué |
 
 **Champs de travail** (hors patron, à retirer une fois la fiche validée) :
-- `a_relire` : champs préremplis, à vérifier en relecture explicative (clé nommée `a_valider_par_le_professeur` jusqu’à la série 8) ;
-- `relecture_explicative` (clé nommée `valide_par_le_professeur` jusqu’à la série 8) : relecture explicative, avec `date` (AAAA-MM-JJ) et `champs` (liste des champs relus et corrigés en langage courant). Ces champs ne sont plus réécrits par l’équipe ; une relecture n'est ni une épreuve ni un changement de statut éditorial ;
+- `a_relire` : champs préremplis, à vérifier en relecture explicative (clé nommée `a_valider_par_la_relecture` jusqu’à la série 8) ;
+- `relecture_explicative` (clé nommée `valide_par_la_relecture` jusqu’à la série 8) : relecture explicative, avec `date` (AAAA-MM-JJ) et `champs` (liste des champs relus et corrigés en langage courant). Ces champs ne sont plus réécrits par l’équipe ; une relecture n'est ni une épreuve ni un changement de statut éditorial ;
 - `manques` : ce qui manque à la fiche ;
 - `source_de_la_fiche` : d'où vient la fiche ;
 - `statut_note` ;

@@ -157,7 +157,7 @@ Opérations (`op:`), partitions C-K et lexique d’atelier ne figurent **pas** d
 
 ## Champs de travail (hors patron, non publiés comme contenu)
 
-Noms de clés fixés en v2.8 (renommés en série 9 ; anciens noms : `valide_par_le_professeur`, `a_valider_par_le_professeur`) :
+Noms de clés fixés en v2.8 (renommés en série 9 ; anciens noms : `valide_par_la_relecture`, `a_valider_par_la_relecture`) :
 
 ```
 relecture_explicative:        # ce que la relecture explicative a relu

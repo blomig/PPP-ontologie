@@ -292,7 +292,7 @@ def _motifs():
             if re.match(r'^\[\w+\]$', l.strip()): sec = l.strip()[1:-1]; continue
             if sec in ('personnes', 'agents'): m.append(l.strip())
     m = sorted({x.strip() for x in m if x.strip()}, key=len, reverse=True)
-    return re.compile(r'(?<!\w)(' + '|'.join(re.escape(x) for x in m) + r')(?!\w)', re.I) if m else None
+    return re.compile(r'(?<![A-Za-zÀ-ÿ])(' + '|'.join(re.escape(x) for x in m) + r')(?![A-Za-zÀ-ÿ])', re.I) if m else None   # « _ », « - », « . », chiffres : séparateurs
 NOMS = _motifs()
 RACINE = os.path.normpath(os.path.join(FD, '..'))
 # Fichiers où les noms publics sont autorisés (liste blanche).
