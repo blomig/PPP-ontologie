@@ -10,8 +10,8 @@ Usage :
                                       de chaque référence est dans la liste fermée ROLES_REFERENCES
                                       (PPP_FicheType.md, spec §9.7 P ; série 15) ; code 1 sinon
   python3 fiches/compte.py --noms     seulement le contrôle des noms (tout le dépôt sauf .git, local/ ; liste
-                                      blanche NOMS_AUTORISES, §13 de la spec ; la liste des noms vient de
-                                      PPP_NOMS ou du fichier .noms-prives, absents du dépôt)
+                                      blanche NOMS_AUTORISES, §13 de la spec ; exceptions comptées, non signalées :
+                                      docs/crash-test-0*.md, docs/guide-structure-ontologie.md, maquette/)
   python3 fiches/compte.py --paliers  palier T35 de chaque fiche, avec ses raisons
 
 Règles de lecture (celles de fiches/README.md, « Avancement ») :
@@ -25,7 +25,7 @@ Règles de lecture (celles de fiches/README.md, « Avancement ») :
   comptent les assertions relues en relecture explicative (relecture_explicative.assertions, rien en attente) ; une
   assertion que son auteur a marquée comme discutable (`doute: oui`) ne compte pas pour le palier 1 (tout
   exemplaire reste contestable au sens du §13 : ce n'est pas ce que dit `doute`) ;
-- palier de première publication (spec X17 ; T35, tranché le 2026-10-11).
+- palier de première publication (spec X17 ; T35, tranché le 2026-10-11, QUESTIONS-A-TRANCHER.md).
 Le script lit fiches/*.yaml (et, pour les noms, les fichiers texte du dépôt) ; il n'écrit rien.
 """
 import glob, os, sys
@@ -260,34 +260,29 @@ def ligne_familles(fiches):
 # Série 19 : `perceivedSize` revient dans la liste (quatrième cran relu ; sortie en série 17, a_relire non vide, X17).
 # Série 21 : `hue` sortie de la liste le temps de reconfirmer son seul exemplaire, ppp-a:pilote-0601 (note et source réécrites
 # après le changement d'image du Carré rouge) ; série 22 : 0601 reconfirmée, `hue` revient.
+# Série 44 quater : publication libérale (X17, décision de l'éditeur du projet du 2026-10-14) ; neuf fiches du groupe A entrent
+# (exemplaires validés par la relecture) ; série 44 quinquies : jointSpacing entre (1603 et 1604 relues) ; textureContrast reste hors de la liste.
 FICHES_PUBLIQUES_ATTENDUES = {'hue', 'lightness', 'lightnessContrast', 'perceivedSize', 'perceptualDensity', 'texture',
-                              'textureDirectionality'}
+                              'textureDirectionality', 'distribution', 'hueContrast', 'hueCount', 'hueRange', 'jointLevelOffset',
+                              'jointSpacing', 'perceptualContrast', 'saturation', 'scaleContrast', 'surfaceGloss'}
 
 def publiques(paliers):
     return sorted(paliers.get('publiable', []) + paliers.get('publiable avec exemplaires incomplets', []))
 
-# Noms (spec §13) : aucun prénom ni nom d'agent dans les sources publiées. Les noms publics de l'équipe ne paraissent que
-# dans les fichiers autorisés ci-dessous (citation, licences, équipe, §13 de la spec, pied de page du site).
-# La liste des noms cherchés n'est pas dans ce dépôt : elle est lue dans la variable d'environnement PPP_NOMS (motifs séparés
-# par « | ») ou dans un fichier `.noms-prives` à la racine (un motif par ligne ; ignoré par Git). Sans l'un des deux,
-# le contrôle des noms n'est pas exécuté (il est fait avant chaque publication par l'équipe).
+# Noms (spec §13, v2.7 ; étendu en v2.8, série 9) : le dépôt sera public ; aucun prénom ni nom d'agent, ni dans les
+# sources publiées ni dans les documents internes. Les noms publics de l'équipe ne paraissent que dans les fichiers
+# autorisés ci-dessous (citation, licences, §13 de la spec) et sur la page « Qui sommes-nous ? » (maquette).
 import re
-def _motifs():
-    m = os.environ.get('PPP_NOMS', '').split('|')
-    f = os.path.join(os.path.normpath(os.path.join(FD, '..')), '.noms-prives')
-    if os.path.exists(f):
-        m += [l.strip() for l in open(f, encoding='utf-8') if l.strip() and not l.startswith('#')]
-    m = [x for x in m if x]
-    return re.compile(r'\b(' + '|'.join(m) + r')\b', re.I) if m else None
-NOMS = _motifs()
+NOMS = re.compile(r'\b(Lomig|Unger|Grok|CDP|Professeur|Testeur|Designer|Philosophe|PPP-agent)\b', re.I)
 RACINE = os.path.normpath(os.path.join(FD, '..'))
 # Fichiers où les noms publics sont autorisés (liste blanche).
 NOMS_AUTORISES = {'CITATION.cff', 'LICENSE', 'LICENSE-CONTENT.md', 'CONTRIBUTORS.md', 'docs/comment-citer.md',
-                  'index.html'}                # index.html : pied de page du site (titulaire des droits)
+                  'fiches/compte.py'}          # compte.py : l'outil de contrôle contient la liste des noms cherchés
 NOMS_SECTION_AUTORISEE = {'PPP_Specification.md': '## 13.',            # autorisés dans cette section seulement
-                          'README.md': '## Citer'}                      # forme de citation du README public
-# Exceptions : aucune dans le dépôt public.
-NOMS_EXCEPTIONS = ()
+                          'docs/public/README-accueil.md': '## Citer'}    # forme de citation du README public
+# Exceptions, non corrigées (documents historiques et domaine de la maquette) : comptées, pas signalées.
+NOMS_EXCEPTIONS = (re.compile(r'^docs/crash-test-0\d[^/]*\.md$'), re.compile(r'^docs/guide-structure-ontologie\.md$'),
+                   re.compile(r'^maquette/'))
 NOMS_EXT = re.compile(r'(\.(md|ya?ml|cff|txt|py|html|json)|^LICENSE[^/]*)$')
 NOMS_IGNORES = {'.git', 'local', '__pycache__', 'node_modules'}
 
@@ -312,8 +307,6 @@ def noms_publics(avec_exceptions=False):
     """Liste (fichier, ligne, nom) des noms trouvés hors des fichiers et sections autorisés ;
     avec avec_exceptions, renvoie aussi le compte par fichier d'exception."""
     out, exc = [], {}
-    if NOMS is None:
-        return (out, exc) if avec_exceptions else out
     for rel in sorted(_fichiers_texte()):
         if rel in NOMS_AUTORISES:
             continue
@@ -367,7 +360,7 @@ if __name__ == '__main__':
             ok = False
         if not ok:
             sys.exit(1)
-        print('fiches/README.md : comptes à jour ; appels [[id]] complets ; rôles de références dans la liste fermée ; %d fiches publiques, comme attendu ; %s.' % (len(FICHES_PUBLIQUES_ATTENDUES), 'aucun nom hors des fichiers autorisés' if NOMS is not None else 'contrôle des noms non exécuté (PPP_NOMS absent)'))
+        print('fiches/README.md : comptes à jour ; appels [[id]] complets ; rôles de références dans la liste fermée ; %d fiches publiques, comme attendu ; aucun nom hors des fichiers autorisés.' % len(FICHES_PUBLIQUES_ATTENDUES))
     elif '--noms' in sys.argv:
         r, exc = noms_publics(avec_exceptions=True)
         for f, n, nom in r:

@@ -36,30 +36,34 @@ espace_valeurs:
   regions:
   - cle: weak
     label_fr: faible
-    label_en: weak
+    label_en: slight
     rang: 1
     repere: éléments de taille voisine
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-1501
   - cle: moderate
     label_fr: modéré
     label_en: moderate
     rang: 2
     repere: un élément nettement plus grand que l’autre
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-1503
   - cle: marked
     label_fr: évident
-    label_en: marked
+    label_en: evident
     rang: 3
     repere: un élément plusieurs fois plus grand que l’autre
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-1504
   - cle: strong
     label_fr: maximal
-    label_en: strong
+    label_en: maximal
     rang: 4
     repere: 'un très grand élément contre un très petit, vus ensemble, par exemple un pavé à côté d’une façade entière ; la taille n’a pas de bout d’échelle : on peut toujours trouver plus grand ou plus
       petit ; « sans commune mesure » dit seulement que l’écart est énorme, pas que les deux tailles ne se comparent pas ; la frontière avec « très différentes » n’est pas chiffrée : l’épreuve d’accord
       (E1) dira où les observateurs la placent'
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-1502
 labels_regions_propres:
 - cle: weak
   label_fr: tailles voisines
@@ -162,10 +166,13 @@ modifie_en:
 - 2.3.1
 - '2.5'
 - '2.6'
+- '2.8'
 remplace_par: []
 a_relire: []
+remarque:
+- 'série 29 (2026-10-12, demande de la relecture explicative pour la publication bilingue) : label_en des régions weak, marked, strong : slight, evident, maximal (moderate inchangé ; clés inchangées), comme les labels FR faible, modéré, évident, maximal ; à relire ; validé en série 31 ; labels propres (labels_regions_propres) inchangés'
 relecture_explicative:
-  date: '2026-10-11'
+  date: '2026-10-12'
   champs:
   - question_attentionnelle
   - définition
@@ -182,6 +189,7 @@ relecture_explicative:
   - references.defockert2007.reprend (re-confirmé en relecture explicative, série 9, 2026-10-11)
   - labels_regions_propres (validé en relecture explicative, série 9, 2026-10-11)
   - references (validé en relecture explicative, série 9, 2026-10-11)
+  - espace_valeurs.regions.label_en (validé en relecture explicative, série 31, 2026-10-12)
   a_reconfirmer: []
   reconfirme:
   - champ: contre_exemple
@@ -260,9 +268,8 @@ relecture_explicative:
       (seconde relecture explicative)'
     remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
 manques:
-- exemplaires
-- 'ne s’explique pas sans aide (relecture explicative, série 6) : exemple concret à trouver : une paire d’éléments vus ensemble, publique, pour chaque région, et surtout une pour « sans commune mesure »
-  (par exemple un pavé à côté d’une façade entière)'
+- 'exemplaires (au 2026-10-14) : 1501 tailles voisines, 1503 nettement différentes, 1504 très différentes relus ; 1502 sans commune mesure à relire, non montré'
+- 'ne s’explique pas sans aide (relecture explicative, série 6) : exemple concret : au 2026-10-14, trois régions illustrées par des exemplaires relus (1501, 1503, 1504) ; « sans commune mesure » (1502) à relire'
 bloque_par: []
 note_labels_regions: 'Labels propres au contraste d’échelle (T34 : l’éditeur du projet a retenu l’option B le 2026-10-11, des labels propres ; les labels eux-mêmes sont une proposition de l’équipe, à valider)
   : « tailles voisines / nettement différentes / très différentes / sans commune mesure », champ `labels_regions_propres`. « Sans commune mesure » remplace « démesurées », qui peut porter un jugement (l’excès).

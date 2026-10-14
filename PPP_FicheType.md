@@ -12,6 +12,8 @@ Les champs marqués — ne s’appliquent pas à tous les patrons.
 
 *v2.2 (2026-10-10)* : `dimension_comparee` fixée par un contraste spécialisé, libre pour le général (spec §9.7 B) ; `ce_qui_est_saillant` réservé hors V1 (spec §9.9) ; `facettes` = familles de lecture (spec §9.7 L, X9) ; plus de mode d’assemblage (spec §9.7 A). Aucun nouveau champ.
 
+*v2.8 (2026-10-12, série 34, décisions de l’éditeur du projet)* : champ optionnel `labels_alternatifs_en` (T38 : labels alternatifs anglais, affichés et cherchables sur le site anglais ; pendant de `labels_alternatifs`, en français) ; `conditions_critiques` : `distance` et `angle` déclarables par un type à deux sens quand ils sont critiques à la vue (spec §9.7 H, règle 3, exception ; règle 4 : « sans objet » n’est pas « inconnu »).
+
 *v2.6 (2026-10-11, série 7)* : champ optionnel `labels_regions_propres` d’un contraste spécialisé (spec §9.7 B, T34) ; renvoi de `etat_de_l_art` au format `docs/bibliographie-par-type.md#groupe-…` et appel des références par `[[id]]` (spec §9.7 P) ; usage des images (`usage`, `lien_externe`, spec X16, Q15).
 
 *v2.5 (2026-10-10, série 6)* : « condition de perception » nom canonique, « condition d’observation » en alternatif (spec §9.7 H, C1) ; crédit des images des objets d’exemplaires (`credit`, spec X16, Q15), patron ci-dessous ; « régime de perception » pour une combinaison de facettes.
@@ -47,6 +49,7 @@ label_fr:
 label_en:
 label_court:        # le mot qu’on dit à voix haute, même sens (« densité »)
 labels_alternatifs: # jargon d’atelier, marqué comme tel
+labels_alternatifs_en: # optionnel (v2.8, T38) : labels alternatifs anglais (anciens labels anglais, termes du métier en anglais)
 patron:             P1 | P2 | P3
 sorte:              qualité (P1) | relateur (P2) | régime d’épisode (P3)
 sous_sorte:         gestalt (qualité d’une configuration, P1 seulement) | —
@@ -60,9 +63,9 @@ définition:         (une phrase, sans jugement ; passe le test de neutralité, 
 question_attentionnelle:
 contre_exemple:
 grandeur_physique_homonyme:   # grandeur mesurée portant le même nom, à ne pas confondre (spec §9.7, J)
-modalites:          # sens par lesquels le type est décrit et éprouvé : vision | toucher | audition… ; chaque assertion en déclare une, l’épisode l’ensemble (spec §9.3, §9.7 H) ; ≠ conditions de perception ; identité intermodale : Q13
+modalites:          # sens par lesquels le type est décrit et éprouvé : vision | toucher | audition | odorat (série 43) ; chaque assertion en déclare une, l’épisode l’ensemble (spec §9.3, §9.7 H) ; ≠ conditions de perception ; identité intermodale : Q13
 mode_de_presentation:  image | séquence | échantillon | protocole   # minimum pour montrer les régions
-conditions_critiques: []   # optionnel (v2.3) : facettes du régime de perception dont la région dépend fortement, parmi presentation | lumiere | distance | angle | duree ; une facette critique `unknown` dans l’épisode impose « non tranché » (spec §9.7 H, A5)
+conditions_critiques: []   # optionnel (v2.3) : facettes du régime de perception dont la région dépend fortement, parmi presentation | lumiere | distance | angle | duree | geste | temperature_objet | production | bruit_de_fond | exposition | air (`production` et `bruit_de_fond` pour un type de l’ouïe seule, `exposition` et `air` pour un type de l’odorat seul : spec §9.7 H, règles 9 et 10, série 43, à relire ; `geste` et `temperature_objet` pour un type au toucher seul : spec §9.7 H, règles 3 et 8 ; `distance` et `angle` restent déclarables par un type à deux sens s’ils sont critiques à la vue : règle 3, exception, série 34) ; une facette critique `unknown` dans l’épisode impose « non tranché » (spec §9.7 H, A5)
 
 porteur:            # P1 : exactement 1. P2 : arité ≥ 2, rôles nommés. P3 : l’épisode.
 arité:              # P2
@@ -200,7 +203,7 @@ contre_exemple: >-
                     et au contraste. Un enduit finement granuleux ne montre pas d’éléments distincts : sa texture est
                     fine, mais il ne compte pas pour autant beaucoup d’éléments.
 grandeur_physique_homonyme: masse volumique (densité au sens physique), aucune région ne s’en déduit.
-modalites:          [vision]   # densité tactile : type distinct ou même type, selon Q13
+modalites:          [vision]   # ajouter `toucher` à `modalites` quand la fiche est décrite et éprouvée au toucher ; second type seulement si l’accord ne passe pas d’un sens à l’autre (Q13)
 mode_de_presentation: image
 
 porteur:            un objet d’attention, ou une partie / une zone
@@ -363,7 +366,7 @@ objets:
       source: ""              # ex. Wikimedia Commons, « Own work » ; geograph.org.uk ; musée
       url: ""                 # page de l’image
       url_telechargement: ""  # facultatif (série 20) : adresse du fichier original (Commons : upload.wikimedia.org), lue par l’API
-      fichier: ""             # facultatif (série 20) : nom de stockage de l’image reproduite (identifiant de l’objet sans « app: », .jpg)
+      fichier: ""             # facultatif (série 20) : nom de fichier de l’image reproduite (identifiant de l’objet sans « app: », .jpg), sans chemin (série 23)
       date_verification: ""   # AAAA-MM-JJ
       mention_requise: ""     # mention exigée par la licence (CC BY-SA : titre, auteur, lien, licence et lien vers la licence, modifications) ; « aucune » pour CC0 ou domaine public
       usage: image_reproduite # v2.6 (Q15) : image_reproduite | lien_seulement

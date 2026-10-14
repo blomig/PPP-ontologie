@@ -49,19 +49,23 @@ espace_valeurs:
     label_en: matte
     rang: 1
     repere: aucun reflet, sous aucun angle (un plâtre, un papier buvard)
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-1801
   - cle: satin
     label_fr: satiné
     label_en: satin
     rang: 2
     repere: un reflet doux et étalé, sans bord net (une coquille d’œuf, une peinture satinée)
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-1802
+    - ppp-a:pilote-1803
   - cle: lustrous
     label_fr: brillant
     label_en: lustrous
     rang: 3
     repere: un reflet net de la source de lumière, mais pas d’image (une céramique émaillée, une pomme frottée)
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-1805
     labels_alternatifs:
     - à reflet net
     - lustré
@@ -70,7 +74,8 @@ espace_valeurs:
     label_en: mirror
     rang: 4
     repere: on voit des images nettes de ce qui entoure (un miroir, un métal poli, une eau calme)
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-1804
     labels_alternatifs:
     - comme un miroir
 identite: Netteté des reflets d’une surface, pas la vivacité de sa couleur (saturation), pas sa clarté, pas ce qu’on voit à travers (transparence). La matité est le pôle bas de ce type, pas un autre type.
@@ -240,7 +245,7 @@ enonces_testables:
   epreuve: null
 - id: surfaceGloss-1
   nature: structure
-  enonce: sous une lumière dirigée, une surface de la région `mirror` montre entre reflets et zones voisines un contraste de clarté au moins « marqué » (tendsToProduce)
+  enonce: sous une lumière dirigée, une surface de la région `mirror` montre entre reflets et zones voisines un contraste de clarté au moins « évident » (région `marked` de `ppp:lightnessContrast`) (tendsToProduce)
   statut_epistemique: non éprouvé
   epreuve: null
 cq_couvertes: CQ1, CQ2
@@ -255,10 +260,9 @@ modifie_en:
 remplace_par: []
 source_de_la_fiche: crash tests, partie 1 (spec 2.3, docs/questions-crash-tests.md C4) ; fiche préremplie le 2026-10-10 par l’équipe, champs en langage courant à valider par la relecture explicative
 manques:
-- 'exemplaires (à renseigner : objets publics vérifiés, un épisode par objet, conditions déclarées)'
+- 'exemplaires (au 2026-10-14) : 1801 mat, 1802 satiné, 1805 brillant, 1804 miroir relus ; 1803 satiné à relire, non montré'
 - 'labels de région : « mat / satiné / brillant / miroir », tranchés (T29, décision de l’éditeur du projet, 2026-10-10 ; clés inchangées)'
-- 'ne s’explique pas sans aide (relecture explicative, série 6) : exemple concret à trouver : l’avertissement est lourd et « brillant » est ambigu (couleur vive ou reflet net) ; un objet public par région,
-  et en tête un exemple concret qui montre la différence entre « brillant » (reflet net) et « vif » (saturation)'
+- 'ne s’explique pas sans aide (relecture explicative, série 6) : exemple concret : l’avertissement est lourd et « brillant » est ambigu (couleur vive ou reflet net) ; au 2026-10-14, les quatre régions ont un exemplaire relu ; reste un exemple concret, en tête de fiche, qui montre la différence entre « brillant » (reflet net) et « vif » (saturation)'
 bloque_par: []
 a_relire: []
 relecture_explicative:

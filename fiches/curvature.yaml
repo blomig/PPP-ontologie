@@ -25,8 +25,7 @@ mode_de_presentation: image
 conditions_critiques:
 - angle
 - distance
-note_conditions: 'vu de biais, un cercle paraît une ellipse et une courbe peut paraître droite ; de loin, une courbe large paraît droite (le repère de `slightlyCurved` dit « vu de près ») : angle et distance
-  sont critiques (à la vue ; au toucher : T22)'
+note_conditions: 'à la vue, vu de biais, un cercle paraît une ellipse et une courbe peut paraître droite ; de loin, une courbe large paraît droite (le repère de `slightlyCurved` dit « vu de près ») : l’angle et la distance sont critiques. Au toucher, la distance vaut toujours `contact` et l’angle est sans objet (on suit le bord du bout des doigts, geste `contourFollowing`) : ils restent déclarés critiques, et une assertion tactile n’est pas « non tranché » pour autant (spec §9.7 H, règles 3 et 4, décision de l’éditeur du projet du 2026-10-12, T22, option (b)).'
 porteur: un tronçon de bord, de trait ou de surface, d’un objet ou d’une partie, désigné dans l’assertion (jugement local, note_porteur)
 note_porteur: 'La courbure se juge localement, sur le tronçon que désigne l’assertion, pas sur toute la silhouette : un contour dont la courbure change (un S, un vase au col droit et à la panse ronde) reçoit
   une assertion par tronçon (`#col`, `#panse`), sans moyenne (A5 : une assertion, un porteur). Un tronçon qui paraît à la fois droit et courbe est à découper. Position de travail, révisable par l’éditeur du projet (T30).'
@@ -118,16 +117,22 @@ modifie_en:
 - 2.3.1
 - 2.3.2
 - '2.5'
+- '2.8'
 remplace_par: []
 source_de_la_fiche: crash tests, partie 1 (spec 2.3, docs/questions-crash-tests.md C4) ; fiche préremplie le 2026-10-10 par l’équipe, champs en langage courant à valider par la relecture explicative
 manques:
 - 'exemplaires (à renseigner : objets publics vérifiés, un épisode par objet, conditions déclarées)'
 - 'angles d’une ligne brisée (zigzag) : pas une courbure (contre-exemple) ; stock *ligne* / *orientation*, T14'
 bloque_par:
-- 'T30 (jugement local, distance critique : position de travail)'
+- 'T30 (jugement local, distance critique : position de travail ; distance de nouveau déclarée critique en série 34, T22, option (b))'
 a_relire: []
+remarque:
+- 'série 29 (2026-10-12, décision de l’éditeur du projet sur T22, question 11 de docs/famille-toucher-proposition.md) : conditions_critiques vidé (angle et distance, critiques à la vue seulement, passent en note_conditions) ; note_conditions et bloque_par (T30) réécrits en conséquence ; à relire'
+- 'série 31 (2026-10-12) : conditions_critiques et bloque_par validés par la relecture explicative ; note_conditions corrigée (« en suivant le bord du bout des doigts, geste `contourFollowing` ») ; reste à relire'
+- 'série 32 (2026-10-12) : note_conditions validée par la relecture explicative ; plus rien à relire'
+- 'série 34 (2026-10-12, décision de l’éditeur du projet sur T22, question 13 de docs/famille-toucher-proposition.md, option (b)) : angle et distance de nouveau critiques (retour sur la série 29) ; note_conditions et bloque_par (T30) réécrits en conséquence ; à relire ; validé en série 35'
 relecture_explicative:
-  date: '2026-10-10'
+  date: '2026-10-12'
   champs:
   - question_attentionnelle
   - définition
@@ -142,4 +147,8 @@ relecture_explicative:
   - note_conditions (2.3.2)
   - etat_de_l_art (série 6)
   - references (série 6)
+  - conditions_critiques (validé en relecture explicative, série 31, 2026-10-12)
+  - bloque_par (validé en relecture explicative, série 31, 2026-10-12)
+  - note_conditions (validé en relecture explicative, série 32, 2026-10-12)
+  - conditions_critiques, note_conditions, bloque_par (série 34 ; validés en relecture explicative, série 35, 2026-10-12)
   a_reconfirmer: []

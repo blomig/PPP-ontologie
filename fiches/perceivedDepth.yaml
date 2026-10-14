@@ -2,11 +2,14 @@
 # Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_joint, avertissement_label, note_categories, note_reference, note_dimension, note_conditions, note_echelle, note_porteur, note_base, bloque_par.
 id: ppp:perceivedDepth
 label_fr: étagement en plans
-label_en: perceived depth
+label_en: layering into planes
 labels_alternatifs:
 - profondeur de la scène
+labels_alternatifs_en:
+- perceived depth
+- scene depth
 avertissement_label: Label canonique « étagement en plans » depuis la spec 2.3.2 (position de travail, révisable par l’éditeur du projet, T25) ; label alternatif « profondeur de la scène ». L’ancien label « profondeur
-  perçue » se confondait avec la profondeur dans la matière (`ppp:subsurfaceDepth`), qui est aussi perçue. Label EN `perceived depth` inchangé (à revoir, T25).
+  perçue » se confondait avec la profondeur dans la matière (`ppp:subsurfaceDepth`), qui est aussi perçue. Label EN *layering into planes* depuis la série 29 (ancien label EN *perceived depth*).
 patron: P1
 sorte: qualité
 sous_sorte: —
@@ -137,6 +140,7 @@ modifie_en:
 - 2.3.1
 - 2.3.2
 - '2.5'
+- '2.8'
 remplace_par: []
 source_de_la_fiche: crash tests, partie 1 (spec 2.3, docs/questions-crash-tests.md C4) ; fiche préremplie le 2026-10-10 par l’équipe, champs en langage courant à valider par la relecture explicative
 manques:
@@ -146,8 +150,12 @@ bloque_par:
 - C4 point 4 (une ou deux profondeurs)
 - T25 (strate ; label canonique « étagement en plans »)
 a_relire: []
+remarque:
+- 'série 29 (2026-10-12, demande de la relecture explicative pour la publication bilingue) : label_en « perceived depth » remplacé par « layering into planes » ; ancien label anglais gardé ici, faute de champ pour les labels alternatifs anglais (labels_alternatifs est en français) ; avertissement_label aligné ; à relire ; validé en série 31'
+- 'série 34 (2026-10-12, décision de l’éditeur du projet sur T38) : ancien label anglais « perceived depth » rangé dans le nouveau champ labels_alternatifs_en ; à relire'
+- 'série 35 (2026-10-12) : labels_alternatifs_en validé par la relecture explicative (ancien label anglais) ; plus rien à relire ; suggestion de la relecture : ajouter « scene depth », pendant anglais du label alternatif « profondeur de la scène » (appliquée en série 35)'
 relecture_explicative:
-  date: '2026-10-10'
+  date: '2026-10-12'
   champs:
   - question_attentionnelle
   - définition
@@ -161,4 +169,7 @@ relecture_explicative:
   - relations.note (ppp:subsurfaceDepth) (2.3.2)
   - etat_de_l_art (série 6)
   - references (série 6)
+  - label_en (validé en relecture explicative, série 31, 2026-10-12)
+  - avertissement_label (validé en relecture explicative, série 31, 2026-10-12)
+  - labels_alternatifs_en (validé en relecture explicative, série 35, 2026-10-12)
   a_reconfirmer: []

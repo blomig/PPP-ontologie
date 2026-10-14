@@ -34,7 +34,9 @@ espace_valeurs:
     label_en: clustered
     rang: 1
     repere: les éléments forment des groupes séparés par des espaces laissés libres
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-0904
+    - ppp-a:pilote-0905
   - cle: scattered
     label_fr: aléatoire
     label_en: scattered
@@ -43,13 +45,15 @@ espace_valeurs:
     - sans ordre apparent
     rang: 2
     repere: 'les éléments ne forment ni paquets ni intervalles réguliers : ils paraissent placés au hasard'
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-0903
   - cle: regular
     label_fr: régulière
     label_en: regular
     rang: 3
     repere: les éléments paraissent à égale distance les uns des autres
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-0902
 identite: Répartition des éléments, pas leur nombre (densité), pas la correspondance de part et d’autre d’un axe (symétrie).
 relations:
 - type: confusableWith
@@ -122,7 +126,7 @@ modifie_en:
 - '2.5'
 remplace_par: []
 manques:
-- exemplaires
+- 'exemplaires (au 2026-10-14) : 0904 groupée, 0905 groupée, 0902 régulière relus ; 0903 aléatoire, marqué discutable, non montré ; 0901 retiré'
 - 'label de la région `scattered` : proposition d’adjectif à l’éditeur du projet, non appliquée (T21)'
 bloque_par: []
 a_relire: []

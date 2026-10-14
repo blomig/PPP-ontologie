@@ -73,7 +73,7 @@ objets:
       source: "Wikimedia Commons ; source déclarée : The Museum of Modern Art (n° 817.1935)"
       url: "https://commons.wikimedia.org/wiki/File:Kazimir_Malevich_-_%27Suprematist_Composition-_White_on_White%27,_oil_on_canvas,_1918,_Museum_of_Modern_Art.jpg"
       url_telechargement: "https://upload.wikimedia.org/wikipedia/commons/5/56/Kazimir_Malevich_-_%27Suprematist_Composition-_White_on_White%27%2C_oil_on_canvas%2C_1918%2C_Museum_of_Modern_Art.jpg"   # fichier original, 1626 × 1686 px, 583 ko (API Commons, 2026-10-11)
-      fichier: maquette/images/exemplaires/malevich-white-on-white-1918.jpg   # nom de stockage (recuperer-images.py : identifiant sans « app: ») ; lieu définitif : docs/depot-public.md
+      fichier: malevich-white-on-white-1918.jpg   # nom de fichier de l’image (identifiant sans « app: ») ; série 23 : sans chemin, le site publié intègre l’image à index.html (LICENSE-CONTENT.md)
       date_verification: "2026-10-11"
       mention_requise: "aucune exigée par la licence ; nommer l’auteur de l’œuvre (droit moral, en France) : fait dans la mention d’usage, « Kazimir Malévitch, Composition suprématiste. Blanc sur blanc, 1918, The Museum of Modern Art, New York ; image Wikimedia Commons, domaine public »"
       usage: image_reproduite   # Q15, série 7 : image_reproduite | lien_seulement ; série 20 : était lien_seulement (séries 18 et 19)
@@ -93,7 +93,7 @@ objets:
       source: "Wikimedia Commons ; source déclarée : galerie Tretiakov, Moscou"
       url: "https://commons.wikimedia.org/wiki/File:Kazimir_Malevich,_1915,_Black_Suprematic_Square,_oil_on_linen_canvas,_79.5_x_79.5_cm,_Tretyakov_Gallery,_Moscow.jpg"
       url_telechargement: "https://upload.wikimedia.org/wikipedia/commons/d/dc/Kazimir_Malevich%2C_1915%2C_Black_Suprematic_Square%2C_oil_on_linen_canvas%2C_79.5_x_79.5_cm%2C_Tretyakov_Gallery%2C_Moscow.jpg"   # fichier original, 1718 × 1718 px, 1,45 Mo (API Commons, 2026-10-11)
-      fichier: maquette/images/exemplaires/malevich-black-square-1915.jpg   # nom de stockage (recuperer-images.py : identifiant sans « app: ») ; lieu définitif : docs/depot-public.md
+      fichier: malevich-black-square-1915.jpg   # nom de fichier de l’image (identifiant sans « app: ») ; série 23 : sans chemin, le site publié intègre l’image à index.html (LICENSE-CONTENT.md)
       date_verification: "2026-10-11"
       mention_requise: "aucune exigée par la licence ; nommer l’auteur de l’œuvre (droit moral, en France) : fait dans la mention d’usage, « Kazimir Malévitch, Carré noir, 1915, galerie Tretiakov, Moscou ; image Wikimedia Commons, domaine public »"
       usage: image_reproduite   # Q15, série 7 : image_reproduite | lien_seulement ; série 20 : était lien_seulement (séries 18 et 19)
@@ -152,7 +152,7 @@ objets:
       source: "Wikimedia Commons, « Own work » (modèle Art Photo) ; catégorie Commons « Red square by Malevich (GRM) » (Musée russe)"
       url: "https://commons.wikimedia.org/wiki/File:Kazimir_malevich,_quadrato_rosso_(realismo_del_pittore_di_una_campagnola_in_due_dimensioni),_1915.JPG"
       url_telechargement: "https://upload.wikimedia.org/wikipedia/commons/3/36/Kazimir_malevich%2C_quadrato_rosso_%28realismo_del_pittore_di_una_campagnola_in_due_dimensioni%29%2C_1915.JPG"   # fichier original, 1381 × 1380 px, 234 ko (API Commons, 2026-10-11)
-      fichier: maquette/images/exemplaires/malevich-red-square-1915.jpg   # nom de stockage (recuperer-images.py : identifiant sans « app: ») ; lieu définitif : docs/depot-public.md
+      fichier: malevich-red-square-1915.jpg   # nom de fichier de l’image (identifiant sans « app: ») ; série 23 : sans chemin, le site publié intègre l’image à index.html (LICENSE-CONTENT.md)
       date_verification: "2026-10-11"
       mention_requise: "« Kazimir malevich, quadrato rosso (realismo del pittore di una campagnola in due dimensioni), 1915 », Sailko (version éclaircie par Philafrenzy, 2013, historique du fichier Commons), https://commons.wikimedia.org/wiki/File:Kazimir_malevich,_quadrato_rosso_(realismo_del_pittore_di_una_campagnola_in_due_dimensioni),_1915.JPG, licence CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0) ; nommer aussi l’auteur de l’œuvre (droit moral, en France) : « Kazimir Malévitch, Carré rouge, 1915, Musée russe » ; indiquer toute modification de l’image (recadrage, retouche) ; une adaptation se diffuse sous la même licence"
       usage: image_reproduite   # Q15, série 7 : image_reproduite | lien_seulement ; série 20 : était lien_seulement (séries 18 et 19), image changée
@@ -183,7 +183,7 @@ objets:
     licence_affichee: CC BY-SA 3.0
     auteur_image: ArielGlenn (« Own work »)
     regime: objet conçu (textile)
-    parties: ["#tissu"]
+    parties: ["#tissu", "#cotes", "#creux"]   # série 44 : #cotes et #creux ajoutées (ppp-a:pilote-0303), à relire
     droits: "CC BY-SA 3.0, ArielGlenn, image reproduite"
     credit:   # 2.5 (Q15, X16) : relevé par l’API de Wikimedia Commons (extmetadata) le 2026-10-10
       auteur: "ArielGlenn"
@@ -194,6 +194,480 @@ objets:
       mention_requise: "« Corduroy fabric », ArielGlenn, https://commons.wikimedia.org/wiki/File:Corduroy_fabric.jpg, licence CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0) ; le titre est donné s’il est fourni ; signaler les modifications si l’on diffuse une adaptation, qui se diffuse sous la même licence"
       usage: image_reproduite   # Q15, série 7 : image_reproduite | lien_seulement
       motif_usage: "CC BY-SA 3.0 (API Commons, 2026-10-11 ; attribution requise) : réellement libre, reproduite avec la mention complète"
+
+  # --- série 44 (2026-10-14) : objets neufs pour les fiches du groupe A ; photos citées comme objets (§9.7 H règle 7) ; tout est à relire ---
+  - id: app:commons-pegboard
+    description: "section d’un panneau d’isorel perforé (« pegboard »), trous de 1/4 de pouce (environ 6 mm) espacés de 1 pouce (environ 2,5 cm), vu de biais (description de la page Commons : « Section of a piece of pegboard, a.k.a. perforated hardboard, with 1/4\" holes and 1\" spacing. Viewed at a moderate angle. »), photographié en 2006"
+    page_objet: null   # série 44 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:Pegboard.jpg
+    licence_affichee: "domaine public (balise Commons PD-user : « released into the public domain by its author » ; API : LicenseShortName « Public domain », AttributionRequired false)"
+    auteur_image: "Dave Pape"
+    regime: "objet conçu (panneau perforé)"
+    parties: ["#panneau"]
+    droits: "domaine public (PD-user), Dave Pape, image reproduite"
+    credit:   # série 44 : relevé par l’API de Wikimedia Commons (extmetadata) et la page du fichier le 2026-10-14 ; à relire
+      auteur: "Dave Pape"
+      licence: "domaine public (balise Commons PD-user : « released into the public domain by its author » ; API : LicenseShortName « Public domain », AttributionRequired false)"
+      source: "Wikimedia Commons, « Own work »"
+      url: "https://commons.wikimedia.org/wiki/File:Pegboard.jpg"
+      date_verification: "2026-10-14"
+      mention_requise: "aucune exigée par la licence ; mention d’usage proposée : « Pegboard, Dave Pape (Wikimedia Commons, domaine public (PD-user)) »"
+      usage: image_reproduite
+      motif_usage: "domaine public (PD-user) (API Commons, 2026-10-14) : réellement libre ; crédit d’usage complet"
+  - id: app:commons-wanstead-flats-grove
+    description: "bosquet d’arbres dans la prairie de Wanstead Flats, Londres (description de la page Commons : « One of the few groves of trees in Wanstead Flats, along with the grassland which is typical of the area »), photo panoramique de 2005"
+    page_objet: null   # série 44 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:Clump_of_trees_in_Wanstead_Flats_-_geograph.org.uk_-_112250.jpg
+    licence_affichee: "CC BY-SA 2.0"
+    auteur_image: "Timothy Baldwin"
+    regime: "paysage (arbres en prairie)"
+    parties: ["#arbres"]
+    droits: "CC BY-SA 2.0, Timothy Baldwin, image reproduite"
+    credit:   # série 44 : relevé par l’API de Wikimedia Commons (extmetadata) et la page du fichier le 2026-10-14 ; à relire
+      auteur: "Timothy Baldwin"
+      licence: "CC BY-SA 2.0"
+      source: "Wikimedia Commons, depuis geograph.org.uk (photo n° 112250)"
+      url: "https://commons.wikimedia.org/wiki/File:Clump_of_trees_in_Wanstead_Flats_-_geograph.org.uk_-_112250.jpg"
+      date_verification: "2026-10-14"
+      mention_requise: "« Clump of trees in Wanstead Flats », Timothy Baldwin, https://commons.wikimedia.org/wiki/File:Clump_of_trees_in_Wanstead_Flats_-_geograph.org.uk_-_112250.jpg, licence CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0) ; signaler les modifications si l’on diffuse une adaptation, qui se diffuse sous la même licence"
+      usage: image_reproduite
+      motif_usage: "CC BY-SA 2.0 (API Commons, 2026-10-14 ; attribution requise) : réellement libre, reproduite avec la mention complète (titre, auteur, lien, licence)"
+  - id: app:commons-stars-brandenburg
+    description: "ciel étoilé près de Brandenburg an der Havel (Allemagne), vers minuit, environ 280° de l’horizon (description de la page Commons : « Part (~280°) of the starry sky near Brandenburg an der Havel (Germany), close to midnight »), 2014"
+    page_objet: null   # série 44 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:Stars_01_(MK).jpg
+    licence_affichee: "CC BY-SA 3.0"
+    auteur_image: "Mathias Krumbholz"
+    regime: "scène naturelle (ciel nocturne)"
+    parties: ["#etoiles"]
+    droits: "CC BY-SA 3.0, Mathias Krumbholz, image reproduite"
+    credit:   # série 44 : relevé par l’API de Wikimedia Commons (extmetadata) et la page du fichier le 2026-10-14 ; à relire
+      auteur: "Mathias Krumbholz"
+      licence: "CC BY-SA 3.0"
+      source: "Wikimedia Commons, « Own work »"
+      url: "https://commons.wikimedia.org/wiki/File:Stars_01_(MK).jpg"
+      date_verification: "2026-10-14"
+      mention_requise: "« Stars 01 (MK) », Mathias Krumbholz, https://commons.wikimedia.org/wiki/File:Stars_01_(MK).jpg, licence CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0) ; signaler les modifications si l’on diffuse une adaptation, qui se diffuse sous la même licence"
+      usage: image_reproduite
+      motif_usage: "CC BY-SA 3.0 (API Commons, 2026-10-14 ; attribution requise) : réellement libre, reproduite avec la mention complète (titre, auteur, lien, licence)"
+  - id: app:commons-flag-ukraine
+    description: "drapeau de l’Ukraine, dessin vectoriel (SVG) : deux bandes horizontales égales, bleue en haut, jaune en bas (page Commons « Flag of Ukraine » ; norme DSTU 4512:2006)"
+    page_objet: null   # série 44 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:Flag_of_Ukraine.svg
+    licence_affichee: "domaine public (balise Commons PD-UA-exempt (flags) ; API : LicenseShortName « Public domain », AttributionRequired false) ; insigne officiel : usage restreint dans certains pays, indépendamment du droit d’auteur (bandeau « With insignia » de la page)"
+    auteur_image: "Government of Ukraine"
+    regime: "image citée, dessin (dessin vectoriel d’un drapeau)"
+    parties: ["#bande-bleue", "#bande-jaune"]
+    droits: "domaine public (PD-UA-exempt), Government of Ukraine, image reproduite"
+    credit:   # série 44 : relevé par l’API de Wikimedia Commons (extmetadata) et la page du fichier le 2026-10-14 ; à relire
+      auteur: "Government of Ukraine"
+      licence: "domaine public (balise Commons PD-UA-exempt (flags) ; API : LicenseShortName « Public domain », AttributionRequired false) ; insigne officiel : usage restreint dans certains pays, indépendamment du droit d’auteur (bandeau « With insignia » de la page)"
+      source: "Wikimedia Commons ; source déclarée : DSTU 4512:2006 et article 20 de la Constitution de l’Ukraine"
+      url: "https://commons.wikimedia.org/wiki/File:Flag_of_Ukraine.svg"
+      date_verification: "2026-10-14"
+      mention_requise: "aucune exigée par la licence ; mention d’usage proposée : « Flag of Ukraine, Government of Ukraine (Wikimedia Commons, domaine public (PD-UA-exempt)) »"
+      usage: image_reproduite
+      motif_usage: "domaine public (PD-UA-exempt) (API Commons, 2026-10-14) : réellement libre ; crédit d’usage complet ; insigne officiel signalé (restriction indépendante du droit d’auteur, valable pour tout réutilisateur)"
+  - id: app:commons-flag-bangladesh
+    description: "drapeau du Bangladesh, dessin vectoriel (SVG) : disque rouge (#DA291C) un peu décalé vers la hampe, sur fond vert (#006747) (tableau des couleurs de la page Commons)"
+    page_objet: null   # série 44 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:Flag_of_Bangladesh.svg
+    licence_affichee: "domaine public (balises Commons PD-Bangladesh et PD-shape ; API : LicenseShortName « Public domain », AttributionRequired false) ; insigne officiel : usage restreint dans certains pays, indépendamment du droit d’auteur"
+    auteur_image: "auteur non nommé (page Commons : « See File history below for details ») ; l’auteur du dessin n’est pas nommé (noté en série 44 bis)"
+    regime: "image citée, dessin (dessin vectoriel d’un drapeau)"
+    parties: ["#disque-rouge", "#fond-vert"]
+    droits: "domaine public (PD-Bangladesh), auteur non nommé (page Commons : « See File history below for details »), image reproduite"
+    credit:   # série 44 : relevé par l’API de Wikimedia Commons (extmetadata) et la page du fichier le 2026-10-14 ; à relire
+      auteur: "auteur non nommé (page Commons : « See File history below for details »)"
+      licence: "domaine public (balises Commons PD-Bangladesh et PD-shape ; API : LicenseShortName « Public domain », AttributionRequired false) ; insigne officiel : usage restreint dans certains pays, indépendamment du droit d’auteur"
+      source: "Wikimedia Commons ; source déclarée : dcaa.com.bd et feuille de construction"
+      url: "https://commons.wikimedia.org/wiki/File:Flag_of_Bangladesh.svg"
+      date_verification: "2026-10-14"
+      mention_requise: "aucune exigée par la licence ; mention d’usage proposée : « Flag of Bangladesh, auteur non nommé (page Commons : « See File history below for details ») (Wikimedia Commons, domaine public (PD-Bangladesh)) »"
+      usage: image_reproduite
+      motif_usage: "domaine public (PD-Bangladesh) (API Commons, 2026-10-14) : réellement libre ; crédit d’usage complet ; insigne officiel signalé (restriction indépendante du droit d’auteur, valable pour tout réutilisateur)"
+  - id: app:commons-box-of-eggs
+    description: "huit œufs de poule dans leur boîte, alignés en rangs, avec un peu de condensation (description de la page Commons : « Eggs in their box, aligned in rows and with some condensation on them »), 2020"
+    page_objet: null   # série 44 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:Box_of_eggs.jpg
+    licence_affichee: "CC BY-SA 4.0"
+    auteur_image: "Balise42"
+    regime: "objet usuel (œufs dans leur boîte)"
+    parties: ["#oeuf-a", "#oeuf-b", "#carton"]   # série 44 ter : #carton ajouté (ppp-a:pilote-1404)
+    droits: "CC BY-SA 4.0, Balise42, image reproduite"
+    credit:   # série 44 : relevé par l’API de Wikimedia Commons (extmetadata) et la page du fichier le 2026-10-14 ; à relire
+      auteur: "Balise42"
+      licence: "CC BY-SA 4.0"
+      source: "Wikimedia Commons, « Own work »"
+      url: "https://commons.wikimedia.org/wiki/File:Box_of_eggs.jpg"
+      date_verification: "2026-10-14"
+      mention_requise: "« Box of eggs », Balise42, https://commons.wikimedia.org/wiki/File:Box_of_eggs.jpg, licence CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0) ; signaler les modifications si l’on diffuse une adaptation, qui se diffuse sous la même licence"
+      usage: image_reproduite
+      motif_usage: "CC BY-SA 4.0 (API Commons, 2026-10-14 ; attribution requise) : réellement libre, reproduite avec la mention complète (titre, auteur, lien, licence)"
+  - id: app:commons-general-sherman
+    description: "le séquoia géant « General Sherman », Sequoia National Park (Californie), vu de bas en haut ; au premier plan, une barrière de bois et un panneau bas « GENERAL SHERMAN » (description de la page Commons), 2015 ; repère d’échelle : le panneau et la barrière, à côté d’un tronc de plusieurs mètres de diamètre"
+    page_objet: null   # série 44 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:General_Sherman_Sequoia_Tree.jpg
+    licence_affichee: "CC0 1.0 (API : LicenseShortName « CC0 », AttributionRequired false)"
+    auteur_image: "Daniel G. Rego"
+    regime: "scène naturelle (arbre in situ)"
+    parties: ["#tronc", "#panneau"]
+    droits: "CC0, Daniel G. Rego, image reproduite"
+    credit:   # série 44 : relevé par l’API de Wikimedia Commons (extmetadata) et la page du fichier le 2026-10-14 ; à relire
+      auteur: "Daniel G. Rego"
+      licence: "CC0 1.0 (API : LicenseShortName « CC0 », AttributionRequired false)"
+      source: "Wikimedia Commons, « Own work »"
+      url: "https://commons.wikimedia.org/wiki/File:General_Sherman_Sequoia_Tree.jpg"
+      date_verification: "2026-10-14"
+      mention_requise: "aucune exigée par la licence ; mention d’usage proposée : « General Sherman Sequoia Tree, Daniel G. Rego (Wikimedia Commons, CC0) »"
+      usage: image_reproduite
+      motif_usage: "CC0 (API Commons, 2026-10-14) : réellement libre ; crédit d’usage complet"
+  - id: app:commons-cusco-twelve-angle-stone
+    description: "mur inca de la rue Hatun Rumiyoq, Cusco (Pérou), avec la « pierre aux douze angles », blocs ajustés sans mortier (description de la page Commons), 2013"
+    page_objet: null   # série 44 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:Cusco_Piedra_de_los_doce_angulos.jpg
+    licence_affichee: "CC BY 3.0"
+    auteur_image: "Unukorno"
+    regime: "ouvrage bâti (maçonnerie in situ)"
+    parties: ["#joint-pierre-douze-angles"]
+    droits: "CC BY 3.0, Unukorno, image reproduite"
+    credit:   # série 44 : relevé par l’API de Wikimedia Commons (extmetadata) et la page du fichier le 2026-10-14 ; à relire
+      auteur: "Unukorno"
+      licence: "CC BY 3.0"
+      source: "Wikimedia Commons, « Own work »"
+      url: "https://commons.wikimedia.org/wiki/File:Cusco_Piedra_de_los_doce_angulos.jpg"
+      date_verification: "2026-10-14"
+      mention_requise: "« Cusco Piedra de los doce angulos », Unukorno, https://commons.wikimedia.org/wiki/File:Cusco_Piedra_de_los_doce_angulos.jpg, licence CC BY 3.0 (https://creativecommons.org/licenses/by/3.0)"
+      usage: image_reproduite
+      motif_usage: "CC BY 3.0 (API Commons, 2026-10-14 ; attribution requise) : réellement libre, reproduite avec la mention complète (titre, auteur, lien, licence)"
+  - id: app:commons-waverley-expansion-joint
+    description: "joint de dilatation sud du pont de Trapelo Road, gare de Waverley (Massachusetts), avec deux fentes laissées pour les rails d’un ancien tramway (description de la page Commons), 2022"
+    page_objet: null   # série 44 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:Track_gaps_in_expansion_joint_at_Waverley_station,_March_2022.jpg
+    licence_affichee: "CC BY-SA 4.0"
+    auteur_image: "Pi.1415926535"
+    regime: "ouvrage bâti (chaussée in situ)"
+    parties: ["#joint-de-dilatation"]
+    droits: "CC BY-SA 4.0, Pi.1415926535, image reproduite"
+    credit:   # série 44 : relevé par l’API de Wikimedia Commons (extmetadata) et la page du fichier le 2026-10-14 ; à relire
+      auteur: "Pi.1415926535"
+      licence: "CC BY-SA 4.0"
+      source: "Wikimedia Commons, « Own work »"
+      url: "https://commons.wikimedia.org/wiki/File:Track_gaps_in_expansion_joint_at_Waverley_station,_March_2022.jpg"
+      date_verification: "2026-10-14"
+      mention_requise: "« Track gaps in expansion joint at Waverley station, March 2022 », Pi.1415926535, https://commons.wikimedia.org/wiki/File:Track_gaps_in_expansion_joint_at_Waverley_station,_March_2022.jpg, licence CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0) ; signaler les modifications si l’on diffuse une adaptation, qui se diffuse sous la même licence"
+      usage: image_reproduite
+      motif_usage: "CC BY-SA 4.0 (API Commons, 2026-10-14 ; attribution requise) : réellement libre, reproduite avec la mention complète (titre, auteur, lien, licence)"
+  - id: app:commons-philip-lane-pavement
+    description: "trottoir en dalles de pierre inégales, Philip Lane, Tottenham (Londres), avec une dalle soulevée au bord d’un regard de robinet d’arrêt affaissé (description de la page Commons : « raised slab trip hazard »), 2017"
+    page_objet: null   # série 44 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:A_trip_hazard_on_Philip_Lane,_Haringey,_London_01.jpg
+    licence_affichee: "CC BY-SA 4.0"
+    auteur_image: "Acabashi"
+    regime: "ouvrage bâti (trottoir in situ)"
+    parties: ["#joint-dalle-soulevee"]
+    droits: "CC BY-SA 4.0, Acabashi, image reproduite"
+    credit:   # série 44 : relevé par l’API de Wikimedia Commons (extmetadata) et la page du fichier le 2026-10-14 ; à relire
+      auteur: "Acabashi"
+      licence: "CC BY-SA 4.0"
+      source: "Wikimedia Commons, « Own work »"
+      url: "https://commons.wikimedia.org/wiki/File:A_trip_hazard_on_Philip_Lane,_Haringey,_London_01.jpg"
+      date_verification: "2026-10-14"
+      mention_requise: "« A trip hazard on Philip Lane, Haringey, London 01 », Acabashi, https://commons.wikimedia.org/wiki/File:A_trip_hazard_on_Philip_Lane,_Haringey,_London_01.jpg, licence CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0) ; signaler les modifications si l’on diffuse une adaptation, qui se diffuse sous la même licence"
+      usage: image_reproduite
+      motif_usage: "CC BY-SA 4.0 (API Commons, 2026-10-14 ; attribution requise) : réellement libre, reproduite avec la mention complète (titre, auteur, lien, licence)"
+  - id: app:commons-parquet-ashley
+    description: "parquet posé à Ashley (Northamptonshire), légèrement vieilli et huilé blanc (description de la page Commons), 2019"
+    page_objet: null   # série 44 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:Distressed_parquet_floor.jpg
+    licence_affichee: "CC BY-SA 4.0"
+    auteur_image: "Heritage Wood Floors Ltd"
+    regime: "ouvrage bâti (sol in situ)"
+    parties: ["#joint-lames"]
+    droits: "CC BY-SA 4.0, Heritage Wood Floors Ltd, lien seulement"
+    credit:   # série 44 : relevé par l’API de Wikimedia Commons (extmetadata) et la page du fichier le 2026-10-14 ; à relire
+      auteur: "Heritage Wood Floors Ltd"
+      licence: "CC BY-SA 4.0"
+      source: "Wikimedia Commons, « Own work »"
+      url: "https://commons.wikimedia.org/wiki/File:Distressed_parquet_floor.jpg"
+      date_verification: "2026-10-14"
+      mention_requise: "« Distressed parquet floor », Heritage Wood Floors Ltd, https://commons.wikimedia.org/wiki/File:Distressed_parquet_floor.jpg, licence CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0) ; signaler les modifications si l’on diffuse une adaptation, qui se diffuse sous la même licence"
+      usage: lien_seulement   # série 44 bis : était image_reproduite
+      motif_usage: "série 44 quater (lecture des règles, pas un avis juridique) : CC BY-SA 4.0 sur Commons, que X16 permet de reproduire ; le lien seulement est une prudence hors de la règle générale de X16 : compte d’entreprise, photo promotionnelle, sans autorisation enregistrée (VRT)"
+  - id: app:commons-apollo-plaster-epidaurus
+    description: "statuette d’Apollon citharède, moulage en plâtre, Musée archéologique d’Épidaure, n° 1813 (description de la page Commons), photographiée en 2020"
+    page_objet: null   # série 44 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:Statuette_of_Apollo,_plaster_cast,_AM_of_Epidaurus,_202564.jpg
+    licence_affichee: "CC BY-SA 4.0"
+    auteur_image: "Zde"
+    regime: "objet de musée (moulage)"
+    parties: ["#platre"]
+    droits: "CC BY-SA 4.0, Zde, image reproduite"
+    credit:   # série 44 : relevé par l’API de Wikimedia Commons (extmetadata) et la page du fichier le 2026-10-14 ; à relire
+      auteur: "Zde"
+      licence: "CC BY-SA 4.0"
+      source: "Wikimedia Commons, « Own work »"
+      url: "https://commons.wikimedia.org/wiki/File:Statuette_of_Apollo,_plaster_cast,_AM_of_Epidaurus,_202564.jpg"
+      date_verification: "2026-10-14"
+      mention_requise: "« Statuette of Apollo, plaster cast, AM of Epidaurus, 202564 », Zde, https://commons.wikimedia.org/wiki/File:Statuette_of_Apollo,_plaster_cast,_AM_of_Epidaurus,_202564.jpg, licence CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0) ; signaler les modifications si l’on diffuse une adaptation, qui se diffuse sous la même licence"
+      usage: image_reproduite
+      motif_usage: "CC BY-SA 4.0 (API Commons, 2026-10-14 ; attribution requise) : réellement libre, reproduite avec la mention complète (titre, auteur, lien, licence)"
+  - id: app:commons-satin-wrenches
+    description: "deux clés mixtes à finition satinée (description de la page Commons : « Two satin-finish combination wrenches »), 2014"
+    page_objet: null   # série 44 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:Blackhawk_satin-finish_wrenches.jpg
+    licence_affichee: "CC BY-SA 3.0"
+    auteur_image: "J.C. Fields"
+    regime: "objet conçu (outil)"
+    parties: ["#cle"]
+    droits: "CC BY-SA 3.0, J.C. Fields, image reproduite"
+    credit:   # série 44 : relevé par l’API de Wikimedia Commons (extmetadata) et la page du fichier le 2026-10-14 ; à relire
+      auteur: "J.C. Fields"
+      licence: "CC BY-SA 3.0"
+      source: "Wikimedia Commons, « Own work »"
+      url: "https://commons.wikimedia.org/wiki/File:Blackhawk_satin-finish_wrenches.jpg"
+      date_verification: "2026-10-14"
+      mention_requise: "« Blackhawk satin-finish wrenches », J.C. Fields, https://commons.wikimedia.org/wiki/File:Blackhawk_satin-finish_wrenches.jpg, licence CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0) ; signaler les modifications si l’on diffuse une adaptation, qui se diffuse sous la même licence"
+      usage: image_reproduite   # série 44 ter : revenue à l’image reproduite (en série 44 bis : lien seulement)
+      motif_usage: "série 44 ter (lecture des règles, pas un avis juridique) : image hébergée sur Commons, CC BY-SA 3.0 (API Commons, 2026-10-14) : X16 dit « reproduite » ; le lien seulement n’est prévu que hors Commons ; restriction signalée (décision de l’éditeur du projet sur les restrictions, valable pour tout réutilisateur) : marque lisible sur l’image (« BLACKHAWK »)"
+  - id: app:commons-wastwater-mirror-calm
+    description: "lac de Wast Water (Cumbria) par temps calme, surface « miroir » (description de la page Commons : « Mirror calm on Wastwater », l’après-midi), photo de 1978"
+    page_objet: null   # série 44 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:Mirror_calm_on_Wastwater_-_geograph.org.uk_-_1208252.jpg
+    licence_affichee: "CC BY-SA 2.0"
+    auteur_image: "Derek Voller"
+    regime: "scène naturelle (lac)"
+    parties: ["#surface-du-lac"]
+    droits: "CC BY-SA 2.0, Derek Voller, image reproduite"
+    credit:   # série 44 : relevé par l’API de Wikimedia Commons (extmetadata) et la page du fichier le 2026-10-14 ; à relire
+      auteur: "Derek Voller"
+      licence: "CC BY-SA 2.0"
+      source: "Wikimedia Commons, depuis geograph.org.uk (photo n° 1208252)"
+      url: "https://commons.wikimedia.org/wiki/File:Mirror_calm_on_Wastwater_-_geograph.org.uk_-_1208252.jpg"
+      date_verification: "2026-10-14"
+      mention_requise: "« Mirror calm on Wastwater », Derek Voller, https://commons.wikimedia.org/wiki/File:Mirror_calm_on_Wastwater_-_geograph.org.uk_-_1208252.jpg, licence CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0) ; signaler les modifications si l’on diffuse une adaptation, qui se diffuse sous la même licence"
+      usage: image_reproduite
+      motif_usage: "CC BY-SA 2.0 (API Commons, 2026-10-14 ; attribution requise) : réellement libre, reproduite avec la mention complète (titre, auteur, lien, licence)"
+
+  # --- série 44 bis (2026-10-14) : objets neufs, images regardées par la relecture ; pages vérifiées par l’API Commons ; à relire ---
+  - id: app:commons-pink-agate
+    description: "agate rose du Kentucky trouvée près d’un ruisseau du comté d’Estill, taillée en cabochon et polie sur une face, l’autre partie restée brute (titre de la page Commons « Polished Rough Pink Agate » ; description : « After being cabbed and polished »), 2024"
+    page_objet: null   # série 44 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:Polished_Rough_Pink_Agate_Found_Near_Muddy_Creek_Bed,_Estill_County,_KY.jpg
+    licence_affichee: "CC0 1.0 (API : LicenseShortName « CC0 », AttributionRequired false)"
+    auteur_image: "LadyOfManyTalents"
+    regime: "pierre (échantillon)"
+    parties: ["#face-polie", "#partie-brute"]
+    droits: "CC0, LadyOfManyTalents, image reproduite"
+    credit:   # série 44 : relevé par l’API de Wikimedia Commons (extmetadata) et la page du fichier le 2026-10-14 ; à relire
+      auteur: "LadyOfManyTalents"
+      licence: "CC0 1.0 (API : LicenseShortName « CC0 », AttributionRequired false)"
+      source: "Wikimedia Commons, « Own work »"
+      url: "https://commons.wikimedia.org/wiki/File:Polished_Rough_Pink_Agate_Found_Near_Muddy_Creek_Bed,_Estill_County,_KY.jpg"
+      date_verification: "2026-10-14"
+      mention_requise: "aucune exigée par la licence ; mention d’usage proposée : « Polished Rough Pink Agate Found Near Muddy Creek Bed, Estill County, KY, LadyOfManyTalents (Wikimedia Commons, CC0) »"
+      usage: image_reproduite
+      motif_usage: "CC0 (API Commons, 2026-10-14) : réellement libre ; crédit d’usage complet"
+  - id: app:commons-chartham-tree-islands
+    description: "îlots d’arbres dans un champ de Chartham Downs (Kent), vus depuis Swarling Hill Road (description de la page : « had many little tree islands »), 2010"
+    page_objet: null   # série 44 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:Tree_islands_on_a_field_on_Chartham_Downs_-_geograph.org.uk_-_1805667.jpg
+    licence_affichee: "CC BY-SA 2.0"
+    auteur_image: "David Anstiss"
+    regime: "paysage (arbres en champ)"
+    parties: ["#ilots-d-arbres"]
+    droits: "CC BY-SA 2.0, David Anstiss, image reproduite"
+    credit:   # série 44 : relevé par l’API de Wikimedia Commons (extmetadata) et la page du fichier le 2026-10-14 ; à relire
+      auteur: "David Anstiss"
+      licence: "CC BY-SA 2.0"
+      source: "Wikimedia Commons, depuis geograph.org.uk (photo n° 1805667)"
+      url: "https://commons.wikimedia.org/wiki/File:Tree_islands_on_a_field_on_Chartham_Downs_-_geograph.org.uk_-_1805667.jpg"
+      date_verification: "2026-10-14"
+      mention_requise: "« Tree islands on a field on Chartham Downs », David Anstiss, https://commons.wikimedia.org/wiki/File:Tree_islands_on_a_field_on_Chartham_Downs_-_geograph.org.uk_-_1805667.jpg, licence CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0) ; signaler les modifications si l’on diffuse une adaptation, qui se diffuse sous la même licence"
+      usage: image_reproduite
+      motif_usage: "CC BY-SA 2.0 (API Commons, 2026-10-14 ; attribution requise) : réellement libre, reproduite avec la mention complète (titre, auteur, lien, licence)"
+  - id: app:commons-ertholmene-aerial
+    description: "vue aérienne de Græsholm, Frederiksø et Christiansø, archipel d’Ertholmene près de Bornholm (Danemark) (description de la page Commons) ; les éléments jugés sont les maisons, groupées sur les îles habitées, 2024"
+    page_objet: null   # série 44 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:Ertholmene_aerial_view_of_3_islands_asv2024-07.jpg
+    licence_affichee: "Licence Art Libre (FAL 1.3 ; API : LicenseShortName « FAL », attribution requise)"
+    auteur_image: "A.Savin"
+    regime: "paysage (archipel vu d’avion)"
+    parties: ["#maisons"]
+    droits: "FAL, A.Savin, image reproduite"
+    credit:   # série 44 : relevé par l’API de Wikimedia Commons (extmetadata) et la page du fichier le 2026-10-14 ; à relire
+      auteur: "A.Savin"
+      licence: "Licence Art Libre (FAL 1.3 ; API : LicenseShortName « FAL », attribution requise)"
+      source: "Wikimedia Commons, « Own work »"
+      url: "https://commons.wikimedia.org/wiki/File:Ertholmene_aerial_view_of_3_islands_asv2024-07.jpg"
+      date_verification: "2026-10-14"
+      mention_requise: "« Ertholmene aerial view of 3 islands asv2024-07 », A.Savin, https://commons.wikimedia.org/wiki/File:Ertholmene_aerial_view_of_3_islands_asv2024-07.jpg, Licence Art Libre 1.3 (https://artlibre.org/licence/lal/)"
+      usage: image_reproduite
+      motif_usage: "FAL (API Commons, 2026-10-14 ; attribution requise) : réellement libre, reproduite avec la mention complète (titre, auteur, lien, licence)"
+  - id: app:commons-lemon-and-lime
+    description: "un citron un peu trop mûr et un petit citron vert pas tout à fait mûr (description de la page Commons : « An average sized, slightly overripe lemon and a smallish slightly underripe lime »), 2016"
+    page_objet: null   # série 44 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:Lemon_and_lime.jpg
+    licence_affichee: "CC BY-SA 4.0"
+    auteur_image: "Rhododendrites"
+    regime: "objet naturel (fruits)"
+    parties: ["#citron", "#citron-vert", "#ensemble"]
+    droits: "CC BY-SA 4.0, Rhododendrites, image reproduite"
+    credit:   # série 44 : relevé par l’API de Wikimedia Commons (extmetadata) et la page du fichier le 2026-10-14 ; à relire
+      auteur: "Rhododendrites"
+      licence: "CC BY-SA 4.0"
+      source: "Wikimedia Commons, « Own work »"
+      url: "https://commons.wikimedia.org/wiki/File:Lemon_and_lime.jpg"
+      date_verification: "2026-10-14"
+      mention_requise: "« Lemon and lime », Rhododendrites, https://commons.wikimedia.org/wiki/File:Lemon_and_lime.jpg, licence CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0) ; signaler les modifications si l’on diffuse une adaptation, qui se diffuse sous la même licence"
+      usage: image_reproduite
+      motif_usage: "CC BY-SA 4.0 (API Commons, 2026-10-14 ; attribution requise) : réellement libre, reproduite avec la mention complète (titre, auteur, lien, licence)"
+  - id: app:commons-autumn-leaves-red-yellow
+    description: "feuilles d’automne rouges et jaunes sur un mur de maison à Goshen (New York), vues de près (description de la page Commons) ; image très retouchée : les couleurs ne sont pas celles de la scène"
+    page_objet: null   # série 44 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:Red_and_yellow_autumn_leaf_texture.jpg
+    licence_affichee: "CC BY-SA 4.0"
+    auteur_image: "Daniel Case"
+    regime: "scène naturelle (feuillage)"
+    parties: ["#feuillage"]
+    droits: "CC BY-SA 4.0, Daniel Case, image reproduite"
+    credit:   # série 44 : relevé par l’API de Wikimedia Commons (extmetadata) et la page du fichier le 2026-10-14 ; à relire
+      auteur: "Daniel Case"
+      licence: "CC BY-SA 4.0"
+      source: "Wikimedia Commons, « Own work »"
+      url: "https://commons.wikimedia.org/wiki/File:Red_and_yellow_autumn_leaf_texture.jpg"
+      date_verification: "2026-10-14"
+      mention_requise: "« Red and yellow autumn leaf texture », Daniel Case, https://commons.wikimedia.org/wiki/File:Red_and_yellow_autumn_leaf_texture.jpg, licence CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0) ; signaler les modifications si l’on diffuse une adaptation, qui se diffuse sous la même licence"
+      usage: image_reproduite
+      motif_usage: "CC BY-SA 4.0 (API Commons, 2026-10-14 ; attribution requise) : réellement libre, reproduite avec la mention complète (titre, auteur, lien, licence)"
+  - id: app:commons-denim-fabric-03
+    description: "toile de jean photographiée à plat comme texture, 271 × 271 mm (description de la page Commons : « Denim fabric as texture. Length: 271 mm x 271 mm ») ; image « diff » de Poly Haven (couleur seule)"
+    page_objet: null   # série 44 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:Denim_fabric_03_diff_8k_(Rico_Cilliers_and_colormass_via_Poly_Haven).jpg
+    licence_affichee: "CC0 1.0 (API : LicenseShortName « CC0 », AttributionRequired false)"
+    auteur_image: "Rico Cilliers (traitement) et colormass (photographie), via Poly Haven"
+    regime: "objet conçu (textile)"
+    parties: ["#toile"]
+    droits: "CC0, Rico Cilliers (traitement) et colormass (photographie), via Poly Haven, image reproduite"
+    credit:   # série 44 : relevé par l’API de Wikimedia Commons (extmetadata) et la page du fichier le 2026-10-14 ; à relire
+      auteur: "Rico Cilliers (traitement) et colormass (photographie), via Poly Haven"
+      licence: "CC0 1.0 (API : LicenseShortName « CC0 », AttributionRequired false)"
+      source: "Wikimedia Commons ; source : https://polyhaven.com/a/denim_fabric_03 ; photographie : colormass ; traitement : Rico Cilliers"
+      url: "https://commons.wikimedia.org/wiki/File:Denim_fabric_03_diff_8k_(Rico_Cilliers_and_colormass_via_Poly_Haven).jpg"
+      date_verification: "2026-10-14"
+      mention_requise: "aucune exigée par la licence ; mention d’usage proposée : « Denim fabric 03 diff 8k (Rico Cilliers and colormass via Poly Haven), Rico Cilliers (traitement) et colormass (photographie), via Poly Haven (Wikimedia Commons, CC0) »"
+      usage: image_reproduite
+      motif_usage: "CC0 (API Commons, 2026-10-14) : réellement libre ; crédit d’usage complet"
+  - id: app:commons-matryoshka-7
+    description: "sept poupées gigognes (matriochkas) alignées par taille, Queensland, 2021 (titre de la page Commons) ; poupées numérotées de 1 (la plus grande) à 7 (la plus petite) ; décor peint"
+    page_objet: null   # série 44 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:7_piece_Matryoshka_dolls,_Queensland,_2021.jpg
+    licence_affichee: "CC BY-SA 4.0"
+    auteur_image: "Kgbo"
+    regime: "objet conçu (jouet peint)"
+    parties: ["#poupee-3", "#poupee-5", "#poupee-6", "#poupee-7"]
+    droits: "CC BY-SA 4.0, Kgbo, image reproduite"
+    credit:   # série 44 : relevé par l’API de Wikimedia Commons (extmetadata) et la page du fichier le 2026-10-14 ; à relire
+      auteur: "Kgbo"
+      licence: "CC BY-SA 4.0"
+      source: "Wikimedia Commons, « Own work »"
+      url: "https://commons.wikimedia.org/wiki/File:7_piece_Matryoshka_dolls,_Queensland,_2021.jpg"
+      date_verification: "2026-10-14"
+      mention_requise: "« 7 piece Matryoshka dolls, Queensland, 2021 », Kgbo, https://commons.wikimedia.org/wiki/File:7_piece_Matryoshka_dolls,_Queensland,_2021.jpg, licence CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0) ; signaler les modifications si l’on diffuse une adaptation, qui se diffuse sous la même licence"
+      usage: image_reproduite
+      motif_usage: "CC BY-SA 4.0 (API Commons, 2026-10-14 ; attribution requise) : réellement libre, reproduite avec la mention complète (titre, auteur, lien, licence) ; décor peint visible : image hébergée sur Commons, X16 dit « reproduite » ; la clause du lien seulement ne vise que les licences permissives hors Commons (lecture des règles, pas un avis juridique)"
+
+  # --- série 44 ter (2026-10-14) : objets neufs ; pages vérifiées par l’API Commons ; à relire ---
+  - id: app:commons-finished-dovetail
+    description: "assemblage à queues d’aronde traversantes terminé, sur la presse arrière d’un établi en bouleau fabriqué par l’auteur de la photo (description de la page Commons) ; photo téléversée en 2005"
+    page_objet: null   # série 44 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:Finished_dovetail.jpg
+    licence_affichee: "CC BY-SA 3.0 et GFDL 1.2 ou ultérieure (double licence de la page)"
+    auteur_image: "Emhoo (téléverseur, auteur de l’objet et de la photo)"
+    regime: "objet conçu (assemblage de menuiserie)"
+    parties: ["#joint-queues-d-aronde"]
+    droits: "CC BY-SA 3.0, Emhoo (téléverseur, auteur de l’objet et de la photo), image reproduite"
+    credit:   # série 44 : relevé par l’API de Wikimedia Commons (extmetadata) et la page du fichier le 2026-10-14 ; à relire
+      auteur: "Emhoo (téléverseur, auteur de l’objet et de la photo)"
+      licence: "CC BY-SA 3.0 et GFDL 1.2 ou ultérieure (double licence de la page)"
+      source: "Wikimedia Commons, « made by uploader »"
+      url: "https://commons.wikimedia.org/wiki/File:Finished_dovetail.jpg"
+      date_verification: "2026-10-14"
+      mention_requise: "« Finished dovetail », Emhoo (téléverseur, auteur de l’objet et de la photo), https://commons.wikimedia.org/wiki/File:Finished_dovetail.jpg, licence CC BY-SA 3.0 (https://creativecommons.org/licenses/by-sa/3.0) ; signaler les modifications si l’on diffuse une adaptation, qui se diffuse sous la même licence"
+      usage: image_reproduite
+      motif_usage: "CC BY-SA 3.0 (API Commons, 2026-10-14 ; attribution requise) : réellement libre, reproduite avec la mention complète (titre, auteur, lien, licence)"
+  - id: app:commons-bodbe-pathway
+    description: "détail d’allées, couvent de Bodbe, près de Sighnaghi (Géorgie) (titre de la page Commons), 2015"
+    page_objet: null   # série 44 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:Detail_of_Pathways_-_Bodbe_Convent_-_Outside_Sighnaghi_-_Georgia_(18345111515).jpg
+    licence_affichee: "CC BY-SA 2.0"
+    auteur_image: "Adam Jones"
+    regime: "ouvrage bâti (dallage in situ)"
+    parties: ["#joint-dallage"]
+    droits: "CC BY-SA 2.0, Adam Jones, image reproduite"
+    credit:   # série 44 : relevé par l’API de Wikimedia Commons (extmetadata) et la page du fichier le 2026-10-14 ; à relire
+      auteur: "Adam Jones"
+      licence: "CC BY-SA 2.0"
+      source: "Wikimedia Commons, depuis Flickr"
+      url: "https://commons.wikimedia.org/wiki/File:Detail_of_Pathways_-_Bodbe_Convent_-_Outside_Sighnaghi_-_Georgia_(18345111515).jpg"
+      date_verification: "2026-10-14"
+      mention_requise: "« Detail of Pathways - Bodbe Convent - Outside Sighnaghi - Georgia (18345111515) », Adam Jones, https://commons.wikimedia.org/wiki/File:Detail_of_Pathways_-_Bodbe_Convent_-_Outside_Sighnaghi_-_Georgia_(18345111515).jpg, licence CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0) ; signaler les modifications si l’on diffuse une adaptation, qui se diffuse sous la même licence"
+      usage: image_reproduite
+      motif_usage: "CC BY-SA 2.0 (API Commons, 2026-10-14 ; attribution requise) : réellement libre, reproduite avec la mention complète (titre, auteur, lien, licence)"
+  - id: app:commons-brera-yellow-green-leaves
+    description: "feuilles jaunes et vertes, jardin botanique de la Pinacothèque de Brera, Milan (titre de la page Commons), 2025 ; seules les feuilles du premier plan sont jugées"
+    page_objet: null   # série 44 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:Pinacoteca_di_Brera,_Milan,,botanical_garden,_yellow-and-green_leaves.jpg
+    licence_affichee: "CC0 1.0 (API : LicenseShortName « CC0 »)"
+    auteur_image: "Gerda Arendt"
+    regime: "scène naturelle (feuillage)"
+    parties: ["#feuilles-premier-plan"]
+    droits: "CC0, Gerda Arendt, image reproduite"
+    credit:   # série 44 : relevé par l’API de Wikimedia Commons (extmetadata) et la page du fichier le 2026-10-14 ; à relire
+      auteur: "Gerda Arendt"
+      licence: "CC0 1.0 (API : LicenseShortName « CC0 »)"
+      source: "Wikimedia Commons, « Own work »"
+      url: "https://commons.wikimedia.org/wiki/File:Pinacoteca_di_Brera,_Milan,,botanical_garden,_yellow-and-green_leaves.jpg"
+      date_verification: "2026-10-14"
+      mention_requise: "aucune exigée par la licence ; mention d’usage proposée : « Pinacoteca di Brera, Milan,,botanical garden, yellow-and-green leaves, Gerda Arendt (Wikimedia Commons, CC0) »"
+      usage: image_reproduite
+      motif_usage: "CC0 (API Commons, 2026-10-14) : réellement libre ; crédit d’usage complet"
+  - id: app:commons-grey-concrete-wall
+    description: "mur de béton gris clair un peu sale, photographié puis transformé en texture raccordable avec le logiciel GIMP (description de la page Commons), 2020 ; image retouchée"
+    page_objet: null   # série 44 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:Light_grey_slightly_dirty_concrete_seamless_building_wall_texture.jpg
+    licence_affichee: "CC0 1.0 (API : LicenseShortName « CC0 »)"
+    auteur_image: "Sisters.seamless"
+    regime: "ouvrage bâti (mur, texture)"
+    parties: ["#mur"]
+    droits: "CC0, Sisters.seamless, image reproduite"
+    credit:   # série 44 : relevé par l’API de Wikimedia Commons (extmetadata) et la page du fichier le 2026-10-14 ; à relire
+      auteur: "Sisters.seamless"
+      licence: "CC0 1.0 (API : LicenseShortName « CC0 »)"
+      source: "Wikimedia Commons, « Own work »"
+      url: "https://commons.wikimedia.org/wiki/File:Light_grey_slightly_dirty_concrete_seamless_building_wall_texture.jpg"
+      date_verification: "2026-10-14"
+      mention_requise: "aucune exigée par la licence ; mention d’usage proposée : « Light grey slightly dirty concrete seamless building wall texture, Sisters.seamless (Wikimedia Commons, CC0) »"
+      usage: image_reproduite
+      motif_usage: "CC0 (API Commons, 2026-10-14) : réellement libre ; crédit d’usage complet"
+  - id: app:commons-apple-white-background
+    description: "une pomme sur fond blanc (page Commons « Apple With White Background »), 2014"
+    page_objet: null   # série 44 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:Apple_With_White_Background.jpg
+    licence_affichee: "CC BY-SA 4.0"
+    auteur_image: "Karl Thomas Moore"
+    regime: "objet naturel (fruit)"
+    parties: ["#peau"]
+    droits: "CC BY-SA 4.0, Karl Thomas Moore, image reproduite"
+    credit:   # série 44 : relevé par l’API de Wikimedia Commons (extmetadata) et la page du fichier le 2026-10-14 ; à relire
+      auteur: "Karl Thomas Moore"
+      licence: "CC BY-SA 4.0"
+      source: "Wikimedia Commons, « Own work »"
+      url: "https://commons.wikimedia.org/wiki/File:Apple_With_White_Background.jpg"
+      date_verification: "2026-10-14"
+      mention_requise: "« Apple With White Background », Karl Thomas Moore, https://commons.wikimedia.org/wiki/File:Apple_With_White_Background.jpg, licence CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0) ; signaler les modifications si l’on diffuse une adaptation, qui se diffuse sous la même licence"
+      usage: image_reproduite
+      motif_usage: "CC BY-SA 4.0 (API Commons, 2026-10-14 ; attribution requise) : réellement libre, reproduite avec la mention complète (titre, auteur, lien, licence)"
 
 episodes:
   - id: ppp-e:pilote-01
@@ -260,6 +734,198 @@ episodes:
     usesModality: [vision]
     observer: l’équipe (un seul observateur ; aucun accord déclaré)
     date: "2026-10-10"
+
+  - id: ppp-e:pilote-10
+    target: app:commons-pegboard
+    observedUnder: {presentation: screen, lumiere: unknown, distance: near, angle: oblique, duree: exam}
+    note_distance: "estimée d’après la taille déclarée (trous espacés d’environ 2,5 cm, « section » d’un panneau) : prise de vue rapprochée, à moins d’un mètre ; angle d’après la description (« viewed at a moderate angle »)"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+  - id: ppp-e:pilote-11
+    target: app:commons-wanstead-flats-grove
+    observedUnder: {presentation: screen, lumiere: unknown, distance: far, angle: unknown, duree: exam}
+    note_distance: "estimée d’après la scène : un bosquet vu à travers une prairie, à bien plus de 5 m"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+  - id: ppp-e:pilote-12
+    target: app:commons-stars-brandenburg
+    observedUnder: {presentation: screen, lumiere: unknown, distance: far, angle: unknown, duree: exam}
+    note_distance: "ciel nocturne : distance de la scène sans commune mesure avec 5 m"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+  - id: ppp-e:pilote-13
+    target: app:commons-flag-ukraine
+    observedUnder: {presentation: screen, lumiere: unknown, distance: unknown, angle: unknown, duree: exam}
+    note_distance: "dessin vectoriel, sans prise de vue ; aucun type à distance critique n’y est jugé"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+  - id: ppp-e:pilote-14
+    target: app:commons-flag-bangladesh
+    observedUnder: {presentation: screen, lumiere: unknown, distance: unknown, angle: unknown, duree: exam}
+    note_distance: "dessin vectoriel, sans prise de vue ; aucun type à distance critique n’y est jugé"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+  - id: ppp-e:pilote-15
+    target: app:commons-box-of-eggs
+    observedUnder: {presentation: screen, lumiere: unknown, distance: near, angle: unknown, duree: exam}
+    note_distance: "estimée d’après le sujet : une boîte d’œufs, objet qu’on tient en main"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+  - id: ppp-e:pilote-16
+    target: app:commons-general-sherman
+    observedUnder: {presentation: screen, lumiere: unknown, distance: far, angle: unknown, duree: exam}
+    note_distance: "estimée d’après la scène : un arbre géant vu depuis le chemin, derrière une barrière"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+
+  - id: ppp-e:pilote-17
+    target: app:met-2011-201
+    observedUnder: {presentation: screen, lumiere: diffuse, distance: near, angle: frontal, duree: exam}
+    note_distance: "lumière, angle et distance estimés sur l’image (série 44 bis, 2026-10-14 ; spec §9.7 H, règle 7) ; second épisode du bol, pour la brillance (l’épisode 01 garde lumière et angle inconnus)"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+  - id: ppp-e:pilote-18
+    target: app:commons-cusco-twelve-angle-stone
+    observedUnder: {presentation: screen, lumiere: diffuse, distance: room, angle: frontal, duree: exam}
+    note_distance: "lumière, angle et distance estimés sur l’image (série 44 bis, 2026-10-14 ; spec §9.7 H, règle 7)"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+  - id: ppp-e:pilote-19
+    target: app:commons-waverley-expansion-joint
+    observedUnder: {presentation: screen, lumiere: directional, distance: room, angle: oblique, duree: exam}
+    note_distance: "lumière, angle et distance estimés sur l’image (série 44 bis, 2026-10-14 ; spec §9.7 H, règle 7) ; angle « oblique bas »"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+  - id: ppp-e:pilote-20
+    target: app:commons-parquet-ashley
+    observedUnder: {presentation: screen, lumiere: directional, distance: room, angle: oblique, duree: exam}
+    note_distance: "lumière, angle et distance estimés sur l’image (série 44 bis, 2026-10-14 ; spec §9.7 H, règle 7) ; distance « near ou room », room retenu (un sol vu debout)"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+  - id: ppp-e:pilote-21
+    target: app:commons-philip-lane-pavement
+    observedUnder: {presentation: screen, lumiere: directional, distance: near, angle: oblique, duree: exam}
+    note_distance: "lumière, angle et distance estimés sur l’image (série 44 bis, 2026-10-14 ; spec §9.7 H, règle 7)"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+  - id: ppp-e:pilote-22
+    target: app:commons-apollo-plaster-epidaurus
+    observedUnder: {presentation: screen, lumiere: directional, distance: near, angle: frontal, duree: exam}
+    note_distance: "lumière, angle et distance estimés sur l’image (série 44 bis, 2026-10-14 ; spec §9.7 H, règle 7)"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+  - id: ppp-e:pilote-23
+    target: app:commons-satin-wrenches
+    observedUnder: {presentation: screen, lumiere: diffuse, distance: near, angle: frontal, duree: exam}
+    note_distance: "lumière, angle et distance estimés sur l’image (série 44 bis, 2026-10-14 ; spec §9.7 H, règle 7)"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+  - id: ppp-e:pilote-24
+    target: app:commons-wastwater-mirror-calm
+    observedUnder: {presentation: screen, lumiere: diffuse, distance: far, angle: grazing, duree: exam}
+    note_distance: "lumière, angle et distance estimés sur l’image (série 44 bis, 2026-10-14 ; spec §9.7 H, règle 7)"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+  - id: ppp-e:pilote-25
+    target: app:commons-pink-agate
+    observedUnder: {presentation: screen, lumiere: unknown, distance: near, angle: unknown, duree: exam}
+    note_distance: "estimée sur l’image (règle 7) : cadre d’environ 4 à 5 cm, doigts flous aux bords : near"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+  - id: ppp-e:pilote-26
+    target: app:commons-chartham-tree-islands
+    observedUnder: {presentation: screen, lumiere: unknown, distance: far, angle: unknown, duree: exam}
+    note_distance: "estimée d’après la scène : un champ vu depuis la route, à bien plus de 5 m"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+  - id: ppp-e:pilote-27
+    target: app:commons-ertholmene-aerial
+    observedUnder: {presentation: screen, lumiere: unknown, distance: far, angle: unknown, duree: exam}
+    note_distance: "vue aérienne"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+  - id: ppp-e:pilote-28
+    target: app:commons-lemon-and-lime
+    observedUnder: {presentation: screen, lumiere: diffuse, distance: near, angle: frontal, duree: exam}
+    note_distance: "lumière, angle et distance estimés sur l’image (règle 7) : le citron occupe près de la moitié de la largeur, soit un cadre d’environ 18 à 20 cm ; vue de côté à hauteur des fruits ; ombres douces"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+  - id: ppp-e:pilote-29
+    target: app:commons-autumn-leaves-red-yellow
+    observedUnder: {presentation: screen, lumiere: unknown, distance: near, angle: unknown, duree: exam}
+    note_distance: "estimée d’après la description : feuilles vues de près (« closeup »)"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+  - id: ppp-e:pilote-30
+    target: app:commons-denim-fabric-03
+    observedUnder: {presentation: screen, lumiere: unknown, distance: near, angle: frontal, duree: exam}
+    note_distance: "estimée d’après la taille déclarée (271 mm de côté), toile photographiée à plat"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+  - id: ppp-e:pilote-31
+    target: app:commons-matryoshka-7
+    observedUnder: {presentation: screen, lumiere: unknown, distance: near, angle: oblique, duree: exam}
+    note_distance: "angle et distance estimés sur l’image (règle 7) : la grande poupée occupe environ les deux tiers de la hauteur, soit un cadre d’environ 30 à 35 cm ; appareil à hauteur de table, rangée fuyante ; lumière inconnue"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+
+  - id: ppp-e:pilote-32
+    target: app:commons-finished-dovetail
+    observedUnder: {presentation: screen, lumiere: diffuse, distance: near, angle: oblique, duree: exam}
+    note_distance: "lumière, angle et distance estimés sur l’image (série 44 ter, 2026-10-14 ; spec §9.7 H, règle 7)"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+  - id: ppp-e:pilote-33
+    target: app:commons-bodbe-pathway
+    observedUnder: {presentation: screen, lumiere: diffuse, distance: room, angle: oblique, duree: exam}
+    note_distance: "lumière, angle et distance estimés sur l’image (série 44 ter, 2026-10-14 ; spec §9.7 H, règle 7) ; vue plongeante"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+  - id: ppp-e:pilote-34
+    target: app:commons-brera-yellow-green-leaves
+    observedUnder: {presentation: screen, lumiere: diffuse, distance: near, angle: oblique, duree: exam}
+    note_distance: "lumière, angle et distance estimés sur l’image (règle 7) : environ cinq folioles de 15 cm sur la largeur, soit un cadre d’environ 60 à 80 cm ; vue plongeante d’une personne debout ; sans ombre dure ; feuilles du premier plan seulement"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+  - id: ppp-e:pilote-35
+    target: app:commons-grey-concrete-wall
+    observedUnder: {presentation: screen, lumiere: unknown, distance: unknown, angle: unknown, duree: exam}
+    note_distance: "photographié puis retouché ; distance inconnue"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+  - id: ppp-e:pilote-36
+    target: app:commons-apple-white-background
+    observedUnder: {presentation: screen, lumiere: directional, distance: near, angle: frontal, duree: exam}
+    note_distance: "lumière, angle et distance estimés sur l’image (série 44 ter, 2026-10-14 ; spec §9.7 H, règle 7)"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
 
 assertions:
   - id: ppp-a:pilote-0101
@@ -392,7 +1058,7 @@ assertions:
     source: photo (conditions de prise de vue inconnues ; taille de l'échantillon déclarée sur la page)
     ontologyVersion: "2.5"   # région changée en 2.5 (T24, de coarse à medium) ; était 2.3.2
     doute: oui
-    note: sur toute la face, des bosses et des creux de quelques millimètres se voient un à un quand on regarde l'image en grand, chacun avec son ombre ; vus d'un peu plus loin, ils se fondent en un grain serré et régulier où aucun ne fait saillie seul ; la page dit la face bouchardée (frappée au marteau à pointes) ; personne ne l'a touchée ; région « moyenne » (medium) retenue, en suivant la relecture explicative (décision de l’éditeur du projet, 2026-10-10, T24) ; si l'on juge que ces reliefs font saillie un à un, on peut aussi défendre « grosse » (coarse) ; remplace 0103 (T24)
+    note: sur toute la face, des bosses et des creux de quelques millimètres se voient un à un quand on regarde l'image en grand, chacun avec son ombre ; vus d'un peu plus loin, ils se fondent en un grain serré et régulier où aucun ne fait saillie seul ; la page dit la face bouchardée (frappée au marteau à pointes) ; personne ne l'a touchée ; région « moyenne » (medium) retenue (T24, 2026-10-10) ; si l'on juge que ces reliefs font saillie un à un, on peut aussi défendre « grosse » (coarse) ; remplace 0103 (T24)
   - id: ppp-a:pilote-0501
     about: app:commons-corduroy-fabric#tissu
     assertedType: ppp:textureDirectionality
@@ -459,12 +1125,516 @@ assertions:
     note_distance: "la distance déclarée (`far`, épisode 05) est celle de la scène montrée, estimée (une voûte vue du sol), pas celle de l'écran ; c'est elle que la taille perçue tient pour critique (spec §9.7 H règle 7, T22)"
     note: on juge la mosaïque dans la scène montrée (la voûte arrondie au fond d'une église), pas la taille de son image (note_reference de la fiche) ; elle dépasse nettement une personne ; la photo, très cadrée, ne montre aucun repère humain, ce sont les bords courbes de la voûte et le fait de savoir qu'il s'agit d'une église qui font juger la taille
 
+  # --- série 44 (2026-10-14) : exemplaires neufs des fiches du groupe A, tous à relire ---
+  - id: ppp-a:pilote-0901
+    about: app:commons-wanstead-flats-grove#arbres
+    assertedType: ppp:distribution
+    cardStatus: applicable et pertinent
+    inRegion: ppp:distribution/clustered
+    inEpisode: ppp-e:pilote-11
+    withdrawn: oui   # retiré le 2026-10-14 (série 44 bis, la relecture) : la photo montre un seul massif, pas des groupes, et une antenne ; remplacé par ppp-a:pilote-0904 et 0905 ; id non réutilisé
+    modality: vision
+    source: photo citée (Wikimedia Commons ; conditions de prise de vue inconnues)
+    ontologyVersion: "2.8"
+    doute: oui
+    note: "les arbres se serrent en un bosquet, entouré de prairie vide ; la photo ne montre peut-être qu’un seul groupe (la page parle de « quelques bosquets »), à vérifier sur l’image"
+  - id: ppp-a:pilote-0902
+    about: app:commons-pegboard#panneau
+    assertedType: ppp:distribution
+    cardStatus: applicable et pertinent
+    inRegion: ppp:distribution/regular
+    inEpisode: ppp-e:pilote-10
+    modality: vision
+    source: photo citée (Wikimedia Commons ; conditions de prise de vue inconnues)
+    ontologyVersion: "2.8"
+    note: "les trous du panneau sont percés à intervalles égaux (environ 2,5 cm), en lignes et en colonnes"
+  - id: ppp-a:pilote-0903
+    about: app:commons-stars-brandenburg#etoiles
+    assertedType: ppp:distribution
+    cardStatus: applicable et pertinent
+    inRegion: ppp:distribution/scattered
+    inEpisode: ppp-e:pilote-12
+    modality: vision
+    source: photo citée (Wikimedia Commons ; conditions de prise de vue inconnues)
+    ontologyVersion: "2.8"
+    doute: oui
+    note: "les étoiles visibles paraissent semées sans ordre ; la bande de la Voie lactée, plus dense, peut faire lire des groupes"
+  - id: ppp-a:pilote-1001
+    about:
+      - {relatum: app:met-2011-201#decor-incise, role: terme}
+      - {relatum: app:met-2011-201#fond-glacure, role: terme}
+    assertedType: ppp:hueContrast
+    cardStatus: applicable et pertinent
+    inRegion: ppp:hueContrast/weak
+    inEpisode: ppp-e:pilote-01
+    modality: vision
+    source: photo citée (Wikimedia Commons ; conditions de prise de vue inconnues)
+    ontologyVersion: "2.8"
+    note: "le décor et le fond sont deux nuances du même bleu-vert pâle de la glaçure : même teinte, zéro pas sur le cercle"
+  - id: ppp-a:pilote-1002
+    about:
+      - {relatum: app:commons-flag-ukraine#bande-bleue, role: terme}
+      - {relatum: app:commons-flag-ukraine#bande-jaune, role: terme}
+    assertedType: ppp:hueContrast
+    cardStatus: applicable et pertinent
+    inRegion: ppp:hueContrast/marked
+    inEpisode: ppp-e:pilote-13
+    modality: vision
+    source: photo citée (Wikimedia Commons ; conditions de prise de vue inconnues)
+    ontologyVersion: "2.8"
+    note: "un bleu et un jaune : deux pas sur le cercle des six teintes (par le vert) ; sur un cercle qui les donne pour opposés, on dirait « maximal » (note_cercle de la fiche)"
+  - id: ppp-a:pilote-1003
+    about:
+      - {relatum: app:commons-flag-bangladesh#disque-rouge, role: terme}
+      - {relatum: app:commons-flag-bangladesh#fond-vert, role: terme}
+    assertedType: ppp:hueContrast
+    cardStatus: applicable et pertinent
+    inRegion: ppp:hueContrast/strong
+    inEpisode: ppp-e:pilote-14
+    modality: vision
+    source: photo citée (Wikimedia Commons ; conditions de prise de vue inconnues)
+    ontologyVersion: "2.8"
+    note: "un rouge et un vert : trois pas sur le cercle des six teintes, teintes opposées"
+  - id: ppp-a:pilote-1101
+    about: app:commons-pegboard#panneau
+    assertedType: ppp:hueCount
+    cardStatus: applicable et pertinent
+    inRegion: ppp:hueCount/oneHue
+    inEpisode: ppp-e:pilote-10
+    modality: vision
+    source: photo citée (Wikimedia Commons ; conditions de prise de vue inconnues)
+    ontologyVersion: "2.8"
+    note: "le panneau est d’une seule teinte, un brun (compté comme un orange) ; les trous sont des ombres, pas des teintes ; la couleur du panneau n’est pas dite par la page Commons"
+  - id: ppp-a:pilote-1102
+    about: app:san-vitale-ravenne#mosaique-photographiee
+    assertedType: ppp:hueCount
+    cardStatus: applicable et pertinent
+    inRegion: ppp:hueCount/fourOrMoreHues
+    inEpisode: ppp-e:pilote-05
+    modality: vision
+    source: photo citée (Wikimedia Commons ; conditions de prise de vue inconnues)
+    ontologyVersion: "2.8"
+    note: "or (jaune), verts du pré, bleus, rouges des vêtements et du décor : au moins quatre teintes"
+  - id: ppp-a:pilote-1201
+    about: app:commons-pegboard#panneau
+    assertedType: ppp:hueRange
+    cardStatus: applicable et pertinent
+    inRegion: ppp:hueRange/singleHue
+    inEpisode: ppp-e:pilote-10
+    modality: vision
+    source: photo citée (Wikimedia Commons ; conditions de prise de vue inconnues)
+    ontologyVersion: "2.8"
+    note: "une seule teinte (un brun, compté comme un orange)"
+  - id: ppp-a:pilote-1202
+    about: app:san-vitale-ravenne#mosaique-photographiee
+    assertedType: ppp:hueRange
+    cardStatus: applicable et pertinent
+    inRegion: ppp:hueRange/distantHues
+    inEpisode: ppp-e:pilote-05
+    modality: vision
+    source: photo citée (Wikimedia Commons ; conditions de prise de vue inconnues)
+    ontologyVersion: "2.8"
+    note: "des teintes éloignées sur le cercle : l’or (jaune) et les bleus, les rouges et les verts"
+  - id: ppp-a:pilote-1301
+    about: app:malevich-black-square-1915#carre-noir
+    assertedType: ppp:saturation
+    cardStatus: applicable et pertinent
+    inRegion: ppp:saturation/low   # série 44 bis : était neutral (la relecture : le carré tire vers le bleu marine, environ RVB 44,44,64)
+    inEpisode: ppp-e:pilote-04
+    modality: vision
+    source: photo citée (Wikimedia Commons ; conditions de prise de vue inconnues)
+    ontologyVersion: "2.8"
+    note: "un noir qui tire vers le bleu marine sur la reproduction : une couleur grisée, pas un gris ; le bord blanc n’a pas été pris comme exemple de « neutre », parce qu’il est jauni"
+    a_relire: oui   # série 44 : exemplaire neuf, à relire (relecture_explicative.a_relire)
+  - id: ppp-a:pilote-1302
+    about: app:commons-flag-bangladesh#disque-rouge
+    assertedType: ppp:saturation
+    cardStatus: applicable et pertinent
+    inRegion: ppp:saturation/high
+    inEpisode: ppp-e:pilote-14
+    modality: vision
+    source: photo citée (Wikimedia Commons ; conditions de prise de vue inconnues)
+    ontologyVersion: "2.8"
+    doute: oui
+    note: "le rouge du disque (#DA291C sur la page Commons) paraît aussi vif qu’un rouge peut l’être à cette clarté sur un écran ; « le plus vif possible » reste un jugement : on peut défendre « moyenne »"
+  - id: ppp-a:pilote-1401
+    about:
+      - {relatum: app:commons-box-of-eggs#oeuf-a, role: terme}
+      - {relatum: app:commons-box-of-eggs#oeuf-b, role: terme}
+    assertedType: ppp:textureContrast
+    cardStatus: applicable et pertinent
+    inRegion: ppp:textureContrast/weak
+    inEpisode: ppp-e:pilote-15
+    modality: vision
+    source: photo citée (Wikimedia Commons ; conditions de prise de vue inconnues)
+    ontologyVersion: "2.8"
+    note: "#oeuf-a et #oeuf-b : deux œufs de la même rangée de devant ; deux coquilles d’œuf également lisses à cette distance : même texture ; les gouttes de condensation font un léger relief, le même sur les deux œufs : le contraste reste faible"
+  - id: ppp-a:pilote-1501
+    about:
+      - {relatum: app:commons-box-of-eggs#oeuf-a, role: terme}
+      - {relatum: app:commons-box-of-eggs#oeuf-b, role: terme}
+    assertedType: ppp:scaleContrast
+    cardStatus: applicable et pertinent
+    inRegion: ppp:scaleContrast/weak
+    inEpisode: ppp-e:pilote-15
+    modality: vision
+    source: photo citée (Wikimedia Commons ; conditions de prise de vue inconnues)
+    ontologyVersion: "2.8"
+    note: "#oeuf-a et #oeuf-b : deux œufs de la même rangée de devant, de taille voisine"
+  - id: ppp-a:pilote-1502
+    about:
+      - {relatum: app:commons-general-sherman#tronc, role: terme}
+      - {relatum: app:commons-general-sherman#panneau, role: terme}
+    assertedType: ppp:scaleContrast
+    cardStatus: applicable et pertinent
+    inRegion: ppp:scaleContrast/strong
+    inEpisode: ppp-e:pilote-16
+    modality: vision
+    source: photo citée (Wikimedia Commons ; conditions de prise de vue inconnues)
+    ontologyVersion: "2.8"
+    note: "dimension comparée : la hauteur ; un panneau bas, à hauteur de genou, au pied d’un arbre de plus de 80 m dont la photo montre la hauteur entière : sans commune mesure ; sur le diamètre du tronc (plusieurs mètres contre la largeur du panneau), l’écart ne serait que « très différentes » (marked) ; la barrière et le panneau donnent le repère d’échelle"
+    a_relire: oui   # série 44 : exemplaire neuf, à relire (relecture_explicative.a_relire)
+  - id: ppp-a:pilote-0302
+    about:
+      - {relatum: app:malevich-white-on-white-1918#carre, role: terme}
+      - {relatum: app:malevich-white-on-white-1918#fond, role: terme}
+    assertedType: ppp:perceptualContrast
+    comparedDimension: ppp:lightness
+    cardStatus: applicable et pertinent
+    inRegion: ppp:perceptualContrast/weak
+    inEpisode: ppp-e:pilote-03
+    modality: vision
+    source: photo citée (Wikimedia Commons ; conditions de prise de vue inconnues)
+    ontologyVersion: "2.8"
+    note: "dimension comparée : la clarté ; le carré se distingue à peine du fond (même constat que le contraste de clarté, ppp-a:pilote-0401)"
+  - id: ppp-a:pilote-0303
+    about:
+      - {relatum: app:commons-corduroy-fabric#cotes, role: terme}
+      - {relatum: app:commons-corduroy-fabric#creux, role: terme}
+    assertedType: ppp:perceptualContrast
+    comparedDimension: ppp:lightness
+    cardStatus: applicable et pertinent
+    inRegion: ppp:perceptualContrast/moderate
+    inEpisode: ppp-e:pilote-08
+    modality: vision
+    source: photo citée (Wikimedia Commons ; conditions de prise de vue inconnues)
+    ontologyVersion: "2.8"
+    doute: oui
+    note: "dimension comparée : la clarté ; #creux = les sillons entre les côtes, pas les ombres des plis ; les côtes, éclairées, et les sillons, dans l’ombre, se distinguent de près, sans que l’écart s’impose"
+  - id: ppp-a:pilote-0304
+    about:
+      - {relatum: app:commons-flag-ukraine#bande-bleue, role: terme}
+      - {relatum: app:commons-flag-ukraine#bande-jaune, role: terme}
+    assertedType: ppp:perceptualContrast
+    comparedDimension: ppp:hue
+    cardStatus: applicable et pertinent
+    inRegion: ppp:perceptualContrast/marked
+    inEpisode: ppp-e:pilote-13
+    modality: vision
+    source: photo citée (Wikimedia Commons ; conditions de prise de vue inconnues)
+    ontologyVersion: "2.8"
+    note: "dimension comparée : la teinte ; l’écart se voit d’emblée, sans être aux extrémités de la dimension (même constat que le contraste de teinte, ppp-a:pilote-1002)"
+  - id: ppp-a:pilote-0305
+    about:
+      - {relatum: app:malevich-black-square-1915#carre-noir, role: terme}
+      - {relatum: app:malevich-black-square-1915#bord-blanc, role: terme}
+    assertedType: ppp:perceptualContrast
+    comparedDimension: ppp:lightness
+    cardStatus: applicable et pertinent
+    inRegion: ppp:perceptualContrast/strong
+    inEpisode: ppp-e:pilote-04
+    modality: vision
+    source: photo citée (Wikimedia Commons ; conditions de prise de vue inconnues)
+    ontologyVersion: "2.8"
+    note: "dimension comparée : la clarté ; noir contre blanc, aux deux bouts de la dimension (même constat que le contraste de clarté, ppp-a:pilote-0403)"
+
+  # --- série 44 bis (2026-10-14) : exemplaires neufs et candidats devenus assertions, à relire ---
+  - id: ppp-a:pilote-0904
+    about: app:commons-chartham-tree-islands#ilots-d-arbres
+    assertedType: ppp:distribution
+    cardStatus: applicable et pertinent
+    inRegion: ppp:distribution/clustered
+    inEpisode: ppp-e:pilote-26
+    modality: vision
+    source: photo citée (Wikimedia Commons ; conditions de prise de vue inconnues)
+    ontologyVersion: "2.8"
+    note: "les arbres forment deux îlots, séparés par le champ laissé libre"
+  - id: ppp-a:pilote-0905
+    about: app:commons-ertholmene-aerial#maisons
+    assertedType: ppp:distribution
+    cardStatus: applicable et pertinent
+    inRegion: ppp:distribution/clustered
+    inEpisode: ppp-e:pilote-27
+    modality: vision
+    source: photo citée (Wikimedia Commons ; conditions de prise de vue inconnues)
+    ontologyVersion: "2.8"
+    note: "les éléments sont les maisons : elles se groupent sur les îles habitées, séparées par la mer"
+  - id: ppp-a:pilote-1004
+    about:
+      - {relatum: app:commons-lemon-and-lime#citron, role: terme}
+      - {relatum: app:commons-lemon-and-lime#citron-vert, role: terme}
+    assertedType: ppp:hueContrast
+    cardStatus: applicable et pertinent
+    inRegion: ppp:hueContrast/moderate
+    inEpisode: ppp-e:pilote-28
+    modality: vision
+    source: photo citée (Wikimedia Commons ; conditions de prise de vue inconnues)
+    ontologyVersion: "2.8"
+    note: "un jaune et un vert : teintes voisines, à un pas sur le cercle des six teintes"
+  - id: ppp-a:pilote-1103
+    about: app:commons-lemon-and-lime#ensemble
+    assertedType: ppp:hueCount
+    cardStatus: applicable et pertinent
+    inRegion: ppp:hueCount/twoOrThreeHues
+    inEpisode: ppp-e:pilote-28
+    modality: vision
+    source: photo citée (Wikimedia Commons ; conditions de prise de vue inconnues)
+    ontologyVersion: "2.8"
+    note: "deux teintes : le jaune du citron et le vert du citron vert"
+  - id: ppp-a:pilote-1104
+    about: app:commons-autumn-leaves-red-yellow#feuillage
+    assertedType: ppp:hueCount
+    cardStatus: applicable et pertinent
+    inRegion: ppp:hueCount/twoOrThreeHues
+    inEpisode: ppp-e:pilote-29
+    modality: vision
+    source: photo citée (Wikimedia Commons ; conditions de prise de vue inconnues)
+    ontologyVersion: "2.8"
+    doute: oui
+    note: "une feuille vert-jaune, à droite, ferait peut-être une quatrième teinte ; des rouges et des jaunes (et peut-être des orangés) : deux ou trois teintes ; image très retouchée, le jugement porte sur l’image telle qu’elle est publiée"
+    a_relire: oui   # série 44 : exemplaire neuf, à relire (relecture_explicative.a_relire)
+  - id: ppp-a:pilote-1303
+    about: app:met-2011-201#glacure-interieure
+    assertedType: ppp:saturation
+    cardStatus: applicable et pertinent
+    inRegion: ppp:saturation/low
+    inEpisode: ppp-e:pilote-01
+    modality: vision
+    source: photo citée (Wikimedia Commons ; conditions de prise de vue inconnues)
+    ontologyVersion: "2.8"
+    doute: oui
+    note: "le bol peut aussi se lire comme blanc ; un bleu-vert pâle et grisé de la glaçure qingbai : une couleur grisée"
+    a_relire: oui   # série 44 : exemplaire neuf, à relire (relecture_explicative.a_relire)
+  - id: ppp-a:pilote-1304
+    about: app:commons-denim-fabric-03#toile
+    assertedType: ppp:saturation
+    cardStatus: applicable et pertinent
+    inRegion: ppp:saturation/medium
+    inEpisode: ppp-e:pilote-30
+    modality: vision
+    source: photo citée (Wikimedia Commons ; conditions de prise de vue inconnues)
+    ontologyVersion: "2.8"
+    note: "le bleu de la toile de jean : une couleur franche mais non vive"
+  - id: ppp-a:pilote-1402
+    about:
+      - {relatum: app:shap-wells-granite#dalle-polie, role: terme}
+      - {relatum: app:shap-wells-granite#dalle-brute, role: terme}
+    assertedType: ppp:textureContrast
+    cardStatus: applicable et pertinent
+    inRegion: ppp:textureContrast/strong
+    inEpisode: ppp-e:pilote-02
+    withdrawn: oui   # retirée en série 44 ter : réserve T24 maintenue ; id non réutilisé
+    modality: vision
+    source: photo citée (Wikimedia Commons ; conditions de prise de vue inconnues)
+    ontologyVersion: "2.8"
+    note: "lisse contre grosse ; reprend le constat de ppp-a:pilote-0301, retiré en 2.3.2 (T24) parce que la page Commons parle de « slabs of polished local granite » : la réserve de T24 réserve T24 maintenue"
+  - id: ppp-a:pilote-1403
+    about:
+      - {relatum: app:commons-pink-agate#face-polie, role: terme}
+      - {relatum: app:commons-pink-agate#partie-brute, role: terme}
+    assertedType: ppp:textureContrast
+    cardStatus: applicable et pertinent
+    inRegion: ppp:textureContrast/marked
+    inEpisode: ppp-e:pilote-25
+    modality: vision
+    source: photo citée (Wikimedia Commons ; conditions de prise de vue inconnues)
+    ontologyVersion: "2.8"
+    note: "#face-polie = la base orangée translucide, lisse ; #partie-brute = la bande cristalline blanche, à grain visible ; « brute » vient de ce que montre l’image, la page ne disant que « cabbed and polished »"
+    a_relire: oui   # série 44 : exemplaire neuf, à relire (relecture_explicative.a_relire)
+  - id: ppp-a:pilote-1503
+    about:
+      - {relatum: app:commons-matryoshka-7#poupee-5, role: terme}
+      - {relatum: app:commons-matryoshka-7#poupee-6, role: terme}
+    assertedType: ppp:scaleContrast
+    cardStatus: applicable et pertinent
+    inRegion: ppp:scaleContrast/moderate
+    inEpisode: ppp-e:pilote-31
+    modality: vision
+    source: photo citée (Wikimedia Commons ; conditions de prise de vue inconnues)
+    ontologyVersion: "2.8"
+    note: "poupées 5 et 6 : l’une nettement plus grande que l’autre"
+  - id: ppp-a:pilote-1504
+    about:
+      - {relatum: app:commons-matryoshka-7#poupee-3, role: terme}
+      - {relatum: app:commons-matryoshka-7#poupee-7, role: terme}
+    assertedType: ppp:scaleContrast
+    cardStatus: applicable et pertinent
+    inRegion: ppp:scaleContrast/marked
+    inEpisode: ppp-e:pilote-31
+    modality: vision
+    source: photo citée (Wikimedia Commons ; conditions de prise de vue inconnues)
+    ontologyVersion: "2.8"
+    note: "poupées 3 et 7 : l’une plusieurs fois plus grande que l’autre"
+  - id: ppp-a:pilote-1601
+    about: app:commons-cusco-twelve-angle-stone#joint-pierre-douze-angles
+    assertedType: ppp:jointSpacing
+    cardStatus: applicable et pertinent
+    inRegion: ppp:jointSpacing/narrow
+    inEpisode: ppp-e:pilote-18
+    modality: vision
+    source: photo citée (Wikimedia Commons)
+    ontologyVersion: "2.8"
+    note: "le joint se lit comme un filet : l’ombre des arêtes biseautées des blocs"
+    a_relire: oui   # série 44 : exemplaire neuf, à relire (relecture_explicative.a_relire)
+  - id: ppp-a:pilote-1602
+    about: app:commons-waverley-expansion-joint#joint-de-dilatation
+    assertedType: ppp:jointSpacing
+    cardStatus: applicable et pertinent
+    inRegion: ppp:jointSpacing/narrow
+    inEpisode: ppp-e:pilote-19
+    modality: vision
+    source: photo citée (Wikimedia Commons)
+    ontologyVersion: "2.8"
+    note: "la bande sombre est la plaque métallique du joint ; le joint lui-même est le zigzag clair, mince ; les fentes des rails du tramway sont les deux interruptions de la plaque"
+    a_relire: oui   # série 44 : exemplaire neuf, à relire (relecture_explicative.a_relire)
+  - id: ppp-a:pilote-1701
+    about: app:commons-parquet-ashley#joint-lames
+    assertedType: ppp:jointLevelOffset
+    cardStatus: applicable et pertinent
+    inRegion: ppp:jointLevelOffset/flush
+    inEpisode: ppp-e:pilote-20
+    modality: vision
+    source: photo citée (Wikimedia Commons)
+    ontologyVersion: "2.8"
+    note: "les lames paraissent dans le même plan"
+    a_relire: oui   # série 44 : exemplaire neuf, à relire (relecture_explicative.a_relire)
+  - id: ppp-a:pilote-1702
+    about: app:commons-philip-lane-pavement#joint-dalle-soulevee
+    assertedType: ppp:jointLevelOffset
+    cardStatus: applicable et pertinent
+    inRegion: ppp:jointLevelOffset/marked
+    inEpisode: ppp-e:pilote-21
+    modality: vision
+    source: photo citée (Wikimedia Commons)
+    ontologyVersion: "2.8"
+    note: "la dalle soulevée dépasse nettement sa voisine, visible à distance d’examen"
+  - id: ppp-a:pilote-1801
+    about: app:commons-apollo-plaster-epidaurus#platre
+    assertedType: ppp:surfaceGloss
+    cardStatus: applicable et pertinent
+    inRegion: ppp:surfaceGloss/matte
+    inEpisode: ppp-e:pilote-22
+    modality: vision
+    source: photo citée (Wikimedia Commons)
+    ontologyVersion: "2.8"
+    note: "le plâtre ne montre aucun reflet"
+  - id: ppp-a:pilote-1802
+    about: app:commons-satin-wrenches#cle
+    assertedType: ppp:surfaceGloss
+    cardStatus: applicable et pertinent
+    inRegion: ppp:surfaceGloss/satin
+    inEpisode: ppp-e:pilote-23
+    modality: vision
+    source: photo citée (Wikimedia Commons)
+    ontologyVersion: "2.8"
+    note: "un reflet doux et étalé, sans bord net ; image reproduite ; restriction : marque lisible sur l’image"
+  - id: ppp-a:pilote-1803
+    about: app:met-2011-201#glacure-interieure
+    assertedType: ppp:surfaceGloss
+    cardStatus: applicable et pertinent
+    inRegion: ppp:surfaceGloss/satin
+    inEpisode: ppp-e:pilote-17
+    modality: vision
+    source: photo citée (Wikimedia Commons)
+    ontologyVersion: "2.8"
+    note: "sous cette lumière diffuse, la glaçure ne montre aucun reflet net, seulement un reflet doux ; la région peut changer sous une lumière dirigée"
+    a_relire: oui   # série 44 : exemplaire neuf, à relire (relecture_explicative.a_relire)
+  - id: ppp-a:pilote-1804
+    about: app:commons-wastwater-mirror-calm#surface-du-lac
+    assertedType: ppp:surfaceGloss
+    cardStatus: applicable et pertinent
+    inRegion: ppp:surfaceGloss/mirror
+    inEpisode: ppp-e:pilote-24
+    modality: vision
+    source: photo citée (Wikimedia Commons)
+    ontologyVersion: "2.8"
+    note: "le lac calme reflète le paysage en images nettes"
+
+  # --- série 44 ter (2026-10-14) : exemplaires neufs, à relire ---
+  - id: ppp-a:pilote-1603
+    about: app:commons-finished-dovetail#joint-queues-d-aronde
+    assertedType: ppp:jointSpacing
+    cardStatus: applicable et pertinent
+    inRegion: ppp:jointSpacing/closed
+    inEpisode: ppp-e:pilote-32
+    modality: vision
+    source: photo citée (Wikimedia Commons ; conditions de prise de vue inconnues)
+    ontologyVersion: "2.8"
+    note: "les queues et les tenons s’ajustent sans écart perceptible"
+  - id: ppp-a:pilote-1604
+    about: app:commons-bodbe-pathway#joint-dallage
+    assertedType: ppp:jointSpacing
+    cardStatus: applicable et pertinent
+    inRegion: ppp:jointSpacing/wide
+    inEpisode: ppp-e:pilote-33
+    modality: vision
+    source: photo citée (Wikimedia Commons ; conditions de prise de vue inconnues)
+    ontologyVersion: "2.8"
+    note: "#joint-dallage = les joints de l’allée du premier plan ; entre ces dalles, l’écart se lit comme une bande"
+  - id: ppp-a:pilote-1203
+    about: app:commons-brera-yellow-green-leaves#feuilles-premier-plan
+    assertedType: ppp:hueRange
+    cardStatus: applicable et pertinent
+    inRegion: ppp:hueRange/neighbouringHues
+    inEpisode: ppp-e:pilote-34
+    modality: vision
+    source: photo citée (Wikimedia Commons ; conditions de prise de vue inconnues)
+    ontologyVersion: "2.8"
+    note: "feuilles du premier plan seulement : des jaunes et des verts, teintes voisines, à un pas sur le cercle des six teintes"
+  - id: ppp-a:pilote-1305
+    about: app:commons-grey-concrete-wall#mur
+    assertedType: ppp:saturation
+    cardStatus: applicable et pertinent
+    inRegion: ppp:saturation/neutral
+    inEpisode: ppp-e:pilote-35
+    modality: vision
+    source: photo citée (Wikimedia Commons ; conditions de prise de vue inconnues)
+    ontologyVersion: "2.8"
+    note: "un gris clair, sans couleur perceptible ; image retouchée avec GIMP"
+  - id: ppp-a:pilote-1404
+    about:
+      - {relatum: app:commons-box-of-eggs#oeuf-a, role: terme}
+      - {relatum: app:commons-box-of-eggs#carton, role: terme}
+    assertedType: ppp:textureContrast
+    cardStatus: applicable et pertinent
+    inRegion: ppp:textureContrast/moderate
+    inEpisode: ppp-e:pilote-15
+    modality: vision
+    source: photo citée (Wikimedia Commons ; conditions de prise de vue inconnues)
+    ontologyVersion: "2.8"
+    doute: oui
+    note: "#carton = le cône de carton moulé du premier plan ; la coquille, lisse, contre ce carton, à texture fine ; la lecture « moyenne » est possible"
+    a_relire: oui   # série 44 : exemplaire neuf, à relire (relecture_explicative.a_relire)
+  - id: ppp-a:pilote-1805
+    about: app:commons-apple-white-background#peau
+    assertedType: ppp:surfaceGloss
+    cardStatus: applicable et pertinent
+    inRegion: ppp:surfaceGloss/lustrous
+    inEpisode: ppp-e:pilote-36
+    modality: vision
+    source: photo citée (Wikimedia Commons ; conditions de prise de vue inconnues)
+    ontologyVersion: "2.8"
+    note: "un reflet net de la source de lumière sur la peau, sans image"
+
 # Champs communs à toutes les assertions ci-dessus (sauf valeur propre à une assertion, comme withdrawn de 0201) :
 commun:
   assertedBy: l’équipe (proposition, à valider par la relecture explicative)
   ontologyVersion: "2.2.1"
   epistemicStatus: non éprouvé
   withdrawn: non
+
+# Candidats (série 44) : tous devenus assertions en série 44 bis (ppp-a:pilote-1601 à 1804), après estimation des facettes critiques sur l’image par la relecture ; section vidée.
+candidats: []
 
 # Vérifié en partie 7 (série 6) : seule 0105 a été modifiée en 2.5 ou après (région). 0401, 0402 (weak, « faible ») et 0403 (strong, « fort » devenu « maximal », T3) gardent leur clé, leur rang et leur repère : seul le mot-label a changé, l'assertion est inchangée, ontologyVersion non modifié ; la note de 0403 (« l'écart reste aux extrémités de la clarté ») s'accorde avec « maximal ».
 # Relecture explicative : formulation des notes et choix des exemplaires (pas la pertinence, pas les droits).
@@ -473,13 +1643,32 @@ relecture_explicative:
   champs: [note, note_distance, description]
   assertions: [ppp-a:pilote-0101, ppp-a:pilote-0102, ppp-a:pilote-0202, ppp-a:pilote-0203,
                ppp-a:pilote-0401, ppp-a:pilote-0402, ppp-a:pilote-0403,
-               ppp-a:pilote-0104, ppp-a:pilote-0105, ppp-a:pilote-0501, ppp-a:pilote-0503, ppp-a:pilote-0601, ppp-a:pilote-0701, ppp-a:pilote-0801]
+               ppp-a:pilote-0104, ppp-a:pilote-0105, ppp-a:pilote-0501, ppp-a:pilote-0503, ppp-a:pilote-0601, ppp-a:pilote-0701, ppp-a:pilote-0801,
+               ppp-a:pilote-0902, ppp-a:pilote-0302, ppp-a:pilote-0304, ppp-a:pilote-0305, ppp-a:pilote-1001, ppp-a:pilote-1002, ppp-a:pilote-1003, ppp-a:pilote-1101, ppp-a:pilote-1102, ppp-a:pilote-1201, ppp-a:pilote-1202, ppp-a:pilote-1401, ppp-a:pilote-1501, ppp-a:pilote-1702, ppp-a:pilote-1801, ppp-a:pilote-1804, ppp-a:pilote-0904, ppp-a:pilote-0905, ppp-a:pilote-1004, ppp-a:pilote-1103, ppp-a:pilote-1304, ppp-a:pilote-1503, ppp-a:pilote-1504, ppp-a:pilote-1203, ppp-a:pilote-1305, ppp-a:pilote-1805, ppp-a:pilote-1802, ppp-a:pilote-1603, ppp-a:pilote-1604]   # séries 44 à 44 quater : validées par la relecture, reportées en série 44 quater (publication libérale, X17)
   retirees_relues: [ppp-a:pilote-0103, ppp-a:pilote-0301, ppp-a:pilote-0502]   # retrait (T24) approuvé par la relecture explicative, 2026-10-10
   objets: [app:commons-beuchaer-gestockt]
   note_distance: [ppp-e:pilote-01, ppp-e:pilote-02, ppp-e:pilote-03, ppp-e:pilote-04, ppp-e:pilote-05, ppp-e:pilote-06, ppp-e:pilote-07, ppp-e:pilote-08, ppp-e:pilote-09, ppp-a:pilote-0801]
-  a_relire: []   # clé a_valider avant la série 12 ; v2.3.2 relu le 2026-10-10 : 0105, 0503, objet bouchardé, notes de distance (0102, 0105 et deux note_distance précisées)
+  confirmees_serie44:   # série 44 bis (2026-10-14) : confirmées par la relecture ; série 44 quater (publication libérale, X17, décision de l’éditeur
+                        # du projet du 2026-10-14) : reportées dans `assertions` ci-dessus, sauf 0303, 0903 et 1302, dont le `doute` n’est pas levé ;
+                        # 1603 et 1604 (jointSpacing) : reportées en série 44 quinquies (jointSpacing publique)
+    [ppp-a:pilote-0902, ppp-a:pilote-0903, ppp-a:pilote-0303, ppp-a:pilote-0302, ppp-a:pilote-0304, ppp-a:pilote-0305, ppp-a:pilote-1001, ppp-a:pilote-1002, ppp-a:pilote-1003, ppp-a:pilote-1101, ppp-a:pilote-1102, ppp-a:pilote-1201, ppp-a:pilote-1202, ppp-a:pilote-1302, ppp-a:pilote-1401, ppp-a:pilote-1501, ppp-a:pilote-1702, ppp-a:pilote-1801, ppp-a:pilote-1804]
+  a_relire:   # série 44 bis (2026-10-14) : à relire
+    - {assertion: ppp-a:pilote-1104, raison: "série 44 bis"}
+    - {assertion: ppp-a:pilote-1303, raison: "série 44 bis"}
+    - {assertion: ppp-a:pilote-1403, raison: "série 44 bis"}
+    - {assertion: ppp-a:pilote-1601, raison: "série 44 bis"}
+    - {assertion: ppp-a:pilote-1602, raison: "série 44 bis"}
+    - {assertion: ppp-a:pilote-1701, raison: "série 44 bis"}
+    - {assertion: ppp-a:pilote-1803, raison: "série 44 bis"}
+    - {assertion: ppp-a:pilote-1301, raison: "série 44 bis"}
+    - {assertion: ppp-a:pilote-1502, raison: "série 44 bis"}
+    - {objets: "série 44 ter : 5 objets neufs (épisodes ppp-e:pilote-32 à 36), partie #carton de la boîte d’œufs", raison: "série 44 ter"}
+    - {assertion: ppp-a:pilote-1404, raison: "série 44 ter"}
+    - {objets: "série 44 bis : 7 objets neufs, épisodes ppp-e:pilote-17 à 31", raison: "crédits relevés par l’API Commons ; usage des clés et du parquet passé en lien seulement"}
+  # avant la série 44 : a_relire vide ; clé a_valider avant la série 12 ; v2.3.2 relu le 2026-10-10 : 0105, 0503, objet bouchardé, notes de distance (0102, 0105 et deux note_distance précisées)
   a_reconfirmer: []
   reconfirme:
+    - {assertion: ppp-a:pilote-0105, champ: note, date: "2026-10-14", avant: "« retenue, en suivant la relecture explicative (décision de l’éditeur du projet, 2026-10-10, T24) »", apres: "« retenue (T24, 2026-10-10) »", raison: "série 44 quinquies : formulation seule ; région et assertion inchangées"}
     - {assertion: ppp-a:pilote-0202, champ: note, date: "2026-10-10", avant: "« très chargé »", apres: "« très dense »", remarque: "note précisée par la relecture explicative (figures, pré semé de fleurs)"}
     - {objet: app:shap-wells-granite, champ: description, date: "2026-10-10", avant: "description antérieure, qui nommait l'hôtel (historique git)", apres: "description actuelle (« l'une polie, l'autre d'aspect brut sur la photo »)", raison: "nom de l'hôtel remplacé par le lieu ; « brute » nuancé parce que la page Commons dit les dalles polies", remarque: "reconfirmée par la relecture explicative après examen de la photo : « d'aspect brut sur la photo » est exact (contour cassé, teinte plus pâle), sans preuve de relief (T24)"}
     - {assertion: ppp-a:pilote-0103, champ: note, date: "2026-10-10", avant: "(pas de note)", apres: "note ajoutée par la relecture explicative (T24)", remarque: "ce que montre la photo, et ce qu'elle ne permet pas de dire"}

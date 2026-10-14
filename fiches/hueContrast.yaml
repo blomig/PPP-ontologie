@@ -37,28 +37,32 @@ espace_valeurs:
   regions:
   - cle: weak
     label_fr: faible
-    label_en: weak
+    label_en: slight
     rang: 1
     repere: deux nuances d’une même teinte, à zéro pas sur le cercle des six teintes (deux bleus)
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-1001
   - cle: moderate
     label_fr: modéré
     label_en: moderate
     rang: 2
     repere: deux teintes voisines, à un pas sur le cercle des six teintes (un bleu et un vert)
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-1004
   - cle: marked
     label_fr: évident
-    label_en: marked
+    label_en: evident
     rang: 3
     repere: deux teintes à deux pas sur le cercle des six teintes, une teinte entre elles (un bleu et un jaune, un rouge et un jaune)
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-1002
   - cle: strong
     label_fr: maximal
-    label_en: strong
+    label_en: maximal
     rang: 4
     repere: deux teintes opposées, à trois pas sur le cercle des six teintes (un bleu et un orange, un rouge et un vert, un jaune et un violet)
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-1003
 note_cercle: 'Cercle retenu (décision de l’éditeur du projet, 2026-10-11, T6) : les six teintes de la fiche teinte en cercle, dans l’ordre rouge, orange, jaune, vert, bleu, violet, puis de nouveau rouge.
   L’écart se compte en pas sur ce cercle, par le plus court des deux chemins : zéro pas (même teinte), faible ; un pas (teintes voisines), modéré ; deux pas, évident ; trois pas (teintes opposées), maximal.
   On n’est jamais à plus de trois pas. Le bleu est à deux pas du jaune (par le vert) et à trois pas de l’orange dans les deux sens (par le vert et le jaune, ou par le violet et le rouge) : c’est l’orange
@@ -143,10 +147,13 @@ modifie_en:
 - 2.3.1
 - '2.5'
 - '2.6'
+- '2.8'
 remplace_par: []
 a_relire: []
+remarque:
+- 'série 29 (2026-10-12, demande de la relecture explicative pour la publication bilingue) : label_en des régions weak, marked, strong : slight, evident, maximal (moderate inchangé ; clés inchangées), comme les labels FR faible, modéré, évident, maximal ; à relire ; validé en série 31'
 relecture_explicative:
-  date: '2026-10-11'
+  date: '2026-10-12'
   champs:
   - question_attentionnelle
   - définition
@@ -162,6 +169,7 @@ relecture_explicative:
   - espace_valeurs.regions.marked.repere (re-confirmé en relecture explicative, série 9, 2026-10-11)
   - espace_valeurs.regions.strong.repere (re-confirmé en relecture explicative, série 9, 2026-10-11)
   - note_cercle (re-confirmé en relecture explicative, série 9, 2026-10-11)
+  - espace_valeurs.regions.label_en (validé en relecture explicative, série 31, 2026-10-12)
   a_reconfirmer: []
   reconfirme:
   - champ: question_attentionnelle
@@ -223,5 +231,5 @@ relecture_explicative:
       : « les six teintes de la teinte » devient « les six teintes de la fiche teinte »'
     remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
 manques:
-- exemplaires
+- 'exemplaires (au 2026-10-14) : 1001 faible, 1004 modéré, 1002 évident, 1003 maximal relus'
 bloque_par: []

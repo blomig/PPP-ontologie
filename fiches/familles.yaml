@@ -63,6 +63,26 @@ familles:
     types: [ppp:perceptualDensity, ppp:distribution, ppp:negativeSpace, ppp:symmetry,
             ppp:perceptualContrast, ppp:lightnessContrast, ppp:jointSpacing, ppp:jointLevelOffset,
             ppp:partNesting, ppp:perceivedDepth]
+  - cle: toucher
+    label_fr: Toucher
+    label_en: touch
+    introduction: >-
+      Ce qu'on remarque en touchant un objet : la taille de ses reliefs et le sens qu'ils
+      suivent, la différence de texture entre deux surfaces, les endroits où la surface s'écarte
+      de sa régularité, la courbure des surfaces, la marche entre deux parties, et le nombre de
+      formes simples qu'on reconnaît sous la main. Au toucher, ces qualités se jugent sur l'objet
+      lui-même, jamais sur une image.
+    # Série 27 (2026-10-12) : famille décidée par l'éditeur du projet (option C de
+    # docs/famille-toucher-proposition.md). Règle d'appartenance : tous les types dont `modalites`
+    # contient `toucher`, et eux seuls ; chaque type garde aussi sa famille d'aspect. Les types propres
+    # au toucher (dureté, froid, glisse, poids perçu, retour à la forme) n'ont pas encore de fiche.
+    # Le champ `facettes` des sept fiches n'est pas encore mis à jour (étape suivante, à relire).
+    # Série 28 : introduction réécrite par la relecture explicative (elle n'annonce plus de types sans fiche).
+    # 2026-10-12 : introduction validée par la relecture explicative (« à relire » levé).
+    a_relire: []
+    relecture_explicative: {date: "2026-10-12", champs: [introduction]}
+    types: [ppp:texture, ppp:textureContrast, ppp:textureDirectionality, ppp:localIrregularity,
+            ppp:curvature, ppp:jointLevelOffset, ppp:elementaryShapeCount]
 
 hors_registre:
   - cle: temps

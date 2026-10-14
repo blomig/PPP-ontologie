@@ -1,6 +1,6 @@
 # Glossaire
 
-Les mots du projet PPP, expliqués simplement. Sept fiches sont publiées : texture, densité perceptive, contraste de clarté, teinte, clarté, taille perçue et orientation de la texture. Chaque exemple ci-dessous vient de l'une d'elles.
+Les mots du projet PPP, expliqués simplement. Dix-sept fiches sont publiées : teinte, clarté, saturation, nombre de teintes, éventail des teintes, contraste perceptif, contraste de clarté, contraste de teinte, contraste d'échelle, taille perçue, texture, orientation de la texture, brillance de surface, densité perceptive, distribution, espacement au joint et décalage de niveau au joint. Chaque exemple ci-dessous vient de l'une d'elles.
 
 **Candidat**
 C'est le statut de toutes les fiches aujourd'hui : le type est proposé, mais pas encore admis au « cœur » de l'ontologie. Pour y entrer, il lui faudra une fiche complète, des épreuves réussies sur des objets publics, aucune objection sérieuse en suspens, et une décision prise en commun.
@@ -29,6 +29,10 @@ La page qui décrit un type. Elle donne une définition, une question à se pose
 **Formel / semi-formel**
 Un type *formel* se juge en regardant la chose seule, sans juger d'abord autre chose. Un type *semi-formel* demande de juger d'abord une autre propriété, sur laquelle il s'appuie.
 *Exemple : la clarté, la teinte et la texture sont formelles. Le contraste de clarté est semi-formel : il faut d'abord voir la clarté de chacune des deux zones.*
+
+**Mots qui peuvent sembler évaluatifs**
+Certains labels de valeur ont, dans la langue de tous les jours, un sens qui loue ou qui blâme : « sombre » (triste), « clair » (évident), « dense » (difficile à suivre), « uniforme » (monotone), « irrégularité » (un défaut), « poli » (raffiné), « faible » (insuffisant). Dans PPP, ces mots décrivent seulement ce qu'on perçoit : si une zone paraît claire ou sombre, combien d'éléments distincts elle montre, combien une surface s'écarte d'un motif régulier. Ils ne disent jamais si c'est bien ou mal.
+*Exemple : une mosaïque « dense » n'est ni meilleure ni moins bonne qu'une page de titre « clairsemée ».*
 
 **Non éprouvé**
 Cela veut dire qu'aucune épreuve n'a encore été faite. Une épreuve vérifie par exemple que plusieurs personnes, de goûts différents, s'accordent sur la même valeur. Plus tard, une fiche pourra être dite *corroborée*, *contestée* ou *réfutée*. Ce statut est distinct de « candidat ».

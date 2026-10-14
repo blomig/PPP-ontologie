@@ -8,15 +8,36 @@ Site : [blomig.github.io/PPP-ontologie](https://blomig.github.io/PPP-ontologie/)
 
 ## Par où commencer
 
-Lisez d'abord le [glossaire](docs/public/glossaire.md), une page. Puis ouvrez l'une des sept fiches :
+Lisez d'abord le [glossaire](docs/public/glossaire.md), une page. Puis ouvrez l'une des dix-sept fiches publiées. Les voici, rangées par ce qu'elles font regarder.
 
-- **Contraste de clarté** : regardez seulement le clair et le sombre, comme sur une photo en noir et blanc. Entre deux zones, l'écart va de deux gris voisins au noir sur du blanc.
-- **Clarté** : une seule zone paraît-elle très sombre, sombre, moyenne, claire ou très claire ? La couleur ne compte pas ici.
-- **Taille perçue** : à côté de votre corps, la chose paraît-elle plus petite que le bout du doigt (comme un grain de riz), tenir dans la main (comme une tasse), être à l'échelle du corps (comme une chaise) ou le dépasser (comme une maison) ?
-- **Densité perceptive** : pour sa taille, la chose contient-elle peu ou beaucoup d'éléments distincts ?
-- **Texture** : à la vue ou sous la main, la surface paraît-elle lisse, ou ses reliefs sont-ils fins, moyens ou gros ?
+La couleur d'une zone :
+
 - **Teinte** : de quelle couleur est cette zone : rouge, orange, jaune, vert, bleu ou violet ? Un rose pâle et un rouge sombre ont la même teinte, rouge.
+- **Clarté** : une seule zone paraît-elle très sombre, sombre, moyenne, claire ou très claire ? La couleur ne compte pas ici.
+- **Saturation** : cette couleur paraît-elle grise, peu colorée, moyennement ou très colorée ? Une couleur claire n'est pas forcément peu colorée.
+- **Nombre de teintes** : combien de teintes différentes voit-on dans la zone : une, deux ou trois, quatre ou plus ? Les gris, le noir et le blanc ne comptent pas.
+- **Éventail des teintes** : dans la zone, voit-on une seule teinte, des teintes voisines (des bleus et des verts) ou des teintes éloignées (des bleus et des oranges) ?
+
+La différence entre deux zones ou deux éléments :
+
+- **Contraste perceptif** : on ne regarde qu'une qualité à la fois (la clarté, la teinte, la texture…). La différence va de deux zones qu'on distingue à peine à deux zones placées aux deux bouts, comme le noir et le blanc.
+- **Contraste de clarté** : regardez seulement le clair et le sombre, comme sur une photo en noir et blanc. Entre deux zones, l'écart va de deux gris voisins au noir sur du blanc.
+- **Contraste de teinte** : regardez seulement la teinte. L'écart va de deux bleus à un bleu et un orange, deux teintes opposées sur le cercle des couleurs.
+- **Contraste d'échelle** : entre deux éléments vus ensemble, les tailles sont-elles voisines, nettement ou très différentes, ou sans commune mesure (un très grand élément à côté d'un très petit) ?
+
+La taille et la surface :
+
+- **Taille perçue** : à côté de votre corps, la chose paraît-elle plus petite que le bout du doigt (comme un grain de riz), tenir dans la main (comme une tasse), être à l'échelle du corps (comme une chaise) ou le dépasser (comme une maison) ?
+- **Texture** : à la vue ou sous la main, la surface paraît-elle lisse, ou ses reliefs sont-ils fins, moyens ou gros ?
 - **Orientation de la texture** : les reliefs vont-ils tous dans le même sens (un velours côtelé), seulement par endroits, ou dans tous les sens ?
+- **Brillance de surface** : en bougeant un peu la tête ou l'objet, voit-on sur la surface aucun reflet, un reflet doux et étalé, le reflet net d'une lampe, ou des images comme dans un miroir ?
+
+La disposition des éléments :
+
+- **Densité perceptive** : pour sa taille, la chose contient-elle peu ou beaucoup d'éléments distincts ?
+- **Distribution** : les éléments sont-ils groupés en paquets, répartis sans ordre apparent, ou régulièrement espacés ?
+- **Espacement au joint** : là où deux parties se rejoignent, se touchent-elles, ou un écart étroit ou large les sépare-t-il ?
+- **Décalage de niveau au joint** : là où deux surfaces se rejoignent, sont-elles au même niveau, ou l'une dépasse-t-elle un peu ou nettement ?
 
 Les fiches sont dans le dossier [`fiches/`](fiches/), à la racine du dépôt.
 
@@ -57,4 +78,4 @@ Les fiches, la spécification, les textes et les documents sont sous licence **C
 
 Le code du site et des outils est sous licence **MIT** (voir [LICENSE](LICENSE)).
 
-Les images d'exemples ne sont pas sous licence CC BY 4.0 : chacune garde sa propre licence, celle que donne sa source, et son crédit doit être repris tel quel. Une image n'est reproduite que si sa licence est vraiment libre ; sinon, la fiche donne seulement un lien vers sa source. Si vous modifiez une image sous licence CC BY-SA (recadrage, retouche), la nouvelle version doit rester sous cette même licence, et vous devez signaler la modification.
+Les images d'exemples ne sont pas sous licence CC BY 4.0 : chacune garde sa propre licence, celle que donne sa source, et son crédit doit être repris tel quel. Une image n'est reproduite que si sa licence est vraiment libre, ou, en petit format et avec son crédit complet, si sa licence permet gratuitement et sans autorisation de la copier et de l'afficher pour tout usage, même commercial (par exemple la licence Unsplash), sauf si une personne reconnaissable, une marque ou une œuvre protégée y est visible ; sinon, la fiche donne seulement un lien vers sa source. Si vous modifiez une image sous licence CC BY-SA (recadrage, retouche), la nouvelle version doit rester sous cette même licence, et vous devez signaler la modification.

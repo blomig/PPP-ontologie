@@ -38,19 +38,23 @@ espace_valeurs:
     label_en: closed
     rang: 1
     repere: aucun écart perceptible entre les deux parties
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-1603
   - cle: narrow
     label_fr: étroit
     label_en: narrow
     rang: 2
     repere: un écart visible, en filet
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-1601
+    - ppp-a:pilote-1602
   - cle: wide
     label_fr: large
     label_en: wide
     rang: 3
     repere: un écart qui se lit comme une bande ou un espace ouvert
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-1604
 identite: Écart entre deux parties, pas leur différence de niveau (décalage de niveau), pas leur différence de couleur (contraste).
 relations:
 - type: separableFrom
@@ -124,7 +128,7 @@ modifie_en:
 remplace_par: []
 statut_note: candidat, non éprouvé (spec §9.7 A)
 manques:
-- exemplaires
+- 'exemplaires (au 2026-10-14) : 1603 jointif, 1604 large relus ; 1601 étroit, 1602 étroit à relire, non montrés'
 bloque_par: []
 a_relire: []
 relecture_explicative:

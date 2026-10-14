@@ -2,8 +2,10 @@
 # Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_joint, avertissement_label, note_categories, note_reference, note_dimension, note_conditions, note_echelle, note_porteur, note_base, bloque_par.
 id: ppp:hueCount
 label_fr: nombre de teintes
-label_en: hue count
+label_en: number of hues
 labels_alternatifs: []
+labels_alternatifs_en:
+- hue count
 patron: P1
 sorte: qualité
 sous_sorte: gestalt
@@ -40,19 +42,23 @@ espace_valeurs:
     label_en: one hue
     rang: 1
     repere: une seule teinte, quelles que soient les clartés (un camaïeu de bleus, un mur ocre)
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-1101
   - cle: twoOrThreeHues
     label_fr: deux ou trois
     label_en: two or three hues
     rang: 2
     repere: deux ou trois teintes (une faïence bleu et jaune ; un drapeau bleu, blanc, rouge n’en compte que deux, car le blanc n’est pas une teinte)
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-1103
+    - ppp-a:pilote-1104
   - cle: fourOrMoreHues
     label_fr: quatre ou plus
     label_en: four or more hues
     rang: 3
     repere: quatre teintes ou davantage (un étal de fruits et légumes, un vitrail)
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-1102
 identite: Nombre des teintes vues dans une zone, pas leur écart sur le cercle (éventail des teintes), pas la teinte elle-même, pas le nombre d’éléments (densité).
 relations:
 - type: confusableWith
@@ -113,17 +119,21 @@ statut_epistemique: non éprouvé
 introduit_en: '2.5'
 modifie_en:
 - '2.6'
+- '2.8'
 remplace_par: []
 source_de_la_fiche: crash tests 01 et 02 (docs/crash-test-01-couleur-profonde.md §3.3 ; docs/crash-test-02-complexite-de-forme.md §3.3) ; verdict dans docs/questions-crash-tests.md C6, C7–C25 ; fiche minimale
   du 2026-10-10 (série 6) par l’équipe, champs en langage courant validés depuis par la relecture explicative (série 6)
 manques:
-- 'exemplaires (à renseigner : objets publics vérifiés, un épisode par objet, conditions déclarées)'
-- 'fiche minimale (C6, 2.5) : langage courant, état de l’art et références validés par la relecture explicative (série 6) ; restent les exemplaires ; T6 tranché le 2026-10-11, C22 levé (sa seule dépendance
-  était T6)'
+- 'exemplaires (au 2026-10-14) : 1101 une, 1103 deux ou trois, 1102 quatre ou plus relus ; 1104 deux ou trois à relire, non montré'
+- 'fiche minimale : langage courant, état de l’art et références validés ; restent les exemplaires'
 bloque_par: []
 a_relire: []
+remarque:
+- 'série 29 (2026-10-12, demande de la relecture explicative pour la publication bilingue) : label_en « hue count » remplacé par « number of hues » ; ancien label anglais gardé ici, faute de champ pour les labels alternatifs anglais (labels_alternatifs est en français) ; à relire ; validé en série 31'
+- 'série 34 (2026-10-12, décision de l’éditeur du projet sur T38) : ancien label anglais « hue count » rangé dans le nouveau champ labels_alternatifs_en ; à relire'
+- 'série 35 (2026-10-12) : labels_alternatifs_en validé par la relecture explicative (ancien label anglais) ; plus rien à relire'
 relecture_explicative:
-  date: '2026-10-11'
+  date: '2026-10-12'
   champs:
   - définition (série 6)
   - question_attentionnelle (série 6)
@@ -137,6 +147,8 @@ relecture_explicative:
   - references (série 6)
   - relations.confusableWith(ppp:hueRange).note (re-confirmé en relecture explicative, série 9, 2026-10-11)
   - note_categories (validé en relecture explicative, série 9, 2026-10-11)
+  - label_en (validé en relecture explicative, série 31, 2026-10-12)
+  - labels_alternatifs_en (validé en relecture explicative, série 35, 2026-10-12)
   a_reconfirmer: []
   reconfirme:
   - champ: relations.confusableWith(ppp:hueRange).note

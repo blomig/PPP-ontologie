@@ -2,8 +2,10 @@
 # Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_joint, avertissement_label, note_categories, note_reference, note_dimension, note_conditions, note_echelle, note_porteur, note_base, bloque_par.
 id: ppp:subsurfaceDepth
 label_fr: profondeur dans la matière
-label_en: subsurface depth
+label_en: depth within the material
 labels_alternatifs: []
+labels_alternatifs_en:
+- subsurface depth
 patron: P1
 sorte: qualité
 sous_sorte: —
@@ -127,6 +129,7 @@ modifie_en:
 - 2.3.2
 - '2.5'
 - '2.6'
+- '2.8'
 remplace_par: []
 source_de_la_fiche: crash tests, partie 1 (spec 2.3, docs/questions-crash-tests.md C4) ; fiche préremplie le 2026-10-10 par l’équipe, champs en langage courant à valider par la relecture explicative
 manques:
@@ -134,8 +137,12 @@ manques:
 bloque_par:
 - C4 point 4 (une ou deux profondeurs)
 a_relire: []
+remarque:
+- 'série 29 (2026-10-12, demande de la relecture explicative pour la publication bilingue) : label_en « subsurface depth » remplacé par « depth within the material » ; ancien label anglais gardé ici, faute de champ pour les labels alternatifs anglais (labels_alternatifs est en français) ; à relire ; validé en série 31'
+- 'série 34 (2026-10-12, décision de l’éditeur du projet sur T38) : ancien label anglais « subsurface depth » rangé dans le nouveau champ labels_alternatifs_en ; à relire'
+- 'série 35 (2026-10-12) : labels_alternatifs_en validé par la relecture explicative (ancien label anglais) ; plus rien à relire'
 relecture_explicative:
-  date: '2026-10-11'
+  date: '2026-10-12'
   champs:
   - question_attentionnelle
   - définition
@@ -151,6 +158,8 @@ relecture_explicative:
   - contre_exemple (re-confirmé en relecture explicative, série 9, 2026-10-11)
   - identite (re-confirmé en relecture explicative, série 9, 2026-10-11)
   - note_conditions (re-confirmé en relecture explicative, série 9, 2026-10-11)
+  - label_en (validé en relecture explicative, série 31, 2026-10-12)
+  - labels_alternatifs_en (validé en relecture explicative, série 35, 2026-10-12)
   a_reconfirmer: []
   reconfirme:
   - champ: contre_exemple

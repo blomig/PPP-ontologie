@@ -24,7 +24,8 @@ modalites:
 mode_de_presentation: image
 conditions_critiques:
 - angle
-note_conditions: 'à la vue, un léger décalage se voit surtout sous un regard rasant ; au toucher, aucune facette n’est critique (une seule liste pour toutes les modalités : T22)'
+- distance
+note_conditions: 'à la vue, un léger décalage se voit surtout sous un regard rasant ; de loin, un léger décalage paraît de même plan : les repères des régions nomment la distance ; l’angle et la distance sont critiques. Au toucher, la distance vaut toujours `contact` et l’angle est sans objet (le doigt sent la marche en passant d’une surface à l’autre) : ils restent déclarés critiques, et une assertion tactile n’est pas « non tranché » pour autant (spec §9.7 H, règles 3 et 4, décision de l’éditeur du projet du 2026-10-12, T22, option (b)).'
 porteur: la partie « joint » de l’objet (app:<objet>#joint-…)
 arité: 1
 condition_NA: objet d’une seule pièce, sans joint perceptible.
@@ -38,7 +39,8 @@ espace_valeurs:
     label_en: flush
     rang: 1
     repere: les deux surfaces paraissent dans le même plan
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-1701
   - cle: slight
     label_fr: léger
     label_en: slight
@@ -50,7 +52,8 @@ espace_valeurs:
     label_en: marked
     rang: 3
     repere: une différence de niveau visible à distance d’examen
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-1702
 identite: Différence de niveau entre deux surfaces, pas l’écart qui les sépare (espacement au joint).
 relations:
 - type: confusableWith
@@ -114,14 +117,18 @@ introduit_en: '2.2'
 modifie_en:
 - 2.3.1
 - '2.5'
+- '2.8'
 remplace_par: []
 statut_note: candidat, non éprouvé (spec §9.7 A)
 manques:
-- exemplaires
+- 'exemplaires (au 2026-10-14) : 1702 marqué relu ; 1701 affleurant à relire, non montré ; sans exemplaire : léger'
 bloque_par: []
 a_relire: []
+remarque:
+- 'série 29 (2026-10-12, décision de l’éditeur du projet sur T22, question 11 de docs/famille-toucher-proposition.md) : conditions_critiques vidé (angle, critique à la vue seulement, passe en note_conditions) ; note_conditions réécrite ; à relire ; validé en série 31'
+- 'série 34 (2026-10-12, décision de l’éditeur du projet sur T22, question 13 de docs/famille-toucher-proposition.md, option (b)) : angle et distance déclarés critiques (angle rétabli, retour sur la série 29 ; distance ajoutée en série 34, jamais déclarée critique avant la série 34) ; note_conditions réécrite (série 35 : « de loin, un léger décalage paraît de même plan ») ; à relire ; validé en série 37'
 relecture_explicative:
-  date: '2026-10-10'
+  date: '2026-10-12'
   champs:
   - question_attentionnelle
   - définition
@@ -131,4 +138,7 @@ relecture_explicative:
   - relations.note
   - etat_de_l_art (série 6, vérification finale)
   - references (série 6, vérification finale)
+  - conditions_critiques (validé en relecture explicative, série 31, 2026-10-12)
+  - note_conditions (validé en relecture explicative, série 31, 2026-10-12)
+  - conditions_critiques, note_conditions (série 34 ; validés en relecture explicative, série 37, 2026-10-13)
   a_reconfirmer: []

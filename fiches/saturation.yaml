@@ -36,25 +36,30 @@ espace_valeurs:
     label_en: neutral
     rang: 1
     repere: un gris, sans couleur perceptible
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-1305
   - cle: low
     label_fr: faible
     label_en: low
     rang: 2
     repere: une couleur grisée
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-1301
+    - ppp-a:pilote-1303
   - cle: medium
     label_fr: moyenne
     label_en: medium
     rang: 3
     repere: une couleur franche mais non vive
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-1304
   - cle: high
     label_fr: forte
     label_en: high
     rang: 4
     repere: la couleur la plus vive qu’on puisse voir à cette clarté
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-1302
 identite: Écart au gris, pas la teinte, pas la clarté.
 relations:
 - type: separableFrom
@@ -141,7 +146,7 @@ modifie_en:
 - 2.3.1
 remplace_par: []
 manques:
-- exemplaires
+- 'exemplaires (au 2026-10-14) : 1305 neutre, 1304 moyenne relus ; 1302 forte, marqué discutable, non montré ; 1301 faible, 1303 faible à relire, non montrés'
 bloque_par: []
 a_relire: []
 relecture_explicative:

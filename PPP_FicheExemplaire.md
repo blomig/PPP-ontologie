@@ -33,7 +33,7 @@ objets:
       source: "…"
       url: "…"
       url_telechargement: "…"     # facultatif : fichier original (série 20)
-      fichier: "…"                # facultatif : nom de stockage, si image_reproduite (série 20)
+      fichier: "…"                # facultatif : nom de fichier, sans chemin, si image_reproduite (séries 20 et 23)
       date_verification: "AAAA-MM-JJ"
       mention_requise: "…"         # telle que la licence la demande
       usage: lien_seulement        # image_reproduite | lien_seulement (défaut)

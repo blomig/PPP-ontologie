@@ -124,13 +124,12 @@ modifie_en:
 - '2.5'
 remplace_par: []
 source_de_la_fiche: 'ex-« rugosité » v0.2 ; la définition v0.2 portait une valence (« imperfections », « augmentent la présence ») et n’est pas reprise ; « rugosité » retiré des labels alternatifs (2026-10-10)
-  : c’est de la texture (voir T19 pour l’annexe A)'
+  : c’est de la texture (annexe A alignée en série 24, T19)'
 manques:
 - exemplaires
 - 'base de dépendance : proposition (texture, contour)'
 bloque_par:
 - 'T11 (base proposée : texture, netteté du bord)'
-- T19 (note « rugosité » de l’annexe A)
 a_relire: []
 relecture_explicative:
   date: '2026-10-10'

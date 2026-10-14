@@ -38,25 +38,28 @@ espace_valeurs:
   regions:
   - cle: weak
     label_fr: faible
-    label_en: weak
+    label_en: slight
     rang: 1
     repere: deux surfaces de même texture, ou presque (deux surfaces lisses)
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-1401
   - cle: moderate
     label_fr: modéré
     label_en: moderate
     rang: 2
     repere: lisse contre fine
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-1404
   - cle: marked
     label_fr: évident
-    label_en: marked
+    label_en: evident
     rang: 3
     repere: lisse contre moyenne, ou fine contre grosse
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-1403
   - cle: strong
     label_fr: maximal
-    label_en: strong
+    label_en: maximal
     rang: 4
     repere: lisse contre grosse
     exemplaires: []
@@ -115,10 +118,15 @@ introduit_en: '2.2'
 modifie_en:
 - 2.3.1
 - '2.5'
+- '2.8'
 remplace_par: []
-a_relire: []
+statut_note: 'Position de travail : les régions de ce contraste se lisent avec celles de la texture (lisse, fine, moyenne, grosse), qui restent elles-mêmes en position de travail et peuvent encore changer.'
+a_relire:
+- statut_note
+remarque:
+- 'série 29 (2026-10-12, demande de la relecture explicative pour la publication bilingue) : label_en des régions weak, marked, strong : slight, evident, maximal (moderate inchangé ; clés inchangées), comme les labels FR faible, modéré, évident, maximal ; à relire ; validé en série 31'
 relecture_explicative:
-  date: '2026-10-10'
+  date: '2026-10-12'
   champs:
   - question_attentionnelle
   - définition
@@ -128,6 +136,7 @@ relecture_explicative:
   - relations.note
   - etat_de_l_art (série 6)
   - references (série 6)
+  - espace_valeurs.regions.label_en (validé en relecture explicative, série 31, 2026-10-12)
   a_reconfirmer: []
   reconfirme:
   - champ: question_attentionnelle
@@ -141,6 +150,6 @@ relecture_explicative:
     remarque: 'T3 option A : question reprise par la relecture explicative ; chaque mot-label porte entre parenthèses le repère de sa région, pour que « évident » (visible d’emblée) et « maximal » (aux deux bouts
       de la dimension) ne se lisent pas comme des synonymes de « fort »'
 manques:
-- exemplaires (à renseigner ; le seul constat proposé, ppp-a:pilote-0301 sur le contraste général, est retiré en 2.3.2, T24)
-- dépend des régions de la texture, elles-mêmes en position de travail (T1)
+- 'exemplaires (au 2026-10-14) : 1401 faible relu ; 1404 modéré, 1403 évident à relire, non montrés ; sans exemplaire : maximal ; 1402 retiré, réserve T24 maintenue'
+- 'dépend des régions de la texture, elles-mêmes en position de travail (T1) ; signalé dans statut_note (série 44, à relire)'
 bloque_par: []

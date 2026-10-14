@@ -15,7 +15,7 @@ Site : https://blomig.github.io/PPP-ontologie (GitHub Pages). Dépôt : https://
 - `fiches/` : les fiches de type (un fichier YAML par type), le registre des objets (`exemplaires.yaml`), les familles de lecture (`familles.yaml`), l'avancement (`README.md`).
 - `docs/` : bibliographie par type, état de l'art, gouvernance, comment citer.
 - `tickets/` : les tickets reçus, convertis en fichiers ; `epreuves/` : le journal des épreuves, un fichier par épreuve (format : `epreuves/README.md`), aussi affiché sur le site (page du journal, et renvoi depuis chaque fiche).
-- `index.html` : le site publié par GitHub Pages (une seule page, tout intégré, servie depuis la racine de la branche `main`) ; `.nojekyll` désactive le traitement Jekyll.
+- `site/` : le site publié par GitHub Pages.
 
 ## Participer
 

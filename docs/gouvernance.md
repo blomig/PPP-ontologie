@@ -1,6 +1,6 @@
 # Gouvernance publique de PPP
 
-*Document de PPP, spec v2.8 (§13). Rédigé le 2026-10-11, mis à jour en série 9 (dépôt public, formulaires de tickets GitHub). Fait foi avec le §13 de la spécification ; en cas d'écart, la spécification l'emporte. Ce qui n'est pas décidé est marqué « position de travail, à trancher ».*
+*Document de PPP, spec v2.8 (§13). Rédigé le 2026-10-11, mis à jour en série 9 (dépôt public, formulaires de tickets GitHub) et en série 33 (cycle de vie et étiquettes, état `précision-demandée`, objets naturels, crédit de l'image, exemples renumérotés, registre `tickets/`). Fait foi avec le §13 de la spécification ; en cas d'écart, la spécification l'emporte. Ce qui n'est pas décidé est marqué « position de travail, à trancher ».*
 
 ## 1. Qui décide
 
@@ -29,26 +29,56 @@
 
 Décidé (v2.8) : dépôt public neuf, site publié par GitHub Pages, tickets par les **formulaires de tickets GitHub** (*issue forms*) du dépôt public, un formulaire par type (`.github/ISSUE_TEMPLATE/<nn>-<type>.yml`) ; ouvrir un ticket demande un **compte GitHub**. Modèles : `docs/depot-public/ISSUE_TEMPLATE/`. Sources : GitHub Docs, « Syntax for issue forms », « Syntax for GitHub's form schema », « Configuring issue templates for your repository » (https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-issue-forms , …/syntax-for-githubs-form-schema , …/configuring-issue-templates-for-your-repository ; consultés le 2026-10-11) : formulaires YAML dans `.github/ISSUE_TEMPLATE`, clés obligatoires `name`, `description`, `body` ; fonction en « public preview », susceptible de changer ; les validations `required` ne s'appliquent que dans un dépôt public ; `config.yml` avec `blank_issues_enabled: false` réserve le ticket vierge aux personnes qui ont un droit d'écriture.
 
-1. Un visiteur ouvre un ticket GitHub par le formulaire du geste (le site renvoie vers ce formulaire, depuis chaque fiche et le pied de page). Le formulaire pose le label du type ; l'équipe ajoute le label `reçu`.
+1. Un visiteur ouvre un ticket GitHub par le formulaire du geste (le site renvoie vers ce formulaire, depuis chaque fiche et le pied de page). Le formulaire pose deux labels : celui du type et `reçu` (série 33 ; auparavant l'équipe devait poser `reçu` à la main et l'oubliait).
 2. *Position de travail, à trancher* (circuit le plus simple) : dans la semaine, l'équipe juge la recevabilité et **convertit à la main** le ticket en fichier `tickets/<nnnn>-<type>.md`, où `<nnnn>` est le numéro du ticket GitHub sur quatre chiffres (unique, jamais réattribué par GitHub) ; `source: github`, `github_issue: <numéro>`. Raisons : aucun outil à écrire ni à maintenir ; la conversion se fait au moment où l'équipe lit déjà le ticket ; le fichier garde la trace si GitHub change. Une conversion automatique (workflow GitHub Actions) est possible plus tard, si le volume le demande.
-3. Ticket recevable : fichier en `recevable`, réponse sur le ticket GitHub avec le lien du fichier. Ticket non recevable : fichier en `traité` / `rejeté` avec le motif « contenu minimal manquant : … », et ticket GitHub fermé avec le même motif. L'état `reçu` n'existe que sur GitHub (label), le temps du jugement.
-4. L'équipe instruit et décide : `traité`, avec l'issue `accepté` ou `rejeté` et un motif. Une décision qui change la spécification ou une fiche est consignée au changelog ; une épreuve qu'elle demande va au journal des épreuves (section 3).
+3. Ticket recevable : fichier en `recevable`, réponse sur le ticket GitHub avec le lien du fichier. Ticket incomplet mais facile à compléter : état `précision-demandée` (2.1 bis). Ticket non recevable : fichier en `traité` / `rejeté` avec le motif « contenu minimal manquant : … », et ticket GitHub fermé avec le même motif. L'état `reçu` n'existe que sur GitHub (label), le temps du jugement.
+4. L'équipe instruit et décide : `traité`, avec l'issue `accepté` ou `rejeté` et un motif ; sur GitHub, le label `traité` s'accompagne du label `accepté` ou `rejeté`, pour que l'issue se voie sans ouvrir le fichier. Une décision qui change la spécification ou une fiche est consignée au changelog ; une épreuve qu'elle demande va au journal des épreuves (section 3).
 5. Aucun ticket n'est fermé sans réponse. Un ticket hors sujet est rejeté avec le motif « hors périmètre » et, si possible, un renvoi.
 
 Seul un ticket **recevable** a un effet affiché (un exemplaire ou une fiche peut passer `contesté`, §13) ; un ticket simplement reçu n'a aucun effet.
 
+### 2.1 bis Cycle de vie et étiquettes GitHub (série 33)
+
+*Position de travail, à trancher par l'éditeur du projet.* Les tests des premiers tickets réels ont montré trois manques : le label `reçu` n'était jamais posé, l'issue d'un ticket traité ne se voyait pas sur GitHub, et un ticket presque complet devait être rejeté faute d'état d'attente.
+
+```
+reçu ──► recevable ──► traité (accepté | rejeté)
+  │          ▲
+  ├──► précision-demandée ──┤ (réponse : jugement)
+  │          └──► traité / rejeté (pas de réponse à la date dite)
+  └──► traité / rejeté (non recevable, ou hors périmètre)
+```
+
+| Étiquette GitHub | Sens | Qui la pose | Quand |
+|---|---|---|---|
+| type (`suggestion-type`, …, `proposition-type`) | geste du ticket | le formulaire | à l'ouverture |
+| `reçu` | ticket ouvert, pas encore jugé | le formulaire | à l'ouverture ; l'équipe la retire au jugement |
+| `précision-demandée` | il manque une précision que le proposant peut donner facilement | l'équipe | au jugement, dans les sept jours suivant la réception |
+| `recevable` | contenu minimal présent ; fichier `tickets/` créé | l'équipe | au jugement, ou à la réponse du proposant |
+| `traité` | décision prise ; ticket fermé | l'équipe | à la décision |
+| `accepté` / `rejeté` | issue de la décision, toujours avec `traité` | l'équipe | à la décision |
+
+Un ticket ne porte qu'une étiquette d'état à la fois (`reçu`, `précision-demandée`, `recevable` ou `traité`), plus son type et, s'il est traité, son issue.
+
+**`précision-demandée`.** L'équipe l'emploie quand le ticket est recevable à une précision près, que le proposant peut donner sans compétence technique (par exemple : décrit-il la photo ou l'objet photographié ; où se trouve l'arbre). Elle répond sur le ticket, dans les sept jours suivant la réception, avec la question et **une date limite écrite en toutes lettres**, au moins sept jours après la question. Si le proposant répond, l'équipe juge la recevabilité dans les sept jours suivant la réponse. Sans réponse à la date dite, le ticket passe `traité` / `rejeté` (motif « précision demandée restée sans réponse »), il est fermé, et la réponse invite à en ouvrir un nouveau. *Position de travail (série 35), à trancher par l'éditeur du projet* : si la réponse reste insuffisante, l'équipe peut relancer **une seule fois**, avec une nouvelle date limite écrite en toutes lettres ; sinon, ou si la relance reste insuffisante, le ticket passe `traité` / `rejeté` avec un motif qui dit ce qui manque, et la réponse invite à en ouvrir un nouveau, avec la précision (un visiteur ne peut pas rouvrir un ticket fermé par l'équipe ; série 37). Une précision ne sert pas à refaire le ticket : s'il manque l'essentiel, il est non recevable d'emblée. Aucun fichier `tickets/` n'est créé tant que le ticket n'est pas recevable ou rejeté.
+
+**Création des étiquettes.** Les étiquettes de ce tableau seront créées sur le dépôt public au moment de la publication, et les étiquettes par défaut de GitHub (`bug`, `documentation`, `duplicate`, `enhancement`, `good first issue`, `help wanted`, `invalid`, `question`, `wontfix`) seront supprimées à ce moment-là, avec l'accord de l'éditeur du projet. Rien n'est fait sur GitHub avant. L'étiquette `accessibility`, présente sur le dépôt, est à garder ou supprimer selon la même décision.
+
+**Précisions hors ticket** (position de travail, série 40, d'après le ticket 3) : quand le proposant est l'éditeur du projet, ses précisions peuvent arriver hors ticket ; l'équipe les reprend alors dans sa réponse sur le ticket, pour que tout reste lisible publiquement, et le note dans le fichier du registre.
+
 ### 2.2 États
+
+Un fichier `tickets/<nnnn>-<type>.md` n'est créé qu'au jugement, quand le ticket est jugé recevable ou rejeté (2.1, 2.1 bis). Avant, le ticket n'a que des étiquettes GitHub : `reçu` (le ticket est ouvert ; sa date sera reportée en `recu_le`) puis, le cas échéant, `précision-demandée` (dates reportées en `precision_demandee_le` et `reponse_attendue_avant`). Ces deux étiquettes ne sont donc jamais des valeurs du champ `etat` (série 35). Valeurs du champ `etat` :
 
 | `etat` | Sens | Champs remplis |
 |---|---|---|
-| `reçu` | le ticket GitHub est ouvert (label `reçu`) ; le fichier n'existe pas encore (2.1) | `recu_le` (date du ticket GitHub) |
 | `recevable` | le contenu minimal du type est présent | `recevable_le` |
 | `traité` | l'équipe a décidé | `traite_le`, `issue` (`accepté` ou `rejeté`), `motif` |
 
 ### 2.3 Nom et emplacement
 
-- Dossier : `tickets/` à la racine du dépôt (file d'attente unique).
-- Nom : `tickets/<nnnn>-<type>.md`, par exemple `tickets/0007-contestation.md`. Le numéro a quatre chiffres, il est unique et jamais réattribué ; c'est le numéro du ticket GitHub (position de travail, 2.1). Le fichier ne change pas de nom quand l'état change (liens stables).
+- Dossier : `tickets/` à la racine du dépôt (file d'attente unique) ; il contient un `README.md` qui décrit le registre et le format d'une entrée (créé en série 33, vide de tickets tant que les premiers tickets réels ne sont pas jugés).
+- Nom : `tickets/<nnnn>-<type>.md`, par exemple `tickets/0042-contestation.md`. Le numéro a quatre chiffres, il est unique et jamais réattribué ; c'est le numéro du ticket GitHub (position de travail, 2.1). Le fichier ne change pas de nom quand l'état change (liens stables).
 - Le fichier ne contient aucune adresse électronique (le dépôt est public) : un pseudonyme au plus, champ `auteur`, facultatif.
 
 ### 2.4 Types et contenu minimal (recevabilité)
@@ -60,7 +90,7 @@ Neuf types pour huit gestes (correspondance : spec §13 ; série 12 : « Signale
 | `suggestion-type` | Suggérer un type | un label ; une phrase ; deux exemples (images ou descriptions) ; le type existant le plus proche ; **l'aspect perceptible décrit** ; **pourquoi aucun type existant ne le couvre** ; une formulation **factuelle**, sans jugement de valeur (X13, v2.7). Une suggestion qui redécoupe un aspect couvert est requalifiée en demande de spécialisation ou de révision du type existant (champ `requalifie_en`) |
 | `label-charge` | Signaler un mot qui juge ou une mauvaise traduction | le label, la traduction ou la phrase visés (fiche, clé, langue) ; le problème : valence (le mot évalue au lieu de décrire), ambiguïté, homonymie, erreur de traduction ; une proposition, facultative |
 | `correction` | Signaler une erreur (erreur de fait) | la fiche ou la page, le champ ou l'`id` visé (par ex. l'`id` d'une référence) ; l'erreur (référence fautive, statut de vérification surévalué, crédit d'image, coquille, lien mort) ; la source qui la montre, si elle existe |
-| `objet-suggere` | Suggérer un objet (public) pour les épreuves | nom ; créateur (ou « inconnu ») ; date ou période, ou « inconnue » (« je ne sais pas » dans le formulaire), **admise seulement si la variante identifie l'objet** à elle seule (sinon le ticket n'est pas recevable ; série 11) ; **variante** précise, obligatoire et jamais « inconnue » (libellé public « Quelle version exactement ? » : version, exemplaire, état, édition, ce qui identifie exactement l'objet vu) ; **lien source public** (obligatoire) ; images : lien seulement par défaut, reproduite seulement si licence réellement libre, vérifiée, avec crédit complet (Q15 : `usage`, `lien_externe`) ; conditions de perception de l'observation : régime complet du §9.7 H (`presentation`, `lumiere`, `distance`, `angle`, `duree`, `unknown` si inconnue). Un objet qui n'est pas public n'est pas recevable |
+| `objet-suggere` | Suggérer un objet (public) pour les épreuves | nom ; créateur (ou « inconnu ») ; date ou période, ou « inconnue » (« je ne sais pas » dans le formulaire), **admise seulement si la variante identifie l'objet** à elle seule (sinon le ticket n'est pas recevable ; série 11) ; **variante** précise, obligatoire et jamais « inconnue » (libellé public « Quelle version exactement ? » : version, exemplaire, état, édition, ce qui identifie exactement l'objet vu) ; **lien source public** (obligatoire) ; **objet naturel** (arbre, pierre, coquillage, paysage : rien n'a été « fait ») : `createur` vaut `objet naturel`, et la variante doit identifier **le spécimen**, pas l'espèce ni la catégorie : lieu précis (commune, site, coordonnées) pour un objet en place et public, ou collection qui le conserve avec son numéro s'il existe ; « une écorce d'arbre » n'est pas recevable comme objet naturel (série 33), mais une photo précise d'une écorce l'est comme photo (série 36) ; **photo comme objet** (photo, affiche, gravure, image en ligne ; décision de l'éditeur du projet du 2026-10-13, série 36 ; *à relire*) : admise, l'exemple est alors **l'image elle-même**, pas la chose photographiée ; *position de travail (série 37), à trancher par l'éditeur du projet* : si la photo montre un objet public identifié (œuvre, monument), l'exemple est par défaut cet objet, vu par la photo ; la photo elle-même est l'exemple quand le proposant le dit, ou quand ce qu'elle montre n'est pas identifié ; l'assertion porte sur ce que la photo donne à voir (régime `screen`) ; son auteur est le `createur` ; la **variante est son lien précis** (la page de l'image, pas une recherche ni une galerie), plus, hors Commons, l'adresse d'une **copie archivée** : l'équipe ajoute l'adresse d'une capture de la page par la Wayback Machine ; le projet ne garde aucune copie de la page (la miniature d'une image sous licence permissive reste possible, X16) ; le crédit (auteur, source, licence) est **obligatoire** ; identifier ce qu'elle montre (`objet_naturel` : lieu, spécimen, collection) est **facultatif et descriptif**, ce n'est pas une identification ; une photo citée n'illustre que des types qui se voient, jamais un type du toucher ; pour la taille perçue (T8), il faut un repère d'échelle dans l'image ; « Quand ? » : la date de la photo si elle est connue, sinon « je ne sais pas » (le lien précis identifie l'image) ; pour un objet naturel proposé lui-même (pas en photo), la date d'observation si elle est connue ; images : lien seulement par défaut, reproduite seulement si licence réellement libre, vérifiée, avec crédit complet, ou, hors Commons, en miniature avec crédit complet si sa licence est permissive (copie et affichage gratuits sans autorisation, usage non commercial et commercial, ex. licence Unsplash ; une personne identifiable, une marque visible ou une œuvre protégée visible ramène à lien seulement ; spécification X16, série 37, *à relire*) (Q15 : `usage`, `lien_externe`) ; le formulaire demande à part l'auteur et la licence de l'image (`credit_image` : auteur et page obligatoires ; licence vérifiée par l'équipe), à ne pas confondre avec le créateur de l'objet ; conditions de perception de l'observation : régime complet du §9.7 H (`presentation`, `lumiere`, `distance`, `angle`, `duree`, `unknown` si inconnue). Un objet qui n'est pas public n'est pas recevable |
 | `contestation` | Contester une assertion ou un énoncé | `cible` : l'identifiant de l'assertion (`ppp-a:…`) ou de l'énoncé (`E1`–`E6` d'une fiche, ou énoncé propre) ; pour un exemplaire : la région proposée à la place ; pour un énoncé : ce que la fiche prédit et ce qui est observé ; le **minimum reproductible** du §13 (objets décrits, régime de perception au vocabulaire du §9.7 H, observateurs, versions, région ou prédiction citée) |
 | `assertion-exemplaire` | Ajouter une assertion sur un objet du registre | l'objet (`app:…`, déjà au registre) ; le type ; la région proposée ; les conditions de perception ; une note factuelle ; `doute` si l'on hésite. Contester une assertion existante : type `contestation` |
 | `anomalie` | Signaler une anomalie | types visés ; objets ou situations décrits de façon reproductible ; ce que la fiche prédit, ce qui est observé ; minimum reproductible |
@@ -72,16 +102,18 @@ Neuf types pour huit gestes (correspondance : spec §13 ; série 12 : « Signale
 En-tête YAML entre deux lignes `---`, puis corps Markdown libre (texte du visiteur, puis réponse de l'équipe sous un titre `## Réponse`). Champs communs :
 
 ```yaml
-id: ticket-0001            # = le numéro du fichier
+id: ticket-0042            # ticket-<nnnn> = le numéro du fichier
 type: suggestion-type      # suggestion-type | contestation | label-charge | correction | objet-suggere | assertion-exemplaire | anomalie | refutation | proposition-type
-etat: reçu                 # reçu | recevable | traité
+etat: recevable            # recevable | traité (un fichier n'existe qu'à partir du jugement, 2.2)
 issue: null                # accepté | rejeté (seulement si etat = traité)
 motif: null                # obligatoire si etat = traité
 recu_le: "2026-10-12"
+precision_demandee_le: null   # si une précision a été demandée (2.1 bis)
+reponse_attendue_avant: null  # date limite donnée au proposant
 recevable_le: null
 traite_le: null
 source: github             # github (formulaire de ticket du dépôt public) ; valeur `site` réservée à un éventuel formulaire hors GitHub
-github_issue: 1            # numéro du ticket GitHub = numéro du fichier (position de travail, à trancher)
+github_issue: 42           # numéro du ticket GitHub = numéro du fichier (position de travail, à trancher)
 auteur: null               # pseudonyme, facultatif ; jamais d'adresse électronique
 langue: fr
 cible: []                  # ids visés : ppp:<type>, ppp:<type>/<clé> (région), ppp:<type>#E<n> (énoncé n de la fiche), ppp-a:… (assertion), app:… (objet)
@@ -90,13 +122,13 @@ version_fiche: null        # version de l'ontologie au moment de l'assertion vis
 liens: []                  # autres tickets, épreuves (epreuves/<nnnn>-…), commits
 ```
 
-Les exemples ci-dessous sont **fictifs** : ils montrent la forme, pas des tickets reçus (relus en série 12 : version 2.8, vocabulaire des formulaires, image d'un objet suggéré).
+Les exemples ci-dessous sont **fictifs** : ils montrent la forme, pas des tickets reçus (relus en série 12 : version 2.8, vocabulaire des formulaires, image d'un objet suggéré). Depuis la série 33, ils sont nommés `exemple-<nn>-<type>` et `ticket-exemple-<nn>`, sans `github_issue`, pour ne jamais se confondre avec un vrai ticket : l'ancien exemple « 0001 » portait le numéro du premier ticket réel du dépôt public. Ces exemples n'existent que dans ce document : aucun fichier n'est créé pour eux dans `tickets/`, et un vrai fichier de ticket (`tickets/<nnnn>-<type>.md`) n'emploie jamais le préfixe `exemple-` (série 35).
 
-**`tickets/0001-suggestion-type.md`**
+**`exemple-01-suggestion-type.md`**
 
 ```markdown
 ---
-id: ticket-0001
+id: ticket-exemple-01
 type: suggestion-type
 etat: recevable
 issue: null
@@ -105,7 +137,7 @@ recu_le: "2026-10-12"
 recevable_le: "2026-10-13"
 traite_le: null
 source: github
-github_issue: 1
+github_issue: null       # exemple fictif : aucun ticket GitHub
 auteur: null
 langue: fr
 cible: [ppp:texture]
@@ -130,11 +162,11 @@ Texte du visiteur.
 (Réponse de l'équipe, avec la date.)
 ```
 
-**`tickets/0002-contestation.md`** (contestation d'un exemplaire)
+**`exemple-02-contestation.md`** (contestation d'un exemplaire)
 
 ```markdown
 ---
-id: ticket-0002
+id: ticket-exemple-02
 type: contestation
 etat: traité
 issue: rejeté
@@ -143,7 +175,7 @@ recu_le: "2026-10-12"
 recevable_le: "2026-10-12"
 traite_le: "2026-10-18"
 source: github
-github_issue: 2
+github_issue: null       # exemple fictif : aucun ticket GitHub
 auteur: "observatrice-12"
 langue: fr
 cible: [ppp-a:pilote-0102]
@@ -158,22 +190,22 @@ versions: {fiche: "…", page: "site du 2026-10-12", materiel: "image Commons, r
 ---
 ```
 
-**`tickets/0003-contestation.md`** (contestation d'un énoncé) : mêmes champs, avec `cible: [ppp:perceptualDensity#E1]`, et à la place de `region_proposee` : `prediction_de_la_fiche` et `observe`.
+**`exemple-03-contestation.md`** (contestation d'un énoncé) : mêmes champs, avec `cible: [ppp:perceptualDensity#E1]`, et à la place de `region_proposee` : `prediction_de_la_fiche` et `observe`.
 
-**`tickets/0004-label-charge.md`**
+**`exemple-04-label-charge.md`**
 
 ```markdown
 ---
-id: ticket-0004
+id: ticket-exemple-04
 type: label-charge
-etat: reçu
+etat: recevable
 issue: null
 motif: null
 recu_le: "2026-10-12"
-recevable_le: null
+recevable_le: "2026-10-13"
 traite_le: null
 source: github
-github_issue: 4
+github_issue: null       # exemple fictif : aucun ticket GitHub
 auteur: null
 langue: en
 cible: [ppp:scaleContrast/strong]
@@ -187,11 +219,11 @@ proposition: null
 ---
 ```
 
-**`tickets/0005-correction.md`**
+**`exemple-05-correction.md`**
 
 ```markdown
 ---
-id: ticket-0005
+id: ticket-exemple-05
 type: correction
 etat: traité
 issue: accepté
@@ -200,7 +232,7 @@ recu_le: "2026-10-12"
 recevable_le: "2026-10-12"
 traite_le: "2026-10-14"
 source: github
-github_issue: 5
+github_issue: null       # exemple fictif : aucun ticket GitHub
 auteur: null
 langue: fr
 cible: [ppp:texture]
@@ -213,11 +245,11 @@ source_de_la_correction: "page de l'éditeur de l'article"
 ---
 ```
 
-**`tickets/0006-objet-suggere.md`**
+**`exemple-06-objet-suggere.md`**
 
 ```markdown
 ---
-id: ticket-0006
+id: ticket-exemple-06
 type: objet-suggere
 etat: recevable
 issue: null
@@ -226,7 +258,7 @@ recu_le: "2026-10-12"
 recevable_le: "2026-10-13"
 traite_le: null
 source: github
-github_issue: 6
+github_issue: null       # exemple fictif : aucun ticket GitHub
 auteur: null
 langue: fr
 cible: []
@@ -235,21 +267,24 @@ version_fiche: null
 liens: []
 objet:
   nom: "« … » (titre de l'œuvre ou nom de l'objet)"
-  createur: "inconnu"                 # ou le nom
+  createur: "inconnu"                 # auteur de l'objet (jamais l'auteur d'une photo de l'objet) ; "objet naturel" pour un spécimen naturel
   date: "vers 1920"                   # date ou période ; ou "inconnue", admise seulement si `variante` identifie l'objet
   variante: "exemplaire du musée X, n° d'inventaire …, état actuel (restauré en …)"   # « Quelle version exactement ? »
   lien_source_public: "https://…"     # obligatoire : page publique de l'objet
   institution: "…"                    # facultatif
+  objet_naturel: null                 # facultatif et descriptif (série 36) : {lieu: "…", collection: "…", numero_specimen: "…", espece: "…"} ; pour un objet naturel proposé lui-même, lieu ou collection obligatoire
+  est_une_image: non                  # oui si l'objet proposé est l'image elle-même (createur = auteur de l'image ; variante = lien précis, + copie archivée hors Commons ; crédit obligatoire)
 images:
   - url: "https://…"                   # un lien, jamais un fichier
     libre_selon_le_visiteur: "je ne sais pas"   # « Savez-vous si elle est libre ? » : oui | je ne sais pas | non (indication, pas une vérification)
+    credit_selon_le_visiteur: "photo de …, CC BY-SA 4.0"   # « Qui a fait l'image, et sous quelle licence ? » (indication, pas une vérification)
     credit:                            # rempli par l'équipe à l'instruction, après sa propre vérification de la licence (Q15)
       auteur: "…"
       licence: "…"
       source: "…"
       date_verification: "2026-10-13"
       mention_requise: "…"
-      usage: lien_seulement            # défaut ; image_reproduite seulement si licence réellement libre, vérifiée
+      usage: lien_seulement            # défaut ; image_reproduite si licence réellement libre, vérifiée, ou en miniature si licence permissive (X16, série 37)
       lien_externe: "https://…"
       motif_usage: "…"
 conditions_de_perception:              # codes du §9.7 H, écrits d'après les libellés du formulaire (tableau ci-dessous)
@@ -281,9 +316,9 @@ Pourquoi cet objet est utile pour une épreuve (texte du visiteur).
 | Sous quel angle ? (`angle`) | De face · De biais · Presque à ras de la surface · En tournant autour, ou en le tournant dans les mains · Je ne sais pas | `frontal` · `oblique` · `grazing` · `varied` · `unknown` |
 | Combien de temps ? (`duree`) | Un coup d'œil, quelques secondes · Environ une minute · Longtemps, plus de cinq minutes · Je ne sais pas | `glance` · `exam` · `prolonged` · `unknown` |
 
-Les autres champs se reportent tels quels : `nom`, `createur` (« je ne sais pas » → `inconnu`), `date`, `variante`, `lien` (→ `lien_source_public`), `images` et « Savez-vous si elle est libre ? » (indication du visiteur ; l'équipe vérifie la licence elle-même), `remarques`, `pseudonyme` (→ `auteur`).
+Les autres champs se reportent tels quels : `nom`, `createur` (« je ne sais pas » → `inconnu` ; « objet naturel » → `objet naturel`), `date`, `variante`, « Pour un objet naturel, où le trouver ? » (→ `objet_naturel`), « Qui a fait l'image, et sous quelle licence ? » (→ `credit_selon_le_visiteur` ; l'équipe remplit `credit` après sa propre vérification), `lien` (→ `lien_source_public`), `images` et « Savez-vous si elle est libre ? » (indication du visiteur ; l'équipe vérifie la licence elle-même), `remarques`, `pseudonyme` (→ `auteur`).
 
-**`tickets/0007-assertion-exemplaire.md`** : champs communs, plus `objet: app:…`, `type_vise: ppp:…`, `region_proposee: ppp:…/<clé>`, `conditions_de_perception` (comme ci-dessus), `note`, `doute: non`.
+**`exemple-07-assertion-exemplaire.md`** : champs communs, plus `objet: app:…`, `type_vise: ppp:…`, `region_proposee: ppp:…/<clé>`, `conditions_de_perception` (comme ci-dessus), `note`, `doute: non`.
 
 Les types `anomalie`, `refutation` et `proposition-type` prennent les mêmes champs communs, plus les champs de leur contenu minimal (tableau 2.4) : `predit`, `observe` et le minimum reproductible pour une anomalie ; `protocole`, `seuil`, `seuil_fixe_le`, `materiel`, `resultats` pour une réfutation (avec un lien vers le journal des épreuves) ; `fiche` (chemin du fichier proposé) pour une proposition de type.
 
@@ -310,7 +345,7 @@ observateurs: {nombre: 3, pseudonymes: [], independants_de_l_equipe: oui}
 versions: {fiche: "…", page: "…", materiel: "…"}
 resultats: null               # ajoutés après l'épreuve (données brutes ou lien)
 consequence: null             # corroboré | anomalie ouverte | réfutation reproduite (§9.7 N) | aucune (exploratoire)
-tickets: [ticket-0002]
+tickets: [ticket-exemple-02]
 ```
 
 ## 4. Bonnes pratiques des ontologies ouvertes : ce que PPP reprend

@@ -37,28 +37,32 @@ espace_valeurs:
   regions:
   - cle: weak
     label_fr: faible
-    label_en: weak
+    label_en: slight
     rang: 1
     repere: les deux termes se distinguent à peine, ou pas, sur la dimension comparée
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-0302
   - cle: moderate
     label_fr: modéré
     label_en: moderate
     rang: 2
     repere: l’écart se voit à l’examen, sans s’imposer à distance
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-0303
   - cle: marked
     label_fr: évident
-    label_en: marked
+    label_en: evident
     rang: 3
     repere: l’écart se voit d’emblée, à distance de pièce
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-0304
   - cle: strong
     label_fr: maximal
-    label_en: strong
+    label_en: maximal
     rang: 4
     repere: les deux termes sont aux extrémités ou près des extrémités de la dimension comparée
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-0305
 identite: Un écart entre deux termes, pas une qualité d’un seul porteur (la clarté d’une zone n’est pas un contraste de clarté).
 relations: []
 ontoClean:
@@ -122,10 +126,15 @@ modifie_en:
 - version: '2.6'
   motif: série 7
   decision: éditeur du projet, 2026-10-11
+- version: '2.8'
+  motif: série 29, label_en des régions (slight, evident, maximal)
+  decision: demande de la relecture explicative, 2026-10-12 (publication bilingue)
 remplace_par: []
 a_relire: []
+remarque:
+- 'série 29 (2026-10-12, demande de la relecture explicative pour la publication bilingue) : label_en des régions weak, marked, strong : slight, evident, maximal (moderate inchangé ; clés inchangées), comme les labels FR faible, modéré, évident, maximal ; à relire ; validé en série 31'
 relecture_explicative:
-  date: '2026-10-11'
+  date: '2026-10-12'
   champs:
   - question_attentionnelle
   - définition
@@ -135,6 +144,7 @@ relecture_explicative:
   - references (série 6)
   - etat_de_l_art (re-confirmé en relecture explicative, série 9, 2026-10-11)
   - references (validé en relecture explicative, série 9, 2026-10-11)
+  - espace_valeurs.regions.label_en (validé en relecture explicative, série 31, 2026-10-12)
   a_reconfirmer: []
   reconfirme:
   - champ: question_attentionnelle
@@ -166,8 +176,6 @@ relecture_explicative:
       : glose de « rapport de luminances » (relecture explicative) ; relecture explicative (2026-10-11) : « combien de fois » (seconde relecture explicative)'
     remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
 manques:
-- régions `weak`, `moderate`, `marked` sans exemplaire du général
-- 'région `strong` : exemplaire à renseigner (ppp-a:pilote-0301, Shap Wells, retirée en 2.3.2, T24 : la rugosité de la dalle de droite n’est pas démontrée)'
+- 'exemplaires (au 2026-10-14) : 0302 faible, 0304 évident, 0305 maximal relus ; 0303 modéré, marqué discutable, non montré ; ppp-a:pilote-0301 reste retiré (T24)'
 - 'nombre et labels des régions : tranchés (T3, option A, décision de l’éditeur du projet, 2026-10-10)'
-- 'ne s’explique pas sans aide (relecture explicative, série 6) : exemple concret à trouver : le type est abstrait (la dimension comparée est libre) et n’a aucun exemplaire ; un exemple concret par dimension
-  comparée, ou un renvoi visible aux contrastes spécialisés'
+- 'ne s’explique pas sans aide (relecture explicative, série 6) : exemple concret : le type est abstrait (la dimension comparée est libre) ; au 2026-10-14, trois régions illustrées par des exemplaires relus, sur deux dimensions (clarté, teinte) ; reste à juger si cela suffit, ou s’il faut un renvoi visible aux contrastes spécialisés'

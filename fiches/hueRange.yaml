@@ -39,19 +39,22 @@ espace_valeurs:
     label_en: single hue
     rang: 1
     repere: toutes les couleurs de la zone ont la même teinte (un camaïeu de bleus, un ciel bleu sans nuage)
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-1201
   - cle: neighbouringHues
     label_fr: teintes voisines
     label_en: neighbouring hues
     rang: 2
     repere: des teintes voisines sur le cercle (un sous-bois en verts et jaunes sans feuilles brunes, une mer en bleus et verts)
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-1203
   - cle: distantHues
     label_fr: teintes éloignées
     label_en: distant hues
     rang: 3
     repere: des teintes éloignées ou opposées sur le cercle (un étal de fruits et légumes, un vitrail)
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-1202
 note_echelle: 'L’échelle mesure la distance, sur le cercle des couleurs, entre les teintes vues les plus éloignées, pas le nombre de teintes : une zone faite d’un rouge et d’un vert seulement, et une zone
   de six teintes réparties sur tout le cercle, tombent toutes deux dans `distantHues`. Le nombre de teintes n’est pas noté par ce type. Position de travail, révisable par l’éditeur du projet (T31). Sur
   le cercle des six teintes (T6) : des teintes voisines sont à un pas l’une de l’autre ; des teintes éloignées, à deux ou trois pas (trois pas : teintes opposées).'
@@ -134,7 +137,7 @@ modifie_en:
 remplace_par: []
 source_de_la_fiche: crash tests, partie 1 (spec 2.3, docs/questions-crash-tests.md C4) ; fiche préremplie le 2026-10-10 par l’équipe, champs en langage courant à valider par la relecture explicative
 manques:
-- 'exemplaires (à renseigner : objets publics vérifiés, un épisode par objet, conditions déclarées)'
+- 'exemplaires (au 2026-10-14) : 1201 une seule teinte, 1203 teintes voisines, 1202 teintes éloignées relus'
 bloque_par: []
 a_relire: []
 relecture_explicative:
