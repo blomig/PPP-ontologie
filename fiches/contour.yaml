@@ -41,19 +41,23 @@ espace_valeurs:
     label_en: sharp
     rang: 1
     repere: la transition est sans épaisseur perceptible (une découpe au cutter)
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-1901
   - cle: gradual
     label_fr: progressif
     label_en: gradual
     rang: 2
     repere: la transition a une largeur perceptible, mais on peut situer le bord (un chanfrein, un dégradé court)
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-1904
   - cle: blurred
     label_fr: flou
     label_en: blurred
     rang: 3
     repere: on ne peut pas situer le bord (une ombre portée diffuse)
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-1902
+    - ppp-a:pilote-1903
 identite: Netteté du bord, pas le tracé de la forme (silhouette), pas la continuité du bord.
 relations:
 - type: confusableWith
@@ -85,8 +89,7 @@ references:
   reprend: rien
   ne_reprend_pas: l'estimation calculée du flou d'un bord sur une image
 etat_de_l_art: 'La netteté d’un bord est étudiée en psychophysique, la mesure de ce que l’on perçoit : Mather et Smith (2002) [[mather_smith2002]] mesurent à quel point on distingue deux degrés de flou,
-  et montrent que cette distinction est grossière. En vision par ordinateur, Elder et Zucker (1998) [[elder_zucker1998]] estiment le flou d’un bord sur une image. Aucune source trouvée ne fixe des régions
-  perçues de netteté ; l’échelle reste ouverte (T7). Détail : docs/bibliographie-par-type.md#groupe-forme.'
+  et montrent que cette distinction est grossière. En vision par ordinateur, Elder et Zucker (1998) [[elder_zucker1998]] estiment le flou d’un bord sur une image. Aucune source trouvée ne fixe des régions perçues de netteté ; l’échelle retenue (netteté seule, trois régions) est une décision du projet (T7, série 48). Détail : docs/bibliographie-par-type.md#groupe-forme.'
 etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-forme
 axiomes:
 - conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
@@ -120,11 +123,10 @@ modifie_en:
 remplace_par: []
 source_de_la_fiche: 'maquette (fiche minimale : définition et question v0.2) ; la définition v0.2 « qualité de la limite entre une forme et son environnement » est resserrée sur la netteté'
 manques:
-- exemplaires
-- 'échelle : position de travail (T7)'
+- 'exemplaires (lot 1 et lot 1 bis, 2026-10-14) : 1901 franc, 1904 progressif, 1902 et 1903 flou ; aucun n’est encore relu'
+- 'échelle : netteté seule, décidée (T7, série 48) ; continuité du bord : ppp:contourContinuity, réservé sans fiche'
 - label EN « contour » conservé ; à revoir avec la décision T18 (non tranché pour l’anglais)
-bloque_par:
-- 'T7 (échelle : netteté seule, continuité du bord sans id)'
+bloque_par: []
 a_relire: []
 relecture_explicative:
   date: '2026-10-10'

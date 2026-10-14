@@ -127,9 +127,8 @@ source_de_la_fiche: 'ex-« rugosité » v0.2 ; la définition v0.2 portait une v
   : c’est de la texture (annexe A alignée en série 24, T19)'
 manques:
 - exemplaires
-- 'base de dépendance : proposition (texture, contour)'
-bloque_par:
-- 'T11 (base proposée : texture, netteté du bord)'
+- 'base de dépendance (texture, netteté du bord) confirmée (T11, série 48), révisable après épreuve'
+bloque_par: []
 a_relire: []
 relecture_explicative:
   date: '2026-10-10'

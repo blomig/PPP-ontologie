@@ -37,19 +37,22 @@ espace_valeurs:
     label_en: asymmetric
     rang: 1
     repere: aucune correspondance perçue entre deux moitiés
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-2201
   - cle: nearSymmetric
     label_fr: presque symétrique
     label_en: near-symmetric
     rang: 2
     repere: correspondance d’ensemble, avec des écarts visibles
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-2202
   - cle: symmetric
     label_fr: symétrique
     label_en: symmetric
     rang: 3
     repere: les deux moitiés paraissent se correspondre exactement
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-2203
 identite: Correspondance de part et d’autre d’un axe ou d’un centre, pas la régularité d’une répartition (distribution).
 relations:
 - type: confusableWith
@@ -82,7 +85,7 @@ references:
   verifie_le: '2026-10-10'
   verifie_sur: métadonnées Crossref et résumé
   reprend: la distinction perçue entre symétrie et répétition (T9)
-  ne_reprend_pas: leur interprétation par le codage structural ; T9 reste ouvert
+  ne_reprend_pas: 'leur interprétation par le codage structural ; T9 : la translation reste ouverte'
 - id: wagemans2012
   citation: 'Wagemans, J., Elder, J. H., Kubovy, M., Palmer, S. E., Peterson, M. A., Singh, M. & von der Heydt, R. (2012). A century of Gestalt psychology in visual perception: I. Perceptual grouping and
     figure–ground organization. Psychological Bulletin, 138(6), 1172–1217.'
@@ -130,10 +133,9 @@ modifie_en:
 remplace_par: []
 source_de_la_fiche: paire v0.2 « symétrie / asymétrie », reclassée en régions (spec §9.5)
 manques:
-- 'sorte de symétrie (axiale, centrale…) : facette ou autre type ? (T9)'
-- exemplaires
-bloque_par:
-- 'T9 (sorte de symétrie : axiale, centrale, par translation)'
+- 'sorte de symétrie (axiale, centrale) non modélisée en V1 (décision de l’éditeur du projet du 2026-10-14, série 48) ; la translation reste ouverte (T9)'
+- 'exemplaires (lot 1, 2026-10-14) : 2201 asymétrique, 2202 presque symétrique, 2203 symétrique ; aucun n’est encore relu'
+bloque_par: []
 a_relire: []
 relecture_explicative:
   date: '2026-10-10'

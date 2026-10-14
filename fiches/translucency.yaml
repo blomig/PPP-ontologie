@@ -33,6 +33,7 @@ conditions_critiques:
 - presentation
 note_conditions: la transparence se juge à contre-jour ou devant un fond ; valeur `backlit` de la facette lumière proposée en spec 2.3.1 (T23)
 porteur: une partie ou un objet vu avec son épaisseur (une plaque, une paroi, un récipient)
+note_porteur: 'Couche mince posée sur un support opaque (un vernis, une laque, une glaçure) : la couche est une partie (§9.7 I). Sa transparence se juge par ce qu’elle laisse voir du support, qui tient lieu de fond, à condition que le support montre quelque chose à reconnaître (sous un vernis clair, on voit nettement le veinage du bois : `transparent`) ; ou sur un échantillon de la même couche, seul, devant un fond ou à contre-jour. Si l’on ne peut faire ni l’un ni l’autre (par exemple sur un support uni), on écrit « non tranché », jamais `opaque` par défaut. Position de travail prudente (C12, docs/questions-crash-tests.md) ; le cas met à l’épreuve la base de `ppp:subsurfaceDepth` (E3).'
 arité: 1
 condition_NA: 'porteur sans matière (une lumière, une ombre). Une matière qu’on ne peut voir ni à contre-jour ni devant un fond reste applicable : « non tranché » plutôt que non applicable.'
 espace_valeurs:
@@ -45,19 +46,22 @@ espace_valeurs:
     label_en: opaque
     rang: 1
     repere: on ne voit rien à travers, même à contre-jour (une planche de bois, une tôle)
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-2304
   - cle: translucent
     label_fr: translucide
     label_en: translucent
     rang: 2
     repere: la lumière passe, mais on ne distingue pas les formes derrière (un verre dépoli, un abat-jour en papier)
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-2302
   - cle: transparent
     label_fr: transparent
     label_en: transparent
     rang: 3
     repere: on voit nettement les formes derrière (une vitre propre, l’eau claire d’un verre)
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-2303
 identite: Ce qu’on voit à travers une matière, pas sa clarté (un verre sombre peut être transparent), pas ses reflets (brillance de surface), pas l’impression de voir dans son épaisseur (profondeur dans
   la matière).
 relations:
@@ -153,9 +157,10 @@ modifie_en:
 remplace_par: []
 source_de_la_fiche: crash tests, partie 1 (spec 2.3, docs/questions-crash-tests.md C4) ; fiche préremplie le 2026-10-10 par l’équipe, champs en langage courant à valider par la relecture explicative
 manques:
-- 'exemplaires (à renseigner : objets publics vérifiés, un épisode par objet, conditions déclarées)'
-bloque_par:
-- 'C4 (docs/questions-crash-tests.md : verdicts et labels des nouveaux candidats)'
+- 'strate : « formel » tient comme position de travail, avec une réserve (série 47 bis) : on juge en partie la netteté des formes vues à travers ; ce n’est pas l’objection du §0.3, car c’est un effet de la matière, pas le bord d’un autre porteur ; confirmé par l’éditeur du projet le 2026-10-14 (série 48 ; famille « matière », formel comme position de travail)'
+- 'règle de porteur pour une couche mince sur un support opaque (C12) : écrite dans note_porteur au lot 2 (2026-10-14), position de travail, validée par la relecture explicative (lot 2 bis)'
+- 'exemplaires (lot 2, 2026-10-14) : 2304 opaque, 2302 translucide, 2303 transparent ; aucun n’est encore relu ; 2301 retirée (planche vue de dessus, lot 2 bis)'
+bloque_par: []
 a_relire: []
 relecture_explicative:
   date: '2026-10-11'
@@ -173,6 +178,7 @@ relecture_explicative:
   - references (série 6)
   - avertissement_label (re-confirmé en relecture explicative, série 9, 2026-10-11)
   - note_conditions (re-confirmé en relecture explicative, série 9, 2026-10-11)
+  - note_porteur (C12, lot 2 bis, 2026-10-14)
   a_reconfirmer: []
   reconfirme:
   - champ: définition

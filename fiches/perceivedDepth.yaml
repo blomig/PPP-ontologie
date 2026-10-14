@@ -144,11 +144,9 @@ modifie_en:
 remplace_par: []
 source_de_la_fiche: crash tests, partie 1 (spec 2.3, docs/questions-crash-tests.md C4) ; fiche préremplie le 2026-10-10 par l’équipe, champs en langage courant à valider par la relecture explicative
 manques:
+- 'strate formelle, à vérifier par l’épreuve E3 (deux scènes égales en netteté des bords et en tailles perçues peuvent-elles différer en profondeur ?) (décision de l’éditeur du projet du 2026-10-14, série 48 ; T25)'
 - 'exemplaires (à renseigner : objets publics vérifiés, un épisode par objet, conditions déclarées)'
-- 'strate : formelle ou semi-formelle (base netteté du bord, taille perçue : option de T25) ? (T25)'
-bloque_par:
-- C4 point 4 (une ou deux profondeurs)
-- T25 (strate ; label canonique « étagement en plans »)
+bloque_par: []
 a_relire: []
 remarque:
 - 'série 29 (2026-10-12, demande de la relecture explicative pour la publication bilingue) : label_en « perceived depth » remplacé par « layering into planes » ; ancien label anglais gardé ici, faute de champ pour les labels alternatifs anglais (labels_alternatifs est en français) ; avertissement_label aligné ; à relire ; validé en série 31'

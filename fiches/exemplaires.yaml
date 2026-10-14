@@ -511,7 +511,7 @@ objets:
     licence_affichee: "CC BY-SA 4.0"
     auteur_image: "Rhododendrites"
     regime: "objet naturel (fruits)"
-    parties: ["#citron", "#citron-vert", "#ensemble"]
+    parties: ["#citron", "#citron-vert", "#ensemble", "#ombre-portee"]   # lot 1 : #ombre-portee (ombre des fruits sur le fond), à relire
     droits: "CC BY-SA 4.0, Rhododendrites, image reproduite"
     credit:   # série 44 : relevé par l’API de Wikimedia Commons (extmetadata) et la page du fichier le 2026-10-14 ; à relire
       auteur: "Rhododendrites"
@@ -669,6 +669,294 @@ objets:
       usage: image_reproduite
       motif_usage: "CC BY-SA 4.0 (API Commons, 2026-10-14 ; attribution requise) : réellement libre, reproduite avec la mention complète (titre, auteur, lien, licence)"
 
+  - id: app:commons-brastad-fog-trees
+    description: "arbres et réverbères le long d’une route, de nuit, dans le brouillard, près du stade de Brastad (commune de Lysekil, Suède) (description de la page Commons : « Trees around Brastad soccer arena on a foggy night »), 2019"
+    page_objet: null   # série lot 1 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:Trees_around_Brastad_soccer_arena_in_fog_(19).jpg
+    licence_affichee: "CC0 1.0"
+    auteur_image: "W.carter"
+    regime: "scène (route et arbres de nuit, brouillard)"
+    parties: ["#halo-reverbere", "#arbres"]
+    droits: "CC0 1.0, W.carter, image reproduite"
+    credit:   # lot 1 : relevé par l’API de Wikimedia Commons (extmetadata) et le wikitexte de la page du fichier le 2026-10-14 ; à relire
+      auteur: "W.carter"
+      licence: "CC0 1.0"
+      source: "Wikimedia Commons, « Own work »"
+      url: "https://commons.wikimedia.org/wiki/File:Trees_around_Brastad_soccer_arena_in_fog_(19).jpg"
+      date_verification: "2026-10-14"
+      mention_requise: "aucune exigée par la licence ; mention d’usage proposée : « Trees around Brastad soccer arena in fog (19), W.carter (Wikimedia Commons, CC0 1.0) »"
+      usage: image_reproduite
+      motif_usage: "CC0 1.0 (API Commons, 2026-10-14 : LicenseShortName « CC0 », AttributionRequired false) : réellement libre ; crédit d’usage complet"
+  - id: app:commons-adams-tetons-snake-river
+    description: "Ansel Adams, The Tetons and the Snake River, 1942, parc national de Grand Teton (Wyoming), photographie en noir et blanc ; National Archives and Records Administration, Records of the National Park Service (79-AAG-1) (description de la page Commons)"
+    page_objet: null   # série lot 1 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:Adams_The_Tetons_and_the_Snake_River.jpg
+    licence_affichee: "domaine public (balise Commons PD-USGov ; API : LicenseShortName « Public domain », AttributionRequired false)"
+    auteur_image: "Ansel Adams"
+    regime: "photographie (paysage, noir et blanc)"
+    parties: ["#paysage"]
+    droits: "domaine public (PD-USGov), Ansel Adams, image reproduite"
+    credit:   # lot 1 : relevé par l’API de Wikimedia Commons (extmetadata) et le wikitexte de la page du fichier le 2026-10-14 ; à relire
+      auteur: "Ansel Adams"
+      licence: "domaine public (balise Commons PD-USGov ; API : LicenseShortName « Public domain », AttributionRequired false)"
+      source: "Wikimedia Commons ; source déclarée : National Archives and Records Administration (79-AAG-1)"
+      url: "https://commons.wikimedia.org/wiki/File:Adams_The_Tetons_and_the_Snake_River.jpg"
+      date_verification: "2026-10-14"
+      mention_requise: "aucune exigée par la licence ; mention d’usage proposée : « Adams The Tetons and the Snake River, Ansel Adams (Wikimedia Commons, domaine public (PD-USGov)) »"
+      usage: image_reproduite
+      motif_usage: "domaine public (balise Commons PD-USGov ; API : LicenseShortName « Public domain », AttributionRequired false) : œuvre réalisée pour le gouvernement fédéral des États-Unis ; réellement libre ; crédit d’usage complet (auteur nommé : droit moral)"
+  - id: app:commons-empty-wooden-chessboard
+    description: "échiquier de bois vide, posé à plat, cases claires et cases plus foncées (description de la page Commons : « A wooden chessboard with no pieces »), date inconnue"
+    page_objet: null   # série lot 1 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:Empty_wooden_chessboard.jpg
+    licence_affichee: "CC0 1.0"
+    auteur_image: "Paul Lloyd"
+    regime: "objet conçu (échiquier de bois)"
+    parties: ["#damier", "#arete-du-cadre"]
+    droits: "CC0 1.0, Paul Lloyd, image reproduite"
+    credit:   # lot 1 : relevé par l’API de Wikimedia Commons (extmetadata) et le wikitexte de la page du fichier le 2026-10-14 ; à relire
+      auteur: "Paul Lloyd"
+      licence: "CC0 1.0"
+      source: "Wikimedia Commons ; source déclarée : publicdomainpictures.net (image 33271)"
+      url: "https://commons.wikimedia.org/wiki/File:Empty_wooden_chessboard.jpg"
+      date_verification: "2026-10-14"
+      mention_requise: "aucune exigée par la licence ; mention d’usage proposée : « Empty wooden chessboard, Paul Lloyd (Wikimedia Commons, CC0 1.0) »"
+      usage: image_reproduite
+      motif_usage: "CC0 1.0 (API Commons, 2026-10-14 : LicenseShortName « CC0 », AttributionRequired false ; balise Cc-zero) : réellement libre ; crédit d’usage complet"
+  - id: app:commons-nhm-ornithoptera-paradisea
+    description: "spécimen de papillon (Ornithoptera paradisea, mâle), vu de dessus, ailes étalées sur un fond gris, avec étiquettes et échelle en millimètres ; Natural History Museum, Londres (NHMUK 013605460) (description de la page Commons), 2019"
+    page_objet: null   # série lot 1 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:013605460_Ornithoptera_paradisea_dorsal_male.jpg
+    licence_affichee: "CC BY 4.0"
+    auteur_image: "Peter Wing"
+    regime: "spécimen naturalisé (photo de collection)"
+    parties: ["#planche", "#papillon"]   # la page Commons porte {{Do not crop}} : image reproduite entière ; #papillon et #planche sont des parties, pas des recadrages
+    droits: "CC BY 4.0, Peter Wing, image reproduite"
+    credit:   # lot 1 : relevé par l’API de Wikimedia Commons (extmetadata) et le wikitexte de la page du fichier le 2026-10-14 ; à relire
+      auteur: "Peter Wing"
+      licence: "CC BY 4.0"
+      source: "Wikimedia Commons ; source déclarée : data.nhm.ac.uk (Natural History Museum, Londres)"
+      url: "https://commons.wikimedia.org/wiki/File:013605460_Ornithoptera_paradisea_dorsal_male.jpg"
+      date_verification: "2026-10-14"
+      mention_requise: "« 013605460 Ornithoptera paradisea dorsal male », Peter Wing, https://commons.wikimedia.org/wiki/File:013605460_Ornithoptera_paradisea_dorsal_male.jpg, licence CC BY 4.0 (https://creativecommons.org/licenses/by/4.0) ; signaler les modifications si l’on diffuse une adaptation"
+      usage: image_reproduite
+      motif_usage: "CC BY 4.0 (API Commons, 2026-10-14 ; attribution requise) : réellement libre, reproduite avec la mention complète (titre, auteur, lien, licence)"
+  - id: app:commons-taj-mahal-front
+    description: "le Taj Mahal (Agra, Uttar Pradesh), vu de face, avec ses quatre minarets, au coucher du soleil (description de la page Commons : « A sunset view of Taj Mahal »), 2019 ; quelques visiteurs, minuscules, au pied du monument"
+    page_objet: null   # série lot 1 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:The_symmetrical_front_view_of_Taj_Mahal.jpg
+    licence_affichee: "CC BY-SA 4.0"
+    auteur_image: "Chandrasen31"
+    regime: "bâtiment (monument, vue de face)"
+    parties: ["#facade-et-minarets", "#facade-et-coupole"]   # lot 1 bis : 2203 porte sur #facade-et-coupole
+    droits: "CC BY-SA 4.0, Chandrasen31, image reproduite"
+    credit:   # lot 1 : relevé par l’API de Wikimedia Commons (extmetadata) et le wikitexte de la page du fichier le 2026-10-14 ; à relire
+      auteur: "Chandrasen31"
+      licence: "CC BY-SA 4.0"
+      source: "Wikimedia Commons, « Own work »"
+      url: "https://commons.wikimedia.org/wiki/File:The_symmetrical_front_view_of_Taj_Mahal.jpg"
+      date_verification: "2026-10-14"
+      mention_requise: "« The symmetrical front view of Taj Mahal », Chandrasen31, https://commons.wikimedia.org/wiki/File:The_symmetrical_front_view_of_Taj_Mahal.jpg, licence CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0) ; signaler les modifications si l’on diffuse une adaptation, qui se diffuse sous la même licence"
+      usage: image_reproduite
+      motif_usage: "CC BY-SA 4.0 (API Commons, 2026-10-14 ; attribution requise) : réellement libre, reproduite avec la mention complète (titre, auteur, lien, licence) ; les visiteurs, minuscules, ne sont pas identifiables"
+  - id: app:commons-aresquiers-driftwood
+    description: "tronc d’arbre échoué sur la plage des Aresquiers (Frontignan, Hérault), au soleil couchant (description de la page Commons : « Tree trunk on the beach \"Les Aresquiers\" »), 2017"
+    page_objet: null   # série lot 1 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:Tronc_d%27arbre_aux_Aresquiers.jpg
+    licence_affichee: "CC BY 4.0 (triple licence : aussi Attribution et Licence Art Libre, FAL)"
+    auteur_image: "Christian Ferrer"
+    regime: "objet naturel (bois flotté, in situ)"
+    parties: ["#tronc"]
+    droits: "CC BY 4.0, Christian Ferrer, image reproduite"
+    credit:   # lot 1 : relevé par l’API de Wikimedia Commons (extmetadata) et le wikitexte de la page du fichier le 2026-10-14 ; à relire
+      auteur: "Christian Ferrer"
+      licence: "CC BY 4.0 (triple licence : aussi Attribution et Licence Art Libre, FAL)"
+      source: "Wikimedia Commons, « Own work »"
+      url: "https://commons.wikimedia.org/wiki/File:Tronc_d%27arbre_aux_Aresquiers.jpg"
+      date_verification: "2026-10-14"
+      mention_requise: "« Tronc d’arbre aux Aresquiers », Christian Ferrer, https://commons.wikimedia.org/wiki/File:Tronc_d%27arbre_aux_Aresquiers.jpg, licence CC BY 4.0 (https://creativecommons.org/licenses/by/4.0) ; signaler les modifications si l’on diffuse une adaptation"
+      usage: image_reproduite
+      motif_usage: "CC BY 4.0 (API Commons, 2026-10-14 ; attribution requise ; triple licence, balise Self|Cc-by-4.0|Attribution|FAL) : réellement libre, reproduite avec la mention complète (titre, auteur, lien, licence)"
+  - id: app:commons-engraved-sherry-glass
+    description: "verre à sherry gravé, détail : le haut de la coupe, vu un peu d’au-dessus, devant un fond gris uni (description de la page Commons : « Engraved Sherry glass - detail »), 2023"
+    page_objet: null   # série lot 2 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:Engraved_drinking_glass_01.jpg
+    licence_affichee: "CC BY-SA 4.0"
+    auteur_image: "Kritzolina"
+    regime: "objet conçu (verre gravé)"
+    parties: ["#paroi", "#bord-arriere"]   # #paroi = la partie lisse de la paroi avant, entre les feuilles gravées
+    droits: "CC BY-SA 4.0, Kritzolina, image reproduite"
+    credit:   # lot 2 : relevé par l’API de Wikimedia Commons (extmetadata) et le wikitexte de la page du fichier le 2026-10-14 ; à relire
+      auteur: "Kritzolina"
+      licence: "CC BY-SA 4.0"
+      source: "Wikimedia Commons, « Own work »"
+      url: "https://commons.wikimedia.org/wiki/File:Engraved_drinking_glass_01.jpg"
+      date_verification: "2026-10-14"
+      mention_requise: "« Engraved drinking glass 01 », Kritzolina, https://commons.wikimedia.org/wiki/File:Engraved_drinking_glass_01.jpg, licence CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0) ; signaler les modifications si l’on diffuse une adaptation, qui se diffuse sous la même licence"
+      usage: image_reproduite
+      motif_usage: "CC BY-SA 4.0 (API Commons, 2026-10-14 ; attribution requise) : réellement libre, reproduite avec la mention complète (titre, auteur, lien, licence)"
+  - id: app:commons-line-of-lanterns
+    description: "rangée de lanternes de papier rouges et blanches, allumées, de nuit, portant l’inscription 生ビール (« bière pression »), mot courant, sans logo (page Commons « Line of lanterns (Unsplash) »), 2015"
+    page_objet: null   # série lot 2 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:Line_of_lanterns_(Unsplash).jpg
+    licence_affichee: "CC0 1.0"
+    auteur_image: "kazuend"
+    regime: "objet conçu (lanternes de papier allumées)"
+    parties: ["#lanterne-centrale", "#lanterne-la-plus-claire"]   # #lanterne-la-plus-claire = la deuxième en partant de la droite
+    droits: "CC0 1.0, kazuend, image reproduite"
+    credit:   # lot 2 : relevé par l’API de Wikimedia Commons (extmetadata) et le wikitexte de la page du fichier le 2026-10-14 ; à relire
+      auteur: "kazuend"
+      licence: "CC0 1.0"
+      source: "Wikimedia Commons ; source déclarée : Unsplash (photo bEO3lLrNmDA), copie Wayback indiquée sur la page"
+      url: "https://commons.wikimedia.org/wiki/File:Line_of_lanterns_(Unsplash).jpg"
+      date_verification: "2026-10-14"
+      mention_requise: "aucune exigée par la licence ; mention d’usage proposée : « Line of lanterns (Unsplash), kazuend (Wikimedia Commons, CC0 1.0) »"
+      usage: image_reproduite
+      motif_usage: "CC0 1.0 (API Commons, 2026-10-14 : LicenseShortName « CC0 », AttributionRequired false) : réellement libre ; crédit d’usage complet ; licence pas encore revue par Commons (catégorie review needed) ; publication de 2015 et copie Wayback du 2017-05-04, antérieures au 5 juin 2017"
+  - id: app:commons-weatherworn-planks
+    description: "planches grises patinées d’une table de bois devant une cabane de pêcheur, Loddebo (commune de Lysekil, Suède) (description de la page Commons) ; image composée de quatre photos (empilement de mise au point, « focus stacked »), 2017"
+    page_objet: null   # série lot 2 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:Weatherworn_planks_on_top_of_wooden_table.jpg
+    licence_affichee: "CC0 1.0"
+    auteur_image: "W.carter"
+    regime: "objet conçu (table de bois patinée)"
+    parties: ["#planche-centrale"]
+    droits: "CC0 1.0, W.carter, image reproduite"
+    credit:   # lot 2 : relevé par l’API de Wikimedia Commons (extmetadata) et le wikitexte de la page du fichier le 2026-10-14 ; à relire
+      auteur: "W.carter"
+      licence: "CC0 1.0"
+      source: "Wikimedia Commons, « Own work »"
+      url: "https://commons.wikimedia.org/wiki/File:Weatherworn_planks_on_top_of_wooden_table.jpg"
+      date_verification: "2026-10-14"
+      mention_requise: "aucune exigée par la licence ; mention d’usage proposée : « Weatherworn planks on top of wooden table, W.carter (Wikimedia Commons, CC0 1.0) »"
+      usage: image_reproduite
+      motif_usage: "CC0 1.0 (API Commons, 2026-10-14 : LicenseShortName « CC0 », AttributionRequired false) : réellement libre ; crédit d’usage complet ; image composée (focus stacking), déclarée comme retouchée"
+  - id: app:commons-school-rulers
+    description: "cinq règles posées côte à côte (deux en acier inoxydable, deux en plastique transparent, une en bois), vues de dessus (description de la page Commons : « Rules with a dual scale - imperial and metric »), 2024 ; une marque lisible sur une règle (Westcott)"
+    page_objet: null   # série lot 2 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:School_Rulers.jpg
+    licence_affichee: "CC0 1.0"
+    auteur_image: "Estabiano"
+    regime: "objet conçu (règles graduées)"
+    parties: ["#bord-regle-acier"]
+    droits: "CC0 1.0, Estabiano, image reproduite"
+    credit:   # lot 2 : relevé par l’API de Wikimedia Commons (extmetadata) et le wikitexte de la page du fichier le 2026-10-14 ; à relire
+      auteur: "Estabiano"
+      licence: "CC0 1.0"
+      source: "Wikimedia Commons, « Own work »"
+      url: "https://commons.wikimedia.org/wiki/File:School_Rulers.jpg"
+      date_verification: "2026-10-14"
+      mention_requise: "aucune exigée par la licence ; mention d’usage proposée : « School Rulers, Estabiano (Wikimedia Commons, CC0 1.0) »"
+      usage: image_reproduite
+      motif_usage: "CC0 1.0 (API Commons, 2026-10-14 : LicenseShortName « CC0 », AttributionRequired false) : réellement libre ; crédit d’usage complet ; marque lisible sur l’image (Westcott) : signalée comme restriction, elle suit l’image"
+  - id: app:commons-egg-white-background
+    description: "un œuf brun sur fond blanc (page Commons « Egg on white background ») ; fond d’un blanc uni, apparemment obtenu par détourage (image retouchée), date inconnue"
+    page_objet: null   # série lot 2 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:Egg_on_white_background.jpg
+    licence_affichee: "domaine public (balise Commons PD-author ; API : LicenseShortName « Public domain », AttributionRequired false)"
+    auteur_image: "Paolo Neo"
+    regime: "objet naturel (œuf)"
+    parties: ["#oeuf", "#bout-gauche", "#flanc-superieur"]   # #flanc-superieur = le milieu du dessus de l’œuf, sur un tiers de sa longueur
+    droits: "domaine public (PD-author), Paolo Neo, image reproduite"
+    credit:   # lot 2 : relevé par l’API de Wikimedia Commons (extmetadata) et le wikitexte de la page du fichier le 2026-10-14 ; à relire
+      auteur: "Paolo Neo"
+      licence: "domaine public (balise Commons PD-author ; API : LicenseShortName « Public domain », AttributionRequired false)"
+      source: "Wikimedia Commons ; source déclarée : public-domain-image.com"
+      url: "https://commons.wikimedia.org/wiki/File:Egg_on_white_background.jpg"
+      date_verification: "2026-10-14"
+      mention_requise: "aucune exigée par la licence ; mention d’usage proposée : « Egg on white background, Paolo Neo (Wikimedia Commons, domaine public (PD-author)) »"
+      usage: image_reproduite
+      motif_usage: "domaine public (balise Commons PD-author ; API : LicenseShortName « Public domain », AttributionRequired false) : réellement libre ; crédit d’usage complet ; la balise PD-author n’a pas de revue de licence"
+  - id: app:commons-stonehenge-trilithon
+    description: "un trilithe de Stonehenge (Wiltshire) : deux pierres dressées et un linteau, vus de face, depuis le sol (description de la page Commons : « One of many trilithons in Stonehenge »), 2016"
+    page_objet: null   # série lot 2 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:A_Stonehenge_trilithon.jpg
+    licence_affichee: "CC BY 4.0"
+    auteur_image: "TobyEditor"
+    regime: "monument (pierres dressées)"
+    parties: ["#trilithon", "#arete-inferieure-linteau", "#linteau"]
+    droits: "CC BY 4.0, TobyEditor, image reproduite"
+    credit:   # lot 2 : relevé par l’API de Wikimedia Commons (extmetadata) et le wikitexte de la page du fichier le 2026-10-14 ; à relire
+      auteur: "TobyEditor"
+      licence: "CC BY 4.0"
+      source: "Wikimedia Commons, « Own work »"
+      url: "https://commons.wikimedia.org/wiki/File:A_Stonehenge_trilithon.jpg"
+      date_verification: "2026-10-14"
+      mention_requise: "« A Stonehenge trilithon », TobyEditor, https://commons.wikimedia.org/wiki/File:A_Stonehenge_trilithon.jpg, licence CC BY 4.0 (https://creativecommons.org/licenses/by/4.0) ; signaler les modifications si l’on diffuse une adaptation"
+      usage: image_reproduite
+      motif_usage: "CC BY 4.0 (API Commons, 2026-10-14 ; attribution requise) : réellement libre, reproduite avec la mention complète (titre, auteur, lien, licence)"
+  - id: app:commons-bracken-frond
+    description: "fronde de fougère aigle (Pteridium), posée sur un fond blanc (description de la page Commons : « Bracken frond »), 2006"
+    page_objet: null   # série lot 2 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:Fern-leaf-oliv.jpg
+    licence_affichee: "CC BY 2.5 (licence multiple : aussi GFDL et CC BY-SA 3.0)"
+    auteur_image: "Olegivvit"
+    regime: "objet naturel (feuille de fougère)"
+    parties: ["#fronde"]
+    droits: "CC BY 2.5, Olegivvit, image reproduite"
+    credit:   # lot 2 : relevé par l’API de Wikimedia Commons (extmetadata) et le wikitexte de la page du fichier le 2026-10-14 ; à relire
+      auteur: "Olegivvit"
+      licence: "CC BY 2.5 (licence multiple : aussi GFDL et CC BY-SA 3.0)"
+      source: "Wikimedia Commons, « Own work » (auteur et source supposés par Commons d’après la déclaration de droits)"
+      url: "https://commons.wikimedia.org/wiki/File:Fern-leaf-oliv.jpg"
+      date_verification: "2026-10-14"
+      mention_requise: "« Fern-leaf-oliv », Olegivvit, https://commons.wikimedia.org/wiki/File:Fern-leaf-oliv.jpg, licence CC BY 2.5 (https://creativecommons.org/licenses/by/2.5) ; signaler les modifications si l’on diffuse une adaptation"
+      usage: image_reproduite
+      motif_usage: "CC BY 2.5 (API Commons, 2026-10-14 ; attribution requise) : réellement libre, reproduite avec la mention complète (titre, auteur, lien, licence) ; auteur « supposé » par Commons (modèle Author assumed)"
+  - id: app:commons-optical-illusion-vase
+    description: "dessin en noir et blanc : un vase noir dont les bords dessinent deux profils blancs face à face (illusion du vase de Rubin) (description de la page Commons : « Optical illusion, faces and vase »), 2009"
+    page_objet: null   # série lot 2 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:Optical_illusion_vase_2.png
+    licence_affichee: "domaine public (balise Commons PD-user-w ; API : LicenseShortName « Public domain », AttributionRequired false)"
+    auteur_image: "Περίεργος"
+    regime: "image (dessin)"
+    parties: ["#dessin"]
+    droits: "domaine public (PD-user-w), Περίεργος, image reproduite"
+    credit:   # lot 2 : relevé par l’API de Wikimedia Commons (extmetadata) et le wikitexte de la page du fichier le 2026-10-14 ; à relire
+      auteur: "Περίεργος"
+      licence: "domaine public (balise Commons PD-user-w ; API : LicenseShortName « Public domain », AttributionRequired false)"
+      source: "Wikimedia Commons, « Own work », transféré de la Wikipédia en grec"
+      url: "https://commons.wikimedia.org/wiki/File:Optical_illusion_vase_2.png"
+      date_verification: "2026-10-14"
+      mention_requise: "aucune exigée par la licence ; mention d’usage proposée : « Optical illusion vase 2, Περίεργος (Wikimedia Commons, domaine public (PD-user-w)) »"
+      usage: image_reproduite
+      motif_usage: "domaine public (balise Commons PD-user-w ; API : LicenseShortName « Public domain », AttributionRequired false) : réellement libre ; crédit d’usage complet"
+  - id: app:commons-white-paint-wall
+    description: "peinture blanche sur un mur, quelques minutes après l’application, traces de pinceau visibles (description de la page Commons : « White paint on a wall some minutes after application »), 2016 ; aucune retouche déclarée sur la page"
+    page_objet: null   # série lot 2 : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:White_paint_on_wall.jpg
+    licence_affichee: "CC BY-SA 4.0"
+    auteur_image: "Finn Årup Nielsen"
+    regime: "surface (mur peint)"
+    parties: ["#mur", "#tiers-gauche"]   # #tiers-gauche = le tiers gauche du mur, à la lumière égale
+    droits: "CC BY-SA 4.0, Finn Årup Nielsen, image reproduite"
+    credit:   # lot 2 : relevé par l’API de Wikimedia Commons (extmetadata) et le wikitexte de la page du fichier le 2026-10-14 ; à relire
+      auteur: "Finn Årup Nielsen"
+      licence: "CC BY-SA 4.0"
+      source: "Wikimedia Commons, « Own work »"
+      url: "https://commons.wikimedia.org/wiki/File:White_paint_on_wall.jpg"
+      date_verification: "2026-10-14"
+      mention_requise: "« White paint on wall », Finn Årup Nielsen, https://commons.wikimedia.org/wiki/File:White_paint_on_wall.jpg, licence CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0) ; signaler les modifications si l’on diffuse une adaptation, qui se diffuse sous la même licence"
+      usage: image_reproduite
+      motif_usage: "CC BY-SA 4.0 (API Commons, 2026-10-14 ; attribution requise) : réellement libre, reproduite avec la mention complète (titre, auteur, lien, licence)"
+  - id: app:commons-quercus-robur-leaf
+    description: "feuille de chêne pédonculé (Quercus robur), face supérieure, scannée sur fond blanc ; herbier de la ville d’Elektrostal (oblast de Moscou), collection D. Makeev (description de la page Commons : « Created by scanography », « These are original colors. Please do not make edit »), 2020"
+    page_objet: null   # lot 2 bis : seule la photo est documentée (photo citée comme objet, §9.7 H règle 7)
+    image: https://commons.wikimedia.org/wiki/File:Quercus_robur_leaf.jpg
+    licence_affichee: "CC BY-SA 4.0"
+    auteur_image: "Dmitry Makeev"
+    regime: "objet naturel (feuille d’herbier, scannée)"
+    parties: ["#feuille"]
+    droits: "CC BY-SA 4.0, Dmitry Makeev, image reproduite"
+    credit:   # lot 2 bis : relevé par l’API de Wikimedia Commons (extmetadata) et le wikitexte de la page du fichier le 2026-10-14 ; à relire
+      auteur: "Dmitry Makeev"
+      licence: "CC BY-SA 4.0"
+      source: "Wikimedia Commons, « Own work »"
+      url: "https://commons.wikimedia.org/wiki/File:Quercus_robur_leaf.jpg"
+      date_verification: "2026-10-14"
+      mention_requise: "« Quercus robur leaf », Dmitry Makeev, https://commons.wikimedia.org/wiki/File:Quercus_robur_leaf.jpg, licence CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0) ; signaler les modifications si l’on diffuse une adaptation, qui se diffuse sous la même licence"
+      usage: image_reproduite
+      motif_usage: "CC BY-SA 4.0 (API Commons, 2026-10-14 ; attribution requise) : réellement libre, reproduite avec la mention complète (titre, auteur, lien, licence) ; l’auteur demande de ne pas modifier l’image (« Please do not make edit ») : reproduite sans retouche"
 episodes:
   - id: ppp-e:pilote-01
     target: app:met-2011-201
@@ -926,7 +1214,125 @@ episodes:
     usesModality: [vision]
     observer: l’équipe (un seul observateur ; aucun accord déclaré)
     date: "2026-10-14"
-
+  - id: ppp-e:pilote-37
+    target: app:commons-brastad-fog-trees
+    observedUnder: {presentation: screen, lumiere: diffuse, distance: far, angle: frontal, duree: exam}
+    note_distance: "lumière, angle et distance estimés sur l’image (lot 1, 2026-10-14 ; spec §9.7 H, règle 7) : une route bordée d’arbres, de nuit, sur plusieurs dizaines de mètres, vue à hauteur d’homme ; lumière des réverbères diffusée par le brouillard"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+  - id: ppp-e:pilote-38
+    target: app:commons-adams-tetons-snake-river
+    observedUnder: {presentation: screen, lumiere: directional, distance: far, angle: oblique, duree: exam}
+    note_distance: "lumière, angle et distance estimés sur l’image (lot 1, 2026-10-14 ; spec §9.7 H, règle 7) : un paysage de montagne vu de haut, à plusieurs kilomètres ; soleil perçant entre les nuages, ombres marquées"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+  - id: ppp-e:pilote-39
+    target: app:commons-grey-concrete-wall
+    observedUnder: {presentation: screen, lumiere: diffuse, distance: near, angle: frontal, duree: exam}
+    note_distance: "lumière, angle et distance estimés sur l’image (lot 1, 2026-10-14 ; spec §9.7 H, règle 7) : un morceau de mur vu de face, cadré au grain près (quelques dizaines de centimètres) ; petites ombres douces ; image retouchée (texture raccordable)"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+  - id: ppp-e:pilote-40
+    target: app:commons-empty-wooden-chessboard
+    observedUnder: {presentation: screen, lumiere: diffuse, distance: near, angle: oblique, duree: exam}
+    note_distance: "lumière, angle et distance estimés sur l’image (lot 1, 2026-10-14 ; spec §9.7 H, règle 7) : un échiquier vu de trois quarts, en plongée, qu’on tiendrait à bout de bras ; ombres faibles, fond d’un blanc parfaitement uni, ajouté au détourage (image retouchée)"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+  - id: ppp-e:pilote-41
+    target: app:commons-nhm-ornithoptera-paradisea
+    observedUnder: {presentation: screen, lumiere: diffuse, distance: near, angle: frontal, duree: exam}
+    note_distance: "lumière, angle et distance estimés sur l’image (lot 1, 2026-10-14 ; spec §9.7 H, règle 7) : un spécimen vu à la verticale, cadre d’environ 17 cm (échelle en millimètres visible) ; éclairage de prise de vue de collection, sans ombre portée"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+  - id: ppp-e:pilote-42
+    target: app:commons-taj-mahal-front
+    observedUnder: {presentation: screen, lumiere: directional, distance: far, angle: frontal, duree: exam}
+    note_distance: "lumière, angle et distance estimés sur l’image (lot 1, 2026-10-14 ; spec §9.7 H, règle 7) : un monument vu presque dans l’axe, à plusieurs centaines de mètres ; soleil bas (d’après la description Commons)"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+  - id: ppp-e:pilote-43
+    target: app:commons-aresquiers-driftwood
+    observedUnder: {presentation: screen, lumiere: directional, distance: room, angle: oblique, duree: exam}
+    note_distance: "lumière, angle et distance estimés sur l’image (lot 1, 2026-10-14 ; spec §9.7 H, règle 7) : un tronc de quelques mètres vu de biais, couché sur la plage ; soleil rasant, ombres longues"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+  - id: ppp-e:pilote-44
+    target: app:commons-engraved-sherry-glass
+    observedUnder: {presentation: screen, lumiere: diffuse, distance: near, angle: oblique, duree: exam}
+    note_distance: "lumière, angle et distance estimés sur l’image (lot 2, 2026-10-14 ; spec §9.7 H, règle 7) : le haut d’un verre, cadre d’une dizaine de centimètres, vu un peu d’au-dessus ; lumière douce, sans reflet vif"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+  - id: ppp-e:pilote-45
+    target: app:commons-line-of-lanterns
+    observedUnder: {presentation: screen, lumiere: backlit, distance: near, angle: oblique, duree: exam}
+    note_distance: "lumière, angle et distance estimés sur l’image (lot 2, 2026-10-14 ; spec §9.7 H, règle 7) : des lanternes vues de biais, à un ou deux mètres, de nuit ; la lumière vient de l’intérieur, derrière le papier"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+  - id: ppp-e:pilote-46
+    target: app:commons-weatherworn-planks
+    observedUnder: {presentation: screen, lumiere: diffuse, distance: near, angle: oblique, duree: exam}
+    note_distance: "lumière, angle et distance estimés sur l’image (lot 2, 2026-10-14 ; spec §9.7 H, règle 7) : un dessus de table vu de biais, cadre d’une cinquantaine de centimètres ; lumière de jour sans ombre marquée ; image composée de quatre photos"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+  - id: ppp-e:pilote-47
+    target: app:commons-school-rulers
+    observedUnder: {presentation: screen, lumiere: diffuse, distance: near, angle: frontal, duree: exam}
+    note_distance: "lumière, angle et distance estimés sur l’image (lot 2, 2026-10-14 ; spec §9.7 H, règle 7) : des règles vues de dessus, cadre d’une trentaine de centimètres ; lumière douce"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+  - id: ppp-e:pilote-48
+    target: app:commons-egg-white-background
+    observedUnder: {presentation: screen, lumiere: diffuse, distance: near, angle: frontal, duree: exam}
+    note_distance: "lumière, angle et distance estimés sur l’image (lot 2, 2026-10-14 ; spec §9.7 H, règle 7) : un œuf vu de côté, en gros plan ; un reflet doux sur le dessus ; fond détouré"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+  - id: ppp-e:pilote-49
+    target: app:commons-stonehenge-trilithon
+    observedUnder: {presentation: screen, lumiere: diffuse, distance: far, angle: frontal, duree: exam}
+    note_distance: "lumière, angle et distance estimés sur l’image (lot 2, 2026-10-14 ; spec §9.7 H, règle 7) : un monument de plusieurs mètres de haut, vu depuis le sol, de face, à une dizaine de mètres ou plus ; ciel couvert"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+  - id: ppp-e:pilote-50
+    target: app:commons-bracken-frond
+    observedUnder: {presentation: screen, lumiere: directional, distance: near, angle: frontal, duree: exam}
+    note_distance: "lumière, angle et distance estimés sur l’image (lot 2, 2026-10-14 ; spec §9.7 H, règle 7) : une fronde vue de dessus, cadre d’une cinquantaine de centimètres ; ombres portées douces, décalées sur la gauche"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+  - id: ppp-e:pilote-51
+    target: app:commons-optical-illusion-vase
+    observedUnder: {presentation: screen, lumiere: unknown, distance: near, angle: frontal, duree: exam}
+    note_distance: "dessin, sans prise de vue : l’objet est l’image elle-même ; distance et angle sont ceux de l’écran (règle 7) ; lumière sans objet ; le type n’a pas de facette critique"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+  - id: ppp-e:pilote-52
+    target: app:commons-white-paint-wall
+    observedUnder: {presentation: screen, lumiere: diffuse, distance: near, angle: frontal, duree: exam}
+    note_distance: "lumière, angle et distance estimés sur l’image (lot 2, 2026-10-14 ; spec §9.7 H, règle 7) : un pan de mur vu de face, cadre d’une trentaine de centimètres ; lumière douce ; le mur s’assombrit de gauche à droite, et plus encore dans le coin en bas à droite ; seul le tiers gauche est égal"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
+  - id: ppp-e:pilote-53
+    target: app:commons-quercus-robur-leaf
+    observedUnder: {presentation: screen, lumiere: diffuse, distance: near, angle: frontal, duree: exam}
+    note_distance: "lumière, angle et distance estimés sur l’image (lot 2 bis, 2026-10-14 ; spec §9.7 H, règle 7) : une feuille scannée à plat, cadre d’une quinzaine de centimètres (échelle de la page : 1 unité = 1 mm) ; lumière égale du scanner, sans ombre"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-14"
 assertions:
   - id: ppp-a:pilote-0101
     about: app:met-2011-201#glacure-interieure
@@ -1625,6 +2031,330 @@ assertions:
     source: photo citée (Wikimedia Commons ; conditions de prise de vue inconnues)
     ontologyVersion: "2.8"
     note: "un reflet net de la source de lumière sur la peau, sans image"
+  - id: ppp-a:pilote-1901
+    about: app:commons-lemon-and-lime#citron
+    assertedType: ppp:contour
+    cardStatus: applicable et pertinent
+    inRegion: ppp:contour/sharp
+    inEpisode: ppp-e:pilote-28
+    modality: vision
+    source: photo citée (Wikimedia Commons ; prise de vue estimée sur l’image, §9.7 H règle 7)
+    ontologyVersion: "2.8"
+    note: "le bord du citron sur le fond clair : on peut le montrer exactement, il n’a pas d’épaisseur visible"
+    a_relire: oui   # lot 1 : exemplaire neuf, à relire (relecture_explicative.a_relire)
+  - id: ppp-a:pilote-1902
+    about: app:commons-lemon-and-lime#ombre-portee
+    assertedType: ppp:contour
+    cardStatus: applicable et pertinent
+    inRegion: ppp:contour/blurred
+    inEpisode: ppp-e:pilote-28
+    modality: vision
+    source: photo citée (Wikimedia Commons ; prise de vue estimée sur l’image, §9.7 H règle 7)
+    ontologyVersion: "2.8"
+    note: "l’ombre des fruits sur le fond : elle s’éclaircit peu à peu vers l’avant et sur les côtés, on ne peut pas dire où elle finit"
+    a_relire: oui   # lot 1 : exemplaire neuf, à relire (relecture_explicative.a_relire)
+  - id: ppp-a:pilote-1903
+    about: app:commons-brastad-fog-trees#halo-reverbere
+    assertedType: ppp:contour
+    cardStatus: applicable et pertinent
+    inRegion: ppp:contour/blurred
+    inEpisode: ppp-e:pilote-37
+    modality: vision
+    source: photo citée (Wikimedia Commons ; prise de vue estimée sur l’image, §9.7 H règle 7)
+    ontologyVersion: "2.8"
+    note: "le halo d’un réverbère dans le brouillard : la lueur s’éteint peu à peu, on ne peut pas dire où elle finit ; c’est le bord d’une lueur, pas d’un objet"
+    a_relire: oui   # lot 1 : exemplaire neuf, à relire (relecture_explicative.a_relire)
+  - id: ppp-a:pilote-1904
+    about: app:commons-empty-wooden-chessboard#arete-du-cadre
+    assertedType: ppp:contour
+    cardStatus: applicable et pertinent
+    inRegion: ppp:contour/gradual
+    inEpisode: ppp-e:pilote-40
+    modality: vision
+    source: photo citée (Wikimedia Commons ; prise de vue estimée sur l’image, §9.7 H règle 7)
+    ontologyVersion: "2.8"
+    note: "l’arête arrondie du cadre, entre le dessus et le côté : le passage du clair au plus foncé se fait sur une petite bande, mais on voit bien où passe l’arête"
+    a_relire: oui   # lot 1 bis : exemplaire neuf, à relire (relecture_explicative.a_relire)
+  - id: ppp-a:pilote-2001
+    about: app:commons-grey-concrete-wall#mur
+    assertedType: ppp:lightnessRange
+    cardStatus: applicable et pertinent
+    inRegion: ppp:lightnessRange/singleLightness
+    inEpisode: ppp-e:pilote-39
+    modality: vision
+    source: photo citée (Wikimedia Commons ; prise de vue estimée sur l’image, §9.7 H règle 7)
+    ontologyVersion: "2.8"
+    doute: oui
+    note: "un gris clair à peu près égal sur toute l’image ; les petits grains font de fines ombres, qui viennent de l’éclairage et non du mur ; l’image a été retouchée pour se raccorder bord à bord, ce qui a pu égaliser la clarté"
+    withdrawn: oui   # retiré le 2026-10-14 (lot 2 bis, la relecture) : image retouchée ; remplacé par ppp-a:pilote-2004 ; id non réutilisé
+    a_relire: oui   # lot 1 : exemplaire neuf, à relire (relecture_explicative.a_relire)
+  - id: ppp-a:pilote-2002
+    about: app:commons-empty-wooden-chessboard#damier
+    assertedType: ppp:lightnessRange
+    cardStatus: applicable et pertinent
+    inRegion: ppp:lightnessRange/closeLightnesses
+    inEpisode: ppp-e:pilote-40
+    modality: vision
+    source: photo citée (Wikimedia Commons ; prise de vue estimée sur l’image, §9.7 H règle 7)
+    ontologyVersion: "2.8"
+    note: "des cases de chêne clair et des cases de bois plus foncé : l’écart se voit bien, mais sans noir ni blanc, loin d’un damier noir et blanc"
+    a_relire: oui   # lot 1 : exemplaire neuf, à relire (relecture_explicative.a_relire)
+  - id: ppp-a:pilote-2003
+    about: app:commons-adams-tetons-snake-river#paysage
+    assertedType: ppp:lightnessRange
+    cardStatus: applicable et pertinent
+    inRegion: ppp:lightnessRange/distantLightnesses
+    inEpisode: ppp-e:pilote-38
+    modality: vision
+    source: photo citée (Wikimedia Commons ; prise de vue estimée sur l’image, §9.7 H règle 7)
+    ontologyVersion: "2.8"
+    note: "presque noir dans la forêt du premier plan, presque blanc dans la neige et la rivière éclairée"
+    a_relire: oui   # lot 1 : exemplaire neuf, à relire (relecture_explicative.a_relire)
+  - id: ppp-a:pilote-2101
+    about: app:commons-adams-tetons-snake-river#paysage
+    assertedType: ppp:saturationRange
+    cardStatus: applicable et pertinent
+    inRegion: ppp:saturationRange/singleSaturation
+    inEpisode: ppp-e:pilote-38
+    modality: vision
+    source: photo citée (Wikimedia Commons ; prise de vue estimée sur l’image, §9.7 H règle 7)
+    ontologyVersion: "2.8"
+    note: "une photo en noir et blanc : tout est gris, aucune couleur"
+    a_relire: oui   # lot 1 : exemplaire neuf, à relire (relecture_explicative.a_relire)
+  - id: ppp-a:pilote-2102
+    about: app:commons-empty-wooden-chessboard#damier
+    assertedType: ppp:saturationRange
+    cardStatus: applicable et pertinent
+    inRegion: ppp:saturationRange/closeSaturations
+    inEpisode: ppp-e:pilote-40
+    modality: vision
+    source: photo citée (Wikimedia Commons ; prise de vue estimée sur l’image, §9.7 H règle 7)
+    ontologyVersion: "2.8"
+    doute: oui
+    note: "des bruns orangés du bois, un peu plus ou un peu moins vifs selon les cases, sans gris ni couleur pure ; on peut défendre « une seule saturation »"
+    a_relire: oui   # lot 1 : exemplaire neuf, à relire (relecture_explicative.a_relire)
+  - id: ppp-a:pilote-2103
+    about: app:commons-nhm-ornithoptera-paradisea#planche
+    assertedType: ppp:saturationRange
+    cardStatus: applicable et pertinent
+    inRegion: ppp:saturationRange/distantSaturations
+    inEpisode: ppp-e:pilote-41
+    modality: vision
+    source: photo citée (Wikimedia Commons ; prise de vue estimée sur l’image, §9.7 H règle 7)
+    ontologyVersion: "2.8"
+    note: "un fond gris presque neutre et des ailes d’un vert-jaune très vif, avec le jaune du corps"
+    a_relire: oui   # lot 1 : exemplaire neuf, à relire (relecture_explicative.a_relire)
+  - id: ppp-a:pilote-2201
+    about: app:commons-aresquiers-driftwood#tronc
+    assertedType: ppp:symmetry
+    cardStatus: applicable et pertinent
+    inRegion: ppp:symmetry/asymmetric
+    inEpisode: ppp-e:pilote-43
+    modality: vision
+    source: photo citée (Wikimedia Commons ; prise de vue estimée sur l’image, §9.7 H règle 7)
+    ontologyVersion: "2.8"
+    note: "des branches cassées partant en tous sens : aucune moitié ne répond à l’autre ; même vu de face, aucune moitié ne répondrait à l’autre"
+    a_relire: oui   # lot 1 : exemplaire neuf, à relire (relecture_explicative.a_relire)
+  - id: ppp-a:pilote-2202
+    about: app:commons-nhm-ornithoptera-paradisea#papillon
+    assertedType: ppp:symmetry
+    cardStatus: applicable et pertinent
+    inRegion: ppp:symmetry/nearSymmetric
+    inEpisode: ppp-e:pilote-41
+    modality: vision
+    source: photo citée (Wikimedia Commons ; prise de vue estimée sur l’image, §9.7 H règle 7)
+    ontologyVersion: "2.8"
+    note: "les deux côtés se correspondent dans l’ensemble, mais les ailes arrière ne sont pas posées tout à fait pareil et leurs queues ne tombent pas au même endroit"
+    a_relire: oui   # lot 1 : exemplaire neuf, à relire (relecture_explicative.a_relire)
+  - id: ppp-a:pilote-2203
+    about: app:commons-taj-mahal-front#facade-et-coupole
+    assertedType: ppp:symmetry
+    cardStatus: applicable et pertinent
+    inRegion: ppp:symmetry/symmetric
+    inEpisode: ppp-e:pilote-42
+    modality: vision
+    source: photo citée (Wikimedia Commons ; prise de vue estimée sur l’image, §9.7 H règle 7)
+    ontologyVersion: "2.8"
+    note: "le monument vu presque dans l’axe : la façade et la coupole se répondent de part et d’autre ; les visiteurs, minuscules, ne comptent pas"
+    a_relire: oui   # lot 1 : exemplaire neuf, à relire (relecture_explicative.a_relire)
+  - id: ppp-a:pilote-2301
+    about: app:commons-weatherworn-planks#planche-centrale
+    assertedType: ppp:translucency
+    cardStatus: applicable et pertinent
+    inRegion: ppp:translucency/opaque
+    inEpisode: ppp-e:pilote-46
+    modality: vision
+    source: photo citée (Wikimedia Commons ; prise de vue estimée sur l’image, §9.7 H règle 7)
+    ontologyVersion: "2.8"
+    note: "une planche épaisse : on ne voit rien à travers, ni lumière ni forme"
+    withdrawn: oui   # retiré le 2026-10-14 (lot 2 bis, la relecture) : la planche est vue de dessus, ce serait « non tranché » ; remplacé par ppp-a:pilote-2304 ; id non réutilisé
+    a_relire: oui   # lot 2 : exemplaire neuf, à relire (relecture_explicative.a_relire)
+  - id: ppp-a:pilote-2302
+    about: app:commons-line-of-lanterns#lanterne-la-plus-claire
+    assertedType: ppp:translucency
+    cardStatus: applicable et pertinent
+    inRegion: ppp:translucency/translucent
+    inEpisode: ppp-e:pilote-45
+    modality: vision
+    source: photo citée (Wikimedia Commons ; prise de vue estimée sur l’image, §9.7 H règle 7)
+    ontologyVersion: "2.8"
+    note: "le papier allumé laisse passer la lumière ; on voit les baguettes contre lui, mais rien de ce qu’il y a dedans"
+    a_relire: oui   # lot 2 : exemplaire neuf, à relire (relecture_explicative.a_relire)
+  - id: ppp-a:pilote-2303
+    about: app:commons-engraved-sherry-glass#paroi
+    assertedType: ppp:translucency
+    cardStatus: applicable et pertinent
+    inRegion: ppp:translucency/transparent
+    inEpisode: ppp-e:pilote-44
+    modality: vision
+    source: photo citée (Wikimedia Commons ; prise de vue estimée sur l’image, §9.7 H règle 7)
+    ontologyVersion: "2.8"
+    note: "à travers la paroi avant, on voit nettement le bord arrière du verre et le fond gris"
+    a_relire: oui   # lot 2 : exemplaire neuf, à relire (relecture_explicative.a_relire)
+  - id: ppp-a:pilote-2401
+    about: app:commons-school-rulers#bord-regle-acier
+    assertedType: ppp:curvature
+    cardStatus: applicable et pertinent
+    inRegion: ppp:curvature/straight
+    inEpisode: ppp-e:pilote-47
+    modality: vision
+    source: photo citée (Wikimedia Commons ; prise de vue estimée sur l’image, §9.7 H règle 7)
+    ontologyVersion: "2.8"
+    note: "le bord de la règle d’acier du haut : aucune courbe perceptible"
+    a_relire: oui   # lot 2 : exemplaire neuf, à relire (relecture_explicative.a_relire)
+  - id: ppp-a:pilote-2402
+    about: app:commons-stonehenge-trilithon#arete-inferieure-linteau
+    assertedType: ppp:curvature
+    cardStatus: applicable et pertinent
+    inRegion: ppp:curvature/straight
+    inEpisode: ppp-e:pilote-49
+    modality: vision
+    source: photo citée (Wikimedia Commons ; prise de vue estimée sur l’image, §9.7 H règle 7)
+    ontologyVersion: "2.8"
+    note: "le dessous du linteau, sur le ciel : une ligne un peu penchée et rugueuse, sans courbe perceptible"
+    a_relire: oui   # lot 2 : exemplaire neuf, à relire (relecture_explicative.a_relire)
+  - id: ppp-a:pilote-2403
+    about: app:commons-egg-white-background#bout-gauche
+    assertedType: ppp:curvature
+    cardStatus: applicable et pertinent
+    inRegion: ppp:curvature/stronglyCurved
+    inEpisode: ppp-e:pilote-48
+    modality: vision
+    source: photo citée (Wikimedia Commons ; prise de vue estimée sur l’image, §9.7 H règle 7)
+    ontologyVersion: "2.8"
+    note: "le bout de l’œuf : la courbe fait demi-tour sur une courte distance, comme l’anse d’une tasse"
+    a_relire: oui   # lot 2 : exemplaire neuf, à relire (relecture_explicative.a_relire)
+  - id: ppp-a:pilote-2501
+    about: app:commons-egg-white-background#oeuf
+    assertedType: ppp:outlineIndentation
+    cardStatus: applicable et pertinent
+    inRegion: ppp:outlineIndentation/unindented
+    inEpisode: ppp-e:pilote-48
+    modality: vision
+    source: photo citée (Wikimedia Commons ; prise de vue estimée sur l’image, §9.7 H règle 7)
+    ontologyVersion: "2.8"
+    note: "la silhouette de l’œuf ne rentre nulle part"
+    a_relire: oui   # lot 2 : exemplaire neuf, à relire (relecture_explicative.a_relire)
+  - id: ppp-a:pilote-2502
+    about: app:commons-stonehenge-trilithon#trilithon
+    assertedType: ppp:outlineIndentation
+    cardStatus: applicable et pertinent
+    inRegion: ppp:outlineIndentation/indented
+    inEpisode: ppp-e:pilote-49
+    modality: vision
+    source: photo citée (Wikimedia Commons ; prise de vue estimée sur l’image, §9.7 H règle 7)
+    ontologyVersion: "2.8"
+    doute: oui
+    note: "le trilithe : un grand creux entre les deux pierres, sous le linteau, et le linteau qui déborde des deux côtés ; dans le bas, les pierres du fond, du même gris, cachent une partie de la silhouette"
+    a_relire: oui   # lot 2 : exemplaire neuf, à relire (relecture_explicative.a_relire)
+  - id: ppp-a:pilote-2503
+    about: app:commons-bracken-frond#fronde
+    assertedType: ppp:outlineIndentation
+    cardStatus: applicable et pertinent
+    inRegion: ppp:outlineIndentation/deeplyIndented
+    inEpisode: ppp-e:pilote-50
+    modality: vision
+    source: photo citée (Wikimedia Commons ; prise de vue estimée sur l’image, §9.7 H règle 7)
+    ontologyVersion: "2.8"
+    note: "des creux et des saillies tout autour, jusqu’aux petites folioles"
+    a_relire: oui   # lot 2 : exemplaire neuf, à relire (relecture_explicative.a_relire)
+  - id: ppp-a:pilote-2601
+    about: app:commons-lemon-and-lime#ensemble
+    assertedType: ppp:negativeSpace
+    cardStatus: applicable et pertinent
+    inRegion: ppp:negativeSpace/none
+    inEpisode: ppp-e:pilote-28
+    modality: vision
+    source: photo citée (Wikimedia Commons ; prise de vue estimée sur l’image, §9.7 H règle 7)
+    ontologyVersion: "2.8"
+    note: "l’espace entre le citron et le citron vert se lit comme un simple fond"
+    a_relire: oui   # lot 2 : exemplaire neuf, à relire (relecture_explicative.a_relire)
+  - id: ppp-a:pilote-2602
+    about: app:commons-stonehenge-trilithon#trilithon
+    assertedType: ppp:negativeSpace
+    cardStatus: applicable et pertinent
+    inRegion: ppp:negativeSpace/slight
+    inEpisode: ppp-e:pilote-49
+    modality: vision
+    source: photo citée (Wikimedia Commons ; prise de vue estimée sur l’image, §9.7 H règle 7)
+    ontologyVersion: "2.8"
+    note: "à l’examen, le vide entre les deux pierres, sous le linteau, se lit comme une forme, une porte de ciel"
+    a_relire: oui   # lot 2 : exemplaire neuf, à relire (relecture_explicative.a_relire)
+  - id: ppp-a:pilote-2603
+    about: app:commons-optical-illusion-vase#dessin
+    assertedType: ppp:negativeSpace
+    cardStatus: applicable et pertinent
+    inRegion: ppp:negativeSpace/marked
+    inEpisode: ppp-e:pilote-51
+    modality: vision
+    source: photo citée (Wikimedia Commons ; prise de vue estimée sur l’image, §9.7 H règle 7)
+    ontologyVersion: "2.8"
+    note: "le blanc autour du vase se lit d’emblée comme deux profils face à face"
+    a_relire: oui   # lot 2 : exemplaire neuf, à relire (relecture_explicative.a_relire)
+  - id: ppp-a:pilote-2004
+    about: app:commons-white-paint-wall#tiers-gauche
+    assertedType: ppp:lightnessRange
+    cardStatus: applicable et pertinent
+    inRegion: ppp:lightnessRange/singleLightness
+    inEpisode: ppp-e:pilote-52
+    modality: vision
+    source: photo citée (Wikimedia Commons ; prise de vue estimée sur l’image, §9.7 H règle 7)
+    ontologyVersion: "2.8"
+    note: "le tiers gauche du mur : un même gris clair, sans retouche ; les traces de pinceau font de fines ombres, qui viennent de l’éclairage et non de la peinture"
+    a_relire: oui   # lot 2 : exemplaire neuf, à relire (relecture_explicative.a_relire)
+  - id: ppp-a:pilote-2304
+    about: app:commons-stonehenge-trilithon#linteau
+    assertedType: ppp:translucency
+    cardStatus: applicable et pertinent
+    inRegion: ppp:translucency/opaque
+    inEpisode: ppp-e:pilote-49
+    modality: vision
+    source: photo citée (Wikimedia Commons ; prise de vue estimée sur l’image, §9.7 H règle 7)
+    ontologyVersion: "2.8"
+    note: "le linteau devant le ciel : on ne voit rien du ciel à travers la pierre"
+    a_relire: oui   # lot 2 bis : exemplaire neuf, à relire (relecture_explicative.a_relire)
+  - id: ppp-a:pilote-2404
+    about: app:commons-egg-white-background#flanc-superieur
+    assertedType: ppp:curvature
+    cardStatus: applicable et pertinent
+    inRegion: ppp:curvature/slightlyCurved
+    inEpisode: ppp-e:pilote-48
+    modality: vision
+    source: photo citée (Wikimedia Commons ; prise de vue estimée sur l’image, §9.7 H règle 7)
+    ontologyVersion: "2.8"
+    note: "le milieu du dessus de l’œuf, sur un tiers de sa longueur : une courbe large, qu’on voit s’écarter un peu de la droite"
+    a_relire: oui   # lot 2 bis : exemplaire neuf, à relire (relecture_explicative.a_relire)
+  - id: ppp-a:pilote-2504
+    about: app:commons-quercus-robur-leaf#feuille
+    assertedType: ppp:outlineIndentation
+    cardStatus: applicable et pertinent
+    inRegion: ppp:outlineIndentation/indented
+    inEpisode: ppp-e:pilote-53
+    modality: vision
+    source: photo citée (Wikimedia Commons ; prise de vue estimée sur l’image, §9.7 H règle 7)
+    ontologyVersion: "2.8"
+    note: "la feuille de chêne : quelques lobes arrondis et des creux sur le tour, sans petits détails"
+    a_relire: oui   # lot 2 bis : exemplaire neuf, à relire (relecture_explicative.a_relire)
 
 # Champs communs à toutes les assertions ci-dessus (sauf valeur propre à une assertion, comme withdrawn de 0201) :
 commun:
@@ -1644,15 +2374,16 @@ relecture_explicative:
   assertions: [ppp-a:pilote-0101, ppp-a:pilote-0102, ppp-a:pilote-0202, ppp-a:pilote-0203,
                ppp-a:pilote-0401, ppp-a:pilote-0402, ppp-a:pilote-0403,
                ppp-a:pilote-0104, ppp-a:pilote-0105, ppp-a:pilote-0501, ppp-a:pilote-0503, ppp-a:pilote-0601, ppp-a:pilote-0701, ppp-a:pilote-0801,
-               ppp-a:pilote-0902, ppp-a:pilote-0302, ppp-a:pilote-0304, ppp-a:pilote-0305, ppp-a:pilote-1001, ppp-a:pilote-1002, ppp-a:pilote-1003, ppp-a:pilote-1101, ppp-a:pilote-1102, ppp-a:pilote-1201, ppp-a:pilote-1202, ppp-a:pilote-1401, ppp-a:pilote-1501, ppp-a:pilote-1702, ppp-a:pilote-1801, ppp-a:pilote-1804, ppp-a:pilote-0904, ppp-a:pilote-0905, ppp-a:pilote-1004, ppp-a:pilote-1103, ppp-a:pilote-1304, ppp-a:pilote-1503, ppp-a:pilote-1504, ppp-a:pilote-1203, ppp-a:pilote-1305, ppp-a:pilote-1805, ppp-a:pilote-1802, ppp-a:pilote-1603, ppp-a:pilote-1604]   # séries 44 à 44 quater : validées par la relecture, reportées en série 44 quater (publication libérale, X17)
-  retirees_relues: [ppp-a:pilote-0103, ppp-a:pilote-0301, ppp-a:pilote-0502]   # retrait (T24) approuvé par la relecture explicative, 2026-10-10
+               ppp-a:pilote-0902, ppp-a:pilote-0302, ppp-a:pilote-0304, ppp-a:pilote-0305, ppp-a:pilote-1001, ppp-a:pilote-1002, ppp-a:pilote-1003, ppp-a:pilote-1101, ppp-a:pilote-1102, ppp-a:pilote-1201, ppp-a:pilote-1202, ppp-a:pilote-1401, ppp-a:pilote-1501, ppp-a:pilote-1702, ppp-a:pilote-1801, ppp-a:pilote-1804, ppp-a:pilote-0904, ppp-a:pilote-0905, ppp-a:pilote-1004, ppp-a:pilote-1103, ppp-a:pilote-1304, ppp-a:pilote-1503, ppp-a:pilote-1504, ppp-a:pilote-1203, ppp-a:pilote-1305, ppp-a:pilote-1805, ppp-a:pilote-1802, ppp-a:pilote-1603, ppp-a:pilote-1604,
+               ppp-a:pilote-1901, ppp-a:pilote-1902, ppp-a:pilote-1903, ppp-a:pilote-1904, ppp-a:pilote-2002, ppp-a:pilote-2003, ppp-a:pilote-2004, ppp-a:pilote-2101, ppp-a:pilote-2102, ppp-a:pilote-2103, ppp-a:pilote-2201, ppp-a:pilote-2202, ppp-a:pilote-2203, ppp-a:pilote-2302, ppp-a:pilote-2303, ppp-a:pilote-2304, ppp-a:pilote-2401, ppp-a:pilote-2402, ppp-a:pilote-2403, ppp-a:pilote-2404, ppp-a:pilote-2501, ppp-a:pilote-2502, ppp-a:pilote-2503, ppp-a:pilote-2504, ppp-a:pilote-2601, ppp-a:pilote-2602, ppp-a:pilote-2603]   # séries 44 à 44 quater : validées par la relecture, reportées en série 44 quater (publication libérale, X17)
+  retirees_relues: [ppp-a:pilote-0103, ppp-a:pilote-0301, ppp-a:pilote-0502, ppp-a:pilote-2001, ppp-a:pilote-2301]   # retrait (T24) approuvé par la relecture explicative, 2026-10-10 ; lots 1 et 2 : 2001 et 2301 retirées (lot 2 bis)
   objets: [app:commons-beuchaer-gestockt]
   note_distance: [ppp-e:pilote-01, ppp-e:pilote-02, ppp-e:pilote-03, ppp-e:pilote-04, ppp-e:pilote-05, ppp-e:pilote-06, ppp-e:pilote-07, ppp-e:pilote-08, ppp-e:pilote-09, ppp-a:pilote-0801]
   confirmees_serie44:   # série 44 bis (2026-10-14) : confirmées par la relecture ; série 44 quater (publication libérale, X17, décision de l’éditeur
                         # du projet du 2026-10-14) : reportées dans `assertions` ci-dessus, sauf 0303, 0903 et 1302, dont le `doute` n’est pas levé ;
                         # 1603 et 1604 (jointSpacing) : reportées en série 44 quinquies (jointSpacing publique)
     [ppp-a:pilote-0902, ppp-a:pilote-0903, ppp-a:pilote-0303, ppp-a:pilote-0302, ppp-a:pilote-0304, ppp-a:pilote-0305, ppp-a:pilote-1001, ppp-a:pilote-1002, ppp-a:pilote-1003, ppp-a:pilote-1101, ppp-a:pilote-1102, ppp-a:pilote-1201, ppp-a:pilote-1202, ppp-a:pilote-1302, ppp-a:pilote-1401, ppp-a:pilote-1501, ppp-a:pilote-1702, ppp-a:pilote-1801, ppp-a:pilote-1804]
-  a_relire:   # série 44 bis (2026-10-14) : à relire
+  a_relire:   # série 44 bis (2026-10-14) : à relire ; lots 1 et 2 (8 fiches : 27 assertions relues, 2001 et 2301 retirées, 16 objets) validés par la coordination (f63741b) : reportés dans `assertions` et `retirees_relues`
     - {assertion: ppp-a:pilote-1104, raison: "série 44 bis"}
     - {assertion: ppp-a:pilote-1303, raison: "série 44 bis"}
     - {assertion: ppp-a:pilote-1403, raison: "série 44 bis"}

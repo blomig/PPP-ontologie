@@ -364,7 +364,7 @@ Ce que disent les pages lues :
 
 | PPP reprend | PPP ne reprend pas (pour l'instant) |
 |---|---|
-| ouverture avec attribution (CC BY 4.0) ; | identifiants pérennes de type PURL, format OWL publié, réutilisation de la Relations Ontology : PPP n'a ni adresse pérenne ni export OWL à ce jour (§9.8) ; rien n'est inventé ; |
+| ouverture avec attribution (CC BY 4.0) ; | format OWL publié et réutilisation de la Relations Ontology : pas d'export OWL (§9.8) ; identifiants pérennes : w3id accepté sur le principe le 2026-10-14 (`https://w3id.org/ppp/`, §9.8 point 6), pas encore demandé ; rien n'est inventé ; |
 | une personne responsable : l'éditeur du projet ; | la pluralité documentée d'utilisateurs (P9) et le développement collaboratif ouvert (P10) : l'équipe est fermée pour l'instant ; |
 | version marquée, changelog, version citée (X6) ; | le délai de 2 à 5 jours ouvrés : PPP s'engage sur une semaine, délai qu'une équipe de deux personnes peut tenir ; |
 | stabilité des identifiants et dépréciation avec renvoi (A11), qui disent la même chose que P19 ; | |
@@ -396,8 +396,9 @@ Ce que disent les documents lus :
 
 | PPP reprend | PPP ne reprend pas |
 |---|---|
-| la distinction entre deux historiques : ce que le lecteur doit savoir (changelog public, label ou définition changés : à exporter en `skos:historyNote`) et le suivi fin du travail (champs `a_reconfirmer`, `avant` / `apres` / `raison` des fiches : `skos:changeNote`) ; | le processus formel du W3C (groupe de travail, Recommandation) : PPP n'est pas une norme ; |
-| des corrections publiées à part et datées (changelog, tickets `correction`). | l'export SKOS lui-même : prévu par la spec, pas encore fait. |
+| la distinction entre deux historiques : ce que le lecteur doit savoir (changelog public, label ou définition changés : à exporter en `skos:historyNote`) et le suivi fin du travail (champs `a_reconfirmer`, `avant` / `apres` / `raison` des fiches ; ce serait `skos:changeNote`, non exporté) ; | le processus formel du W3C (groupe de travail, Recommandation) : PPP n'est pas une norme ; |
+| des corrections publiées à part et datées (changelog, tickets `correction`) ; | |
+| SKOS comme format d'export : **décidé** le 2026-10-14 (§9.8, point 5 ; puis JSON-LD), construit depuis les fiches par la construction du site ; pas encore en ligne. | |
 
 ## 5. Points à trancher (récapitulatif)
 

@@ -141,11 +141,9 @@ modifie_en:
 remplace_par: []
 source_de_la_fiche: crash tests, partie 1 (spec 2.3, docs/questions-crash-tests.md C4) ; fiche préremplie le 2026-10-10 par l’équipe, champs en langage courant à valider par la relecture explicative
 manques:
+- '« niveaux d’échelle » (stock v0.2) fusionné dans ce type, sans devenir un label ; « hiérarchie » ne reçoit pas de fiche (décision de l’éditeur du projet du 2026-10-14, série 48 ; C4 point 5)'
 - 'exemplaires (à renseigner : objets publics vérifiés, un épisode par objet, conditions déclarées)'
-bloque_par:
-- 'T14 (stock v0.2 « hiérarchie », « niveaux d’échelle » : fusion ou deux candidats ?)'
-- C4 point 5
-- 'T25 (base proposée en 2.3.2 : `ppp:contour` et une relation non typée entre parties)'
+bloque_par: []
 a_relire: []
 relecture_explicative:
   date: '2026-10-10'

@@ -36,19 +36,22 @@ espace_valeurs:
     label_en: none
     rang: 1
     repere: les espaces laissés libres se lisent comme un simple fond
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-2601
   - cle: slight
     label_fr: faible
     label_en: slight
     rang: 2
     repere: certains espaces laissés libres se lisent comme des formes, à l’examen
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-2602
   - cle: marked
     label_fr: marqué
     label_en: marked
     rang: 3
     repere: les espaces laissés libres se lisent d’emblée comme des formes
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-2603
 identite: Lecture des espaces laissés libres comme des formes, pas la région « clairsemé » de la densité.
 relations:
 - type: confusableWith
@@ -81,9 +84,7 @@ references:
     continuité, fermeture, symétrie, parallélisme) et nouveaux ; recherches actuelles sur le groupement et l’organisation figure-fond ; texte intégral non lu'
   reprend: l'organisation figure-fond comme objet établi de la recherche perceptive (résumé)
   ne_reprend_pas: le bilan des mécanismes
-etat_de_l_art: 'L''espace négatif touche à l''organisation figure-fond. Rubin (1915, *Synsoplevede Figurer*) [[rubin1915]] est un ouvrage classique sur les figures vues (titre ; notice seule, contenu non
-  lu) ; Wagemans et al. (2012) [[wagemans2012]] font le bilan des recherches sur le groupement perceptif et l''organisation figure-fond (résumé lu). Aucune source trouvée ne nomme une qualité perçue des
-  espaces laissés libres lus comme des formes ; la base reste ouverte (T11). Détail : docs/bibliographie-par-type.md#groupe-organisation.'
+etat_de_l_art: 'L’espace négatif touche à l’organisation figure-fond. Rubin (1915, *Synsoplevede Figurer*) [[rubin1915]] est un ouvrage classique sur les figures vues (titre ; notice seule, contenu non lu) ; Wagemans et al. (2012) [[wagemans2012]] font le bilan des recherches sur le groupement perceptif et l’organisation figure-fond (résumé lu). Aucune source trouvée ne nomme une qualité perçue des espaces laissés libres lus comme des formes. La base retenue (netteté du bord et distribution) est une décision du projet, révisable après épreuve (T11, série 48). Détail : docs/bibliographie-par-type.md#groupe-organisation.'
 etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-organisation
 axiomes:
 - conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
@@ -117,9 +118,9 @@ modifie_en:
 remplace_par: []
 source_de_la_fiche: ex-« vide actif » v0.2 ; définition et question v0.2 non reprises (valence de « actif »)
 manques:
-- exemplaires
-bloque_par:
-- 'T11 (base proposée : netteté du bord, distribution)'
+- 'exemplaires (lot 2, 2026-10-14) : 2601 absent, 2602 faible, 2603 marqué ; aucun n’est encore relu'
+- 'un exemplaire présenté autrement (imprimé, objet vu sur place), E5'
+bloque_par: []
 a_relire: []
 relecture_explicative:
   date: '2026-10-10'

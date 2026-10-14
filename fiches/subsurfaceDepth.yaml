@@ -90,8 +90,8 @@ references:
   reprend: l’idée que la vue reconnaît les matériaux à leur aspect (des « modèles d’apparence »), sans retrouver leurs propriétés physiques
   ne_reprend_pas: sa théorie
 etat_de_l_art: 'Fleming et Bülthoff (2005) [[fleming_bulthoff2005]] décrivent la lumière qui entre dans une matière translucide, s’y diffuse et ressort, et l’aspect doux qui en résulte ; Fleming (2014)
-  [[fleming2014]] en fait un cas de la perception des matériaux. Aucune source trouvée ne nomme une qualité perçue de la profondeur à laquelle le regard paraît entrer dans la matière ; savoir s’il faut
-  distinguer une ou deux profondeurs sous la surface reste ouvert (C4). Détail : docs/bibliographie-par-type.md#groupe-matiere.'
+  [[fleming2014]] en fait un cas de la perception des matériaux. Aucune source trouvée ne nomme une qualité perçue de la profondeur à laquelle le regard paraît entrer dans la matière ; la distinction entre l’étagement en plans et la profondeur dans la matière
+  est décidée (C4, deux types). Détail : docs/bibliographie-par-type.md#groupe-matiere.'
 etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-matiere
 axiomes:
 - conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
@@ -134,8 +134,7 @@ remplace_par: []
 source_de_la_fiche: crash tests, partie 1 (spec 2.3, docs/questions-crash-tests.md C4) ; fiche préremplie le 2026-10-10 par l’équipe, champs en langage courant à valider par la relecture explicative
 manques:
 - 'exemplaires (à renseigner : objets publics vérifiés, un épisode par objet, conditions déclarées)'
-bloque_par:
-- C4 point 4 (une ou deux profondeurs)
+bloque_par: []
 a_relire: []
 remarque:
 - 'série 29 (2026-10-12, demande de la relecture explicative pour la publication bilingue) : label_en « subsurface depth » remplacé par « depth within the material » ; ancien label anglais gardé ici, faute de champ pour les labels alternatifs anglais (labels_alternatifs est en français) ; à relire ; validé en série 31'
@@ -160,7 +159,8 @@ relecture_explicative:
   - note_conditions (re-confirmé en relecture explicative, série 9, 2026-10-11)
   - label_en (validé en relecture explicative, série 31, 2026-10-12)
   - labels_alternatifs_en (validé en relecture explicative, série 35, 2026-10-12)
-  a_reconfirmer: []
+  a_reconfirmer:
+  - etat_de_l_art (série 48 bis : phrase sur C4 mise à jour, la distinction des deux profondeurs étant décidée)
   reconfirme:
   - champ: contre_exemple
     date: '2026-10-10'

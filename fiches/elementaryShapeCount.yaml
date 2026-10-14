@@ -186,7 +186,7 @@ enonces_testables:
   enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les objets
   statut_epistemique: non éprouvé
   epreuve: null
-cq_couvertes: à fixer
+cq_couvertes: CQ1, CQ2, CQ8a
 statut: candidat
 statut_epistemique: non éprouvé
 introduit_en: '2.8'
@@ -200,11 +200,10 @@ manques:
 - seuils numériques entre régions et tolérance numérique de l’épreuve
 - cq_couvertes
 bloque_par:
-- 'T37, question 1 (répertoire de formes simples : sans liste fermée, le compte dépend de qui annote ; c’est aussi un facteur non perceptuel)'
-- 'T37, question 4 (« formes et sous-formes » : niveaux ou compte à plat ? lien avec partNesting)'
-- 'T37, question 5 (deux sources de « plus de formes » : beaucoup de pièces, ou écart à toute forme simple : un type ou deux ?)'
-- 'T37, question 6 (base de dépendance du nombre de formes : `ppp:contour` seul ne suffit pas, E3 ; base à revoir : la compléter ou n’en déclarer aucune ; options et position de travail dans QUESTIONS-A-TRANCHER.md,
-  à trancher)'
+- 'T37, question 1 : une liste fermée de formes simples est décidée (décision de l’éditeur du projet du 2026-10-14, série 48) ; la liste reste à établir, après une recherche de l’état de l’art (QUESTIONS-A-TRANCHER.md, T37)'
+- 'T37, question 4 (« formes et sous-formes » : niveaux ou compte à plat ? lien avec partNesting) : se traite avec la liste fermée'
+- 'T37, question 5 (deux sources de « plus de formes » : un type ou deux ?) : ouverte, aucune recommandation'
+- 'T37, question 6 (base de dépendance) : si la liste fermée est intégrée à la définition, le type peut devenir formel, sous la réserve du §0.3 (compter des formes suppose de voir leurs bords) ; sinon la fiche reste bloquée'
 relecture_explicative:
   date: '2026-10-11'
   champs:

@@ -40,19 +40,23 @@ espace_valeurs:
     label_en: unindented
     rang: 1
     repere: la silhouette ne rentre nulle part (un galet, un œuf, un ballon)
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-2501
   - cle: indented
     label_fr: découpée
     label_en: indented
     rang: 2
     repere: quelques creux et saillies sur le tour (une feuille de chêne, une chaise vue de profil)
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-2502
+    - ppp-a:pilote-2504
   - cle: deeplyIndented
     label_fr: très découpée
     label_en: deeply indented
     rang: 3
     repere: des creux et des saillies tout autour, jusqu’à de petits détails (une feuille de fougère, un arbre sans feuilles)
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-2503
 identite: Découpure de la silhouette entière, pas la netteté du bord, pas la courbure d’un tronçon, pas la symétrie (une feuille de chêne est découpée et presque symétrique), pas le nombre de parties contenues
   dans des parties (emboîtement des parties), pas les vides laissés entre des éléments (espace négatif).
 relations:
@@ -119,11 +123,10 @@ remplace_par: []
 source_de_la_fiche: crash tests 01 et 02 (docs/crash-test-01-couleur-profonde.md §3.3 ; docs/crash-test-02-complexite-de-forme.md §3.3) ; verdict dans docs/questions-crash-tests.md C6, C7–C25
   ; fiche minimale du 2026-10-10 (série 6) par l’équipe, champs en langage courant validés depuis par la relecture explicative (série 6)
 manques:
-- 'exemplaires (à renseigner : objets publics vérifiés, un épisode par objet, conditions déclarées)'
-- 'fiche minimale (C6, 2.5) : langage courant, état de l’art et références validés par la relecture explicative (série 6) ; restent les exemplaires et C19, T14 (bloque_par)'
-bloque_par:
-- C19 (silhouette, lignes brisées ; docs/questions-crash-tests.md)
-- 'T14 (stock « forme », « ligne » : le tracé n’a pas de type)'
+- 'angularité d’un tracé (stock v0.2 « ligne ») à instruire plus tard ; base `ppp:contour` à mettre à l’épreuve (E3) (décision de l’éditeur du projet du 2026-10-14, série 48 ; C19)'
+- 'exemplaires (lot 2, 2026-10-14) : 2501 sans découpure, 2502 (`doute`) et 2504 découpée, 2503 très découpée ; aucun n’est encore relu'
+- 'fiche minimale (C6, 2.5) : langage courant, état de l’art et références validés par la relecture explicative (série 6) ; restent les exemplaires'
+bloque_par: []
 a_relire: []
 relecture_explicative:
   date: '2026-10-10'

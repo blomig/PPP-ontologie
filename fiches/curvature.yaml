@@ -41,19 +41,23 @@ espace_valeurs:
     label_en: straight
     rang: 1
     repere: aucune courbe perceptible (une règle, l’arête d’une table, une vitre plane)
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-2401
+    - ppp-a:pilote-2402
   - cle: slightlyCurved
     label_fr: légèrement courbe
     label_en: slightly curved
     rang: 2
     repere: une courbe large, qu’on voit à peine s’écarter de la droite (le bord d’une grande table ronde vu de près, une voile peu gonflée)
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-2404
   - cle: stronglyCurved
     label_fr: très courbe
     label_en: strongly curved
     rang: 3
     repere: une courbe serrée (l’anse d’une tasse, une boucle de ruban)
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-2403
 identite: Écart à la droite ou au plan, pas la netteté du bord (franc ou flou), pas les écarts locaux à une régularité (irrégularité locale), pas les angles d’une ligne brisée.
 relations:
 - type: confusableWith
@@ -121,10 +125,9 @@ modifie_en:
 remplace_par: []
 source_de_la_fiche: crash tests, partie 1 (spec 2.3, docs/questions-crash-tests.md C4) ; fiche préremplie le 2026-10-10 par l’équipe, champs en langage courant à valider par la relecture explicative
 manques:
-- 'exemplaires (à renseigner : objets publics vérifiés, un épisode par objet, conditions déclarées)'
+- 'exemplaires (lot 2, 2026-10-14) : 2401 et 2402 droit, 2404 légèrement courbe, 2403 très courbe ; aucun n’est encore relu'
 - 'angles d’une ligne brisée (zigzag) : pas une courbure (contre-exemple) ; stock *ligne* / *orientation*, T14'
-bloque_par:
-- 'T30 (jugement local, distance critique : position de travail ; distance de nouveau déclarée critique en série 34, T22, option (b))'
+bloque_par: []
 a_relire: []
 remarque:
 - 'série 29 (2026-10-12, décision de l’éditeur du projet sur T22, question 11 de docs/famille-toucher-proposition.md) : conditions_critiques vidé (angle et distance, critiques à la vue seulement, passent en note_conditions) ; note_conditions et bloque_par (T30) réécrits en conséquence ; à relire'

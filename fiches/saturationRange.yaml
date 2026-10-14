@@ -39,19 +39,22 @@ espace_valeurs:
     label_en: single saturation
     rang: 1
     repere: toutes les couleurs de la zone sont aussi vives, ou aussi grisées (une affiche en aplats vifs, une photo en noir et blanc)
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-2101
   - cle: closeSaturations
     label_fr: saturations proches
     label_en: close saturations
     rang: 2
     repere: des couleurs un peu plus ou un peu moins vives (un mur passé au soleil par endroits)
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-2102
   - cle: distantSaturations
     label_fr: saturations éloignées
     label_en: distant saturations
     rang: 3
     repere: du grisé et du très vif dans la même zone (un fond gris semé de taches de couleur pure)
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-2103
 identite: Écart des saturations vues dans une même zone, pas la saturation elle-même, pas l’écart entre deux zones qu’on compare (un contraste, sur la seule saturation), pas les écarts de teinte ou de clarté.
 relations:
 - type: confusableWith
@@ -115,11 +118,9 @@ remplace_par: []
 source_de_la_fiche: crash tests 01 et 02 (docs/crash-test-01-couleur-profonde.md §3.3 ; docs/crash-test-02-complexite-de-forme.md §3.3) ; verdict dans docs/questions-crash-tests.md C6, C7–C25
   ; fiche minimale du 2026-10-10 (série 6) par l’équipe, champs en langage courant validés depuis par la relecture explicative (série 6)
 manques:
-- 'exemplaires (à renseigner : objets publics vérifiés, un épisode par objet, conditions déclarées)'
-- 'fiche minimale (C6, 2.5) : langage courant, état de l’art et références validés par la relecture explicative (série 6) ; restent les exemplaires et C7, C25 (bloque_par)'
-bloque_par:
-- C7 (type par dimension ou type général de dispersion ; docs/questions-crash-tests.md)
-- C25 (labels de région reprenant « saturation »)
+- 'exemplaires (lot 1, 2026-10-14) : 2101 une seule saturation, 2102 saturations proches (`doute`), 2103 saturations éloignées ; aucun n’est encore relu'
+- 'fiche minimale (C6, 2.5) : langage courant, état de l’art et références validés par la relecture explicative (série 6) ; restent les exemplaires'
+bloque_par: []
 a_relire: []
 relecture_explicative:
   date: '2026-10-10'
