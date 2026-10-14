@@ -42,19 +42,22 @@ espace_valeurs:
     label_en: at the surface
     rang: 1
     repere: le regard s’arrête à la surface (un plâtre, une pierre opaque)
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-2901
   - cle: slightlyInside
     label_fr: un peu dans l’épaisseur
     label_en: slightly inside
     rang: 2
     repere: on voit un peu sous la surface (un vernis épais sur du bois, une cire)
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-2902
   - cle: farInside
     label_fr: loin dans l’épaisseur
     label_en: far inside
     rang: 3
     repere: le regard paraît entrer loin dans la matière (un bloc d’ambre, un savon translucide épais)
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-2903
 identite: Impression de voir dans l’épaisseur d’une matière, pas ce qu’on voit à travers elle (transparence), pas l’étagement de plans d’une scène (étagement en plans).
 relations:
 - type: confusableWith
@@ -133,7 +136,7 @@ modifie_en:
 remplace_par: []
 source_de_la_fiche: crash tests, partie 1 (spec 2.3, docs/questions-crash-tests.md C4) ; fiche préremplie le 2026-10-10 par l’équipe, champs en langage courant à valider par la relecture explicative
 manques:
-- 'exemplaires (à renseigner : objets publics vérifiés, un épisode par objet, conditions déclarées)'
+- 'exemplaires (lot 3, 2026-10-14) : 2901 en surface, 2902 un peu dans l’épaisseur (couche mince, C12), 2903 loin dans l’épaisseur ; relus et validés par la relecture explicative (lot 3 bis, 2026-10-14)'
 bloque_par: []
 a_relire: []
 remarque:
@@ -159,8 +162,8 @@ relecture_explicative:
   - note_conditions (re-confirmé en relecture explicative, série 9, 2026-10-11)
   - label_en (validé en relecture explicative, série 31, 2026-10-12)
   - labels_alternatifs_en (validé en relecture explicative, série 35, 2026-10-12)
-  a_reconfirmer:
-  - etat_de_l_art (série 48 bis : phrase sur C4 mise à jour, la distinction des deux profondeurs étant décidée)
+  - 'etat_de_l_art (série 48 bis : phrase sur C4 mise à jour ; re-confirmé en relecture explicative, lot 3 bis, 2026-10-14)'
+  a_reconfirmer: []
   reconfirme:
   - champ: contre_exemple
     date: '2026-10-10'

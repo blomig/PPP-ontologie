@@ -45,19 +45,22 @@ espace_valeurs:
     label_en: flat
     rang: 1
     repere: tout paraît dans un même plan (une affiche à deux couleurs, un mur vu de face)
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-3001
   - cle: fewPlanes
     label_fr: quelques plans
     label_en: a few planes
     rang: 2
     repere: un premier plan et un fond (une nature morte sur une table devant un mur)
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-3002
   - cle: manyPlanes
     label_fr: nombreux plans
     label_en: many planes
     rang: 3
     repere: des plans successifs jusqu’au lointain (un paysage de vallée, une longue rue en perspective)
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-3003
 identite: Étagement en plans de ce qu’on voit, pas l’impression de voir dans l’épaisseur d’une matière (profondeur dans la matière), pas les espaces laissés libres lus comme des formes (espace négatif).
 relations:
 - type: confusableWith
@@ -102,8 +105,7 @@ references:
   reprend: le flou comme indice grossier de l'ordre en profondeur
   ne_reprend_pas: les seuils mesurés
 etat_de_l_art: 'La perception de l’espace et de la profondeur est étudiée notamment par Gibson (1950) [[gibson1950]] ; Cutting et Vishton (1995) [[cutting_vishton1995]] traitent de la perception de l’agencement
-  et des distances. Mather et Smith (2002) [[mather_smith2002]] montrent que le flou n’est qu’un indice grossier de l’ordre en profondeur. PPP ne nomme pas les indices (ce qui, dans l’image, permet de voir
-  la profondeur) : il qualifie l’étagement vu, et la strate reste ouverte (T25). Détail : docs/bibliographie-par-type.md#groupe-etagement.'
+  et des distances. Mather et Smith (2002) [[mather_smith2002]] montrent que le flou n’est qu’un indice grossier de l’ordre en profondeur. PPP ne nomme pas les indices (ce qui, dans une image ou une scène, permet de voir la profondeur) : il qualifie l’étagement vu ; la strate retenue (formel) est une décision du projet, à vérifier par l’épreuve E3 (T25, série 48). Détail : docs/bibliographie-par-type.md#groupe-etagement.'
 etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-etagement
 axiomes:
 - conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
@@ -127,6 +129,11 @@ enonces_testables:
   enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les objets
   statut_epistemique: non éprouvé
   epreuve: null
+- id: E3
+  nature: structure
+  enonce: deux scènes jugées indiscernables en netteté des bords et en tailles perçues peuvent différer en étagement en plans ; si elles ne le peuvent jamais, le type n’est pas formel et une base est à déclarer (T25)
+  statut_epistemique: non éprouvé
+  epreuve: null
 - id: E5
   nature: existence
   enonce: le type s’applique sans redéfinition à un tableau et à une scène réelle
@@ -145,7 +152,7 @@ remplace_par: []
 source_de_la_fiche: crash tests, partie 1 (spec 2.3, docs/questions-crash-tests.md C4) ; fiche préremplie le 2026-10-10 par l’équipe, champs en langage courant à valider par la relecture explicative
 manques:
 - 'strate formelle, à vérifier par l’épreuve E3 (deux scènes égales en netteté des bords et en tailles perçues peuvent-elles différer en profondeur ?) (décision de l’éditeur du projet du 2026-10-14, série 48 ; T25)'
-- 'exemplaires (à renseigner : objets publics vérifiés, un épisode par objet, conditions déclarées)'
+- 'exemplaires (lot 3, 2026-10-14) : 3001 à plat, 3002 quelques plans, 3003 nombreux plans ; étagement en plans, distinct de la profondeur dans la matière (C4) ; relus et validés par la relecture explicative (lot 3 bis, 2026-10-14)'
 bloque_par: []
 a_relire: []
 remarque:
@@ -166,6 +173,8 @@ relecture_explicative:
   - avertissement_label (2.3.2)
   - relations.note (ppp:subsurfaceDepth) (2.3.2)
   - etat_de_l_art (série 6)
+  - 'etat_de_l_art (validé en relecture explicative, lot 3 bis, 2026-10-14 : strate retenue après la série 48 ; glose des indices précisée par la relecture)'
+  - enonces_testables.E3 (écrit par la relecture explicative, lot 3 bis, 2026-10-14)
   - references (série 6)
   - label_en (validé en relecture explicative, série 31, 2026-10-12)
   - avertissement_label (validé en relecture explicative, série 31, 2026-10-12)

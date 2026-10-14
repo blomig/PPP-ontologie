@@ -124,7 +124,7 @@ source_de_la_fiche: crash tests 01 et 02 (docs/crash-test-01-couleur-profonde.md
   ; fiche minimale du 2026-10-10 (série 6) par l’équipe, champs en langage courant validés depuis par la relecture explicative (série 6)
 manques:
 - 'angularité d’un tracé (stock v0.2 « ligne ») à instruire plus tard ; base `ppp:contour` à mettre à l’épreuve (E3) (décision de l’éditeur du projet du 2026-10-14, série 48 ; C19)'
-- 'exemplaires (lot 2, 2026-10-14) : 2501 sans découpure, 2502 (`doute`) et 2504 découpée, 2503 très découpée ; aucun n’est encore relu'
+- 'exemplaires (lot 2, 2026-10-14) : 2501 sans découpure, 2502 (`doute`) et 2504 découpée, 2503 très découpée ; relus et validés par la relecture explicative (lot 3 bis, 2026-10-14)'
 - 'fiche minimale (C6, 2.5) : langage courant, état de l’art et références validés par la relecture explicative (série 6) ; restent les exemplaires'
 bloque_par: []
 a_relire: []

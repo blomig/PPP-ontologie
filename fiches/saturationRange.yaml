@@ -118,7 +118,7 @@ remplace_par: []
 source_de_la_fiche: crash tests 01 et 02 (docs/crash-test-01-couleur-profonde.md §3.3 ; docs/crash-test-02-complexite-de-forme.md §3.3) ; verdict dans docs/questions-crash-tests.md C6, C7–C25
   ; fiche minimale du 2026-10-10 (série 6) par l’équipe, champs en langage courant validés depuis par la relecture explicative (série 6)
 manques:
-- 'exemplaires (lot 1, 2026-10-14) : 2101 une seule saturation, 2102 saturations proches (`doute`), 2103 saturations éloignées ; aucun n’est encore relu'
+- 'exemplaires (lot 1, 2026-10-14) : 2101 une seule saturation, 2102 saturations proches (`doute`), 2103 saturations éloignées ; relus et validés par la relecture explicative (lot 3 bis, 2026-10-14)'
 - 'fiche minimale (C6, 2.5) : langage courant, état de l’art et références validés par la relecture explicative (série 6) ; restent les exemplaires'
 bloque_par: []
 a_relire: []

@@ -118,7 +118,7 @@ modifie_en:
 remplace_par: []
 source_de_la_fiche: ex-« vide actif » v0.2 ; définition et question v0.2 non reprises (valence de « actif »)
 manques:
-- 'exemplaires (lot 2, 2026-10-14) : 2601 absent, 2602 faible, 2603 marqué ; aucun n’est encore relu'
+- 'exemplaires (lot 2, 2026-10-14) : 2601 absent, 2602 faible, 2603 marqué ; relus et validés par la relecture explicative (lot 3 bis, 2026-10-14)'
 - 'un exemplaire présenté autrement (imprimé, objet vu sur place), E5'
 bloque_par: []
 a_relire: []

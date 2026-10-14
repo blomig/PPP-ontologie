@@ -42,19 +42,22 @@ espace_valeurs:
     label_en: one level
     rang: 1
     repere: des parties qui ne se divisent pas à leur tour (un tabouret à trois pieds)
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-2801
   - cle: twoLevels
     label_fr: deux niveaux
     label_en: two levels
     rang: 2
     repere: des parties elles-mêmes divisées une fois (une fenêtre à petits carreaux dans un mur nu)
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-2802
   - cle: threeOrMoreLevels
     label_fr: trois niveaux ou plus
     label_en: three or more levels
     rang: 3
     repere: 'des parties dans des parties, sur trois niveaux ou plus (une façade de cathédrale : portails, voussures, statues ; un chou romanesco)'
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-2803
 identite: 'Nombre de niveaux de parties contenues dans des parties, pas le nombre d’éléments (densité), pas la différence de taille entre deux éléments (contraste d’échelle). Quelle partie contient quelle
   autre n’est pas une qualité : c’est une description de l’objet lui-même, notée à part (spec §9.7 I).'
 relations:
@@ -142,7 +145,7 @@ remplace_par: []
 source_de_la_fiche: crash tests, partie 1 (spec 2.3, docs/questions-crash-tests.md C4) ; fiche préremplie le 2026-10-10 par l’équipe, champs en langage courant à valider par la relecture explicative
 manques:
 - '« niveaux d’échelle » (stock v0.2) fusionné dans ce type, sans devenir un label ; « hiérarchie » ne reçoit pas de fiche (décision de l’éditeur du projet du 2026-10-14, série 48 ; C4 point 5)'
-- 'exemplaires (à renseigner : objets publics vérifiés, un épisode par objet, conditions déclarées)'
+- 'exemplaires (lot 3, 2026-10-14) : 2801 un seul niveau, 2802 deux niveaux, 2803 trois niveaux ou plus ; relus et validés par la relecture explicative (lot 3 bis, 2026-10-14)'
 bloque_par: []
 a_relire: []
 relecture_explicative:

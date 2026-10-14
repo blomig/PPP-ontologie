@@ -40,19 +40,22 @@ espace_valeurs:
     label_en: none
     rang: 1
     repere: aucun écart local perceptible
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-2701
   - cle: slight
     label_fr: légère
     label_en: slight
     rang: 2
     repere: des écarts perceptibles à l’examen
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-2702
   - cle: marked
     label_fr: marquée
     label_en: marked
     rang: 3
     repere: des écarts visibles d’emblée
-    exemplaires: []
+    exemplaires:
+    - ppp-a:pilote-2703
 identite: Écart à une régularité, pas la taille du relief (texture).
 relations: []
 alignements_externes:
@@ -90,8 +93,7 @@ references:
     présentées comme approchant les trois dimensions les plus importantes de la perception de la texture ; texte intégral non lu'
   reprend: le caractère aléatoire comme composante distincte de la direction
   ne_reprend_pas: 'la mesure : non reprise'
-etat_de_l_art: 'La régularité d''une texture est une dimension de Tamura, Mori et Yamawaki (1978) [[tamura1978]], mais composée d''autres mesures ; Liu et Picard (1996) [[liu_picard1996]] traitent le caractère
-  aléatoire d''une texture comme une composante séparée. Aucune source trouvée ne nomme l''écart local à une régularité comme qualité perçue. La base du type reste ouverte (T11). Détail : docs/bibliographie-par-type.md#groupe-texture.'
+etat_de_l_art: 'La régularité d’une texture est une des dimensions de Tamura, Mori et Yamawaki (1978) [[tamura1978]], calculée à partir des variations de leurs autres mesures (grossièreté, contraste, orientation, linéarité) ; Liu et Picard (1996) [[liu_picard1996]] traitent le caractère aléatoire d’une texture comme une composante à part. Aucune source trouvée ne nomme l’écart local à une régularité comme qualité perçue. La base retenue (texture et netteté du bord) est une décision du projet, révisable après épreuve (T11, série 48). Détail : docs/bibliographie-par-type.md#groupe-texture.'
 etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-texture
 axiomes:
 - conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
@@ -126,7 +128,7 @@ remplace_par: []
 source_de_la_fiche: 'ex-« rugosité » v0.2 ; la définition v0.2 portait une valence (« imperfections », « augmentent la présence ») et n’est pas reprise ; « rugosité » retiré des labels alternatifs (2026-10-10)
   : c’est de la texture (annexe A alignée en série 24, T19)'
 manques:
-- exemplaires
+- 'exemplaires (lot 3, 2026-10-14) : 2701 aucune, 2702 légère, 2703 marquée ; relus et validés par la relecture explicative (lot 3 bis, 2026-10-14)'
 - 'base de dépendance (texture, netteté du bord) confirmée (T11, série 48), révisable après épreuve'
 bloque_par: []
 a_relire: []
@@ -140,4 +142,5 @@ relecture_explicative:
   - transfert
   - etat_de_l_art (série 6)
   - references (série 6)
+  - 'etat_de_l_art (validé en relecture explicative, lot 3 bis, 2026-10-14 : base retenue après la série 48 ; début réécrit par la relecture)'
   a_reconfirmer: []

@@ -239,7 +239,7 @@ def bloc():
         '- **Références** : %d fiches sur %d en ont (%d références distinctes, comptées par DOI ou URL : %s) ; sans référence : %s.'
         % (len(avec_refs), n, len(distinctes), ', '.join('%d %s' % (v, k) for k, v in sorted(statuts.items())), c(sans_refs)),
         '- **Relecture explicative en attente** (`a_relire` ou `a_reconfirmer` non vides), bloquées comprises : %s (%s).' % (pl(len(attente), 'fiche', 'fiches'), c(attente)),
-        '- **Sans aucun exemplaire** : %d fiches (%s).' % (len(sans_ex), c(sans_ex)),
+        '- **Sans aucun exemplaire** : %s (%s).' % (pl(len(sans_ex), 'fiche', 'fiches'), c(sans_ex)),
         '- **Fiches publiques (X17, paliers 1 et 2)** : %d fiches publiques (%s) ; publiable : %s ; publiable avec exemplaires incomplets : %s ; pas publiable : %d fiches (détail : `python3 fiches/compte.py --paliers`).'
         % (len(publiques(paliers)), c(publiques(paliers)), c(paliers.get('publiable', [])), c(paliers.get('publiable avec exemplaires incomplets', [])), len(paliers.get('pas publiable', []))),
         ligne_familles(fiches),
@@ -265,11 +265,12 @@ def ligne_familles(fiches):
 # après le changement d'image du Carré rouge) ; série 22 : 0601 reconfirmée, `hue` revient.
 # Série 44 quater : publication libérale (X17, décision de l'éditeur du projet du 2026-10-14) ; neuf fiches du groupe A entrent
 # (exemplaires validés par la relecture) ; série 44 quinquies : jointSpacing entre (1603 et 1604 relues) ; textureContrast reste hors de la liste.
+# Lot 3 bis : les douze fiches des lots 1 à 3 entrent (assertions des lots 1, 2 et 3 validées par la relecture).
 FICHES_PUBLIQUES_ATTENDUES = {'hue', 'lightness', 'lightnessContrast', 'perceivedSize', 'perceptualDensity', 'texture',
                               'textureDirectionality', 'distribution', 'hueContrast', 'hueCount', 'hueRange', 'jointLevelOffset',
                               'jointSpacing', 'perceptualContrast', 'saturation', 'scaleContrast', 'surfaceGloss',
-                              'contour', 'lightnessRange', 'saturationRange', 'symmetry',                       # lot 1
-                              'translucency', 'curvature', 'outlineIndentation', 'negativeSpace'}               # lot 2 (f63741b)
+                              'contour', 'lightnessRange', 'saturationRange', 'symmetry', 'translucency', 'curvature',
+                              'outlineIndentation', 'negativeSpace', 'localIrregularity', 'partNesting', 'subsurfaceDepth', 'perceivedDepth'}
 
 def publiques(paliers):
     return sorted(paliers.get('publiable', []) + paliers.get('publiable avec exemplaires incomplets', []))
