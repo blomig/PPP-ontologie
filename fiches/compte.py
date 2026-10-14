@@ -11,7 +11,8 @@ Usage :
                                       (PPP_FicheType.md, spec §9.7 P ; série 15) ; code 1 sinon
   python3 fiches/compte.py --noms     seulement le contrôle des noms (tout le dépôt sauf .git, local/ ; liste
                                       blanche NOMS_AUTORISES, §13 de la spec ; exceptions comptées, non signalées :
-                                      docs/crash-test-0*.md, docs/guide-structure-ontologie.md, maquette/)
+                                      docs/crash-test-0*.md, docs/guide-structure-ontologie.md, maquette/ ;
+                                      noms lus dans PPP_NOMS, .noms-prives ou maquette/noms-prives.txt, absents de ce fichier)
   python3 fiches/compte.py --paliers  palier T35 de chaque fiche, avec ses raisons
 
 Règles de lecture (celles de fiches/README.md, « Avancement ») :
@@ -273,11 +274,29 @@ def publiques(paliers):
 # sources publiées ni dans les documents internes. Les noms publics de l'équipe ne paraissent que dans les fichiers
 # autorisés ci-dessous (citation, licences, §13 de la spec) et sur la page « Qui sommes-nous ? » (maquette).
 import re
-NOMS = re.compile(r'\b(Lomig|Unger|Grok|CDP|Professeur|Testeur|Designer|Philosophe|PPP-agent)\b', re.I)
+# La liste des noms cherchés n'est pas dans ce fichier (publié) : elle est lue dans la variable d'environnement PPP_NOMS
+# (motifs séparés par « | »), dans un fichier `.noms-prives` à la racine (un motif par ligne ; ignoré par Git) et, dans le
+# dépôt de travail, dans maquette/noms-prives.txt (sections [personnes] et [agents] ; jamais publié). Sans aucune source,
+# le contrôle des noms n'est pas exécuté (il est fait avant chaque publication par l'équipe).
+def _motifs():
+    racine = os.path.normpath(os.path.join(FD, '..'))
+    m = os.environ.get('PPP_NOMS', '').split('|')
+    f = os.path.join(racine, '.noms-prives')
+    if os.path.exists(f):
+        m += [l.strip() for l in open(f, encoding='utf-8') if l.strip() and not l.startswith('#')]
+    f = os.path.join(racine, 'maquette', 'noms-prives.txt')
+    if os.path.exists(f):
+        sec = None
+        for l in open(f, encoding='utf-8').read().split('\n'):
+            if not l.strip() or l.lstrip().startswith('#'): continue
+            if re.match(r'^\[\w+\]$', l.strip()): sec = l.strip()[1:-1]; continue
+            if sec in ('personnes', 'agents'): m.append(l.strip())
+    m = sorted({x.strip() for x in m if x.strip()}, key=len, reverse=True)
+    return re.compile(r'(?<!\w)(' + '|'.join(re.escape(x) for x in m) + r')(?!\w)', re.I) if m else None
+NOMS = _motifs()
 RACINE = os.path.normpath(os.path.join(FD, '..'))
 # Fichiers où les noms publics sont autorisés (liste blanche).
-NOMS_AUTORISES = {'CITATION.cff', 'LICENSE', 'LICENSE-CONTENT.md', 'CONTRIBUTORS.md', 'docs/comment-citer.md',
-                  'fiches/compte.py'}          # compte.py : l'outil de contrôle contient la liste des noms cherchés
+NOMS_AUTORISES = {'CITATION.cff', 'LICENSE', 'LICENSE-CONTENT.md', 'CONTRIBUTORS.md', 'docs/comment-citer.md'}   # compte.py n'en fait plus partie : il ne contient aucun nom
 NOMS_SECTION_AUTORISEE = {'PPP_Specification.md': '## 13.',            # autorisés dans cette section seulement
                           'docs/public/README-accueil.md': '## Citer'}    # forme de citation du README public
 # Exceptions, non corrigées (documents historiques et domaine de la maquette) : comptées, pas signalées.
@@ -307,6 +326,8 @@ def noms_publics(avec_exceptions=False):
     """Liste (fichier, ligne, nom) des noms trouvés hors des fichiers et sections autorisés ;
     avec avec_exceptions, renvoie aussi le compte par fichier d'exception."""
     out, exc = [], {}
+    if NOMS is None:   # aucune liste de noms disponible (dépôt public sans PPP_NOMS ni .noms-prives) : contrôle non exécuté
+        return (out, exc) if avec_exceptions else out
     for rel in sorted(_fichiers_texte()):
         if rel in NOMS_AUTORISES:
             continue
