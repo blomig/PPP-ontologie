@@ -1,0 +1,239 @@
+# Fiche de type PPP — ppp:odourCharacter — format : PPP_FicheType.md (spec v2.8)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_base, note_categories, avertissement_label.
+# Série 50 (2026-10-15) : fiche en préparation, rédigée sans exemplaire ; aucun champ n’est encore relu.
+id: ppp:odourCharacter
+label_fr: caractère de l’odeur
+label_en: odour character
+labels_alternatifs:
+- qualité de l’odeur
+patron: P1
+sorte: qualité
+sous_sorte: —
+strate: semi-formel
+base_dependance:
+  types:
+  - ppp:odourIntensity
+  facteurs_non_perceptuels: []
+note_base: 'Base `ppp:odourIntensity`, comme `ppp:pitchClarity` pour `perceivedPitch` (série 43, décision 5) : le caractère ne se juge que si l’intensité n’est pas « aucune odeur » (`noOdour`).'
+facettes:
+- odorat
+définition: Ce à quoi l’odeur fait penser, dite par la source qu’elle rappelle (le bois, les fruits, les fleurs, la fumée…), sans dire que l’objet est fait de cette source.
+question_attentionnelle: L’odeur fait-elle penser au bois, aux fruits, aux agrumes, aux fleurs, à l’herbe coupée, aux épices, à la fumée ou au grillé, à la terre ou à la cave, à la résine, au cuir ?
+contre_exemple: 'Un plastique moulé peut sentir le bois ; un bois traité peut ne sentir que le vernis : « boisé » ne dit pas que l’objet est en bois. « Agréable », « propre » ou « écœurant » ne sont pas
+  des caractères : ce sont des jugements.'
+avertissement_label: '« Qualité de l’odeur » (label alternatif) se lit aussi comme un jugement (« une odeur de qualité ») : le label canonique est « caractère de l’odeur », le terme d’ISO/TS 16922. Chaque
+  région se lit « qui rappelle … ».'
+modalites:
+- odorat
+mode_de_presentation: échantillon
+conditions_critiques:
+- distance
+note_conditions: 'la distance du nez est critique (facette `distance`, spec §9.7 H, règle 10) : la qualité perçue d’une odeur change avec sa concentration (Gross-Isseroff et Lancet, 1988, résumé seulement
+  lu) [[gross_isseroff_lancet1988]] ; l’exposition (règle 10) agit sur l’intensité, son effet sur le caractère n’est pas sourcé ; les autres odeurs présentes et l’état de l’observateur sont notés dans l’épisode.
+  Les références olfactives (étalons, coffrets) servent de repères de région, pas d’exemplaires (X17).'
+porteur: l’objet ou la partie qu’on sent, à l’air ambiant
+arité: 1
+condition_NA: 'objet sans odeur sous la condition (intensité `noOdour`, « aucune odeur ») : la base n’est pas remplie.'
+espace_valeurs:
+  echelle: nominale
+  voisinages:
+  - - woody
+    - resinous
+  numerique: non
+  regions:
+  - cle: woody
+    label_fr: boisé
+    label_en: woody
+    repere: qui rappelle le bois (un crayon de cèdre taillé)
+    exemplaires: []
+  - cle: fruity
+    label_fr: fruité (hors agrumes)
+    label_en: fruity (not citrus)
+    repere: qui rappelle les fruits, hors agrumes (une pomme, une poire)
+    exemplaires: []
+  - cle: citrus
+    label_fr: agrume
+    label_en: citrus
+    repere: qui rappelle les agrumes (un zeste de citron)
+    exemplaires: []
+  - cle: floral
+    label_fr: floral
+    label_en: floral
+    repere: qui rappelle les fleurs (une rose)
+    exemplaires: []
+  - cle: green
+    label_fr: vert (herbe, feuille)
+    label_en: green (grass, leaf)
+    repere: qui rappelle l’herbe coupée, une feuille froissée
+    exemplaires: []
+  - cle: spicy
+    label_fr: épicé
+    label_en: spicy
+    repere: qui rappelle les épices (un clou de girofle)
+    exemplaires: []
+  - cle: smokyRoasted
+    label_fr: fumé, grillé
+    label_en: smoky, roasted
+    repere: qui rappelle la fumée ou le grillé (un feu de bois, du pain grillé)
+    exemplaires: []
+  - cle: earthy
+    label_fr: terreux
+    label_en: earthy
+    repere: qui rappelle une cave humide, de la terre mouillée
+    exemplaires: []
+  - cle: resinous
+    label_fr: résineux
+    label_en: resinous
+    repere: qui rappelle la résine (une pomme de pin)
+    exemplaires: []
+  - cle: leathery
+    label_fr: cuir
+    label_en: leathery
+    repere: qui rappelle le cuir
+    exemplaires: []
+  - cle: other
+    label_fr: autre (à décrire)
+    label_en: other (to be described)
+    repere: une odeur qu’aucune région ne dit ; on la décrit dans la note
+    exemplaires: []
+note_categories: 'Régions catégorielles non ordonnées (décision de l’éditeur du projet du 2026-10-14, série 43, décision 4) ; liste de travail construite à partir des familles que les roues et les coffrets
+  ont en commun, sans en reprendre une telle quelle. « Fruité (hors agrumes) » suit Castro et al. (2013) [[castro2013]], où les agrumes forment une dimension à part. Une odeur mêlée se note par plusieurs
+  assertions, une par caractère net. Boisé et résineux sont déclarés voisins : Castro et al. (2013) [[castro2013]] les réunissent dans une même dimension (« woody, resinous »).'
+identite: Ce que l’odeur rappelle, pas sa force (intensité de l’odeur), pas la matière de l’objet, pas l’agrément.
+relations: []
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: iso_ts16922_2002
+  citation: ISO/TS 16922:2002. Natural gas — Guidelines for odorizing gases. ISO (annulée).
+  doi_ou_url: https://www.iso.org/standard/31135.html
+  role: fonde
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-10-15'
+  verifie_sur: 'extraits : échantillon public du texte (3.1.2 caractère d’odeur, 3.1.3 intensité d’odeur) ; édition annulée, gardée pour ses définitions'
+  reprend: le terme « caractère d’odeur », « type de sensation d’une odeur » (3.1.2)
+  ne_reprend_pas: le reste de la norme (odorisation du gaz)
+- id: iso_ts16922_2022
+  citation: ISO/TS 16922:2022. Natural gas — Odorization. ISO.
+  doi_ou_url: https://www.iso.org/standard/83835.html
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-15'
+  verifie_sur: édition en vigueur ; titre, numéros des articles (3.1.3 caractère, 3.1.4 intensité) et définition de l’intensité (« magnitude of the perceived odour ») relevés par la relecture ; définition
+    3.1.4 lue dans l’extrait public de la norme ; reste du texte non lu
+  reprend: le caractère d’odeur (3.1.3), édition en vigueur
+  ne_reprend_pas: le reste de la norme
+- id: castro2013
+  citation: Castro, J. B., Ramanathan, A. & Chennubhotla, C. S. (2013). Categorical dimensions of human odor descriptor space revealed by non-negative matrix factorization. PLoS ONE, 8(9), e73289.
+  doi_ou_url: https://doi.org/10.1371/journal.pone.0073289
+  role: alimente
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-10-15'
+  verifie_sur: lu en partie (article sur le site de l’éditeur)
+  reprend: des dimensions qui s’appliquent par catégories ; une dimension fruitée distincte des agrumes ; une dimension qui réunit « woody, resinous »
+  ne_reprend_pas: le nom évaluatif « sickening »
+- id: zarzo_stanton2006
+  citation: Zarzo, M. & Stanton, D. T. (2006). Identification of latent variables in a semantic odor profile database using principal component analysis. Chemical Senses, 31(8), 713–724.
+  doi_ou_url: https://doi.org/10.1093/chemse/bjl013
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-15'
+  verifie_sur: résumé lu (OpenAlex) ; texte non lu
+  reprend: pas d’odeurs primaires ; des classes
+  ne_reprend_pas: la liste des 17 classes telle quelle
+- id: zarzo_stanton2009
+  citation: Zarzo, M. & Stanton, D. T. (2009). Understanding the underlying dimensions in perfumers’ odor perception space as a basis for developing meaningful odor maps. Attention, Perception, & Psychophysics,
+    71(2), 225–247.
+  doi_ou_url: https://doi.org/10.3758/APP.71.2.225
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-15'
+  verifie_sur: résumé lu (PubMed, PMID 19304614) ; texte non lu
+  reprend: s’accorder d’abord sur les odorants qui représentent chaque qualité
+  ne_reprend_pas: les cartes elles-mêmes
+- id: noble1987
+  citation: Noble, A. C., Arnold, R. A., Buechsenstein, J., Leach, E. J., Schmidt, J. O. & Stern, P. M. (1987). Modification of a standardized system of wine aroma terminology. American Journal of Enology
+    and Viticulture, 38(2), 143–146.
+  doi_ou_url: https://doi.org/10.5344/ajev.1987.38.2.143
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-15'
+  verifie_sur: résumé lu (OpenAlex) ; texte non lu
+  reprend: descripteurs de source et étalons de référence
+  ne_reprend_pas: la roue du vin telle quelle (elle nomme des défauts)
+- id: gross_isseroff_lancet1988
+  citation: Gross-Isseroff, R. & Lancet, D. (1988). Concentration-dependent changes of perceived odor quality. Chemical Senses, 13(2), 191–204.
+  doi_ou_url: https://doi.org/10.1093/chemse/13.2.191
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-15'
+  verifie_sur: résumé seulement lu
+  reprend: 'la qualité perçue change avec la concentration : la distance du nez est critique'
+  ne_reprend_pas: les odorants et les valeurs étudiés
+etat_de_l_art: 'ISO/TS 16922 nomme le caractère d’odeur (édition 2002, annulée, 3.1.2, extraits [[iso_ts16922_2002]] ; édition en vigueur 2022, 3.1.3 [[iso_ts16922_2022]]). Zarzo et Stanton (2006) [[zarzo_stanton2006]]
+  notent qu’aucune classification n’est largement acceptée, et proposent en 2009 [[zarzo_stanton2009]] de s’accorder d’abord sur les odorants de référence (résumés lus) ; Castro et al. (2013) [[castro2013]]
+  trouvent des dimensions qui s’appliquent par catégories (lu en partie). Noble et al. (1987) [[noble1987]] appuient les descripteurs sur des étalons (résumé lu). Gross-Isseroff et Lancet (1988) [[gross_isseroff_lancet1988]]
+  montrent que la qualité perçue change avec la concentration (résumé seulement lu). Détail : docs/bibliographie-par-type.md#groupe-odorat.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-odorat
+axiomes:
+- conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
+  validation: Toute assertion de type ppp:odourCharacter a exactement un ppp:about.
+- conceptuel: Une région de cet espace n’est pas un sous-type du type.
+  validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
+nanay: Oui — passer de « ça sent » à « ça rappelle le bois, la fumée » change la description, sans dire de quoi l’objet est fait.
+transfert: objet conçu oui (un cuir, un bois, un savon) | tableau non | cuisine oui (épices, bois, fumée) | high-tech oui (l’odeur d’un plastique neuf) | architecture oui (un intérieur boisé)
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs exact (échelle nominale, spec §9.7 C), au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques (spec §9.7 H)
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les objets
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2
+statut: candidat
+statut_note: 'en préparation (série 50, 2026-10-15) : fiche rédigée, sans exemplaire ; tous les champs rédigés sont à relire'
+statut_epistemique: non éprouvé
+introduit_en: '2.8'
+modifie_en: []
+remplace_par: []
+source_de_la_fiche: proposition de famille « Odorat » (docs/famille-odorat-proposition.md, séries 41 à 43 ; premier lot recommandé par la relecture explicative en série 49 bis, à confirmer par l’éditeur)
+  ; fiche rédigée le 2026-10-15 par l’équipe, champs à valider par la relecture explicative
+manques:
+- 'exemplaires (à renseigner : objets publics vérifiés, un épisode par objet, conditions déclarées ; objet décrit, références olfactives comme repères, X17)'
+- 'repères de région : références olfactives à choisir (étalons, coffret), comme repères, pas comme exemplaires'
+bloque_par: []
+a_relire:
+- label_fr
+- label_en
+- strate
+- note_base
+- définition
+- question_attentionnelle
+- contre_exemple
+- avertissement_label
+- mode_de_presentation
+- conditions_critiques
+- note_conditions
+- porteur
+- condition_NA
+- espace_valeurs
+- note_categories
+- identite
+- references
+- etat_de_l_art
+- nanay
+- transfert
+- enonces_testables
+- statut_note
+relecture_explicative:
+  date: null
+  champs: []
+  a_reconfirmer: []

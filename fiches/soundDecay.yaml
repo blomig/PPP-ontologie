@@ -1,0 +1,161 @@
+# Fiche de type PPP — ppp:soundDecay — format : PPP_FicheType.md (spec v2.8)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_base, note_categories, avertissement_label.
+# Série 50 (2026-10-15) : fiche en préparation, rédigée sans exemplaire ; aucun champ n’est encore relu.
+id: ppp:soundDecay
+label_fr: résonance
+label_en: decay
+labels_alternatifs:
+- extinction du son
+patron: P1
+sorte: qualité
+sous_sorte: —
+strate: formel
+base_dependance:
+  types: []
+  facteurs_non_perceptuels: []
+facettes:
+- son
+définition: 'Ce que fait le son après le geste bref qui l’a produit : il s’éteint aussitôt, résonne un moment, ou résonne longtemps.'
+question_attentionnelle: Après le coup, le son s’arrête-t-il tout de suite, résonne-t-il un moment, ou longtemps ?
+contre_exemple: 'Dans une salle très réverbérante, un objet qui s’éteint aussitôt paraît résonner : c’est la salle qu’on entend. « Ça sonne métal » n’est pas une résonance : c’est une identification de
+  la matière, qui peut se tromper.'
+grandeur_physique_homonyme: 'amortissement ; temps de réverbération (celui de la salle, pas de l’objet) ; résonance mécanique ou acoustique (accord d’un système sur une fréquence propre) : aucune région
+  ne s’en déduit.'
+modalites:
+- audition
+mode_de_presentation: échantillon
+conditions_critiques:
+- production
+note_conditions: 'un geste bref déclaré (facette `production`, en général `impact`) ; une salle très réverbérante allonge la résonance : la noter dans l’épisode (spec §9.7 H, règle 9). Piège : pour un son
+  frappé, l’oreille juge aussi l’attaque par la façon dont le son s’éteint (Chion, 1983, art. 97) [[chion1983]] : la résonance se juge à part de l’attaque.'
+porteur: un objet qu’on fait sonner par un geste bref (frappé, pincé)
+arité: 1
+condition_NA: son continu (une machine en marche, un souffle), ou objet qui ne sonne pas sous le geste déclaré.
+espace_valeurs:
+  echelle: ordinale
+  sens_croissant: de `stopsAtOnce` (rang 1) vers `ringsLong` (rang 3), le son dure de plus en plus après le geste
+  numerique: non
+  regions:
+  - cle: stopsAtOnce
+    label_fr: s’éteint aussitôt
+    label_en: stops at once
+    rang: 1
+    repere: le son s’arrête tout de suite (un bois plein frappé)
+    exemplaires: []
+  - cle: ringsAMoment
+    label_fr: résonne un moment
+    label_en: rings for a moment
+    rang: 2
+    repere: le son dure un peu (un verre)
+    exemplaires: []
+  - cle: ringsLong
+    label_fr: résonne longtemps
+    label_en: rings for a long time
+    rang: 3
+    repere: le son dure longtemps (une cloche, un gong)
+    exemplaires: []
+identite: Ce que fait le son après le geste, pas la façon dont il commence (attaque), pas la matière qu’on croit reconnaître, pas la réverbération de la salle.
+relations:
+- type: confusableWith
+  cible: ppp:soundAttack
+  note: 'pour un son frappé, l’oreille juge l’attaque en partie par la façon dont le son s’éteint (Chion, 1983, art. 97) [[chion1983]] : on juge la fin et le début à part (réciproque écrite aussi dans soundAttack)'
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: klatzky2000
+  citation: 'Klatzky, R. L., Pai, D. K. & Krotkov, E. P. (2000). Perception of material from contact sounds. Presence: Teleoperators and Virtual Environments, 9(4), 399–410.'
+  doi_ou_url: https://doi.org/10.1162/105474600566907
+  role: fonde
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-15'
+  verifie_sur: résumé lu (OpenAlex) ; texte non lu
+  reprend: la vitesse d’extinction, indice principal de la matière entendue
+  ne_reprend_pas: l’identification de la matière comme qualité
+- id: giordano_mcadams2006
+  citation: 'Giordano, B. L. & McAdams, S. (2006). Material identification of real impact sounds: Effects of size variation in steel, glass, wood, and plexiglass plates. The Journal of the Acoustical Society
+    of America, 119(2), 1171–1181.'
+  doi_ou_url: https://doi.org/10.1121/1.2149839
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-15'
+  verifie_sur: résumé lu (PubMed, PMID 16521778) ; texte non lu
+  reprend: l’amortissement et la durée, qui expliquent les grandes catégories
+  ne_reprend_pas: l’identification de la matière comme qualité
+- id: chion1983
+  citation: 'Chion, M. (1983). Guide des objets sonores. Pierre Schaeffer et la recherche musicale. Paris : Buchet/Chastel ; INA (coll. « Bibliothèque de recherche musicale »). Trad. angl. Guide to Sound
+    Objects, J. Dack et C. North (2009), EARS ; traduction anglaise lue.'
+  doi_ou_url: https://openlibrary.org/works/OL1880304W
+  role: alimente
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-10-15'
+  verifie_sur: sections IV et V (art. 58 à 100) lues en entier dans la traduction anglaise de Dack et North
+  reprend: l’attaque jugée par l’extinction (art. 97)
+  ne_reprend_pas: le vocabulaire de Schaeffer comme labels
+etat_de_l_art: 'Klatzky, Pai et Krotkov (2000) [[klatzky2000]] montrent que la vitesse d’extinction décide fortement de la matière perçue d’un son de contact ; Giordano et McAdams (2006) [[giordano_mcadams2006]]
+  trouvent que l’amortissement, mais aussi la durée, expliquent l’identification des grandes catégories (résumés lus). PPP en garde la résonance, pas la matière identifiée. Chion (1983, art. 97, lu en traduction)
+  [[chion1983]] note que l’oreille juge l’attaque d’un son frappé par son extinction. Aucune source trouvée ne fixe des régions perçues. Détail : docs/bibliographie-par-type.md#groupe-son.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-son
+axiomes:
+- conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
+  validation: Toute assertion de type ppp:soundDecay a exactement un ppp:about.
+- conceptuel: Les 3 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 3 ppp:Region de l’échelle du type ont des ppp:rank distincts, de 1 à 3 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Une région de cet espace n’est pas un sous-type du type.
+  validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
+nanay: Oui — passer de « ça sonne métal » à « le son s’éteint-il aussitôt ou résonne-t-il » change la description (on décrit ce qu’on entend, pas ce qu’on devine).
+transfert: objet conçu oui (un verre, un bol en métal frappés) | tableau non (sans son) | cuisine oui (une casserole, une planche en bois frappées) | high-tech oui (un boîtier en métal ou en plastique tapoté)
+  | architecture oui (un plancher, une rampe métallique frappés)
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs exact (échelle à trois régions ou moins, spec §9.7 C, v2.5), au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques
+    (spec §9.7 H)
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les objets
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2
+statut: candidat
+statut_note: 'en préparation (série 50, 2026-10-15) : fiche rédigée, sans exemplaire ; tous les champs rédigés sont à relire'
+statut_epistemique: non éprouvé
+introduit_en: '2.8'
+modifie_en: []
+remplace_par: []
+source_de_la_fiche: proposition de famille « Son » (docs/famille-son-proposition.md, séries 41 à 43 ; premier lot recommandé par la relecture explicative en série 49 bis, à confirmer par l’éditeur) ; fiche
+  rédigée le 2026-10-15 par l’équipe, champs à valider par la relecture explicative
+manques:
+- 'exemplaires (à renseigner : objets publics vérifiés, un épisode par objet, conditions déclarées ; enregistrement cité ou objet décrit, X17)'
+bloque_par: []
+a_relire:
+- label_fr
+- label_en
+- strate
+- définition
+- question_attentionnelle
+- contre_exemple
+- grandeur_physique_homonyme
+- mode_de_presentation
+- conditions_critiques
+- note_conditions
+- porteur
+- condition_NA
+- espace_valeurs
+- identite
+- relations
+- references
+- etat_de_l_art
+- nanay
+- transfert
+- enonces_testables
+- statut_note
+relecture_explicative:
+  date: null
+  champs: []
+  a_reconfirmer: []

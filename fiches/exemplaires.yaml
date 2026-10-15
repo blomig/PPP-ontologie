@@ -2235,7 +2235,7 @@ assertions:
     doute: oui
     note: "un gris clair à peu près égal sur toute l’image ; les petits grains font de fines ombres, qui viennent de l’éclairage et non du mur ; l’image a été retouchée pour se raccorder bord à bord, ce qui a pu égaliser la clarté"
     withdrawn: oui   # retiré le 2026-10-14 (lot 2 bis, la relecture) : image retouchée ; remplacé par ppp-a:pilote-2004 ; id non réutilisé
-    a_relire: oui   # lot 1 : exemplaire neuf, à relire (relecture_explicative.a_relire)
+    # relue, retrait approuvé
   - id: ppp-a:pilote-2002
     about: app:commons-empty-wooden-chessboard#damier
     assertedType: ppp:lightnessRange
@@ -2328,7 +2328,7 @@ assertions:
     ontologyVersion: "2.8"
     note: "une planche épaisse : on ne voit rien à travers, ni lumière ni forme"
     withdrawn: oui   # retiré le 2026-10-14 (lot 2 bis, la relecture) : la planche est vue de dessus, ce serait « non tranché » ; remplacé par ppp-a:pilote-2304 ; id non réutilisé
-    a_relire: oui   # lot 2 : exemplaire neuf, à relire (relecture_explicative.a_relire)
+    # relue, retrait approuvé
   - id: ppp-a:pilote-2302
     about: app:commons-line-of-lanterns#lanterne-la-plus-claire
     assertedType: ppp:translucency
@@ -2621,7 +2621,8 @@ relecture_explicative:
                ppp-a:pilote-0104, ppp-a:pilote-0105, ppp-a:pilote-0501, ppp-a:pilote-0503, ppp-a:pilote-0601, ppp-a:pilote-0701, ppp-a:pilote-0801,
                ppp-a:pilote-0902, ppp-a:pilote-0302, ppp-a:pilote-0304, ppp-a:pilote-0305, ppp-a:pilote-1001, ppp-a:pilote-1002, ppp-a:pilote-1003, ppp-a:pilote-1101, ppp-a:pilote-1102, ppp-a:pilote-1201, ppp-a:pilote-1202, ppp-a:pilote-1401, ppp-a:pilote-1501, ppp-a:pilote-1702, ppp-a:pilote-1801, ppp-a:pilote-1804, ppp-a:pilote-0904, ppp-a:pilote-0905, ppp-a:pilote-1004, ppp-a:pilote-1103, ppp-a:pilote-1304, ppp-a:pilote-1503, ppp-a:pilote-1504, ppp-a:pilote-1203, ppp-a:pilote-1305, ppp-a:pilote-1805, ppp-a:pilote-1802, ppp-a:pilote-1603, ppp-a:pilote-1604,
                ppp-a:pilote-1901, ppp-a:pilote-1902, ppp-a:pilote-1903, ppp-a:pilote-1904, ppp-a:pilote-2302, ppp-a:pilote-2303, ppp-a:pilote-2401, ppp-a:pilote-2402, ppp-a:pilote-2403, ppp-a:pilote-2501, ppp-a:pilote-2502, ppp-a:pilote-2503, ppp-a:pilote-2701, ppp-a:pilote-2702, ppp-a:pilote-2703, ppp-a:pilote-2801, ppp-a:pilote-2802, ppp-a:pilote-2803, ppp-a:pilote-2901, ppp-a:pilote-2902, ppp-a:pilote-2903, ppp-a:pilote-3001, ppp-a:pilote-3002, ppp-a:pilote-3003, ppp-a:pilote-2601, ppp-a:pilote-2602, ppp-a:pilote-2603, ppp-a:pilote-2004, ppp-a:pilote-2304, ppp-a:pilote-2404, ppp-a:pilote-2504, ppp-a:pilote-2002, ppp-a:pilote-2003, ppp-a:pilote-2101, ppp-a:pilote-2102, ppp-a:pilote-2103, ppp-a:pilote-2201, ppp-a:pilote-2202, ppp-a:pilote-2203]   # séries 44 à 44 quater : validées par la relecture, reportées en série 44 quater (publication libérale, X17)
-  retirees_relues: [ppp-a:pilote-0103, ppp-a:pilote-0301, ppp-a:pilote-0502]   # retrait (T24) approuvé par la relecture explicative, 2026-10-10
+  retirees_relues: [ppp-a:pilote-0103, ppp-a:pilote-0301, ppp-a:pilote-0502,   # retrait (T24) approuvé par la relecture explicative, 2026-10-10
+                    ppp-a:pilote-2001, ppp-a:pilote-2301]   # retrait approuvé par la relecture explicative, lot 2, 2026-10-14
   objets: [app:commons-beuchaer-gestockt,
            app:commons-brastad-fog-trees, app:commons-adams-tetons-snake-river, app:commons-empty-wooden-chessboard, app:commons-nhm-ornithoptera-paradisea, app:commons-taj-mahal-front, app:commons-aresquiers-driftwood, app:commons-engraved-sherry-glass, app:commons-line-of-lanterns, app:commons-weatherworn-planks, app:commons-school-rulers, app:commons-egg-white-background, app:commons-stonehenge-trilithon, app:commons-bracken-frond, app:commons-optical-illusion-vase, app:commons-white-paint-wall, app:commons-quercus-robur-leaf, app:commons-azulejo-geometry, app:commons-freehand-circle, app:commons-museo-egizio-stool, app:commons-parliament-st-sash-windows, app:commons-romanesco-broccoli, app:commons-amber-small-piece]   # lot 3 ter (2026-10-14) : objets des lots 1, 2, 2 bis et 3 vérifiés par la relecture avec leurs assertions (le mur de béton, objet de la série 44 bis, n’en fait pas partie)
   note_distance: [ppp-e:pilote-01, ppp-e:pilote-02, ppp-e:pilote-03, ppp-e:pilote-04, ppp-e:pilote-05, ppp-e:pilote-06, ppp-e:pilote-07, ppp-e:pilote-08, ppp-e:pilote-09, ppp-a:pilote-0801]
@@ -2642,8 +2643,6 @@ relecture_explicative:
     - {assertion: ppp-a:pilote-1502, raison: "série 44 bis"}
     - {objets: "série 44 ter : 5 objets neufs (épisodes ppp-e:pilote-32 à 36), partie #carton de la boîte d’œufs", raison: "série 44 ter"}
     - {assertion: ppp-a:pilote-1404, raison: "série 44 ter"}
-    - {assertion: ppp-a:pilote-2301, raison: "lot 2"}
-    - {assertion: ppp-a:pilote-2001, raison: "lot 1"}
     - {objets: "série 44 bis : 7 objets neufs, épisodes ppp-e:pilote-17 à 31", raison: "crédits relevés par l’API Commons ; usage des clés et du parquet passé en lien seulement"}
   # avant la série 44 : a_relire vide ; clé a_valider avant la série 12 ; v2.3.2 relu le 2026-10-10 : 0105, 0503, objet bouchardé, notes de distance (0102, 0105 et deux note_distance précisées)
   a_reconfirmer: []

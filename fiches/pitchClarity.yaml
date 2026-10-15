@@ -1,0 +1,173 @@
+# Fiche de type PPP — ppp:pitchClarity — format : PPP_FicheType.md (spec v2.8)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_base, note_categories, avertissement_label.
+# Série 50 (2026-10-15) : fiche en préparation, rédigée sans exemplaire ; aucun champ n’est encore relu.
+id: ppp:pitchClarity
+label_fr: netteté de la hauteur
+label_en: pitch clarity
+labels_alternatifs: []
+patron: P1
+sorte: qualité
+sous_sorte: —
+strate: formel
+base_dependance:
+  types: []
+  facteurs_non_perceptuels: []
+facettes:
+- son
+définition: À quel point on entend dans le son une note précise, qu’on pourrait chanter, ou seulement une hauteur à peu près, ou aucune.
+question_attentionnelle: Pourrait-on chanter ce son, en dire seulement à peu près la hauteur, ou n’a-t-il pas de hauteur ?
+contre_exemple: 'Un son aigu n’a pas pour autant une hauteur nette : un souffle sifflant est aigu sans note (acuité). La justesse d’une note, par rapport à une gamme, n’est pas la netteté de sa hauteur.'
+grandeur_physique_homonyme: 'pitch strength (force de hauteur), mesurée sur une échelle continue (Fastl et Stoll, 1979) [[fastl_stoll1979]] ; rapport harmonique sur bruit : aucune région ne s’en déduit.
+  Homonyme de domaine : la « tonalité » au sens de la musique tonale.'
+modalites:
+- audition
+mode_de_presentation: échantillon
+conditions_critiques:
+- production
+- bruit_de_fond
+note_conditions: le bruit de fond masque la hauteur (facette `bruit_de_fond`) ; le geste qui fait sonner l’objet compte (facette `production`) (spec §9.7 H, règle 9). Les crans sont plus grossiers que l’échelle
+  continue de Fastl et Stoll (1979) [[fastl_stoll1979]], sans correspondance chiffrée.
+porteur: le son d’un objet, sous un geste ou un fonctionnement déclaré
+arité: 1
+condition_NA: objet qui ne sonne pas sous le geste déclaré.
+espace_valeurs:
+  echelle: ordinale
+  sens_croissant: de `singable` (rang 1) vers `noPitch` (rang 3), la hauteur est de moins en moins repérable
+  numerique: non
+  regions:
+  - cle: singable
+    label_fr: une note qu’on pourrait chanter ou retrouver sur un instrument
+    label_en: singable
+    rang: 1
+    repere: une note précise (une note de flûte)
+    exemplaires: []
+  - cle: approximatePitch
+    label_fr: une hauteur approximative
+    label_en: approximate pitch
+    rang: 2
+    repere: une hauteur à peu près (un coup sur une casserole)
+    exemplaires: []
+  - cle: noPitch
+    label_fr: aucune hauteur repérable
+    label_en: no pitch
+    rang: 3
+    repere: aucune note (un froissement de papier, un souffle)
+    exemplaires: []
+note_categories: 'Les crans sont plus grossiers que l’échelle continue de Fastl (pitch strength), sans correspondance chiffrée. Vocabulaire de Schaeffer [[schaeffer1966]], lu via Chion : `singable` correspond
+  à la masse tonique ; `approximatePitch` est rapproché du son cannelé (Chion, 1983, art. 91) [[chion1983]] sans en être l’équivalent ; `noPitch` correspond au son nodal et au bruit blanc.'
+identite: À quel point on entend une hauteur, pas la hauteur elle-même (grave ou aigu), pas l’acuité (un son sifflant peut n’avoir aucune hauteur).
+relations: []
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: fastl_zwicker2007
+  citation: 'Fastl, H. & Zwicker, E. (2007). Psychoacoustics: Facts and Models (3e éd.). Berlin, Heidelberg : Springer.'
+  doi_ou_url: https://doi.org/10.1007/978-3-540-68888-4
+  role: alimente
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-10-15'
+  verifie_sur: ch. 5 « Pitch and Pitch Strength » lu en partie (p. 111-112) ; titres des autres chapitres seulement
+  reprend: la pitch strength, sensation traitée à part de la hauteur (ch. 5, p. 111-112)
+  ne_reprend_pas: la hauteur virtuelle, non lue ; les valeurs chiffrées
+- id: fastl_stoll1979
+  citation: Fastl, H. & Stoll, G. (1979). Scaling of pitch strength. Hearing Research, 1(4), 293–301.
+  doi_ou_url: https://doi.org/10.1016/0378-5955(79)90002-9
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-15'
+  verifie_sur: résumé lu ; texte non lu
+  reprend: une échelle continue de la pitch strength
+  ne_reprend_pas: ses valeurs ; aucune correspondance chiffrée avec les crans
+- id: chion1983
+  citation: 'Chion, M. (1983). Guide des objets sonores. Pierre Schaeffer et la recherche musicale. Paris : Buchet/Chastel ; INA (coll. « Bibliothèque de recherche musicale »). Trad. angl. Guide to Sound
+    Objects, J. Dack et C. North (2009), EARS ; traduction anglaise lue.'
+  doi_ou_url: https://openlibrary.org/works/OL1880304W
+  role: alimente
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-10-15'
+  verifie_sur: sections IV et V (art. 58 à 100) lues en entier dans la traduction anglaise de Dack et North
+  reprend: masse tonique, son cannelé (art. 91), son nodal
+  ne_reprend_pas: le vocabulaire de Schaeffer comme labels
+- id: schaeffer1966
+  citation: 'Schaeffer, P. (1966). Traité des objets musicaux. Paris : Seuil (coll. « Pierres vives »).'
+  doi_ou_url: https://openlibrary.org/works/OL1318246W
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-15'
+  verifie_sur: 'lu via Chion (Guide des objets sonores, 1983 : sections IV et V (art. 58 à 100) lues en entier dans la traduction anglaise de Dack et North ; le reste via Chion) ; texte de Schaeffer non
+    lu'
+  reprend: le critère de masse
+  ne_reprend_pas: la typo-morphologie entière
+etat_de_l_art: 'Fastl et Zwicker (2007, ch. 5, lu en partie, p. 111-112) [[fastl_zwicker2007]] traitent la pitch strength à part de la hauteur ; Fastl et Stoll (1979) [[fastl_stoll1979]] la jugent sur une
+  échelle continue (résumé lu). Schaeffer [[schaeffer1966]], lu via Chion (1983 ; sections IV et V (art. 58 à 100) lues en entier dans la traduction anglaise de Dack et North) [[chion1983]], distingue la
+  masse tonique, le son cannelé (art. 91) et le son nodal. Les trois crans de PPP sont plus grossiers que l’échelle de Fastl, sans correspondance chiffrée. Détail : docs/bibliographie-par-type.md#groupe-son.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-son
+axiomes:
+- conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
+  validation: Toute assertion de type ppp:pitchClarity a exactement un ppp:about.
+- conceptuel: Les 3 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 3 ppp:Region de l’échelle du type ont des ppp:rank distincts, de 1 à 3 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Une région de cet espace n’est pas un sous-type du type.
+  validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
+nanay: Oui — passer de « j’entends un son » à « pourrais-je le chanter » change la description.
+transfert: objet conçu oui (un carillon, une sonnette) | tableau non (sans son) | cuisine oui (le sifflet d’une bouilloire, un minuteur) | high-tech oui (un bip à hauteur nette ou un bruit de souffle) |
+  architecture oui (une cloche d’église, une ventilation qui souffle)
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs exact (échelle à trois régions ou moins, spec §9.7 C, v2.5), au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques
+    (spec §9.7 H)
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les objets
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E2
+  nature: structure
+  enonce: la netteté de la hauteur peut varier à acuité constante (deux souffles filtrés, l’un sur une note)
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2
+statut: candidat
+statut_note: 'en préparation (série 50, 2026-10-15) : fiche rédigée, sans exemplaire ; tous les champs rédigés sont à relire'
+statut_epistemique: non éprouvé
+introduit_en: '2.8'
+modifie_en: []
+remplace_par: []
+source_de_la_fiche: proposition de famille « Son » (docs/famille-son-proposition.md, séries 41 à 43 ; premier lot recommandé par la relecture explicative en série 49 bis, à confirmer par l’éditeur) ; fiche
+  rédigée le 2026-10-15 par l’équipe, champs à valider par la relecture explicative
+manques:
+- 'exemplaires (à renseigner : objets publics vérifiés, un épisode par objet, conditions déclarées ; enregistrement cité ou objet décrit, X17)'
+bloque_par: []
+a_relire:
+- label_fr
+- label_en
+- strate
+- définition
+- question_attentionnelle
+- contre_exemple
+- grandeur_physique_homonyme
+- mode_de_presentation
+- conditions_critiques
+- note_conditions
+- porteur
+- condition_NA
+- espace_valeurs
+- note_categories
+- identite
+- references
+- etat_de_l_art
+- nanay
+- transfert
+- enonces_testables
+- statut_note
+relecture_explicative:
+  date: null
+  champs: []
+  a_reconfirmer: []

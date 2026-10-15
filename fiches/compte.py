@@ -254,7 +254,7 @@ def ligne_familles(fiches):
     sans = sorted(set(fiches) - set(ranges))
     attente = [f['cle'] for f in fam if f.get('a_relire') or f.get('a_valider') or (f.get('relecture_explicative') or {}).get('a_reconfirmer')]
     return '- **Familles de lecture** : %d (%s) ; types sans famille : %s ; introduction en attente de la relecture explicative : %s.' % (
-        len(fam), ', '.join('`%s` %d types' % (f['cle'], len(f.get('types') or [])) for f in fam),
+        len(fam), ', '.join('`%s` %d %s' % (f['cle'], len(f.get('types') or []), 'type' if len(f.get('types') or []) <= 1 else 'types') for f in fam),
         ', '.join('`%s`' % x.replace('ppp:', '') for x in sans) or '—', ', '.join('`%s`' % x for x in attente) or '—')
 
 # Fiches publiques (série 10, décision de l'éditeur du projet relayée par la coordination) : les fiches des paliers 1 et 2

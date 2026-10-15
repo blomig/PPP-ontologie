@@ -535,8 +535,11 @@ Références de [`famille-son-proposition.md`](famille-son-proposition.md), vér
 **Références** :
 
 - Fastl, H. & Zwicker, E. (2007). *Psychoacoustics: Facts and Models* (3e éd.). Berlin, Heidelberg : Springer. https://doi.org/10.1007/978-3-540-68888-4
-  - statut de lecture : *métadonnées* (titres et pages des chapitres sur Crossref : ch. 5 *Pitch and Pitch Strength*, ch. 8 *Loudness*, ch. 9 *Sharpness and Sensory Pleasantness*, ch. 10 *Fluctuation Strength*, ch. 11 *Roughness*, ch. 12 *Subjective Duration*, ch. 13 *Rhythm*) ; contenu non lu ;
+  - statut de lecture : *métadonnées* (titres et pages des chapitres sur Crossref : ch. 5 *Pitch and Pitch Strength*, ch. 8 *Loudness*, ch. 9 *Sharpness and Sensory Pleasantness*, ch. 10 *Fluctuation Strength*, ch. 11 *Roughness*, ch. 12 *Subjective Duration*, ch. 13 *Rhythm*) ; ch. 5 *lu en partie* (p. 111-112) ; contenu des autres chapitres non lu ;
   - usage : liste des sensations (alimente) ; `loudness`, `perceivedPitch`, `pitchClarity` (alimente) ; `soundGrain`, `soundBeat` (réserve) ; agrément sonore écarté (discute).
+- Fastl, H. & Stoll, G. (1979). Scaling of pitch strength. Hearing Research, 1(4), 293–301. https://doi.org/10.1016/0378-5955(79)90002-9
+  - statut de lecture : *résumé* ;
+  - usage : `pitchClarity` (alimente : la *pitch strength* jugée sur une échelle continue).
 - ISO 532-1:2017. *Acoustics — Methods for calculating loudness — Part 1: Zwicker method*. ISO. https://www.iso.org/standard/63077.html ; ISO 532-2:2017, *Part 2: Moore-Glasberg method*, https://www.iso.org/standard/63078.html ; ISO 532-3:2023, *Part 3: Moore-Glasberg-Schlittenlacher method* (sons stationnaires et variables dans le temps), https://www.iso.org/standard/69856.html
   - statut de lecture : *extrait d'index* (domaine des pages de l'ISO, cité par un moteur de recherche ; pour 532-3, aussi l'échantillon public du texte, par la même voie ; pages bloquées aux robots) ; textes non lus ;
   - usage : `loudness`, homonymes physiques (contraste).
@@ -550,11 +553,11 @@ Références de [`famille-son-proposition.md`](famille-son-proposition.md), vér
   - statut de lecture : *résumé* (PubMed, PMID 8570786) ;
   - usage : `soundAttack`, `soundSharpness` (alimente) ; pas de type « timbre » (fonde).
 - Schaeffer, P. (1966). *Traité des objets musicaux*. Paris : Seuil (coll. « Pierres vives »). ISBN 978-2-02-002608-6 ; Open Library OL1318246W
-  - statut de lecture : *métadonnées* (Open Library, par l'ISBN ; éditeur et collection d'après la relecture) ; critères connus par *source secondaire* (Chion, 1983, paraphrasé par le glossaire EARS et par un article de HAL, hal-00807080) ;
+  - statut de lecture : *métadonnées* (Open Library, par l'ISBN ; éditeur et collection d'après la relecture) ; lu via Chion (*Guide des objets sonores*, 1983 : sections IV et V (art. 58 à 100) lues en entier dans la traduction anglaise de Dack et North ; le reste via Chion) ; avant la série 49 bis, critères connus par *source secondaire* (glossaire EARS ; HAL, hal-00807080) ;
   - usage : `pitchClarity`, `soundAttack` (alimente) ; `soundGrain`, `soundBeat` (réserve) ; écoute réduite (alimente).
-- Chion, M. (1983). *Guide des objets sonores. Pierre Schaeffer et la recherche musicale*. Paris : INA-GRM / Buchet-Chastel. Open Library OL1880304W
-  - statut de lecture : *extraits* (table des matières de la traduction anglaise, *Guide to Sound Objects*, trad. J. Dack et C. North, sur leonardo.info : articles 51 *Site / Gauge*, 89 *Mass*, 90 *Node*, 91 *Striated*, 93 *Harmonic timbre*, 95 *Grain*) ; contenu des articles par *source secondaire* (glossaire EARS, ears.huma-num.fr ; HAL hal-00807080) ;
-  - usage : sept critères de la typo-morphologie (alimente) ; cran « hauteur approximative » de `pitchClarity` : associé à aucune catégorie (correspondance avec cannelé / nodal / site et calibre non vérifiée sur le texte).
+- Chion, M. (1983). *Guide des objets sonores. Pierre Schaeffer et la recherche musicale*. Paris : Buchet/Chastel ; INA (coll. « Bibliothèque de recherche musicale »). Trad. angl. *Guide to Sound Objects*, J. Dack et C. North (2009), EARS ; traduction anglaise lue. Open Library OL1880304W
+  - statut de lecture : *lu en partie* (sections IV et V (art. 58 à 100) lues en entier dans la traduction anglaise de Dack et North) ; table des matières sur leonardo.info : articles 51 *Site / Gauge*, 89 *Mass*, 90 *Node*, 91 *Striated*, 93 *Harmonic timbre*, 95 *Grain* ; avant la série 50 bis, contenu des articles par *source secondaire* (glossaire EARS, ears.huma-num.fr ; HAL hal-00807080) ;
+  - usage : sept critères de la typo-morphologie (alimente) ; cran « hauteur approximative » de `pitchClarity` : rapproché du son cannelé (art. 91) sans en être l’équivalent.
 - Chion, M. *Le son*. 1re éd. 1998 (Open Library OL1880301W) ; édition lue par sa table des matières sur la Bibliothèque numérique francophone accessible (notice 52363), date non vérifiée.
   - statut de lecture : *extraits* (table des matières) ;
   - usage : pas de type « timbre » (« Inadéquation de la notion de timbre pour décrire l'objet sonore » : alimente) ; site et calibre (à vérifier).
@@ -585,7 +588,7 @@ Références de [`famille-son-proposition.md`](famille-son-proposition.md), vér
   - statut de lecture : *extrait d'index* ;
   - usage : `bruit_de_fond` (contraste seulement : conditions d'une salle d'audiométrie, pas d'une observation ordinaire).
 
-**Non vérifié** : la hauteur virtuelle (Fastl et Zwicker, ch. 5 ; non citée) ; les unités asper et vacil ; la correspondance du cran « hauteur approximative » avec cannelé / nodal / site et calibre (non vérifiée sur le texte ; aucune association faite) ; les licences des sons publiés (Freesound : licences avec clause NC, non permissives au sens de X16).
+**Non vérifié** : la hauteur virtuelle (Fastl et Zwicker, ch. 5, hors des p. 111-112 lues ; non citée) ; les unités asper et vacil ; la correspondance du cran « hauteur approximative » avec cannelé / nodal / site et calibre (non vérifiée sur le texte ; aucune association faite) ; les licences des sons publiés (Freesound : licences avec clause NC, non permissives au sens de X16).
 
 <a id="groupe-odorat"></a>
 ## Odorat (proposition de famille, séries 41 et 42 ; aucune fiche)
@@ -597,10 +600,14 @@ Références de [`famille-odorat-proposition.md`](famille-odorat-proposition.md)
 **Références** :
 
 - ISO 5492:2008. *Sensory analysis — Vocabulary* (2e éd.), et Amd 1:2016. ISO. https://www.iso.org/standard/38051.html
-  - statut de lecture : *extrait d'index* (domaine et cycle de vie de la page de l'ISO : norme confirmée le 2024-01-13, toujours en vigueur) ; définitions (2.12 intensité, 3.32 persistance, 3.33 arôme, 3.34 odeur) par *source secondaire* (adoption nationale NTP-ISO 5492, en espagnol ; citations dans ISO/TS 16922) ; texte ISO non lu ;
+  - statut de lecture : *extrait d'index* (domaine et cycle de vie de la page de l'ISO : norme confirmée le 2024-01-13, toujours en vigueur) ; définitions (2.8 intensité, le 2.12 venant de l’édition 1992 ; 3.18 odeur ; 3.32 persistance et 3.33 arôme, numéros non vérifiés) par *source secondaire* (adoption nationale NTP-ISO 5492, en espagnol ; citations dans ISO/TS 16922) ; texte ISO non lu ;
   - usage : `odourIntensity` (fonde) ; `odourPersistence` (homonyme de domaine : contraste) ; arôme rétronasal écarté (contraste).
-- ISO/TS 16922:2002. *Natural gas — Odorization*. ISO (titre d'après l'échantillon ; à vérifier).
-  - statut de lecture : *extraits* (échantillon public du texte : 3.1.2 caractère d'odeur, 3.1.3 intensité d'odeur, 3.1.5 fatigue sensorielle, 3.2.1 degré olfactif) ;
+- Gross-Isseroff, R. & Lancet, D. (1988). Concentration-dependent changes of perceived odor quality. *Chemical Senses*, 13(2), 191–204. https://doi.org/10.1093/chemse/13.2.191
+  - statut de lecture : *résumé seulement lu* ;
+  - usage : `odourCharacter`, facette critique `distance` (alimente).
+- ISO/TS 16922:2022. *Natural gas — Odorization*. ISO. https://www.iso.org/standard/83835.html. Édition en vigueur : 3.1.3 caractère d’odeur, 3.1.4 intensité d’odeur, « magnitude of the perceived odour » (numéros relevés par la relecture ; définition 3.1.4 lue dans l’extrait public de la norme ; reste du texte non lu).
+- ISO/TS 16922:2002. *Natural gas — Guidelines for odorizing gases*. ISO. https://www.iso.org/standard/31135.html. **Annulée** (2013, remplacée d’abord par ISO/TR 16922:2013, elle-même remplacée par l’édition 2022, d’après les pages de l’ISO) ; gardée pour ses définitions (3.1.2 et 3.1.3).
+  - statut de lecture : *extraits* (échantillon public du texte de l’édition 2002 : 3.1.2 caractère d'odeur, 3.1.3 intensité d'odeur, 3.1.5 fatigue sensorielle, 3.2.1 degré olfactif) ;
   - usage : `odourIntensity` (alimente) ; `odourCharacter` (fonde le label : 3.1.2 « caractère d'odeur ») ; échelle de Sales non reprise (contraste).
 - Noble, A. C., Arnold, R. A., Masuda, B. M., Pecore, S. D., Schmidt, J. O. & Stern, P. M. (1984). Progress towards a standardized system of wine aroma terminology. American Journal of Enology and Viticulture, 35(2), 107–109. https://doi.org/10.5344/ajev.1984.35.2.107
   - statut de lecture : *métadonnées* (Crossref, auteurs compris) ;

@@ -1,0 +1,157 @@
+# Fiche de type PPP — ppp:soundSharpness — format : PPP_FicheType.md (spec v2.8)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_base, note_categories, avertissement_label.
+# Série 50 (2026-10-15) : fiche en préparation, rédigée sans exemplaire ; aucun champ n’est encore relu.
+id: ppp:soundSharpness
+label_fr: acuité du son
+label_en: sharpness
+labels_alternatifs: []
+patron: P1
+sorte: qualité
+sous_sorte: —
+strate: formel
+base_dependance:
+  types: []
+  facteurs_non_perceptuels: []
+facettes:
+- son
+définition: À quel point le son paraît sifflant ou, au contraire, étouffé, indépendamment de sa force et de sa hauteur.
+question_attentionnelle: Le son paraît-il étouffé, comme à travers une porte, ou chuintant, comme un s qu’on prolonge ?
+contre_exemple: Une note de piccolo est aiguë (hauteur) sans être sifflante ; un souffle sans hauteur peut être sifflant. Hauteur et acuité sont deux qualités.
+grandeur_physique_homonyme: 'acum (DIN 45692) et centroïde spectral : aucune région ne s’en déduit. Homonyme de domaine : l’acuité auditive, finesse de l’ouïe d’une personne, mesurée en audiométrie.'
+avertissement_label: '« Acuité du son » ne dit rien de l’ouïe de l’auditeur (acuité auditive). « Brillance » et « clarté » sont écartés comme labels : ils sont déjà pris par la vue (`ppp:surfaceGloss`,
+  `ppp:lightness`). « Sifflant » se dit comme un s prolongé, pas un sifflet, qui a une hauteur nette (netteté de la hauteur) ; il ne dit rien de l’agrément.'
+modalites:
+- audition
+mode_de_presentation: échantillon
+conditions_critiques:
+- presentation
+- production
+note_conditions: aucun obstacle (porte, paroi, tissu) entre l’objet et l’oreille, ou bien il est noté ; pour un enregistrement, la facette `presentation` vaut `recording`, admise seulement avec un casque
+  ou des enceintes déclarés (un petit haut-parleur coupe les aigus et les graves) ; la restitution est notée dans l’épisode (spec §9.7 H, règle 9) ; le geste qui fait sonner l’objet compte (facette `production`).
+porteur: le son d’un objet, sous un geste ou un fonctionnement déclaré
+arité: 1
+condition_NA: objet qui ne sonne pas sous le geste déclaré.
+espace_valeurs:
+  echelle: ordinale
+  sens_croissant: de `muffled` (rang 1) vers `hissing` (rang 3), le son paraît de plus en plus sifflant
+  numerique: non
+  regions:
+  - cle: muffled
+    label_fr: étouffé
+    label_en: muffled
+    rang: 1
+    repere: comme entendu à travers une porte ou un coussin
+    exemplaires: []
+  - cle: neitherMuffledNorHissing
+    label_fr: ni étouffé ni sifflant
+    label_en: neither muffled nor hissing
+    rang: 2
+    repere: ni étouffé ni sifflant (une voix parlée, de près)
+    exemplaires: []
+  - cle: hissing
+    label_fr: sifflant
+    label_en: hissing
+    rang: 3
+    repere: comme un s prolongé, pas un sifflet (un jet de vapeur)
+    exemplaires: []
+identite: À quel point le son paraît sifflant ou étouffé, pas sa hauteur (un souffle sans hauteur peut être sifflant), pas sa force, pas l’agrément.
+relations: []
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: din45692
+  citation: DIN 45692:2009-08. Messtechnische Simulation der Hörempfindung Schärfe. DIN.
+  doi_ou_url: https://doi.org/10.31030/1521326
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-15'
+  verifie_sur: extrait d’index (texte de présentation de la page DIN Media, cité par un moteur de recherche) ; norme non lue
+  reprend: l’acuité comme aspect du timbre lié à la répartition en fréquence
+  ne_reprend_pas: l’unité acum (homonyme) ; le lien à l’agressivité et à la gêne, un jugement (§0.4)
+- id: grey1977
+  citation: Grey, J. M. (1977). Multidimensional perceptual scaling of musical timbres. The Journal of the Acoustical Society of America, 61(5), 1270–1277.
+  doi_ou_url: https://doi.org/10.1121/1.381428
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-15'
+  verifie_sur: résumé lu (OpenAlex) ; texte non lu
+  reprend: une dimension du timbre liée à la répartition de l’énergie dans le spectre
+  ne_reprend_pas: les autres dimensions
+- id: mcadams1995
+  citation: 'McAdams, S., Winsberg, S., Donnadieu, S., De Soete, G. & Krimphoff, J. (1995). Perceptual scaling of synthesized musical timbres: Common dimensions, specificities, and latent subject classes.
+    Psychological Research, 58(3), 177–192.'
+  doi_ou_url: https://doi.org/10.1007/BF00419633
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-15'
+  verifie_sur: résumé lu (PubMed, PMID 8570786) ; texte non lu
+  reprend: le centroïde spectral, dimension commune du timbre
+  ne_reprend_pas: la mesure comme définition (T8)
+etat_de_l_art: 'DIN 45692 [[din45692]] décrit l’acuité (Schärfe) comme l’aspect de la perception du timbre lié à la répartition en fréquence de l’enveloppe spectrale (extrait d’index) ; Grey (1977) [[grey1977]]
+  et McAdams et al. (1995) [[mcadams1995]] retrouvent une dimension du timbre de cet ordre (résumés lus). Le lien que fait la norme entre acuité et gêne est un jugement, écarté (§0.4). Aucune source trouvée
+  ne fixe des régions perçues. Détail : docs/bibliographie-par-type.md#groupe-son.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-son
+axiomes:
+- conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
+  validation: Toute assertion de type ppp:soundSharpness a exactement un ppp:about.
+- conceptuel: Les 3 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 3 ppp:Region de l’échelle du type ont des ppp:rank distincts, de 1 à 3 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Une région de cet espace n’est pas un sous-type du type.
+  validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
+nanay: Oui — passer de « ce son est aigu » à « est-il sifflant ou étouffé, quelle que soit sa hauteur » change la description.
+transfert: objet conçu oui (le souffle d’un sèche-cheveux, un tissu froissé) | tableau non (sans son) | cuisine oui (une poêle qui grésille, une hotte) | high-tech oui (le souffle d’un ventilateur d’ordinateur)
+  | architecture oui (une ventilation, un courant d’air sous une porte)
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs exact (échelle à trois régions ou moins, spec §9.7 C, v2.5), au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques
+    (spec §9.7 H)
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les objets
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2
+statut: candidat
+statut_note: 'en préparation (série 50, 2026-10-15) : fiche rédigée, sans exemplaire ; tous les champs rédigés sont à relire'
+statut_epistemique: non éprouvé
+introduit_en: '2.8'
+modifie_en: []
+remplace_par: []
+source_de_la_fiche: proposition de famille « Son » (docs/famille-son-proposition.md, séries 41 à 43 ; premier lot recommandé par la relecture explicative en série 49 bis, à confirmer par l’éditeur) ; fiche
+  rédigée le 2026-10-15 par l’équipe, champs à valider par la relecture explicative
+manques:
+- 'exemplaires (à renseigner : objets publics vérifiés, un épisode par objet, conditions déclarées ; enregistrement cité ou objet décrit, X17)'
+bloque_par: []
+a_relire:
+- label_fr
+- label_en
+- strate
+- définition
+- question_attentionnelle
+- contre_exemple
+- grandeur_physique_homonyme
+- avertissement_label
+- mode_de_presentation
+- conditions_critiques
+- note_conditions
+- porteur
+- condition_NA
+- espace_valeurs
+- identite
+- references
+- etat_de_l_art
+- nanay
+- transfert
+- enonces_testables
+- statut_note
+relecture_explicative:
+  date: null
+  champs: []
+  a_reconfirmer: []
