@@ -70,31 +70,31 @@ Un exemplaire place un objet réel (photo publiée) sur l’échelle d’une qua
 | `contour` | CQ1, CQ2 | 4 | 4 |
 | `curvature` | CQ1, CQ2 | 4 | 4 |
 | `distribution` | CQ1, CQ2 | 4 | 3 |
-| `hue` | CQ1, CQ2 | 1 | 1 |
+| `hue` | CQ1, CQ2 | 3 | 3 |
 | `hueContrast` | CQ1, CQ2, CQ8a | 4 | 4 |
-| `hueCount` | CQ1, CQ2 | 4 | 3 |
-| `hueRange` | CQ1, CQ2 | 3 | 3 |
+| `hueCount` | CQ1, CQ2 | 5 | 4 |
+| `hueRange` | CQ1, CQ2 | 5 | 5 |
 | `jointLevelOffset` | CQ1, CQ2, CQ8a, CQ8b | 2 | 1 |
-| `jointSpacing` | CQ1, CQ2, CQ8a, CQ8b | 4 | 2 |
-| `lightness` | CQ1, CQ2 | 1 | 1 |
-| `lightnessContrast` | CQ1, CQ2, CQ8a, CQ8b, CQ12a | 3 | 3 |
-| `lightnessRange` | CQ1, CQ2 | 3 | 3 |
+| `jointSpacing` | CQ1, CQ2, CQ8a, CQ8b | 5 | 3 |
+| `lightness` | CQ1, CQ2 | 3 | 3 |
+| `lightnessContrast` | CQ1, CQ2, CQ8a, CQ8b, CQ12a | 5 | 5 |
+| `lightnessRange` | CQ1, CQ2 | 4 | 4 |
 | `localIrregularity` | CQ1, CQ2 | 3 | 3 |
 | `negativeSpace` | CQ1, CQ2 | 3 | 3 |
-| `outlineIndentation` | CQ1, CQ2 | 4 | 4 |
-| `partNesting` | CQ1, CQ2 | 3 | 3 |
-| `perceivedDepth` | CQ1, CQ2 | 3 | 3 |
+| `outlineIndentation` | CQ1, CQ2 | 5 | 5 |
+| `partNesting` | CQ1, CQ2 | 4 | 4 |
+| `perceivedDepth` | CQ1, CQ2 | 5 | 5 |
 | `perceivedSize` | CQ1, CQ2 | 1 | 1 |
 | `perceptualContrast` | CQ1, CQ2, CQ8a, CQ8b | 4 | 3 |
-| `perceptualDensity` | CQ1, CQ2, CQ4a, CQ4b, CQ4c, CQ4d, CQ4e, CQ12a, CQ12b, CQ12c, CQ12d, CQ12e, CQ14, CQ16a, CQ23, CQ24 | 2 | 2 |
+| `perceptualDensity` | CQ1, CQ2, CQ4a, CQ4b, CQ4c, CQ4d, CQ4e, CQ12a, CQ12b, CQ12c, CQ12d, CQ12e, CQ14, CQ16a, CQ23, CQ24 | 3 | 3 |
 | `saturation` | CQ1, CQ2 | 5 | 2 |
 | `saturationRange` | CQ1, CQ2 | 3 | 3 |
 | `scaleContrast` | CQ1, CQ2, CQ8a | 4 | 3 |
 | `subsurfaceDepth` | CQ1, CQ2 | 3 | 3 |
-| `surfaceGloss` | CQ1, CQ2 | 5 | 4 |
+| `surfaceGloss` | CQ1, CQ2 | 6 | 5 |
 | `symmetry` | CQ1, CQ2 | 3 | 3 |
 | `texture` | CQ1, CQ2, CQ4a, CQ4b, CQ4c, CQ4d, CQ4e, CQ12a, CQ12b, CQ12c, CQ12d, CQ12e | 4 | 4 |
-| `textureDirectionality` | CQ1, CQ2 | 2 | 2 |
+| `textureDirectionality` | CQ1, CQ2 | 3 | 3 |
 | `translucency` | CQ1, CQ2 | 3 | 3 |
 
 ## Questions qu’aucune fiche publique ne dit couvrir (32 sur 50)

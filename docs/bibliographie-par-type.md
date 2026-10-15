@@ -528,7 +528,7 @@ Matériaux souples (série 27, demande de l'éditeur du projet ; vérifiées le 
 <a id="groupe-son"></a>
 ## Son (proposition de famille, séries 41 et 42 ; aucune fiche)
 
-Références de [`famille-son-proposition.md`](famille-son-proposition.md), vérifiées le 2026-10-13 (métadonnées Crossref et Open Library, résumés OpenAlex ou PubMed, pages d'organismes). Aucune fiche n'existe : l'usage renvoie aux types **proposés** (ids non enregistrés). **Statut de lecture** noté pour chaque source : *lu en entier* ; *extraits* (passages lus sur la source elle-même ou sur la page de son éditeur ou de son organisme) ; *extrait d'index* (passage de la source lu seulement tel qu'un moteur de recherche ou une page tierce le cite, la page elle-même n'ayant pas été ouverte : c'est une forme de source secondaire) ; *résumé* ; *source secondaire* (contenu connu par un autre auteur) ; *métadonnées* ; *non vérifié* ; il précise le statut de vérification de la méthode (« vérifiée sur la source » = lu en entier ou extraits ; « vérifiée sur résumé ou source secondaire » = résumé, source secondaire ou métadonnées).
+Références de [`famille-son-proposition.md`](famille-son-proposition.md) (document de travail, non publié), vérifiées le 2026-10-13 (métadonnées Crossref et Open Library, résumés OpenAlex ou PubMed, pages d'organismes). Aucune fiche n'existe : l'usage renvoie aux types **proposés** (ids non enregistrés). **Statut de lecture** noté pour chaque source : *lu en entier* ; *extraits* (passages lus sur la source elle-même ou sur la page de son éditeur ou de son organisme) ; *extrait d'index* (passage de la source lu seulement tel qu'un moteur de recherche ou une page tierce le cite, la page elle-même n'ayant pas été ouverte : c'est une forme de source secondaire) ; *résumé* ; *source secondaire* (contenu connu par un autre auteur) ; *métadonnées* ; *non vérifié* ; il précise le statut de vérification de la méthode (« vérifiée sur la source » = lu en entier ou extraits ; « vérifiée sur résumé ou source secondaire » = résumé, source secondaire ou métadonnées).
 
 **Types proposés** : `loudness` (force du son ; alternatif : sonie), `perceivedPitch` (hauteur perçue), `pitchClarity` (netteté de la hauteur), `soundSharpness` (acuité du son), `soundAttack` (attaque du son), `soundDecay` (résonance ; alternatif : extinction du son) ; en réserve : `soundGrain`, `soundBeat`, `soundHollowness`.
 
@@ -593,7 +593,7 @@ Références de [`famille-son-proposition.md`](famille-son-proposition.md), vér
 <a id="groupe-odorat"></a>
 ## Odorat (proposition de famille, séries 41 et 42 ; aucune fiche)
 
-Références de [`famille-odorat-proposition.md`](famille-odorat-proposition.md), vérifiées le 2026-10-13 (même méthode et mêmes statuts de lecture que le groupe son). Aucune fiche n'existe.
+Références de [`famille-odorat-proposition.md`](famille-odorat-proposition.md) (document de travail, non publié), vérifiées le 2026-10-13 (même méthode et mêmes statuts de lecture que le groupe son). Aucune fiche n'existe.
 
 **Types proposés** : `odourIntensity` (intensité de l'odeur), `odourCharacter` (caractère de l'odeur ; alternatif : qualité de l'odeur) ; en réserve : `odourPersistence` (persistance de l'odeur), `odourReach` (portée de l'odeur), `odourPungency` (piquant au nez), `nasalCooling` (froid au nez ; EN *cooling in the nose*, alternatif *nasal cooling*).
 

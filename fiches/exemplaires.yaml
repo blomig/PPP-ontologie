@@ -1066,6 +1066,204 @@ objets:
       usage: image_reproduite
       motif_usage: "CC0 1.0 (API Commons, 2026-10-14 : LicenseShortName « CC0 », AttributionRequired false) : réellement libre ; crédit d’usage complet ; aucune revue de licence sur la page (inutile pour une image propre)"
 
+  - id: app:vangogh-tournesols-ng-1888
+    description: "Vincent van Gogh, Tournesols (vase avec quinze tournesols sur fond jaune), huile sur toile, août 1888, National Gallery, Londres ; tableau"
+    page_objet: https://www.nationalgallery.org.uk/paintings/vincent-van-gogh-sunflowers   # série 51 bis : page ouverte le 2026-10-15 ; inventaire NG3863
+    image: https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Sunflowers_(1888,_National_Gallery_London).jpg
+    licence_affichee: "domaine public (balise Commons PD-Art|PD-old-100-expired ; API : LicenseShortName « Public domain »)"
+    auteur_image: "Vincent van Gogh (œuvre, mort en 1890) ; reproduction fidèle de la National Gallery, Londres"
+    regime: "tableau"
+    parties: ["#fond"]
+    droits: "domaine public, Vincent van Gogh, image reproduite"
+    credit:   # lot 4 : relevé par l’API de Wikimedia Commons (extmetadata) et le wikitexte de la page du fichier le 2026-10-15 ; relu (série 51 ter)
+      auteur: "Vincent van Gogh (œuvre, mort en 1890) ; reproduction fidèle de la National Gallery, Londres"
+      licence: "domaine public (balise Commons PD-Art|PD-old-100-expired ; API : LicenseShortName « Public domain »)"
+      source: "Wikimedia Commons ; source déclarée : catalogue en ligne de la National Gallery, Londres"
+      url: "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Sunflowers_(1888,_National_Gallery_London).jpg"
+      date_verification: "2026-10-15"
+      mention_requise: "aucune exigée (domaine public) ; mention d’usage proposée : « Vincent van Gogh, Tournesols, 1888, National Gallery, Londres (reproduction, Wikimedia Commons, domaine public) »"
+      usage: image_reproduite
+      motif_usage: "domaine public (balise PD-Art|PD-old-100-expired, API Commons 2026-10-15) : reproduction fidèle d’une œuvre dont l’auteur est mort en 1890 ; réellement libre, reproduite avec un crédit d’usage complet (toutes les images Commons sont reproduites, lot 4)"
+  - id: app:vermeer-laitiere
+    description: "Johannes Vermeer, La Laitière (une femme verse du lait ; tablier bleu), huile sur toile, vers 1660, Rijksmuseum, Amsterdam ; tableau"
+    page_objet: https://www.rijksmuseum.nl/en/collection/SK-A-2344   # série 51 bis : page ouverte le 2026-10-15 (redirigée vers la notice « The Milkmaid ») ; inventaire SK-A-2344
+    image: https://commons.wikimedia.org/wiki/File:Johannes_Vermeer_-_Het_melkmeisje_-_Google_Art_Project.jpg
+    licence_affichee: "domaine public (balise Commons PD-Art|PD-old-100-expired ; API : LicenseShortName « Public domain »)"
+    auteur_image: "Johannes Vermeer (œuvre, mort en 1675) ; reproduction fidèle de Google Arts & Culture"
+    regime: "tableau"
+    parties: ["#tablier", "#mur-du-fond"]   # #mur-du-fond = le mur clair à droite de la figure
+    droits: "domaine public, Johannes Vermeer, image reproduite"
+    credit:   # lot 4 : relevé par l’API de Wikimedia Commons (extmetadata) et le wikitexte de la page du fichier le 2026-10-15 ; relu (série 51 ter)
+      auteur: "Johannes Vermeer (œuvre, mort en 1675) ; reproduction fidèle de Google Arts & Culture"
+      licence: "domaine public (balise Commons PD-Art|PD-old-100-expired ; API : LicenseShortName « Public domain »)"
+      source: "Wikimedia Commons ; source déclarée : Google Arts & Culture"
+      url: "https://commons.wikimedia.org/wiki/File:Johannes_Vermeer_-_Het_melkmeisje_-_Google_Art_Project.jpg"
+      date_verification: "2026-10-15"
+      mention_requise: "aucune exigée (domaine public) ; mention d’usage proposée : « Johannes Vermeer, La Laitière, vers 1660, Rijksmuseum, Amsterdam (reproduction, Wikimedia Commons, domaine public) »"
+      usage: image_reproduite
+      motif_usage: "domaine public (balise PD-Art|PD-old-100-expired, API Commons 2026-10-15) : reproduction fidèle d’une œuvre du XVIIe siècle ; réellement libre, reproduite avec un crédit d’usage complet (toutes les images Commons sont reproduites, lot 4)"
+  - id: app:whistler-symphony-in-white-1
+    description: "James McNeill Whistler, Symphonie en blanc no 1, La Fille en blanc (une femme en robe blanche devant un rideau blanc), huile sur toile, 1862, National Gallery of Art, Washington (NGA 12198) ; tableau"
+    page_objet: https://www.nga.gov/collection/art-object-page.12198.html   # série 51 bis : non vérifiée (page anti-robot) ; inventaire 1943.6.2
+    image: https://commons.wikimedia.org/wiki/File:James_McNeill_Whistler,_Symphony_in_White,_No._1_-_The_White_Girl,_1862,_NGA_12198.jpg
+    licence_affichee: "CC0 1.0"
+    auteur_image: "James McNeill Whistler (œuvre, mort en 1903) ; reproduction de la National Gallery of Art, Washington (Open Access)"
+    regime: "tableau"
+    parties: ["#robe"]
+    droits: "CC0 1.0, James McNeill Whistler, image reproduite"
+    credit:   # lot 4 : relevé par l’API de Wikimedia Commons (extmetadata) et le wikitexte de la page du fichier le 2026-10-15 ; relu (série 51 ter)
+      auteur: "James McNeill Whistler (œuvre, mort en 1903) ; reproduction de la National Gallery of Art, Washington (Open Access)"
+      licence: "CC0 1.0"
+      source: "Wikimedia Commons ; don de la National Gallery of Art, Washington (politique Open Access)"
+      url: "https://commons.wikimedia.org/wiki/File:James_McNeill_Whistler,_Symphony_in_White,_No._1_-_The_White_Girl,_1862,_NGA_12198.jpg"
+      date_verification: "2026-10-15"
+      mention_requise: "aucune exigée par la licence ; mention d’usage proposée : « James McNeill Whistler, Symphony in White, No. 1: The White Girl, 1862, National Gallery of Art, Washington (Wikimedia Commons, CC0 1.0) »"
+      usage: image_reproduite
+      motif_usage: "CC0 1.0 (API Commons, 2026-10-15 : LicenseShortName « CC0 », AttributionRequired false) : réellement libre ; crédit d’usage complet"
+  - id: app:bruegel-proverbes-flamands
+    description: "Pieter Bruegel l’Ancien, Les Proverbes flamands (un village couvert de scènes illustrant des proverbes), huile sur bois, 1559, Gemäldegalerie, Berlin ; tableau"
+    page_objet: https://search.smb.museum/object/obj-867614   # série 51 bis : page ouverte le 2026-10-15 ; inventaire 1720
+    image: https://commons.wikimedia.org/wiki/File:Pieter_Brueghel_the_Elder_-_The_Dutch_Proverbs_-_Google_Art_Project.jpg
+    licence_affichee: "domaine public (balise Commons PD-Art|PD-old-100-expired ; API : LicenseShortName « Public domain »)"
+    auteur_image: "Pieter Bruegel l’Ancien (œuvre, mort en 1569) ; reproduction fidèle de Google Arts & Culture"
+    regime: "tableau"
+    parties: ["#panneau"]
+    droits: "domaine public, Pieter Bruegel l’Ancien, image reproduite"
+    credit:   # lot 4 : relevé par l’API de Wikimedia Commons (extmetadata) et le wikitexte de la page du fichier le 2026-10-15 ; relu (série 51 ter)
+      auteur: "Pieter Bruegel l’Ancien (œuvre, mort en 1569) ; reproduction fidèle de Google Arts & Culture"
+      licence: "domaine public (balise Commons PD-Art|PD-old-100-expired ; API : LicenseShortName « Public domain »)"
+      source: "Wikimedia Commons ; source déclarée : Google Arts & Culture"
+      url: "https://commons.wikimedia.org/wiki/File:Pieter_Brueghel_the_Elder_-_The_Dutch_Proverbs_-_Google_Art_Project.jpg"
+      date_verification: "2026-10-15"
+      mention_requise: "aucune exigée (domaine public) ; mention d’usage proposée : « Pieter Bruegel l’Ancien, Les Proverbes flamands, 1559, Gemäldegalerie, Berlin (reproduction, Wikimedia Commons, domaine public) »"
+      usage: image_reproduite
+      motif_usage: "domaine public (balise PD-Art|PD-old-100-expired, API Commons 2026-10-15) : reproduction fidèle d’une œuvre du XVIe siècle ; réellement libre, reproduite avec un crédit d’usage complet (toutes les images Commons sont reproduites, lot 4)"
+  - id: app:commons-ryoanji-7753
+    description: "le jardin sec du Ryōan-ji (Kyoto) : gravier ratissé et rochers (description de la page Commons : « The raked gravel and rock garden at Ryoan-ji temple »), photo antérieure au 2026-04-12"
+    page_objet: null   # lot 4 : seule la photo est documentée (photo citée comme objet)
+    image: https://commons.wikimedia.org/wiki/File:Ninna-ji_and_Ryoan-ji,_Kyoto_-_Ryoanji7753.jpg
+    licence_affichee: "CC0 1.0"
+    auteur_image: "lumoplank"
+    regime: "jardin (gravier ratissé, in situ)"
+    parties: ["#bande-ratissee-rectiligne"]   # une bande de gravier ratissée en lignes droites, hors des cercles autour des rochers
+    droits: "CC0 1.0, lumoplank, image reproduite"
+    credit:   # lot 4 : relevé par l’API de Wikimedia Commons (extmetadata) et le wikitexte de la page du fichier le 2026-10-15 ; relu (série 51 ter)
+      auteur: "lumoplank"
+      licence: "CC0 1.0"
+      source: "Wikimedia Commons ; source déclarée : Flickr (photo 55202082906)"
+      url: "https://commons.wikimedia.org/wiki/File:Ninna-ji_and_Ryoan-ji,_Kyoto_-_Ryoanji7753.jpg"
+      date_verification: "2026-10-15"
+      mention_requise: "aucune exigée par la licence ; mention d’usage proposée : « Ninna-ji and Ryoan-ji, Kyoto - Ryoanji7753, lumoplank (Wikimedia Commons, CC0 1.0) »"
+      usage: image_reproduite
+      motif_usage: "CC0 1.0 (API Commons, 2026-10-15 : LicenseShortName « CC0 », AttributionRequired false) : réellement libre ; crédit d’usage complet"
+  - id: app:commons-taj-mahal-south-face
+    description: "le Taj Mahal (Agra, Uttar Pradesh), face sud, vu dans l’axe depuis le jardin, avec le bassin et les allées (description de la page Commons : « Taj Mahal, Agra, India, south face »), 2010"
+    page_objet: null   # lot 4 : seule la photo est documentée (photo citée comme objet)
+    image: https://commons.wikimedia.org/wiki/File:Taj_Mahal,_Agra,_India.jpg
+    licence_affichee: "CC BY-SA 4.0"
+    auteur_image: "Yann Forget"
+    regime: "bâtiment (monument, vue axiale depuis le jardin)"
+    parties: ["#facade", "#coupole-centrale", "#ciel", "#ensemble"]   # #ciel : le ciel bleu au-dessus et à droite de la coupole ; #ensemble : toute l’image
+    droits: "CC BY-SA 4.0, Yann Forget, image reproduite"
+    credit:   # lot 4 : relevé par l’API de Wikimedia Commons (extmetadata) et le wikitexte de la page du fichier le 2026-10-15 ; relu (série 51 ter)
+      auteur: "Yann Forget"
+      licence: "CC BY-SA 4.0"
+      source: "Wikimedia Commons, « Own work » (balise {{self|GFDL|cc-by-sa-all}} ; CC BY-SA 4.0 retenue)"
+      url: "https://commons.wikimedia.org/wiki/File:Taj_Mahal,_Agra,_India.jpg"
+      date_verification: "2026-10-15"
+      mention_requise: "« © Yann Forget / Wikimedia Commons / CC-BY-SA » (mention demandée par l’auteur), « Taj Mahal, Agra, India », https://commons.wikimedia.org/wiki/File:Taj_Mahal,_Agra,_India.jpg, licence CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0) ; signaler les modifications si l’on diffuse une adaptation, qui se diffuse sous la même licence"
+      usage: image_reproduite
+      motif_usage: "CC BY-SA 4.0 (API Commons, 2026-10-15 ; attribution requise ; la page offre aussi la GFDL et les autres versions CC BY-SA) : réellement libre, reproduite avec la mention demandée par l’auteur ; quelques visiteurs, minuscules, non identifiables"
+  - id: app:monet-pont-japonais-nga
+    description: "Claude Monet, Le Pont japonais (une passerelle au-dessus d’un bassin de nymphéas), huile sur toile, 1899, National Gallery of Art, Washington (NGA 74796) ; tableau"
+    page_objet: https://www.nga.gov/collection/art-object-page.74796.html   # série 51 bis : non vérifiée (page anti-robot) ; inventaire 1992.9.1 (d’après Wikidata, Q12858617)
+    image: https://commons.wikimedia.org/wiki/File:Claude_Monet,_The_Japanese_Footbridge,_1899,_NGA_74796.jpg
+    licence_affichee: "CC0 1.0"
+    auteur_image: "Claude Monet (œuvre, mort en 1926) ; reproduction de la National Gallery of Art, Washington (Open Access)"
+    regime: "tableau"
+    parties: ["#bassin"]
+    droits: "CC0 1.0, Claude Monet, image reproduite"
+    credit:   # lot 4 : relevé par l’API de Wikimedia Commons (extmetadata) et le wikitexte de la page du fichier le 2026-10-15 ; relu (série 51 ter)
+      auteur: "Claude Monet (œuvre, mort en 1926) ; reproduction de la National Gallery of Art, Washington (Open Access)"
+      licence: "CC0 1.0"
+      source: "Wikimedia Commons ; don de la National Gallery of Art, Washington (politique Open Access)"
+      url: "https://commons.wikimedia.org/wiki/File:Claude_Monet,_The_Japanese_Footbridge,_1899,_NGA_74796.jpg"
+      date_verification: "2026-10-15"
+      mention_requise: "aucune exigée par la licence ; mention d’usage proposée : « Claude Monet, The Japanese Footbridge, 1899, National Gallery of Art, Washington (Wikimedia Commons, CC0 1.0) »"
+      usage: image_reproduite
+      motif_usage: "CC0 1.0 (API Commons, 2026-10-15 : LicenseShortName « CC0 », AttributionRequired false) : réellement libre ; crédit d’usage complet"
+  - id: app:commons-brick-wall-stuttgart
+    description: "un mur de briques en appareil en panneresse, Stuttgart, vu de face (description de la page Commons : « Stretcher bond brick wall in Stuttgart, Germany »), 2014"
+    page_objet: null   # lot 4 : seule la photo est documentée (photo citée comme objet)
+    image: https://commons.wikimedia.org/wiki/File:Brick_wall_stretcher_bond_Stuttgart_2014_01.jpg
+    licence_affichee: "CC BY 4.0"
+    auteur_image: "Julian Herzog"
+    regime: "ouvrage bâti (mur de briques in situ)"
+    parties: ["#mur", "#briques", "#joints-mortier"]
+    droits: "CC BY 4.0, Julian Herzog, image reproduite"
+    credit:   # lot 4 : relevé par l’API de Wikimedia Commons (extmetadata) et le wikitexte de la page du fichier le 2026-10-15 ; relu (série 51 ter)
+      auteur: "Julian Herzog"
+      licence: "CC BY 4.0"
+      source: "Wikimedia Commons, « Own work » (balise {{self|GFDL|cc-by-4.0}} ; CC BY 3.0 jusqu’au 2015-03-05)"
+      url: "https://commons.wikimedia.org/wiki/File:Brick_wall_stretcher_bond_Stuttgart_2014_01.jpg"
+      date_verification: "2026-10-15"
+      mention_requise: "« Brick wall stretcher bond Stuttgart 2014 01 », Julian Herzog, https://commons.wikimedia.org/wiki/File:Brick_wall_stretcher_bond_Stuttgart_2014_01.jpg, licence CC BY 4.0 (https://creativecommons.org/licenses/by/4.0) ; signaler les modifications si l’on diffuse une adaptation"
+      usage: image_reproduite
+      motif_usage: "CC BY 4.0 (API Commons, 2026-10-15 ; attribution requise) : réellement libre, reproduite avec la mention complète (titre, auteur, lien, licence)"
+  - id: app:commons-via-appia-antica
+    description: "le dallage de basalte de la Via Appia Antica, hors de Rome, avec des ornières (description de la page Commons : « Basalt paving stones, with wheel ruts, of the Via Appia Antica outside Rome »), 2019"
+    page_objet: null   # lot 4 : seule la photo est documentée (photo citée comme objet)
+    image: https://commons.wikimedia.org/wiki/File:Rome_Lazio_Via_Appia_Antica.jpg
+    licence_affichee: "CC BY-SA 4.0"
+    auteur_image: "Nicholas Hartmann"
+    regime: "ouvrage bâti (dallage in situ)"
+    parties: ["#joint-dalles-premier-plan"]   # les joints entre les dalles du premier plan
+    droits: "CC BY-SA 4.0, Nicholas Hartmann, image reproduite"
+    credit:   # lot 4 : relevé par l’API de Wikimedia Commons (extmetadata) et le wikitexte de la page du fichier le 2026-10-15 ; relu (série 51 ter)
+      auteur: "Nicholas Hartmann"
+      licence: "CC BY-SA 4.0"
+      source: "Wikimedia Commons, « Own work »"
+      url: "https://commons.wikimedia.org/wiki/File:Rome_Lazio_Via_Appia_Antica.jpg"
+      date_verification: "2026-10-15"
+      mention_requise: "« Rome Lazio Via Appia Antica », Nicholas Hartmann, https://commons.wikimedia.org/wiki/File:Rome_Lazio_Via_Appia_Antica.jpg, licence CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0) ; signaler les modifications si l’on diffuse une adaptation, qui se diffuse sous la même licence"
+      usage: image_reproduite
+      motif_usage: "CC BY-SA 4.0 (API Commons, 2026-10-15 ; attribution requise) : réellement libre, reproduite avec la mention complète (titre, auteur, lien, licence)"
+  - id: app:commons-glass-bowl-met
+    description: "un bol en verre romain, Ier siècle apr. J.-C., Metropolitan Museum of Art, New York (photo DP-13080-004 ; description de la page Commons : « Roman; Bowl; Glass »)"
+    page_objet: https://www.metmuseum.org/art/collection/search/239876   # série 51 bis : non vérifiée (page anti-robot) ; inventaire 74.51.291
+    image: https://commons.wikimedia.org/wiki/File:Glass_bowl_MET_DP-13080-004.jpg
+    licence_affichee: "CC0 1.0"
+    auteur_image: "The Metropolitan Museum of Art (photo de l’institution, sans auteur nommé)"
+    regime: "objet de musée (récipient de verre)"
+    parties: ["#bol"]
+    droits: "CC0 1.0, The Metropolitan Museum of Art, image reproduite"
+    credit:   # lot 4 : relevé par l’API de Wikimedia Commons (extmetadata) et le wikitexte de la page du fichier le 2026-10-15 ; relu (série 51 ter)
+      auteur: "The Metropolitan Museum of Art (photo de l’institution, sans auteur nommé)"
+      licence: "CC0 1.0"
+      source: "Wikimedia Commons ; don du Metropolitan Museum of Art (politique Open Access)"
+      url: "https://commons.wikimedia.org/wiki/File:Glass_bowl_MET_DP-13080-004.jpg"
+      date_verification: "2026-10-15"
+      mention_requise: "aucune exigée par la licence ; mention d’usage proposée : « Glass bowl MET DP-13080-004, The Metropolitan Museum of Art (Wikimedia Commons, CC0 1.0) »"
+      usage: image_reproduite
+      motif_usage: "CC0 1.0 (API Commons, 2026-10-15 : LicenseShortName « CC0 », AttributionRequired false) : réellement libre ; crédit d’usage complet"
+  - id: app:commons-rodin-thinker
+    description: "Le Penseur d’Auguste Rodin, bronze, dans le jardin du musée Rodin, à Paris (description de la page Commons : « Rodin’s The Thinker at the Musée Rodin in Paris, France in May 2023 »), 2023"
+    page_objet: null   # lot 4 : seule la photo est documentée (photo citée comme objet)
+    image: https://commons.wikimedia.org/wiki/File:Rodin_Thinker-Musee-Rodin-Paris.jpg
+    licence_affichee: "CC BY 4.0"
+    auteur_image: "Acediscovery"
+    regime: "sculpture (bronze in situ)"
+    parties: ["#dos-et-epaules"]
+    droits: "CC BY 4.0, Acediscovery, image reproduite"
+    credit:   # lot 4 : relevé par l’API de Wikimedia Commons (extmetadata) et le wikitexte de la page du fichier le 2026-10-15 ; relu (série 51 ter)
+      auteur: "Acediscovery"
+      licence: "CC BY 4.0"
+      source: "Wikimedia Commons, « Own work »"
+      url: "https://commons.wikimedia.org/wiki/File:Rodin_Thinker-Musee-Rodin-Paris.jpg"
+      date_verification: "2026-10-15"
+      mention_requise: "« Rodin Thinker-Musee-Rodin-Paris », Acediscovery, https://commons.wikimedia.org/wiki/File:Rodin_Thinker-Musee-Rodin-Paris.jpg, licence CC BY 4.0 (https://creativecommons.org/licenses/by/4.0) ; signaler les modifications si l’on diffuse une adaptation"
+      usage: image_reproduite
+      motif_usage: "CC BY 4.0 (API Commons, 2026-10-15 ; attribution requise) : réellement libre, reproduite avec la mention complète (titre, auteur, lien, licence) ; sculpture de Rodin, mort en 1917, dans le domaine public"
 episodes:
   - id: ppp-e:pilote-01
     target: app:met-2011-201
@@ -1484,6 +1682,84 @@ episodes:
     usesModality: [vision]
     observer: l’équipe (un seul observateur ; aucun accord déclaré)
     date: "2026-10-14"
+
+  - id: ppp-e:pilote-60
+    target: app:vangogh-tournesols-ng-1888
+    observedUnder: {presentation: screen, lumiere: unknown, distance: unknown, angle: unknown, duree: exam}
+    note_distance: "reproduction d’un tableau (lot 4, 2026-10-15) : lumière, distance et angle de la prise de vue inconnus"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-15"
+  - id: ppp-e:pilote-61
+    target: app:vermeer-laitiere
+    observedUnder: {presentation: screen, lumiere: unknown, distance: unknown, angle: unknown, duree: exam}
+    note_distance: "reproduction d’un tableau (lot 4, 2026-10-15) : lumière, distance et angle de la prise de vue inconnus"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-15"
+  - id: ppp-e:pilote-62
+    target: app:whistler-symphony-in-white-1
+    observedUnder: {presentation: screen, lumiere: unknown, distance: unknown, angle: unknown, duree: exam}
+    note_distance: "reproduction d’un tableau (lot 4, 2026-10-15) : lumière, distance et angle de la prise de vue inconnus"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-15"
+  - id: ppp-e:pilote-63
+    target: app:bruegel-proverbes-flamands
+    observedUnder: {presentation: screen, lumiere: unknown, distance: room, angle: frontal, duree: exam}
+    note_distance: "reproduction d’un tableau (lot 4, 2026-10-15) : un panneau d’environ 1,2 m de haut sur 1,6 m de large vu de face en entier (117,2 × 163,8 cm, Gemäldegalerie, inv. 1720) ; distance estimée d’après le cadrage (le panneau entier, comme vu à quelques pas) ; lumière inconnue"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-15"
+  - id: ppp-e:pilote-64
+    target: app:commons-ryoanji-7753
+    observedUnder: {presentation: screen, lumiere: diffuse, distance: room, angle: oblique, duree: exam}
+    note_distance: "lumière, angle et distance estimés sur l’image (lot 4, 2026-10-15) : le jardin vu de biais depuis la véranda, à quelques mètres ; lumière douce, sans ombre marquée"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-15"
+  - id: ppp-e:pilote-65
+    target: app:commons-taj-mahal-south-face
+    observedUnder: {presentation: screen, lumiere: directional, distance: far, angle: frontal, duree: exam}
+    note_distance: "lumière, angle et distance estimés sur l’image (lot 4, 2026-10-15) : le monument vu de face dans l’axe du jardin, à environ deux cents mètres ; soleil, ombres marquées dans les arcs"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-15"
+  - id: ppp-e:pilote-66
+    target: app:monet-pont-japonais-nga
+    observedUnder: {presentation: screen, lumiere: unknown, distance: room, angle: frontal, duree: exam}
+    note_distance: "reproduction d’un tableau (lot 4, 2026-10-15) : une toile d’environ 0,8 m de haut sur 1 m de large vue de face en entier ; distance estimée d’après le cadrage ; lumière inconnue"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-15"
+  - id: ppp-e:pilote-67
+    target: app:commons-brick-wall-stuttgart
+    observedUnder: {presentation: screen, lumiere: diffuse, distance: room, angle: frontal, duree: exam}
+    note_distance: "lumière, angle et distance estimés sur l’image (lot 4, 2026-10-15) : un pan de mur vu de face ; distance de prise de vue d’environ 1,7 m (donnée EXIF de la page : 1,68 m) ; lumière douce"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-15"
+  - id: ppp-e:pilote-68
+    target: app:commons-via-appia-antica
+    observedUnder: {presentation: screen, lumiere: diffuse, distance: near, angle: oblique, duree: exam}
+    note_distance: "lumière, angle et distance estimés sur l’image (lot 4, 2026-10-15) : le dallage vu de haut et de biais, les dalles du premier plan à moins d’un mètre ; lumière égale, sans ombre dure"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-15"
+  - id: ppp-e:pilote-69
+    target: app:commons-glass-bowl-met
+    observedUnder: {presentation: screen, lumiere: diffuse, distance: near, angle: oblique, duree: exam}
+    note_distance: "lumière, angle et distance estimés sur l’image (lot 4, 2026-10-15) : un bol posé, vu de près et un peu d’au-dessus, sur fond neutre ; lumière de studio douce"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-15"
+  - id: ppp-e:pilote-70
+    target: app:commons-rodin-thinker
+    observedUnder: {presentation: screen, lumiere: directional, distance: room, angle: oblique, duree: exam}
+    note_distance: "lumière, angle et distance estimés sur l’image (lot 4, 2026-10-15) : la statue vue de trois quarts, à quelques mètres ; distance estimée d’après le cadrage ; soleil, reflets sur le bronze"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-15"
 
 assertions:
   - id: ppp-a:pilote-0101
@@ -2600,6 +2876,199 @@ assertions:
     source: photo citée (Wikimedia Commons ; lumière, angle et distance estimés d’après le cadrage)
     ontologyVersion: "2.8"
     note: "la forêt, la rivière, les collines, les montagnes, le ciel : de nombreux plans jusqu’au lointain ; c’est l’étagement en plans, pas la profondeur dans la matière (C4, deux types)"
+  - id: ppp-a:pilote-0602
+    about: app:vangogh-tournesols-ng-1888#fond
+    assertedType: ppp:hue
+    cardStatus: applicable et pertinent
+    inRegion: ppp:hue/yellow
+    inEpisode: ppp-e:pilote-60
+    modality: vision
+    source: reproduction citée (Wikimedia Commons ; lumière, distance et angle inconnus)
+    ontologyVersion: "2.8"
+    note: "le fond, au-dessus de la table, est d’un jaune sans dominante orange ou verte nette"
+  - id: ppp-a:pilote-0603
+    about: app:vermeer-laitiere#tablier
+    assertedType: ppp:hue
+    cardStatus: applicable et pertinent
+    inRegion: ppp:hue/blue
+    inEpisode: ppp-e:pilote-61
+    modality: vision
+    source: reproduction citée (Wikimedia Commons ; lumière, distance et angle inconnus)
+    ontologyVersion: "2.8"
+    note: "le tablier, noué par-dessus la jupe rouge, sous le corsage jaune, est bleu ; ses plis plus sombres restent de la même teinte"
+  - id: ppp-a:pilote-0702
+    about: app:whistler-symphony-in-white-1#robe
+    assertedType: ppp:lightness
+    cardStatus: applicable et pertinent
+    inRegion: ppp:lightness/veryLight
+    inEpisode: ppp-e:pilote-62
+    modality: vision
+    source: reproduction citée (Wikimedia Commons ; lumière, distance et angle inconnus)
+    ontologyVersion: "2.8"
+    note: "la robe est proche du blanc, à peine modelée de gris clair dans les plis"
+  - id: ppp-a:pilote-0703
+    about: app:vermeer-laitiere#mur-du-fond
+    assertedType: ppp:lightness
+    cardStatus: applicable et pertinent
+    inRegion: ppp:lightness/light
+    inEpisode: ppp-e:pilote-61
+    modality: vision
+    source: reproduction citée (Wikimedia Commons ; lumière, distance et angle inconnus)
+    ontologyVersion: "2.8"
+    doute: oui
+    note: "le mur à droite de la figure est nettement plus clair qu’un gris moyen sans être blanc ; il s’assombrit vers la gauche : on peut défendre « moyenne » selon la zone retenue"
+  - id: ppp-a:pilote-0204
+    about: app:bruegel-proverbes-flamands#panneau
+    assertedType: ppp:perceptualDensity
+    cardStatus: applicable et pertinent
+    inRegion: ppp:perceptualDensity/dense
+    inEpisode: ppp-e:pilote-63
+    modality: vision
+    source: reproduction citée (Wikimedia Commons ; distance estimée d’après le cadrage, vue de face ; lumière inconnue)
+    ontologyVersion: "2.8"
+    doute: oui
+    note: "Les Proverbes flamands : un village chargé de scènes où l’on voit encore le sol, l’eau et le ciel : dense."
+  - id: ppp-a:pilote-0504
+    about: app:commons-ryoanji-7753#bande-ratissee-rectiligne
+    assertedType: ppp:textureDirectionality
+    cardStatus: applicable et pertinent
+    inRegion: ppp:textureDirectionality/oriented
+    inEpisode: ppp-e:pilote-64
+    modality: vision
+    source: photo citée (Wikimedia Commons ; lumière, angle et distance estimés d’après le cadrage)
+    ontologyVersion: "2.8"
+    note: "Une bande de gravier ratissé en lignes droites : texture orientée."
+  - id: ppp-a:pilote-1204
+    about: app:monet-pont-japonais-nga#bassin
+    assertedType: ppp:hueRange
+    cardStatus: applicable et pertinent
+    inRegion: ppp:hueRange/distantHues
+    inEpisode: ppp-e:pilote-66
+    modality: vision
+    source: reproduction citée (Wikimedia Commons ; distance estimée d’après le cadrage, vue de face ; lumière inconnue)
+    ontologyVersion: "2.8"
+    doute: oui
+    note: "Le bassin du Pont japonais : des verts et des roses, teintes éloignées."
+  - id: ppp-a:pilote-1205
+    about: app:commons-brick-wall-stuttgart#briques
+    assertedType: ppp:hueRange
+    cardStatus: applicable et pertinent
+    inRegion: ppp:hueRange/singleHue
+    inEpisode: ppp-e:pilote-67
+    modality: vision
+    source: photo citée (Wikimedia Commons ; lumière, angle et distance estimés d’après le cadrage)
+    ontologyVersion: "2.8"
+    doute: oui
+    note: "les briques seules, joints exclus : un même orange tirant sur le rouge, plus ou moins clair ; si certaines briques paraissent franchement rouges, on peut défendre « teintes voisines » (un brun compterait encore comme un orange)"
+  - id: ppp-a:pilote-0404
+    about:
+      - {relatum: app:commons-brick-wall-stuttgart#briques, role: terme}
+      - {relatum: app:commons-brick-wall-stuttgart#joints-mortier, role: terme}
+    assertedType: ppp:lightnessContrast
+    cardStatus: applicable et pertinent
+    inRegion: ppp:lightnessContrast/marked
+    inEpisode: ppp-e:pilote-67
+    modality: vision
+    source: photo citée (Wikimedia Commons ; lumière, angle et distance estimés d’après le cadrage)
+    ontologyVersion: "2.8"
+    note: "les joints gris clair contre les briques de clarté moyenne : l’écart se voit d’emblée"
+  - id: ppp-a:pilote-0405
+    about:
+      - {relatum: app:commons-taj-mahal-south-face#coupole-centrale, role: terme}
+      - {relatum: app:commons-taj-mahal-south-face#ciel, role: terme}
+    assertedType: ppp:lightnessContrast
+    cardStatus: applicable et pertinent
+    inRegion: ppp:lightnessContrast/moderate
+    inEpisode: ppp-e:pilote-65
+    modality: vision
+    source: photo citée (Wikimedia Commons ; lumière, angle et distance estimés d’après le cadrage)
+    ontologyVersion: "2.8"
+    doute: oui
+    note: "la coupole blanche contre le ciel bleu, au-dessus et à droite : l’écart se voit à l’examen ; à gauche, contre les nuages blancs, il est plus faible ; il dépend du ciel du jour"
+  - id: ppp-a:pilote-2005
+    about: app:commons-taj-mahal-south-face#facade
+    assertedType: ppp:lightnessRange
+    cardStatus: applicable et pertinent
+    inRegion: ppp:lightnessRange/closeLightnesses
+    inEpisode: ppp-e:pilote-65
+    modality: vision
+    source: photo citée (Wikimedia Commons ; lumière, angle et distance estimés d’après le cadrage)
+    ontologyVersion: "2.8"
+    doute: oui
+    note: "le marbre clair, modelé de gris légers selon les creux ; l’ombre profonde des arcs est exclue de la zone : si on l’inclut, on peut défendre « clartés éloignées »"
+  - id: ppp-a:pilote-2804
+    about: app:commons-taj-mahal-south-face#facade
+    assertedType: ppp:partNesting
+    cardStatus: applicable et pertinent
+    inRegion: ppp:partNesting/threeOrMoreLevels
+    inEpisode: ppp-e:pilote-65
+    modality: vision
+    source: photo citée (Wikimedia Commons ; lumière, angle et distance estimés d’après le cadrage)
+    ontologyVersion: "2.8"
+    note: "la façade contient de grands arcs ; au fond de chacun, des ouvertures en arc plus petites ; dans celles-ci, des fenêtres et des grilles : des parties dans des parties, sur trois niveaux ou plus"
+  - id: ppp-a:pilote-3004
+    about: app:commons-taj-mahal-south-face#ensemble
+    assertedType: ppp:perceivedDepth
+    cardStatus: applicable et pertinent
+    inRegion: ppp:perceivedDepth/manyPlanes
+    inEpisode: ppp-e:pilote-65
+    modality: vision
+    source: photo citée (Wikimedia Commons ; lumière, angle et distance estimés d’après le cadrage)
+    ontologyVersion: "2.8"
+    note: "le bassin et les allées en perspective, les arbres, les minarets, le mausolée, le ciel : de nombreux plans jusqu’au lointain"
+  - id: ppp-a:pilote-3005
+    about: app:monet-pont-japonais-nga
+    assertedType: ppp:perceivedDepth
+    cardStatus: applicable et pertinent
+    inRegion: ppp:perceivedDepth/fewPlanes
+    inEpisode: ppp-e:pilote-66
+    modality: vision
+    source: reproduction citée (Wikimedia Commons ; distance estimée d’après le cadrage, vue de face ; lumière inconnue)
+    ontologyVersion: "2.8"
+    doute: oui
+    note: "une passerelle devant un bassin, et la végétation au fond : quelques plans ; le bassin fuit en profondeur : on peut défendre « nombreux plans »"
+  - id: ppp-a:pilote-1105
+    about: app:commons-brick-wall-stuttgart#mur
+    assertedType: ppp:hueCount
+    cardStatus: applicable et pertinent
+    inRegion: ppp:hueCount/oneHue
+    inEpisode: ppp-e:pilote-67
+    modality: vision
+    source: photo citée (Wikimedia Commons ; lumière, angle et distance estimés d’après le cadrage)
+    ontologyVersion: "2.8"
+    note: "des briques d’un orange tirant sur le rouge et des joints gris : une seule teinte (les gris ne comptent pas comme teinte)"
+  - id: ppp-a:pilote-1605
+    about: app:commons-via-appia-antica#joint-dalles-premier-plan
+    assertedType: ppp:jointSpacing
+    cardStatus: applicable et pertinent
+    inRegion: ppp:jointSpacing/wide
+    inEpisode: ppp-e:pilote-68
+    modality: vision
+    source: photo citée (Wikimedia Commons ; lumière, angle et distance estimés d’après le cadrage)
+    ontologyVersion: "2.8"
+    note: "des bandes de terre et d’herbe entre les dalles du premier plan"
+  - id: ppp-a:pilote-2505
+    about: app:commons-glass-bowl-met#bol
+    assertedType: ppp:outlineIndentation
+    cardStatus: applicable et pertinent
+    inRegion: ppp:outlineIndentation/unindented
+    inEpisode: ppp-e:pilote-69
+    modality: vision
+    source: photo citée (Wikimedia Commons ; lumière, angle et distance estimés d’après le cadrage)
+    ontologyVersion: "2.8"
+    doute: oui
+    note: "la silhouette du bol ne rentre presque nulle part ; seul un léger creux sous le bord : on peut défendre « découpée »"
+  - id: ppp-a:pilote-1806
+    about: app:commons-rodin-thinker#dos-et-epaules
+    assertedType: ppp:surfaceGloss
+    cardStatus: applicable et pertinent
+    inRegion: ppp:surfaceGloss/satin
+    inEpisode: ppp-e:pilote-70
+    modality: vision
+    source: photo citée (Wikimedia Commons ; lumière, angle et distance estimés d’après le cadrage)
+    ontologyVersion: "2.8"
+    doute: oui
+    note: "des reflets doux et étalés sur la patine du dos et des épaules ; là où le reflet se resserre, sur la tête et le genou, on peut défendre « brillant »"
 
 # Champs communs à toutes les assertions ci-dessus (sauf valeur propre à une assertion, comme withdrawn de 0201) :
 commun:
@@ -2620,11 +3089,13 @@ relecture_explicative:
                ppp-a:pilote-0401, ppp-a:pilote-0402, ppp-a:pilote-0403,
                ppp-a:pilote-0104, ppp-a:pilote-0105, ppp-a:pilote-0501, ppp-a:pilote-0503, ppp-a:pilote-0601, ppp-a:pilote-0701, ppp-a:pilote-0801,
                ppp-a:pilote-0902, ppp-a:pilote-0302, ppp-a:pilote-0304, ppp-a:pilote-0305, ppp-a:pilote-1001, ppp-a:pilote-1002, ppp-a:pilote-1003, ppp-a:pilote-1101, ppp-a:pilote-1102, ppp-a:pilote-1201, ppp-a:pilote-1202, ppp-a:pilote-1401, ppp-a:pilote-1501, ppp-a:pilote-1702, ppp-a:pilote-1801, ppp-a:pilote-1804, ppp-a:pilote-0904, ppp-a:pilote-0905, ppp-a:pilote-1004, ppp-a:pilote-1103, ppp-a:pilote-1304, ppp-a:pilote-1503, ppp-a:pilote-1504, ppp-a:pilote-1203, ppp-a:pilote-1305, ppp-a:pilote-1805, ppp-a:pilote-1802, ppp-a:pilote-1603, ppp-a:pilote-1604,
-               ppp-a:pilote-1901, ppp-a:pilote-1902, ppp-a:pilote-1903, ppp-a:pilote-1904, ppp-a:pilote-2302, ppp-a:pilote-2303, ppp-a:pilote-2401, ppp-a:pilote-2402, ppp-a:pilote-2403, ppp-a:pilote-2501, ppp-a:pilote-2502, ppp-a:pilote-2503, ppp-a:pilote-2701, ppp-a:pilote-2702, ppp-a:pilote-2703, ppp-a:pilote-2801, ppp-a:pilote-2802, ppp-a:pilote-2803, ppp-a:pilote-2901, ppp-a:pilote-2902, ppp-a:pilote-2903, ppp-a:pilote-3001, ppp-a:pilote-3002, ppp-a:pilote-3003, ppp-a:pilote-2601, ppp-a:pilote-2602, ppp-a:pilote-2603, ppp-a:pilote-2004, ppp-a:pilote-2304, ppp-a:pilote-2404, ppp-a:pilote-2504, ppp-a:pilote-2002, ppp-a:pilote-2003, ppp-a:pilote-2101, ppp-a:pilote-2102, ppp-a:pilote-2103, ppp-a:pilote-2201, ppp-a:pilote-2202, ppp-a:pilote-2203]   # séries 44 à 44 quater : validées par la relecture, reportées en série 44 quater (publication libérale, X17)
+               ppp-a:pilote-1901, ppp-a:pilote-1902, ppp-a:pilote-1903, ppp-a:pilote-1904, ppp-a:pilote-2302, ppp-a:pilote-2303, ppp-a:pilote-2401, ppp-a:pilote-2402, ppp-a:pilote-2403, ppp-a:pilote-2501, ppp-a:pilote-2502, ppp-a:pilote-2503, ppp-a:pilote-2701, ppp-a:pilote-2702, ppp-a:pilote-2703, ppp-a:pilote-2801, ppp-a:pilote-2802, ppp-a:pilote-2803, ppp-a:pilote-2901, ppp-a:pilote-2902, ppp-a:pilote-2903, ppp-a:pilote-3001, ppp-a:pilote-3002, ppp-a:pilote-3003, ppp-a:pilote-2601, ppp-a:pilote-2602, ppp-a:pilote-2603, ppp-a:pilote-2004, ppp-a:pilote-2304, ppp-a:pilote-2404, ppp-a:pilote-2504, ppp-a:pilote-2002, ppp-a:pilote-2003, ppp-a:pilote-2101, ppp-a:pilote-2102, ppp-a:pilote-2103, ppp-a:pilote-2201, ppp-a:pilote-2202, ppp-a:pilote-2203,
+               ppp-a:pilote-0602, ppp-a:pilote-0603, ppp-a:pilote-0702, ppp-a:pilote-0703, ppp-a:pilote-0204, ppp-a:pilote-0504, ppp-a:pilote-1204, ppp-a:pilote-1205, ppp-a:pilote-0404, ppp-a:pilote-0405, ppp-a:pilote-2005, ppp-a:pilote-2804, ppp-a:pilote-3004, ppp-a:pilote-3005, ppp-a:pilote-1105, ppp-a:pilote-1605, ppp-a:pilote-2505, ppp-a:pilote-1806]   # série 51 ter (2026-10-15) : lot 4 relu   # séries 44 à 44 quater : validées par la relecture, reportées en série 44 quater (publication libérale, X17)
   retirees_relues: [ppp-a:pilote-0103, ppp-a:pilote-0301, ppp-a:pilote-0502,   # retrait (T24) approuvé par la relecture explicative, 2026-10-10
                     ppp-a:pilote-2001, ppp-a:pilote-2301]   # retrait approuvé par la relecture explicative, lot 2, 2026-10-14
   objets: [app:commons-beuchaer-gestockt,
-           app:commons-brastad-fog-trees, app:commons-adams-tetons-snake-river, app:commons-empty-wooden-chessboard, app:commons-nhm-ornithoptera-paradisea, app:commons-taj-mahal-front, app:commons-aresquiers-driftwood, app:commons-engraved-sherry-glass, app:commons-line-of-lanterns, app:commons-weatherworn-planks, app:commons-school-rulers, app:commons-egg-white-background, app:commons-stonehenge-trilithon, app:commons-bracken-frond, app:commons-optical-illusion-vase, app:commons-white-paint-wall, app:commons-quercus-robur-leaf, app:commons-azulejo-geometry, app:commons-freehand-circle, app:commons-museo-egizio-stool, app:commons-parliament-st-sash-windows, app:commons-romanesco-broccoli, app:commons-amber-small-piece]   # lot 3 ter (2026-10-14) : objets des lots 1, 2, 2 bis et 3 vérifiés par la relecture avec leurs assertions (le mur de béton, objet de la série 44 bis, n’en fait pas partie)
+           app:commons-brastad-fog-trees, app:commons-adams-tetons-snake-river, app:commons-empty-wooden-chessboard, app:commons-nhm-ornithoptera-paradisea, app:commons-taj-mahal-front, app:commons-aresquiers-driftwood, app:commons-engraved-sherry-glass, app:commons-line-of-lanterns, app:commons-weatherworn-planks, app:commons-school-rulers, app:commons-egg-white-background, app:commons-stonehenge-trilithon, app:commons-bracken-frond, app:commons-optical-illusion-vase, app:commons-white-paint-wall, app:commons-quercus-robur-leaf, app:commons-azulejo-geometry, app:commons-freehand-circle, app:commons-museo-egizio-stool, app:commons-parliament-st-sash-windows, app:commons-romanesco-broccoli, app:commons-amber-small-piece,
+           app:vangogh-tournesols-ng-1888, app:vermeer-laitiere, app:whistler-symphony-in-white-1, app:bruegel-proverbes-flamands, app:commons-ryoanji-7753, app:commons-taj-mahal-south-face, app:monet-pont-japonais-nga, app:commons-brick-wall-stuttgart, app:commons-via-appia-antica, app:commons-glass-bowl-met, app:commons-rodin-thinker]   # série 51 ter (2026-10-15) : lot 4 relu   # lot 3 ter (2026-10-14) : objets des lots 1, 2, 2 bis et 3 vérifiés par la relecture avec leurs assertions (le mur de béton, objet de la série 44 bis, n’en fait pas partie)
   note_distance: [ppp-e:pilote-01, ppp-e:pilote-02, ppp-e:pilote-03, ppp-e:pilote-04, ppp-e:pilote-05, ppp-e:pilote-06, ppp-e:pilote-07, ppp-e:pilote-08, ppp-e:pilote-09, ppp-a:pilote-0801]
   confirmees_serie44:   # série 44 bis (2026-10-14) : confirmées par la relecture ; série 44 quater (publication libérale, X17, décision de l’éditeur
                         # du projet du 2026-10-14) : reportées dans `assertions` ci-dessus, sauf 0303, 0903 et 1302, dont le `doute` n’est pas levé ;
