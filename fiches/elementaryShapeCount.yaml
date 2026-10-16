@@ -25,7 +25,13 @@ définition: Nombre de formes simples (élémentaires), comme le cube, la sphèr
 question_attentionnelle: Pour reconstruire cet objet en volume avec des formes simples (cube, sphère, cylindre…), en faudrait-il une, quelques-unes, beaucoup, ou plus qu’on ne peut en compter ?
 contre_exemple: 'Une sphère est très courbe et n’a besoin que d’une forme : la courbure n’est pas le nombre de formes. Un motif imprimé sur un cube ne change pas le nombre de formes du cube. La densité
   n’est pas le nombre de formes : douze briques serrées sur un petit mur et douze briques espacées sur un grand mur demandent le même nombre de formes, douze, mais n’ont pas la même densité.'
-grandeur_physique_homonyme: 'nombre de formes de base (« primitives ») qu’un logiciel de modélisation 3D assemble : un compte de l’outil, dont aucune région ne se déduit.'
+mesure:
+  etat: aucune_methode_robuste
+  synthese: Aucune méthode de mesure robuste n’est connue pour le nombre de formes simples qu’il faudrait assembler pour décrire un objet (recherche du 2026-10-16). Le découpage en formes dépend de la liste
+    de formes retenue, encore à établir, et de la tolérance déclarée ; aucune norme ni méthode publiée lue ne le mesure.
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes: []
 modalites:
 - vision
 - toucher
@@ -229,7 +235,8 @@ relecture_explicative:
   a_reconfirmer: []
   remarque: champs validés par la relecture explicative à 5330e2d (série 15), enonces_testables à 255e824 (série 16, E3 validé) et note_base à 10ffab0 (série 17), formulations des séries 12 et 14 comprises
     (voir `remarque` de la fiche) ; plus rien à relire
-a_relire: []
+a_relire:
+- mesure
 remarque:
 - 'série 12 : references modifiées (biederman1987.reprend ; hoffman_richards1984 : reprend « rien que le titre » ; kaufman1949.ne_reprend_pas)'
 - 'série 12 (corrections de la relecture explicative) : label_court, définition, contre_exemple, note_conditions, condition_NA, espace_valeurs.regions.oneShape.repere, relations.note (ppp:perceivedSize),

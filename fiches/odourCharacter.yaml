@@ -23,6 +23,13 @@ contre_exemple: 'Un plastique moulé peut sentir le bois ; un bois traité peut 
   des caractères : ce sont des jugements.'
 avertissement_label: '« Qualité de l’odeur » (label alternatif) se lit aussi comme un jugement (« une odeur de qualité ») : le label canonique est « caractère de l’odeur », le terme d’ISO/TS 16922. Chaque
   région se lit « qui rappelle … ».'
+mesure:
+  etat: aucune_methode_robuste
+  synthese: Aucune méthode de mesure robuste n’est connue pour ce à quoi une odeur fait penser (recherche du 2026-10-16). Le caractère se dit par des mots et se juge par un jury ; aucune norme ni méthode
+    instrumentale lue ne le mesure.
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes: []
 modalites:
 - odorat
 mode_de_presentation: échantillon
@@ -96,9 +103,7 @@ espace_valeurs:
     label_en: other (to be described)
     repere: une odeur qu’aucune région ne dit ; on la décrit dans la note
     exemplaires: []
-note_categories: 'Régions catégorielles non ordonnées (décision de l’éditeur du projet du 2026-10-14, série 43, décision 4) ; liste de travail construite à partir des familles que les roues et les coffrets
-  ont en commun, sans en reprendre une telle quelle. « Fruité (hors agrumes) » suit Castro et al. (2013) [[castro2013]], où les agrumes forment une dimension à part. Une odeur mêlée se note par plusieurs
-  assertions, une par caractère net. Boisé et résineux sont déclarés voisins : Castro et al. (2013) [[castro2013]] les réunissent dans une même dimension (« woody, resinous »).'
+note_categories: 'Régions catégorielles non ordonnées (décision de l’éditeur du projet du 2026-10-14) ; liste de travail construite à partir des familles que les roues et les coffrets ont en commun, sans en reprendre une telle quelle. « Fruité (hors agrumes) » suit Castro et al. (2013) [[castro2013]], où les agrumes forment une dimension à part. Une odeur mêlée se note par plusieurs assertions, une par caractère net. Boisé et résineux sont déclarés voisins : Castro et al. (2013) [[castro2013]] les réunissent dans une même dimension (« woody, resinous »).'
 identite: Ce que l’odeur rappelle, pas sa force (intensité de l’odeur), pas la matière de l’objet, pas l’agrément.
 relations: []
 ontoClean:
@@ -199,7 +204,7 @@ enonces_testables:
   epreuve: null
 cq_couvertes: CQ1, CQ2
 statut: candidat
-statut_note: 'en préparation (série 50, 2026-10-15) : fiche rédigée, sans exemplaire ; tous les champs rédigés sont à relire'
+statut_note: 'en préparation (2026-10-15) : fiche rédigée, sans exemplaire ; tous les champs rédigés sont à relire'
 statut_epistemique: non éprouvé
 introduit_en: '2.8'
 modifie_en: []
@@ -233,6 +238,7 @@ a_relire:
 - transfert
 - enonces_testables
 - statut_note
+- mesure
 relecture_explicative:
   date: null
   champs: []

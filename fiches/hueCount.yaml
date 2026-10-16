@@ -20,6 +20,20 @@ définition: Nombre de teintes différentes (rouge, orange, jaune, vert, bleu, v
 question_attentionnelle: 'Combien de teintes différentes voit-on dans cette zone : une, deux ou trois, quatre ou plus ?'
 contre_exemple: 'Un camaïeu de bleus, du bleu nuit au bleu ciel, ne compte qu’une teinte. Une zone faite d’un rouge et d’un vert compte deux teintes, même si elles sont éloignées sur le cercle : l’écart
   est l’affaire de l’éventail des teintes. Les gris, le noir et le blanc ne comptent pas comme des teintes.'
+mesure:
+  etat: aucune_methode_robuste
+  synthese: 'Aucune méthode robuste de mesure associée au nombre de teintes vues n’est connue (recherche du 2026-10-16). On peut calculer un angle de teinte en chaque point d’une image colorimétrique, mais
+    le découpage de ces angles en teintes distinctes et le choix des zones ne sont fixés par aucune norme lue : c’est une méthode voisine, non retenue.'
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes: []
+  non_retenues:
+  - nom: classement des angles de teinte hab d’une image en teintes
+    references:
+    - cie_ilv_cielab
+    raison: aucune norme lue ne fixe les classes de teinte ni le découpage de l’image en zones ; le résultat dépend de ces choix, de l’éclairage et de la distance, et ne saisit pas ce que l’observateur
+      regroupe d’un coup d’œil
+    statut_lecture: e-ILV lu (17-23-076, angle de teinte) ; aucune méthode de comptage lue
 modalites:
 - vision
 mode_de_presentation: image
@@ -84,6 +98,16 @@ references:
     coup d’œil ; texte non lu'
   reprend: le regroupement par couleur, et la limite d’environ trois ensembles saisis d’un coup d’œil, qui appuie la coupure entre « deux ou trois » et « quatre ou plus »
   ne_reprend_pas: l’estimation approximative du nombre de points ; les mesures
+- id: cie_ilv_cielab
+  citation: 'CIE S 017:2020, ILV : International Lighting Vocabulary, 2e éd., entrée 17-23-076 « CIE 1976 L*a*b* colour space ». Vienne : CIE (accès libre en ligne, e-ILV).'
+  doi_ou_url: https://cie.co.at/eilvterm/17-23-076
+  role: contraste
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-10-10'
+  verifie_sur: 'entrée lue en ligne le 2026-10-10 : espace couleur CIELAB, coordonnées L*, a*, b* ; note 1 : correspondants approchés de la clarté (L*, « CIE 1976 lightness »), du chroma (« CIE 1976 a,b
+    chroma ») et de la teinte (« CIE 1976 a,b hue angle », hab = arctan(b*/a*))'
+  reprend: 'rien : L*, le chroma et l’angle de teinte y sont des corrélats approchés, calculés ; cités dans la rubrique « mesure »'
+  ne_reprend_pas: l’espace CIELAB et ses formules ; aucune région ne s’en déduit
 etat_de_l_art: 'Halberda, Sires et Feigenson (2006) [[halberda2006]] montrent que l’on regroupe des points par couleur et que l’on dénombre environ trois de ces ensembles d’un coup d’œil. Aucune source
   trouvée ne propose une qualité perçue du nombre de teintes d’une zone, ni des degrés. Les teintes comptées sont les catégories de la teinte (T6). Détail : docs/bibliographie-par-type.md#groupe-couleur.'
 etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-couleur
@@ -156,4 +180,4 @@ relecture_explicative:
     avant: 'l’éventail dit la distance entre les teintes vues, ce type leur nombre : un rouge et un vert font deux teintes éloignées ; un rouge, un orange et un jaune, trois teintes voisines'
     apres: 'l’éventail dit la distance entre les teintes vues, ce type leur nombre : un rouge et un vert font deux teintes éloignées ; un rouge et un orange, deux teintes voisines'
     raison: 'fait faux corrigé (relecture explicative, 2026-10-11) : rouge et jaune sont à deux pas sur le cercle de T6, donc éloignés'
-    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+    remarque: re-confirmé en relecture explicative (2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)

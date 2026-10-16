@@ -19,6 +19,23 @@ définition: 'Distance qui sépare, sur le cercle des couleurs (rouge, orange, j
 question_attentionnelle: Dans cette zone, voit-on une seule teinte, des teintes voisines (des bleus et des verts) ou des teintes éloignées (des bleus et des oranges) ?
 contre_exemple: 'Un camaïeu de bleus, du bleu nuit au bleu ciel, ne montre qu’une teinte : il varie en clarté, pas en teinte. Deux zones qu’on montre du doigt, l’une rouge, l’autre verte, se comparent par
   un contraste de teinte ; l’éventail des teintes dit ce qu’on voit dans toute une zone, sans en choisir deux.'
+mesure:
+  etat: methodes
+  synthese: 'Une étendue de teinte peut se calculer de façon indirecte à partir d’une image colorimétrique ou de mesures de plusieurs zones : écart entre la plus faible et la plus forte valeur de l’angle de teinte hab. Aucune norme lue ne fixe ce calcul (choix des zones, résolution, exclusion des reflets) : c’est une mesure associée indirecte, dont le résultat dépend de ces choix.'
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes:
+  - id: cie_ilv_cielab
+    nom: 'étendue des valeurs de l’angle de teinte hab mesurées'
+    grandeur: 'écart entre la plus faible et la plus forte valeur de l’angle de teinte hab parmi les zones mesurées'
+    unite_ou_echelle: degrés d’angle de teinte (e-ILV 17-23-076)
+    references:
+    - cie_ilv_cielab
+    - cie015
+    proximite: indirecte
+    ecart: 'calcul sur des valeurs ponctuelles, sans norme pour le choix des zones ; ne saisit ni l’observateur, ni l’éclairage de l’épisode, ni la distance, qui décident des zones qu’on distingue et de leur teinte ; l’angle est mal défini pour les zones grises ; l’angle étant circulaire, l’écart entre plus petite et plus grande valeur est faux de part et d’autre de 0°/360°'
+    conditions: image colorimétrique calibrée ou mesures de plusieurs zones, observateur et illuminant normalisés
+    statut_lecture: e-ILV lu (17-23-076) ; résumé public lu (CIE 015:2018) ; aucune méthode d’étendue lue
 modalites:
 - vision
 mode_de_presentation: image
@@ -89,6 +106,25 @@ references:
     en entier'
   reprend: le cercle des teintes, sur lequel se lit la distance entre les teintes vues
   ne_reprend_pas: la notation chiffrée ; aucune règle d'harmonie
+- id: cie015
+  citation: 'CIE (2018). CIE 015:2018 Colorimetry, 4th Edition. Vienne : Commission Internationale de l''Éclairage.'
+  doi_ou_url: https://doi.org/10.25039/TR.015.2018
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: métadonnées et résumé Crossref (observateurs de référence, illuminants, coordonnées d'espace couleur, écarts de couleur) ; texte payant non lu
+  reprend: 'rien (mesure associée, rubrique « mesure » : coordonnées CIELAB et écarts de couleur)'
+  ne_reprend_pas: tout son contenu (non lu) ; aucune région ne se déduit d’une valeur calculée
+- id: cie_ilv_cielab
+  citation: 'CIE S 017:2020, ILV : International Lighting Vocabulary, 2e éd., entrée 17-23-076 « CIE 1976 L*a*b* colour space ». Vienne : CIE (accès libre en ligne, e-ILV).'
+  doi_ou_url: https://cie.co.at/eilvterm/17-23-076
+  role: contraste
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-10-10'
+  verifie_sur: 'entrée lue en ligne le 2026-10-10 : espace couleur CIELAB, coordonnées L*, a*, b* ; note 1 : correspondants approchés de la clarté (L*, « CIE 1976 lightness »), du chroma (« CIE 1976 a,b
+    chroma ») et de la teinte (« CIE 1976 a,b hue angle », hab = arctan(b*/a*))'
+  reprend: 'rien : L*, le chroma et l’angle de teinte y sont des corrélats approchés, calculés ; cités dans la rubrique « mesure »'
+  ne_reprend_pas: l’espace CIELAB et ses formules ; aucune région ne s’en déduit
 etat_de_l_art: 'Le système de Munsell (1905) [[munsell1905]] situe les teintes sur un cercle ; l''éventail des teintes d''une zone s''y lit comme une distance sur ce cercle. Aucune source trouvée ne propose
   une qualité perçue de l''écart des teintes dans une même zone, distincte du contraste entre deux zones et du nombre de couleurs. Les teintes et le cercle sont ceux de la teinte (six teintes, T6, tranché
   par l’éditeur du projet le 2026-10-11). Détail : docs/bibliographie-par-type.md#groupe-couleur.'
@@ -168,7 +204,7 @@ relecture_explicative:
       une qualité perçue de l''écart des teintes dans une même zone, distincte du contraste entre deux zones et du nombre de couleurs. Les teintes et le cercle sont ceux de la teinte (six teintes, T6, tranché
       par l’éditeur du projet le 2026-10-11). Détail : docs/bibliographie-par-type.md#groupe-couleur.'
     raison: 'fait devenu faux : T6 tranché le 2026-10-11'
-    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9) ; `apres` = texte actuel, qui diffère du texte proposé alors
+    remarque: re-confirmé en relecture explicative (2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9) ; `apres` = texte actuel, qui diffère du texte proposé alors
   - champ: note_echelle
     date: '2026-10-11'
     avant: 'L’échelle mesure la distance, sur le cercle des couleurs, entre les teintes vues les plus éloignées, pas le nombre de teintes : une zone faite d’un rouge et d’un vert seulement, et une zone
@@ -177,10 +213,10 @@ relecture_explicative:
       de six teintes réparties sur tout le cercle, tombent toutes deux dans `distantHues`. Le nombre de teintes n’est pas noté par ce type. Position de travail, révisable par l’éditeur du projet (T31).
       Sur le cercle des six teintes (T6) : des teintes voisines sont à un pas l’une de l’autre ; des teintes éloignées, à deux ou trois pas (trois pas : teintes opposées).'
     raison: 'T6 tranché : le cercle retenu donne le compte des pas des régions (phrase ajoutée)'
-    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+    remarque: re-confirmé en relecture explicative (2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
   - champ: espace_valeurs.regions.neighbouringHues.repere
     date: '2026-10-11'
     avant: des teintes voisines sur le cercle (un sous-bois en verts et jaunes, une mer en bleus et verts)
     apres: des teintes voisines sur le cercle (un sous-bois en verts et jaunes sans feuilles brunes, une mer en bleus et verts)
     raison: 'précision (relecture explicative, 2026-10-11) : un brun compte comme un orange (T6), et orange–vert fait deux pas'
-    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+    remarque: re-confirmé en relecture explicative (2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)

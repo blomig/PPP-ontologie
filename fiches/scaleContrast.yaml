@@ -21,6 +21,20 @@ question_attentionnelle: Entre ces deux éléments vus ensemble, les tailles son
   commune mesure (un très grand élément à côté d’un très petit) ?
 contre_exemple: 'Une tour vue seule dépasse le corps de celui qui la regarde : c’est sa taille perçue. Le contraste d’échelle compare toujours deux éléments vus ensemble (la tour et la maison à son pied),
   même quand tous deux dépassent le corps.'
+mesure:
+  etat: aucune_methode_robuste
+  synthese: 'Aucune méthode de mesure robuste de la différence de taille perçue n’est connue (recherche du 2026-10-16). Le rapport des dimensions mesurées n’est pas retenu : dans les illusions de Delboeuf
+    et d’Ebbinghaus, la taille perçue d’un objet dépend de celle des objets qui l’entourent [[mruczek2017]].'
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes: []
+  non_retenues:
+  - nom: rapport des dimensions mesurées des deux éléments
+    references:
+    - iso_80000_3
+    - mruczek2017
+    raison: 'la taille perçue d’un élément dépend de ce qui l’entoure (illusions de Delboeuf et d’Ebbinghaus) : un même rapport de dimensions peut donner des différences perçues différentes ; ne saisit ni la distance de vue, ni la disposition, ni l’observateur ; ISO 80000-3 définit la grandeur sans décrire de procédé de mesure'
+    statut_lecture: résumé public lu (ISO 80000-3) ; résumé lu (Mruczek et al. 2017, OpenAlex)
 modalites:
 - vision
 mode_de_presentation: image
@@ -129,6 +143,15 @@ references:
   reprend: que les jugements de contraste de taille peuvent varier selon la culture (une étude trouve l’illusion d’Ebbinghaus plus faible chez des Himba que chez des Anglais, d’après le résumé), ce qu’une
     épreuve d’accord (E1) doit prendre en compte
   ne_reprend_pas: l’explication par l’analyse des détails locaux, et les mesures
+- id: iso_80000_3
+  citation: 'ISO 80000-3:2019. Quantities and units — Part 3: Space and time. Genève : ISO.'
+  doi_ou_url: https://www.iso.org/standard/64974.html
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-16'
+  verifie_sur: 'page de l’ISO lue le 2026-10-16 (noms, symboles, définitions et unités des grandeurs d’espace et de temps ; confirmée en 2023, un amendement de 2025) ; extrait public (aperçu iTeh) lu le 2026-10-16 : rayon de courbure (3-1.12, rayon du cercle osculateur d’une courbe plane, défini pour les courbes au moins deux fois continûment dérivables, en mètres) et courbure (3-2, inverse du rayon de courbure, en m⁻¹) ; texte payant non lu'
+  reprend: rien (mesure associée, rubrique « mesure »)
+  ne_reprend_pas: les valeurs de longueur ou de courbure comme bornes de régions
 etat_de_l_art: 'Les illusions de Delboeuf et d’Ebbinghaus, deux illusions de taille connues où un même cercle paraît plus grand ou plus petit selon les figures qui l’entourent, montrent que la taille vue
   d’un élément dépend des éléments vus avec lui : la taille apparente d’un cercle change avec la taille et la distance des cercles qui l’entourent (Girgus, Coren et Agdern 1972) [[girgus1972]]. On parle
   de contraste de taille quand deux objets paraissent plus différents qu’ils ne sont, d’assimilation quand ils paraissent plus semblables (Mruczek et al. 2017, résumé lu) [[mruczek2017]] ; ces jugements
@@ -218,7 +241,7 @@ relecture_explicative:
       (un très grand élément à côté d’un très petit) ?
     raison: 'T34 tranché par l’éditeur du projet le 2026-10-11 (option B) : labels propres au contraste d’échelle, clés et rangs inchangés ; la question reprend les labels propres et garde les repères entre
       parenthèses ; relecture explicative (2026-10-11) : « démesurées » devient « sans commune mesure » (relecture explicative)'
-    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+    remarque: re-confirmé en relecture explicative (2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
   - champ: espace_valeurs.regions.strong.repere
     date: '2026-10-11'
     avant: 'un très grand élément contre un très petit, vus ensemble, avec l’un des plus grands écarts de taille qu’on voie entre deux éléments d’une scène ; la taille n’a pas de bout d’échelle : « maximal
@@ -230,7 +253,7 @@ relecture_explicative:
       le repère ; relecture explicative (2026-10-11) : cas concret au lieu de « l’un des plus grands écarts de taille qu’on voie entre deux éléments d’une scène » ; « sans commune mesure » (relecture explicative).
       Cohérent avec `marked` (« plusieurs fois plus grand ») : une façade fait des dizaines de fois la taille d’un pavé ; relecture explicative (2026-10-11) : fin de phrase reformulée ; frontière marked/strong
       laissée à E1 (seconde relecture explicative ; plus simple qu’un rapport chiffré non sourcé)'
-    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+    remarque: re-confirmé en relecture explicative (2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
   - champ: note_labels_regions
     date: '2026-10-11'
     avant: 'Les labels sont ceux de tous les contrastes (T3, option A, décision de l’éditeur du projet). Pour la taille, « maximal » se lit mal : la taille perçue n’a pas de bout d’échelle, alors que la
@@ -243,7 +266,7 @@ relecture_explicative:
       va du noir au blanc et que la teinte a des opposées sur le cercle ; « maximal » se lisait mal pour la taille (spec §9.7 B).'
     raison: 'T34 tranché par l’éditeur du projet le 2026-10-11 (option B) : labels propres au contraste d’échelle, clés et rangs inchangés ; relecture explicative (2026-10-11) : labels présentés comme une
       proposition (pas un choix de l’éditeur du projet) ; « sans commune mesure » ; label anglais justifié (relecture explicative)'
-    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+    remarque: re-confirmé en relecture explicative (2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
   - champ: etat_de_l_art
     date: '2026-10-11'
     avant: 'Aucune source trouvée qui propose une échelle perçue de l''écart de taille entre deux éléments vus ensemble (recherche faite le 2026-10-10 : Crossref, Semantic Scholar). Les labels des régions
@@ -258,7 +281,7 @@ relecture_explicative:
       : sources cherchées et lues (résumés, OpenAlex et Crossref, 2026-10-11) ; « aucune source trouvée » n’est plus exact ; relecture explicative (2026-10-11) : glose des illusions de Delboeuf et d’Ebbinghaus
       ; de Fockert 2007 : variation selon la culture (Himba et Anglais, d’après le résumé) (relecture explicative) ; relecture explicative (2026-10-11) : « peuvent varier », « une étude trouve » (seconde
       relecture explicative)'
-    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+    remarque: re-confirmé en relecture explicative (2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
   - champ: references.defockert2007.reprend
     date: '2026-10-11'
     avant: que les jugements de contraste de taille varient selon les observateurs, ce qu’une épreuve d’accord (E1) doit prendre en compte
@@ -266,7 +289,7 @@ relecture_explicative:
       épreuve d’accord (E1) doit prendre en compte
     raison: 'variation selon la culture, Himba et Anglais (relecture explicative ; le résumé dit « English participants ») ; relecture explicative (2026-10-11) : « peuvent varier », « une étude trouve »
       (seconde relecture explicative)'
-    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+    remarque: re-confirmé en relecture explicative (2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
 manques:
 - 'exemplaires (au 2026-10-14) : 1501 tailles voisines, 1503 nettement différentes, 1504 très différentes relus ; 1502 sans commune mesure à relire, non montré'
 - 'ne s’explique pas sans aide (relecture explicative, série 6) : exemple concret : au 2026-10-14, trois régions illustrées par des exemplaires relus (1501, 1503, 1504) ; « sans commune mesure » (1502) à relire'

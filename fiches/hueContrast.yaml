@@ -19,6 +19,49 @@ définition: Différence perçue de teinte (rouge, jaune, bleu…) entre deux zo
 question_attentionnelle: Si l’on ne regarde que la teinte (rouge, jaune, bleu…), la différence entre ces deux zones est-elle faible (deux bleus), modérée (un bleu et un vert), évidente (un bleu et un jaune)
   ou maximale (deux teintes opposées sur le cercle des couleurs, comme un bleu et un orange) ?
 contre_exemple: 'Un bleu marine et un bleu ciel ont presque la même teinte : leur contraste de teinte est faible, leur contraste de clarté est évident.'
+mesure:
+  etat: methodes
+  synthese: 'Une différence de teinte entre deux zones peut se calculer à partir de mesures colorimétriques de chacune : écart entre leurs angles de teinte hab, ou composante de teinte d’une formule de
+    différence de couleur comme CIEDE2000. Ces mesures associées visent un aspect proche de ce type sur des échantillons mesurés à part ; elles ne saisissent ni l’entourage, ni l’éclairage de l’épisode,
+    ni la distance qui sépare les deux zones.'
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes:
+  - id: cie_ilv_cielab
+    nom: écart d’angle de teinte hab entre deux zones
+    grandeur: différence entre les angles de teinte calculés pour chaque zone (CIELAB)
+    unite_ou_echelle: degrés d’angle de teinte (hab, e-ILV 17-23-076)
+    references:
+    - cie_ilv_cielab
+    - cie015
+    proximite: proche
+    ecart: compare deux valeurs calculées pour un observateur et un illuminant de référence, sur des échantillons isolés ; ne saisit ni l’entourage, ni l’éclairage de l’épisode, ni la distance entre les
+      zones ; pour un gris ou une couleur très peu saturée, l’angle de teinte est mal défini
+    conditions: géométries d’éclairage et d’observation, observateur et illuminant normalisés, pour chacune des deux zones
+    statut_lecture: résumé public lu (CIE 015:2018) ; e-ILV lu (17-23-076)
+  - id: iso_cie_11664_6
+    nom: composante de teinte de la différence CIEDE2000
+    grandeur: différence de couleur calculée sur des coordonnées CIELAB, avec des corrections selon la clarté, le chroma et la teinte
+    unite_ou_echelle: ΔE00 et ses termes de clarté, de chroma et de teinte
+    references:
+    - iso_cie_11664_6
+    proximite: indirecte
+    ecart: formule faite pour la différence de couleur globale, dont la teinte n’est qu’une composante ; ne s’applique ni aux sources de lumière ni aux reflets spéculaires ; ne saisit ni l’entourage, ni
+      l’éclairage de l’épisode, ni la distance entre les zones
+    conditions: coordonnées CIELAB des deux zones, objets réfléchissants ou transmettants (ou écrans qui les simulent), conditions de référence de la norme
+    statut_lecture: résumé public lu (ISO/CIE 11664-6:2022 ; présentation de la CIE)
+  non_retenues:
+  - nom: différence de couleur ΔE*ab (CIELAB)
+    references:
+    - cie_ilv_cielab_difference
+    raison: 'différence globale de couleur (distance euclidienne dans CIELAB), qui mêle la clarté, le chroma et la teinte : elle ne sépare pas la qualité que juge ce type'
+    statut_lecture: e-ILV lu (17-23-077)
+  - nom: calcul des tolérances et petites différences de couleur (ASTM D2244)
+    references:
+    - astm_d2244
+    raison: pratique conçue pour des tolérances et de petites différences entre éprouvettes opaques comparées côte à côte, alors que le type va jusqu’aux différences les plus fortes ; la norme note elle-même
+      que la proximité des éprouvettes, le brillant et la texture changent le lien entre différence mesurée et acceptabilité
+    statut_lecture: 'résumé public lu (Scope sections 1.1 et 1.2, Significance and Use sections 5.1 et 5.2)'
 modalites:
 - vision
 mode_de_presentation: image
@@ -89,7 +132,7 @@ references:
   role: alimente
   statut_verification: vérifiée sur la source
   verifie_le: '2026-10-10'
-  verifie_sur: 'texte du Project Gutenberg n° 26054 lu pour les passages cités : « Color has three dimensions » (§ 8) ; « a circuit of hues » (un cercle de teintes, chapitre I) ; cinq teintes principales
+  verifie_sur: 'texte du Project Gutenberg n° 26054 lu pour les passages cités : « Color has three dimensions » (paragraphe 8) ; « a circuit of hues » (un cercle de teintes, chapitre I) ; cinq teintes principales
     et cinq intermédiaires ; texte non lu en entier'
   reprend: les teintes situées sur un cercle, d'où l'écart entre deux teintes
   ne_reprend_pas: la notation chiffrée
@@ -115,6 +158,52 @@ references:
   verifie_sur: notice Open Library (titre, auteur, éditeur, 1963, OCLC 30247970 ; pas de description) ; contenu non lu
   reprend: rien de son contenu (non lu) ; cité comme ouvrage repéré sur l’interaction des couleurs (titre)
   ne_reprend_pas: tout son contenu, exercices et conclusions compris (non lu)
+- id: astm_d2244
+  citation: ASTM D2244-23. Standard Practice for Calculation of Color Tolerances and Color Differences from Instrumentally Measured Color Coordinates. ASTM International.
+  doi_ou_url: https://store.astm.org/d2244-23.html
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-16'
+  verifie_sur: 'page de l’éditeur, Scope sections 1.1 et 1.2 et Significance and Use sections 5.1 et 5.2 lus le 2026-10-16 : tolérances et petites différences de couleur entre éprouvettes opaques, à partir de coordonnées mesurées sous lumière du jour (CIELAB, CMC, CIE94, DIN99o, CIEDE2000) ; d’autres facteurs d’aspect (proximité des éprouvettes, brillant, texture) modifient le lien entre différence mesurée et acceptabilité ; texte payant non lu'
+  reprend: rien (méthode voisine non retenue, rubrique « mesure »)
+  ne_reprend_pas: les tolérances
+- id: cie015
+  citation: 'CIE (2018). CIE 015:2018 Colorimetry, 4th Edition. Vienne : Commission Internationale de l''Éclairage.'
+  doi_ou_url: https://doi.org/10.25039/TR.015.2018
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: métadonnées et résumé Crossref (observateurs de référence, illuminants, coordonnées d'espace couleur, écarts de couleur) ; texte payant non lu
+  reprend: 'rien (mesure associée, rubrique « mesure » : coordonnées CIELAB et écarts de couleur)'
+  ne_reprend_pas: tout son contenu (non lu) ; aucune région ne se déduit d’une valeur calculée
+- id: cie_ilv_cielab
+  citation: 'CIE S 017:2020, ILV : International Lighting Vocabulary, 2e éd., entrée 17-23-076 « CIE 1976 L*a*b* colour space ». Vienne : CIE (accès libre en ligne, e-ILV).'
+  doi_ou_url: https://cie.co.at/eilvterm/17-23-076
+  role: contraste
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-10-10'
+  verifie_sur: 'entrée lue en ligne le 2026-10-10 : espace couleur CIELAB, coordonnées L*, a*, b* ; note 1 : correspondants approchés de la clarté (L*, « CIE 1976 lightness »), du chroma (« CIE 1976 a,b
+    chroma ») et de la teinte (« CIE 1976 a,b hue angle », hab = arctan(b*/a*))'
+  reprend: 'rien : L*, le chroma et l’angle de teinte y sont des corrélats approchés, calculés ; cités dans la rubrique « mesure »'
+  ne_reprend_pas: l’espace CIELAB et ses formules ; aucune région ne s’en déduit
+- id: cie_ilv_cielab_difference
+  citation: 'CIE S 017:2020, ILV : International Lighting Vocabulary, 2e éd., entrée 17-23-077 « CIE 1976 L*a*b* colour difference ». Vienne : CIE (accès libre en ligne, e-ILV).'
+  doi_ou_url: https://cie.co.at/eilvterm/17-23-077
+  role: contraste
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-10-16'
+  verifie_sur: 'entrée lue en ligne le 2026-10-16 : différence entre deux stimuli de couleur, distance euclidienne entre leurs points dans l’espace CIELAB'
+  reprend: rien (méthode voisine non retenue, rubrique « mesure »)
+  ne_reprend_pas: la différence de couleur ΔE*ab
+- id: iso_cie_11664_6
+  citation: 'ISO/CIE 11664-6:2022. Colorimetry — Part 6: CIEDE2000 colour-difference formula. Genève : ISO ; Vienne : CIE.'
+  doi_ou_url: https://www.iso.org/standard/82662.html
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-16'
+  verifie_sur: 'page de l’ISO lue le 2026-10-16 (résumé), et présentation de la CIE : formule CIEDE2000, sur des coordonnées CIELAB, avec des corrections selon la clarté, le chroma, la teinte et leur interaction ; objets réfléchissants ou transmettants, écrans s’ils les simulent ; ne s’applique pas aux sources de lumière ni aux reflets spéculaires ; texte payant non lu'
+  reprend: rien (mesure associée ou méthode voisine, rubrique « mesure »)
+  ne_reprend_pas: les valeurs ΔE00 comme bornes de régions
 etat_de_l_art: 'Itten (*Kunst der Farbe*, 1961) [[itten1961]] et Albers (*Interaction of Color*, 1963) [[albers1963]] sont des ouvrages repérés sur la couleur (notices seules, contenu non lu). Le système
   de Munsell (1905) [[munsell1905]] situe les teintes sur un cercle (« a circuit of hues », passage lu), ce qui donne un sens à « teintes éloignées ». Aucune source trouvée ne propose une échelle perçue
   du contraste de teinte entre deux zones ; les labels des régions sont ceux de tous les contrastes (T3). Détail : docs/bibliographie-par-type.md#groupe-contrastes.'
@@ -194,28 +283,28 @@ relecture_explicative:
     apres: deux nuances d’une même teinte, à zéro pas sur le cercle des six teintes (deux bleus)
     raison: 'T6 : cercle retenu par l’éditeur du projet (2026-10-11), six teintes en cercle, rouge, orange, jaune, vert, bleu, violet ; repère recalculé en pas sur ce cercle (plus court chemin) ; exemples
       inchangés, comptage dit'
-    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+    remarque: re-confirmé en relecture explicative (2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
   - champ: espace_valeurs.regions.moderate.repere
     date: '2026-10-11'
     avant: deux teintes voisines sur le cercle (un bleu et un vert)
     apres: deux teintes voisines, à un pas sur le cercle des six teintes (un bleu et un vert)
     raison: 'T6 : cercle retenu par l’éditeur du projet (2026-10-11), six teintes en cercle, rouge, orange, jaune, vert, bleu, violet ; repère recalculé en pas sur ce cercle (plus court chemin) ; exemples
       inchangés, comptage dit'
-    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+    remarque: re-confirmé en relecture explicative (2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
   - champ: espace_valeurs.regions.marked.repere
     date: '2026-10-11'
     avant: deux teintes éloignées sur le cercle (un bleu et un jaune)
     apres: deux teintes à deux pas sur le cercle des six teintes, une teinte entre elles (un bleu et un jaune, un rouge et un jaune)
     raison: 'T6 : cercle retenu par l’éditeur du projet (2026-10-11), six teintes en cercle, rouge, orange, jaune, vert, bleu, violet ; repère recalculé en pas sur ce cercle (plus court chemin) ; exemples
       inchangés, comptage dit'
-    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+    remarque: re-confirmé en relecture explicative (2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
   - champ: espace_valeurs.regions.strong.repere
     date: '2026-10-11'
     avant: deux teintes opposées sur le cercle (un bleu et un orange)
     apres: deux teintes opposées, à trois pas sur le cercle des six teintes (un bleu et un orange, un rouge et un vert, un jaune et un violet)
     raison: 'T6 : cercle retenu par l’éditeur du projet (2026-10-11), six teintes en cercle, rouge, orange, jaune, vert, bleu, violet ; repère recalculé en pas sur ce cercle (plus court chemin) ; exemples
       inchangés, comptage dit'
-    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+    remarque: re-confirmé en relecture explicative (2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
   - champ: note_cercle
     date: '2026-10-11'
     avant: 'La coupure entre « évident » (un bleu et un jaune) et « maximal » (un bleu et un orange) dépend du cercle de couleurs retenu pour la teinte (T6). Sur le cercle à six teintes proposé (rouge,
@@ -229,7 +318,7 @@ relecture_explicative:
       Un brun se compte comme un orange, un rose comme un rouge (règle de la teinte).'
     raison: 'T6 tranché par l’éditeur du projet (2026-10-11) : la note ne dit plus que la coupure est en attente ; elle donne le cercle retenu et le comptage en pas ; relecture explicative (2026-10-11)
       : « les six teintes de la teinte » devient « les six teintes de la fiche teinte »'
-    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+    remarque: re-confirmé en relecture explicative (2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
 manques:
 - 'exemplaires (au 2026-10-14) : 1001 faible, 1004 modéré, 1002 évident, 1003 maximal relus'
 bloque_par: []

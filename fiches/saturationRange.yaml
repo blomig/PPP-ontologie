@@ -19,6 +19,25 @@ définition: 'Écart entre les saturations qu’on voit dans une même zone : un
 question_attentionnelle: Dans cette zone, les couleurs sont-elles toutes aussi vives (ou aussi grisées), un peu plus ou moins vives, ou voit-on à la fois du très grisé et du très vif ?
 contre_exemple: 'Un aplat rouge vif et un aplat vert aussi vif ne montrent qu’une saturation : ils varient en teinte. Une zone toute grise n’a qu’une saturation, nulle. Deux zones qu’on montre du doigt
   se comparent par un contraste, en ne regardant que la saturation ; l’éventail dit ce qu’on voit dans toute une zone.'
+mesure:
+  etat: methodes
+  synthese: 'Une étendue de saturation peut se calculer de façon indirecte à partir d’une image colorimétrique ou de mesures de plusieurs zones : écart entre la plus faible et la plus forte valeur de chroma
+    C*ab. Aucune norme lue ne fixe ce calcul (choix des zones, résolution, exclusion des reflets) : c’est une mesure associée indirecte, dont le résultat dépend de ces choix.'
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes:
+  - id: cie_ilv_cielab
+    nom: étendue des valeurs de chroma C*ab mesurées
+    grandeur: écart entre la plus faible et la plus forte valeur de chroma C*ab parmi les zones mesurées
+    unite_ou_echelle: unités C*ab (corrélat approché du chroma, e-ILV 17-23-076)
+    references:
+    - cie_ilv_cielab
+    - cie015
+    proximite: indirecte
+    ecart: calcul sur des valeurs ponctuelles, sans norme pour le choix des zones ; ne saisit ni l’observateur, ni l’éclairage de l’épisode, ni la distance, qui décident des zones qu’on distingue et de
+      leur saturation
+    conditions: image colorimétrique calibrée ou mesures de plusieurs zones, observateur et illuminant normalisés
+    statut_lecture: e-ILV lu (17-23-076) ; résumé public lu (CIE 015:2018) ; aucune méthode d’étendue lue
 modalites:
 - vision
 mode_de_presentation: image
@@ -79,6 +98,25 @@ references:
   verifie_sur: 'métadonnées Crossref et résumé (OpenAlex) : effet de la variation spatiale de clarté, de chroma et de teinte d''une plage de couleur sur la couleur moyenne perçue ; texte non lu'
   reprend: la variation spatiale de chroma dans une même plage comme objet d'étude perceptive, distinct de la saturation moyenne
   ne_reprend_pas: la couleur moyenne perçue, les seuils et les mesures
+- id: cie015
+  citation: 'CIE (2018). CIE 015:2018 Colorimetry, 4th Edition. Vienne : Commission Internationale de l''Éclairage.'
+  doi_ou_url: https://doi.org/10.25039/TR.015.2018
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: métadonnées et résumé Crossref (observateurs de référence, illuminants, coordonnées d'espace couleur, écarts de couleur) ; texte payant non lu
+  reprend: 'rien (mesure associée, rubrique « mesure » : coordonnées CIELAB et écarts de couleur)'
+  ne_reprend_pas: tout son contenu (non lu) ; aucune région ne se déduit d’une valeur calculée
+- id: cie_ilv_cielab
+  citation: 'CIE S 017:2020, ILV : International Lighting Vocabulary, 2e éd., entrée 17-23-076 « CIE 1976 L*a*b* colour space ». Vienne : CIE (accès libre en ligne, e-ILV).'
+  doi_ou_url: https://cie.co.at/eilvterm/17-23-076
+  role: contraste
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-10-10'
+  verifie_sur: 'entrée lue en ligne le 2026-10-10 : espace couleur CIELAB, coordonnées L*, a*, b* ; note 1 : correspondants approchés de la clarté (L*, « CIE 1976 lightness »), du chroma (« CIE 1976 a,b
+    chroma ») et de la teinte (« CIE 1976 a,b hue angle », hab = arctan(b*/a*))'
+  reprend: 'rien : L*, le chroma et l’angle de teinte y sont des corrélats approchés, calculés ; cités dans la rubrique « mesure »'
+  ne_reprend_pas: l’espace CIELAB et ses formules ; aucune région ne s’en déduit
 etat_de_l_art: 'Virtanen, Saarela et Olkkonen (2026) [[virtanen2026]] étudient l’effet de la variation de chroma (saturation), de clarté et de teinte d’une plage sur la couleur moyenne perçue. Aucune autre
   source trouvée (recherche du 2026-10-10 : Crossref, OpenAlex) ne propose une qualité perçue de l’écart des saturations dans une même zone, ni des degrés de cet écart. Détail : docs/bibliographie-par-type.md#groupe-couleur.'
 etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-couleur

@@ -23,6 +23,13 @@ définition: Degré auquel les parties d’un objet ou d’une composition parai
 question_attentionnelle: Les parties de cet objet se divisent-elles à leur tour en parties plus petites, et sur combien de niveaux ?
 contre_exemple: 'Une rangée de vingt boutons identiques compte beaucoup d’éléments, tous au même niveau : c’est la densité, pas l’emboîtement. Une grande forme posée à côté d’une petite diffère d’elle par
   la taille sans la contenir : c’est un contraste d’échelle.'
+mesure:
+  etat: aucune_methode_robuste
+  synthese: Aucune méthode de mesure robuste n’est connue pour le nombre de niveaux de parties qu’on perçoit dans un objet (recherche du 2026-10-16). Le découpage en parties et en niveaux est fait par l’observateur,
+    à une distance de vue donnée ; aucune norme ni méthode publiée lue ne le mesure.
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes: []
 modalites:
 - vision
 mode_de_presentation: image
@@ -144,7 +151,7 @@ modifie_en:
 remplace_par: []
 source_de_la_fiche: crash tests, partie 1 (spec 2.3, docs/questions-crash-tests.md C4) ; fiche préremplie le 2026-10-10 par l’équipe, champs en langage courant à valider par la relecture explicative
 manques:
-- '« niveaux d’échelle » (stock v0.2) fusionné dans ce type, sans devenir un label ; « hiérarchie » ne reçoit pas de fiche (décision de l’éditeur du projet du 2026-10-14, série 48 ; C4 point 5)'
+- '« niveaux d’échelle » (stock v0.2) fusionné dans ce type, sans devenir un label ; « hiérarchie » ne reçoit pas de fiche (décision de l’éditeur du projet du 2026-10-14)'
 - 'exemplaires (lot 3, 2026-10-14) : 2801 un seul niveau, 2802 deux niveaux, 2803 trois niveaux ou plus ; relus et validés par la relecture explicative (lot 3 bis, 2026-10-14)'
 bloque_par: []
 a_relire: []

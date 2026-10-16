@@ -18,7 +18,23 @@ définition: La façon dont le son commence, du son qui part d’un coup à celu
 question_attentionnelle: Le son part-il d’un coup, vite, ou monte-t-il progressivement ?
 contre_exemple: 'Une machine déjà en marche quand on arrive n’a pas d’attaque qu’on puisse entendre : le type ne s’applique pas. Un son fort n’a pas pour autant une attaque abrupte : la force du son est
   une autre qualité.'
-grandeur_physique_homonyme: 'temps de montée (en millisecondes) : aucune région ne s’en déduit.'
+mesure:
+  etat: methodes
+  synthese: 'Le temps de montée de l’enveloppe d’un son, pris en logarithme, est un corrélat acoustique d’une dimension commune du timbre [[mcadams1995]] : c’est une mesure associée proche. Il se calcule
+    sur un enregistrement ; il ne saisit ni la salle, ni la distance d’écoute, ni l’auditeur.'
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes:
+  - id: mcadams1995
+    nom: temps de montée (en logarithme)
+    grandeur: durée de la montée de l’enveloppe d’amplitude du son, au début du son
+    unite_ou_echelle: logarithme d’une durée (temps de montée en secondes)
+    references:
+    - mcadams1995
+    proximite: proche
+    ecart: 'corrélat trouvé sur des sons d’instruments synthétisés ; la valeur dépend de la façon dont on fixe le début et la fin de la montée sur l’enveloppe ; se calcule sur un enregistrement : ne saisit ni la salle, ni la distance d’écoute, ni l’auditeur'
+    conditions: enregistrement du son ; enveloppe d’amplitude calculée ; bornes de la montée déclarées
+    statut_lecture: résumé lu (McAdams et al. 1995, PubMed, PMID 8570786)
 modalites:
 - audition
 mode_de_presentation: échantillon
@@ -130,7 +146,7 @@ enonces_testables:
   epreuve: null
 cq_couvertes: CQ1, CQ2
 statut: candidat
-statut_note: 'en préparation (série 50, 2026-10-15) : fiche rédigée, sans exemplaire ; tous les champs rédigés sont à relire'
+statut_note: 'en préparation (2026-10-15) : fiche rédigée, sans exemplaire ; tous les champs rédigés sont à relire'
 statut_epistemique: non éprouvé
 introduit_en: '2.8'
 modifie_en: []
@@ -147,7 +163,6 @@ a_relire:
 - définition
 - question_attentionnelle
 - contre_exemple
-- grandeur_physique_homonyme
 - mode_de_presentation
 - conditions_critiques
 - note_conditions
@@ -162,6 +177,7 @@ a_relire:
 - transfert
 - enonces_testables
 - statut_note
+- mesure
 relecture_explicative:
   date: null
   champs: []

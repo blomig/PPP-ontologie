@@ -16,7 +16,38 @@ facettes:
 définition: Couleur d’une zone au sens de sa place sur le cercle des couleurs (rouge, jaune, bleu…), indépendamment de sa clarté et de sa saturation.
 question_attentionnelle: 'De quelle couleur est cette zone : rouge, orange, jaune, vert, bleu ou violet ?'
 contre_exemple: 'Un gris n’a pas de teinte (non applicable). Un rose pâle et un rouge sombre ont la même teinte, rouge : ils diffèrent par la clarté et la saturation.'
-grandeur_physique_homonyme: 'longueur d’onde dominante ; angle de teinte h (CIELCh) : aucune région ne s’en déduit.'
+grandeur_physique_homonyme: '« teinte » désigne aussi, en colorimétrie, l’angle de teinte hab calculé (CIE 1976 a,b hue angle), un corrélat approché de la teinte perçue (voir la rubrique « mesure ») : aucune région ne s’en déduit.'
+mesure:
+  etat: methodes
+  synthese: La colorimétrie donne un angle de teinte calculé à partir de mesures instrumentales (hab de l’espace CIELAB), et le système Munsell une teinte évaluée par comparaison visuelle à des échantillons
+    ordonnés. Elles visent un aspect proche de ce type, pour des surfaces opaques sous un éclairage et un observateur de référence ; elles ne tiennent pas compte de ce qui entoure la zone ni de l’éclairage
+    réel de l’épisode.
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes:
+  - id: cie015
+    nom: angle de teinte hab (CIELAB)
+    grandeur: angle calculé à partir des coordonnées a* et b*, elles-mêmes calculées sur des valeurs trichromatiques mesurées
+    unite_ou_echelle: 'angle de teinte hab = arctan(b*/a*) (définition de la CIE, e-ILV 17-23-076)'
+    references:
+    - cie015
+    - cie_ilv_cielab
+    proximite: proche
+    ecart: 'un angle continu, là où le type a six régions nommées ; valeur calculée pour un observateur et un illuminant de référence, sur un échantillon isolé : ne tient compte ni de l’entourage ni de
+      l’éclairage de l’épisode'
+    conditions: géométries d’éclairage et d’observation, observateur et illuminant normalisés
+    statut_lecture: résumé public lu (CIE 015:2018) ; e-ILV lu (17-23-076)
+  - id: astm_d1535
+    nom: teinte Munsell (Munsell hue)
+    grandeur: teinte évaluée par comparaison visuelle avec un atlas d’échantillons ordonnés ; la norme prévoit aussi la conversion depuis des données CIE
+    unite_ou_echelle: notation Munsell, composante teinte
+    references:
+    - astm_d1535
+    proximite: proche
+    ecart: une notation fine par comparaison à un atlas, pour des objets opaques à la lumière du jour ; ne tient compte ni de l’entourage ni d’un autre éclairage que celui de la norme, et ne donne pas une
+      région
+    conditions: objets opaques (peintures), lumière du jour, comparaison à l’atlas
+    statut_lecture: 'lu en partie : page de l’éditeur, Scope section 1.1 (ASTM D1535)'
 modalites:
 - vision
 mode_de_presentation: image
@@ -74,12 +105,7 @@ espace_valeurs:
     label_en: purple
     repere: teinte violette (une fleur de lavande)
     exemplaires: []
-note_categories: 'Règle (décision de l’éditeur du projet, 2026-10-11, T6 ; docs/couleur-teinte-etat-de-l-art.md) : les six régions sont les catégories chromatiques de base de Berlin et Kay [[berlin_kay1969]]
-  (les noms de couleur de base qu’ils relèvent ; d''après Kay 2015 [[kay2015]]), moins le brun et le rose. Un brun n''est pas une teinte à part : c''est un orange sombre et terne ; on note `orange`, et
-  le sombre et le terne par la clarté et la saturation (Munsell, glossaire [[munsell1905]] ; Kelly et Judd 1955 [[kelly_judd1955]]). Un rose est un rouge clair et peu vif : on note `red`, le reste par la
-  clarté et la saturation (mêmes sources). Cas limites (confirmés par l’éditeur du projet, 2026-10-11) : un brun qui tire nettement vers le rouge ou le jaune, ou un rose qui tire vers le violet, se note
-  à la teinte voisine la plus proche (`red`, `yellow`, `purple`), comme le suggère le glossaire de Munsell (brun « inclined to red or yellow », rose « inclining toward purple »). Gris, noir, blanc : non
-  applicable (condition_NA) ; Munsell et NCS [[ncs_systeme]] les rangent eux aussi à part, comme des couleurs neutres sans teinte.'
+note_categories: 'Règle (décision de l’éditeur du projet, 2026-10-11, T6 ; docs/couleur-teinte-etat-de-l-art.md) : les six régions sont les catégories chromatiques de base de Berlin et Kay [[berlin_kay1969]] (les noms de couleur de base qu’ils relèvent ; d''après Kay 2015 [[kay2015]]), moins le brun et le rose. Un brun n''est pas une teinte à part : c''est un orange sombre et terne ; on note `orange`, et le sombre et le terne par la clarté et la saturation (Munsell, glossaire [[munsell1905]] ; Kelly et Judd 1955 [[kelly_judd1955]]). Un rose est un rouge clair et peu vif : on note `red`, le reste par la clarté et la saturation (mêmes sources). Cas limites (confirmés par l’éditeur du projet, 2026-10-11) : un brun qui tire nettement vers le rouge ou le jaune, ou un rose qui tire vers le violet, se note à la teinte voisine la plus proche (`red`, `yellow`, `purple`), comme le suggère le glossaire de Munsell (brun « inclined to red or yellow », rose « inclining toward purple »). Gris, noir, blanc : non applicable (condition_NA) ; Munsell et NCS [[ncs_systeme]] les rangent eux aussi à part, comme des couleurs neutres sans teinte. « Rose » et « brun » sont conservés comme termes de recherche des régions rouge et orange.'
 identite: Place sur le cercle des couleurs, pas clair ou sombre (clarté), pas vif ou terne (saturation).
 relations:
 - type: confusableWith
@@ -98,7 +124,7 @@ references:
   role: alimente
   statut_verification: vérifiée sur la source
   verifie_le: '2026-10-10'
-  verifie_sur: 'texte du Project Gutenberg n° 26054 lu pour les passages cités : « Color has three dimensions » (§ 8 : teinte, valeur, chroma) ; cinq teintes principales (R, Y, G, B, P) et cinq intermédiaires
+  verifie_sur: 'texte du Project Gutenberg n° 26054 lu pour les passages cités : « Color has three dimensions » (paragraphe 8 : teinte, valeur, chroma) ; cinq teintes principales (R, Y, G, B, P) et cinq intermédiaires
     (YR, GY, BG, PB, RP) ; glossaire, « BROWN.--A dark color, inclined to red or yellow… » et « PINK.--A red color of low chroma, but high luminosity, inclining toward purple » ; texte non lu en entier'
   reprend: la teinte comme dimension séparée de la valeur (clarté) et du chroma (saturation) ; le brun et le rose comme couleurs d'une teinte (rouge, jaune ; rouge) de clarté et de chroma particuliers (règle
     de note_categories, T6)
@@ -119,8 +145,8 @@ references:
   statut_verification: vérifiée sur résumé ou source secondaire
   verifie_le: '2026-10-10'
   verifie_sur: métadonnées et résumé Crossref (observateurs de référence, illuminants, coordonnées d'espace couleur, écarts de couleur) ; texte payant non lu
-  reprend: rien
-  ne_reprend_pas: tout son contenu (non lu) ; l’angle de teinte, cité dans grandeur_physique_homonyme, est vérifié sur le vocabulaire de la CIE (cie_ilv_cielab) ; aucune région ne s’en déduit
+  reprend: 'rien (mesure associée, rubrique « mesure » : coordonnées CIELAB et écarts de couleur)'
+  ne_reprend_pas: 'tout son contenu (non lu) ; aucune région ne se déduit d’une valeur calculée'
 - id: kay2015
   citation: Kay, P. (2015). Universality of color categorization. In A. J. Elliot, M. D. Fairchild & A. Franklin (dir.), Handbook of Color Psychology, Cambridge University Press, 245–258.
   doi_ou_url: https://doi.org/10.1017/CBO9781107337930.012
@@ -167,9 +193,18 @@ references:
   statut_verification: vérifiée sur la source
   verifie_le: '2026-10-10'
   verifie_sur: 'entrée lue en ligne le 2026-10-10 : espace couleur CIELAB, coordonnées L*, a*, b* ; note 1 : correspondants approchés de la clarté (L*, « CIE 1976 lightness »), du chroma (« CIE 1976 a,b
-    chroma ») et de la teinte (« CIE 1976 a,b hue angle », h_ab = arctan(b*/a*))'
-  reprend: 'rien : l’angle de teinte y est un correspondant approché, calculé, de la teinte ; il est cité dans grandeur_physique_homonyme comme grandeur mesurée homonyme'
-  ne_reprend_pas: l’espace CIELAB et ses formules ; aucune région ne s’en déduit
+    chroma ») et de la teinte (« CIE 1976 a,b hue angle », hab = arctan(b*/a*))'
+  reprend: 'rien : L*, le chroma et l’angle de teinte y sont des corrélats approchés, calculés ; cités dans la rubrique « mesure »'
+  ne_reprend_pas: 'l’espace CIELAB et ses formules ; aucune région ne s’en déduit'
+- id: astm_d1535
+  citation: ASTM D1535-14(2018). Standard Practice for Specifying Color by the Munsell System. ASTM International.
+  doi_ou_url: https://store.astm.org/d1535-14r18.html
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-16'
+  verifie_sur: 'page de l’éditeur, Scope, section 1.1, lu (notation fondée sur la teinte, la clarté et le chroma perçus ; objets opaques vus à la lumière du jour par un observateur à vision normale ; méthode visuelle, conversion depuis des données CIE prévue) ; texte payant non lu'
+  reprend: rien (mesure associée, rubrique « mesure »)
+  ne_reprend_pas: la notation Munsell comme bornes de régions
 etat_de_l_art: 'La teinte est l''une des trois dimensions de Munsell (1905) [[munsell1905]], avec la valeur (la clarté) et le chroma (la saturation) ; Munsell en compte dix, le système suédois NCS [[ncs_systeme]]
   quatre couleurs élémentaires et des intermédiaires (Hård et Sivik 1981, d''après Hering) [[hard_sivik1981]], le dictionnaire américain ISCC-NBS dix-sept plages (Kelly et Judd 1955) [[kelly_judd1955]],
   et la colorimétrie de la CIE [[cie015]] en calcule un correspondant approché, l''angle de teinte (vocabulaire international de l''éclairage, entrée « CIELAB ») [[cie_ilv_cielab]]. Berlin et Kay (1969)
@@ -257,7 +292,7 @@ relecture_explicative:
       écrite comme la décision (brun → orange, rose → rouge), cas limites vers une teinte voisine gardés d''après les sources déjà citées ; relecture explicative (2026-10-11) : cas limites du brun et du
       rose étiquetés « proposition, à confirmer par l’éditeur du projet (T6) » (ils dépassent la décision) ; « permet » devient « suggère » ; appels [[id]] ajoutés ; relecture explicative (2026-10-11) :
       cas limites confirmés par l’éditeur du projet (série 8) : la proposition devient règle'
-    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+    remarque: re-confirmé en relecture explicative (2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
   - champ: references.munsell1905.reprend
     date: '2026-10-11'
     avant: la teinte comme dimension séparée de la valeur (clarté) et du chroma (saturation) ; le brun et le rose comme couleurs d'une teinte (rouge, jaune ; rouge) de clarté et de chroma particuliers (règle
@@ -265,19 +300,19 @@ relecture_explicative:
     apres: la teinte comme dimension séparée de la valeur (clarté) et du chroma (saturation) ; le brun et le rose comme couleurs d'une teinte (rouge, jaune ; rouge) de clarté et de chroma particuliers (règle
       de note_categories, T6)
     raison: 'T6 tranché par l’éditeur du projet le 2026-10-11 : six teintes, brun = orange sombre et terne, rose = rouge clair et peu vif, gris, noir et blanc non applicables ; « provisoire » retiré'
-    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+    remarque: re-confirmé en relecture explicative (2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
   - champ: references.berlin_kay1969.reprend
     date: '2026-10-11'
     avant: les catégories chromatiques de base (rouge, orange, jaune, vert, bleu, pourpre), d'après Kay 2015, comme appui des six régions (proposition T6)
     apres: les catégories chromatiques de base (rouge, orange, jaune, vert, bleu, pourpre), d'après Kay 2015, comme appui des six régions (T6, décision de l’éditeur du projet)
     raison: 'T6 tranché par l’éditeur du projet le 2026-10-11 : six teintes, brun = orange sombre et terne, rose = rouge clair et peu vif, gris, noir et blanc non applicables ; « provisoire » retiré'
-    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+    remarque: re-confirmé en relecture explicative (2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
   - champ: references.kelly_judd1955.reprend
     date: '2026-10-11'
     avant: le brun comme orange (ou voisin) sombre et peu saturé, le rose comme rouge (ou voisin) très clair (règle provisoire de note_categories)
     apres: le brun comme orange (ou voisin) sombre et peu saturé, le rose comme rouge (ou voisin) très clair (règle de note_categories, T6)
     raison: 'T6 tranché par l’éditeur du projet le 2026-10-11 : six teintes, brun = orange sombre et terne, rose = rouge clair et peu vif, gris, noir et blanc non applicables ; « provisoire » retiré'
-    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+    remarque: re-confirmé en relecture explicative (2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
 alignements_externes:
 - relation: skos:closeMatch
   cible: Hue (Munsell, A Color Notation)

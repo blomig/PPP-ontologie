@@ -18,7 +18,35 @@ définition: La force avec laquelle on sent l’odeur de l’objet, le nez appro
 question_attentionnelle: Le nez près de l’objet, sentez-vous quelque chose ? À peine, nettement, ou fortement ?
 contre_exemple: Deux objets qui libèrent autant de substance odorante peuvent ne pas sentir aussi fort ; et la même odeur paraît plus faible à celui qui y est exposé depuis longtemps. Ce que mesure un appareil
   n’est pas ce que décrit ce type. « Fort » n’est pas « trop fort ».
-grandeur_physique_homonyme: 'concentration de l’odorant ; seuil de détection ; « intensité » au sens b) d’ISO 5492 (grandeur du stimulus) : aucune région ne s’en déduit.'
+grandeur_physique_homonyme: '« intensité » au sens b) d’ISO 5492 (grandeur du stimulus ; la concentration d’odeur relève de la rubrique « mesure ») : aucune région ne s’en déduit.'
+mesure:
+  etat: methodes
+  synthese: 'L’intensité d’une odeur au-dessus du seuil peut se rapporter, par un jury, à une série de concentrations d’un odorant de référence, le 1-butanol [[astm_e544]] : c’est une mesure associée proche.
+    La concentration d’odeur d’un échantillon gazeux, obtenue par dilution jusqu’au seuil de détection [[en13725]], est une mesure associée indirecte. Aucune des deux ne se fait sur l’objet, le nez approché
+    à la distance déclarée.'
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes:
+  - id: astm_e544
+    nom: intensité d’odeur rapportée à une référence
+    grandeur: intensité d’odeur d’un échantillon, comparée par un jury à celles d’une série de concentrations de 1-butanol
+    unite_ou_echelle: concentration équivalente de 1-butanol (échelle de référence de l’intensité d’odeur de l’ASTM)
+    references:
+    - astm_e544
+    proximite: proche
+    ecart: 'jugée par un jury (au moins huit jugements indépendants), qui compare l’échantillon à une série de concentrations de 1-butanol ; un seul odorant de référence ; échantillon présenté selon le laboratoire (la norme ne fixe pas cette présentation) ; ne se fait pas sur l’objet, le nez approché à la distance déclarée ; ne saisit ni l’adaptation de chaque personne à l’odeur, ni l’air ambiant de l’épisode'
+    conditions: jury ; série de dilutions de 1-butanol (méthode dynamique ou statique) ; présentation de l’échantillon documentée
+    statut_lecture: 'lu en partie : page de l’éditeur, résumé et Scope sections 1.1 à 1.5'
+  - id: en13725
+    nom: concentration d’odeur (olfactométrie dynamique)
+    grandeur: 'dilution d’un échantillon gazeux nécessaire pour atteindre le seuil de détection d’un jury'
+    unite_ou_echelle: unités d’odeur européennes par mètre cube (ouE/m³)
+    references:
+    - en13725
+    proximite: indirecte
+    ecart: 'dit combien il faut diluer l’air prélevé pour atteindre le seuil, pas la force avec laquelle on sent l’odeur au-dessus du seuil ; faite sur un gaz prélevé, conçue pour les émissions de sources fixes, pas sur l’objet tenu près du nez ; ne saisit ni l’adaptation ni l’air ambiant de l’épisode ; la norme exclut elle-même la mesure de l’intensité perçue au-dessus du seuil (EN 13725, domaine d’application)'
+    conditions: échantillon gazeux ; olfactomètre à dilution dynamique ; jury humain
+    statut_lecture: 'résumé public lu (extrait public de BS EN 13725:2022, section 1)'
 modalites:
 - odorat
 mode_de_presentation: échantillon
@@ -106,6 +134,24 @@ references:
   verifie_sur: résumé lu (PubMed, PMID 8710455) ; texte non lu
   reprend: 'l’adaptation baisse l’intensité perçue : une condition (facette `exposition`)'
   ne_reprend_pas: l’adaptation comme qualité
+- id: astm_e544
+  citation: ASTM E544-18. Standard Practice for Referencing Suprathreshold Odor Intensity. ASTM International.
+  doi_ou_url: https://store.astm.org/e0544-18.html
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-16'
+  verifie_sur: 'page de l’éditeur lue le 2026-10-16 (résumé et Scope sections 1.1 à 1.5) : intensité d’odeur au-dessus du seuil, rapportée à l’échelle de référence de l’ASTM par comparaison avec une série de concentrations d’un odorant de référence, le 1-butanol ; présentation des vapeurs de référence fixée, présentation de l’échantillon non définie ; texte payant non lu'
+  reprend: rien (mesure associée, rubrique « mesure »)
+  ne_reprend_pas: les niveaux de l’échelle de référence comme bornes de régions
+- id: en13725
+  citation: 'EN 13725:2022. Stationary source emissions — Determination of odour concentration by dynamic olfactometry and odour emission rate. Bruxelles : CEN.'
+  doi_ou_url: https://webstore.ansi.org/preview-pages/BSI/preview_30454302.pdf
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-16'
+  verifie_sur: 'extrait public (aperçu de BS EN 13725:2022, ANSI Webstore) lu le 2026-10-16 : domaine d’application (section 1) : concentration d’odeur d’un échantillon gazeux par olfactométrie dynamique avec un jury humain, en unités d’odeur européennes par mètre cube, déterminée par la dilution nécessaire pour atteindre le seuil de détection ; débit d’odeur de sources fixes ; texte payant non lu'
+  reprend: rien (mesure associée, rubrique « mesure »)
+  ne_reprend_pas: les valeurs de concentration d’odeur comme bornes de régions
 etat_de_l_art: 'ISO/TS 16922 définit l’intensité d’odeur comme la « force de la perception de l’odeur » (édition 2002, annulée, 3.1.3, extraits [[iso_ts16922_2002]] ; édition en vigueur 2022, 3.1.4, « magnitude
   of the perceived odour » [[iso_ts16922_2022]]) ; ISO 5492 (2.8) [[iso5492]] garde deux sens à l’intensité, PPP ne prend que la sensation. Dalton et Wysocki (1996) [[dalton_wysocki1996]] montrent que l’intensité
   perçue baisse après une longue exposition (résumé lu). Aucune source trouvée ne fixe des régions perçues pour l’odeur d’un objet. Détail : docs/bibliographie-par-type.md#groupe-odorat.'
@@ -134,7 +180,7 @@ enonces_testables:
   epreuve: null
 cq_couvertes: CQ1, CQ2
 statut: candidat
-statut_note: 'en préparation (série 50, 2026-10-15) : fiche rédigée, sans exemplaire ; tous les champs rédigés sont à relire'
+statut_note: 'en préparation (2026-10-15) : fiche rédigée, sans exemplaire ; tous les champs rédigés sont à relire'
 statut_epistemique: non éprouvé
 introduit_en: '2.8'
 modifie_en: []
@@ -165,6 +211,7 @@ a_relire:
 - transfert
 - enonces_testables
 - statut_note
+- mesure
 relecture_explicative:
   date: null
   champs: []

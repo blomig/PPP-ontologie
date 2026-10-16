@@ -17,7 +17,23 @@ définition: Degré auquel un bord, un trait ou une surface paraît s’écarter
 question_attentionnelle: Ce bord, ce trait ou cette surface paraît-il droit, légèrement courbe ou très courbe ?
 contre_exemple: 'Une ligne en zigzag change de direction, mais chacun de ses segments est droit : ses angles ne sont pas une courbure. Un trait tremblé autour d’une ligne droite s’en écarte par endroits
   : c’est une irrégularité locale, pas une courbure.'
-grandeur_physique_homonyme: 'courbure géométrique (inverse du rayon de courbure) : aucune région ne s’en déduit.'
+grandeur_physique_homonyme: 'courbure géométrique, inverse du rayon de courbure (voir la rubrique « mesure ») : aucune région ne s’en déduit.'
+mesure:
+  etat: methodes
+  synthese: 'La courbure géométrique d’une courbe plane est l’inverse de son rayon de courbure, en m⁻¹ [[iso_80000_3]]. C’est une mesure associée indirecte, calculée sur un tracé relevé : la courbure perçue d’un tracé ne change guère quand on l’agrandit, alors que 1/R diminue ; elle ne vaut pas pour un angle.'
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes:
+  - id: iso_80000_3
+    nom: courbure géométrique
+    grandeur: inverse du rayon du cercle osculateur, en un point d’une courbe plane
+    unite_ou_echelle: m⁻¹ (rayon de courbure en mètres)
+    references:
+    - iso_80000_3
+    proximite: indirecte
+    ecart: 'ISO 80000-3 définit la grandeur sans décrire de procédé de mesure : la valeur dépend de la façon dont le tracé est relevé et lissé ; la courbure perçue dépend aussi de la distance de vue et de l’observateur ; définie seulement pour une courbe au moins deux fois dérivable, donc ni pour un angle ni pour un tracé brisé ; au toucher, ne saisit ni le geste ni la partie de la main'
+    conditions: tracé relevé (coordonnées) d’un bord ou d’une coupe de surface ; courbe plane lissée
+    statut_lecture: 'lu en partie : résumé public de l’ISO et extrait public (3-1.12, 3-2)'
 modalites:
 - vision
 - toucher
@@ -82,6 +98,15 @@ references:
   verifie_sur: métadonnées Crossref et résumé PubMed (PMID 9401457)
   reprend: la dépendance du jugement à la longueur du tronçon touché, qui appuie le jugement local (T30) et la modalité toucher
   ne_reprend_pas: les seuils mesurés et le modèle d'inclinaison de surface
+- id: iso_80000_3
+  citation: 'ISO 80000-3:2019. Quantities and units — Part 3: Space and time. Genève : ISO.'
+  doi_ou_url: https://www.iso.org/standard/64974.html
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-16'
+  verifie_sur: 'page de l’ISO lue le 2026-10-16 (noms, symboles, définitions et unités des grandeurs d’espace et de temps ; confirmée en 2023, un amendement de 2025) ; extrait public (aperçu iTeh) lu le 2026-10-16 : rayon de courbure (3-1.12, rayon du cercle osculateur d’une courbe plane, défini pour les courbes au moins deux fois continûment dérivables, en mètres) et courbure (3-2, inverse du rayon de courbure, en m⁻¹) ; texte payant non lu'
+  reprend: rien (mesure associée, rubrique « mesure »)
+  ne_reprend_pas: les valeurs de longueur ou de courbure comme bornes de régions
 etat_de_l_art: 'La courbure est étudiée en psychophysique (la mesure de ce que l’on perçoit), à la vue comme au toucher. Pont, Kappers et Koenderink (1997) [[pont1997]] montrent qu’au toucher, distinguer
   deux courbures dépend surtout de la longueur de contact, ce qui va dans le sens d’un jugement local, sur un tronçon déclaré (T30). Aucune source trouvée ne propose des régions perçues de courbure. Détail
   : docs/bibliographie-par-type.md#groupe-forme.'

@@ -30,9 +30,9 @@ mesure:
     unite_ou_echelle: 'échelles Shore A (dureté normale), D (caoutchoucs durs), AO (caoutchoucs mous et alvéolaires), AM (pièces minces) ; ASTM D2240 décrit douze types de duromètres, dont OO'
     references: [iso48_4, astm_d2240]
     proximite: proche
-    ecart: 'mesure la matière d’un échantillon plan d’épaisseur donnée, avec une pointe et une force fixées, pas l’objet entier à l’endroit pressé ; ne saisit ni la force variable du doigt, ni sa surface de contact, ni l’épaisseur ou le creux de l’objet (un ballon gonflé, une pile de papier), ni l’observateur ; chaque échelle ne couvre qu’une partie des matières (caoutchoucs, élastomères, mousses, gels, quelques plastiques), ni la pierre ni le métal ; ASTM D2240 le dit lui-même : « No simple relationship exists between indentation hardness determined by this test method and any fundamental property of the material tested » (§ 4.1)'
+    ecart: 'mesure la matière d’un échantillon plan d’épaisseur donnée, avec une pointe et une force fixées, pas l’objet entier à l’endroit pressé ; ne saisit ni la force variable du doigt, ni sa surface de contact, ni l’épaisseur ou le creux de l’objet (un ballon gonflé, une pile de papier), ni l’observateur ; chaque échelle ne couvre qu’une partie des matières (caoutchoucs, élastomères, mousses, gels, quelques plastiques), ni la pierre ni le métal ; ASTM D2240 le dit lui-même : « No simple relationship exists between indentation hardness determined by this test method and any fundamental property of the material tested » (section 4.1)'
     conditions: échantillon de caoutchouc ou d’élastomère, plan, d’épaisseur suffisante ; force et forme de la pointe fixées par l’échelle ; température de l’essai
-    statut_lecture: 'résumé public lu (ISO 48-4 : page de l’ISO ; ASTM D2240 : page de l’éditeur, Scope § 1.1–1.2 et § 4.1)'
+    statut_lecture: 'résumé public lu (ISO 48-4 : page de l’ISO ; ASTM D2240 : page de l’éditeur, Scope sections 1.1 et 1.2 et section 4.1)'
   - id: iso48_2
     nom: dureté internationale du caoutchouc (IRHD)
     grandeur: enfoncement d’une bille sous une force donnée
@@ -172,7 +172,7 @@ references:
   role: contraste
   statut_verification: vérifiée sur résumé ou source secondaire
   verifie_le: '2026-10-16'
-  verifie_sur: 'page de l’éditeur, Scope § 1.1–1.2 et Significance and Use § 4.1 lus (douze types de duromètres, dont A, D, O et OO ; élastomères, matériaux alvéolaires, gels, quelques plastiques ; non équivalente à d’autres méthodes) ; texte payant non lu'
+  verifie_sur: 'page de l’éditeur, Scope sections 1.1 et 1.2 et Significance and Use section 4.1 lus (douze types de duromètres, dont A, D, O et OO ; élastomères, matériaux alvéolaires, gels, quelques plastiques ; non équivalente à d’autres méthodes) ; texte payant non lu'
   reprend: rien (mesure associée, rubrique « mesure »)
   ne_reprend_pas: les valeurs Shore comme bornes de régions
 - id: iso48_2
@@ -181,7 +181,7 @@ references:
   role: contraste
   statut_verification: vérifiée sur résumé ou source secondaire
   verifie_le: '2026-10-16'
-  verifie_sur: 'page de l’ISO (résumé, lu via l’index de recherche le 2026-10-16) : quatre méthodes sur surfaces planes (N, H, L, M), quatre de dureté apparente sur surfaces courbes, de 10 à 100 IRHD ; texte payant non lu'
+  verifie_sur: 'page de l’ISO lue le 2026-10-16 (résumé) : quatre méthodes sur surfaces planes (N, H, L, M), quatre de dureté apparente sur surfaces courbes, de 10 à 100 IRHD ; texte payant non lu'
   reprend: rien (mesure associée, rubrique « mesure »)
   ne_reprend_pas: les degrés IRHD comme bornes de régions
 - id: iso2439
@@ -199,7 +199,7 @@ references:
   role: contraste
   statut_verification: vérifiée sur résumé ou source secondaire
   verifie_le: '2026-10-16'
-  verifie_sur: 'page de l’ISO (résumé, lu via l’index de recherche le 2026-10-16) : matériaux métalliques, métaux durs et revêtements inorganiques ; mesure des diagonales de l’empreinte ; texte payant non lu'
+  verifie_sur: 'page de l’ISO lue le 2026-10-16 (résumé) : matériaux métalliques, métaux durs et revêtements inorganiques ; mesure des diagonales de l’empreinte ; texte payant non lu'
   reprend: rien (méthode non retenue)
   ne_reprend_pas: la dureté Vickers
 - id: nps_mohs
@@ -235,7 +235,7 @@ enonces_testables:
   epreuve: null
 cq_couvertes: CQ1, CQ2
 statut: candidat
-statut_note: 'en préparation (série 54, 2026-10-16) : fiche rédigée à partir du ticket 4, sans exemplaire ; tous les champs rédigés sont à relire'
+statut_note: 'en préparation (2026-10-16) : fiche rédigée à partir du ticket 4, sans exemplaire ; tous les champs rédigés sont à relire'
 statut_epistemique: non éprouvé
 introduit_en: '2.8'
 modifie_en: []

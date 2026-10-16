@@ -20,6 +20,31 @@ définition: Degré auquel on a l’impression de voir dans l’épaisseur d’u
 question_attentionnelle: Le regard s’arrête-t-il à la surface de cette matière, ou paraît-il entrer un peu, ou loin, dans son épaisseur ?
 contre_exemple: 'Une vitre propre est transparente, mais on regarde à travers, vers ce qui est derrière : on ne voit pas d’épaisseur dans la vitre elle-même ; c’est ce qu’on voit à travers elle (transparence).
   Un paysage peint qui s’étage en plans relève de l’étagement en plans, pas d’une profondeur dans la matière.'
+mesure:
+  etat: methodes
+  synthese: 'En synthèse d’image, la diffusion de la lumière sous la surface se décrit par des propriétés optiques de la matière (coefficients de diffusion et d’absorption), qu’une technique de recherche
+    mesure à partir d’images [[jensen2001]]. C’est une mesure associée indirecte : elle sert à prédire l’aspect, pas à dire jusqu’où le regard paraît entrer ; elle n’est pas normalisée, et ne saisit ni
+    l’observateur, ni l’éclairage de l’épisode, ni la distance.'
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes:
+  - id: jensen2001
+    nom: propriétés optiques de diffusion sous la surface (mesure par image)
+    grandeur: coefficients de diffusion et d’absorption d’une matière translucide, estimés à partir d’images de la matière éclairée en un point
+    unite_ou_echelle: coefficients par unité de longueur (paramètres du modèle)
+    references:
+    - jensen2001
+    proximite: indirecte
+    ecart: 'technique de recherche, non normalisée, faite pour la synthèse d’image : elle prédit l’aspect d’une matière, pas l’impression de voir dans son épaisseur ; ne saisit ni l’observateur, ni l’éclairage
+      de l’épisode, ni la distance'
+    conditions: échantillon de matière éclairé en un point, images calibrées ; modèle de diffusion choisi
+    statut_lecture: résumé lu (Jensen et al. 2001, Crossref et OpenAlex)
+  non_retenues:
+  - nom: trouble et transmittance d’une plaque (ASTM D1003)
+    references:
+    - astm_d1003
+    raison: mesure ce qui traverse une plaque mince, pas la lumière qui entre et ressort par la même face ; la matière qu’on regarde ici est souvent épaisse ou opaque à la transmission
+    statut_lecture: 'lu en partie : page de l’éditeur, Scope section 1.1 et sections 4.1 à 4.3'
 modalites:
 - vision
 mode_de_presentation: échantillon
@@ -92,6 +117,26 @@ references:
   verifie_sur: métadonnées Crossref et résumé (OpenAlex)
   reprend: l’idée que la vue reconnaît les matériaux à leur aspect (des « modèles d’apparence »), sans retrouver leurs propriétés physiques
   ne_reprend_pas: sa théorie
+- id: astm_d1003
+  citation: 'ASTM D1003-21. Standard Test Method for Haze and Luminous Transmittance of Transparent Plastics. West Conshohocken : ASTM International.'
+  doi_ou_url: https://store.astm.org/d1003-21.html
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: 'page de l''éditeur (domaine d''application, usage : mesure du trouble et de la transmittance lumineuse) ; texte payant non lu'
+  reprend: rien (mesure associée, rubrique « mesure »)
+  ne_reprend_pas: les valeurs de trouble et de transmittance comme bornes de régions
+- id: jensen2001
+  citation: Jensen, H. W., Marschner, S. R., Levoy, M. & Hanrahan, P. (2001). A practical model for subsurface light transport. In Proceedings of the 28th Annual Conference on Computer Graphics and Interactive
+    Techniques (SIGGRAPH 2001), ACM, 511–518.
+  doi_ou_url: https://doi.org/10.1145/383259.383319
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-16'
+  verifie_sur: 'métadonnées Crossref et résumé (OpenAlex) lus le 2026-10-16 : modèle de transport de la lumière sous la surface de matières translucides (diffusion simple et approximation dipolaire de la
+    diffusion multiple) ; technique de mesure rapide, par image, des propriétés optiques de matières (lait, marbre, peau), validée en comparant prédictions et mesures ; texte intégral non lu'
+  reprend: rien (mesure associée, rubrique « mesure »)
+  ne_reprend_pas: le modèle de rendu
 etat_de_l_art: 'Fleming et Bülthoff (2005) [[fleming_bulthoff2005]] décrivent la lumière qui entre dans une matière translucide, s’y diffuse et ressort, et l’aspect doux qui en résulte ; Fleming (2014)
   [[fleming2014]] en fait un cas de la perception des matériaux. Aucune source trouvée ne nomme une qualité perçue de la profondeur à laquelle le regard paraît entrer dans la matière ; la distinction entre l’étagement en plans et la profondeur dans la matière
   est décidée (C4, deux types). Détail : docs/bibliographie-par-type.md#groupe-matiere.'
@@ -201,17 +246,17 @@ relecture_explicative:
     apres: 'Une vitre propre est transparente, mais on regarde à travers, vers ce qui est derrière : on ne voit pas d’épaisseur dans la vitre elle-même ; c’est ce qu’on voit à travers elle (transparence).
       Un paysage peint qui s’étage en plans relève de l’étagement en plans, pas d’une profondeur dans la matière.'
     raison: 'T28 tranché par l’éditeur du projet le 2026-10-11 : label canonique de ppp:translucency « transparence » (« vue à travers » en label alternatif) ; seul le nom du type change'
-    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+    remarque: re-confirmé en relecture explicative (2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
   - champ: identite
     date: '2026-10-11'
     avant: Impression de voir dans l’épaisseur d’une matière, pas ce qu’on voit à travers elle (vue à travers), pas l’étagement de plans d’une scène (étagement en plans).
     apres: Impression de voir dans l’épaisseur d’une matière, pas ce qu’on voit à travers elle (transparence), pas l’étagement de plans d’une scène (étagement en plans).
     raison: 'T28 tranché par l’éditeur du projet le 2026-10-11 : label canonique de ppp:translucency « transparence » (« vue à travers » en label alternatif) ; seul le nom du type change'
-    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+    remarque: re-confirmé en relecture explicative (2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
   - champ: note_conditions
     date: '2026-10-11'
     avant: 'l’impression de voir dans la matière dépend de la lumière et de l’angle de vue ; sur photo, lumière et angle inconnus : « non tranché »'
     apres: 'l’impression de voir dans la matière dépend de la lumière et de l’angle de vue ; sur une photo dont la lumière et l’angle de prise de vue sont inconnus : « non tranché » (spec §9.7 H, règle
       4 ; A5)'
     raison: formule précisée et renvoi ajouté (seconde relecture explicative)
-    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+    remarque: re-confirmé en relecture explicative (2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)

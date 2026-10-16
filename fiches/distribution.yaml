@@ -17,6 +17,25 @@ facettes:
 définition: Manière dont des éléments qu’on distingue déjà se répartissent dans un ensemble, du groupement en paquets à l’espacement régulier.
 question_attentionnelle: Les éléments sont-ils groupés en paquets, répartis de façon aléatoire (sans ordre apparent), ou régulièrement espacés ?
 contre_exemple: Un élément unique n’a pas de distribution (non applicable). Le nombre d’éléments relève de la densité.
+mesure:
+  etat: methodes
+  synthese: 'En écologie, la répartition d’individus dans un espace se mesure par la distance de chacun à son plus proche voisin, rapportée à celle qu’on attendrait d’une répartition au hasard [[clark_evans1954]]
+    [[krebs_ch6]]. C’est une mesure associée indirecte : elle suppose les éléments déjà repérés et leurs positions relevées, et ne saisit ni l’échelle à laquelle on regarde, ni la distance de vue, ni l’observateur.'
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes:
+  - id: clark_evans1954
+    nom: distance au plus proche voisin
+    grandeur: distances entre chaque élément et l’élément le plus proche, comparées à une répartition au hasard de même densité
+    unite_ou_echelle: rapport sans dimension (indice du plus proche voisin)
+    references:
+    - clark_evans1954
+    - krebs_ch6
+    proximite: indirecte
+    ecart: suppose que les éléments sont déjà repérés et leurs positions relevées, ce que fait l’observateur ; le résultat dépend de la zone retenue et de ses bords ; ne saisit ni l’échelle à laquelle on
+      regarde (des paquets vus de loin peuvent paraître réguliers), ni la distance de vue, ni l’observateur
+    conditions: positions des éléments relevées dans une zone délimitée ; éléments assimilés à des points
+    statut_lecture: via Krebs, Ecological Methodology, chap. 6 (version en ligne de 2017, lu en partie) ; article original non lu (titre et métadonnées Crossref seulement)
 modalites:
 - vision
 mode_de_presentation: image
@@ -76,9 +95,8 @@ references:
   statut_verification: vérifiée sur résumé ou source secondaire
   verifie_le: '2026-10-10'
   verifie_sur: métadonnées Crossref (titre, revue, pages) ; aucun résumé (Crossref, OpenAlex, 2026-10-10) ; texte non lu
-  reprend: 'le titre seulement : la distance au plus proche voisin comme mesure de la répartition ; PPP s''en sert comme analogie pour l''ordre de ses régions (sens_croissant), sans mesure ; que l''article
-    distingue le groupé, l''aléatoire et le régulier n''est pas vérifié (texte non lu)'
-  ne_reprend_pas: 'l''indice du plus proche voisin : aucune mesure ; le contenu de l''article (non lu)'
+  reprend: 'le titre : la distance au plus proche voisin comme mesure de la répartition, citée comme mesure associée indirecte dans la rubrique « mesure » ; PPP s’en sert aussi comme analogie pour l’ordre de ses régions (sens_croissant)'
+  ne_reprend_pas: 'l’indice comme borne de région ; le contenu de l’article (non lu)'
 - id: wagemans2012
   citation: 'Wagemans, J., Elder, J. H., Kubovy, M., Palmer, S. E., Peterson, M. A., Singh, M. & von der Heydt, R. (2012). A century of Gestalt psychology in visual perception: I. Perceptual grouping and
     figure–ground organization. Psychological Bulletin, 138(6), 1172–1217.'
@@ -90,6 +108,17 @@ references:
     continuité, fermeture, symétrie, parallélisme) et nouveaux ; recherches actuelles sur le groupement et l’organisation figure-fond ; texte intégral non lu'
   reprend: le groupement par proximité comme base empirique d'une qualité d'organisation
   ne_reprend_pas: le bilan des mécanismes
+- id: krebs_ch6
+  citation: 'Krebs, C. J. (1999). Ecological Methodology, 2e éd. Menlo Park : Benjamin/Cummings, chap. 6 « Spatial Pattern and Indices of Dispersion », p. 191 et suiv. Lu dans la version révisée du chapitre pour la 3e édition en préparation (PDF de l’auteur, 2017) ; édition imprimée non consultée.'
+  doi_ou_url: https://www.zoology.ubc.ca/~krebs/downloads/krebs_chapter_06_2017.pdf
+  role: contraste
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-10-16'
+  verifie_sur: 'chapitre lu en partie le 2026-10-16 (PDF de l’auteur) : présentation de la méthode de Clark et Evans (1954) : distance de chaque individu à son plus proche voisin sur une carte complète
+    ; distance attendue pour une répartition au hasard de même densité ; indice d’agrégation R, rapport de la distance moyenne observée à la distance attendue, plus petit pour une répartition en paquets,
+    plus grand pour une répartition régulière ; effet des bords de la zone d’étude'
+  reprend: 'rien : la description de l’indice de Clark et Evans, citée comme source secondaire dans la rubrique « mesure »'
+  ne_reprend_pas: les valeurs de l’indice et le test de signification comme bornes de régions
 etat_de_l_art: 'Clark et Evans (1954) [[clark_evans1954]] proposent, d''après le titre de leur article, la distance au plus proche voisin comme mesure de la répartition des individus d''une population (texte
   non lu) ; PPP ne reprend aucune mesure, et ses régions (groupé, aléatoire, régulier) sont des repères perçus, pas tirés de l''article. Wagemans et al. (2012) [[wagemans2012]] font le bilan d''un siècle
   de recherches sur le groupement perceptif, dont le groupement par proximité (résumé lu). Détail : docs/bibliographie-par-type.md#groupe-organisation.'

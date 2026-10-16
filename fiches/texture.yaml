@@ -20,8 +20,34 @@ question_attentionnelle: À la vue ou sous la main, la surface paraît-elle liss
 contre_exemple: 'Un stratifié imprimé « bois » montre des veines, mais la main n’y sent aucun relief : c’est un motif de teinte et de clarté, et la texture est lisse. Une tôle gaufrée a de gros reliefs
   tous pareils : sa texture est grosse, sans irrégularité locale. Une page de journal en petits caractères compte beaucoup d’éléments, mais son papier peut être lisse : le nombre d’éléments relève de la
   densité, pas de la texture.'
-grandeur_physique_homonyme: 'rugosité de surface mesurée (profilométrie), granulométrie, et « texture » au sens de la science des matériaux (orientation cristalline) ou des sols : aucune région ne s’en
-  déduit.'
+grandeur_physique_homonyme: '« texture » désigne aussi, en science des matériaux, l’orientation cristalline et, en science des sols, la répartition des grains par taille (granulométrie), comme « grain », label alternatif : aucune région ne s’en déduit. La rugosité de surface mesurée relève de la rubrique « mesure ».'
+mesure:
+  etat: methodes
+  synthese: 'La métrologie des surfaces mesure la rugosité au profilomètre (paramètres de profil, ISO 21920-2, qui remplace ISO 4287) ou sur une surface (paramètres surfaciques, ISO 25178-2). Ces mesures associées portent sur la hauteur et l’espacement des reliefs, un aspect proche de ce type (de façon indirecte pour Ra, hauteur relevée le long d’une ligne) ; elles se font sur un petit échantillon, à une échelle souvent bien plus fine que celle qu’on voit ou qu’on sent, et ne disent pas quelle taille de relief perçoit un observateur à une distance et sous un éclairage donnés.'
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes:
+  - id: iso_21920_2
+    nom: rugosité de profil (Ra et paramètres voisins)
+    grandeur: écarts de hauteur d’un profil relevé le long d’une ligne de la surface
+    unite_ou_echelle: micromètres (hauteur moyenne arithmétique du profil, Ra, et autres paramètres de profil)
+    references:
+    - iso_21920_2
+    proximite: indirecte
+    ecart: 'mesure le relief à l’échelle du micromètre, sur une petite zone et après des filtrages choisis par l’opérateur, alors que les reliefs qu’on voit ou qu’on sent se comptent souvent en millimètres ; une hauteur le long d’une ligne, qui ne dit pas la taille des reliefs dans le plan ; ne saisit ni la distance de vue, ni l’éclairage (une lumière rasante révèle les reliefs), ni l’observateur, ni, au toucher, la force et le geste ; ISO 21920-2 a remplacé ISO 4287 en 2021, et les valeurs ne se comparent pas toujours d’une norme à l’autre'
+    conditions: profil relevé au profilomètre sur un échantillon ; longueur d’évaluation et filtres fixés par la norme
+    statut_lecture: résumé public lu (page de l’ISO, statut et cycle de vie)
+  - id: iso_25178_2
+    nom: rugosité surfacique (Sa, longueur d’autocorrélation)
+    grandeur: hauteur moyenne des écarts sur une surface relevée, et longueur sur laquelle le relief se répète
+    unite_ou_echelle: 'micromètres (hauteur moyenne arithmétique, Sa ; longueur d’autocorrélation, Sal)'
+    references:
+    - iso_25178_2
+    - npl_gpg116
+    proximite: proche
+    ecart: 'mesure le relief à l’échelle du micromètre, sur une petite zone et après des filtrages choisis par l’opérateur, alors que les reliefs qu’on voit ou qu’on sent se comptent souvent en millimètres ; Sa est une hauteur, Sal un espacement ; ne saisit ni la distance de vue, ni l’éclairage (une lumière rasante révèle les reliefs), ni l’observateur, ni, au toucher, la force et le geste'
+    conditions: surface relevée par un instrument surfacique (optique ou à contact) ; zone d’évaluation et filtres fixés par l’opérateur et la norme
+    statut_lecture: 'résumé public lu (page de l’ISO ; sommaire de l’extrait public) ; symboles d’après NPL, Measurement Good Practice Guide No. 116 (2010), table 1, fondé sur le projet ISO 25178-2 ; noms confirmés par le sommaire public de l’édition 2021'
 modalites:
 - vision
 - toucher
@@ -136,6 +162,36 @@ references:
     de photos aériennes et d’images satellite ; texte intégral non lu'
   reprend: rien
   ne_reprend_pas: les mesures de cooccurrence (GLCM), qui classent des images sans viser la qualité perçue
+- id: iso_21920_2
+  citation: 'ISO 21920-2:2021. Geometrical product specifications (GPS) — Surface texture: Profile — Part 2: Terms, definitions and surface texture parameters. Genève : ISO.'
+  doi_ou_url: https://www.iso.org/standard/72226.html
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-16'
+  verifie_sur: 'page de l’ISO lue le 2026-10-16 : paramètres d’état de surface par méthodes de profil ; publiée en 2021-12, remplace ISO 4287:1997 (retirée le 2021-12-20, avec ses amendement et rectificatifs)
+    ainsi qu’ISO 13565-2 et -3 ; statut au 2026-10-16 : « à réviser » (90.92, 2025-10-07), une ISO/CD 21920-2 en préparation ; texte payant non lu'
+  reprend: rien (mesure associée, rubrique « mesure »)
+  ne_reprend_pas: les valeurs de rugosité comme bornes de régions
+- id: iso_25178_2
+  citation: 'ISO 25178-2:2021. Geometrical product specifications (GPS) — Surface texture: Areal — Part 2: Terms, definitions and surface texture parameters. Genève : ISO.'
+  doi_ou_url: https://www.iso.org/standard/74591.html
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-16'
+  verifie_sur: 'page de l’ISO lue le 2026-10-16 (paramètres d’état de surface par méthodes surfaciques ; édition 2, 2021-12) ; sommaire de l’extrait public lu (hauteur moyenne arithmétique, section 4.2.8 ; longueur d’autocorrélation, section 4.3.2 ; rapport d’aspect de la texture, section 4.3.3 ; direction de la texture, section 4.3.4) ; symboles d’après NPL, Measurement Good Practice Guide No. 116 (2010), table 1, fondé sur le projet ISO 25178-2 ; noms confirmés par le sommaire public de l’édition 2021 ; texte payant non lu'
+  reprend: rien (mesure associée, rubrique « mesure »)
+  ne_reprend_pas: les valeurs des paramètres comme bornes de régions
+- id: npl_gpg116
+  citation: 'Petzing, J., Coupland, J. & Leach, R. K. (2010). The Measurement of Rough Surface Topography using Coherence Scanning Interferometry. Measurement Good Practice Guide No. 116. Teddington : National
+    Physical Laboratory.'
+  doi_ou_url: https://eprintspublications.npl.co.uk/4833/1/mgpg116.pdf
+  role: contraste
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-10-16'
+  verifie_sur: 'guide lu en partie le 2026-10-16 (PDF du NPL) : table 1, « The S parameter set » (Sa, hauteur moyenne arithmétique, µm ; Sal, longueur d’autocorrélation, µm ; Str, rapport d’aspect de la
+    texture ; Std, direction de la texture, degrés) ; le guide suit les projets de normes ISO 25178 alors en préparation'
+  reprend: 'rien : les symboles et noms des paramètres surfaciques, cités dans la rubrique « mesure »'
+  ne_reprend_pas: les valeurs des paramètres comme bornes de régions ; les procédés d’interférométrie
 etat_de_l_art: 'La perception de la texture est étudiée depuis les années 1970 en vision par ordinateur et en psychologie. Tamura, Mori et Yamawaki (1978) [[tamura1978]] ont proposé six mesures calculées
   sur une image, comparées à des jugements humains ; la *coarseness* (le caractère plus ou moins gros du grain) correspond à la taille des reliefs. Rao et Lohse (1996) [[rao_lohse1996]] et Bhushan, Rao
   et Lohse (1997) [[bhushan1997]] ont cherché les dimensions perçues et le lexique de la texture. Les mesures de Haralick et al. (1973) [[haralick1973]] servent à classer des images par calcul, sans viser

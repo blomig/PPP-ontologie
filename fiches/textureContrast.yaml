@@ -19,6 +19,24 @@ définition: Différence perçue de texture, c’est-à-dire de taille des relie
 question_attentionnelle: À la vue ou sous la main, la différence de relief entre ces deux surfaces est-elle faible (même relief, ou presque), modérée (une surface lisse et une à texture fine), évidente
   (une lisse et une moyenne, ou une fine et une grosse) ou maximale (une lisse et une grosse) ?
 contre_exemple: 'Deux carreaux également lisses, l’un blanc, l’autre noir, ont un contraste de texture faible : ce qui les distingue est un contraste de clarté.'
+mesure:
+  etat: methodes
+  synthese: 'La différence de texture entre deux surfaces peut se calculer comme l’écart entre leurs paramètres de rugosité surfacique (Sa, Sal) [[iso_25178_2]] : c’est une mesure associée indirecte, qui
+    hérite des limites décrites dans la fiche texture et ne saisit ni la distance de vue, ni l’éclairage, ni l’observateur.'
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes:
+  - id: iso_25178_2
+    nom: écart de rugosité surfacique entre deux surfaces
+    grandeur: différence entre les hauteurs moyennes (Sa) et entre les longueurs d’autocorrélation (Sal) mesurées sur chacune des deux surfaces
+    unite_ou_echelle: micromètres
+    references:
+    - iso_25178_2
+    - npl_gpg116
+    proximite: indirecte
+    ecart: 'compare deux valeurs mesurées au micromètre sur de petites zones, alors que les reliefs qu’on voit ou qu’on sent se comptent souvent en millimètres ; ne saisit ni la distance de vue, ni l’éclairage, ni l’observateur, ni, au toucher, la force et le geste'
+    conditions: surfaces relevées par un même instrument surfacique, avec les mêmes filtres
+    statut_lecture: résumé public lu (page de l’ISO ; sommaire de l’extrait public) ; symboles d’après NPL, Measurement Good Practice Guide No. 116 (2010), table 1
 modalites:
 - vision
 - toucher
@@ -87,6 +105,26 @@ references:
   verifie_sur: métadonnées Crossref et résumé IEEE Xplore ; deux sources secondaires (docs/etat-de-l-art.md §5 bis) ; texte intégral non lu
   reprend: l'idée de comparer deux textures dimension par dimension
   ne_reprend_pas: 'les mesures : aucune n''est reprise comme écart perçu'
+- id: iso_25178_2
+  citation: 'ISO 25178-2:2021. Geometrical product specifications (GPS) — Surface texture: Areal — Part 2: Terms, definitions and surface texture parameters. Genève : ISO.'
+  doi_ou_url: https://www.iso.org/standard/74591.html
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-16'
+  verifie_sur: 'page de l’ISO lue le 2026-10-16 (paramètres d’état de surface par méthodes surfaciques ; édition 2, 2021-12) ; sommaire de l’extrait public lu (hauteur moyenne arithmétique, section 4.2.8 ; longueur d’autocorrélation, section 4.3.2 ; rapport d’aspect de la texture, section 4.3.3 ; direction de la texture, section 4.3.4) ; symboles d’après NPL, Measurement Good Practice Guide No. 116 (2010), table 1, fondé sur le projet ISO 25178-2 ; noms confirmés par le sommaire public de l’édition 2021 ; texte payant non lu'
+  reprend: rien (mesure associée, rubrique « mesure »)
+  ne_reprend_pas: les valeurs des paramètres comme bornes de régions
+- id: npl_gpg116
+  citation: 'Petzing, J., Coupland, J. & Leach, R. K. (2010). The Measurement of Rough Surface Topography using Coherence Scanning Interferometry. Measurement Good Practice Guide No. 116. Teddington : National
+    Physical Laboratory.'
+  doi_ou_url: https://eprintspublications.npl.co.uk/4833/1/mgpg116.pdf
+  role: contraste
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-10-16'
+  verifie_sur: 'guide lu en partie le 2026-10-16 (PDF du NPL) : table 1, « The S parameter set » (Sa, hauteur moyenne arithmétique, µm ; Sal, longueur d’autocorrélation, µm ; Str, rapport d’aspect de la
+    texture ; Std, direction de la texture, degrés) ; le guide suit les projets de normes ISO 25178 alors en préparation'
+  reprend: 'rien : les symboles et noms des paramètres surfaciques, cités dans la rubrique « mesure »'
+  ne_reprend_pas: les valeurs des paramètres comme bornes de régions ; les procédés d’interférométrie
 etat_de_l_art: 'Les mesures de texture de Tamura, Mori et Yamawaki (1978) [[tamura1978]] permettent de comparer deux surfaces, mais elles ne définissent pas un contraste perçu entre elles. Aucune source
   trouvée ne propose une échelle perçue du contraste de texture entre deux parties d''un objet ; les labels des régions restent en position de travail (T3). Détail : docs/bibliographie-par-type.md#groupe-contrastes.'
 etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-contrastes
@@ -123,6 +161,7 @@ remplace_par: []
 statut_note: 'Position de travail : les régions de ce contraste se lisent avec celles de la texture (lisse, fine, moyenne, grosse), qui restent elles-mêmes en position de travail et peuvent encore changer.'
 a_relire:
 - statut_note
+- mesure
 remarque:
 - 'série 29 (2026-10-12, demande de la relecture explicative pour la publication bilingue) : label_en des régions weak, marked, strong : slight, evident, maximal (moderate inchangé ; clés inchangées), comme les labels FR faible, modéré, évident, maximal ; à relire ; validé en série 31'
 relecture_explicative:

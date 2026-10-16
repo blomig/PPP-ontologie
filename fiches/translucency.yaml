@@ -23,8 +23,37 @@ définition: 'Ce que la matière laisse voir de ce qui est derrière elle : rien
 question_attentionnelle: 'Peut-on voir à travers cette matière : pas du tout, seulement une lueur ou des formes floues, ou nettement ?'
 contre_exemple: 'Un verre teinté sombre reste transparent : on voit nettement à travers, même si tout paraît plus sombre ; ce sont sa clarté et sa teinte qui changent. Un miroir renvoie des images mais
   ne laisse rien voir à travers : il est opaque ; ce qu’il a de particulier, ce sont ses reflets nets (brillance de surface).'
-grandeur_physique_homonyme: 'transmittance lumineuse et trouble (haze) mesurés sur une plaque, par exemple selon ASTM D1003 (« Standard Test Method for Haze and Luminous Transmittance of Transparent Plastics
-  », ASTM International) ; indice de réfraction : aucune région ne s’en déduit.'
+grandeur_physique_homonyme: '« transparence » désigne aussi, en optique des matériaux, des propriétés mesurées sur une plaque, la transmittance lumineuse et le trouble (voir la rubrique « mesure ») : aucune région ne s’en déduit.'
+mesure:
+  etat: methodes
+  synthese: 'Des mesures associées existent pour des plaques de plastique transparent : le trouble (haze), dû à la lumière diffusée aux grands angles, et la transmittance lumineuse. ASTM D1003 relie le
+    trouble au voile qu’on voit en regardant des objets à travers la matière, ce qui en fait une mesure proche du haut de l’échelle ; ces méthodes ne couvrent que des matières peu diffusantes, en plaques
+    planes, et ne saisissent ni l’observateur, ni l’éclairage, ni la distance entre la matière et ce qui est derrière.'
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes:
+  - id: astm_d1003
+    nom: trouble (haze) et transmittance lumineuse
+    grandeur: part de la lumière transmise diffusée aux grands angles (trouble) et lumière transmise totale, au néphélomètre ou au spectrophotomètre
+    unite_ou_echelle: pourcentages de trouble et de transmittance lumineuse
+    references:
+    - astm_d1003
+    - iso_14782
+    proximite: proche
+    ecart: 'proche du voile qu’on voit à travers la matière (ASTM D1003 section 4.1), mais mesuré sur une plaque plane et peu diffusante : les matières très diffusantes relèvent d’une autre pratique (ASTM E2387), et le bas de l’échelle (« opaque », « translucide ») n’est pas couvert ; ne saisit ni l’observateur, ni l’éclairage, ni la distance entre la matière et l’objet vu derrière ; les deux normes ne sont pas équivalentes (ASTM D1003, note 2)'
+    conditions: éprouvette plane de plastique transparent et à peu près incolore ; faisceau, sphère et illuminant fixés par la norme
+    statut_lecture: 'lu en partie : ASTM D1003 : page de l’éditeur, Scope section 1.1 et Significance and Use sections 4.1 à 4.3 ; ISO 14782 : résumé public lu'
+  - id: iso_13468_1
+    nom: transmittance lumineuse totale
+    grandeur: lumière visible transmise par une plaque, toute direction confondue
+    unite_ou_echelle: pourcentage de transmittance lumineuse totale
+    references:
+    - iso_13468_1
+    proximite: indirecte
+    ecart: 'dit combien de lumière traverse, pas si l’on voit les formes de ce qui est derrière : une plaque très diffusante peut transmettre beaucoup de lumière sans laisser voir aucune forme ; ne saisit
+      ni l’observateur, ni l’éclairage, ni la distance'
+    conditions: plastique plan, transparent et à peu près incolore, d’épaisseur limitée ; photomètre à faisceau unique
+    statut_lecture: résumé public lu (ISO 13468-1)
 modalites:
 - vision
 mode_de_presentation: échantillon
@@ -112,8 +141,26 @@ references:
   statut_verification: vérifiée sur résumé ou source secondaire
   verifie_le: '2026-10-10'
   verifie_sur: 'page de l''éditeur (domaine d''application, usage : mesure du trouble et de la transmittance lumineuse) ; texte payant non lu'
-  reprend: rien
-  ne_reprend_pas: le trouble et la transmittance lumineuse mesurés (grandeur_physique_homonyme)
+  reprend: 'rien (mesure associée, rubrique « mesure »)'
+  ne_reprend_pas: 'les valeurs de trouble et de transmittance comme bornes de régions'
+- id: iso_13468_1
+  citation: 'ISO 13468-1:2019. Plastics — Determination of the total luminous transmittance of transparent materials — Part 1: Single-beam instrument. Genève : ISO.'
+  doi_ou_url: https://www.iso.org/standard/77312.html
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-16'
+  verifie_sur: 'page de l’ISO lue le 2026-10-16 (résumé) : transmittance lumineuse totale de plastiques plans, transparents et à peu près incolores, d’épaisseur limitée ; confirmée en 2024 ; texte payant non lu'
+  reprend: rien (mesure associée, rubrique « mesure »)
+  ne_reprend_pas: les valeurs de transmittance comme bornes de régions
+- id: iso_14782
+  citation: 'ISO 14782:2021. Plastics — Determination of haze for transparent materials. Genève : ISO.'
+  doi_ou_url: https://www.iso.org/standard/81840.html
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-16'
+  verifie_sur: 'page de l’ISO lue le 2026-10-16 (résumé ; confirmée en 2026) et extrait public (Scope, aperçu iTeh) : trouble, propriété optique due à la diffusion de la lumière aux grands angles, dans des plastiques transparents et à peu près incolores ; méthode limitée aux troubles faibles ; texte payant non lu'
+  reprend: rien (mesure associée, rubrique « mesure »)
+  ne_reprend_pas: les valeurs de trouble comme bornes de régions
 etat_de_l_art: 'La perception de la transparence a été modélisée par Metelli (1974) [[metelli1974]] pour des filtres minces ; Fleming et Bülthoff (2005) [[fleming_bulthoff2005]] montrent que les indices
   de ce modèle ne valent pas pour les objets translucides pleins ; Motoyoshi (2010) [[motoyoshi2010]] étudie les indices d’image qui distinguent translucide et transparent. La mesure de la lumière transmise
   (transmittance) et du trouble (ASTM D1003) [[astm_d1003]] est un homonyme. Détail : docs/bibliographie-par-type.md#groupe-matiere.'
@@ -157,7 +204,7 @@ modifie_en:
 remplace_par: []
 source_de_la_fiche: crash tests, partie 1 (spec 2.3, docs/questions-crash-tests.md C4) ; fiche préremplie le 2026-10-10 par l’équipe, champs en langage courant à valider par la relecture explicative
 manques:
-- 'strate : « formel » tient comme position de travail, avec une réserve (série 47 bis) : on juge en partie la netteté des formes vues à travers ; ce n’est pas l’objection du §0.3, car c’est un effet de la matière, pas le bord d’un autre porteur ; confirmé par l’éditeur du projet le 2026-10-14 (série 48 ; famille « matière », formel comme position de travail)'
+- 'strate : « formel » tient comme position de travail, avec une réserve : on juge en partie la netteté des formes vues à travers ; ce n’est pas le bord d’un autre porteur : c’est un effet de la matière ; confirmé par l’éditeur du projet le 2026-10-14 (famille « matière », formel comme position de travail)'
 - 'règle de porteur pour une couche mince sur un support opaque (C12) : écrite dans note_porteur au lot 2 (2026-10-14), position de travail, validée par la relecture explicative (lot 2 bis)'
 - 'exemplaires (lot 2, 2026-10-14) : 2304 opaque, 2302 translucide, 2303 transparent ; relus et validés par la relecture explicative (lot 3 bis, 2026-10-14) ; 2301 retirée (planche vue de dessus, lot 2 bis)'
 bloque_par: []
@@ -199,10 +246,10 @@ relecture_explicative:
     raison: 'T28 tranché par l’éditeur du projet le 2026-10-11 : label canonique de ppp:translucency « transparence » (« vue à travers » en label alternatif) ; seul le nom du type change ; avertissement
       réécrit : la parenté « transparence / transparent » y est traitée comme « symétrie / symétrique » ; relecture explicative (2026-10-11) : réécrit sans jargon (relecture explicative) : la parenté transparence
       / transparent reste dite ; la règle A2 n’est plus citée dans le texte'
-    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+    remarque: re-confirmé en relecture explicative (2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
   - champ: note_conditions
     date: '2026-10-11'
     avant: la vue à travers se juge à contre-jour ou devant un fond ; valeur `backlit` de la facette lumière proposée en spec 2.3.1 (T23)
     apres: la transparence se juge à contre-jour ou devant un fond ; valeur `backlit` de la facette lumière proposée en spec 2.3.1 (T23)
     raison: 'T28 tranché par l’éditeur du projet le 2026-10-11 : label canonique de ppp:translucency « transparence » (« vue à travers » en label alternatif) ; seul le nom du type change'
-    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+    remarque: re-confirmé en relecture explicative (2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)

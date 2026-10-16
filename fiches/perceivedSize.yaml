@@ -18,7 +18,24 @@ question_attentionnelle: À côté de mon corps, cet élément paraît-il plus p
   ou dépasser le corps (comme une maison) ?
 contre_exemple: '« La tour paraît bien plus haute que la maison voisine » compare deux éléments : c’est un contraste d’échelle, pas la taille perçue de la tour seule. Sa hauteur en mètres est une mesure,
   pas la taille perçue.'
-grandeur_physique_homonyme: 'dimensions mesurées ; angle visuel : aucune région ne s’en déduit.'
+grandeur_physique_homonyme: '« taille » désigne aussi la dimension mesurée d’un objet, en mètres (voir la rubrique « mesure »), et l’angle visuel qu’il occupe : aucune région ne s’en déduit.'
+mesure:
+  etat: methodes
+  synthese: 'Les dimensions d’un objet se mesurent en mètres [[iso_80000_3]] : c’est une mesure associée indirecte, puisque les régions rapportent l’objet au corps de celui qui regarde, que la règle ignore.
+    La taille perçue ne se lit pas sur la règle : elle dépend aussi de la distance, du contexte et de l’observateur.'
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes:
+  - id: iso_80000_3
+    nom: dimensions de l’objet
+    grandeur: longueur, largeur, hauteur de l’objet
+    unite_ou_echelle: mètres
+    references:
+    - iso_80000_3
+    proximite: indirecte
+    ecart: 'la règle donne la dimension de l’objet, pas ce qu’il paraît mesurer : la distance de vue, ce qui l’entoure, une photographie sans repère d’échelle et l’observateur changent la taille perçue ; les régions sont rapportées au corps de l’observateur, ce que la mesure ignore ; ISO 80000-3 définit la grandeur sans décrire de procédé de mesure'
+    conditions: objet accessible et mesurable ; dimension choisie (la plus grande, en général)
+    statut_lecture: résumé public lu (ISO 80000-3)
 modalites:
 - vision
 mode_de_presentation: image
@@ -91,6 +108,15 @@ references:
   ne_reprend_pas: la loi logarithmique et les tâches de dessin et d'imagerie
   note_verification: 'série 6, partie 7 : le résumé parle de la taille à laquelle on dessine, imagine et préfère voir un objet (« taille canonique »), pas du jugement de taille ; « on juge la taille d’un
     objet d’après sa taille supposée dans le monde » allait plus loin que le résumé ; reprend réduit à ce que le résumé soutient'
+- id: iso_80000_3
+  citation: 'ISO 80000-3:2019. Quantities and units — Part 3: Space and time. Genève : ISO.'
+  doi_ou_url: https://www.iso.org/standard/64974.html
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-16'
+  verifie_sur: 'page de l’ISO lue le 2026-10-16 (noms, symboles, définitions et unités des grandeurs d’espace et de temps ; confirmée en 2023, un amendement de 2025) ; extrait public (aperçu iTeh) lu le 2026-10-16 : rayon de courbure (3-1.12, rayon du cercle osculateur d’une courbe plane, défini pour les courbes au moins deux fois continûment dérivables, en mètres) et courbure (3-2, inverse du rayon de courbure, en m⁻¹) ; texte payant non lu'
+  reprend: rien (mesure associée, rubrique « mesure »)
+  ne_reprend_pas: les valeurs de longueur ou de courbure comme bornes de régions
 etat_de_l_art: 'Konkle et Oliva (2011) [[konkle_oliva2011]] montrent que les objets réels ont une taille vue « canonique » (celle à laquelle on tend à les dessiner ou à les imaginer), proportionnelle au
   logarithme de leur taille supposée dans le monde : elle croît avec cette taille, mais de moins en moins vite. Cela appuie une taille perçue rapportée à un repère (ici le corps de l’observateur, T8), plutôt
   qu’à la place que l’objet occupe dans le champ de vision (l’angle visuel). Détail : docs/bibliographie-par-type.md#groupe-forme.'
@@ -109,8 +135,7 @@ transfert: objet conçu oui (une tasse, une chaise) | tableau oui (taille des fi
 enonces_testables:
 - id: E1
   nature: existence
-  enonce: sur 6 à 10 objets publics, accord inter-observateurs à une région près (échelle à quatre régions depuis la série 17, spec §9.7 C), au-dessus du seuil fixé avant l’épreuve, à régime égal sur les
-    facettes critiques (spec §9.7 H)
+  enonce: 'sur 6 à 10 objets publics, accord inter-observateurs à une région près (échelle à quatre régions), au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques (spec §9.7 H)'
   statut_epistemique: non éprouvé
   epreuve: null
 - id: E4

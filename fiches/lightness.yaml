@@ -18,7 +18,39 @@ définition: Degré auquel une zone paraît claire ou sombre, indépendamment de
 question_attentionnelle: Cette zone paraît-elle très sombre, sombre, moyenne, claire ou très claire ?
 contre_exemple: '« Le texte noir se détache de la page blanche » parle de l’écart entre deux zones : c’est un contraste de clarté. La clarté se dit d’une seule zone (la page est très claire, le texte très
   sombre).'
-grandeur_physique_homonyme: 'luminance mesurée ; clarté L* (CIELAB) : aucune région ne s’en déduit.'
+grandeur_physique_homonyme: '« clarté » désigne aussi, en colorimétrie, la clarté L* calculée (CIE 1976 lightness), un corrélat approché de la clarté perçue (voir la rubrique « mesure ») : aucune région ne s’en déduit.'
+mesure:
+  etat: methodes
+  synthese: La colorimétrie donne des échelles de clarté calculées à partir de mesures instrumentales (L* de l’espace CIELAB) ou évaluées par comparaison visuelle à des échantillons ordonnés (valeur Munsell).
+    Elles visent un aspect proche de ce type, pour des surfaces opaques sous un éclairage et un observateur de référence ; elles ne tiennent pas compte de ce qui entoure la surface ni de l’éclairage réel
+    de l’épisode.
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes:
+  - id: cie015
+    nom: clarté L* (CIELAB)
+    grandeur: clarté calculée à partir de valeurs trichromatiques mesurées (spectrophotomètre ou colorimètre)
+    unite_ou_echelle: L*, 0 pour le noir, 100 pour le blanc de référence (définition de la CIE, e-ILV 17-23-076)
+    references:
+    - cie015
+    - cie_ilv_cielab
+    proximite: proche
+    ecart: valeur calculée pour un observateur et un illuminant de référence, sur un échantillon isolé ; la clarté perçue dépend aussi de l’entourage et de l’éclairage de l’épisode, que L* ne prend pas
+      en compte
+    conditions: géométries d’éclairage et d’observation, observateur et illuminant normalisés
+    statut_lecture: résumé public lu (CIE 015:2018) ; e-ILV lu (17-23-076)
+  - id: astm_d1535
+    nom: valeur Munsell (Munsell value)
+    grandeur: clarté évaluée par comparaison visuelle avec un atlas d’échantillons ordonnés ; la norme prévoit aussi la conversion depuis des données CIE
+    unite_ou_echelle: notation Munsell, composante valeur (de 0 à 10)
+    references:
+    - astm_d1535
+    - nist_munsell_value
+    proximite: proche
+    ecart: une notation fine par comparaison à un atlas, pour des objets opaques à la lumière du jour ; ne tient compte ni de l’entourage ni d’un autre éclairage que celui de la norme, et ne donne pas une
+      région
+    conditions: objets opaques (peintures), lumière du jour, comparaison à l’atlas
+    statut_lecture: 'lu en partie : page de l’éditeur, Scope section 1.1 (ASTM D1535) ; glossaire NIST lu (valeur de 0 à 10)'
 modalites:
 - vision
 mode_de_presentation: image
@@ -85,7 +117,7 @@ references:
   role: alimente
   statut_verification: vérifiée sur la source
   verifie_le: '2026-10-10'
-  verifie_sur: 'texte du Project Gutenberg n° 26054 lu pour le passage cité : « Color has three dimensions » (§ 8) : la teinte, la valeur (« the amount of light », la quantité de lumière) et le chroma (la
+  verifie_sur: 'texte du Project Gutenberg n° 26054 lu pour le passage cité : « Color has three dimensions » (paragraphe 8) : la teinte, la valeur (« the amount of light », la quantité de lumière) et le chroma (la
     pureté) ; texte non lu en entier'
   reprend: la clarté (valeur) comme dimension séparée de la teinte et du chroma
   ne_reprend_pas: l'échelle de valeur chiffrée
@@ -106,8 +138,8 @@ references:
   statut_verification: vérifiée sur résumé ou source secondaire
   verifie_le: '2026-10-10'
   verifie_sur: métadonnées et résumé Crossref (observateurs de référence, illuminants, coordonnées d'espace couleur, écarts de couleur) ; texte payant non lu
-  reprend: rien
-  ne_reprend_pas: tout son contenu (non lu) ; la clarté L*, cité dans grandeur_physique_homonyme, est vérifié sur le vocabulaire de la CIE (cie_ilv_cielab) ; aucune région ne s’en déduit
+  reprend: 'rien (mesure associée, rubrique « mesure » : coordonnées CIELAB et écarts de couleur)'
+  ne_reprend_pas: 'tout son contenu (non lu) ; aucune région ne se déduit d’une valeur calculée'
 - id: cie_ilv_cielab
   citation: 'CIE S 017:2020, ILV : International Lighting Vocabulary, 2e éd., entrée 17-23-076 « CIE 1976 L*a*b* colour space ». Vienne : CIE (accès libre en ligne, e-ILV).'
   doi_ou_url: https://cie.co.at/eilvterm/17-23-076
@@ -115,9 +147,27 @@ references:
   statut_verification: vérifiée sur la source
   verifie_le: '2026-10-10'
   verifie_sur: 'entrée lue en ligne le 2026-10-10 : espace couleur CIELAB, coordonnées L*, a*, b* ; note 1 : correspondants approchés de la clarté (L*, « CIE 1976 lightness »), du chroma (« CIE 1976 a,b
-    chroma ») et de la teinte (« CIE 1976 a,b hue angle », h_ab = arctan(b*/a*))'
-  reprend: 'rien : L* y est un correspondant approché, calculé, de la clarté ; il est cité dans grandeur_physique_homonyme comme grandeur mesurée homonyme'
-  ne_reprend_pas: l’espace CIELAB et ses formules ; aucune région ne s’en déduit
+    chroma ») et de la teinte (« CIE 1976 a,b hue angle », hab = arctan(b*/a*))'
+  reprend: 'rien : L*, le chroma et l’angle de teinte y sont des corrélats approchés, calculés ; cités dans la rubrique « mesure »'
+  ne_reprend_pas: 'l’espace CIELAB et ses formules ; aucune région ne s’en déduit'
+- id: astm_d1535
+  citation: ASTM D1535-14(2018). Standard Practice for Specifying Color by the Munsell System. ASTM International.
+  doi_ou_url: https://store.astm.org/d1535-14r18.html
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-16'
+  verifie_sur: 'page de l’éditeur, Scope, section 1.1, lu (notation fondée sur la teinte, la clarté et le chroma perçus ; objets opaques vus à la lumière du jour par un observateur à vision normale ; méthode visuelle, conversion depuis des données CIE prévue) ; texte payant non lu'
+  reprend: rien (mesure associée, rubrique « mesure »)
+  ne_reprend_pas: la notation Munsell comme bornes de régions
+- id: nist_munsell_value
+  citation: NIST, OSAC Lexicon, « Value (V) », d’après ANSI/ASTM E1732, Standard Terminology Relating to Forensic Science (2025).
+  doi_ou_url: https://www.nist.gov/glossary-term/41071
+  role: contraste
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-10-16'
+  verifie_sur: 'page lue le 2026-10-16 : « the lightness of a color, from 0 (pure black) to 10 (pure white) in the Munsell color system »'
+  reprend: rien (étendue de la valeur Munsell, rubrique « mesure »)
+  ne_reprend_pas: la valeur Munsell comme bornes de régions
 etat_de_l_art: 'La clarté correspond à la valeur du système de Munsell (1905) [[munsell1905]], « la quantité de lumière » d''une couleur selon lui, et la colorimétrie de la CIE [[cie015]] en calcule un
   correspondant approché, L* (vocabulaire international de l''éclairage [[cie_ilv_cielab]]). Gilchrist (2006) [[gilchrist2006]] consacre un livre à la perception du clair et du sombre ; son résumé rappelle
   que la lumière renvoyée par une surface ne dit pas, à elle seule, si elle est blanche, grise ou noire, puisqu''elle dépend de l''éclairage (livre non lu). PPP ne reprend aucune échelle mesurée : les régions

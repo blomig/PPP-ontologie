@@ -22,7 +22,50 @@ question_attentionnelle: Si l’on ne regarde que le clair et le sombre (comme s
   sur un gris clair), évidente (un gris foncé sur un fond clair) ou maximale (du noir sur du blanc) ?
 contre_exemple: 'Un rouge et un vert qui donneraient le même gris sur une photo en noir et blanc diffèrent fortement de teinte, mais leur contraste de clarté est faible. Une surface claire unie, prise seule,
   a une clarté élevée : ce n’est pas un contraste, il faut une seconde zone.'
-grandeur_physique_homonyme: 'contraste de luminance mesuré (Weber, Michelson) : aucune région ne s’en déduit.'
+grandeur_physique_homonyme: '« contraste » désigne aussi le contraste de luminance, calculé à partir des luminances de deux plages ou, localement, sur une image (voir la rubrique « mesure ») : aucune région ne s’en déduit.'
+mesure:
+  etat: methodes
+  synthese: Une différence de clarté entre deux zones peut se calculer à partir de mesures colorimétriques de chacune (écart de L*), et un contraste de luminance se mesure au luminancemètre ou sur une image.
+    Le premier vise un aspect proche de ce type ; le second porte sur la luminance, pas sur la clarté perçue, et n’est bien défini que pour des images simples [[peli1990]]. Ni l’un ni l’autre ne saisit
+    l’entourage, l’éclairage de l’épisode ou la distance entre les zones.
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes:
+  - id: cie_ilv_cielab
+    nom: écart de clarté L* entre deux zones
+    grandeur: différence entre les clartés L* calculées pour chaque zone (CIELAB)
+    unite_ou_echelle: unités L* (0 pour le noir, 100 pour le blanc de référence, e-ILV 17-23-076)
+    references:
+    - cie_ilv_cielab
+    - cie015
+    proximite: proche
+    ecart: compare deux valeurs calculées pour un observateur et un illuminant de référence, sur des échantillons isolés ; ne saisit ni l’entourage, ni l’éclairage de l’épisode, ni la distance entre les
+      zones, qui changent la clarté perçue de chacune
+    conditions: géométries d’éclairage et d’observation, observateur et illuminant normalisés, pour chacune des deux zones
+    statut_lecture: résumé public lu (CIE 015:2018) ; e-ILV lu (17-23-076)
+  - id: peli1990
+    nom: contraste de luminance
+    grandeur: 'contraste de luminance, calculé à partir des luminances de deux plages ou, localement, sur une image'
+    unite_ou_echelle: 'nombre sans dimension'
+    references:
+    - peli1990
+    proximite: indirecte
+    ecart: porte sur la luminance, pas sur la clarté perçue ; bien défini et en accord avec le contraste perçu pour des images simples (réseau, plage sur fond uniforme), pas pour des images complexes ;
+      ne saisit ni l’observateur, ni l’entourage, ni la distance
+    conditions: luminances mesurées (luminancemètre ou image calibrée) ; image simple
+    statut_lecture: résumé lu (Peli 1990, Crossref et OpenAlex)
+  non_retenues:
+  - nom: différence de couleur ΔE*ab (CIELAB)
+    references:
+    - cie_ilv_cielab_difference
+    raison: 'différence globale de couleur (distance euclidienne dans CIELAB), qui mêle la clarté, le chroma et la teinte : elle ne sépare pas la qualité que juge ce type'
+    statut_lecture: e-ILV lu (17-23-077)
+  - nom: calcul des tolérances et petites différences de couleur (ASTM D2244)
+    references:
+    - astm_d2244
+    raison: pratique conçue pour des tolérances et de petites différences entre éprouvettes opaques comparées côte à côte, alors que le type va jusqu’aux différences les plus fortes ; la norme note elle-même
+      que la proximité des éprouvettes, le brillant et la texture changent le lien entre différence mesurée et acceptabilité
+    statut_lecture: 'résumé public lu (Scope sections 1.1 et 1.2, Significance and Use sections 5.1 et 5.2)'
 modalites:
 - vision
 mode_de_presentation: image
@@ -122,6 +165,53 @@ references:
   verifie_sur: notice Open Library (titre, auteur, éditeur, 1963, OCLC 30247970 ; pas de description) ; contenu non lu
   reprend: rien de son contenu (non lu) ; cité comme ouvrage repéré sur l’interaction des couleurs (titre)
   ne_reprend_pas: tout son contenu, exercices et conclusions compris (non lu)
+- id: astm_d2244
+  citation: ASTM D2244-23. Standard Practice for Calculation of Color Tolerances and Color Differences from Instrumentally Measured Color Coordinates. ASTM International.
+  doi_ou_url: https://store.astm.org/d2244-23.html
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-16'
+  verifie_sur: 'page de l’éditeur, Scope sections 1.1 et 1.2 et Significance and Use sections 5.1 et 5.2 lus le 2026-10-16 : tolérances et petites différences de couleur entre éprouvettes opaques, à partir de coordonnées mesurées sous lumière du jour (CIELAB, CMC, CIE94, DIN99o, CIEDE2000) ; d’autres facteurs d’aspect (proximité des éprouvettes, brillant, texture) modifient le lien entre différence mesurée et acceptabilité ; texte payant non lu'
+  reprend: rien (méthode voisine non retenue, rubrique « mesure »)
+  ne_reprend_pas: les tolérances
+- id: cie015
+  citation: 'CIE (2018). CIE 015:2018 Colorimetry, 4th Edition. Vienne : Commission Internationale de l''Éclairage.'
+  doi_ou_url: https://doi.org/10.25039/TR.015.2018
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: métadonnées et résumé Crossref (observateurs de référence, illuminants, coordonnées d'espace couleur, écarts de couleur) ; texte payant non lu
+  reprend: 'rien (mesure associée, rubrique « mesure » : coordonnées CIELAB et écarts de couleur)'
+  ne_reprend_pas: tout son contenu (non lu) ; aucune région ne se déduit d’une valeur calculée
+- id: cie_ilv_cielab
+  citation: 'CIE S 017:2020, ILV : International Lighting Vocabulary, 2e éd., entrée 17-23-076 « CIE 1976 L*a*b* colour space ». Vienne : CIE (accès libre en ligne, e-ILV).'
+  doi_ou_url: https://cie.co.at/eilvterm/17-23-076
+  role: contraste
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-10-10'
+  verifie_sur: 'entrée lue en ligne le 2026-10-10 : espace couleur CIELAB, coordonnées L*, a*, b* ; note 1 : correspondants approchés de la clarté (L*, « CIE 1976 lightness »), du chroma (« CIE 1976 a,b
+    chroma ») et de la teinte (« CIE 1976 a,b hue angle », hab = arctan(b*/a*))'
+  reprend: 'rien : L*, le chroma et l’angle de teinte y sont des corrélats approchés, calculés ; cités dans la rubrique « mesure »'
+  ne_reprend_pas: l’espace CIELAB et ses formules ; aucune région ne s’en déduit
+- id: cie_ilv_cielab_difference
+  citation: 'CIE S 017:2020, ILV : International Lighting Vocabulary, 2e éd., entrée 17-23-077 « CIE 1976 L*a*b* colour difference ». Vienne : CIE (accès libre en ligne, e-ILV).'
+  doi_ou_url: https://cie.co.at/eilvterm/17-23-077
+  role: contraste
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-10-16'
+  verifie_sur: 'entrée lue en ligne le 2026-10-16 : différence entre deux stimuli de couleur, distance euclidienne entre leurs points dans l’espace CIELAB'
+  reprend: rien (méthode voisine non retenue, rubrique « mesure »)
+  ne_reprend_pas: la différence de couleur ΔE*ab
+- id: peli1990
+  citation: Peli, E. (1990). Contrast in complex images. Journal of the Optical Society of America A, 7(10), 2032–2040.
+  doi_ou_url: https://doi.org/10.1364/JOSAA.7.002032
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-16'
+  verifie_sur: 'métadonnées Crossref et résumé (OpenAlex) lus le 2026-10-16 : le contraste physique est bien défini et s’accorde avec le contraste perçu pour des images simples (réseau sinusoïdal, plage
+    sur fond uniforme), pas pour des images complexes ; définition locale par bande de fréquences ; texte intégral non lu'
+  reprend: rien (mesure associée, rubrique « mesure »)
+  ne_reprend_pas: la définition locale par bande de fréquences
 etat_de_l_art: 'Le contraste de clarté entre deux zones touche à la perception du clair et du sombre, sujet du livre de Gilchrist (2006) [[gilchrist2006]], dont le résumé rappelle que la lumière renvoyée
   par une surface ne dit pas sa nuance de gris (livre non lu). Tamura, Mori et Yamawaki (1978) [[tamura1978]] ont une mesure de contraste calculée sur une image, rapprochée de ce type. Albers (*Interaction
   of Color*, 1963) [[albers1963]] est un ouvrage repéré sur l''interaction des couleurs (titre ; contenu non lu). Détail : docs/bibliographie-par-type.md#groupe-contrastes.'

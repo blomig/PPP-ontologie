@@ -24,6 +24,13 @@ définition: 'Degré auquel les choses qu’on voit paraissent se ranger les une
 question_attentionnelle: Ce qu’on voit paraît-il à plat, sur quelques plans (un devant et un fond), ou étagé sur de nombreux plans jusqu’au lointain ?
 contre_exemple: 'Un bas-relief à peine saillant reste presque à plat, même s’il est en volume : c’est l’étagement vu qui compte. L’impression de voir dans l’épaisseur d’un émail ou d’une pierre translucide
   est une profondeur dans la matière, pas un étagement de plans.'
+mesure:
+  etat: aucune_methode_robuste
+  synthese: Aucune méthode de mesure robuste n’est connue pour le nombre de plans qu’on perçoit dans une scène ou une image (recherche du 2026-10-16). Le rangement en plans est fait par l’observateur, à
+    partir d’indices de profondeur qui se combinent [[cutting_vishton1995]] ; aucune norme ni méthode publiée lue ne le mesure.
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes: []
 modalites:
 - vision
 mode_de_presentation: image
@@ -151,7 +158,7 @@ modifie_en:
 remplace_par: []
 source_de_la_fiche: crash tests, partie 1 (spec 2.3, docs/questions-crash-tests.md C4) ; fiche préremplie le 2026-10-10 par l’équipe, champs en langage courant à valider par la relecture explicative
 manques:
-- 'strate formelle, à vérifier par l’épreuve E3 (deux scènes égales en netteté des bords et en tailles perçues peuvent-elles différer en profondeur ?) (décision de l’éditeur du projet du 2026-10-14, série 48 ; T25)'
+- 'strate formelle, à vérifier par l’épreuve E3 (deux scènes égales en netteté des bords et en tailles perçues peuvent-elles différer en profondeur ?) (décision de l’éditeur du projet du 2026-10-14)'
 - 'exemplaires (lot 3, 2026-10-14) : 3001 à plat, 3002 quelques plans, 3003 nombreux plans ; étagement en plans, distinct de la profondeur dans la matière (C4) ; relus et validés par la relecture explicative (lot 3 bis, 2026-10-14)'
 bloque_par: []
 a_relire: []

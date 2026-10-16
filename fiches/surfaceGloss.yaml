@@ -25,9 +25,36 @@ question_attentionnelle: En bougeant un peu la tête ou l’objet, voit-on sur c
   ?
 contre_exemple: 'Une couleur vive n’est pas brillante pour autant : un papier rouge vif peut être tout à fait mat ; ce qui est vif, c’est sa saturation. Et une surface claire ne renvoie pas plus de reflets
   qu’une sombre : un carrelage noir poli montre des reflets nets, un plâtre blanc n’en montre aucun.'
-grandeur_physique_homonyme: 'brillance spéculaire mesurée en unités de brillance (GU) au brillancemètre, sous les géométries 20°, 60° et 85° d’ISO 2813 (« Paints and varnishes — Determination of gloss value
-  at 20°, 60° and 85° ») ; la norme ASTM D523, qui emploie les mêmes géométries, note que peu de résultats publiés relient les intervalles mesurés aux intervalles perçus (« Little information about the
-  relation of numerical-to-perceptual intervals of specular gloss has been published », § 5.3) : aucune région ne s’en déduit.'
+grandeur_physique_homonyme: '« brillance » désigne aussi la brillance spéculaire mesurée au brillancemètre, en unités de brillance (voir la rubrique « mesure ») : aucune région ne s’en déduit.'
+mesure:
+  etat: methodes
+  synthese: 'Le brillant des surfaces se mesure au brillancemètre (brillance spéculaire) et, pour les surfaces très brillantes, par la netteté de l’image réfléchie. Ces mesures visent un aspect proche de
+    ce type, sur des échantillons plans, mais une valeur ne donne pas un degré perçu : la perception du brillant a plusieurs dimensions [[leloup2014]].'
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes:
+  - id: iso2813
+    nom: brillance spéculaire (brillancemètre)
+    grandeur: lumière renvoyée dans la direction spéculaire, rapportée à un étalon
+    unite_ou_echelle: unités de brillance (GU), géométries 20°, 60° et 85°
+    references:
+    - iso2813
+    - astm_d523
+    proximite: proche
+    ecart: 'mesure la quantité de lumière renvoyée dans une direction, pas la netteté des reflets ; ASTM D523 note que peu de résultats publiés relient les intervalles mesurés aux intervalles perçus, tout en signalant un bon accord avec les classements visuels pour des revêtements (section 5.3)'
+    conditions: revêtement non texturé sur substrat plan et opaque ; angle fixé par la norme
+    statut_lecture: 'lu en partie : ISO 2813 : résumé public lu ; ASTM D523 : sections 1.1 et 5.1 à 5.4 lues sur la page de l’éditeur'
+  - id: astm_d5767
+    nom: netteté de l’image réfléchie (distinctness of image, DOI)
+    grandeur: netteté de l’image d’une fente réfléchie par la surface
+    unite_ou_echelle: 'valeur de netteté d’image, de 0 à 100 (100 : netteté parfaite, ASTM D5767 section 4.5)'
+    references:
+    - astm_d5767
+    - astm_e430
+    proximite: proche
+    ecart: 'mesure la netteté de l’image réfléchie, que la brillance spéculaire ne note pas de façon satisfaisante (ASTM D5767 section 4.2) ; ne vaut que pour des surfaces très brillantes et planes : ASTM E430 la dit inadaptée aux finitions diffuses (section 1.1)'
+    conditions: surfaces planes ou rendues planes ; revêtements (D5767) ; surfaces très brillantes, 20° ou 30° (E430)
+    statut_lecture: 'lu en partie : pages de l’éditeur, sections 1.1 à 1.3 et 4.2 à 4.5 (D5767), sections 1.1 à 1.3 (E430)'
 modalites:
 - vision
 mode_de_presentation: échantillon
@@ -134,10 +161,9 @@ references:
   statut_verification: vérifiée sur résumé ou source secondaire
   verifie_le: '2026-10-10'
   verifie_sur: 'page de l''éditeur (résumé : méthode de mesure du brillant des revêtements, géométries 20°, 60° ou 85°, revêtements non texturés sur substrat plan et opaque) ; texte payant non lu'
-  reprend: rien
-  ne_reprend_pas: la valeur de brillant mesurée (grandeur_physique_homonyme) ; la phrase non vérifiée qu'on lui prêtait est retirée en 2.5 (T33)
-  note_verification: l’ancienne phrase de grandeur_physique_homonyme (« la norme elle-même avertit… ») n’était pas vérifiée (texte payant) ; elle est remplacée en 2.5 par la phrase vérifiée d’ASTM D523
-    § 5.3 ; les classes « haute / moyenne / basse brillance » associées aux angles 20°, 60°, 85° ne sont pas vérifiées sur le texte de la norme
+  reprend: 'rien (mesure associée, rubrique « mesure »)'
+  ne_reprend_pas: 'la valeur de brillant comme borne de région'
+  note_verification: 'l’ancienne phrase de grandeur_physique_homonyme (« la norme elle-même avertit… ») n’était pas vérifiée (texte payant) ; elle est remplacée en 2.5 par la phrase vérifiée d’ASTM D523 section 5.3 ; les classes « haute / moyenne / basse brillance » associées aux angles 20°, 60°, 85° ne sont pas vérifiées sur le texte de la norme'
 - id: oqlf_brillance
   citation: Office québécois de la langue française, Grand dictionnaire terminologique, fiches « brillance » (peinture, contrôle de la qualité des peintures, 1983) et « luminance lumineuse » (physique,
     photométrie et colorimétrie, mise à jour 1993).
@@ -181,8 +207,8 @@ references:
   statut_verification: vérifiée sur la source
   verifie_le: '2026-10-10'
   verifie_sur: 'sections 1.1 (géométries 60°, 20° et 85°) et 5.1–5.4 (signification et usage) lues sur la page de l’éditeur ; DOI de la série : 10.1520/D0523 (Crossref)'
-  reprend: 'rien : la phrase citée dans grandeur_physique_homonyme (§ 5.3)'
-  ne_reprend_pas: la valeur de brillance mesurée et ses géométries ; aucune classe de niveaux n’y est lue
+  reprend: 'rien : la phrase de la section 5.3 citée dans la rubrique « mesure »'
+  ne_reprend_pas: 'la valeur de brillance mesurée et ses géométries ; aucune classe de niveaux n’y est lue'
 - id: leloup2014
   citation: 'Leloup, F. B., Obein, G., Pointer, M. R. & Hanselaer, P. (2014). Toward the soft metrology of surface gloss: A review. Color Research & Application, 39(6), 559–570.'
   doi_ou_url: https://doi.org/10.1002/col.21846
@@ -211,6 +237,24 @@ references:
   verifie_sur: 'métadonnées Crossref et résumé : le mouvement, la disparité et la couleur améliorent la constance de la brillance perçue'
   reprend: 'le fait que bouger la tête ou l’objet aide à juger la brillance (question attentionnelle, `angle: varied`)'
   ne_reprend_pas: le modèle de Phong et les stimuli de synthèse
+- id: astm_d5767
+  citation: ASTM D5767-18. Standard Test Method for Instrumental Measurement of Distinctness-of-Image (DOI) Gloss of Coated Surfaces. ASTM International.
+  doi_ou_url: https://store.astm.org/d5767-18.html
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-16'
+  verifie_sur: 'page de l’éditeur, Scope sections 1.1 à 1.3 lus le 2026-10-16 (mesure électro-optique de la netteté d’image de revêtements sur surfaces planes rigides ; image d’une fente, peigne coulissant) ; sections 4.2 à 4.5 lues sur la même page ; titre relevé sur la page de l’éditeur ; texte payant non lu'
+  reprend: rien (mesure associée, rubrique « mesure »)
+  ne_reprend_pas: la valeur de netteté d’image comme borne de région
+- id: astm_e430
+  citation: ASTM E430-19. Standard Test Methods for Measurement of Gloss of High-Gloss Surfaces by Abridged Goniophotometry. ASTM International.
+  doi_ou_url: https://store.astm.org/e0430-19.html
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-16'
+  verifie_sur: 'page de l’éditeur, Scope sections 1.1 à 1.3 lus le 2026-10-16 (surfaces très brillantes, 20° et 30° ; « not suitable for diffuse finish surfaces » ; surfaces planes) ; titre relevé sur la page de l’éditeur ; texte payant non lu'
+  reprend: rien (mesure associée, rubrique « mesure »)
+  ne_reprend_pas: la valeur de netteté d’image comme borne de région
 etat_de_l_art: 'La brillance perçue a une littérature récente : Pellacini, Ferwerda et Greenberg (2000) [[pellacini2000]] dégagent ses dimensions perçues à partir de jugements humains ; Motoyoshi et al.
   (2007) [[motoyoshi2007]] relient le brillant perçu à des mesures simples calculées sur l''image ; Fleming (2014) [[fleming2014]] soutient que la vue reconnaît les matériaux à leur aspect, sans retrouver
   leurs propriétés physiques. Hunter (1937) [[hunter1937]] distingue six sortes de brillance, dont la netteté de l''image réfléchie, voisine de ce type ; Leloup et al. (2014) [[leloup2014]] rappellent que
@@ -324,7 +368,7 @@ relecture_explicative:
     avant: Netteté des reflets d’une surface, pas la vivacité de sa couleur (saturation), pas sa clarté, pas ce qu’on voit à travers (vue à travers). La matité est le pôle bas de ce type, pas un autre type.
     apres: Netteté des reflets d’une surface, pas la vivacité de sa couleur (saturation), pas sa clarté, pas ce qu’on voit à travers (transparence). La matité est le pôle bas de ce type, pas un autre type.
     raison: 'T28 tranché par l’éditeur du projet le 2026-10-11 : label canonique de ppp:translucency « transparence » (« vue à travers » en label alternatif) ; seul le nom du type change'
-    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+    remarque: re-confirmé en relecture explicative (2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
   - champ: note_conditions
     date: '2026-10-11'
     avant: les reflets dépendent de la lumière et de l’angle de vue ; un jugement fait sur une photo, angle et lumière inconnus, est « non tranché » (spec §9.3)
@@ -332,14 +376,11 @@ relecture_explicative:
       A5)
     raison: 'renvoi corrigé (relecture explicative) : la règle « facette critique inconnue = non tranché » est §9.7 H, règle 4 (avec A5), pas §9.3 ; relecture explicative (2026-10-11) : « dont l’angle et
       la lumière de prise de vue sont inconnus » (seconde relecture explicative)'
-    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+    remarque: re-confirmé en relecture explicative (2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
 alignements_externes:
 - relation: skos:relatedMatch
   cible: distinctness-of-reflected-image gloss (Hunter 1937)
   reference: Hunter, R. S. (1937). Methods of determining gloss. Journal of Research of the National Bureau of Standards, 18(1), 19 et suiv. doi:10.6028/jres.018.006
   reference_id: hunter1937
   note: une des six sortes de brillance de Hunter, mesurée ; PPP qualifie la netteté des reflets vue, du mat au miroir ; ne fournit pas de régions ; non déclaré exact (spec §9.7 O)
-note_labels_regions: 'Labels de région « mat / satiné / brillant / miroir » (décision de l’éditeur du projet, 2026-10-10, T29), après recherche d’une catégorisation reconnue des niveaux de brillance : les
-  sources vérifiées donnent des sortes de brillance (Hunter 1937) [[hunter1937]] ou des géométries de mesure (ISO 2813, ASTM D523) [[iso2813]] [[astm_d523]], pas des niveaux perçus nommés (docs/bibliographie-par-type.md#groupe-matiere).
-  « Brillant » et « brillance » sont de même racine dans le même type, comme « symétrique » et « symétrie » : pas de collision A2 au sens de §9.7 J (qui vise un label d’un autre type) ; le sens « couleur
-  vive » est traité par avertissement_label.'
+note_labels_regions: 'Labels de région « mat / satiné / brillant / miroir » (décision de l’éditeur du projet, 2026-10-10, T29), après recherche d’une catégorisation reconnue des niveaux de brillance : les sources vérifiées donnent des sortes de brillance (Hunter 1937) [[hunter1937]] ou des géométries de mesure (ISO 2813, ASTM D523) [[iso2813]] [[astm_d523]], pas des niveaux perçus nommés (docs/bibliographie-par-type.md#groupe-matiere). « Brillant » et « brillance » sont de même racine dans le même type, comme « symétrique » et « symétrie » : pas de collision avec le label d’un autre type (A2, §9.7 J) ; le sens « couleur vive » est traité par un avertissement sur le label.'

@@ -16,7 +16,39 @@ facettes:
 définition: Degré auquel une couleur paraît s’écarter du gris de même clarté.
 question_attentionnelle: Cette couleur paraît-elle grise, peu colorée, moyennement ou très colorée ?
 contre_exemple: 'Une couleur claire n’est pas pour autant peu saturée : clarté et saturation varient séparément.'
-grandeur_physique_homonyme: 'chroma C* (CIELCh), pureté d’excitation : aucune région ne s’en déduit.'
+grandeur_physique_homonyme: '« saturation » désigne aussi, en colorimétrie, une grandeur calculée que la CIE distingue du chroma (e-ILV 17-22-073) : aucune région ne s’en déduit.'
+mesure:
+  etat: methodes
+  synthese: La colorimétrie donne un chroma calculé à partir de mesures instrumentales (C*ab de l’espace CIELAB), et le système Munsell un chroma évalué par comparaison visuelle à des échantillons ordonnés.
+    Ce sont des corrélats approchés du chroma, proches de ce type, qui juge l’écart au gris de même clarté ; ils valent pour des surfaces opaques sous un éclairage et un observateur de référence et ne tiennent
+    pas compte de l’entourage ni de l’éclairage réel de l’épisode.
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes:
+  - id: cie015
+    nom: chroma C*ab (CIELAB)
+    grandeur: chroma calculé à partir des coordonnées a* et b*, elles-mêmes calculées sur des valeurs trichromatiques mesurées
+    unite_ou_echelle: C*ab, à partir de 0 pour un gris (corrélat approché du chroma, e-ILV 17-23-076)
+    references:
+    - cie015
+    - cie_ilv_cielab
+    - cie_ilv_chroma
+    - cie_ilv_saturation
+    proximite: proche
+    ecart: 'corrélat approché du chroma, que la CIE distingue de la saturation : le chroma se juge par rapport à un blanc ou un gris éclairé de même (e-ILV 17-22-074), la saturation par rapport à la luminosité propre de la zone (e-ILV 17-22-073) ; valeur calculée pour un observateur et un illuminant de référence, sur un échantillon isolé : ne tient compte ni de l’entourage ni de l’éclairage de l’épisode'
+    conditions: géométries d’éclairage et d’observation, observateur et illuminant normalisés
+    statut_lecture: résumé public lu (CIE 015:2018) ; e-ILV lu (17-23-076)
+  - id: astm_d1535
+    nom: chroma Munsell (Munsell chroma)
+    grandeur: chroma évalué par comparaison visuelle avec un atlas d’échantillons ordonnés ; la norme prévoit aussi la conversion depuis des données CIE
+    unite_ou_echelle: notation Munsell, composante chroma
+    references:
+    - astm_d1535
+    proximite: proche
+    ecart: une notation fine par comparaison à un atlas, pour des objets opaques à la lumière du jour ; ne tient compte ni de l’entourage ni d’un autre éclairage que celui de la norme, et ne donne pas une
+      région
+    conditions: objets opaques (peintures), lumière du jour, comparaison à l’atlas
+    statut_lecture: 'lu en partie : page de l’éditeur, Scope section 1.1 (ASTM D1535)'
 modalites:
 - vision
 mode_de_presentation: image
@@ -60,7 +92,7 @@ espace_valeurs:
     repere: la couleur la plus vive qu’on puisse voir à cette clarté
     exemplaires:
     - ppp-a:pilote-1302
-identite: Écart au gris, pas la teinte, pas la clarté.
+identite: 'Écart au gris, pas la teinte, pas la clarté. La fiche suit ce que la CIE appelle chroma (e-ILV 17-22-074).'
 relations:
 - type: separableFrom
   cible: ppp:lightness
@@ -78,7 +110,7 @@ references:
   role: alimente
   statut_verification: vérifiée sur la source
   verifie_le: '2026-10-10'
-  verifie_sur: 'texte du Project Gutenberg n° 26054 lu pour le passage cité : « Color has three dimensions » (§ 8) : la teinte, la valeur et le chroma (« the purity or CHROMA », la pureté) ; texte non lu
+  verifie_sur: 'texte du Project Gutenberg n° 26054 lu pour le passage cité : « Color has three dimensions » (paragraphe 8) : la teinte, la valeur et le chroma (« the purity or CHROMA », la pureté) ; texte non lu
     en entier'
   reprend: le chroma comme dimension séparée de la teinte et de la valeur
   ne_reprend_pas: l'échelle chiffrée du chroma
@@ -98,8 +130,8 @@ references:
   statut_verification: vérifiée sur résumé ou source secondaire
   verifie_le: '2026-10-10'
   verifie_sur: métadonnées et résumé Crossref (observateurs de référence, illuminants, coordonnées d'espace couleur, écarts de couleur) ; texte payant non lu
-  reprend: rien
-  ne_reprend_pas: tout son contenu (non lu) ; le chroma C*, cité dans grandeur_physique_homonyme, est vérifié sur le vocabulaire de la CIE (cie_ilv_cielab) ; aucune région ne s’en déduit
+  reprend: 'rien (mesure associée, rubrique « mesure » : coordonnées CIELAB et écarts de couleur)'
+  ne_reprend_pas: 'tout son contenu (non lu) ; aucune région ne se déduit d’une valeur calculée'
 - id: cie_ilv_cielab
   citation: 'CIE S 017:2020, ILV : International Lighting Vocabulary, 2e éd., entrée 17-23-076 « CIE 1976 L*a*b* colour space ». Vienne : CIE (accès libre en ligne, e-ILV).'
   doi_ou_url: https://cie.co.at/eilvterm/17-23-076
@@ -107,9 +139,36 @@ references:
   statut_verification: vérifiée sur la source
   verifie_le: '2026-10-10'
   verifie_sur: 'entrée lue en ligne le 2026-10-10 : espace couleur CIELAB, coordonnées L*, a*, b* ; note 1 : correspondants approchés de la clarté (L*, « CIE 1976 lightness »), du chroma (« CIE 1976 a,b
-    chroma ») et de la teinte (« CIE 1976 a,b hue angle », h_ab = arctan(b*/a*))'
-  reprend: 'rien : le chroma y est un correspondant approché, calculé, du chroma (que PPP range sous la saturation) ; il est cité dans grandeur_physique_homonyme comme grandeur mesurée homonyme'
-  ne_reprend_pas: l’espace CIELAB et ses formules ; aucune région ne s’en déduit
+    chroma ») et de la teinte (« CIE 1976 a,b hue angle », hab = arctan(b*/a*))'
+  reprend: 'rien : L*, le chroma et l’angle de teinte y sont des corrélats approchés, calculés ; cités dans la rubrique « mesure »'
+  ne_reprend_pas: 'l’espace CIELAB et ses formules ; aucune région ne s’en déduit'
+- id: astm_d1535
+  citation: ASTM D1535-14(2018). Standard Practice for Specifying Color by the Munsell System. ASTM International.
+  doi_ou_url: https://store.astm.org/d1535-14r18.html
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-16'
+  verifie_sur: 'page de l’éditeur, Scope, section 1.1, lu (notation fondée sur la teinte, la clarté et le chroma perçus ; objets opaques vus à la lumière du jour par un observateur à vision normale ; méthode visuelle, conversion depuis des données CIE prévue) ; texte payant non lu'
+  reprend: rien (mesure associée, rubrique « mesure »)
+  ne_reprend_pas: la notation Munsell comme bornes de régions
+- id: cie_ilv_saturation
+  citation: 'CIE S 017:2020, ILV : International Lighting Vocabulary, 2e éd., entrée 17-22-073 « saturation ». Vienne : CIE.'
+  doi_ou_url: https://cie.co.at/eilvterm/17-22-073
+  role: contraste
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-10-16'
+  verifie_sur: 'entrée lue en ligne le 2026-10-16 : « colourfulness of an area judged in proportion to its brightness »'
+  reprend: 'rien : la distinction entre saturation et chroma, citée dans la rubrique « mesure » et dans le champ grandeur_physique_homonyme'
+  ne_reprend_pas: la définition de la CIE comme définition du type
+- id: cie_ilv_chroma
+  citation: 'CIE S 017:2020, ILV : International Lighting Vocabulary, 2e éd., entrée 17-22-074 « chroma ». Vienne : CIE.'
+  doi_ou_url: https://cie.co.at/eilvterm/17-22-074
+  role: contraste
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-10-16'
+  verifie_sur: 'entrée lue en ligne le 2026-10-16 : « colourfulness of an area judged as a proportion of the brightness of a similarly illuminated area that appears grey, white or highly transmitting »'
+  reprend: la notion que suit la fiche (chroma au sens de la CIE), citée dans le champ identite et la rubrique « mesure »
+  ne_reprend_pas: les notes de l’entrée sur les couleurs non apparentées
 etat_de_l_art: 'La saturation correspond au chroma du système de Munsell (1905) [[munsell1905]] et au chroma C* de la colorimétrie CIE [[cie015]]. Les modèles d''apparence des couleurs font l''objet d''un
   ouvrage de Fairchild (2013) [[fairchild2013]], non lu ici. PPP retient une seule dimension perçue, à repères publics. Détail : docs/bibliographie-par-type.md#groupe-couleur.'
 etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-couleur

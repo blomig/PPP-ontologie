@@ -21,7 +21,25 @@ question_attentionnelle: En ne regardant qu’une qualité à la fois (la clart�
   en y regardant), évidente (elle se voit d’emblée, même de loin) ou maximale (les deux zones sont aux deux bouts de cette qualité, comme le noir et le blanc pour la clarté) ?
 contre_exemple: 'Un mur peint d’une seule couleur n’offre pas deux zones à comparer : il n’y a pas de contraste. Une zone très claire, prise seule, a une clarté, pas un contraste : il faut une seconde zone.
   Et « ces deux zones contrastent » ne suffit pas : on dit toujours sur quelle qualité (clarté, teinte, texture…).'
-grandeur_physique_homonyme: 'contraste mesuré (rapport de luminances, contraste de Weber ou de Michelson) : aucune région ne s’en déduit.'
+grandeur_physique_homonyme: 'contraste de luminance, calculé à partir des luminances de deux plages ou, localement, sur une image (voir la rubrique « mesure ») : aucune région ne s’en déduit.'
+mesure:
+  etat: methodes
+  synthese: 'Pour la seule dimension de la clarté, le contraste de luminance se mesure [[peli1990]] : c’est une mesure associée indirecte. Pour les autres dimensions comparées (teinte, texture, taille…),
+    voir la rubrique « mesure » de la fiche de la qualité comparée ; aucune mesure ne couvre ce type en général.'
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes:
+  - id: peli1990
+    nom: contraste de luminance
+    grandeur: 'contraste de luminance, calculé à partir des luminances de deux plages ou, localement, sur une image'
+    unite_ou_echelle: 'nombre sans dimension'
+    references:
+    - peli1990
+    proximite: indirecte
+    ecart: ne vaut que pour la dimension de la clarté, alors que ce type compare une qualité choisie ; porte sur la luminance, pas sur la différence perçue ; en accord avec le contraste perçu pour des images
+      simples (réseau, plage sur fond uniforme), pas pour des images complexes ; ne saisit ni l’observateur, ni l’entourage, ni la distance
+    conditions: 'luminances mesurées (luminancemètre ou image calibrée) ; image simple ; dimension comparée : la clarté'
+    statut_lecture: résumé lu (Peli 1990, Crossref et OpenAlex)
 modalites:
 - vision
 mode_de_presentation: image
@@ -92,10 +110,7 @@ references:
     certaines fréquences spatiales ; les images aux zones sombres plus sombres sont jugées plus contrastées ; texte non lu'
   reprend: le contraste perçu comme jugement d’observateurs qui comparent, distinct du contraste calculé
   ne_reprend_pas: les fréquences spatiales, les modèles et les mesures ; le contraste de luminance n’est qu’une des dimensions comparées par ce type
-etat_de_l_art: 'Pour la lumière, le contraste calculé (rapport de luminances : combien de fois une zone est plus lumineuse qu’une autre) ne s’accorde avec le contraste perçu que pour des images simples
-  ; dans une image complexe, le contraste perçu varie d’un endroit à l’autre (Peli 1990, résumé lu) [[peli1990]], et des observateurs qui comparent deux photographies jugent laquelle est la plus contrastée
-  (Haun et Peli 2013) [[haun_peli2013]]. Aucune source trouvée ne propose un contraste perçu général, valable pour toute dimension comparée (recherches du 2026-10-10 et du 2026-10-11 : Crossref, Semantic
-  Scholar, OpenAlex). Les sources des contrastes spécialisés sont dans leurs fiches. Détail : docs/bibliographie-par-type.md#groupe-contrastes.'
+etat_de_l_art: 'Pour la lumière, le contraste calculé (contraste de luminance : écart de luminance entre deux zones, rapporté à la luminance moyenne ou à celle du fond) ne s’accorde avec le contraste perçu que pour des images simples ; dans une image complexe, le contraste perçu varie d’un endroit à l’autre (Peli 1990, résumé lu) [[peli1990]], et des observateurs qui comparent deux photographies jugent laquelle est la plus contrastée (Haun et Peli 2013) [[haun_peli2013]]. Aucune source trouvée ne propose un contraste perçu général, valable pour toute dimension comparée (recherches du 2026-10-10 et du 2026-10-11 : Crossref, Semantic Scholar, OpenAlex). Les sources des contrastes spécialisés sont dans leurs fiches. Détail : docs/bibliographie-par-type.md#groupe-contrastes.'
 etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-contrastes
 axiomes:
 - conceptuel: Tout contraste particulier médie exactement deux termes.
@@ -174,7 +189,12 @@ relecture_explicative:
       Scholar, OpenAlex). Les sources des contrastes spécialisés sont dans leurs fiches. Détail : docs/bibliographie-par-type.md#groupe-contrastes.'
     raison: 'série 7 (point de la coordination) : sources cherchées et lues (résumés, OpenAlex et Crossref, 2026-10-11) ; « aucune source trouvée » n’est plus exact ; relecture explicative (2026-10-11)
       : glose de « rapport de luminances » (relecture explicative) ; relecture explicative (2026-10-11) : « combien de fois » (seconde relecture explicative)'
-    remarque: re-confirmé en relecture explicative (série 9, 2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+    remarque: re-confirmé en relecture explicative (2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+  - champ: etat_de_l_art
+    date: '2026-10-16'
+    avant: 'Pour la lumière, le contraste calculé (contraste de luminance : combien de fois une zone est plus lumineuse qu’une autre) ne s’accorde avec le contraste perçu que pour des images simples ; dans une image complexe, le contraste perçu varie d’un endroit à l’autre (Peli 1990, résumé lu) [[peli1990]], et des observateurs qui comparent deux photographies jugent laquelle est la plus contrastée (Haun et Peli 2013) [[haun_peli2013]]. Aucune source trouvée ne propose un contraste perçu général, valable pour toute dimension comparée (recherches du 2026-10-10 et du 2026-10-11 : Crossref, Semantic Scholar, OpenAlex). Les sources des contrastes spécialisés sont dans leurs fiches. Détail : docs/bibliographie-par-type.md#groupe-contrastes.'
+    apres: 'Pour la lumière, le contraste calculé (contraste de luminance : écart de luminance entre deux zones, rapporté à la luminance moyenne ou à celle du fond) ne s’accorde avec le contraste perçu que pour des images simples ; dans une image complexe, le contraste perçu varie d’un endroit à l’autre (Peli 1990, résumé lu) [[peli1990]], et des observateurs qui comparent deux photographies jugent laquelle est la plus contrastée (Haun et Peli 2013) [[haun_peli2013]]. Aucune source trouvée ne propose un contraste perçu général, valable pour toute dimension comparée (recherches du 2026-10-10 et du 2026-10-11 : Crossref, Semantic Scholar, OpenAlex). Les sources des contrastes spécialisés sont dans leurs fiches. Détail : docs/bibliographie-par-type.md#groupe-contrastes.'
+    raison: 'glose réécrite : un écart rapporté à une luminance de référence, pas un rapport (relecture du 2026-10-16)'
 manques:
 - 'exemplaires (au 2026-10-14) : 0302 faible, 0304 évident, 0305 maximal relus ; 0303 modéré, marqué discutable, non montré ; ppp-a:pilote-0301 reste retiré (T24)'
 - 'nombre et labels des régions : tranchés (T3, option A, décision de l’éditeur du projet, 2026-10-10)'

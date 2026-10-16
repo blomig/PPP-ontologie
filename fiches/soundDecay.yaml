@@ -19,8 +19,26 @@ définition: 'Ce que fait le son après le geste bref qui l’a produit : il s�
 question_attentionnelle: Après le coup, le son s’arrête-t-il tout de suite, résonne-t-il un moment, ou longtemps ?
 contre_exemple: 'Dans une salle très réverbérante, un objet qui s’éteint aussitôt paraît résonner : c’est la salle qu’on entend. « Ça sonne métal » n’est pas une résonance : c’est une identification de
   la matière, qui peut se tromper.'
-grandeur_physique_homonyme: 'amortissement ; temps de réverbération (celui de la salle, pas de l’objet) ; résonance mécanique ou acoustique (accord d’un système sur une fréquence propre) : aucune région
-  ne s’en déduit.'
+grandeur_physique_homonyme: 'temps de réverbération (celui de la salle, pas de l’objet) ; résonance mécanique ou acoustique (accord d’un système sur une fréquence propre) : aucune région ne s’en déduit.'
+mesure:
+  etat: methodes
+  synthese: 'La vitesse à laquelle le son d’un objet frappé s’éteint (son amortissement) a été étudiée comme indice de la matière entendue [[klatzky2000]] [[giordano_mcadams2006]] : c’est une mesure associée
+    proche. Elle se calcule sur un enregistrement ; la réverbération de la salle s’y ajoute, et elle ne saisit ni la distance d’écoute ni l’auditeur.'
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes:
+  - id: klatzky2000
+    nom: vitesse de décroissance (amortissement)
+    grandeur: vitesse à laquelle l’amplitude du son décroît après le choc, selon la fréquence
+    unite_ou_echelle: taux de décroissance (par seconde), selon la fréquence
+    references:
+    - klatzky2000
+    - giordano_mcadams2006
+    proximite: proche
+    ecart: étudiée sur des sons synthétisés de barres frappées (Klatzky et al. 2000) ; sur des sons réels, la durée du signal explique les jugements aussi bien que l’amortissement (Giordano et McAdams 2006)
+      ; la décroissance dépend de la fréquence ; se calcule sur un enregistrement où la réverbération de la salle s’ajoute ; ne saisit ni la distance d’écoute ni l’auditeur
+    conditions: enregistrement du son après un geste bref ; analyse par bande de fréquence
+    statut_lecture: résumé lu (Klatzky et al. 2000, OpenAlex ; Giordano et McAdams 2006, OpenAlex)
 modalites:
 - audition
 mode_de_presentation: échantillon
@@ -123,7 +141,7 @@ enonces_testables:
   epreuve: null
 cq_couvertes: CQ1, CQ2
 statut: candidat
-statut_note: 'en préparation (série 50, 2026-10-15) : fiche rédigée, sans exemplaire ; tous les champs rédigés sont à relire'
+statut_note: 'en préparation (2026-10-15) : fiche rédigée, sans exemplaire ; tous les champs rédigés sont à relire'
 statut_epistemique: non éprouvé
 introduit_en: '2.8'
 modifie_en: []
@@ -155,6 +173,7 @@ a_relire:
 - transfert
 - enonces_testables
 - statut_note
+- mesure
 relecture_explicative:
   date: null
   champs: []

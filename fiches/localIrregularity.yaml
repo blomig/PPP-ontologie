@@ -19,7 +19,22 @@ définition: Présence et ampleur des endroits où une surface, un trait ou un b
   à fait).
 question_attentionnelle: La surface, le trait ou le bord s’écarte-t-il par endroits de sa régularité d’ensemble, et ces écarts sont-ils légers ou marqués ?
 contre_exemple: Une surface à gros relief régulier (tôle gaufrée) a une texture grosse, sans irrégularité locale.
-grandeur_physique_homonyme: aucune pour le label canonique ; l’ancien label v0.2 « rugosité », retiré, était homonyme de la rugosité de surface mesurée, qui relève de la texture.
+grandeur_physique_homonyme: 'aucune pour le label canonique ; l’ancien label v0.2 « rugosité », retiré, était homonyme de la rugosité de surface mesurée, qui relève de la texture.'
+mesure:
+  etat: aucune_methode_robuste
+  synthese: Aucune méthode robuste de mesure associée aux écarts locaux à la régularité d’ensemble n’est connue (recherche du 2026-10-16). Les paramètres de rugosité de profil ou de surface résument tout
+    le relief d’une zone ; aucune norme lue ne repère les endroits où une surface, un trait ou un bord s’écarte de sa propre régularité.
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes: []
+  non_retenues:
+  - nom: paramètres de rugosité de profil ou de surface (ISO 21920-2, ISO 25178-2)
+    references:
+    - iso_21920_2
+    - iso_25178_2
+    raison: ils résument le relief de toute une zone en une valeur moyenne ou extrême, sans repérer où la surface s’écarte de sa régularité d’ensemble ; ils ne valent pas pour un trait ou un bord, et ne
+      saisissent ni la distance de vue, ni l’éclairage, ni l’observateur
+    statut_lecture: résumé public lu (pages de l’ISO)
 modalites:
 - vision
 - toucher
@@ -93,6 +108,36 @@ references:
     présentées comme approchant les trois dimensions les plus importantes de la perception de la texture ; texte intégral non lu'
   reprend: le caractère aléatoire comme composante distincte de la direction
   ne_reprend_pas: 'la mesure : non reprise'
+- id: iso_21920_2
+  citation: 'ISO 21920-2:2021. Geometrical product specifications (GPS) — Surface texture: Profile — Part 2: Terms, definitions and surface texture parameters. Genève : ISO.'
+  doi_ou_url: https://www.iso.org/standard/72226.html
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-16'
+  verifie_sur: 'page de l’ISO lue le 2026-10-16 : paramètres d’état de surface par méthodes de profil ; publiée en 2021-12, remplace ISO 4287:1997 (retirée le 2021-12-20, avec ses amendement et rectificatifs)
+    ainsi qu’ISO 13565-2 et -3 ; statut au 2026-10-16 : « à réviser » (90.92, 2025-10-07), une ISO/CD 21920-2 en préparation ; texte payant non lu'
+  reprend: rien (mesure associée, rubrique « mesure »)
+  ne_reprend_pas: les valeurs de rugosité comme bornes de régions
+- id: iso_25178_2
+  citation: 'ISO 25178-2:2021. Geometrical product specifications (GPS) — Surface texture: Areal — Part 2: Terms, definitions and surface texture parameters. Genève : ISO.'
+  doi_ou_url: https://www.iso.org/standard/74591.html
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-16'
+  verifie_sur: 'page de l’ISO lue le 2026-10-16 (paramètres d’état de surface par méthodes surfaciques ; édition 2, 2021-12) ; sommaire de l’extrait public lu (hauteur moyenne arithmétique, section 4.2.8 ; longueur d’autocorrélation, section 4.3.2 ; rapport d’aspect de la texture, section 4.3.3 ; direction de la texture, section 4.3.4) ; symboles d’après NPL, Measurement Good Practice Guide No. 116 (2010), table 1, fondé sur le projet ISO 25178-2 ; noms confirmés par le sommaire public de l’édition 2021 ; texte payant non lu'
+  reprend: rien (mesure associée, rubrique « mesure »)
+  ne_reprend_pas: les valeurs des paramètres comme bornes de régions
+- id: npl_gpg116
+  citation: 'Petzing, J., Coupland, J. & Leach, R. K. (2010). The Measurement of Rough Surface Topography using Coherence Scanning Interferometry. Measurement Good Practice Guide No. 116. Teddington : National
+    Physical Laboratory.'
+  doi_ou_url: https://eprintspublications.npl.co.uk/4833/1/mgpg116.pdf
+  role: contraste
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-10-16'
+  verifie_sur: 'guide lu en partie le 2026-10-16 (PDF du NPL) : table 1, « The S parameter set » (Sa, hauteur moyenne arithmétique, µm ; Sal, longueur d’autocorrélation, µm ; Str, rapport d’aspect de la
+    texture ; Std, direction de la texture, degrés) ; le guide suit les projets de normes ISO 25178 alors en préparation'
+  reprend: 'rien : les symboles et noms des paramètres surfaciques, cités dans la rubrique « mesure »'
+  ne_reprend_pas: les valeurs des paramètres comme bornes de régions ; les procédés d’interférométrie
 etat_de_l_art: 'La régularité d’une texture est une des dimensions de Tamura, Mori et Yamawaki (1978) [[tamura1978]], calculée à partir des variations de leurs autres mesures (grossièreté, contraste, orientation, linéarité) ; Liu et Picard (1996) [[liu_picard1996]] traitent le caractère aléatoire d’une texture comme une composante à part. Aucune source trouvée ne nomme l’écart local à une régularité comme qualité perçue. La base retenue (texture et netteté du bord) est une décision du projet, révisable après épreuve (T11, série 48). Détail : docs/bibliographie-par-type.md#groupe-texture.'
 etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-texture
 axiomes:

@@ -13,7 +13,7 @@
 - **Rôles** : *fonde* (le type ou la structure en dépend), *alimente* (fournit des distinctions, des repères ou des alignements repris), *discute* (position discutée ou en partie écartée), *contraste* (notion voisine dont PPP se distingue, par exemple une norme de mesure).
 - Ce que PPP reprend ou non de chaque source est écrit dans les fiches (`references`, champs `reprend` et `ne_reprend_pas`). Ce document donne la vue par groupe.
 - Les références ont été limitées à des sources solides (2 à 6 par groupe). Une recherche sans résultat est notée « aucune source trouvée », avec la date.
-- **Ancres stables** (spec §9.7 P, point 4) : chaque groupe a une ancre `groupe-…`, posée par une balise `<a id="…"></a>` au-dessus de son titre ; une fiche y renvoie par `etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-…`. Les ancres ne changent pas quand le titre change. Liste : `groupe-texture` (texture et ses cousins), `groupe-couleur`, `groupe-forme` (forme et contour), `groupe-organisation`, `groupe-matiere` (reflets, transparence, profondeur dans la matière), `groupe-joint` (joint et assemblage), `groupe-etagement` (étagement en plans), `groupe-contrastes`, `groupe-toucher` (proposition de famille, sans fiche), `groupe-son` et `groupe-odorat` (propositions de familles, série 41, sans fiche) ; hors groupes de types : `groupe-sources-generales`, `groupe-non-verifiees`, `groupe-spec` ; sous-sections : `brillance-categorisations`, `refs-2-5` ; gouvernance des ontologies ouvertes : `groupe-gouvernance`. Les anciennes ancres (`texture-et-ses-cousins`, `couleur`, `forme-et-contour`, `organisation`, `matiere`, `joint-et-assemblage`, `etagement-en-plans`, `contrastes`) restent comme alias ; ne plus les employer.
+- **Ancres stables** (spec §9.7 P, point 4) : chaque groupe a une ancre `groupe-…`, posée par une balise `<a id="…"></a>` au-dessus de son titre ; une fiche y renvoie par `etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-…`. Les ancres ne changent pas quand le titre change. Liste : `groupe-texture` (texture et ses cousins), `groupe-couleur`, `groupe-forme` (forme et contour), `groupe-organisation`, `groupe-matiere` (reflets, transparence, profondeur dans la matière), `groupe-joint` (joint et assemblage), `groupe-etagement` (étagement en plans), `groupe-contrastes`, `groupe-toucher` (proposition de famille, sans fiche), `groupe-son` et `groupe-odorat` (propositions de familles, série 41, sans fiche) ; hors groupes de types : `groupe-sources-generales`, `groupe-non-verifiees`, `groupe-spec` ; sous-sections : `brillance-categorisations`, `refs-2-5`, `mesures-couleur` (série 55), `mesures-matiere` (série 56), `mesures-forme` (série 57), `mesures-organisation` (série 58), `mesures-derniers-groupes` (série 59), `mesures-preparation` (série 61) ; gouvernance des ontologies ouvertes : `groupe-gouvernance`. Les anciennes ancres (`texture-et-ses-cousins`, `couleur`, `forme-et-contour`, `organisation`, `matiere`, `joint-et-assemblage`, `etagement-en-plans`, `contrastes`) restent comme alias ; ne plus les employer.
 
 <a id="groupe-texture"></a>
 <a id="texture-et-ses-cousins"></a>
@@ -64,7 +64,7 @@ Les trois dimensions teinte, clarté, saturation reprennent l'organisation du sy
 **Références** :
 
 - Munsell, A. H. (1905). A Color Notation. Boston : G. H. Ellis ; 2e éd. 1907, Project Gutenberg n° 26054. https://www.gutenberg.org/ebooks/26054
-  - statut : *vérifiée sur la source* ; vérifié sur : ppp:hue : texte du Project Gutenberg n° 26054 lu pour les passages cités : « Color has three dimensions » (§ 8 : teinte, valeur, chroma) ; cinq teintes principales (R, Y, G, B, P) et cinq intermédiaires (YR, GY, BG, PB, RP) ; glossaire, « BROWN.--A dark color, inclined to red or yellow… » et « PINK.--A red color of low chroma, but high luminosity, inclining toward purple » ; texte non lu en entier | ppp:lightness : texte du Project Gutenberg n° 26054 lu pour le passage cité : « Color has three dimensions » (§ 8) : la teinte, la valeur (« the amount of light », la quantité de lumière) et le chroma (la pureté) ; texte non lu en entier | ppp:saturation : texte du Project Gutenberg n° 26054 lu pour le passage cité : « Color has three dimensions » (§ 8) : la teinte, la valeur et le chroma (« the purity or CHROMA », la pureté) ; texte non lu en entier | ppp:hueRange : texte du Project Gutenberg n° 26054 lu pour les passages cités : « a circuit of hues » (un cercle de teintes, chapitre I) ; cinq teintes principales et cinq intermédiaires ; texte non lu en entier ;
+  - statut : *vérifiée sur la source* ; vérifié sur : ppp:hue : texte du Project Gutenberg n° 26054 lu pour les passages cités : « Color has three dimensions » (paragraphe 8 : teinte, valeur, chroma) ; cinq teintes principales (R, Y, G, B, P) et cinq intermédiaires (YR, GY, BG, PB, RP) ; glossaire, « BROWN.--A dark color, inclined to red or yellow… » et « PINK.--A red color of low chroma, but high luminosity, inclining toward purple » ; texte non lu en entier | ppp:lightness : texte du Project Gutenberg n° 26054 lu pour le passage cité : « Color has three dimensions » (paragraphe 8) : la teinte, la valeur (« the amount of light », la quantité de lumière) et le chroma (la pureté) ; texte non lu en entier | ppp:saturation : texte du Project Gutenberg n° 26054 lu pour le passage cité : « Color has three dimensions » (paragraphe 8) : la teinte, la valeur et le chroma (« the purity or CHROMA », la pureté) ; texte non lu en entier | ppp:hueRange : texte du Project Gutenberg n° 26054 lu pour les passages cités : « a circuit of hues » (un cercle de teintes, chapitre I) ; cinq teintes principales et cinq intermédiaires ; texte non lu en entier ;
   - usage : `ppp:hue` (alimente); `ppp:lightness` (alimente); `ppp:saturation` (alimente); `ppp:hueRange` (alimente).
 - Berlin, B. & Kay, P. (1969). Basic Color Terms. Berkeley : University of California Press. https://openlibrary.org/works/OL64565W
   - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : notice Open Library (titre, auteurs, éditeur, 1969, OCLC 56215) ; ouvrage non lu ; la liste des onze catégories est lue dans Kay (2015, kay2015) ;
@@ -73,7 +73,7 @@ Les trois dimensions teinte, clarté, saturation reprennent l'organisation du sy
   - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : métadonnées et résumé Crossref (observateurs de référence, illuminants, coordonnées d'espace couleur, écarts de couleur) ; texte payant non lu ;
   - usage : `ppp:hue` (contraste); `ppp:lightness` (contraste); `ppp:saturation` (contraste).
 - CIE S 017:2020, ILV : International Lighting Vocabulary, 2e éd., entrée 17-23-076 « CIE 1976 L*a*b* colour space ». Vienne : CIE (accès libre en ligne, e-ILV). https://cie.co.at/eilvterm/17-23-076
-  - statut : *vérifiée sur la source* ; vérifié sur : entrée lue en ligne le 2026-10-10 : espace couleur CIELAB, coordonnées L*, a*, b* ; note 1 : correspondants approchés de la clarté (L*, « CIE 1976 lightness »), du chroma (« CIE 1976 a,b chroma ») et de la teinte (« CIE 1976 a,b hue angle », h_ab = arctan(b*/a*)) ;
+  - statut : *vérifiée sur la source* ; vérifié sur : entrée lue en ligne le 2026-10-10 : espace couleur CIELAB, coordonnées L*, a*, b* ; note 1 : correspondants approchés de la clarté (L*, « CIE 1976 lightness »), du chroma (« CIE 1976 a,b chroma ») et de la teinte (« CIE 1976 a,b hue angle », hab = arctan(b*/a*)) ;
   - usage : `ppp:hue` (contraste) ; `ppp:lightness` (contraste) ; `ppp:saturation` (contraste) ; ajoutée en 2.5 comme appui vérifié des grandeurs mesurées homonymes (angle de teinte, L*, chroma), à la place de CIE 015:2018 non lue.
 - Gilchrist, A. (2006). Seeing Black and White. Oxford University Press. https://doi.org/10.1093/acprof:oso/9780195187168.001.0001
   - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : métadonnées Crossref et résumé de l’éditeur lu (OpenAlex, 2026-10-10) : la lumière renvoyée par une surface ne révèle pas sa nuance de gris ; selon l’éclairage, une surface de n’importe quel gris peut renvoyer n’importe quelle quantité de lumière ; le livre fait l’historique des recherches et des théories de la clarté ; contenu non lu ;
@@ -81,6 +81,43 @@ Les trois dimensions teinte, clarté, saturation reprennent l'organisation du sy
 - Fairchild, M. D. (2013). Color Appearance Models. Wiley. https://doi.org/10.1002/9781118653128
   - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : métadonnées Crossref (titre, auteur, 2013) ; contenu non lu ;
   - usage : `ppp:saturation` (discute).
+
+<a id="mesures-couleur"></a>
+### Mesures associées du groupe couleur (rubrique `mesure`)
+
+Rubrique `mesure` des fiches publiques de couleur (`hue`, `lightness`, `saturation`, `hueContrast`, `lightnessContrast`, `hueCount`, `hueRange`, `lightnessRange`, `saturationRange`), gabarit de `proposition-rubrique-mesure.md` (document de travail, non publié). Sources vérifiées le 2026-10-16 ; titres dans leur langue d’origine. Déjà cités dans les fiches : CIE 015:2018 (`cie015`) et l’entrée e-ILV 17-23-076 (`cie_ilv_cielab`).
+
+- CIE S 017:2020, ILV, entrée 17-23-077 « CIE 1976 L*a*b* colour difference ». https://cie.co.at/eilvterm/17-23-077
+  - statut : *vérifiée sur la source* (entrée lue : distance euclidienne entre deux stimuli dans CIELAB) ;
+  - usage : `hueContrast`, `lightnessContrast` (contraste ; méthode voisine non retenue).
+- ISO/CIE 11664-6:2022. Colorimetry — Part 6: CIEDE2000 colour-difference formula. https://www.iso.org/standard/82662.html
+  - statut : *vérifiée sur résumé ou source secondaire* (page de l’ISO lue le 2026-10-16, résumé ; présentation de la CIE : corrections selon la clarté, le chroma, la teinte ; objets réfléchissants ou transmettants ; ni sources de lumière ni reflets spéculaires) ;
+  - usage : `hueContrast` (contraste ; mesure associée indirecte).
+- ASTM D2244-23. Standard Practice for Calculation of Color Tolerances and Color Differences from Instrumentally Measured Color Coordinates. https://store.astm.org/d2244-23.html
+  - statut : *vérifiée sur résumé ou source secondaire* (Scope sections 1.1 et 1.2 et Significance and Use sections 5.1 et 5.2 lus) ;
+  - usage : `hueContrast`, `lightnessContrast` (contraste ; méthode voisine non retenue : petites différences et tolérances).
+- CIE S 017:2020, ILV, entrées 17-22-073 « saturation » et 17-22-074 « chroma ». https://cie.co.at/eilvterm/17-22-073 ; https://cie.co.at/eilvterm/17-22-074
+  - statut : *vérifiée sur la source* (entrées lues le 2026-10-16 : la saturation se juge par rapport à la luminosité propre de la zone, le chroma par rapport à une zone éclairée de même qui paraît grise ou blanche) ;
+  - usage : `saturation` (contraste) ; la fiche suit ce que la CIE appelle chroma ; homonyme rétabli.
+- ASTM D1535-14(2018). Standard Practice for Specifying Color by the Munsell System. https://store.astm.org/d1535-14r18.html
+  - statut : *vérifiée sur résumé ou source secondaire* (Scope section 1.1 lu) ;
+  - usage : `hue`, `lightness`, `saturation` (contraste ; mesure associée proche).
+- NIST, OSAC Lexicon, « Value (V) », d’après ANSI/ASTM E1732. https://www.nist.gov/glossary-term/41071
+  - statut : *vérifiée sur la source* (valeur Munsell de 0 à 10) ;
+  - usage : `lightness` (contraste).
+- Peli, E. (1990). Contrast in complex images. Journal of the Optical Society of America A, 7(10), 2032–2040. https://doi.org/10.1364/JOSAA.7.002032
+  - statut : *vérifiée sur résumé ou source secondaire* (Crossref, résumé OpenAlex) ;
+  - usage : `lightnessContrast` (contraste ; mesure associée indirecte : contraste de luminance).
+
+*English version.* Associated measurements of the colour group (`mesure` section), for the public colour entries listed above; sources checked on 2026-10-16; titles in their original language.
+
+- CIE S 017:2020, ILV, entry 17-23-077 “CIE 1976 L*a*b* colour difference”: *checked against the source* (entry read); use: `hueContrast`, `lightnessContrast` (neighbouring method, not retained).
+- ISO/CIE 11664-6:2022, Colorimetry — Part 6: CIEDE2000 colour-difference formula: *ISO page read on 2026-10-16* (abstract); use: `hueContrast` (indirect associated measurement).
+- ASTM D2244-23, Standard Practice for Calculation of Color Tolerances and Color Differences from Instrumentally Measured Color Coordinates: *public scope read* (sections 1.1, 1.2, 5.1 and 5.2); use: `hueContrast`, `lightnessContrast` (neighbouring method, not retained: small differences and tolerances).
+- CIE S 017:2020, ILV, entries 17-22-073 “saturation” and 17-22-074 “chroma”: *checked against the source* (entries read on 2026-10-16); use: `saturation`; the entry follows what the CIE calls chroma; homonym restored.
+- ASTM D1535-14(2018), Standard Practice for Specifying Color by the Munsell System: *public scope read* (section 1.1); use: `hue`, `lightness`, `saturation` (close associated measurement).
+- NIST, OSAC Lexicon, “Value (V)”, after ANSI/ASTM E1732: *checked against the source*; use: `lightness`.
+- Peli, E. (1990), Contrast in complex images, JOSA A 7(10), 2032–2040: *checked on abstract*; use: `lightnessContrast` (indirect associated measurement: luminance contrast).
 
 <a id="groupe-forme"></a>
 <a id="forme-et-contour"></a>
@@ -133,6 +170,27 @@ Pour la netteté du bord, la courbure, la symétrie et la taille, les sources tr
   - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : métadonnées Crossref et résumé lu (PubMed, PMID 1511583, 2026-10-11) : revue du dénombrement, de la saisie immédiate d'un petit nombre et de l'estimation d'une quantité ; texte non lu ;
   - usage : `ppp:elementaryShapeCount` (contraste).
 - Hoffman, D. D. & Richards, W. A. (1984) : référence complète dans « Organisation » ; usage : `ppp:elementaryShapeCount` (contraste ; titre seulement, contenu non lu).
+
+<a id="mesures-forme"></a>
+### Mesures associées du groupe forme (rubrique `mesure`)
+
+Rubrique `mesure` des fiches publiques de forme (`contour`, `curvature`, `outlineIndentation`, `symmetry`, `perceivedSize`), gabarit de `proposition-rubrique-mesure.md` ; sources consultées le 2026-10-16. Elder et Zucker (1998), déjà listés plus haut, gardent leur notice ; leur usage s’étend à la rubrique `mesure` de `contour` (mesure associée indirecte ; `reprend` et `ne_reprend_pas` mis à jour en série 57 bis). Aucun seuil n’est repris.
+
+- ISO 80000-3:2019. Quantities and units — Part 3: Space and time. https://www.iso.org/standard/64974.html
+  - statut : *vérifiée sur résumé ou source secondaire* (page de l’ISO lue le 2026-10-16 ; extrait public, aperçu iTeh : rayon de courbure, 3-1.12 ; courbure, 3-2) ;
+  - usage : `curvature` (courbure géométrique ; mesure associée indirecte), `perceivedSize` (dimensions en mètres ; mesure associée indirecte) (contraste ; la norme définit les grandeurs sans décrire de procédé de mesure).
+- ISO 9276-6:2008. Representation of results of particle size analysis — Part 6: Descriptive and quantitative representation of particle shape and morphology. https://www.iso.org/standard/39389.html
+  - statut : *vérifiée sur résumé ou source secondaire* (résumé public et extrait public lus ; définitions de la solidité et de la convexité via Particle Technology Labs) ;
+  - usage : `outlineIndentation` (contraste ; mesure associée proche).
+- Zabrodsky, H., Peleg, S. & Avnir, D. (1995). Symmetry as a continuous feature. IEEE Transactions on Pattern Analysis and Machine Intelligence, 17(12), 1154–1166. https://doi.org/10.1109/34.476508
+  - statut : *vérifiée sur résumé ou source secondaire* (Crossref, résumé OpenAlex) ;
+  - usage : `symmetry` (contraste ; mesure associée indirecte, non normalisée).
+
+*English version.* Associated measurements of the shape group (`mesure` section), for the entries listed above; sources checked on 2026-10-16; titles in their original language. Elder and Zucker (1998), listed above, keep their record; use extended to `contour` (indirect associated measurement).
+
+- ISO 80000-3:2019, Quantities and units — Part 3: Space and time: *ISO page read on 2026-10-16; public extract (iTeh preview) read* (3-1.12, 3-2); use: `curvature` (indirect associated measurement), `perceivedSize` (indirect associated measurement); the standard defines the quantities without describing a measurement procedure.
+- ISO 9276-6:2008, Representation of results of particle size analysis — Part 6: Descriptive and quantitative representation of particle shape and morphology: *public abstract and extract read*; definitions via Particle Technology Labs; use: `outlineIndentation` (close associated measurement).
+- Zabrodsky, H., Peleg, S. & Avnir, D. (1995), Symmetry as a continuous feature, IEEE TPAMI 17(12), 1154–1166: *checked on abstract*; use: `symmetry` (indirect associated measurement, not standardised).
 
 <a id="groupe-organisation"></a>
 <a id="organisation"></a>
@@ -216,6 +274,47 @@ Brillance, transparence et profondeur dans la matière sont étudiées en percep
   - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : page de l'éditeur (domaine d'application, usage : mesure du trouble et de la transmittance lumineuse) ; texte payant non lu ;
   - usage : `ppp:translucency` (contraste).
 
+<a id="mesures-matiere"></a>
+### Mesures associées du groupe matière (rubrique `mesure`)
+
+Rubrique `mesure` des fiches publiques de surface et de matière (`surfaceGloss`, `translucency`, `subsurfaceDepth`, et, rangées au groupe texture, `texture`, `textureDirectionality`, `localIrregularity`), gabarit de `proposition-rubrique-mesure.md` ; sources consultées le 2026-10-16. Les références déjà listées plus haut (ISO 2813, ASTM D523, ASTM D1003) gardent leur notice ; leur usage s’étend à la rubrique `mesure`. Aucun seuil n’est repris.
+
+- ASTM D5767-18. Standard Test Method for Instrumental Measurement of Distinctness-of-Image (DOI) Gloss of Coated Surfaces. https://store.astm.org/d5767-18.html
+  - statut : *vérifiée sur résumé ou source secondaire* (Scope, sections 1.1 à 1.3 et 4.2 à 4.5, lus sur la page de l’éditeur ; texte payant non lu) ;
+  - usage : `surfaceGloss` (contraste ; mesure associée proche : netteté de l’image réfléchie).
+- ASTM E430-19. Standard Test Methods for Measurement of Gloss of High-Gloss Surfaces by Abridged Goniophotometry. https://store.astm.org/e0430-19.html
+  - statut : *vérifiée sur résumé ou source secondaire* (Scope, sections 1.1 à 1.3, lu sur la page de l’éditeur ; texte payant non lu) ;
+  - usage : `surfaceGloss` (contraste).
+- ISO 14782:2021. Plastics — Determination of haze for transparent materials. https://www.iso.org/standard/81840.html
+  - statut : *vérifiée sur résumé ou source secondaire* (page de l’ISO lue le 2026-10-16, résumé ; confirmée en 2026) ;
+  - usage : `translucency` (contraste ; mesure associée proche, avec ASTM D1003).
+- ISO 13468-1:2019. Plastics — Determination of the total luminous transmittance of transparent materials — Part 1: Single-beam instrument. https://www.iso.org/standard/77312.html
+  - statut : *vérifiée sur résumé ou source secondaire* (page de l’ISO lue le 2026-10-16, résumé ; confirmée en 2024) ;
+  - usage : `translucency` (contraste ; mesure associée indirecte).
+- ISO 21920-2:2021. Geometrical product specifications (GPS) — Surface texture: Profile — Part 2: Terms, definitions and surface texture parameters. https://www.iso.org/standard/72226.html
+  - statut : *vérifiée sur résumé ou source secondaire* (page de l’ISO lue : remplace ISO 4287:1997, retirée le 2021-12-20 avec son amendement 1:2009 et ses rectificatifs 1:1998 et 2:2005, ainsi qu’ISO 13565-2 et -3 ; elle-même au stade « à réviser », 90.92 du 2025-10-07, une ISO/CD 21920-2 en préparation) ;
+  - usage : `texture` (contraste ; mesure associée indirecte : rugosité de profil) ; `localIrregularity` (méthode voisine non retenue).
+- ISO 25178-2:2021. Geometrical product specifications (GPS) — Surface texture: Areal — Part 2: Terms, definitions and surface texture parameters. https://www.iso.org/standard/74591.html
+  - statut : *vérifiée sur résumé ou source secondaire* (page de l’ISO et sommaire de l’extrait public lus ; symboles d’après NPL, Measurement Good Practice Guide No. 116 (2010), table 1, fondé sur le projet ISO 25178-2 ; noms confirmés par le sommaire public de l’édition 2021) ;
+  - usage : `texture` (Sa, Sal), `textureDirectionality` (Str, Std) (contraste ; mesures associées proches) ; `localIrregularity` (méthode voisine non retenue).
+- Petzing, J., Coupland, J. & Leach, R. K. (2010). The Measurement of Rough Surface Topography using Coherence Scanning Interferometry. Measurement Good Practice Guide No. 116. Teddington : National Physical Laboratory. https://eprintspublications.npl.co.uk/4833/1/mgpg116.pdf
+  - statut : *vérifiée sur la source* (guide lu en partie : table 1, « The S parameter set ») ;
+  - usage : `texture`, `textureDirectionality`, `localIrregularity` (contraste ; symboles des paramètres surfaciques).
+- Jensen, H. W., Marschner, S. R., Levoy, M. & Hanrahan, P. (2001). A practical model for subsurface light transport. SIGGRAPH 2001, ACM, 511–518. https://doi.org/10.1145/383259.383319
+  - statut : *vérifiée sur résumé ou source secondaire* (Crossref, résumé OpenAlex) ;
+  - usage : `subsurfaceDepth` (contraste ; mesure associée indirecte, non normalisée : propriétés optiques mesurées par image).
+
+*English version.* Associated measurements of the material group (`mesure` section), for the entries listed above; sources checked on 2026-10-16; titles in their original language. ISO 2813, ASTM D523 and ASTM D1003, listed above, keep their records.
+
+- ASTM D5767-18, Standard Test Method for Instrumental Measurement of Distinctness-of-Image (DOI) Gloss of Coated Surfaces: *checked on abstract or secondary source* (sections 1.1–1.3 and 4.2–4.5 on the publisher’s page); use: `surfaceGloss` (close associated measurement).
+- ASTM E430-19, Standard Test Methods for Measurement of Gloss of High-Gloss Surfaces by Abridged Goniophotometry: *checked on abstract or secondary source* (sections 1.1–1.3 on the publisher’s page); use: `surfaceGloss`.
+- ISO 14782:2021, Plastics — Determination of haze for transparent materials: *ISO page read on 2026-10-16* (abstract); use: `translucency` (close associated measurement, with ASTM D1003).
+- ISO 13468-1:2019, Plastics — Determination of the total luminous transmittance of transparent materials — Part 1: Single-beam instrument: *ISO page read on 2026-10-16* (abstract); use: `translucency` (indirect associated measurement).
+- ISO 21920-2:2021, Geometrical product specifications (GPS) — Surface texture: Profile — Part 2: Terms, definitions and surface texture parameters: *ISO page read* (replaces ISO 4287:1997, withdrawn on 2021-12-20; itself “to be revised”, stage 90.92, 2025-10-07); use: `texture` (indirect associated measurement); `localIrregularity` (not retained).
+- ISO 25178-2:2021, Geometrical product specifications (GPS) — Surface texture: Areal — Part 2: Terms, definitions and surface texture parameters: *ISO page and public table of contents read*; symbols after NPL GPG 116, Table 1; use: `texture` (Sa, Sal), `textureDirectionality` (close associated measurements); `localIrregularity` (not retained).
+- Petzing, J., Coupland, J. & Leach, R. K. (2010), The Measurement of Rough Surface Topography using Coherence Scanning Interferometry, NPL Measurement Good Practice Guide No. 116: *checked against the source* (Table 1 read); use: `texture`, `textureDirectionality`, `localIrregularity` (symbols of the areal parameters, after the draft ISO 25178-2).
+- Jensen, H. W., Marschner, S. R., Levoy, M. & Hanrahan, P. (2001), A practical model for subsurface light transport, SIGGRAPH 2001, 511–518: *checked on abstract*; use: `subsurfaceDepth` (indirect associated measurement, not standardised).
+
 ### Catégorisations de la brillance (spec 2.5)
 <a id="brillance-categorisations"></a>
 
@@ -226,7 +325,7 @@ Recherche du 2026-10-10, avant de fixer les labels de région de `ppp:surfaceGlo
 | Hunter 1937 | six **sortes** de brillance : *specular gloss* (brillant spéculaire), *sheen* (lustre aux angles rasants), *contrast gloss* (brillance de contraste), *absence-of-bloom gloss* (absence de voile), *distinctness-of-reflected-image gloss* (netteté de l'image réfléchie), *absence-of-surface-texture gloss* (absence de texture de surface) | résumé | des sortes, pas des niveaux ; `skos:relatedMatch` avec la netteté de l'image réfléchie |
 | Hunter & Harold 1987 | manuel de la mesure de l'aspect (2e éd.) | comptes rendus (métadonnées) ; contenu non lu | rien de plus que Hunter 1937 |
 | ISO 2813:2014 | géométries de mesure 20°, 60°, 85° | page de l'éditeur ; texte payant | classes « haute / moyenne / basse brillance » par angle : **non vérifiées** |
-| ASTM D523-14(2018) | géométries 60°, 20°, 85° ; « Little information about the relation of numerical-to-perceptual intervals of specular gloss has been published » (§ 5.3) | sections lues sur la page de l'éditeur | aucune classe de niveaux |
+| ASTM D523-14(2018) | géométries 60°, 20°, 85° ; « Little information about the relation of numerical-to-perceptual intervals of specular gloss has been published » (section 5.3) | sections lues sur la page de l'éditeur | aucune classe de niveaux |
 | Pellacini et al. 2000 ; Fleming et al. 2003 ; Wendt et al. 2010 ; Leloup et al. 2014 | dimensions perçues de la brillance ; rôle de l'éclairage, du mouvement et de la disparité ; perception multidimensionnelle, la mesure spéculaire ne suffit pas | résumés | aucune ne nomme de niveaux perçus |
 
 **Conclusion.** Aucune catégorisation reconnue des niveaux ne convient : labels « mat / satiné / brillant / miroir » (décision de l’éditeur du projet), clés inchangées.
@@ -270,6 +369,23 @@ Recherche du 2026-10-10, avant de fixer les labels de région de `ppp:surfaceGlo
   - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : métadonnées Crossref et début du texte (OpenAlex) : jugements de complexité de formes non figuratives par de nombreux sujets, rapportés à des caractéristiques physiques mesurables des formes ; résultats non lus ;
   - usage : `ppp:outlineIndentation` (alimente).
 - Recherche sans autre résultat (2026-10-10, Crossref et OpenAlex) : qualité perçue de l'écart des saturations dans une zone (`ppp:saturationRange`).
+
+<a id="mesures-organisation"></a>
+### Mesures associées du groupe organisation (rubrique `mesure`)
+
+Rubrique `mesure` des fiches publiques d’organisation (`distribution`, `negativeSpace`, `partNesting`, `perceptualDensity`), gabarit de `proposition-rubrique-mesure.md` ; recherche du 2026-10-16. `negativeSpace` et `partNesting` : aucune méthode robuste, aucune source de mesure citée. Clark et Evans (1954), déjà listés plus haut, gardent leur notice ; leur usage s’étend à la rubrique `mesure` de `distribution` (mesure associée indirecte, décrite d’après Krebs, ci-dessous ; article original non lu). Aucun seuil n’est repris.
+
+- Krebs, C. J. (1999). Ecological Methodology, 2e éd. Menlo Park : Benjamin/Cummings, chap. 6 « Spatial Pattern and Indices of Dispersion », p. 191 et suiv. Lu dans la version révisée du chapitre pour la 3e édition en préparation (PDF de l’auteur, 2017) ; édition imprimée non consultée. https://www.zoology.ubc.ca/~krebs/downloads/krebs_chapter_06_2017.pdf
+  - statut : *vérifiée sur la source* (chapitre lu en partie : présentation de l’indice de Clark et Evans, effet des bords) ;
+  - usage : `distribution` (contraste ; source secondaire de la mesure associée indirecte).
+- Rosenholtz, R., Li, Y. & Nakano, L. (2007). Measuring visual clutter. Journal of Vision, 7(2), 17. https://doi.org/10.1167/7.2.17
+  - statut : *vérifiée sur résumé ou source secondaire* (Crossref, résumé OpenAlex ; rapprochement avec la densité perceptive : position de travail) ;
+  - usage : `perceptualDensity` (contraste ; méthode voisine non retenue).
+
+*English version.* Associated measurements of the organisation group (`mesure` section); search of 2026-10-16; titles in their original language. `negativeSpace` and `partNesting`: no robust method, no measurement source cited. Clark and Evans (1954), listed above, keep their record; use extended to `distribution` (indirect associated measurement, described after Krebs; original article not read).
+
+- Krebs, C. J. (1999), Ecological Methodology, 2nd ed., Menlo Park: Benjamin/Cummings, ch. 6 “Spatial Pattern and Indices of Dispersion”, p. 191 ff. Read in the revised version of the chapter for the forthcoming 3rd edition (author’s PDF, 2017); printed edition not consulted: *checked against the source* (chapter read in part); use: `distribution` (secondary source for the indirect associated measurement).
+- Rosenholtz, R., Li, Y. & Nakano, L. (2007), Measuring visual clutter, Journal of Vision 7(2), 17: *checked on abstract*; use: `perceptualDensity` (neighbouring method, not retained).
 
 <a id="groupe-joint"></a>
 <a id="joint-et-assemblage"></a>
@@ -325,7 +441,7 @@ Les relateurs de contraste (P2) comparent deux parties sur une dimension. Les so
 - `ppp:hueContrast` : Itten (*Kunst der Farbe*, 1961) et Albers (*Interaction of Color*, 1963) sont des ouvrages repérés sur la couleur (notices seules, contenu non lu). Le système de Munsell (1905) situe les teintes sur un cercle (« a circuit of hues », passage lu), ce qui donne un sens à « teintes éloignées ». Aucune source trouvée ne propose une échelle perçue du contraste de teinte entre deux zones ; les labels des régions sont ceux de tous les contrastes (T3).
 - `ppp:lightnessContrast` : Le contraste de clarté entre deux zones touche à la perception du clair et du sombre, sujet du livre de Gilchrist (2006), dont le résumé rappelle que la lumière renvoyée par une surface ne dit pas sa nuance de gris (livre non lu). Tamura, Mori et Yamawaki (1978) ont une mesure de contraste calculée sur une image, rapprochée de ce type. Albers (*Interaction of Color*, 1963) est un ouvrage repéré sur l'interaction des couleurs (titre ; contenu non lu).
 - `ppp:scaleContrast` : Les illusions de Delboeuf et d’Ebbinghaus, deux illusions de taille connues où un même cercle paraît plus grand ou plus petit selon les figures qui l’entourent, montrent que la taille vue d’un élément dépend des éléments vus avec lui : la taille apparente d’un cercle change avec la taille et la distance des cercles qui l’entourent (Girgus, Coren et Agdern 1972). On parle de contraste de taille quand deux objets paraissent plus différents qu’ils ne sont, d’assimilation quand ils paraissent plus semblables (Mruczek et al. 2017, résumé lu) ; ces jugements peuvent varier selon la culture : une étude trouve l’illusion d’Ebbinghaus plus faible chez des Himba que chez des Anglais (de Fockert et al. 2007). Aucune source trouvée ne propose une échelle perçue de l’écart de taille entre deux éléments vus ensemble (recherches du 2026-10-10 et du 2026-10-11 : Crossref, Semantic Scholar, OpenAlex) ; les labels des régions sont propres à ce contraste (T34).
-- `ppp:perceptualContrast` : Pour la lumière, le contraste calculé (rapport de luminances : combien de fois une zone est plus lumineuse qu’une autre) ne s’accorde avec le contraste perçu que pour des images simples ; dans une image complexe, le contraste perçu varie d’un endroit à l’autre (Peli 1990, résumé lu), et des observateurs qui comparent deux photographies jugent laquelle est la plus contrastée (Haun et Peli 2013). Aucune source trouvée ne propose un contraste perçu général, valable pour toute dimension comparée (recherches du 2026-10-10 et du 2026-10-11 : Crossref, Semantic Scholar, OpenAlex). Les sources des contrastes spécialisés sont dans leurs fiches.
+- `ppp:perceptualContrast` : Pour la lumière, le contraste calculé (contraste de luminance : écart de luminance entre deux zones, rapporté à la luminance moyenne ou à celle du fond) ne s’accorde avec le contraste perçu que pour des images simples ; dans une image complexe, le contraste perçu varie d’un endroit à l’autre (Peli 1990, résumé lu), et des observateurs qui comparent deux photographies jugent laquelle est la plus contrastée (Haun et Peli 2013). Aucune source trouvée ne propose un contraste perçu général, valable pour toute dimension comparée (recherches du 2026-10-10 et du 2026-10-11 : Crossref, Semantic Scholar, OpenAlex). Les sources des contrastes spécialisés sont dans leurs fiches.
 
 **Références** :
 
@@ -333,7 +449,7 @@ Les relateurs de contraste (P2) comparent deux parties sur une dimension. Les so
   - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : métadonnées Crossref et résumé IEEE Xplore ; deux sources secondaires (docs/etat-de-l-art.md §5 bis) ; texte intégral non lu ;
   - usage : `ppp:textureContrast` (discute); `ppp:lightnessContrast` (alimente).
 - Munsell, A. H. (1905). A Color Notation. Boston : G. H. Ellis ; 2e éd. 1907, Project Gutenberg n° 26054. https://www.gutenberg.org/ebooks/26054
-  - statut : *vérifiée sur la source* ; vérifié sur : texte du Project Gutenberg n° 26054 lu pour les passages cités : « Color has three dimensions » (§ 8) ; « a circuit of hues » (un cercle de teintes, chapitre I) ; cinq teintes principales et cinq intermédiaires ; texte non lu en entier ;
+  - statut : *vérifiée sur la source* ; vérifié sur : texte du Project Gutenberg n° 26054 lu pour les passages cités : « Color has three dimensions » (paragraphe 8) ; « a circuit of hues » (un cercle de teintes, chapitre I) ; cinq teintes principales et cinq intermédiaires ; texte non lu en entier ;
   - usage : `ppp:hueContrast` (alimente).
 - Itten, J. (1961). Kunst der Farbe. Ravensburg : Otto Maier Verlag (éditeur des éditions allemandes de 1967, 1971 et 1979 ; celui de 1961 non vérifié) ; trad. angl. The Art of Color, New York : Reinhold, 1961. https://openlibrary.org/works/OL3134338W
   - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : notice Open Library lue le 2026-10-10 (œuvre OL3134338W) : titre, auteur, première publication 1961 ; éditions allemandes chez O. Maier / Otto Maier Verlag, Ravensburg, en 1967, 1971 et 1979 ; éditions anglaises The Art of Color chez Reinhold, New York, dès 1961 ; aucune édition allemande de 1961 n’y est listée, l’éditeur de 1961 n’est donc pas vérifié ; contenu non lu ;
@@ -359,6 +475,18 @@ Les relateurs de contraste (P2) comparent deux parties sur une dimension. Les so
 - Haun, A. M. & Peli, E. (2013). Perceived contrast in complex images. Journal of Vision, 13(13), 3. https://doi.org/10.1167/13.13.3
   - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : métadonnées Crossref et résumé lu (OpenAlex, 2026-10-11) : des observateurs jugent laquelle de deux photographies a le plus de contraste ; le contraste d’ensemble perçu dépend surtout de certaines fréquences spatiales ; les images aux zones sombres plus sombres sont jugées plus contrastées ; texte non lu ;
   - usage : `ppp:perceptualContrast` (discute).
+
+<a id="mesures-derniers-groupes"></a>
+### Mesures associées des groupes joint, étagement et contrastes (rubrique `mesure`)
+
+Rubrique `mesure` des dernières fiches publiques (`jointSpacing`, `jointLevelOffset`, `perceivedDepth`, `perceptualContrast`, `scaleContrast`) ; recherche du 2026-10-16. Aucune référence nouvelle : les sources citées sont déjà décrites ailleurs dans ce document, avec leur statut.
+
+- ISO 80000-3:2019 (notice : `mesures-forme`) : usage étendu à `jointSpacing` et `jointLevelOffset` (mesures associées proches ; la norme définit la grandeur sans décrire de procédé de mesure ; aucune norme de pose lue) et à `scaleContrast` (méthode voisine non retenue : rapport des dimensions mesurées).
+- Peli (1990) (notice : `mesures-couleur`) : usage étendu à `perceptualContrast` (mesure associée indirecte, dimension de la clarté seulement).
+- Mruczek et al. (2017), déjà dans la fiche `scaleContrast` : cité dans la raison de non-retenue (illusions de Delboeuf et d’Ebbinghaus).
+- Cutting et Vishton (1995), déjà dans la fiche `perceivedDepth` : cité dans la synthèse « aucune méthode robuste » (indices de profondeur qui se combinent).
+
+*English version.* Associated measurements of the joint, layering and contrast groups (`mesure` section); search of 2026-10-16. No new reference: ISO 80000-3:2019 extended to `jointSpacing`, `jointLevelOffset` (close; the standard defines the quantity without describing a measurement procedure) and `scaleContrast` (ratio of measured dimensions, not retained); Peli (1990) extended to `perceptualContrast` (indirect, lightness dimension only); Mruczek et al. (2017) and Cutting and Vishton (1995), already in their entries, cited in `scaleContrast` and `perceivedDepth` (no robust method).
 
 <a id="groupe-gouvernance"></a>
 ## Gouvernance des ontologies ouvertes
@@ -478,7 +606,7 @@ Références de [`famille-toucher-proposition.md`](famille-toucher-proposition.m
   - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : métadonnées Crossref et résumé PubMed (PMID 7714593, résumé tronqué) : surfaces déformables et objets rigides montés sur ressort ; le toucher de la peau suffit pour les premières, pas pour les seconds ;
   - usage : `hardnessToTouch` (alimente ; cas voisin du piège de l'objet creux ou mince : la source traite des objets rigides montés sur ressort, pas des objets creux).
 - Ho, H.-N. (2018). Material recognition based on thermal cues: Mechanisms and applications. Temperature, 5(1), 36–55. https://doi.org/10.1080/23328940.2017.1372042
-  - statut : *vérifiée sur la source* ; vérifié sur : texte intégral (PMC5902225, CC BY), en ligne le 2017-11-10 ; passages relus le 2026-10-12 : le métal paraît plus froid que le bois à la même température ; le froid ressenti n'est pas la température physique ; *contact coefficient* (racine du produit de la conductivité et de la capacité thermiques) ; le mot « effusivité » ne figure pas dans le passage lu ; relu le 2026-10-12 (série 30, texte intégral par Europe PMC) : les températures de départ de la peau et de l'objet décident du sens et de la quantité de chaleur échangée ; le froid est plus net quand on appuie plus fort, et une surface lisse paraît en général plus froide qu'une rugueuse ; un objet épais retire plus de chaleur qu'un mince de la même matière ; ordre inversé entre épais et minces quand la pièce est à 40 °C ; la paume, près du pouce, est plus sensible que le bout des doigts ; refroidissement rapide au contact, puis plus lent ; d'après Katz (1925), l'ordre « plus froid / plus chaud » des matières varie très peu d'une personne à l'autre ;
+  - statut : *vérifiée sur la source* ; vérifié sur : texte intégral (PMC5902225, CC BY), en ligne le 2017-11-10 ; passages relus le 2026-10-12 : le métal paraît plus froid que le bois à la même température ; le froid ressenti n'est pas la température physique ; *contact coefficient* (racine du produit de la conductivité et de la capacité thermiques) ; le mot « effusivité » ne figure pas dans le passage lu ; relu le 2026-10-12 (texte intégral par Europe PMC) : les températures de départ de la peau et de l'objet décident du sens et de la quantité de chaleur échangée ; le froid est plus net quand on appuie plus fort, et une surface lisse paraît en général plus froide qu'une rugueuse ; un objet épais retire plus de chaleur qu'un mince de la même matière ; ordre inversé entre épais et minces quand la pièce est à 40 °C ; la paume, près du pouce, est plus sensible que le bout des doigts ; refroidissement rapide au contact, puis plus lent ; d'après Katz (1925), l'ordre « plus froid / plus chaud » des matières varie très peu d'une personne à l'autre ;
   - usage : `coldToTouch` (fonde ; contre-exemple, homonymes, et raison du passage à trois régions : pas de région « tiède » pour un objet à la température de la pièce, raisonnement fait d'après l'article) ; protocole d'échantillons (conditions du froid : fonde).
 - Ho, H.-N. & Jones, L. A. (2006). Contribution of thermal cues to material discrimination and localization. Perception & Psychophysics, 68(1), 118–128. https://doi.org/10.3758/BF03193662
   - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : métadonnées Crossref et résumé PubMed (PMID 16617836) : discrimination des matériaux par le froid quand leurs propriétés thermiques diffèrent beaucoup ; le résumé ne parle pas d'effusivité ;
@@ -496,7 +624,7 @@ Références de [`famille-toucher-proposition.md`](famille-toucher-proposition.m
   - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : métadonnées Crossref et résumé PubMed (PMID 24691760) : illusion taille-poids ; illusions voisines dues à la matière, la température, la couleur, la forme ;
   - usage : `perceivedWeight` (alimente ; contre-exemple) ; protocole d'échantillons (épreuve sans voir : alimente).
 
-Matériaux souples (série 27, demande de l'éditeur du projet ; vérifiées le 2026-10-12) :
+Matériaux souples (demande de l’éditeur du projet ; vérifiées le 2026-10-12) :
 
 - Peirce, F. T. (1930). The “handle” of cloth as a measurable quantity. Journal of the Textile Institute Transactions, 21(9), T377–T416. https://doi.org/10.1080/19447023008661529
   - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : métadonnées Crossref et résumé (OpenAlex ; page de l'éditeur) : la « main » se juge par des sensations de raideur ou de mollesse (*stiffness or limpness*), de dureté ou de mollesse, de rugosité ou de lissé, la dernière liée au frottement ; la longueur de flexion mesure le tombé ; texte intégral non lu ;
@@ -539,16 +667,16 @@ Fiche rédigée le 2026-10-16 à partir du ticket 4 (`tickets/0004-suggestion-ty
   - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : page de l'ISO lue le 2026-10-16 (échelles A, D, AO, AM ; confirmée en 2024) ; texte non lu ;
   - usage : `hardnessToTouch` (contraste ; mesure associée « proche »).
 - ASTM D2240-15(2021). Standard Test Method for Rubber Property—Durometer Hardness. ASTM International. https://store.astm.org/d2240-15r21.html
-  - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : page de l'éditeur, Scope § 1.1–1.2 lus le 2026-10-16 (douze types de duromètres, dont A, D, O et OO) ; texte non lu ;
+  - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : page de l'éditeur, Scope sections 1.1 et 1.2 lus le 2026-10-16 (douze types de duromètres, dont A, D, O et OO) ; texte non lu ;
   - usage : `hardnessToTouch` (contraste ; mesure associée « proche »).
 - ISO 48-2:2018. Rubber, vulcanized or thermoplastic — Determination of hardness — Part 2: Hardness between 10 IRHD and 100 IRHD. https://www.iso.org/standard/74967.html
-  - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : résumé de la page de l'ISO, lu via l'index de recherche le 2026-10-16 (méthodes N, H, L, M ; dureté apparente des surfaces courbes) ; texte non lu ;
+  - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : page de l’ISO lue le 2026-10-16 (résumé) (méthodes N, H, L, M ; dureté apparente des surfaces courbes) ; texte non lu ;
   - usage : `hardnessToTouch` (contraste ; mesure associée « proche »).
 - ISO 2439:2008. Flexible cellular polymeric materials — Determination of hardness (indentation technique). https://www.iso.org/standard/42717.html
   - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : page de l'ISO lue le 2026-10-16 (méthodes A à E ; mousses à cellules ouvertes ; résultats limités aux conditions de l'essai ; confirmée en 2026) ; texte non lu ;
   - usage : `hardnessToTouch` (contraste ; mesure associée « indirecte »).
 - ISO 6507-1:2023. Metallic materials — Vickers hardness test — Part 1: Test method. https://www.iso.org/standard/83898.html
-  - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : résumé de la page de l'ISO, lu via l'index de recherche le 2026-10-16 ; texte non lu ;
+  - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : page de l’ISO lue le 2026-10-16 (résumé) ; texte non lu ;
   - usage : `hardnessToTouch` (contraste ; méthode non retenue : empreinte permanente dans les métaux). Brinell : norme non consultée, rien ne lui est attribué.
 - U.S. National Park Service (2023). Mohs Hardness Scale. https://www.nps.gov/articles/mohs-hardness-scale.htm
   - statut : *vérifiée sur la source* ; vérifié sur : page lue le 2026-10-16 (résistance relative à la rayure ; dix minéraux, du talc au diamant) ;
@@ -682,6 +810,27 @@ Références de [`famille-odorat-proposition.md`](famille-odorat-proposition.md)
   - usage : facette `air` (appui qualitatif ; la norme ne donne aucun seuil, et une pièce aérée n'a pas pour autant un air sans odeur).
 
 **Piste non lue, pas utilisée comme source** : Poucher (1955), *Journal of the Society of Cosmetic Chemists*, 6 (non trouvé sur Crossref). **Non vérifié** : sources perceptives sur la persistance et la portée de l'odeur d'un objet ; « sillage » et « notes » de la parfumerie ; effet de la température sur l'odeur ; terme « piquant » dans ISO 5492 ; unités de l'olfactométrie.
+
+<a id="mesures-preparation"></a>
+### Mesures associées des fiches en préparation (rubrique `mesure`)
+
+Rubrique `mesure` des huit fiches en préparation (`elementaryShapeCount`, `odourCharacter`, `odourIntensity`, `pitchClarity`, `soundAttack`, `soundDecay`, `soundSharpness`, `textureContrast`) ; recherche du 2026-10-16. Aucune méthode robuste : `elementaryShapeCount`, `odourCharacter`, `pitchClarity` (force de hauteur, Fastl et Stoll 1979, non retenue). Les références déjà décrites ailleurs gardent leur notice : McAdams et al. (1995), Grey (1977), Klatzky et al. (2000), Giordano et McAdams (2006), Fastl et Stoll (1979), ISO 25178-2 et NPL GPG 116 (`mesures-matiere`) ; DIN 45692 (statut de lecture mis à jour : page de DIN Media lue). Aucun seuil n’est repris.
+
+- ASTM E544-18. Standard Practice for Referencing Suprathreshold Odor Intensity. https://store.astm.org/e0544-18.html
+  - statut : *vérifiée sur résumé ou source secondaire* (page de l’éditeur, résumé et Scope, sections 1.1 à 1.5, lus ; texte payant non lu) ;
+  - usage : `odourIntensity` (contraste ; mesure associée proche : intensité rapportée au 1-butanol).
+- EN 13725:2022. Stationary source emissions — Determination of odour concentration by dynamic olfactometry and odour emission rate. https://webstore.ansi.org/preview-pages/BSI/preview_30454302.pdf
+  - statut : *vérifiée sur résumé ou source secondaire* (extrait public de BS EN 13725:2022, domaine d’application, section 1, lu ; texte payant non lu) ;
+  - usage : `odourIntensity` (contraste ; mesure associée indirecte : concentration d’odeur).
+- DIN 45692:2009-08. Messtechnische Simulation der Hörempfindung Schärfe. https://doi.org/10.31030/1521326
+  - statut : *vérifiée sur résumé ou source secondaire* (page de DIN Media lue le 2026-10-16 ; norme non lue) ;
+  - usage : `soundSharpness` (contraste ; mesure associée proche : acuité en acum).
+
+*English version.* Associated measurements of the entries in preparation (`mesure` section); search of 2026-10-16; titles in their original language. No robust method: `elementaryShapeCount`, `odourCharacter`, `pitchClarity` (pitch strength, Fastl and Stoll 1979, not retained). References described elsewhere keep their records.
+
+- ASTM E544-18, Standard Practice for Referencing Suprathreshold Odor Intensity: *public abstract and scope read* (sections 1.1–1.5); use: `odourIntensity` (close associated measurement).
+- EN 13725:2022, Stationary source emissions — Determination of odour concentration by dynamic olfactometry and odour emission rate: *public extract read* (scope, section 1); use: `odourIntensity` (indirect associated measurement).
+- DIN 45692:2009-08, Messtechnische Simulation der Hörempfindung Schärfe: *DIN Media page read*; standard not read; use: `soundSharpness` (close associated measurement, acum).
 
 <a id="groupe-sources-generales"></a>
 <a id="groupe-droits"></a>

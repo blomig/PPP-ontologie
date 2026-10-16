@@ -18,6 +18,24 @@ facettes:
 définition: Degré auquel une forme ou une composition paraît se correspondre, comme dans un miroir, de part et d’autre d’un axe, ou en tournant autour d’un centre.
 question_attentionnelle: La forme paraît-elle symétrique, presque symétrique ou asymétrique ?
 contre_exemple: 'Une frise de motifs identiques qui se suivent dans le même sens (une file d’oiseaux tous tournés vers la droite) est une répétition, pas une symétrie : elle relève de la distribution.'
+mesure:
+  etat: methodes
+  synthese: 'En vision par ordinateur, la symétrie se mesure comme une grandeur continue : la distance de symétrie est le plus petit déplacement des points d’une forme qui la rend symétrique [[zabrodsky1995]].
+    C’est une mesure associée indirecte, calculée sur des points relevés ; elle ne saisit ni l’orientation de l’axe par rapport à l’observateur, ni la distance de vue, ni l’observateur.'
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes:
+  - id: zabrodsky1995
+    nom: distance de symétrie
+    grandeur: plus petit déplacement quadratique moyen des points d’une forme pour obtenir une forme symétrique
+    unite_ou_echelle: distance sans dimension (forme normalisée par sa taille)
+    references:
+    - zabrodsky1995
+    proximite: indirecte
+    ecart: 'géométrique : elle dépend des points relevés et de leur appariement, choisis par l’opérateur, et ne saisit ni l’orientation de l’axe par rapport à l’observateur, ni la distance de vue, ni l’éclairage,
+      ni l’observateur ; méthode de recherche, non normalisée'
+    conditions: points ou contour relevés sur la forme ou son image ; type de symétrie (miroir, rotation) choisi
+    statut_lecture: résumé lu (Zabrodsky et al. 1995, Crossref et OpenAlex)
 modalites:
 - vision
 mode_de_presentation: image
@@ -97,6 +115,16 @@ references:
     continuité, fermeture, symétrie, parallélisme) et nouveaux ; recherches actuelles sur le groupement et l’organisation figure-fond ; texte intégral non lu'
   reprend: la symétrie comme facteur d'organisation perceptive
   ne_reprend_pas: le bilan des mécanismes
+- id: zabrodsky1995
+  citation: Zabrodsky, H., Peleg, S. & Avnir, D. (1995). Symmetry as a continuous feature. IEEE Transactions on Pattern Analysis and Machine Intelligence, 17(12), 1154–1166.
+  doi_ou_url: https://doi.org/10.1109/34.476508
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-16'
+  verifie_sur: 'métadonnées Crossref et résumé (OpenAlex) lus le 2026-10-16 : distance de symétrie, plus petit déplacement quadratique moyen des points d’une forme pour la rendre symétrique ; applicable
+    à tout type de symétrie ; texte intégral non lu'
+  reprend: rien (mesure associée, rubrique « mesure »)
+  ne_reprend_pas: les valeurs de distance de symétrie comme bornes de régions
 etat_de_l_art: 'La perception de la symétrie a une littérature abondante : Treder (2010) [[treder2010]] en fait la revue, centrée sur la symétrie bilatérale (en miroir, de part et d’autre d’un axe). Koning
   et Wagemans (2009) [[koning_wagemans2009]] montrent que symétrie et répétition se détectent différemment selon qu’elles portent sur un objet ou sur deux, ce qui touche directement T9 (la répétition par
   glissement, ou translation). Wagemans et al. (2012) [[wagemans2012]] situent la symétrie parmi les facteurs de groupement. Détail : docs/bibliographie-par-type.md#groupe-forme.'
@@ -133,7 +161,7 @@ modifie_en:
 remplace_par: []
 source_de_la_fiche: paire v0.2 « symétrie / asymétrie », reclassée en régions (spec §9.5)
 manques:
-- 'sorte de symétrie (axiale, centrale) non modélisée en V1 (décision de l’éditeur du projet du 2026-10-14, série 48) ; la translation reste ouverte (T9)'
+- 'sorte de symétrie (axiale, centrale) non modélisée en V1 (décision de l’éditeur du projet du 2026-10-14) ; la translation reste ouverte (T9)'
 - 'exemplaires (lot 1, 2026-10-14) : 2201 asymétrique, 2202 presque symétrique, 2203 symétrique ; relus et validés par la relecture explicative (lot 3 bis, 2026-10-14)'
 bloque_par: []
 a_relire: []

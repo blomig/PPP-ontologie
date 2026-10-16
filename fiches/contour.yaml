@@ -22,6 +22,24 @@ définition: 'Manière dont une zone ou une forme se sépare de ce qui l’entou
 question_attentionnelle: Les bords sont-ils francs, progressifs ou flous ?
 contre_exemple: 'Un bord en pointillé (une ligne de points bien nets) est interrompu, mais pas flou : la continuité du bord est une autre question que sa netteté. La silhouette non plus n’est pas en cause
   : un rond et un carré peuvent avoir tous deux des bords francs, ou tous deux des bords flous.'
+mesure:
+  etat: methodes
+  synthese: 'Aucune norme ne mesure la netteté du passage entre une zone et ce qui l’entoure sur un objet. En vision par ordinateur, on estime sur une image l’épaisseur des contours, donc leur flou [[elder_zucker1998]]
+    : c’est une mesure associée indirecte, qui dépend de la prise de vue autant que de l’objet, et qui ne saisit ni l’observateur ni la distance de vue.'
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes:
+  - id: elder_zucker1998
+    nom: épaisseur du contour estimée sur une image
+    grandeur: échelle de flou d’un bord, estimée localement à partir des variations de luminance de l’image
+    unite_ou_echelle: échelle de flou, en pixels ou en angle (selon l’étalonnage de la prise de vue)
+    references:
+    - elder_zucker1998
+    proximite: indirecte
+    ecart: 'porte sur l’image, pas sur l’objet : la mise au point et les ombres portées y entrent autant que le bord lui-même ; ne saisit ni l’acuité de l’observateur, ni la distance de vue, ni l’éclairage
+      de l’épisode ; méthode de recherche, non normalisée'
+    conditions: image numérique ; bruit du capteur connu ; algorithme choisi
+    statut_lecture: résumé lu (Elder et Zucker 1998, Crossref et OpenAlex)
 modalites:
 - vision
 mode_de_presentation: image
@@ -86,8 +104,8 @@ references:
   statut_verification: vérifiée sur résumé ou source secondaire
   verifie_le: '2026-10-10'
   verifie_sur: métadonnées Crossref et résumé (OpenAlex)
-  reprend: rien
-  ne_reprend_pas: l'estimation calculée du flou d'un bord sur une image
+  reprend: 'rien : l’estimation de l’épaisseur des contours sur une image, citée comme mesure associée indirecte dans la rubrique « mesure »'
+  ne_reprend_pas: 'l’échelle de flou estimée comme borne de région ; l’algorithme de détection des bords'
 etat_de_l_art: 'La netteté d’un bord est étudiée en psychophysique, la mesure de ce que l’on perçoit : Mather et Smith (2002) [[mather_smith2002]] mesurent à quel point on distingue deux degrés de flou,
   et montrent que cette distinction est grossière. En vision par ordinateur, Elder et Zucker (1998) [[elder_zucker1998]] estiment le flou d’un bord sur une image. Aucune source trouvée ne fixe des régions perçues de netteté ; l’échelle retenue (netteté seule, trois régions) est une décision du projet (T7, série 48). Détail : docs/bibliographie-par-type.md#groupe-forme.'
 etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-forme

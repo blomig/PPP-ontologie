@@ -18,6 +18,23 @@ facettes:
 définition: À l’endroit où deux parties d’un objet se rejoignent (le joint), différence de niveau perçue entre leurs deux surfaces, du même plan à une surface qui dépasse nettement l’autre.
 question_attentionnelle: Au joint, les deux surfaces sont-elles au même niveau, ou l’une dépasse-t-elle un peu ou nettement ?
 contre_exemple: 'Une ligne peinte à la jonction de deux surfaces de même niveau n’est pas un décalage. Un écart ouvert entre deux surfaces de même niveau non plus : c’est un espacement au joint.'
+mesure:
+  etat: methodes
+  synthese: 'La différence de niveau entre deux surfaces qui se rejoignent est une longueur, qui se mesure en millimètres [[iso_80000_3]] : c’est une mesure associée proche. La différence perçue dépend
+    aussi de l’éclairage (une lumière rasante la révèle), de la distance de vue et, au toucher, du geste.'
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes:
+  - id: iso_80000_3
+    nom: différence de niveau au joint
+    grandeur: distance entre les plans des deux surfaces, mesurée perpendiculairement à elles, à l’endroit du joint
+    unite_ou_echelle: millimètres
+    references:
+    - iso_80000_3
+    proximite: proche
+    ecart: 'ISO 80000-3 définit la grandeur sans décrire de procédé de mesure ; aucune norme de pose n’a été lue ; une lumière rasante révèle une petite différence qu’un éclairage de face cache ; ne saisit ni la distance de vue, ni l’observateur, ni, au toucher, le geste'
+    conditions: joint accessible ; surfaces à peu près planes ; endroit et instrument de mesure déclarés
+    statut_lecture: résumé public lu (ISO 80000-3)
 modalites:
 - vision
 - toucher
@@ -85,6 +102,15 @@ references:
     de la construction, et l’histoire d’une « poétique de la structure et de la construction » ; recensions indexées par Crossref ; contenu non lu'
   reprend: la construction et l’assemblage comme objet de l’attention en architecture (description de l’éditeur)
   ne_reprend_pas: la poétique de la construction, qui engage une valeur (§0.4) ; le reste du livre (non lu)
+- id: iso_80000_3
+  citation: 'ISO 80000-3:2019. Quantities and units — Part 3: Space and time. Genève : ISO.'
+  doi_ou_url: https://www.iso.org/standard/64974.html
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-16'
+  verifie_sur: 'page de l’ISO lue le 2026-10-16 (noms, symboles, définitions et unités des grandeurs d’espace et de temps ; confirmée en 2023, un amendement de 2025) ; extrait public (aperçu iTeh) lu le 2026-10-16 : rayon de courbure (3-1.12, rayon du cercle osculateur d’une courbe plane, défini pour les courbes au moins deux fois continûment dérivables, en mètres) et courbure (3-2, inverse du rayon de courbure, en m⁻¹) ; texte payant non lu'
+  reprend: rien (mesure associée, rubrique « mesure »)
+  ne_reprend_pas: les valeurs de longueur ou de courbure comme bornes de régions
 etat_de_l_art: 'Comme pour l''écart au joint, les seules sources trouvées viennent de l''architecture (Frascari 1983 [[frascari1983]], titre seul ; Frampton 1995 [[frampton1995]], description de l''éditeur),
   et rien de ce qui en a été lu ne vise une qualité perçue. Aucune source perceptive trouvée sur le décalage de niveau vu au joint (recherche faite le 2026-10-10 : Crossref, Semantic Scholar). Détail :
   docs/bibliographie-par-type.md#groupe-joint.'

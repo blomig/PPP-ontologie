@@ -17,8 +17,22 @@ facettes:
 définition: À quel point on entend dans le son une note précise, qu’on pourrait chanter, ou seulement une hauteur à peu près, ou aucune.
 question_attentionnelle: Pourrait-on chanter ce son, en dire seulement à peu près la hauteur, ou n’a-t-il pas de hauteur ?
 contre_exemple: 'Un son aigu n’a pas pour autant une hauteur nette : un souffle sifflant est aigu sans note (acuité). La justesse d’une note, par rapport à une gamme, n’est pas la netteté de sa hauteur.'
-grandeur_physique_homonyme: 'pitch strength (force de hauteur), mesurée sur une échelle continue (Fastl et Stoll, 1979) [[fastl_stoll1979]] ; rapport harmonique sur bruit : aucune région ne s’en déduit.
-  Homonyme de domaine : la « tonalité » au sens de la musique tonale.'
+mesure:
+  etat: aucune_methode_robuste
+  synthese: 'Aucune méthode de mesure robuste n’est connue pour la netteté avec laquelle on entend une note (recherche du 2026-10-16). La force de hauteur (pitch strength) se mesure par des jugements sur une échelle continue [[fastl_stoll1979]] : ce sont des jugements d’auditeurs, sans référence physique ni procédure normalisée, et ils ne sont pas retenus.'
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes: []
+  non_retenues:
+  - nom: échelle de force de hauteur (pitch strength)
+    references:
+    - fastl_stoll1979
+    raison: 'échelle de jugements d’auditeurs sans référence physique ni procédure normalisée (à la différence d’ASTM E544 pour les odeurs) ; elle ne dit pas si une note peut se chanter'
+    statut_lecture: résumé lu (Fastl et Stoll 1979)
+  - nom: rapport harmonique sur bruit
+    references: []
+    raison: se calcule sur un enregistrement ; aucune source lue ne le relie à la netteté de la note entendue
+    statut_lecture: aucune source lue (décisions de relecture du 2026-10-16)
 modalites:
 - audition
 mode_de_presentation: échantillon
@@ -135,7 +149,7 @@ enonces_testables:
   epreuve: null
 cq_couvertes: CQ1, CQ2
 statut: candidat
-statut_note: 'en préparation (série 50, 2026-10-15) : fiche rédigée, sans exemplaire ; tous les champs rédigés sont à relire'
+statut_note: 'en préparation (2026-10-15) : fiche rédigée, sans exemplaire ; tous les champs rédigés sont à relire'
 statut_epistemique: non éprouvé
 introduit_en: '2.8'
 modifie_en: []
@@ -152,7 +166,6 @@ a_relire:
 - définition
 - question_attentionnelle
 - contre_exemple
-- grandeur_physique_homonyme
 - mode_de_presentation
 - conditions_critiques
 - note_conditions
@@ -167,6 +180,7 @@ a_relire:
 - transfert
 - enonces_testables
 - statut_note
+- mesure
 relecture_explicative:
   date: null
   champs: []

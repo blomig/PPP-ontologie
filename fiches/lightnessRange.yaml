@@ -18,6 +18,25 @@ définition: 'Écart entre les clartés (du plus sombre au plus clair) qu’on v
 question_attentionnelle: Dans cette zone, voit-on une seule clarté, des clartés proches (des gris moyens un peu différents) ou des clartés éloignées (du presque noir et du presque blanc) ?
 contre_exemple: 'Un tissu rouge et vert de même clarté ne montre qu’une clarté : il varie en teinte, pas en clarté. Deux zones qu’on montre du doigt, l’une claire, l’autre sombre, se comparent par un contraste
   de clarté ; l’éventail des clartés dit ce qu’on voit dans toute une zone, sans en choisir deux.'
+mesure:
+  etat: methodes
+  synthese: 'Une étendue de clarté peut se calculer de façon indirecte à partir d’une image colorimétrique ou de mesures de plusieurs zones : écart entre la plus faible et la plus forte valeur de L*. Aucune
+    norme lue ne fixe ce calcul (choix des zones, résolution, exclusion des reflets) : c’est une mesure associée indirecte, dont le résultat dépend de ces choix.'
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes:
+  - id: cie_ilv_cielab
+    nom: étendue des valeurs de L* mesurées
+    grandeur: écart entre la plus faible et la plus forte valeur de L* parmi les zones mesurées
+    unite_ou_echelle: unités L* (e-ILV 17-23-076)
+    references:
+    - cie_ilv_cielab
+    - cie015
+    proximite: indirecte
+    ecart: calcul sur des valeurs ponctuelles, sans norme pour le choix des zones ; ne saisit ni l’observateur, ni l’éclairage de l’épisode, ni la distance, qui décident des zones qu’on distingue et de
+      leur clarté
+    conditions: image colorimétrique calibrée ou mesures de plusieurs zones, observateur et illuminant normalisés
+    statut_lecture: e-ILV lu (17-23-076) ; résumé public lu (CIE 015:2018) ; aucune méthode d’étendue lue
 modalites:
 - vision
 mode_de_presentation: image
@@ -106,6 +125,25 @@ references:
     ; à gris moyen et variance fixés, deux textures se distinguent seulement si la moyenne d’une certaine fonction des gris diffère ; texte non lu'
   reprend: l'idée, appuyée par le résumé, que la vue distingue des plages par la répartition de leurs gris, et pas seulement par leur gris moyen
   ne_reprend_pas: la méthode et ses mesures
+- id: cie015
+  citation: 'CIE (2018). CIE 015:2018 Colorimetry, 4th Edition. Vienne : Commission Internationale de l''Éclairage.'
+  doi_ou_url: https://doi.org/10.25039/TR.015.2018
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: métadonnées et résumé Crossref (observateurs de référence, illuminants, coordonnées d'espace couleur, écarts de couleur) ; texte payant non lu
+  reprend: 'rien (mesure associée, rubrique « mesure » : coordonnées CIELAB et écarts de couleur)'
+  ne_reprend_pas: tout son contenu (non lu) ; aucune région ne se déduit d’une valeur calculée
+- id: cie_ilv_cielab
+  citation: 'CIE S 017:2020, ILV : International Lighting Vocabulary, 2e éd., entrée 17-23-076 « CIE 1976 L*a*b* colour space ». Vienne : CIE (accès libre en ligne, e-ILV).'
+  doi_ou_url: https://cie.co.at/eilvterm/17-23-076
+  role: contraste
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-10-10'
+  verifie_sur: 'entrée lue en ligne le 2026-10-10 : espace couleur CIELAB, coordonnées L*, a*, b* ; note 1 : correspondants approchés de la clarté (L*, « CIE 1976 lightness »), du chroma (« CIE 1976 a,b
+    chroma ») et de la teinte (« CIE 1976 a,b hue angle », hab = arctan(b*/a*))'
+  reprend: 'rien : L*, le chroma et l’angle de teinte y sont des corrélats approchés, calculés ; cités dans la rubrique « mesure »'
+  ne_reprend_pas: l’espace CIELAB et ses formules ; aucune région ne s’en déduit
 etat_de_l_art: 'Tamura, Mori et Yamawaki (1978) [[tamura1978]] calculent l’étalement des niveaux de gris à l’intérieur d’une texture (leur *contrast*), proche de ce type ; Chubb, Econopouly et Landy (1994)
   [[chubb1994]] montrent, sur des textures faites de petites cases grises, que la vue peut distinguer deux plages de même gris moyen et de même dispersion selon la répartition de leurs gris (résumé lu)
   ; Virtanen, Saarela et Olkkonen (2026) [[virtanen2026]] étudient l’effet de la variation de clarté, de chroma (saturation) et de teinte d’une plage sur la couleur moyenne perçue. Aucune source trouvée

@@ -20,7 +20,21 @@ définition: 'Quantité d’éléments ou de détails distincts qu’on perçoit
 question_attentionnelle: Pour sa taille, l’objet ou la zone contient-il peu ou beaucoup d’éléments distincts ?
 contre_exemple: 'Une seule tache rouge très saturée sur un mur blanc attire le regard, mais elle ne fait qu’un élément : le mur compte très peu d’éléments pour sa taille, et ce qui frappe tient à la saturation
   et au contraste. Un enduit finement granuleux ne montre pas d’éléments distincts : sa texture est fine, mais il ne compte pas pour autant beaucoup d’éléments.'
-grandeur_physique_homonyme: masse volumique (densité au sens physique), aucune région ne s’en déduit.
+grandeur_physique_homonyme: 'masse volumique (densité au sens physique), aucune région ne s’en déduit.'
+mesure:
+  etat: aucune_methode_robuste
+  synthese: 'Aucune méthode de mesure robuste de la densité perceptive n’est connue (recherche du 2026-10-16). La masse volumique (densité au sens physique) est une autre grandeur. Des mesures calculées
+    sur une image, proposées pour l’encombrement visuel des écrans et des scènes [[rosenholtz2007]], sont voisines mais conçues pour un autre usage (prédire la difficulté de recherche visuelle) et ne sont
+    pas étalonnées sur ce type : elles ne sont pas retenues.'
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes: []
+  non_retenues:
+  - nom: encombrement visuel calculé sur une image (Feature Congestion, Subband Entropy)
+    references:
+    - rosenholtz2007
+    raison: conçu pour prédire la difficulté de recherche visuelle sur des écrans et des scènes, non étalonné sur ce type ; calculé sur l’image, il ne saisit ni la distance de vue ni l’observateur
+    statut_lecture: résumé lu (Rosenholtz et al. 2007, Crossref et OpenAlex)
 modalites:
 - vision
 mode_de_presentation: image
@@ -94,6 +108,16 @@ references:
   verifie_sur: métadonnées Crossref et résumé (OpenAlex)
   reprend: la densité perçue comme dimension distincte du nombre d'éléments et de leur répartition
   ne_reprend_pas: les mesures d'adaptation et les champs de points
+- id: rosenholtz2007
+  citation: Rosenholtz, R., Li, Y. & Nakano, L. (2007). Measuring visual clutter. Journal of Vision, 7(2), 17.
+  doi_ou_url: https://doi.org/10.1167/7.2.17
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-16'
+  verifie_sur: 'métadonnées Crossref et résumé (OpenAlex) lus le 2026-10-16 (mesures de l’encombrement visuel calculées sur des images, Feature Congestion et Subband Entropy, testées sur la recherche visuelle)
+    ; texte intégral non lu ; rapprochement avec la densité perceptive : position de travail'
+  reprend: rien (méthode voisine non retenue, rubrique « mesure »)
+  ne_reprend_pas: les mesures d’encombrement comme bornes de régions
 etat_de_l_art: 'Durgin (1995) [[durgin1995]] étudie la densité de texture perçue, qu’il distingue du nombre d’éléments et de leur répartition, et montre qu’elle s’adapte : après une longue exposition, la
   densité vue change. La densité au sens physique (masse volumique) est un homonyme. Aucune source trouvée ne fixe des régions perçues de densité. Détail : docs/bibliographie-par-type.md#groupe-organisation.'
 etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-organisation

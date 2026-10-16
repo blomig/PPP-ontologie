@@ -22,6 +22,25 @@ question_attentionnelle: Les reliefs de cette surface vont-ils tous dans le mêm
 contre_exemple: 'Une rangée de piquets alignés va dans un sens, mais ce sont des objets distincts : cela relève de leur distribution, pas de l’orientation d’une texture. Un métal brossé et un velours côtelé
   vont tous deux dans un sens, l’un à reliefs fins, l’autre à reliefs plus gros : la taille des reliefs relève de la texture. Et que les stries soient horizontales ou verticales ne change rien à ce degré.
   Un motif imprimé ou peint sans relief, même orienté (les veines d’un stratifié imprimé « bois »), n’a pas d’orientation de texture : la main n’y sent aucun relief, c’est un motif de teinte et de clarté.'
+mesure:
+  etat: methodes
+  synthese: La métrologie des surfaces calcule, sur une surface relevée, si le relief a une direction privilégiée (rapport d’aspect de la texture, Str) et laquelle (direction de la texture, Std), selon
+    ISO 25178-2. Ce sont des mesures associées proches de ce type ; elles se font sur un petit échantillon, à une échelle fine, et ne saisissent ni la distance de vue, ni l’éclairage, ni l’observateur.
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes:
+  - id: iso_25178_2
+    nom: rapport d’aspect et direction de la texture (Str, Std)
+    grandeur: 'rapport entre la plus courte et la plus longue distance sur laquelle le relief cesse de se ressembler à lui-même, selon la direction (Str, de 0 à 1) ; direction dominante du relief (Std)'
+    unite_ou_echelle: Str entre 0 et 1, sans dimension ; Std, angle en degrés
+    references:
+    - iso_25178_2
+    - npl_gpg116
+    proximite: proche
+    ecart: calculés sur une petite surface relevée, à une échelle souvent plus fine que celle qu’on voit ou qu’on sent ; ne saisissent ni la distance de vue, ni l’éclairage (une lumière rasante dans le
+      sens des stries les fait ressortir ou disparaître), ni l’observateur, ni, au toucher, le sens du geste
+    conditions: surface relevée par un instrument surfacique ; zone d’évaluation et filtres fixés par l’opérateur et la norme
+    statut_lecture: 'résumé public lu (page de l’ISO ; sommaire de l’extrait public, sections 4.3.3 et 4.3.4) ; symboles d’après NPL, Measurement Good Practice Guide No. 116 (2010), table 1, fondé sur le projet ISO 25178-2 ; noms confirmés par le sommaire public de l’édition 2021'
 modalites:
 - vision
 - toucher
@@ -108,6 +127,26 @@ references:
     présentées comme approchant les trois dimensions les plus importantes de la perception de la texture ; texte intégral non lu'
   reprend: la direction comme composante séparée de la texture d'une image
   ne_reprend_pas: 'le modèle de Wold et ses mesures : non repris'
+- id: iso_25178_2
+  citation: 'ISO 25178-2:2021. Geometrical product specifications (GPS) — Surface texture: Areal — Part 2: Terms, definitions and surface texture parameters. Genève : ISO.'
+  doi_ou_url: https://www.iso.org/standard/74591.html
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-16'
+  verifie_sur: 'page de l’ISO lue le 2026-10-16 (paramètres d’état de surface par méthodes surfaciques ; édition 2, 2021-12) ; sommaire de l’extrait public lu (hauteur moyenne arithmétique, section 4.2.8 ; longueur d’autocorrélation, section 4.3.2 ; rapport d’aspect de la texture, section 4.3.3 ; direction de la texture, section 4.3.4) ; symboles d’après NPL, Measurement Good Practice Guide No. 116 (2010), table 1, fondé sur le projet ISO 25178-2 ; noms confirmés par le sommaire public de l’édition 2021 ; texte payant non lu'
+  reprend: rien (mesure associée, rubrique « mesure »)
+  ne_reprend_pas: les valeurs des paramètres comme bornes de régions
+- id: npl_gpg116
+  citation: 'Petzing, J., Coupland, J. & Leach, R. K. (2010). The Measurement of Rough Surface Topography using Coherence Scanning Interferometry. Measurement Good Practice Guide No. 116. Teddington : National
+    Physical Laboratory.'
+  doi_ou_url: https://eprintspublications.npl.co.uk/4833/1/mgpg116.pdf
+  role: contraste
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-10-16'
+  verifie_sur: 'guide lu en partie le 2026-10-16 (PDF du NPL) : table 1, « The S parameter set » (Sa, hauteur moyenne arithmétique, µm ; Sal, longueur d’autocorrélation, µm ; Str, rapport d’aspect de la
+    texture ; Std, direction de la texture, degrés) ; le guide suit les projets de normes ISO 25178 alors en préparation'
+  reprend: 'rien : les symboles et noms des paramètres surfaciques, cités dans la rubrique « mesure »'
+  ne_reprend_pas: les valeurs des paramètres comme bornes de régions ; les procédés d’interférométrie
 etat_de_l_art: 'La direction commune des reliefs est l''une des six dimensions de Tamura, Mori et Yamawaki (1978) [[tamura1978]], mesurée sur une image (*directionality*). Liu et Picard (1996) [[liu_picard1996]]
   en font l''une des trois composantes d''un modèle d''image (périodicité, direction, caractère aléatoire). Aucune source trouvée ne limite l''orientation aux reliefs, comme le fait PPP (T26). Détail :
   docs/bibliographie-par-type.md#groupe-texture.'

@@ -20,6 +20,13 @@ définition: Degré auquel les espaces laissés libres entre les éléments d’
 question_attentionnelle: Les espaces laissés libres entre les éléments se lisent-ils, eux aussi, comme des formes ?
 contre_exemple: 'Une page blanche sans rien dessus n’a pas d’espace négatif : sans éléments, il n’y a pas d’intervalles à lire comme des formes (sa densité est « uniforme »). Une page peu dense n’a pas
   pour autant un espace négatif marqué : tout dépend de la forme des intervalles.'
+mesure:
+  etat: aucune_methode_robuste
+  synthese: Aucune méthode de mesure robuste n’est connue pour le degré auquel les espaces libres se lisent comme des formes (recherche du 2026-10-16). Le fait qu’un vide se lise comme une forme ou comme
+    un fond dépend de l’observateur et du contexte.
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes: []
 modalites:
 - vision
 mode_de_presentation: image
