@@ -12,6 +12,7 @@
 - **Date** : celle de la version (en-tête de la spécification).
 - **Adresse** : dépôt public `PPP-ontologie`, https://github.com/blomig/PPP-ontologie ; site (GitHub Pages) : https://blomig.github.io/PPP-ontologie (adresses retenues par l'éditeur du projet, série 10 ; constat du 2026-10-11 à 14 h 58, heure de Paris : les deux adresses répondent 404 sans connexion, ce qui ne prouve pas l'absence d'un dépôt privé ; elles sont donc données comme adresses retenues). Le dépôt de travail est privé ; son adresse n'est pas citée.
 - **Identifiant pérenne** : aucun DOI à ce jour ; il reste à renseigner, car il dépend de Zenodo (l'adresse du site est retenue : voir « Adresse »). *Position de travail, à trancher* : archiver le dépôt public dans Zenodo, qui attribue un DOI à chaque *release* GitHub et lit `CITATION.cff` (GitHub Docs, « Referencing and citing content », https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content ; Zenodo, « CITATION.cff file », https://help.zenodo.org/docs/github/describe-software/citation-file/ ; consultés le 2026-10-11 : Zenodo n'accède qu'aux dépôts publics ; un fichier `.zenodo.json`, s'il existe, prend le pas sur `CITATION.cff`). Aucun DOI n'est inventé ici.
+- **Contact du responsable (w3id)** : Lomig Unger, lomig.unger@gmail.com, compte GitHub `blomig` (confirmé par le porteur du projet le 2026-10-16, pour le dossier `docs/w3id/`).
 
 ## Citer une fiche (un type)
 

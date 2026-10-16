@@ -9,7 +9,9 @@
 @prefix ppp: <https://w3id.org/ppp/> .
 
 <https://w3id.org/ppp/>
-    a skos:ConceptScheme ;
+    a skos:ConceptScheme ,
+        owl:Ontology ;
+    owl:versionIRI <https://w3id.org/ppp/2.8> ;
     dct:title "PPP — Propriétés Perceptuelles Pertinentes : spécification d'ontologie"@fr ,
         "PPP — Relevant Perceptual Properties: ontology specification"@en ;
     skos:prefLabel "PPP — Propriétés Perceptuelles Pertinentes"@fr ,
@@ -1008,7 +1010,7 @@ ppp:hueCount
     skos:topConceptOf <https://w3id.org/ppp/> ;
     ppp:measurementState <https://w3id.org/ppp/mesure/etat/aucune-methode-robuste> ;
     ppp:measurementSummary "Aucune méthode robuste de mesure associée au nombre de teintes vues n’est connue (recherche du 2026-10-16). On peut calculer un angle de teinte en chaque point d’une image colorimétrique, mais le découpage de ces angles en teintes distinctes et le choix des zones ne sont fixés par aucune norme lue : c’est une méthode voisine, non retenue."@fr ,
-        "No robust associated measurement method for the number of hues seen is known (search of 2026-10-16). A hue angle can be computed at each point of a colorimetric image, but the division of these angles into distinct hues and the choice of areas are set by no standard read: it is a neighbouring method, not retained."@en ;
+        "No robust associated measurement method for the number of hues seen is known (search of 2026-10-16). A hue angle can be computed at each point of a colorimetric image, but no standard consulted sets the division of these angles into distinct hues or the choice of areas: it is a neighbouring method, not retained."@en ;
     ppp:measurementCaveat "Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen."@fr ,
         "The regions of this entry remain perceptual: they describe what an observer sees, hears, smells or feels by touch under the declared conditions. An associated measurement can inform an observation, but it does not set the boundaries of the regions and does not replace examination."@en ;
     ppp:notRetainedMeasure <https://w3id.org/ppp/hueCount/mesure/non-retenue-1> ;
@@ -1022,7 +1024,7 @@ ppp:hueCount
     rdfs:label "classement des angles de teinte hab d’une image en teintes"@fr ,
         "classification of the hue angles hab of an image into hues"@en ;
     ppp:reason "aucune norme lue ne fixe les classes de teinte ni le découpage de l’image en zones ; le résultat dépend de ces choix, de l’éclairage et de la distance, et ne saisit pas ce que l’observateur regroupe d’un coup d’œil"@fr ,
-        "no standard read sets the hue classes or the division of the image into areas; the result depends on these choices, on lighting and on distance, and does not capture what the observer groups at a glance"@en ;
+        "no standard consulted sets the hue classes or the division of the image into areas; the result depends on these choices, on lighting and on distance, and does not capture what the observer groups at a glance"@en ;
     dct:bibliographicCitation "CIE S 017:2020, ILV : International Lighting Vocabulary, 2e éd., entrée 17-23-076 « CIE 1976 L*a*b* colour space ». Vienne : CIE (accès libre en ligne, e-ILV)." .
 
 <https://w3id.org/ppp/hueCount/echelle>

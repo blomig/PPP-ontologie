@@ -160,7 +160,13 @@
  "@graph": [
   {
    "@id": "https://w3id.org/ppp/",
-   "@type": "skos:ConceptScheme",
+   "@type": [
+    "skos:ConceptScheme",
+    "owl:Ontology"
+   ],
+   "owl:versionIRI": {
+    "@id": "https://w3id.org/ppp/2.8"
+   },
    "dct_title": {
     "fr": "PPP — Propriétés Perceptuelles Pertinentes : spécification d'ontologie",
     "en": "PPP — Relevant Perceptual Properties: ontology specification"
@@ -1818,7 +1824,7 @@
    "measurementState": "https://w3id.org/ppp/mesure/etat/aucune-methode-robuste",
    "measurementSummary": {
     "fr": "Aucune méthode robuste de mesure associée au nombre de teintes vues n’est connue (recherche du 2026-10-16). On peut calculer un angle de teinte en chaque point d’une image colorimétrique, mais le découpage de ces angles en teintes distinctes et le choix des zones ne sont fixés par aucune norme lue : c’est une méthode voisine, non retenue.",
-    "en": "No robust associated measurement method for the number of hues seen is known (search of 2026-10-16). A hue angle can be computed at each point of a colorimetric image, but the division of these angles into distinct hues and the choice of areas are set by no standard read: it is a neighbouring method, not retained."
+    "en": "No robust associated measurement method for the number of hues seen is known (search of 2026-10-16). A hue angle can be computed at each point of a colorimetric image, but no standard consulted sets the division of these angles into distinct hues or the choice of areas: it is a neighbouring method, not retained."
    },
    "measurementCaveat": {
     "fr": "Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.",
@@ -1841,7 +1847,7 @@
    },
    "reason": {
     "fr": "aucune norme lue ne fixe les classes de teinte ni le découpage de l’image en zones ; le résultat dépend de ces choix, de l’éclairage et de la distance, et ne saisit pas ce que l’observateur regroupe d’un coup d’œil",
-    "en": "no standard read sets the hue classes or the division of the image into areas; the result depends on these choices, on lighting and on distance, and does not capture what the observer groups at a glance"
+    "en": "no standard consulted sets the hue classes or the division of the image into areas; the result depends on these choices, on lighting and on distance, and does not capture what the observer groups at a glance"
    },
    "dct:bibliographicCitation": "CIE S 017:2020, ILV : International Lighting Vocabulary, 2e éd., entrée 17-23-076 « CIE 1976 L*a*b* colour space ». Vienne : CIE (accès libre en ligne, e-ILV)."
   },
