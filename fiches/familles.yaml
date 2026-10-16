@@ -82,7 +82,7 @@ familles:
     a_relire: []
     relecture_explicative: {date: "2026-10-12", champs: [introduction]}
     types: [ppp:texture, ppp:textureContrast, ppp:textureDirectionality, ppp:localIrregularity,
-            ppp:curvature, ppp:jointLevelOffset, ppp:elementaryShapeCount]
+            ppp:curvature, ppp:jointLevelOffset, ppp:elementaryShapeCount, ppp:hardnessToTouch]   # série 54 (2026-10-16) : hardnessToTouch, première fiche propre au toucher (en préparation, à relire ; ticket 4)
   - cle: son
     label_fr: Son
     label_en: sound

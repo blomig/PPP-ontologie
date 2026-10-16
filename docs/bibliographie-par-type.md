@@ -412,7 +412,7 @@ Sources sur la manière dont des ontologies et vocabulaires ouverts reçoivent l
   - usage : `docs/depot-public.md` (alimente).
 
 <a id="groupe-toucher"></a>
-## Toucher (proposition de famille, série 24 ; aucune fiche)
+## Toucher (proposition de famille, série 24 ; une fiche en préparation, série 54)
 
 Références de [`famille-toucher-proposition.md`](famille-toucher-proposition.md) et de [`protocole-echantillons-toucher.md`](protocole-echantillons-toucher.md) (série 30), vérifiées le 2026-10-12 (métadonnées Crossref, résumés PubMed ou OpenAlex ; notes de la relecture explicative recoupées). Aucune fiche n'existe encore : l'usage renvoie aux types **proposés** (ids non enregistrés).
 
@@ -524,6 +524,35 @@ Matériaux souples (série 27, demande de l'éditeur du projet ; vérifiées le 
 - ISO 11036:2020, *Sensory analysis — Methodology — Texture profile*. Statut : page de l'ISO lue par la relecture explicative ; texte non lu. Sert seulement à signaler l'homonyme de domaine « texture » (en analyse sensorielle, elle inclut la dureté) ; le détail des attributs reste à vérifier.
 - Jones, L. A. (1986). Perception of force and weight: Theory and research. Psychological Bulletin, 100(1), 29–42. https://doi.org/10.1037/0033-2909.100.1.29. Statut : métadonnées Crossref seulement (aucun résumé trouvé) ; non citée.
 - Kawabata, S. (éd.), *The Standardization and Analysis of Hand Evaluation*, 2e éd., Hand Evaluation and Standardization Committee, The Textile Machinery Society of Japan, Osaka (date de la 2e édition non vérifiée) ; réimpr. en annexe de Behery (éd.), *Effect of Mechanical and Physical Properties on Fabric Hand*, Woodhead, 2005, https://doi.org/10.1533/9781845690984.appendix_a. Statut : métadonnées Crossref seulement (réimpression) ; contenu connu par Mahar et al. (1990) ; non citée directement.
+
+### Dureté au toucher : fiche `ppp:hardnessToTouch` (série 54, en préparation)
+
+Fiche rédigée le 2026-10-16 à partir du ticket 4 (`tickets/0004-suggestion-type.md`). Références déjà listées ci-dessus et reprises par la fiche : Srinivasan et LaMotte (1995, relu le 2026-10-16 : rôle `fonde`), Bergmann Tiest et Kappers (2006 ; 2009a), Klatzky et Reed (2009). Nouvelles références :
+
+- Harper, R. & Stevens, S. S. (1964). Subjective hardness of compliant materials. Quarterly Journal of Experimental Psychology, 16, 204–215. https://doi.org/10.1080/17470216408416370
+  - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : métadonnées Crossref et résumé (OpenAlex) lus le 2026-10-16 : neuf matières souples, de l'éponge au bloc de caoutchouc ; la dureté jugée suit une loi de puissance de la dureté physique (force sur enfoncement) ; jugements de mollesse à peu près réciproques ; texte intégral non lu ;
+  - usage : `hardnessToTouch` (alimente ; une seule dimension dureté–mollesse ; rubrique `mesure`).
+
+**Mesures associées** (rubrique `mesure` de la fiche, gabarit de la série 53 ; normes payantes, résumés publics seulement) :
+
+- ISO 48-4:2018. Rubber, vulcanized or thermoplastic — Determination of hardness — Part 4: Indentation hardness by durometer method (Shore hardness). https://www.iso.org/standard/74969.html
+  - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : page de l'ISO lue le 2026-10-16 (échelles A, D, AO, AM ; confirmée en 2024) ; texte non lu ;
+  - usage : `hardnessToTouch` (contraste ; mesure associée « proche »).
+- ASTM D2240-15(2021). Standard Test Method for Rubber Property—Durometer Hardness. ASTM International. https://store.astm.org/d2240-15r21.html
+  - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : page de l'éditeur, Scope § 1.1–1.2 lus le 2026-10-16 (douze types de duromètres, dont A, D, O et OO) ; texte non lu ;
+  - usage : `hardnessToTouch` (contraste ; mesure associée « proche »).
+- ISO 48-2:2018. Rubber, vulcanized or thermoplastic — Determination of hardness — Part 2: Hardness between 10 IRHD and 100 IRHD. https://www.iso.org/standard/74967.html
+  - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : résumé de la page de l'ISO, lu via l'index de recherche le 2026-10-16 (méthodes N, H, L, M ; dureté apparente des surfaces courbes) ; texte non lu ;
+  - usage : `hardnessToTouch` (contraste ; mesure associée « proche »).
+- ISO 2439:2008. Flexible cellular polymeric materials — Determination of hardness (indentation technique). https://www.iso.org/standard/42717.html
+  - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : page de l'ISO lue le 2026-10-16 (méthodes A à E ; mousses à cellules ouvertes ; résultats limités aux conditions de l'essai ; confirmée en 2026) ; texte non lu ;
+  - usage : `hardnessToTouch` (contraste ; mesure associée « indirecte »).
+- ISO 6507-1:2023. Metallic materials — Vickers hardness test — Part 1: Test method. https://www.iso.org/standard/83898.html
+  - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : résumé de la page de l'ISO, lu via l'index de recherche le 2026-10-16 ; texte non lu ;
+  - usage : `hardnessToTouch` (contraste ; méthode non retenue : empreinte permanente dans les métaux). Brinell : norme non consultée, rien ne lui est attribué.
+- U.S. National Park Service (2023). Mohs Hardness Scale. https://www.nps.gov/articles/mohs-hardness-scale.htm
+  - statut : *vérifiée sur la source* ; vérifié sur : page lue le 2026-10-16 (résistance relative à la rayure ; dix minéraux, du talc au diamant) ;
+  - usage : `hardnessToTouch` (contraste ; homonyme de domaine, méthode non retenue).
 
 <a id="groupe-son"></a>
 ## Son (proposition de famille, séries 41 et 42 ; aucune fiche)

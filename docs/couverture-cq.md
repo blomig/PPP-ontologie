@@ -4,15 +4,15 @@ Une question de compétence est une question à laquelle l’ontologie doit savo
 
 *Généré par `python3 fiches/couverture_cq.py --ecrire` ; ne pas corriger à la main. Les questions viennent de la spécification (§6). « Fiches qui disent y répondre » : la fiche nomme la question dans son champ `cq_couvertes` ; le tableau ne juge pas si c’est fondé. Une fiche est « publique » quand le site la publie ; les autres sont « en préparation ». « Couverte par un champ du patron » : pour quelques questions, un champ que toute fiche doit remplir (le patron de fiche, `PPP_FicheType.md`) y répond ; le tableau compte les fiches où ce champ est réellement rempli.*
 
-**50 questions** ; **37 fiches** (29 publiques, 8 en préparation).
+**50 questions** ; **38 fiches** (29 publiques, 9 en préparation).
 
 ## Par question
 
 | Question | Énoncé (début) | Fiches publiques qui disent y répondre | Fiches en préparation qui disent y répondre | Couverte par un champ du patron |
 |---|---|---|---|---|
-| CQ1 | Quelles qualités perceptives de cet objet peuvent faire l’objet d’une attention ? | `contour`, `curvature`, `distribution`, `hue`, `hueContrast`, `hueCount`, `hueRange`, `jointLevelOffset`, `jointSpacing`, `lightness`, `lightnessContrast`, `lightnessRange`, `localIrregularity`, `negativeSpace`, `outlineIndentation`, `partNesting`, `perceivedDepth`, `perceivedSize`, `perceptualContrast`, `perceptualDensity`, `saturation`, `saturationRange`, `scaleContrast`, `subsurfaceDepth`, `surfaceGloss`, `symmetry`, `texture`, `textureDirectionality`, `translucency` | `elementaryShapeCount`, `odourCharacter`, `odourIntensity`, `pitchClarity`, `soundAttack`, `soundDecay`, `soundSharpness`, `textureContrast` | — |
-| CQ2 | Pour une qualité donnée, où se situe l’objet sur son espace de valeurs ? | `contour`, `curvature`, `distribution`, `hue`, `hueContrast`, `hueCount`, `hueRange`, `jointLevelOffset`, `jointSpacing`, `lightness`, `lightnessContrast`, `lightnessRange`, `localIrregularity`, `negativeSpace`, `outlineIndentation`, `partNesting`, `perceivedDepth`, `perceivedSize`, `perceptualContrast`, `perceptualDensity`, `saturation`, `saturationRange`, `scaleContrast`, `subsurfaceDepth`, `surfaceGloss`, `symmetry`, `texture`, `textureDirectionality`, `translucency` | `elementaryShapeCount`, `odourCharacter`, `odourIntensity`, `pitchClarity`, `soundAttack`, `soundDecay`, `soundSharpness`, `textureContrast` | — |
-| CQ3 | Cette qualité est-elle une propriété du tout, d’une partie, ou d’une relation entre … | — | — | arité, porteur : 29 fiches publiques sur 29, 8 en préparation sur 8 |
+| CQ1 | Quelles qualités perceptives de cet objet peuvent faire l’objet d’une attention ? | `contour`, `curvature`, `distribution`, `hue`, `hueContrast`, `hueCount`, `hueRange`, `jointLevelOffset`, `jointSpacing`, `lightness`, `lightnessContrast`, `lightnessRange`, `localIrregularity`, `negativeSpace`, `outlineIndentation`, `partNesting`, `perceivedDepth`, `perceivedSize`, `perceptualContrast`, `perceptualDensity`, `saturation`, `saturationRange`, `scaleContrast`, `subsurfaceDepth`, `surfaceGloss`, `symmetry`, `texture`, `textureDirectionality`, `translucency` | `elementaryShapeCount`, `hardnessToTouch`, `odourCharacter`, `odourIntensity`, `pitchClarity`, `soundAttack`, `soundDecay`, `soundSharpness`, `textureContrast` | — |
+| CQ2 | Pour une qualité donnée, où se situe l’objet sur son espace de valeurs ? | `contour`, `curvature`, `distribution`, `hue`, `hueContrast`, `hueCount`, `hueRange`, `jointLevelOffset`, `jointSpacing`, `lightness`, `lightnessContrast`, `lightnessRange`, `localIrregularity`, `negativeSpace`, `outlineIndentation`, `partNesting`, `perceivedDepth`, `perceivedSize`, `perceptualContrast`, `perceptualDensity`, `saturation`, `saturationRange`, `scaleContrast`, `subsurfaceDepth`, `surfaceGloss`, `symmetry`, `texture`, `textureDirectionality`, `translucency` | `elementaryShapeCount`, `hardnessToTouch`, `odourCharacter`, `odourIntensity`, `pitchClarity`, `soundAttack`, `soundDecay`, `soundSharpness`, `textureContrast` | — |
+| CQ3 | Cette qualité est-elle une propriété du tout, d’une partie, ou d’une relation entre … | — | — | arité, porteur : 29 fiches publiques sur 29, 9 en préparation sur 9 |
 | CQ4 | Quelles qualités sont intégrales (on ne juge pas l’une sans l’autre) et lesquelles sont … | — | — | — |
 | CQ4a | Pour chaque type du cœur : non applicable / applicable non pertinent / applicable et … | `perceptualDensity`, `texture` | — | — |
 | CQ4b | Si pertinent : quelle valeur, dans quel format (étiquette verbale, ordinal, numérique) … | `perceptualDensity`, `texture` | — | — |
@@ -22,7 +22,7 @@ Une question de compétence est une question à laquelle l’ontologie doit savo
 | CQ5 | Dans cet échange ou cette observation, à quelles propriétés l’attention s’est-elle portée … | — | — | — |
 | CQ6 | Lesquelles ont fait une différence (pertinence effective, rôle PPP) ? | — | — | — |
 | CQ7 | L’attention était-elle focalisée sur un objet et distribuée sur plusieurs de ses … | — | — | — |
-| CQ8 | Deux personnes parlent-elles de la même qualité, ou de deux qualités distinctes sous le … | — | — | relation confusableWith : 24 fiches publiques sur 29, 4 en préparation sur 8 |
+| CQ8 | Deux personnes parlent-elles de la même qualité, ou de deux qualités distinctes sous le … | — | — | relation confusableWith : 24 fiches publiques sur 29, 5 en préparation sur 9 |
 | CQ8a | Par quelles qualités et quelles relations entre parties cette forme se caractérise-t-elle … | `hueContrast`, `jointLevelOffset`, `jointSpacing`, `lightnessContrast`, `perceptualContrast`, `scaleContrast` | `elementaryShapeCount`, `textureContrast` | — |
 | CQ8b | Quelles qualités formelles décrivent le joint entre ces deux matières (espacement, … | `jointLevelOffset`, `jointSpacing`, `lightnessContrast`, `perceptualContrast` | — | — |
 | CQ8c | Une configuration du poster se décrit-elle entièrement par des types déjà là (limite, … | — | — | — |
@@ -49,17 +49,17 @@ Une question de compétence est une question à laquelle l’ontologie doit savo
 | CQ23 | Cette proposition est-elle évaluable dans K (vrai, faux, non tranché à propos d’un objet) … | `perceptualDensity` | — | — |
 | CQ24 | Quelles dimensions PPP peuvent servir d’attributs de partition pour expanser C ? | `perceptualDensity` | — | — |
 | CQ25 | Quelle connaissance K (fiche, type, contrainte) autorise ou interdit une conjonction dans … | — | — | — |
-| CQ16a | Ce type s’applique-t-il, sans redéfinition, à un tableau ? à un ustensile de cuisine ? à … | `perceptualDensity` | — | transfert : 29 fiches publiques sur 29, 8 en préparation sur 8 |
+| CQ16a | Ce type s’applique-t-il, sans redéfinition, à un tableau ? à un ustensile de cuisine ? à … | `perceptualDensity` | — | transfert : 29 fiches publiques sur 29, 9 en préparation sur 9 |
 | CQ16b | Ce qui ne se transfère pas est-il un type du cœur, ou un fait d’application (cette … | — | — | — |
 | CQ16c | Une fiche tableau / cuisine / high-tech peut-elle se remplir avec les mêmes cases qu’une … | — | — | — |
-| CQ17 | Pourquoi ce terme entre-t-il dans le cœur (test Nanay + non-redondance + transfert) ? | — | — | nanay, transfert, relations : 27 fiches publiques sur 29, 4 en préparation sur 8 |
+| CQ17 | Pourquoi ce terme entre-t-il dans le cœur (test Nanay + non-redondance + transfert) ? | — | — | nanay, transfert, relations : 27 fiches publiques sur 29, 5 en préparation sur 9 |
 | CQ18 | Ce terme est-il un type de qualité, une région de valeurs, une relation, une gestalt, ou … | — | — | — |
-| CQ26 | Ce type est-il formel ou semi-formel ? S’il est semi-formel, quelle est sa base de … | — | — | strate, base_dependance : 29 fiches publiques sur 29, 8 en préparation sur 8 |
-| CQ27 | Cette base contient-elle des facteurs non perceptuels (catégorie d’œuvre, titre, … | — | — | base_dependance.facteurs_non_perceptuels : 29 fiches publiques sur 29, 8 en préparation sur 8 |
+| CQ26 | Ce type est-il formel ou semi-formel ? S’il est semi-formel, quelle est sa base de … | — | — | strate, base_dependance : 29 fiches publiques sur 29, 9 en préparation sur 9 |
+| CQ27 | Cette base contient-elle des facteurs non perceptuels (catégorie d’œuvre, titre, … | — | — | base_dependance.facteurs_non_perceptuels : 29 fiches publiques sur 29, 9 en préparation sur 9 |
 | CQ28 | Ce label, cette région, cette définition passent-ils le test de neutralité (§0.4) ? Cette … | — | — | — |
-| CQ29 | Quels énoncés testables (E1–E6) ce type engage-t-il ? Lesquels ont été mis à l’épreuve, … | — | — | enonces_testables : 29 fiches publiques sur 29, 8 en préparation sur 8 |
+| CQ29 | Quels énoncés testables (E1–E6) ce type engage-t-il ? Lesquels ont été mis à l’épreuve, … | — | — | enonces_testables : 29 fiches publiques sur 29, 9 en préparation sur 9 |
 | CQ30 | Dans cet épisode, quelle est la cible (objet ou partie), sous quelles conditions et par … | — | — | — |
-| CQ31 | Dans quelles conditions de perception (présentation, lumière, distance, angle, durée ; … | — | — | conditions_critiques : 25 fiches publiques sur 29, 8 en préparation sur 8 (en partie) |
+| CQ31 | Dans quelles conditions de perception (présentation, lumière, distance, angle, durée ; … | — | — | conditions_critiques : 25 fiches publiques sur 29, 9 en préparation sur 9 (en partie) |
 
 ## Exemplaires par fiche publique
 
@@ -70,13 +70,13 @@ Un exemplaire place un objet réel (photo publiée) sur l’échelle d’une qua
 | `contour` | CQ1, CQ2 | 4 | 4 |
 | `curvature` | CQ1, CQ2 | 4 | 4 |
 | `distribution` | CQ1, CQ2 | 4 | 3 |
-| `hue` | CQ1, CQ2 | 3 | 3 |
+| `hue` | CQ1, CQ2 | 7 | 7 |
 | `hueContrast` | CQ1, CQ2, CQ8a | 4 | 4 |
 | `hueCount` | CQ1, CQ2 | 5 | 4 |
 | `hueRange` | CQ1, CQ2 | 5 | 5 |
 | `jointLevelOffset` | CQ1, CQ2, CQ8a, CQ8b | 2 | 1 |
 | `jointSpacing` | CQ1, CQ2, CQ8a, CQ8b | 5 | 3 |
-| `lightness` | CQ1, CQ2 | 3 | 3 |
+| `lightness` | CQ1, CQ2 | 4 | 4 |
 | `lightnessContrast` | CQ1, CQ2, CQ8a, CQ8b, CQ12a | 5 | 5 |
 | `lightnessRange` | CQ1, CQ2 | 4 | 4 |
 | `localIrregularity` | CQ1, CQ2 | 3 | 3 |

@@ -140,18 +140,18 @@ source: github
 github_issue: null       # exemple fictif : aucun ticket GitHub
 auteur: null
 langue: fr
-cible: [ppp:texture]
+cible: [ppp:hardnessToTouch]   # série 53 bis : la fiche existe (en préparation, série 54) ; l'exemple vise ce type
 version_spec: "2.8"
 version_fiche: null
 liens: []
-label: "souplesse au toucher"
+label: "dureté au toucher"
 phrase: "Combien une surface cède sous la pression des doigts."
 exemples:
   - "une éponge et une planche de bois, pressées du bout des doigts"
   - "un coussin de mousse et un coussin de plumes"
-type_le_plus_proche: ppp:texture
-aspect_decrit: "la déformation d'une surface sous la pression, perçue au toucher"
-non_couvert_parce_que: "ppp:texture porte sur le relief de la surface, pas sur ce qu'elle cède sous la main ; aucun type ne porte sur la déformation"
+type_le_plus_proche: ppp:hardnessToTouch
+aspect_decrit: "ce qu'une surface cède sous la pression, perçu au toucher"
+non_couvert_parce_que: "ppp:texture porte sur le relief de la surface, pas sur ce qu'elle cède sous la main ; la dureté au toucher (ppp:hardnessToTouch) a une fiche depuis la série 54 (ticket 4) : une telle suggestion vise ce type et se traite comme une demande de révision s'il redécoupe l'aspect"
 requalifie_en: null        # specialisation | revision (si l'aspect est déjà couvert)
 ---
 

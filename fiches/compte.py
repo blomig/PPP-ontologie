@@ -14,7 +14,13 @@ Usage :
                                       blanche NOMS_AUTORISES, §13 de la spec ; exceptions comptées, non signalées :
                                       docs/crash-test-0*.md, docs/guide-structure-ontologie.md, maquette/ ;
                                       noms lus dans PPP_NOMS, .noms-prives ou maquette/noms-prives.txt, absents de ce fichier)
-  python3 fiches/compte.py --paliers  palier T35 de chaque fiche, avec ses raisons
+  python3 fiches/compte.py --paliers  palier T35 de chaque fiche, avec ses raisons ; « mesure : à renseigner » si la
+                                      rubrique mesure manque (série 53 bis : non bloquant, aucun changement de palier)
+
+Rubrique mesure (série 53 bis, docs/proposition-rubrique-mesure.md) : si elle est présente, --verifier la contrôle
+(valeurs fermées, ids de références, phrase fixe FR et EN, date si aucune_methode_robuste, id unique par méthode,
+non_retenues bien formé) et signale les écarts comme « mesure (non bloquant) » : ni le code de sortie ni le palier
+ne changent.
 
 Règles de lecture (celles de fiches/README.md, « Avancement ») :
 - état de travail : « bloquée » si bloque_par n'est pas vide ; sinon « en attente de la relecture explicative » si
@@ -156,6 +162,79 @@ import re
 ALIAS = {'NCS Colour AB': ['NCS'], 'Office québécois de la langue française': ['OQLF'], 'Académie française': ['Académie française'],
          'ISO 2813:2014': ['ISO 2813'], 'ASTM D523-14': ['ASTM D523'], 'ASTM D1003-21': ['ASTM D1003'],
          'CIE S 017:2020': ["vocabulaire international de l'éclairage", 'CIELAB'], 'CIE': ['CIE']}
+
+
+# --- rubrique mesure (série 53 bis ; docs/proposition-rubrique-mesure.md) : contrôles non bloquants -------------------
+MESURE_ETATS = ('methodes', 'aucune_methode_robuste')
+MESURE_PROXIMITES = ('proche', 'indirecte')
+MESURE_PHRASE_FR = ('Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche '
+                    'dans les conditions déclarées. Une mesure associée peut éclairer une observation, mais elle ne définit pas les '
+                    'bornes des régions et ne remplace pas l’examen.')
+MESURE_PHRASE_EN = ('The regions of this entry remain perceptual: they describe what an observer sees, hears, smells or feels by touch '
+                    'under the declared conditions. An associated measurement can inform an observation, but it does not set the '
+                    'boundaries of the regions and does not replace examination.')
+
+def controle_mesure(i, d):
+    """Écarts de la rubrique mesure d'une fiche (liste de messages ; vide si la rubrique manque ou est conforme)."""
+    import re
+    m = d.get('mesure')
+    if m is None:
+        return []
+    if not isinstance(m, dict):
+        return ['mesure n’est pas un objet']
+    out = []
+    ids_refs = {r.get('id') for r in d.get('references') or []}
+    etat = m.get('etat')
+    if etat not in MESURE_ETATS:
+        out.append('etat « %s » hors des valeurs fermées (%s)' % (etat, ', '.join(MESURE_ETATS)))
+    meth = m.get('methodes') or []
+    if etat == 'methodes' and not meth:
+        out.append('etat methodes sans aucune méthode')
+    if etat == 'aucune_methode_robuste':
+        if meth:
+            out.append('etat aucune_methode_robuste avec des méthodes')
+        if not re.search(r'\d{4}-\d{2}-\d{2}', str(m.get('synthese') or '')):
+            out.append('aucune_methode_robuste sans date de recherche (AAAA-MM-JJ) dans la synthèse')
+    if not m.get('synthese'):
+        out.append('synthese manquante')
+    if m.get('regions_indispensables') != MESURE_PHRASE_FR:
+        out.append('phrase fixe FR absente ou différente (regions_indispensables)')
+    pe = os.path.join(FD, 'en', i.split(':', 1)[-1] + '.yaml')
+    en = (yaml.safe_load(open(pe, encoding='utf-8')) if os.path.exists(pe) else None) or {}
+    e = (en.get('mesure.regions_indispensables') or {}).get('en')
+    if e != MESURE_PHRASE_EN:
+        out.append('phrase fixe EN absente ou différente (fiches/en/%s.yaml, mesure.regions_indispensables)' % i.split(':', 1)[-1])
+    vus = set()
+    for k, x in enumerate(meth, 1):
+        mid = x.get('id') if isinstance(x, dict) else None
+        if not mid:
+            out.append('méthode n° %d sans id' % k)
+        elif mid in vus:
+            out.append('id de méthode en double : %s' % mid)
+        vus.add(mid)
+        if not isinstance(x, dict):
+            continue
+        if x.get('proximite') not in MESURE_PROXIMITES:
+            out.append('méthode %s : proximite « %s » hors des valeurs fermées (%s)' % (mid, x.get('proximite'), ', '.join(MESURE_PROXIMITES)))
+        for c in ('nom', 'grandeur', 'unite_ou_echelle', 'ecart', 'conditions', 'statut_lecture'):
+            if not x.get(c):
+                out.append('méthode %s : %s manquant' % (mid, c))
+        for r in x.get('references') or []:
+            if r not in ids_refs:
+                out.append('méthode %s : référence %s absente de references' % (mid, r))
+        if not x.get('references'):
+            out.append('méthode %s : aucune référence' % mid)
+    for k, x in enumerate(m.get('non_retenues') or [], 1):
+        if not isinstance(x, dict):
+            out.append('non_retenues n° %d mal formé' % k)
+            continue
+        for c in ('nom', 'raison', 'statut_lecture'):
+            if not x.get(c):
+                out.append('non_retenues n° %d : %s manquant' % (k, c))
+        for r in x.get('references') or []:
+            if r not in ids_refs:
+                out.append('non_retenues n° %d : référence %s absente de references' % (k, r))
+    return out
 
 def _noms(c):
     for k, v in ALIAS.items():
@@ -453,6 +532,9 @@ if __name__ == '__main__':
         for f, n, nom in noms_publics():
             print('nom hors des fichiers autorisés : %s:%d : %s' % (f, n, nom))
             ok = False
+        for i, d in sorted(fiches.items()):
+            for msg in controle_mesure(i, d):
+                print('mesure (non bloquant) : %s : %s' % (i, msg))
         if not ok:
             sys.exit(1)
         print('fiches/README.md : comptes à jour ; appels [[id]] complets ; cq_couvertes valides ; rôles de références dans la liste fermée ; %d fiches publiques, comme attendu ; aucun nom hors des fichiers autorisés.' % len(FICHES_PUBLIQUES_ATTENDUES))
@@ -470,6 +552,7 @@ if __name__ == '__main__':
     elif '--paliers' in sys.argv:
         for i, d in sorted(fiches.items()):
             p, r, mention = palier(d, ex)
+            r = r + (['mesure : à renseigner'] if d.get('mesure') is None else [])   # série 53 bis : non bloquant
             print('%-28s %-40s %s' % (i, p, ' ; '.join(r + (['mention : « %s »' % mention] if mention else []))))
     else:
         print(texte)

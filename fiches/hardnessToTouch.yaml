@@ -1,0 +1,275 @@
+# Fiche de type PPP — ppp:hardnessToTouch — format : PPP_FicheType.md (spec v2.8)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, mesure (rubrique proposée en série 53, docs/proposition-rubrique-mesure.md, gabarit relu ; pas encore dans PPP_FicheType.md ni lue par la maquette).
+# Série 54 (2026-10-16) : fiche en préparation, rédigée sans exemplaire à partir du ticket 4 (tickets/0004-suggestion-type.md) et de la proposition « Toucher » ; aucun champ n’est encore relu. Première fiche propre au toucher.
+id: ppp:hardnessToTouch
+label_fr: dureté au toucher
+label_en: hardness to the touch
+label_court: dureté
+labels_alternatifs: []
+patron: P1
+sorte: qualité
+sous_sorte: —
+strate: formel
+base_dependance:
+  types: []
+  facteurs_non_perceptuels: []
+facettes:
+- toucher
+définition: 'Combien l’objet s’enfonce quand on le presse du bout du doigt, à l’endroit pressé : de ce qui s’enfonce beaucoup sous le doigt à ce qui ne cède pas du tout.'
+question_attentionnelle: Si vous appuyez du bout du doigt, sans regarder, l’objet cède-t-il beaucoup, un peu, à peine, ou pas du tout ?
+contre_exemple: 'Une balle de mousse et une boule de billard peuvent avoir la même surface lisse : c’est ce qu’elles cèdent sous le doigt qui les sépare, pas leur relief (texture). Une éponge et une pâte à modeler cèdent autant ; l’une revient à sa forme, l’autre garde la marque : ce n’est pas une différence de dureté, mais de retour à la forme. Une feuille de papier se plie facilement, mais posée à plat sur une table elle ne cède pas sous le doigt : se plier n’est pas céder.'
+grandeur_physique_homonyme: 'dureté au sens des minéralogistes (échelle de Mohs), qui est une résistance à la rayure, pas à l’enfoncement [[nps_mohs]] ; dureté des métaux (Vickers), mesurée par l’empreinte laissée [[iso6507_1]] ; « hardness » de l’analyse sensorielle des aliments, qui juge en mâchant : aucune région ne s’en déduit. Voir la rubrique « mesure ».'
+mesure:
+  etat: methodes
+  synthese: 'Des mesures associées existent pour les caoutchoucs et les mousses : un appareil enfonce une pointe ou une bille avec une force réglée et relève la profondeur, ou mesure la force qu’il faut pour écraser une mousse d’une fraction donnée de son épaisseur. Elles portent sur un échantillon de matière préparé, pas sur un objet quelconque touché du doigt. En laboratoire, la mollesse perçue suit la souplesse mesurée de caoutchoucs [[srinivasan_lamotte1995]] et la dureté jugée croît avec la dureté physique selon une loi de puissance [[harper_stevens1964]] ; ces résultats ne fixent pas de régions.'
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes:
+  - id: iso48_4
+    nom: dureté Shore (duromètre)
+    grandeur: profondeur d’enfoncement d’une pointe de forme normalisée, poussée par un ressort, dans un caoutchouc
+    unite_ou_echelle: 'échelles Shore A (dureté normale), D (caoutchoucs durs), AO (caoutchoucs mous et alvéolaires), AM (pièces minces) ; ASTM D2240 décrit douze types de duromètres, dont OO'
+    references: [iso48_4, astm_d2240]
+    proximite: proche
+    ecart: 'mesure la matière d’un échantillon plan d’épaisseur donnée, avec une pointe et une force fixées, pas l’objet entier à l’endroit pressé ; ne saisit ni la force variable du doigt, ni sa surface de contact, ni l’épaisseur ou le creux de l’objet (un ballon gonflé, une pile de papier), ni l’observateur ; chaque échelle ne couvre qu’une partie des matières (caoutchoucs, élastomères, mousses, gels, quelques plastiques), ni la pierre ni le métal ; ASTM D2240 le dit lui-même : « No simple relationship exists between indentation hardness determined by this test method and any fundamental property of the material tested » (§ 4.1)'
+    conditions: échantillon de caoutchouc ou d’élastomère, plan, d’épaisseur suffisante ; force et forme de la pointe fixées par l’échelle ; température de l’essai
+    statut_lecture: 'résumé public lu (ISO 48-4 : page de l’ISO ; ASTM D2240 : page de l’éditeur, Scope § 1.1–1.2 et § 4.1)'
+  - id: iso48_2
+    nom: dureté internationale du caoutchouc (IRHD)
+    grandeur: enfoncement d’une bille sous une force donnée
+    unite_ou_echelle: 'degrés IRHD, de 10 à 100 ; trois méthodes selon la dureté (N, H, L) et une pour les pièces minces (M), plus quatre pour les surfaces courbes'
+    references: [iso48_2]
+    proximite: proche
+    ecart: 'même écart que la dureté Shore : matière d’un caoutchouc, bille et force fixées ; ne saisit ni le doigt, ni l’objet entier, ni l’observateur ; « dureté apparente » sur surface courbe seulement par des méthodes à part'
+    conditions: caoutchouc vulcanisé ou thermoplastique ; surface plane (ou courbe, méthodes de dureté apparente) ; diamètre de bille et force selon la méthode
+    statut_lecture: résumé public lu (page de l’ISO)
+  - id: iso2439
+    nom: dureté des mousses par indentation
+    grandeur: force nécessaire pour écraser une mousse d’une fraction donnée de son épaisseur (40 % pendant 30 s, par exemple)
+    unite_ou_echelle: force (newtons) à un taux d’indentation donné ; cinq méthodes (A à E)
+    references: [iso2439]
+    proximite: indirecte
+    ecart: 'mesure la portance d’une mousse sous un large plateau, pas l’enfoncement sous un doigt ; la norme limite elle-même ses résultats aux conditions de l’essai ; ne s’applique qu’aux mousses de latex, d’uréthane et de PVC à cellules ouvertes ; ne saisit ni l’observateur, ni la force du doigt, ni ce qui n’est pas une mousse'
+    conditions: mousse souple à cellules ouvertes, éprouvette ou article fini ; plateau, taux d’indentation et durée fixés par la méthode
+    statut_lecture: résumé public lu (page de l’ISO)
+  non_retenues:
+  - nom: échelle de Mohs
+    references: [nps_mohs]
+    raison: 'mesure la résistance à la rayure d’un minéral, pas ce qu’il cède sous la pression : homonyme de domaine, pas une mesure associée'
+    statut_lecture: page lue (U.S. National Park Service)
+  - nom: dureté Vickers (et Brinell)
+    references: [iso6507_1]
+    raison: 'mesure l’empreinte permanente qu’un pénétrateur laisse dans un métal ou un revêtement dur, pas ce qu’un objet cède sous le doigt à l’endroit pressé. Brinell : norme non consultée'
+    statut_lecture: 'résumé public lu (ISO 6507-1 : page de l’ISO) ; Brinell non lu'
+modalites:
+- toucher
+mode_de_presentation: échantillon
+conditions_critiques:
+- geste
+- temperature_objet
+note_conditions: 'le jugement se fait en pressant (facette `geste` : `pressure`, spec §9.7 H, règle 8), du bout de l’index, perpendiculairement à la surface, puis on relâche ; la température de l’objet (facette `temperature_objet`) change la dureté de certaines matières (beurre, cire, chocolat) : elle est critique. La force (« sans appuyer », « appui ferme »), la partie de la main (bout du doigt ou paume), la durée de l’appui, la main nue ou gantée et l’état de la peau vont en note d’épisode, sans facette. Objet posé à plat sur une table dure (`tableTop`) pour qu’il ne bouge pas, ou touché sur place (`inSitu`) ; durée `glance`. Épreuve sans voir : on presse plus fort quand on s’attend à un objet rigide (Klatzky et Reed, 2009) [[klatzky_reed2009]]. Une photo ne dit rien de la dureté : aucune assertion sur image, sauf indice visuel déclaré (un coussin creusé, une mousse écrasée), qui reste une assertion de vue sur cet indice, pas sur la dureté (spec X17 ; protocole d’échantillons, docs/protocole-echantillons-toucher.md §4.1).'
+porteur: 'un objet, ou une partie d’objet, à l’endroit pressé (pas la matière en général : une boîte de métal mince cède alors que le métal est dur)'
+arité: 1
+condition_NA: 'objet qu’on n’a pas le droit ou pas la possibilité de presser (œuvre de musée, objet fragile ou dangereux) ; ce qui ne garde pas de forme sous le doigt (un liquide, un gaz) ; objet vu seulement en image.'
+espace_valeurs:
+  echelle: ordinale
+  sens_croissant: de `yieldsMuch` (rang 1) vers `doesNotYield` (rang 4), l’objet cède de moins en moins sous le doigt
+  numerique: non
+  regions:
+  - cle: yieldsMuch
+    label_fr: cède beaucoup
+    label_en: yields a lot
+    rang: 1
+    repere: 'le doigt s’enfonce profondément (de la mousse à raser, une éponge sèche, un ballon de baudruche gonflé)'
+    exemplaires: []
+  - cle: yieldsSome
+    label_fr: cède un peu
+    label_en: yields somewhat
+    rang: 2
+    repere: le doigt s’enfonce nettement, mais la matière résiste (un chapeau de champignon)
+    exemplaires: []
+  - cle: yieldsBarely
+    label_fr: cède à peine
+    label_en: yields barely
+    rang: 3
+    repere: on sent un léger enfoncement en appuyant fort, sans voir de creux (une pile de papier)
+    exemplaires: []
+  - cle: doesNotYield
+    label_fr: ne cède pas
+    label_en: does not yield
+    rang: 4
+    repere: rien ne cède sous le doigt, même en appuyant fort (une pierre)
+    exemplaires: []
+note_echelle: 'quatre crans tirés des cinq exemples du ticket 4, rangés par leur proposant du plus mou au plus dur : le ballon gonflé est rangé avec la mousse à raser (le doigt s’enfonce profondément), le chapeau de champignon seul au cran « cède un peu », la pile de papier à « cède à peine », la pierre à « ne cède pas ». La proposition « Toucher » (§2.2) avait trois crans (« cède beaucoup », « cède un peu », « ne cède pas ») ; le ticket en distingue un de plus entre « un peu » et « pas du tout ». Position de travail : quatre crans, E1 à une région près ; si l’épreuve ne distingue pas « cède à peine » de ses voisins, revenir à trois (spec §9.7 C, accord exact). Repères du cran « cède beaucoup » (série 54 bis) : la mousse à raser reste comme repère, mais elle se déforme sans revenir, et l’examen risque la condition NA (ce qui ne garde pas de forme) ; le ballon gonflé reste en `yieldsMuch`, avec un doute vers `yieldsSome` selon le gonflage.'
+identite: 'Ce que l’objet cède sous la pression du doigt, à l’endroit pressé ; pas la façon dont il revient à sa forme (retour à la forme), pas ce qui plie (souplesse au pli), pas le relief de sa surface (texture), pas la résistance à la rayure (échelle de Mohs).'
+relations:
+- type: confusableWith
+  cible: ppp:texture
+  note: 'au toucher, une surface lisse paraît parfois plus dure, une surface à gros reliefs (un tapis épais) plus molle : on juge ce que l’objet cède sous le doigt, pas son relief'
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: srinivasan_lamotte1995
+  citation: Srinivasan, M. A. & LaMotte, R. H. (1995). Tactual discrimination of softness. Journal of Neurophysiology, 73(1), 88–101.
+  doi_ou_url: https://doi.org/10.1152/jn.1995.73.1.88
+  role: fonde
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-16'
+  verifie_sur: résumé PubMed lu (PMID 7714593), relu le 2026-10-16 ; texte non lu
+  reprend: 'la mollesse se juge activement du doigt ; pour des caoutchoucs à surface déformable, elle suit la souplesse mesurée et le toucher de la peau suffit ; pour des objets rigides montés sur ressort, la discrimination est moins bonne'
+  ne_reprend_pas: les mesures du doigt et les seuils de discrimination
+- id: harper_stevens1964
+  citation: Harper, R. & Stevens, S. S. (1964). Subjective hardness of compliant materials. Quarterly Journal of Experimental Psychology, 16, 204–215.
+  doi_ou_url: https://doi.org/10.1080/17470216408416370
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-16'
+  verifie_sur: métadonnées Crossref et résumé (OpenAlex) lus le 2026-10-16 ; texte non lu
+  reprend: 'dureté et mollesse jugées sont à peu près réciproques (une seule dimension) ; la dureté jugée croît avec la dureté physique (force sur enfoncement) selon une loi de puissance, de l’éponge au bloc de caoutchouc'
+  ne_reprend_pas: les exposants et les appariements intermodaux comme repères de régions
+- id: bergmann_tiest_kappers2009a
+  citation: Bergmann Tiest, W. M. & Kappers, A. M. L. (2009). Cues for haptic perception of compliance. IEEE Transactions on Haptics, 2(4), 189–199.
+  doi_ou_url: https://doi.org/10.1109/TOH.2009.16
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-12'
+  verifie_sur: métadonnées Crossref et résumé (OpenAlex), série 24 ; texte non lu
+  reprend: la déformation de la surface sous le doigt comme indice majeur ; l’épaisseur de l’objet prise en compte (appui du porteur « objet à l’endroit pressé »)
+  ne_reprend_pas: les seuils exprimés par le module de Young
+- id: bergmann_tiest_kappers2006
+  citation: Bergmann Tiest, W. M. & Kappers, A. M. L. (2006). Analysis of haptic perception of materials by multidimensional scaling and physical measurements of roughness and compressibility. Acta Psychologica, 121(1), 1–20.
+  doi_ou_url: https://doi.org/10.1016/j.actpsy.2005.04.005
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-12'
+  verifie_sur: métadonnées Crossref et résumé PubMed (PMID 16055070), série 24 ; texte non lu
+  reprend: la compressibilité perçue comme dimension des matériaux au toucher
+  ne_reprend_pas: la fonction qui la lie à la mesure
+- id: klatzky_reed2009
+  citation: Klatzky, R. L. & Reed, C. L. (2009). Haptic exploration. Scholarpedia, 4(8), 7941.
+  doi_ou_url: https://doi.org/10.4249/scholarpedia.7941
+  role: alimente
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-10-12'
+  verifie_sur: article lu (série 30, passages relus pour le protocole d’échantillons)
+  reprend: le geste de pression pour la dureté ; la force qui change avec ce qu’on attend
+  ne_reprend_pas: les autres procédures exploratoires comme conditions de ce type
+- id: iso48_4
+  citation: 'ISO 48-4:2018. Rubber, vulcanized or thermoplastic — Determination of hardness — Part 4: Indentation hardness by durometer method (Shore hardness). Genève : ISO.'
+  doi_ou_url: https://www.iso.org/standard/74969.html
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-16'
+  verifie_sur: 'page de l’ISO lue (résumé : échelles A, D, AO et AM ; confirmée en 2024) ; texte payant non lu'
+  reprend: rien (mesure associée, rubrique « mesure »)
+  ne_reprend_pas: les valeurs Shore comme bornes de régions
+- id: astm_d2240
+  citation: ASTM D2240-15(2021). Standard Test Method for Rubber Property—Durometer Hardness. ASTM International.
+  doi_ou_url: https://store.astm.org/d2240-15r21.html
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-16'
+  verifie_sur: 'page de l’éditeur, Scope § 1.1–1.2 et Significance and Use § 4.1 lus (douze types de duromètres, dont A, D, O et OO ; élastomères, matériaux alvéolaires, gels, quelques plastiques ; non équivalente à d’autres méthodes) ; texte payant non lu'
+  reprend: rien (mesure associée, rubrique « mesure »)
+  ne_reprend_pas: les valeurs Shore comme bornes de régions
+- id: iso48_2
+  citation: 'ISO 48-2:2018. Rubber, vulcanized or thermoplastic — Determination of hardness — Part 2: Hardness between 10 IRHD and 100 IRHD. Genève : ISO.'
+  doi_ou_url: https://www.iso.org/standard/74967.html
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-16'
+  verifie_sur: 'page de l’ISO (résumé, lu via l’index de recherche le 2026-10-16) : quatre méthodes sur surfaces planes (N, H, L, M), quatre de dureté apparente sur surfaces courbes, de 10 à 100 IRHD ; texte payant non lu'
+  reprend: rien (mesure associée, rubrique « mesure »)
+  ne_reprend_pas: les degrés IRHD comme bornes de régions
+- id: iso2439
+  citation: 'ISO 2439:2008. Flexible cellular polymeric materials — Determination of hardness (indentation technique). Genève : ISO.'
+  doi_ou_url: https://www.iso.org/standard/42717.html
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-16'
+  verifie_sur: 'page de l’ISO lue (résumé : méthodes A à E ; mousses de latex, d’uréthane et de PVC à cellules ouvertes ; résultats valables seulement dans les conditions de l’essai ; confirmée en 2026) ; texte payant non lu'
+  reprend: rien (mesure associée, rubrique « mesure »)
+  ne_reprend_pas: les forces d’indentation comme bornes de régions
+- id: iso6507_1
+  citation: 'ISO 6507-1:2023. Metallic materials — Vickers hardness test — Part 1: Test method. Genève : ISO.'
+  doi_ou_url: https://www.iso.org/standard/83898.html
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-16'
+  verifie_sur: 'page de l’ISO (résumé, lu via l’index de recherche le 2026-10-16) : matériaux métalliques, métaux durs et revêtements inorganiques ; mesure des diagonales de l’empreinte ; texte payant non lu'
+  reprend: rien (méthode non retenue)
+  ne_reprend_pas: la dureté Vickers
+- id: nps_mohs
+  citation: U.S. National Park Service (2023). Mohs Hardness Scale. Page mise à jour le 12 avril 2023.
+  doi_ou_url: https://www.nps.gov/articles/mohs-hardness-scale.htm
+  role: contraste
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-10-16'
+  verifie_sur: 'page lue en ligne le 2026-10-16 : dureté d’un minéral = résistance relative à la rayure, mesurée en le rayant avec une substance de dureté connue ; dix minéraux de référence, du talc (1) au diamant (10)'
+  reprend: 'l’homonyme de domaine : la dureté des minéralogistes est une résistance à la rayure'
+  ne_reprend_pas: l’échelle
+etat_de_l_art: 'Sources : la dureté (ou mollesse) est une dimension du toucher des matériaux (Bergmann Tiest et Kappers 2006) [[bergmann_tiest_kappers2006]] ; la dureté jugée suit une loi de puissance de la dureté physique pour des matières souples (Harper et Stevens 1964) [[harper_stevens1964]] ; pour des caoutchoucs, la mollesse se discrimine finement au doigt et suit la souplesse mesurée (Srinivasan et LaMotte 1995) [[srinivasan_lamotte1995]] ; la déformation de la surface et l’épaisseur de l’objet comptent (Bergmann Tiest et Kappers 2009) [[bergmann_tiest_kappers2009a]]. Aucune source trouvée ne fixe des régions perçues de la dureté au toucher. Détail : docs/bibliographie-par-type.md#groupe-toucher.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-toucher
+axiomes:
+- conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
+  validation: Toute assertion de type ppp:hardnessToTouch a exactement un ppp:about.
+- conceptuel: Les 4 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 4 ppp:Region de l’échelle du type ont des ppp:rank distincts, de 1 à 4 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Une région de cet espace n’est pas un sous-type du type.
+  validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
+nanay: Oui — passer de « je touche l’objet » à « je sens s’il cède sous le doigt » change la description (un même cuir, rembourré ou tendu sur du bois).
+transfert: objet conçu oui (une poignée gainée, un emballage, un siège) | tableau non (on ne le presse pas) | cuisine oui (un fruit mûr ou non, une pâte) | high-tech oui (une coque souple ou rigide, une touche) | architecture oui (un revêtement de sol souple, un mur capitonné)
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: sur 6 à 10 objets qu’on a le droit de toucher, accord inter-observateurs à une région près, au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques (spec §9.7 H), sans voir l’objet ; accord exact si l’échelle revient à trois régions (spec §9.7 C)
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les objets
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2
+statut: candidat
+statut_note: 'en préparation (série 54, 2026-10-16) : fiche rédigée à partir du ticket 4, sans exemplaire ; tous les champs rédigés sont à relire'
+statut_epistemique: non éprouvé
+introduit_en: '2.8'
+modifie_en: []
+remplace_par: []
+source_de_la_fiche: 'ticket 4 (tickets/0004-suggestion-type.md, suggestion de type « Dureté ») ; proposition de famille « Toucher » (docs/famille-toucher-proposition.md (document de travail, non publié), §2.2, premier lot, décisions 3 et 9) ; protocole d’échantillons (docs/protocole-echantillons-toucher.md §4.1) ; fiche rédigée le 2026-10-16 par l’équipe, champs à valider par la relecture explicative'
+manques:
+- 'exemplaires (à renseigner : objets publics qu’on a le droit de presser, ou échantillons de référence reproductibles ; un épisode par objet, geste et température déclarés ; photo d’identification qui ne sert pas au jugement, X17 (g) amendé)'
+bloque_par: []
+a_relire:
+- label_fr
+- label_en
+- label_court
+- strate
+- définition
+- question_attentionnelle
+- contre_exemple
+- grandeur_physique_homonyme
+- mesure
+- mode_de_presentation
+- conditions_critiques
+- note_conditions
+- porteur
+- condition_NA
+- espace_valeurs
+- note_echelle
+- identite
+- relations
+- references
+- etat_de_l_art
+- nanay
+- transfert
+- enonces_testables
+- statut_note
+relecture_explicative:
+  date: null
+  champs: []
+  a_reconfirmer: []
