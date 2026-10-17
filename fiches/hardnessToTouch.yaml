@@ -225,7 +225,7 @@ transfert: objet conçu oui (une poignée gainée, un emballage, un siège) | ta
 enonces_testables:
 - id: E1
   nature: existence
-  enonce: sur 6 à 10 objets qu’on a le droit de toucher, accord inter-observateurs à une région près, au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques (spec §9.7 H), sans voir l’objet ; accord exact si l’échelle revient à trois régions (spec §9.7 C)
+  enonce: sur 6 à 10 objets qu’on a le droit de toucher, accord inter-observateurs à une région près, au-dessus du seuil fixé avant l’épreuve, à conditions critiques égales (spec §9.7 H), sans voir l’objet ; accord exact si l’échelle revient à trois régions (spec §9.7 C)
   statut_epistemique: non éprouvé
   epreuve: null
 - id: E4
@@ -271,5 +271,6 @@ a_relire:
 - statut_note
 relecture_explicative:
   date: null
-  champs: []
+  champs:
+  - 'harmonisation mécanique des énoncés affichés (série 69, 2026-10-17)'
   a_reconfirmer: []

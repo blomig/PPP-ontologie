@@ -7,7 +7,7 @@
 # (API Wikimedia Commons ; pour le bol, API Open Access du Metropolitan Museum of Art).
 # Un épisode par objet (A5 : un épisode a une seule cible) ; mêmes conditions pour tous.
 # v2.3.1 : facette `angle` ajoutée à chaque épisode (spec §9.7 H), `unknown` (non relevée) ;
-# aucun exemplaire ne porte sur un type dont une facette critique est `unknown` (A5).
+# aucun exemplaire ne porte sur un type dont une condition critique est `unknown` (A5).
 # v2.3.1 : six assertions neuves (0104, 0501, 0502, 0601, 0701, 0801), deux objets neufs,
 # pages Commons vérifiées par l'API de Wikimedia Commons le 2026-10-10 ; à valider par la relecture explicative.
 # v2.3.2 : 0103, 0301 et 0502 (Shap Wells) retirées (T24) ; un objet neuf (échantillon bouchardé),
@@ -1336,6 +1336,24 @@ objets:
       mention_requise: "« Centaurea cyanus RF », Robert Flogaus-Faust, https://commons.wikimedia.org/wiki/File:Centaurea_cyanus_RF.jpg, licence CC BY 4.0 (https://creativecommons.org/licenses/by/4.0) ; signaler les modifications"
       usage: image_reproduite
       motif_usage: "CC BY 4.0 (API Commons, 2026-10-16 ; attribution requise) : réellement libre, reproduite avec la mention complète (titre, auteur, lien, licence)"
+  - id: app:commons-soda-lime-jar-zaereth
+    description: "bocal octogonal en verre sodocalcique soufflé dans un moule, transparent, vert-bleu dans les parties épaisses, vu de face sur fond clair ; des bulles d’air sont restées prises dans le verre au moulage (description de la page Commons : « Defects in the blow-molding process resulted in air bubbles being trapped in the glass »), 2017"
+    page_objet: null   # seule la photo est documentée (photo citée comme objet)
+    image: https://commons.wikimedia.org/wiki/File:Soda-lime_glass_jar_showing_bubbles_trapped_within.jpg
+    licence_affichee: "CC BY-SA 4.0"
+    auteur_image: "Zaereth"
+    regime: "objet conçu (verre, récipient)"
+    parties: ["#fond"]   # le fond épais du bocal, vu à travers la paroi
+    droits: "CC BY-SA 4.0, Zaereth, image reproduite"
+    credit:   # relevé par l’API de Wikimedia Commons (extmetadata) et le wikitexte de la page du fichier le 2026-10-17 ; relu (2026-10-17)
+      auteur: "Zaereth"
+      licence: "CC BY-SA 4.0"
+      source: "Wikimedia Commons, « Own work »"
+      url: "https://commons.wikimedia.org/wiki/File:Soda-lime_glass_jar_showing_bubbles_trapped_within.jpg"
+      date_verification: "2026-10-17"
+      mention_requise: "« Soda-lime glass jar showing bubbles trapped within », Zaereth, https://commons.wikimedia.org/wiki/File:Soda-lime_glass_jar_showing_bubbles_trapped_within.jpg, licence CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0) ; signaler les modifications si l’on diffuse une adaptation, qui se diffuse sous la même licence"
+      usage: image_reproduite
+      motif_usage: "CC BY-SA 4.0 (API Commons, 2026-10-17 : LicenseShortName « CC BY-SA 4.0 », AttributionRequired true ; wikitexte {{self|cc-by-sa-4.0}}) : réellement libre, reproduite avec la mention complète (titre, auteur, lien, licence)"
 episodes:
   - id: ppp-e:pilote-01
     target: app:met-2011-201
@@ -1694,7 +1712,7 @@ episodes:
   - id: ppp-e:pilote-51
     target: app:commons-optical-illusion-vase
     observedUnder: {presentation: screen, lumiere: unknown, distance: near, angle: frontal, duree: exam}
-    note_distance: "dessin, sans prise de vue : l’objet est l’image elle-même ; distance et angle sont ceux de l’écran (règle 7) ; lumière sans objet ; le type n’a pas de facette critique"
+    note_distance: "dessin, sans prise de vue : l’objet est l’image elle-même ; distance et angle sont ceux de l’écran (règle 7) ; lumière sans objet ; le type n’a pas de condition critique"
     usesModality: [vision]
     observer: l’équipe (un seul observateur ; aucun accord déclaré)
     date: "2026-10-14"
@@ -1861,6 +1879,13 @@ episodes:
     usesModality: [vision]
     observer: l’équipe (un seul observateur ; aucun accord déclaré)
     date: "2026-10-16"
+  - id: ppp-e:pilote-75
+    target: app:commons-soda-lime-jar-zaereth
+    observedUnder: {presentation: screen, lumiere: diffuse, distance: near, angle: frontal, duree: exam}
+    note_distance: "lumière, angle et distance estimés sur l’image (2026-10-17) : un bocal d’une douzaine de centimètres (taille estimée, non donnée par la page), vu de près, de face et un peu d’au-dessus, sur fond clair ; lumière douce, venue de face et d’en haut, sans contre-jour"
+    usesModality: [vision]
+    observer: l’équipe (un seul observateur ; aucun accord déclaré)
+    date: "2026-10-17"
 
 assertions:
   - id: ppp-a:pilote-0101
@@ -3223,6 +3248,16 @@ assertions:
     ontologyVersion: "2.8"
     note: "zone : fleurons périphériques, hors cœur violet et étamines ; bleu franc"
 
+  - id: ppp-a:pilote-2704
+    about: app:commons-soda-lime-jar-zaereth#fond
+    assertedType: ppp:localIrregularity
+    cardStatus: applicable et pertinent
+    inRegion: ppp:localIrregularity/marked
+    inEpisode: ppp-e:pilote-75
+    modality: vision
+    source: photo citée (Wikimedia Commons ; lumière, angle et distance estimés d’après le cadrage)
+    ontologyVersion: "2.8"
+    note: "zone : l’intérieur du fond épais, vu à travers la paroi, hors arêtes des pans et reflets ; le verre y est clair et égal, sauf quelques bulles isolées qui se voient d’emblée : deux longues bulles aplaties à gauche, une bulle en forme de lentille à droite, une petite bulle ronde ; on les voit dans l’épaisseur verte du fond, avec le bord brillant d’une bulle, et rien ne marque la surface à leur place : elles sont dans le verre ; les points minuscules du fond ne comptent pas : sur la photo, on ne peut pas dire s’ils sont dans le verre ou dessus"
 # Champs communs à toutes les assertions ci-dessus (sauf valeur propre à une assertion, comme withdrawn de 0201) :
 commun:
   assertedBy: l’équipe (proposition, à valider par la relecture explicative)
@@ -3244,13 +3279,15 @@ relecture_explicative:
                ppp-a:pilote-0902, ppp-a:pilote-0302, ppp-a:pilote-0304, ppp-a:pilote-0305, ppp-a:pilote-1001, ppp-a:pilote-1002, ppp-a:pilote-1003, ppp-a:pilote-1101, ppp-a:pilote-1102, ppp-a:pilote-1201, ppp-a:pilote-1202, ppp-a:pilote-1401, ppp-a:pilote-1501, ppp-a:pilote-1702, ppp-a:pilote-1801, ppp-a:pilote-1804, ppp-a:pilote-0904, ppp-a:pilote-0905, ppp-a:pilote-1004, ppp-a:pilote-1103, ppp-a:pilote-1304, ppp-a:pilote-1503, ppp-a:pilote-1504, ppp-a:pilote-1203, ppp-a:pilote-1305, ppp-a:pilote-1805, ppp-a:pilote-1802, ppp-a:pilote-1603, ppp-a:pilote-1604,
                ppp-a:pilote-1901, ppp-a:pilote-1902, ppp-a:pilote-1903, ppp-a:pilote-1904, ppp-a:pilote-2302, ppp-a:pilote-2303, ppp-a:pilote-2401, ppp-a:pilote-2402, ppp-a:pilote-2403, ppp-a:pilote-2501, ppp-a:pilote-2502, ppp-a:pilote-2503, ppp-a:pilote-2701, ppp-a:pilote-2702, ppp-a:pilote-2703, ppp-a:pilote-2801, ppp-a:pilote-2802, ppp-a:pilote-2803, ppp-a:pilote-2901, ppp-a:pilote-2902, ppp-a:pilote-2903, ppp-a:pilote-3001, ppp-a:pilote-3002, ppp-a:pilote-3003, ppp-a:pilote-2601, ppp-a:pilote-2602, ppp-a:pilote-2603, ppp-a:pilote-2004, ppp-a:pilote-2304, ppp-a:pilote-2404, ppp-a:pilote-2504, ppp-a:pilote-2002, ppp-a:pilote-2003, ppp-a:pilote-2101, ppp-a:pilote-2102, ppp-a:pilote-2103, ppp-a:pilote-2201, ppp-a:pilote-2202, ppp-a:pilote-2203,
                ppp-a:pilote-0602, ppp-a:pilote-0603, ppp-a:pilote-0702, ppp-a:pilote-0703, ppp-a:pilote-0204, ppp-a:pilote-0504, ppp-a:pilote-1204, ppp-a:pilote-1205, ppp-a:pilote-0404, ppp-a:pilote-0405, ppp-a:pilote-2005, ppp-a:pilote-2804, ppp-a:pilote-3004, ppp-a:pilote-3005, ppp-a:pilote-1105, ppp-a:pilote-1605, ppp-a:pilote-2505, ppp-a:pilote-1806,
-               ppp-a:pilote-0604, ppp-a:pilote-0605, ppp-a:pilote-0606, ppp-a:pilote-0704, ppp-a:pilote-0607]   # série 51 ter (2026-10-15) : lot 4 relu   # séries 44 à 44 quater : validées par la relecture, reportées en série 44 quater (publication libérale, X17)
+               ppp-a:pilote-0604, ppp-a:pilote-0605, ppp-a:pilote-0606, ppp-a:pilote-0704, ppp-a:pilote-0607,   # série 51 ter (2026-10-15) : lot 4 relu   # séries 44 à 44 quater : validées par la relecture, reportées en série 44 quater (publication libérale, X17)
+               ppp-a:pilote-2704]   # 2026-10-17 : relue (localIrregularity, verre soufflé à bulles), note reformulée par la relecture
   retirees_relues: [ppp-a:pilote-0103, ppp-a:pilote-0301, ppp-a:pilote-0502,   # retrait (T24) approuvé par la relecture explicative, 2026-10-10
                     ppp-a:pilote-2001, ppp-a:pilote-2301]   # retrait approuvé par la relecture explicative, lot 2, 2026-10-14
   objets: [app:commons-beuchaer-gestockt,
            app:commons-brastad-fog-trees, app:commons-adams-tetons-snake-river, app:commons-empty-wooden-chessboard, app:commons-nhm-ornithoptera-paradisea, app:commons-taj-mahal-front, app:commons-aresquiers-driftwood, app:commons-engraved-sherry-glass, app:commons-line-of-lanterns, app:commons-weatherworn-planks, app:commons-school-rulers, app:commons-egg-white-background, app:commons-stonehenge-trilithon, app:commons-bracken-frond, app:commons-optical-illusion-vase, app:commons-white-paint-wall, app:commons-quercus-robur-leaf, app:commons-azulejo-geometry, app:commons-freehand-circle, app:commons-museo-egizio-stool, app:commons-parliament-st-sash-windows, app:commons-romanesco-broccoli, app:commons-amber-small-piece,
            app:vangogh-tournesols-ng-1888, app:vermeer-laitiere, app:whistler-symphony-in-white-1, app:bruegel-proverbes-flamands, app:commons-ryoanji-7753, app:commons-taj-mahal-south-face, app:monet-pont-japonais-nga, app:commons-brick-wall-stuttgart, app:commons-via-appia-antica, app:commons-glass-bowl-met, app:commons-rodin-thinker,
-           app:commons-orange-navel-evan-amos, app:commons-citron-vert-evan-amos, app:commons-iris-germanica-h-zell, app:commons-bleuet-flogaus-faust]   # série 51 ter (2026-10-15) : lot 4 relu   # lot 3 ter (2026-10-14) : objets des lots 1, 2, 2 bis et 3 vérifiés par la relecture avec leurs assertions (le mur de béton, objet de la série 44 bis, n’en fait pas partie)
+           app:commons-orange-navel-evan-amos, app:commons-citron-vert-evan-amos, app:commons-iris-germanica-h-zell, app:commons-bleuet-flogaus-faust,   # série 51 ter (2026-10-15) : lot 4 relu   # lot 3 ter (2026-10-14) : objets des lots 1, 2, 2 bis et 3 vérifiés par la relecture avec leurs assertions (le mur de béton, objet de la série 44 bis, n’en fait pas partie)
+           app:commons-soda-lime-jar-zaereth]   # 2026-10-17 : relu (crédit et description)
   note_distance: [ppp-e:pilote-01, ppp-e:pilote-02, ppp-e:pilote-03, ppp-e:pilote-04, ppp-e:pilote-05, ppp-e:pilote-06, ppp-e:pilote-07, ppp-e:pilote-08, ppp-e:pilote-09, ppp-a:pilote-0801]
   confirmees_serie44:   # série 44 bis (2026-10-14) : confirmées par la relecture ; série 44 quater (publication libérale, X17, décision de l’éditeur
                         # du projet du 2026-10-14) : reportées dans `assertions` ci-dessus, sauf 0303, 0903 et 1302, dont le `doute` n’est pas levé ;

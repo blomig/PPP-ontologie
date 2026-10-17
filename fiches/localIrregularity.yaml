@@ -291,13 +291,12 @@ transfert: objet conçu oui (céramique tournée, carrelage posé à la main) | 
 enonces_testables:
 - id: E1
   nature: existence
-  enonce: sur 6 à 10 objets publics, accord inter-observateurs exact (échelle à trois régions ou moins, spec §9.7 C, v2.5), au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques
-    (spec §9.7 H) ; vision et toucher éprouvés séparément
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs exact (échelle à trois régions ou moins, spec §9.7 C, v2.5), au-dessus du seuil fixé avant l’épreuve, à conditions critiques égales (spec §9.7 H) ; vision et toucher éprouvés séparément
   statut_epistemique: non éprouvé
   epreuve: null
 - id: E2
   nature: structure
-  enonce: sur des objets à semis égal de bulles, de nombres différents, la densité varie et l’irrégularité locale reste `none`
+  enonce: sur des objets à semis égal de bulles, de nombres différents, la densité varie et l’irrégularité locale reste « aucune »
   statut_epistemique: non éprouvé
   epreuve: null
 - id: E4
@@ -350,4 +349,5 @@ relecture_explicative:
   - 'mesure (raison ISO 10110-18 reformulée) (validé en relecture explicative, série 67 bis, 2026-10-17)'
   - 'énoncé E2 (validé en relecture explicative, série 67 bis, 2026-10-17)'
   - 'note_conditions (phrase sur la photo proposée par la relecture explicative, série 67 ter, 2026-10-17)'
+  - 'enonces_testables E1 et E2 (formulation proposée par la relecture explicative, série 68 bis, 2026-10-17)'
   a_reconfirmer: []

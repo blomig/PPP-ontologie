@@ -178,7 +178,7 @@ transfert: 'objet conçu oui (verre, porcelaine fine, papier) | tableau oui (gla
 enonces_testables:
 - id: E1
   nature: existence
-  enonce: sur 6 à 10 objets publics, accord inter-observateurs exact (échelle à trois régions ou moins, spec §9.7 C, v2.5), au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs exact (échelle à trois régions ou moins, spec §9.7 C, v2.5), au-dessus du seuil fixé avant l’épreuve, à conditions critiques égales
     (spec §9.7 H)
   statut_epistemique: non éprouvé
   epreuve: null
@@ -226,6 +226,7 @@ relecture_explicative:
   - avertissement_label (re-confirmé en relecture explicative, série 9, 2026-10-11)
   - note_conditions (re-confirmé en relecture explicative, série 9, 2026-10-11)
   - note_porteur (C12, lot 2 bis, 2026-10-14)
+  - 'harmonisation mécanique des énoncés affichés (série 69, 2026-10-17)'
   a_reconfirmer: []
   reconfirme:
   - champ: définition

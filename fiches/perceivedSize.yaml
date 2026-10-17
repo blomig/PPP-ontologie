@@ -135,7 +135,7 @@ transfert: objet conçu oui (une tasse, une chaise) | tableau oui (taille des fi
 enonces_testables:
 - id: E1
   nature: existence
-  enonce: 'sur 6 à 10 objets publics, accord inter-observateurs à une région près (échelle à quatre régions), au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques (spec §9.7 H)'
+  enonce: 'sur 6 à 10 objets publics, accord inter-observateurs à une région près (échelle à quatre régions), au-dessus du seuil fixé avant l’épreuve, à conditions critiques égales (spec §9.7 H)'
   statut_epistemique: non éprouvé
   epreuve: null
 - id: E4
@@ -184,6 +184,7 @@ relecture_explicative:
   - note_conditions (série 19)
   - nanay (série 19)
   - enonces_testables (E1) (série 19)
+  - 'harmonisation mécanique des énoncés affichés (série 69, 2026-10-17)'
   a_reconfirmer: []
   reconfirme:
   - champ: définition

@@ -141,13 +141,13 @@ transfert: objet conçu oui (textile imprimé, céramique peinte) | tableau oui 
 enonces_testables:
 - id: E1
   nature: existence
-  enonce: sur 6 à 10 objets publics, accord inter-observateurs exact (échelle à trois régions ou moins, spec §9.7 C, v2.5), au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs exact (échelle à trois régions ou moins, spec §9.7 C, v2.5), au-dessus du seuil fixé avant l’épreuve, à conditions critiques égales
     (spec §9.7 H)
   statut_epistemique: non éprouvé
   epreuve: null
 - id: E1b
   nature: existence
-  enonce: 'comparaison appariée du pas `singleHue` / `neighbouringHues` (crash test 01, §6 point 6) : on montre côte à côte, sous R-loin puis R-près, un membre jugé `singleHue` et un membre jugé `neighbouringHues`,
+  enonce: 'comparaison appariée du pas « une seule teinte » / « teintes voisines » (crash test 01, §6 point 6) : on montre côte à côte, sous R-loin puis R-près, un membre jugé « une seule teinte » et un membre jugé « teintes voisines »,
     et l’on demande s’ils diffèrent en teintes ; part des observateurs qui voient un écart, au-dessus d’un seuil fixé avant l’épreuve'
   statut_epistemique: non éprouvé
   epreuve: null
@@ -194,6 +194,7 @@ relecture_explicative:
   - etat_de_l_art (re-confirmé en relecture explicative, série 9, 2026-10-11)
   - note_echelle (re-confirmé en relecture explicative, série 9, 2026-10-11)
   - espace_valeurs.regions.neighbouringHues.repere (re-confirmé en relecture explicative, série 9, 2026-10-11)
+  - 'harmonisation mécanique des énoncés affichés (série 69, 2026-10-17)'
   a_reconfirmer: []
   reconfirme:
   - champ: etat_de_l_art

@@ -226,7 +226,7 @@ references:
   statut_verification: vérifiée sur résumé ou source secondaire
   verifie_le: '2026-10-10'
   verifie_sur: 'métadonnées Crossref et résumé : l’estimation de la réflectance (dont la brillance) est fiable sous un éclairage réaliste, et se dégrade sinon'
-  reprend: la dépendance du jugement à l’éclairage, qui appuie `lumiere` comme facette critique
+  reprend: la dépendance du jugement à l’éclairage, qui appuie `lumiere` comme condition critique
   ne_reprend_pas: le modèle de statistiques d’éclairage
 - id: wendt2010
   citation: Wendt, G., Faul, F., Ekroll, V. & Mausfeld, R. (2010). Disparity, motion, and color information improve gloss constancy performance. Journal of Vision, 10(9), 7.
@@ -274,7 +274,7 @@ transfert: objet conçu oui (émail, vernis, métal) | tableau oui (un vernis, o
 enonces_testables:
 - id: E1
   nature: existence
-  enonce: sur 6 à 10 objets publics, accord inter-observateurs à une région près, au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques (spec §9.7 H)
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs à une région près, au-dessus du seuil fixé avant l’épreuve, à conditions critiques égales (spec §9.7 H)
   statut_epistemique: non éprouvé
   epreuve: null
 - id: E2
@@ -289,7 +289,7 @@ enonces_testables:
   epreuve: null
 - id: surfaceGloss-1
   nature: structure
-  enonce: sous une lumière dirigée, une surface de la région `mirror` montre entre reflets et zones voisines un contraste de clarté au moins « évident » (région `marked` de `ppp:lightnessContrast`) (tendsToProduce)
+  enonce: sous une lumière dirigée, une surface de la région « miroir » montre entre reflets et zones voisines un contraste de clarté au moins « évident » (région « évident » du contraste de clarté) (tendsToProduce)
   statut_epistemique: non éprouvé
   epreuve: null
 cq_couvertes: CQ1, CQ2
@@ -325,6 +325,7 @@ relecture_explicative:
   - references (série 6, vérification finale)
   - identite (re-confirmé en relecture explicative, série 9, 2026-10-11)
   - note_conditions (re-confirmé en relecture explicative, série 9, 2026-10-11)
+  - 'harmonisation mécanique des énoncés affichés (série 69, 2026-10-17)'
   a_reconfirmer: []
   reconfirme:
   - champ: identite

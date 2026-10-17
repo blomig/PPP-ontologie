@@ -221,7 +221,7 @@ transfert: objet conçu oui (émail, textile) | tableau oui (couleurs d’une zo
 enonces_testables:
 - id: E1
   nature: existence
-  enonce: 'sur 6 à 10 objets publics, accord inter-observateurs à une région près, au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques (spec §9.7 H) ; échelle nominale : accord
+  enonce: 'sur 6 à 10 objets publics, accord inter-observateurs à une région près, au-dessus du seuil fixé avant l’épreuve, à conditions critiques égales (spec §9.7 H) ; échelle nominale : accord
     exact, ou à un voisin déclaré près si l’épreuve le fixe avant'
   statut_epistemique: non éprouvé
   epreuve: null
@@ -261,6 +261,7 @@ relecture_explicative:
   - references.munsell1905.reprend (re-confirmé en relecture explicative, série 9, 2026-10-11)
   - references.berlin_kay1969.reprend (re-confirmé en relecture explicative, série 9, 2026-10-11)
   - references.kelly_judd1955.reprend (re-confirmé en relecture explicative, série 9, 2026-10-11)
+  - 'harmonisation mécanique des énoncés affichés (série 69, 2026-10-17)'
   a_reconfirmer: []
   reconfirme:
   - champ: note_categories

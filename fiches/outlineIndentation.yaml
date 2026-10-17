@@ -126,7 +126,7 @@ transfert: objet conçu oui (luminaire, chaise) | tableau oui (silhouette d’un
 enonces_testables:
 - id: E1
   nature: existence
-  enonce: sur 6 à 10 objets publics, accord inter-observateurs exact (échelle à trois régions, spec §9.7 C, v2.5), au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques (spec
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs exact (échelle à trois régions, spec §9.7 C, v2.5), au-dessus du seuil fixé avant l’épreuve, à conditions critiques égales (spec
     §9.7 H)
   statut_epistemique: non éprouvé
   epreuve: null
@@ -138,7 +138,7 @@ enonces_testables:
 - id: E3
   nature: structure
   enonce: 'la découpure ne se juge que là où un bord est perçu : sur un porteur dont on ne perçoit pas le bord contre le fond, les observateurs la déclarent non applicable plutôt que de lui donner une région
-    (sinon la base `ppp:contour` n’est pas la bonne) ; la base ne contient pas le tracé, qui n’a pas de type (T14) : à instruire'
+    (sinon la netteté du bord n’est pas la bonne base) ; la base ne contient pas le tracé, qui n’a pas de type (T14) : à instruire'
   statut_epistemique: non éprouvé
   epreuve: null
 cq_couvertes: CQ1, CQ2
@@ -168,4 +168,5 @@ relecture_explicative:
   - transfert (série 6)
   - etat_de_l_art (série 6, vérification finale)
   - references (série 6, vérification finale)
+  - 'harmonisation mécanique des énoncés affichés (série 69, 2026-10-17)'
   a_reconfirmer: []

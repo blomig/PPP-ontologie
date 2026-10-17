@@ -173,7 +173,7 @@ transfert: objet conçu oui (meuble, vase) | tableau non (pas de volume) | cuisi
 enonces_testables:
 - id: E1
   nature: existence
-  enonce: sur 6 à 10 objets publics, accord inter-observateurs à une région près, au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques et à tolérance égale (spec §9.7 H ; note_tolerance)
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs à une région près, au-dessus du seuil fixé avant l’épreuve, à conditions critiques égales et à tolérance égale (spec §9.7 H ; note_tolerance)
   statut_epistemique: non éprouvé
   epreuve: null
 - id: E2
@@ -183,7 +183,7 @@ enonces_testables:
   epreuve: null
 - id: E3
   nature: structure
-  enonce: 'deux objets qu’on ne distingue pas par la netteté de leurs bords (`ppp:contour`), vus de la même façon et décrits avec la même liste de formes simples permises (le « répertoire » : cube, sphère,
+  enonce: 'deux objets qu’on ne distingue pas par la netteté de leurs bords, vus de la même façon et décrits avec la même liste de formes simples permises (le « répertoire » : cube, sphère,
     cylindre…), ne diffèrent pas sur le nombre de formes ; sinon la base déclarée est incomplète'
   statut_epistemique: non éprouvé
   epreuve: null
@@ -232,6 +232,7 @@ relecture_explicative:
   - transfert
   - enonces_testables
   - note_base
+  - 'harmonisation mécanique des énoncés affichés (série 69, 2026-10-17)'
   a_reconfirmer: []
   remarque: champs validés par la relecture explicative à 5330e2d (série 15), enonces_testables à 255e824 (série 16, E3 validé) et note_base à 10ffab0 (série 17), formulations des séries 12 et 14 comprises
     (voir `remarque` de la fiche) ; plus rien à relire

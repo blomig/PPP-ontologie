@@ -136,7 +136,7 @@ transfert: objet conçu oui (motif sur une céramique) | tableau oui (personnage
 enonces_testables:
 - id: E1
   nature: existence
-  enonce: sur 6 à 10 objets publics, accord inter-observateurs exact (échelle à trois régions ou moins, spec §9.7 C, v2.5), au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs exact (échelle à trois régions ou moins, spec §9.7 C, v2.5), au-dessus du seuil fixé avant l’épreuve, à conditions critiques égales
     (spec §9.7 H)
   statut_epistemique: non éprouvé
   epreuve: null
@@ -170,6 +170,7 @@ relecture_explicative:
   - relations.note
   - etat_de_l_art (série 6, vérification finale)
   - references (série 6, vérification finale)
+  - 'harmonisation mécanique des énoncés affichés (série 69, 2026-10-17)'
   a_reconfirmer: []
   reconfirme:
   - champ: question_attentionnelle

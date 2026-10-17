@@ -124,7 +124,7 @@ transfert: objet conçu oui (vase, chaise) | tableau oui (lignes droites ou cour
 enonces_testables:
 - id: E1
   nature: existence
-  enonce: sur 6 à 10 objets publics, accord inter-observateurs exact (échelle à trois régions ou moins, spec §9.7 C, v2.5), au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs exact (échelle à trois régions ou moins, spec §9.7 C, v2.5), au-dessus du seuil fixé avant l’épreuve, à conditions critiques égales
     (spec §9.7 H) ; vision et toucher éprouvés séparément
   statut_epistemique: non éprouvé
   epreuve: null
@@ -179,4 +179,5 @@ relecture_explicative:
   - bloque_par (validé en relecture explicative, série 31, 2026-10-12)
   - note_conditions (validé en relecture explicative, série 32, 2026-10-12)
   - conditions_critiques, note_conditions, bloque_par (série 34 ; validés en relecture explicative, série 35, 2026-10-12)
+  - 'harmonisation mécanique des énoncés affichés (série 69, 2026-10-17)'
   a_reconfirmer: []
