@@ -22,7 +22,7 @@ Une question de compétence est une question à laquelle l’ontologie doit savo
 | CQ5 | Dans cet échange ou cette observation, à quelles propriétés l’attention s’est-elle portée … | — | — | — |
 | CQ6 | Lesquelles ont fait une différence (pertinence effective, rôle PPP) ? | — | — | — |
 | CQ7 | L’attention était-elle focalisée sur un objet et distribuée sur plusieurs de ses … | — | — | — |
-| CQ8 | Deux personnes parlent-elles de la même qualité, ou de deux qualités distinctes sous le … | — | — | relation confusableWith : 24 fiches publiques sur 29, 5 en préparation sur 9 |
+| CQ8 | Deux personnes parlent-elles de la même qualité, ou de deux qualités distinctes sous le … | — | — | relation confusableWith : 25 fiches publiques sur 29, 5 en préparation sur 9 |
 | CQ8a | Par quelles qualités et quelles relations entre parties cette forme se caractérise-t-elle … | `hueContrast`, `jointLevelOffset`, `jointSpacing`, `lightnessContrast`, `perceptualContrast`, `scaleContrast` | `elementaryShapeCount`, `textureContrast` | — |
 | CQ8b | Quelles qualités formelles décrivent le joint entre ces deux matières (espacement, … | `jointLevelOffset`, `jointSpacing`, `lightnessContrast`, `perceptualContrast` | — | — |
 | CQ8c | Une configuration du poster se décrit-elle entièrement par des types déjà là (limite, … | — | — | — |
@@ -52,7 +52,7 @@ Une question de compétence est une question à laquelle l’ontologie doit savo
 | CQ16a | Ce type s’applique-t-il, sans redéfinition, à un tableau ? à un ustensile de cuisine ? à … | `perceptualDensity` | — | transfert : 29 fiches publiques sur 29, 9 en préparation sur 9 |
 | CQ16b | Ce qui ne se transfère pas est-il un type du cœur, ou un fait d’application (cette … | — | — | — |
 | CQ16c | Une fiche tableau / cuisine / high-tech peut-elle se remplir avec les mêmes cases qu’une … | — | — | — |
-| CQ17 | Pourquoi ce terme entre-t-il dans le cœur (test Nanay + non-redondance + transfert) ? | — | — | nanay, transfert, relations : 27 fiches publiques sur 29, 5 en préparation sur 9 |
+| CQ17 | Pourquoi ce terme entre-t-il dans le cœur (test Nanay + non-redondance + transfert) ? | — | — | nanay, transfert, relations : 28 fiches publiques sur 29, 5 en préparation sur 9 |
 | CQ18 | Ce terme est-il un type de qualité, une région de valeurs, une relation, une gestalt, ou … | — | — | — |
 | CQ26 | Ce type est-il formel ou semi-formel ? S’il est semi-formel, quelle est sa base de … | — | — | strate, base_dependance : 29 fiches publiques sur 29, 9 en préparation sur 9 |
 | CQ27 | Cette base contient-elle des facteurs non perceptuels (catégorie d’œuvre, titre, … | — | — | base_dependance.facteurs_non_perceptuels : 29 fiches publiques sur 29, 9 en préparation sur 9 |

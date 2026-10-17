@@ -13,7 +13,7 @@
 - **Rôles** : *fonde* (le type ou la structure en dépend), *alimente* (fournit des distinctions, des repères ou des alignements repris), *discute* (position discutée ou en partie écartée), *contraste* (notion voisine dont PPP se distingue, par exemple une norme de mesure).
 - Ce que PPP reprend ou non de chaque source est écrit dans les fiches (`references`, champs `reprend` et `ne_reprend_pas`). Ce document donne la vue par groupe.
 - Les références ont été limitées à des sources solides (2 à 6 par groupe). Une recherche sans résultat est notée « aucune source trouvée », avec la date.
-- **Ancres stables** (spec §9.7 P, point 4) : chaque groupe a une ancre `groupe-…`, posée par une balise `<a id="…"></a>` au-dessus de son titre ; une fiche y renvoie par `etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-…`. Les ancres ne changent pas quand le titre change. Liste : `groupe-texture` (texture et ses cousins), `groupe-couleur`, `groupe-forme` (forme et contour), `groupe-organisation`, `groupe-matiere` (reflets, transparence, profondeur dans la matière), `groupe-joint` (joint et assemblage), `groupe-etagement` (étagement en plans), `groupe-contrastes`, `groupe-toucher` (proposition de famille, sans fiche), `groupe-son` et `groupe-odorat` (propositions de familles, série 41, sans fiche) ; hors groupes de types : `groupe-sources-generales`, `groupe-non-verifiees`, `groupe-spec` ; sous-sections : `brillance-categorisations`, `refs-2-5`, `mesures-couleur` (série 55), `mesures-matiere` (série 56), `mesures-forme` (série 57), `mesures-organisation` (série 58), `mesures-derniers-groupes` (série 59), `mesures-preparation` (série 61) ; gouvernance des ontologies ouvertes : `groupe-gouvernance`. Les anciennes ancres (`texture-et-ses-cousins`, `couleur`, `forme-et-contour`, `organisation`, `matiere`, `joint-et-assemblage`, `etagement-en-plans`, `contrastes`) restent comme alias ; ne plus les employer.
+- **Ancres stables** (spec §9.7 P, point 4) : chaque groupe a une ancre `groupe-…`, posée par une balise `<a id="…"></a>` au-dessus de son titre ; une fiche y renvoie par `etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-…`. Les ancres ne changent pas quand le titre change. Liste : `groupe-texture` (texture et ses cousins), `groupe-couleur`, `groupe-forme` (forme et contour), `groupe-organisation`, `groupe-matiere` (reflets, transparence, profondeur dans la matière), `groupe-joint` (joint et assemblage), `groupe-etagement` (étagement en plans), `groupe-contrastes`, `groupe-toucher` (proposition de famille, sans fiche), `groupe-son` et `groupe-odorat` (propositions de familles, série 41, sans fiche) ; hors groupes de types : `groupe-sources-generales`, `groupe-non-verifiees`, `groupe-spec` ; sous-sections : `brillance-categorisations`, `refs-2-5`, `mesures-couleur` (série 55), `mesures-matiere` (série 56), `mesures-forme` (série 57), `mesures-organisation` (série 58), `mesures-derniers-groupes` (série 59), `mesures-preparation` (série 61), `mesures-irregularite-interieur` (série 67) ; gouvernance des ontologies ouvertes : `groupe-gouvernance`. Les anciennes ancres (`texture-et-ses-cousins`, `couleur`, `forme-et-contour`, `organisation`, `matiere`, `joint-et-assemblage`, `etagement-en-plans`, `contrastes`) restent comme alias ; ne plus les employer.
 
 <a id="groupe-texture"></a>
 <a id="texture-et-ses-cousins"></a>
@@ -25,7 +25,7 @@ Les classifications de la texture viennent surtout de la vision par ordinateur (
 
 - `ppp:texture` : La perception de la texture est étudiée depuis les années 1970 en vision par ordinateur et en psychologie. Tamura, Mori et Yamawaki (1978) ont proposé six mesures calculées sur une image, comparées à des jugements humains ; la *coarseness* (le caractère plus ou moins gros du grain) correspond à la taille des reliefs. Rao et Lohse (1996) et Bhushan, Rao et Lohse (1997) ont cherché les dimensions perçues et le lexique de la texture. Les mesures de Haralick et al. (1973) servent à classer des images par calcul, sans viser la perception.
 - `ppp:textureDirectionality` : La direction commune des reliefs est l'une des six dimensions de Tamura, Mori et Yamawaki (1978), mesurée sur une image (*directionality*). Liu et Picard (1996) en font l'une des trois composantes d'un modèle d'image (périodicité, direction, caractère aléatoire). Aucune source trouvée ne limite l'orientation aux reliefs, comme le fait PPP (T26).
-- `ppp:localIrregularity` : La régularité d'une texture est une dimension de Tamura, Mori et Yamawaki (1978), mais composée d'autres mesures ; Liu et Picard (1996) traitent le caractère aléatoire d'une texture comme une composante séparée. Aucune source trouvée ne nomme l'écart local à une régularité comme qualité perçue. La base du type reste ouverte (T11).
+- `ppp:localIrregularity` : La régularité d'une texture est une dimension de Tamura, Mori et Yamawaki (1978), mais composée d'autres mesures ; Liu et Picard (1996) traitent le caractère aléatoire d'une texture comme une composante séparée. Aucune source trouvée ne nomme l'écart local à une régularité comme qualité perçue. La base du type reste ouverte (T11). Série 67 (2026-10-17) : la portée s'étend à l'intérieur visible d'une matière (bulles, fils, nuages). Aucune étude de perception sur les bulles ou les inclusions n'a été trouvée ; la perception des matières translucides et transparentes est étudiée (Fleming et Bülthoff 2005 ; Motoyoshi 2010 ; revue de Gigilashvili et al. 2021), le modèle des filtres minces de Metelli (1974) convient mal à un volume, et Fleming, Jäkel et Maloney (2011) montrent que les déformations dues à un objet transparent épais servent d'indice. Pour séparer une bulle d'une piqûre, la parallaxe de mouvement (Cutting et Vishton 1995) et le reflet qui reste entier sont des positions de travail. La transparence est une condition d'accès à l'intérieur, pas une base du type. Les normes du verre comptent des défauts (sous-section `mesures-irregularite-interieur`) ; ASTM C162 donne le vocabulaire d'atelier (*seed*, *blister*, *cord*, *stone*).
 
 **Références** :
 
@@ -44,6 +44,16 @@ Les classifications de la texture viennent surtout de la vision par ordinateur (
 - Liu, F. & Picard, R. W. (1996). Periodicity, directionality, and randomness: Wold features for image modeling and retrieval. IEEE Transactions on Pattern Analysis and Machine Intelligence, 18(7), 722–733. https://doi.org/10.1109/34.506794
   - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : métadonnées Crossref et résumé lu (OpenAlex, 2026-10-10) : modèle d’image (décomposition de Wold) en trois composantes orthogonales, « periodicity », « directionality » et « randomness », présentées comme approchant les trois dimensions les plus importantes de la perception de la texture ; texte intégral non lu ;
   - usage : `ppp:textureDirectionality` (discute); `ppp:localIrregularity` (discute).
+- Gigilashvili, D., Thomas, J.-B., Hardeberg, J. Y. & Pedersen, M. (2021). Translucency perception: A review. Journal of Vision, 21(8), 4. https://doi.org/10.1167/jov.21.8.4
+  - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : métadonnées Crossref et résumé lu (2026-10-17) : le phénomène perçu dépend des conditions d’observation ; texte intégral non lu ;
+  - usage : `ppp:localIrregularity` (alimente).
+- Fleming, R. W., Jäkel, F. & Maloney, L. T. (2011). Visual perception of thick transparent materials. Psychological Science, 22(6), 812–820. https://doi.org/10.1177/0956797611408734
+  - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : métadonnées Crossref et résumé lu (2026-10-17) : les déformations dues aux objets transparents épais servent d’indices ; les bulles ne sont pas traitées ; texte intégral non lu ;
+  - usage : `ppp:localIrregularity` (alimente).
+- ASTM C162-23. Standard Terminology of Glass and Glass Products. West Conshohocken (PA) : ASTM International. https://doi.org/10.1520/C0162-23
+  - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : métadonnées (page de l’ASTM, Crossref) ; définitions de *seed*, *blister*, *cord* et *stone* lues sur une source secondaire ; texte non lu ;
+  - usage : `ppp:localIrregularity` (discute ; vocabulaire d’atelier seulement).
+- Metelli (1974), Fleming et Bülthoff (2005), Motoyoshi (2010) (notices : groupe matière) et Cutting et Vishton (1995) (notice : groupe étagement) : usage étendu à `ppp:localIrregularity` en série 67.
 
 <a id="groupe-couleur"></a>
 <a id="couleur"></a>
@@ -303,6 +313,26 @@ Rubrique `mesure` des fiches publiques de surface et de matière (`surfaceGloss`
 - Jensen, H. W., Marschner, S. R., Levoy, M. & Hanrahan, P. (2001). A practical model for subsurface light transport. SIGGRAPH 2001, ACM, 511–518. https://doi.org/10.1145/383259.383319
   - statut : *vérifiée sur résumé ou source secondaire* (Crossref, résumé OpenAlex) ;
   - usage : `subsurfaceDepth` (contraste ; mesure associée indirecte, non normalisée : propriétés optiques mesurées par image).
+
+<a id="mesures-irregularite-interieur"></a>
+#### Irrégularité locale dans l’intérieur d’une matière (série 67)
+
+Rubrique `mesure` de `localIrregularity` après l’élargissement à l’intérieur visible d’une matière ; recherche du 2026-10-17. Toujours aucune méthode robuste : ces textes comptent des défauts par rapport à un verre sans bulle et ne disent pas où l’intérieur s’écarte de sa propre régularité ; ils sont non retenus. Aucun seuil n’est repris.
+
+- ISO 10110-18:2018. Optics and photonics — Preparation of drawings for optical elements and systems — Part 18: Stress birefringence, bubbles and inclusions, homogeneity, and striae. https://www.iso.org/standard/68155.html
+  - statut : *vérifiée sur résumé ou source secondaire* (page de l’ISO lue le 2026-10-17 : publiée en 2018-12, confirmée en 2023 ; extrait public lu : définitions 3.2, notation 6.2) ; elle remplace ISO 10110-3:1996, retirée, qui n’est pas citée comme norme en vigueur ;
+  - usage : `localIrregularity` (contraste ; méthode voisine non retenue).
+- ISO 12543-6:2021. Glass in building — Laminated glass and laminated safety glass — Part 6: Appearance. https://www.iso.org/standard/75501.html
+  - statut : *vérifiée sur résumé ou source secondaire* (page de l’ISO lue le 2026-10-17, 3e édition, remplace l’édition 2011 ; extrait public lu : domaine d’application, définitions 3.1 et 3.3) ;
+  - usage : `localIrregularity` (contraste ; méthode voisine non retenue).
+- ISO 12123:2018. Optics and photonics — Specification of raw optical glass. https://www.iso.org/standard/69905.html
+  - statut : *vérifiée sur résumé ou source secondaire* (page de l’ISO lue le 2026-10-17 : 3e édition, confirmée en 2024 ; extrait public lu : définition de la bulle, section 4.8) ;
+  - usage : `localIrregularity` (contraste ; méthode voisine non retenue).
+- SCHOTT (2016). TIE-28: Bubbles and Inclusions in Optical Glass. Technical Information, version de mai 2016. https://media.schott.com/api/public/content/8c15c0495a52451e82bf70b480b0874d?download=true&v=47ebbb91
+  - statut : *vérifiée sur la source* (PDF de l’éditeur lu, sections 4 et 5 : fond noir, lumière de côté, bulles vues comme des points brillants ; aire totale pour 100 cm³ ; concentration traitée à part) ;
+  - usage : `localIrregularity` (contraste ; méthode voisine non retenue ; le montage d’observation sert d’exemple de lumière qui révèle l’intérieur).
+
+*English version.* Local irregularity in the interior of a material (series 67): `mesure` section of `localIrregularity` after its widening to the visible interior of a material; search of 2026-10-17. Still no robust method: these texts count defects against bubble-free glass and do not say where the interior departs from its own regularity; they are not retained. No threshold is taken over. ISO 10110-18:2018 (replaces the withdrawn ISO 10110-3:1996), ISO 12543-6:2021 and ISO 12123:2018: *checked on abstract or secondary source* (ISO pages and public previews read on 2026-10-17); SCHOTT TIE-28 (May 2016): *checked on the source* (sections 4 and 5).
 
 *English version.* Associated measurements of the material group (`mesure` section), for the entries listed above; sources checked on 2026-10-16; titles in their original language. ISO 2813, ASTM D523 and ASTM D1003, listed above, keep their records.
 

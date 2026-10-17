@@ -15,15 +15,19 @@ base_dependance:
   facteurs_non_perceptuels: []
 facettes:
 - matiere
-définition: Présence et ampleur des endroits où une surface, un trait ou un bord s’écarte de la régularité qu’il a dans l’ensemble (un trait tremblé, des carreaux posés à la main qui ne s’alignent pas tout
-  à fait).
-question_attentionnelle: La surface, le trait ou le bord s’écarte-t-il par endroits de sa régularité d’ensemble, et ces écarts sont-ils légers ou marqués ?
-contre_exemple: Une surface à gros relief régulier (tôle gaufrée) a une texture grosse, sans irrégularité locale.
+définition: Présence et ampleur des endroits où une surface, un trait, un bord, ou l’intérieur visible d’une matière, s’écarte de la régularité qu’il a dans l’ensemble (un trait tremblé, des carreaux posés
+  à la main qui ne s’alignent pas tout à fait, quelques bulles isolées dans un verre clair).
+question_attentionnelle: La surface, le trait, le bord ou l’intérieur visible d’une matière s’écarte-t-il par endroits de sa régularité d’ensemble, et ces écarts sont-ils légers ou marqués ?
+contre_exemple: 'Une surface à gros relief régulier (tôle gaufrée) a une texture grosse, sans irrégularité locale. Un verre bullé, semé partout de bulles pareilles, n’a pas d’irrégularité locale : ces bulles
+  sont sa régularité. Qu’un verre ait plus ou moins de bulles relève de la densité perceptive ; leur répartition, de la distribution. Des accidents isolés dans une matière par ailleurs régulière (trois
+  bulles dans un verre clair, un fil dans une coupe soufflée, une grosse bulle parmi des petites) relèvent de l’irrégularité locale ; un amas de bulles relève des deux types : c’est un écart, et la distribution
+  est groupée. Des bulles si fines qu’on ne les distingue plus une à une rendent le verre trouble : c’est sa transparence qui change.'
 grandeur_physique_homonyme: 'aucune pour le label canonique ; l’ancien label v0.2 « rugosité », retiré, était homonyme de la rugosité de surface mesurée, qui relève de la texture.'
 mesure:
   etat: aucune_methode_robuste
-  synthese: Aucune méthode robuste de mesure associée aux écarts locaux à la régularité d’ensemble n’est connue (recherche du 2026-10-16). Les paramètres de rugosité de profil ou de surface résument tout
-    le relief d’une zone ; aucune norme lue ne repère les endroits où une surface, un trait ou un bord s’écarte de sa propre régularité.
+  synthese: Aucune méthode robuste de mesure associée aux écarts locaux à la régularité d’ensemble n’est connue (recherche du 2026-10-17). Les paramètres de rugosité de profil ou de surface résument tout
+    le relief d’une zone ; pour l’intérieur d’un verre, les normes comptent bulles et inclusions par rapport à un verre sans bulle. Aucune norme lue ne repère les endroits où une surface, un trait, un bord
+    ou l’intérieur d’une matière s’écarte de sa propre régularité.
   regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
     une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
   methodes: []
@@ -35,14 +39,35 @@ mesure:
     raison: ils résument le relief de toute une zone en une valeur moyenne ou extrême, sans repérer où la surface s’écarte de sa régularité d’ensemble ; ils ne valent pas pour un trait ou un bord, et ne
       saisissent ni la distance de vue, ni l’éclairage, ni l’observateur
     statut_lecture: résumé public lu (pages de l’ISO)
+  - nom: tolérances de bulles et d’inclusions du verre (ISO 10110-18, ISO 12543-6)
+    references:
+    - iso_10110_18
+    - iso_12543_6
+    raison: elles comptent des défauts par rapport à un verre sans bulle et ne disent pas où l’intérieur s’écarte de sa propre régularité ; la notation d’optique descend à des tailles invisibles à distance
+      d’usage ; elles ne valent que pour le verre d’optique ou le verre feuilleté de bâtiment
+    statut_lecture: pages de l’ISO et extraits publics lus (ISO 10110-18, sections 3.2 et 6.2 ; ISO 12543-6, domaine d’application et définitions)
+  - nom: contrôle visuel des bulles et inclusions du verre d’optique (SCHOTT TIE-28 ; ISO 12123)
+    references:
+    - schott_tie28
+    - iso_12123
+    raison: il compte bulles et inclusions par leur aire totale dans un volume donné, par rapport à un verre sans bulle, et ne traite leur concentration que comme un motif de rejet ; il ne dit pas l’écart
+      perçu à la régularité propre de l’objet, ne vaut que pour le verre d’optique et ne saisit ni la distance de vue ni l’observateur
+    statut_lecture: note technique lue (SCHOTT, sections 4 et 5) ; ISO 12123, page de l’ISO et extrait public lus
 modalites:
 - vision
 - toucher
 mode_de_presentation: image
 conditions_critiques:
 - distance
-note_conditions: de loin, des écarts légers cessent de se voir
-porteur: une surface, un trait ou un bord
+- angle
+note_conditions: 'de loin, des écarts légers cessent de se voir ; dans l’intérieur d’une matière, le contre-jour ou une lumière de côté sur fond sombre révèlent bulles et nuages, et c’est en tournant l’objet
+  qu’on voit l’intérieur ; la lumière reste en note (spec §9.7 H, règle 3) ; angle est critique pour la vue, par l’exception de cette règle ; dans l’intérieur, le jugement se fait à la vue seulement.
+  Sur une photo, si l’on ne peut pas dire si l’écart est dans l’intérieur ou en surface : « non tranché ».'
+porteur: une surface, un trait ou un bord ; ou l’intérieur d’une matière qui laisse voir dedans (verre, résine, pierre translucide)
+note_porteur: 'Intérieur : on ne juge que ce qui se voit dans l’épaisseur, il faut donc que la matière laisse passer la lumière. Sur une matière opaque, seule la surface se juge. Une bulle se distingue d’une
+  piqûre parce qu’elle glisse sous la surface quand on tourne l’objet et qu’elle ne casse pas le reflet. Si on ne peut pas trancher (photo), on écrit « non tranché ». Au toucher, seule la surface compte.
+  La transparence est une condition d’accès à l’intérieur, pas une base du type : les bulles ont déjà un bord perçu (netteté du bord), et une piqûre sur un métal opaque ne dépend pas de la transparence.
+  Seule compte la bulle vue, pas celle qu’on sait là. Les indices bulle / piqûre sont des positions de travail, à éprouver.'
 arité: 1
 condition_NA: porteur sans régularité d’ensemble perceptible (rien par rapport à quoi un écart se lirait).
 espace_valeurs:
@@ -71,8 +96,15 @@ espace_valeurs:
     repere: des écarts visibles d’emblée
     exemplaires:
     - ppp-a:pilote-2703
-identite: Écart à une régularité, pas la taille du relief (texture).
-relations: []
+identite: 'Écart à une régularité, pas la taille du relief (texture) ; dans l’intérieur d’une matière, pas le nombre d’inclusions (densité perceptive), pas leur répartition (distribution), pas le trouble
+  d’ensemble (transparence), pas l’impression de voir loin dans l’épaisseur (profondeur dans la matière).'
+relations:
+- type: confusableWith
+  cible: ppp:perceptualDensity
+  note: 'dans un verre, beaucoup de bulles se lisent d’abord comme un nombre d’éléments : c’est la densité perceptive ; l’irrégularité locale demande où l’intérieur s’écarte de sa régularité d’ensemble'
+- type: confusableWith
+  cible: ppp:subsurfaceDepth
+  note: des bulles vues à différentes profondeurs donnent l’impression d’entrer dans la matière ; cette impression relève de la profondeur dans la matière, pas de l’écart à la régularité
 alignements_externes:
 - relation: skos:relatedMatch
   cible: regularity (Tamura, Mori et Yamawaki 1978)
@@ -138,7 +170,113 @@ references:
     texture ; Std, direction de la texture, degrés) ; le guide suit les projets de normes ISO 25178 alors en préparation'
   reprend: 'rien : les symboles et noms des paramètres surfaciques, cités dans la rubrique « mesure »'
   ne_reprend_pas: les valeurs des paramètres comme bornes de régions ; les procédés d’interférométrie
-etat_de_l_art: 'La régularité d’une texture est une des dimensions de Tamura, Mori et Yamawaki (1978) [[tamura1978]], calculée à partir des variations de leurs autres mesures (grossièreté, contraste, orientation, linéarité) ; Liu et Picard (1996) [[liu_picard1996]] traitent le caractère aléatoire d’une texture comme une composante à part. Aucune source trouvée ne nomme l’écart local à une régularité comme qualité perçue. La base retenue (texture et netteté du bord) est une décision du projet, révisable après épreuve (T11, série 48). Détail : docs/bibliographie-par-type.md#groupe-texture.'
+- id: iso_10110_18
+  citation: 'ISO 10110-18:2018. Optics and photonics — Preparation of drawings for optical elements and systems — Part 18: Stress birefringence, bubbles and inclusions, homogeneity, and striae. Genève :
+    ISO.'
+  doi_ou_url: https://www.iso.org/standard/68155.html
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-17'
+  verifie_sur: 'page de l’ISO lue le 2026-10-17 (publiée en 2018-12, confirmée en 2023 ; remplace ISO 10110-3:1996, retirée, sur les bulles et inclusions) ; extrait public lu : 3.2.1, bulle (« gaseous
+    void […] in the bulk material ») ; 3.2.2, inclusion (bulles, stries, nœuds, petites pierres, sable, cristaux) ; 3.2.3, grade = racine carrée de l’aire projetée ; 6.2, notation (grade maximal admis,
+    nombre de bulles de ce grade, aire cumulée) ; texte payant non lu au-delà'
+  reprend: 'rien : méthode voisine non retenue (rubrique « mesure »)'
+  ne_reprend_pas: les grades et nombres admis ; la notion de défaut
+- id: iso_12543_6
+  citation: 'ISO 12543-6:2021. Glass in building — Laminated glass and laminated safety glass — Part 6: Appearance. Genève : ISO.'
+  doi_ou_url: https://www.iso.org/standard/75501.html
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-17'
+  verifie_sur: 'page de l’ISO lue le 2026-10-17 (3e édition ; remplace l’édition 2011, retirée) ; extrait public lu : domaine d’application (aspect du verre feuilleté vu à travers) ; 3.1, défaut ponctuel
+    (taches opaques, bulles, corps étrangers) ; 3.3, tache opaque (inclusions dans le verre ou l’intercalaire) ; méthode d’observation hors de l’extrait ; texte payant non lu'
+  reprend: 'rien : méthode voisine non retenue (rubrique « mesure »)'
+  ne_reprend_pas: les tailles et nombres admis ; la notion de défaut
+- id: iso_12123
+  citation: 'ISO 12123:2018. Optics and photonics — Specification of raw optical glass. Genève : ISO.'
+  doi_ou_url: https://www.iso.org/standard/69905.html
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-17'
+  verifie_sur: 'page de l’ISO lue le 2026-10-17 (3e édition, 2018-12, confirmée en 2024 ; complément de la série ISO 10110 pour le verre brut) ; extrait public lu : bulle définie comme « gaseous void in
+    the bulk optical material », bulles et inclusions solides traitées de la même façon (section 4.8) ; texte payant non lu'
+  reprend: 'rien : méthode voisine non retenue (rubrique « mesure »)'
+  ne_reprend_pas: les classes de bulles admises
+- id: schott_tie28
+  citation: 'SCHOTT (2016). TIE-28: Bubbles and Inclusions in Optical Glass. Technical Information, version de mai 2016. Mainz : SCHOTT.'
+  doi_ou_url: https://media.schott.com/api/public/content/8c15c0495a52451e82bf70b480b0874d?download=true&v=47ebbb91
+  role: contraste
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-10-17'
+  verifie_sur: 'PDF de l’éditeur lu le 2026-10-17 (sections 4 et 5) : verre posé sur fond noir, éclairé de côté, regardé à travers vers le fond noir, bulles et inclusions vues comme des points brillants ;
+    contenu en bulles exprimé par l’aire totale pour 100 cm³ ; concentration traitée à part (plus de 20 % des inclusions dans 4 % de l’échantillon)'
+  reprend: le montage d’observation (fond sombre, lumière de côté) comme exemple de lumière qui révèle l’intérieur ; méthode voisine non retenue (rubrique « mesure »)
+  ne_reprend_pas: les classes et valeurs admises
+- id: astm_c162
+  citation: 'ASTM C162-23. Standard Terminology of Glass and Glass Products. West Conshohocken (PA) : ASTM International.'
+  doi_ou_url: https://doi.org/10.1520/C0162-23
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-17'
+  verifie_sur: 'métadonnées (page de l’ASTM, Crossref) ; définitions de seed (très petite inclusion gazeuse), blister (grosse bulle), cord (inclusion vitreuse aux propriétés optiques différentes) et stone
+    (contamination cristalline) lues sur une source secondaire ; texte non lu'
+  reprend: le vocabulaire d’atelier des défauts du verre, pour nommer des exemples
+  ne_reprend_pas: les définitions comme régions ou critères
+- id: fleming_bulthoff2005
+  citation: Fleming, R. W. & Bülthoff, H. H. (2005). Low-level image cues in the perception of translucent materials. ACM Transactions on Applied Perception, 2(3), 346–382.
+  doi_ou_url: https://doi.org/10.1145/1077399.1077409
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-17'
+  verifie_sur: résumé lu ; métadonnées Crossref ; texte non lu
+  reprend: flou, contraste, reflets, taille et direction de la lumière jouent dans la perception des matières translucides
+  ne_reprend_pas: les stimuli et modèles de rendu
+- id: motoyoshi2010
+  citation: Motoyoshi, I. (2010). Highlight–shading relationship as a cue for the perception of translucent and transparent materials. Journal of Vision, 10(9), 6.
+  doi_ou_url: https://doi.org/10.1167/10.9.6
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-17'
+  verifie_sur: résumé lu ; métadonnées Crossref ; texte non lu
+  reprend: la relation entre reflets et ombrage comme indice de translucidité ou de transparence
+  ne_reprend_pas: les mesures d’image
+- id: gigilashvili2021
+  citation: 'Gigilashvili, D., Thomas, J.-B., Hardeberg, J. Y. & Pedersen, M. (2021). Translucency perception: A review. Journal of Vision, 21(8), 4.'
+  doi_ou_url: https://doi.org/10.1167/jov.21.8.4
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-17'
+  verifie_sur: résumé lu ; métadonnées Crossref ; texte non lu
+  reprend: le phénomène perçu dépend des conditions d’observation
+  ne_reprend_pas: le détail de la revue
+- id: metelli1974
+  citation: Metelli, F. (1974). The perception of transparency. Scientific American, 230(4), 90–98.
+  doi_ou_url: https://doi.org/10.1038/scientificamerican0474-90
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-17'
+  verifie_sur: métadonnées seulement (Crossref) ; texte non lu
+  reprend: 'rien : modèle de filtres minces, cité pour dire qu’il convient mal à un volume'
+  ne_reprend_pas: le modèle
+- id: fleming_jakel_maloney2011
+  citation: Fleming, R. W., Jäkel, F. & Maloney, L. T. (2011). Visual perception of thick transparent materials. Psychological Science, 22(6), 812–820.
+  doi_ou_url: https://doi.org/10.1177/0956797611408734
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-17'
+  verifie_sur: résumé lu ; métadonnées Crossref ; texte non lu
+  reprend: les déformations dues à un objet transparent épais servent d’indice
+  ne_reprend_pas: les bulles, que l’étude ne traite pas
+- id: cutting_vishton1995
+  citation: Cutting, J. E. & Vishton, P. M. (1995). Perceiving layout and knowing distances. In Perception of Space and Motion, Academic Press (Elsevier), 69–117.
+  doi_ou_url: https://doi.org/10.1016/B978-012240530-3/50005-5
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-10'
+  verifie_sur: métadonnées Crossref (titre court, ouvrage, pages) ; résumé non disponible ; texte non lu
+  reprend: la parallaxe de mouvement comme indice de profondeur reconnu
+  ne_reprend_pas: leur analyse des indices (contenu non lu)
+etat_de_l_art: 'La régularité d’une texture est une des dimensions de Tamura, Mori et Yamawaki (1978) [[tamura1978]], calculée à partir des variations de leurs autres mesures (grossièreté, contraste, orientation, linéarité) ; Liu et Picard (1996) [[liu_picard1996]] traitent le caractère aléatoire d’une texture comme une composante à part. Aucune source trouvée ne nomme l’écart local à une régularité comme qualité perçue. Dans l’intérieur d’une matière, aucune étude de perception sur les bulles ou les inclusions n’a été trouvée (recherche du 2026-10-17). La perception des matières translucides et transparentes est étudiée : flou, contraste, reflets et lumière y jouent [[fleming_bulthoff2005]] [[motoyoshi2010]], et le phénomène perçu dépend des conditions d’observation [[gigilashvili2021]] ; le modèle des filtres minces [[metelli1974]] convient mal à un volume ; dans un verre épais, les déformations dues à l’objet servent d’indice [[fleming_jakel_maloney2011]]. Pour séparer une bulle d’une piqûre, la parallaxe de mouvement, indice de profondeur reconnu [[cutting_vishton1995]], et le reflet qui reste entier au-dessus d’une bulle sont des positions de travail. Les normes et notes techniques du verre décrivent bulles et inclusions comme des défauts, comptés par rapport à un verre sans bulle (ISO 10110-18 [[iso_10110_18]], ISO 12123 [[iso_12123]], SCHOTT TIE-28 [[schott_tie28]], ISO 12543-6 [[iso_12543_6]]) ; le vocabulaire d’atelier distingue seed, blister, cord et stone [[astm_c162]]. La base retenue (texture et netteté du bord) est une décision du projet, révisable après épreuve (T11, série 48) ; la transparence n’en fait pas partie : c’est une condition d’accès à l’intérieur. Détail : docs/bibliographie-par-type.md#groupe-texture.'
 etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-texture
 axiomes:
 - conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
@@ -147,13 +285,19 @@ axiomes:
   validation: Les 3 ppp:Region de l’échelle du type ont des ppp:rank distincts, de 1 à 3 ; une assertion a au plus un ppp:inRegion.
 - conceptuel: Une région de cet espace n’est pas un sous-type du type.
   validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
-nanay: Oui — passer de « je vois une surface ou un trait » à « je cherche où il s’écarte de sa régularité » change la description (repérage de la trace de la main, des écarts de pose).
-transfert: objet conçu oui (céramique tournée, carrelage posé à la main) | tableau oui (trait tremblé) | cuisine oui (plan de travail en pierre) | high-tech oui (petites marques sur une coque lisse)
+nanay: Oui — passer de « je vois une surface ou un trait » à « je cherche où il s’écarte de sa régularité » change la description (repérage de la trace de la main, des écarts de pose ; dans un verre, des
+  bulles ou des fils à l’intérieur).
+transfert: objet conçu oui (céramique tournée, carrelage posé à la main) | tableau oui (trait tremblé) | cuisine oui (plan de travail en pierre) | high-tech oui (petites marques sur une coque lisse) | verre et résine oui (bulles d’un verre soufflé, inclusions dans une résine coulée ou un presse-papier)
 enonces_testables:
 - id: E1
   nature: existence
   enonce: sur 6 à 10 objets publics, accord inter-observateurs exact (échelle à trois régions ou moins, spec §9.7 C, v2.5), au-dessus du seuil fixé avant l’épreuve, à régime égal sur les facettes critiques
     (spec §9.7 H) ; vision et toucher éprouvés séparément
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E2
+  nature: structure
+  enonce: sur des objets à semis égal de bulles, de nombres différents, la densité varie et l’irrégularité locale reste `none`
   statut_epistemique: non éprouvé
   epreuve: null
 - id: E4
@@ -169,16 +313,19 @@ modifie_en:
 - 2.2.3
 - 2.3.1
 - '2.5'
+- '2.8'
 remplace_par: []
 source_de_la_fiche: 'ex-« rugosité » v0.2 ; la définition v0.2 portait une valence (« imperfections », « augmentent la présence ») et n’est pas reprise ; « rugosité » retiré des labels alternatifs (2026-10-10)
   : c’est de la texture (annexe A alignée en série 24, T19)'
 manques:
 - 'exemplaires (lot 3, 2026-10-14) : 2701 aucune, 2702 légère, 2703 marquée ; relus et validés par la relecture explicative (lot 3 bis, 2026-10-14)'
-- 'base de dépendance (texture, netteté du bord) confirmée (T11, série 48), révisable après épreuve'
+- 'base de dépendance (texture, netteté du bord) confirmée (T11, série 48), révisable après épreuve ; la transparence reste hors de la base (série 67 : condition d’accès à l’intérieur, note_porteur)'
+- 'série 67 (2026-10-17) : aucun exemplaire dans l’intérieur d’une matière ; à proposer sur des objets publics (verre soufflé à bulles isolées, résine coulée à inclusions), image sous licence vérifiée'
+- 'série 67 : indices bulle / piqûre (parallaxe, reflet) et énoncé E2 à éprouver'
 bloque_par: []
 a_relire: []
 relecture_explicative:
-  date: '2026-10-10'
+  date: '2026-10-17'
   champs:
   - question_attentionnelle
   - définition
@@ -188,4 +335,19 @@ relecture_explicative:
   - etat_de_l_art (série 6)
   - references (série 6)
   - 'etat_de_l_art (validé en relecture explicative, lot 3 bis, 2026-10-14 : base retenue après la série 48 ; début réécrit par la relecture)'
+  - 'définition (validé en relecture explicative, série 67 bis, 2026-10-17)'
+  - 'question_attentionnelle (validé en relecture explicative, série 67 bis, 2026-10-17)'
+  - 'contre_exemple (corrigé : plus ou moins de bulles = densité perceptive ; grosse bulle parmi des petites = irrégularité, amas = les deux) (validé en relecture explicative, série 67 bis, 2026-10-17)'
+  - 'porteur (validé en relecture explicative, série 67 bis, 2026-10-17)'
+  - 'note_porteur (validé en relecture explicative, série 67 bis, 2026-10-17)'
+  - 'identite (validé en relecture explicative, série 67 bis, 2026-10-17)'
+  - 'conditions_critiques (angle) (validé en relecture explicative, série 67 bis, 2026-10-17)'
+  - 'note_conditions (validé en relecture explicative, série 67 bis, 2026-10-17)'
+  - 'relations (validé en relecture explicative, série 67 bis, 2026-10-17)'
+  - 'nanay (validé en relecture explicative, série 67 bis, 2026-10-17)'
+  - 'transfert (validé en relecture explicative, série 67 bis, 2026-10-17)'
+  - 'etat_de_l_art (validé en relecture explicative, série 67 bis, 2026-10-17)'
+  - 'mesure (raison ISO 10110-18 reformulée) (validé en relecture explicative, série 67 bis, 2026-10-17)'
+  - 'énoncé E2 (validé en relecture explicative, série 67 bis, 2026-10-17)'
+  - 'note_conditions (phrase sur la photo proposée par la relecture explicative, série 67 ter, 2026-10-17)'
   a_reconfirmer: []

@@ -708,6 +708,8 @@
    "@id": "https://w3id.org/ppp/localIrregularity",
    "related": [
     "https://w3id.org/ppp/curvature",
+    "https://w3id.org/ppp/perceptualDensity",
+    "https://w3id.org/ppp/subsurfaceDepth",
     "https://w3id.org/ppp/texture",
     "https://w3id.org/ppp/textureDirectionality"
    ],
@@ -719,17 +721,17 @@
     "en": "local irregularity"
    },
    "definition": {
-    "fr": "Présence et ampleur des endroits où une surface, un trait ou un bord s’écarte de la régularité qu’il a dans l’ensemble (un trait tremblé, des carreaux posés à la main qui ne s’alignent pas tout à fait).",
-    "en": "The presence and extent of the places where a surface, a line or an edge departs from the regularity it has as a whole (a shaky line, hand-laid tiles that do not quite line up)."
+    "fr": "Présence et ampleur des endroits où une surface, un trait, un bord, ou l’intérieur visible d’une matière, s’écarte de la régularité qu’il a dans l’ensemble (un trait tremblé, des carreaux posés à la main qui ne s’alignent pas tout à fait, quelques bulles isolées dans un verre clair).",
+    "en": "The presence and extent of the places where a surface, a line, an edge, or the visible interior of a material, departs from the regularity it has as a whole (a shaky line, hand-laid tiles that do not quite line up, a few isolated bubbles in clear glass)."
    },
    "scopeNote": {
     "fr": [
-     "La surface, le trait ou le bord s’écarte-t-il par endroits de sa régularité d’ensemble, et ces écarts sont-ils légers ou marqués ?",
-     "Une surface à gros relief régulier (tôle gaufrée) a une texture grosse, sans irrégularité locale."
+     "La surface, le trait, le bord ou l’intérieur visible d’une matière s’écarte-t-il par endroits de sa régularité d’ensemble, et ces écarts sont-ils légers ou marqués ?",
+     "Une surface à gros relief régulier (tôle gaufrée) a une texture grosse, sans irrégularité locale. Un verre bullé, semé partout de bulles pareilles, n’a pas d’irrégularité locale : ces bulles sont sa régularité. Qu’un verre ait plus ou moins de bulles relève de la densité perceptive ; leur répartition, de la distribution. Des accidents isolés dans une matière par ailleurs régulière (trois bulles dans un verre clair, un fil dans une coupe soufflée, une grosse bulle parmi des petites) relèvent de l’irrégularité locale ; un amas de bulles relève des deux types : c’est un écart, et la distribution est groupée. Des bulles si fines qu’on ne les distingue plus une à une rendent le verre trouble : c’est sa transparence qui change."
     ],
     "en": [
-     "Does the surface, line or edge depart here and there from its overall regularity, and are these departures slight or marked?",
-     "A surface with a coarse regular relief (embossed sheet metal) has a coarse texture, without local irregularity."
+     "Does the surface, line, edge or visible interior of a material depart here and there from its overall regularity, and are these departures slight or marked?",
+     "A surface with a coarse regular relief (embossed sheet metal) has a coarse texture, without local irregularity. Seeded glass, scattered throughout with similar bubbles, has no local irregularity: those bubbles are its regularity. Whether a glass has more or fewer bubbles is a matter of perceptual density; their arrangement, a matter of distribution. Isolated accidents in an otherwise regular material (three bubbles in clear glass, a thread in a blown bowl, one large bubble among small ones) are local irregularity; a cluster of bubbles belongs to both types: it is a departure, and the distribution is clustered. Bubbles so fine that they can no longer be told apart make the glass cloudy: what changes is its translucency."
     ]
    },
    "note": {
@@ -745,14 +747,18 @@
    "topConceptOf": "https://w3id.org/ppp/",
    "measurementState": "https://w3id.org/ppp/mesure/etat/aucune-methode-robuste",
    "measurementSummary": {
-    "fr": "Aucune méthode robuste de mesure associée aux écarts locaux à la régularité d’ensemble n’est connue (recherche du 2026-10-16). Les paramètres de rugosité de profil ou de surface résument tout le relief d’une zone ; aucune norme lue ne repère les endroits où une surface, un trait ou un bord s’écarte de sa propre régularité.",
-    "en": "No robust associated measurement method for local departures from overall regularity is known (search of 2026-10-16). Profile or areal roughness parameters summarise the whole relief of an area; no standard read locates the places where a surface, a line or an edge departs from its own regularity."
+    "fr": "Aucune méthode robuste de mesure associée aux écarts locaux à la régularité d’ensemble n’est connue (recherche du 2026-10-17). Les paramètres de rugosité de profil ou de surface résument tout le relief d’une zone ; pour l’intérieur d’un verre, les normes comptent bulles et inclusions par rapport à un verre sans bulle. Aucune norme lue ne repère les endroits où une surface, un trait, un bord ou l’intérieur d’une matière s’écarte de sa propre régularité.",
+    "en": "No robust associated measurement method for local departures from overall regularity is known (search of 2026-10-17). Profile or areal roughness parameters summarise the whole relief of an area; for the interior of a glass, standards count bubbles and inclusions against bubble-free glass. No standard read locates the places where a surface, a line, an edge or the interior of a material departs from its own regularity."
    },
    "measurementCaveat": {
     "fr": "Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.",
     "en": "The regions of this entry remain perceptual: they describe what an observer sees, hears, smells or feels by touch under the declared conditions. An associated measurement can inform an observation, but it does not set the boundaries of the regions and does not replace examination."
    },
-   "notRetainedMeasure": "https://w3id.org/ppp/localIrregularity/mesure/non-retenue-1",
+   "notRetainedMeasure": [
+    "https://w3id.org/ppp/localIrregularity/mesure/non-retenue-1",
+    "https://w3id.org/ppp/localIrregularity/mesure/non-retenue-2",
+    "https://w3id.org/ppp/localIrregularity/mesure/non-retenue-3"
+   ],
    "hasScale": "https://w3id.org/ppp/localIrregularity/echelle",
    "narrower": [
     "https://w3id.org/ppp/localIrregularity/none",
@@ -914,6 +920,7 @@
    "related": [
     "https://w3id.org/ppp/distribution",
     "https://w3id.org/ppp/hueCount",
+    "https://w3id.org/ppp/localIrregularity",
     "https://w3id.org/ppp/partNesting",
     "https://w3id.org/ppp/texture",
     "https://w3id.org/ppp/negativeSpace"
@@ -2946,6 +2953,60 @@
    "broader": "https://w3id.org/ppp/lightnessRange"
   },
   {
+   "@id": "https://w3id.org/ppp/subsurfaceDepth",
+   "related": [
+    "https://w3id.org/ppp/localIrregularity",
+    "https://w3id.org/ppp/perceivedDepth",
+    "https://w3id.org/ppp/surfaceGloss"
+   ],
+   "@type": "skos:Concept",
+   "inScheme": "https://w3id.org/ppp/",
+   "skos:notation": "subsurfaceDepth",
+   "prefLabel": {
+    "fr": "profondeur dans la matière",
+    "en": "depth within the material"
+   },
+   "altLabel": {
+    "en": "subsurface depth"
+   },
+   "definition": {
+    "fr": "Degré auquel on a l’impression de voir dans l’épaisseur d’une matière, sous sa surface, de la matière où le regard s’arrête à la surface à celle où il paraît entrer loin.",
+    "en": "The degree to which one has the impression of seeing into the thickness of a material, beneath its surface, from material where the gaze stops at the surface to material it seems to enter far."
+   },
+   "scopeNote": {
+    "fr": [
+     "Le regard s’arrête-t-il à la surface de cette matière, ou paraît-il entrer un peu, ou loin, dans son épaisseur ?",
+     "Une vitre propre est transparente, mais on regarde à travers, vers ce qui est derrière : on ne voit pas d’épaisseur dans la vitre elle-même ; c’est ce qu’on voit à travers elle (transparence). Un paysage peint qui s’étage en plans relève de l’étagement en plans, pas d’une profondeur dans la matière."
+    ],
+    "en": [
+     "Does the gaze stop at the surface of this material, or does it seem to go a little, or far, into its thickness?",
+     "A clean window pane is transparent, but one looks through it, at what is behind: one sees no thickness in the pane itself; that is what one sees through it (transparency). A painted landscape receding in planes belongs to layering into planes, not to a depth within the material."
+    ]
+   },
+   "note": {
+    "fr": "candidat ; non éprouvé",
+    "en": "candidate; untested"
+   },
+   "topConceptOf": "https://w3id.org/ppp/",
+   "measurementState": "https://w3id.org/ppp/mesure/etat/methodes",
+   "measurementSummary": {
+    "fr": "En synthèse d’image, la diffusion de la lumière sous la surface se décrit par des propriétés optiques de la matière (coefficients de diffusion et d’absorption), qu’une technique de recherche mesure à partir d’images. C’est une mesure associée indirecte : elle sert à prédire l’aspect, pas à dire jusqu’où le regard paraît entrer ; elle n’est pas normalisée, et ne saisit ni l’observateur, ni l’éclairage de l’épisode, ni la distance.",
+    "en": "In image synthesis, light scattering beneath the surface is described by optical properties of the material (scattering and absorption coefficients), which a research technique measures from images. It is an indirect associated measurement: it serves to predict appearance, not to say how far the gaze seems to go in; it is not standardised, and captures neither the observer, nor the lighting of the episode, nor the distance."
+   },
+   "measurementCaveat": {
+    "fr": "Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.",
+    "en": "The regions of this entry remain perceptual: they describe what an observer sees, hears, smells or feels by touch under the declared conditions. An associated measurement can inform an observation, but it does not set the boundaries of the regions and does not replace examination."
+   },
+   "associatedMeasure": "https://w3id.org/ppp/subsurfaceDepth/mesure/jensen2001",
+   "notRetainedMeasure": "https://w3id.org/ppp/subsurfaceDepth/mesure/non-retenue-1",
+   "hasScale": "https://w3id.org/ppp/subsurfaceDepth/echelle",
+   "narrower": [
+    "https://w3id.org/ppp/subsurfaceDepth/atSurface",
+    "https://w3id.org/ppp/subsurfaceDepth/slightlyInside",
+    "https://w3id.org/ppp/subsurfaceDepth/farInside"
+   ]
+  },
+  {
    "@id": "https://w3id.org/ppp/localIrregularity/mesure/non-retenue-1",
    "@type": "ppp:NotRetainedMeasure",
    "rdfs_label": {
@@ -2959,6 +3020,38 @@
    "dct:bibliographicCitation": [
     "ISO 21920-2:2021. Geometrical product specifications (GPS) — Surface texture: Profile — Part 2: Terms, definitions and surface texture parameters. Genève : ISO.",
     "ISO 25178-2:2021. Geometrical product specifications (GPS) — Surface texture: Areal — Part 2: Terms, definitions and surface texture parameters. Genève : ISO."
+   ]
+  },
+  {
+   "@id": "https://w3id.org/ppp/localIrregularity/mesure/non-retenue-2",
+   "@type": "ppp:NotRetainedMeasure",
+   "rdfs_label": {
+    "fr": "tolérances de bulles et d’inclusions du verre (ISO 10110-18, ISO 12543-6)",
+    "en": "bubble and inclusion tolerances for glass (ISO 10110-18, ISO 12543-6)"
+   },
+   "reason": {
+    "fr": "elles comptent des défauts par rapport à un verre sans bulle et ne disent pas où l’intérieur s’écarte de sa propre régularité ; la notation d’optique descend à des tailles invisibles à distance d’usage ; elles ne valent que pour le verre d’optique ou le verre feuilleté de bâtiment",
+    "en": "they count defects against bubble-free glass and do not say where the interior departs from its own regularity; the optical notation goes down to sizes invisible at normal viewing distance; they apply only to optical glass or laminated building glass"
+   },
+   "dct:bibliographicCitation": [
+    "ISO 10110-18:2018. Optics and photonics — Preparation of drawings for optical elements and systems — Part 18: Stress birefringence, bubbles and inclusions, homogeneity, and striae. Genève : ISO.",
+    "ISO 12543-6:2021. Glass in building — Laminated glass and laminated safety glass — Part 6: Appearance. Genève : ISO."
+   ]
+  },
+  {
+   "@id": "https://w3id.org/ppp/localIrregularity/mesure/non-retenue-3",
+   "@type": "ppp:NotRetainedMeasure",
+   "rdfs_label": {
+    "fr": "contrôle visuel des bulles et inclusions du verre d’optique (SCHOTT TIE-28 ; ISO 12123)",
+    "en": "visual inspection of bubbles and inclusions in optical glass (SCHOTT TIE-28; ISO 12123)"
+   },
+   "reason": {
+    "fr": "il compte bulles et inclusions par leur aire totale dans un volume donné, par rapport à un verre sans bulle, et ne traite leur concentration que comme un motif de rejet ; il ne dit pas l’écart perçu à la régularité propre de l’objet, ne vaut que pour le verre d’optique et ne saisit ni la distance de vue ni l’observateur",
+    "en": "it counts bubbles and inclusions by their total area in a given volume, against bubble-free glass, and treats their concentration only as a ground for rejection; it does not state the perceived departure from the object’s own regularity, applies only to optical glass and captures neither the viewing distance nor the observer"
+   },
+   "dct:bibliographicCitation": [
+    "SCHOTT (2016). TIE-28: Bubbles and Inclusions in Optical Glass. Technical Information, version de mai 2016. Mainz : SCHOTT.",
+    "ISO 12123:2018. Optics and photonics — Specification of raw optical glass. Genève : ISO."
    ]
   },
   {
@@ -3543,59 +3636,6 @@
    },
    "regionOf": "https://w3id.org/ppp/partNesting",
    "broader": "https://w3id.org/ppp/partNesting"
-  },
-  {
-   "@id": "https://w3id.org/ppp/subsurfaceDepth",
-   "related": [
-    "https://w3id.org/ppp/perceivedDepth",
-    "https://w3id.org/ppp/surfaceGloss"
-   ],
-   "@type": "skos:Concept",
-   "inScheme": "https://w3id.org/ppp/",
-   "skos:notation": "subsurfaceDepth",
-   "prefLabel": {
-    "fr": "profondeur dans la matière",
-    "en": "depth within the material"
-   },
-   "altLabel": {
-    "en": "subsurface depth"
-   },
-   "definition": {
-    "fr": "Degré auquel on a l’impression de voir dans l’épaisseur d’une matière, sous sa surface, de la matière où le regard s’arrête à la surface à celle où il paraît entrer loin.",
-    "en": "The degree to which one has the impression of seeing into the thickness of a material, beneath its surface, from material where the gaze stops at the surface to material it seems to enter far."
-   },
-   "scopeNote": {
-    "fr": [
-     "Le regard s’arrête-t-il à la surface de cette matière, ou paraît-il entrer un peu, ou loin, dans son épaisseur ?",
-     "Une vitre propre est transparente, mais on regarde à travers, vers ce qui est derrière : on ne voit pas d’épaisseur dans la vitre elle-même ; c’est ce qu’on voit à travers elle (transparence). Un paysage peint qui s’étage en plans relève de l’étagement en plans, pas d’une profondeur dans la matière."
-    ],
-    "en": [
-     "Does the gaze stop at the surface of this material, or does it seem to go a little, or far, into its thickness?",
-     "A clean window pane is transparent, but one looks through it, at what is behind: one sees no thickness in the pane itself; that is what one sees through it (transparency). A painted landscape receding in planes belongs to layering into planes, not to a depth within the material."
-    ]
-   },
-   "note": {
-    "fr": "candidat ; non éprouvé",
-    "en": "candidate; untested"
-   },
-   "topConceptOf": "https://w3id.org/ppp/",
-   "measurementState": "https://w3id.org/ppp/mesure/etat/methodes",
-   "measurementSummary": {
-    "fr": "En synthèse d’image, la diffusion de la lumière sous la surface se décrit par des propriétés optiques de la matière (coefficients de diffusion et d’absorption), qu’une technique de recherche mesure à partir d’images. C’est une mesure associée indirecte : elle sert à prédire l’aspect, pas à dire jusqu’où le regard paraît entrer ; elle n’est pas normalisée, et ne saisit ni l’observateur, ni l’éclairage de l’épisode, ni la distance.",
-    "en": "In image synthesis, light scattering beneath the surface is described by optical properties of the material (scattering and absorption coefficients), which a research technique measures from images. It is an indirect associated measurement: it serves to predict appearance, not to say how far the gaze seems to go in; it is not standardised, and captures neither the observer, nor the lighting of the episode, nor the distance."
-   },
-   "measurementCaveat": {
-    "fr": "Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.",
-    "en": "The regions of this entry remain perceptual: they describe what an observer sees, hears, smells or feels by touch under the declared conditions. An associated measurement can inform an observation, but it does not set the boundaries of the regions and does not replace examination."
-   },
-   "associatedMeasure": "https://w3id.org/ppp/subsurfaceDepth/mesure/jensen2001",
-   "notRetainedMeasure": "https://w3id.org/ppp/subsurfaceDepth/mesure/non-retenue-1",
-   "hasScale": "https://w3id.org/ppp/subsurfaceDepth/echelle",
-   "narrower": [
-    "https://w3id.org/ppp/subsurfaceDepth/atSurface",
-    "https://w3id.org/ppp/subsurfaceDepth/slightlyInside",
-    "https://w3id.org/ppp/subsurfaceDepth/farInside"
-   ]
   },
   {
    "@id": "https://w3id.org/ppp/perceivedDepth/echelle",

@@ -345,6 +345,8 @@ def ligne_familles(fiches):
 # Série 44 quater : publication libérale (X17, décision de l'éditeur du projet du 2026-10-14) ; neuf fiches du groupe A entrent
 # (exemplaires validés par la relecture) ; série 44 quinquies : jointSpacing entre (1603 et 1604 relues) ; textureContrast reste hors de la liste.
 # Lot 3 bis : les douze fiches des lots 1 à 3 entrent (assertions des lots 1, 2 et 3 validées par la relecture).
+# Série 67 : `localIrregularity` sort de la liste le temps de la relecture explicative de sa portée élargie à la masse (a_relire non vide, X17).
+# Série 67 bis : `localIrregularity` revient dans la liste (portée élargie relue et validée par la relecture explicative, a_relire vide, X17).
 FICHES_PUBLIQUES_ATTENDUES = {'hue', 'lightness', 'lightnessContrast', 'perceivedSize', 'perceptualDensity', 'texture',
                               'textureDirectionality', 'distribution', 'hueContrast', 'hueCount', 'hueRange', 'jointLevelOffset',
                               'jointSpacing', 'perceptualContrast', 'saturation', 'scaleContrast', 'surfaceGloss',
