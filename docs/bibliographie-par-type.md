@@ -791,7 +791,7 @@ Références de [`famille-odorat-proposition.md`](famille-odorat-proposition.md)
   - usage : `odourIntensity` (fonde) ; `odourPersistence` (homonyme de domaine : contraste) ; arôme rétronasal écarté (contraste).
 - Gross-Isseroff, R. & Lancet, D. (1988). Concentration-dependent changes of perceived odor quality. *Chemical Senses*, 13(2), 191–204. https://doi.org/10.1093/chemse/13.2.191
   - statut de lecture : *résumé seulement lu* ;
-  - usage : `odourCharacter`, facette critique `distance` (alimente).
+  - usage : `odourCharacter`, condition critique `distance` (alimente).
 - ISO/TS 16922:2022. *Natural gas — Odorization*. ISO. https://www.iso.org/standard/83835.html. Édition en vigueur : 3.1.3 caractère d’odeur, 3.1.4 intensité d’odeur, « magnitude of the perceived odour » (numéros relevés par la relecture ; définition 3.1.4 lue dans l’extrait public de la norme ; reste du texte non lu).
 - ISO/TS 16922:2002. *Natural gas — Guidelines for odorizing gases*. ISO. https://www.iso.org/standard/31135.html. **Annulée** (2013, remplacée d’abord par ISO/TR 16922:2013, elle-même remplacée par l’édition 2022, d’après les pages de l’ISO) ; gardée pour ses définitions (3.1.2 et 3.1.3).
   - statut de lecture : *extraits* (échantillon public du texte de l’édition 2002 : 3.1.2 caractère d'odeur, 3.1.3 intensité d'odeur, 3.1.5 fatigue sensorielle, 3.2.1 degré olfactif) ;

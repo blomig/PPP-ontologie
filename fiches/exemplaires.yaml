@@ -1896,6 +1896,7 @@ assertions:
     inEpisode: ppp-e:pilote-01
     modality: vision
     source: photo (prise de vue du musée, lumière de studio ; conditions exactes inconnues)
+    ontologyVersion: "2.2.1"   # série 70 : version d’origine explicitée quand commun passe à 2.8
     doute: oui
     note: le décor est gravé sous la glaçure ; la surface paraît lisse sur la photo, mais personne ne l'a touchée
   - id: ppp-a:pilote-0102
@@ -1906,6 +1907,7 @@ assertions:
     inEpisode: ppp-e:pilote-02
     modality: vision
     source: photo
+    ontologyVersion: "2.2.1"   # série 70 : version d’origine explicitée quand commun passe à 2.8
     doute: oui
     note: les grains de la pierre polie forment un motif de couleurs, sans relief ; c'est le cas limite entre texture et motif (voir le contre-exemple de la fiche texture) ; photo prise à environ deux mètres (note_distance de l'épisode), d'où un relief fin ne se verrait pas, c'est l'aspect poli (face plane, arêtes nettes, couleurs profondes) qui fait juger lisse
   - id: ppp-a:pilote-0103
@@ -1916,6 +1918,7 @@ assertions:
     inEpisode: ppp-e:pilote-02
     modality: vision
     source: photo
+    ontologyVersion: "2.2.1"   # série 70 : version d’origine explicitée quand commun passe à 2.8
     doute: oui
     note: (T24) sur la photo, la dalle de droite a un contour irrégulier de pierre cassée et paraît plus pâle et plus grise que la dalle polie de gauche, comme une pierre non polie ; mais à cette taille d'image (640 pixels), on ne voit pas d'ombre portée par les grains, donc pas de relief net ; la page Commons dit les dalles polies ; si la face de cette dalle est polie, l'assertion est fausse
     withdrawn: oui   # retiré le 2026-10-10 (spec 2.3.2, T24) : la photo ne montre pas que la dalle de droite est rugueuse (page Commons : « slabs of polished local granite ») ; id non réutilisé
@@ -1927,6 +1930,7 @@ assertions:
     inEpisode: ppp-e:pilote-03
     modality: vision
     source: photo
+    ontologyVersion: "2.2.1"   # série 70 : version d’origine explicitée quand commun passe à 2.8
     doute: oui
     note: un seul élément (le carré), presque aussi clair que le fond ; on peut aussi défendre la région « uniforme » (uniform)
     withdrawn: oui   # retiré le 2026-10-10 (relecture explicative, objection 20) : illustre mal la région ; remplacé par ppp-a:pilote-0203 ; id non réutilisé
@@ -1938,6 +1942,7 @@ assertions:
     inEpisode: ppp-e:pilote-06
     modality: vision
     source: photo (reproduction en ligne ; conditions de prise de vue inconnues)
+    ontologyVersion: "2.2.1"   # série 70 : version d’origine explicitée quand commun passe à 2.8
     doute: oui
     note: une dizaine de lignes courtes (titre, auteur, éditeur, date) et un petit trait ondulé, isolés sur une page où le papier blanc domine ; si l'on compte chaque mot comme un élément, on peut aussi défendre la région « moyen » (moderate)
   - id: ppp-a:pilote-0202
@@ -1948,6 +1953,7 @@ assertions:
     inEpisode: ppp-e:pilote-05
     modality: vision
     source: photo
+    ontologyVersion: "2.2.1"   # série 70 : version d’origine explicitée quand commun passe à 2.8
     doute: oui
     note: les figures occupent l'essentiel de la surface, mais le fond doré reste visible entre elles ; pour la bande basse de la mosaïque (le pré semé de fleurs), on peut aussi défendre la région « très dense » (veryDense)
   - id: ppp-a:pilote-0301
@@ -1961,6 +1967,7 @@ assertions:
     inEpisode: ppp-e:pilote-02
     modality: vision
     source: photo
+    ontologyVersion: "2.2.1"   # série 70 : version d’origine explicitée quand commun passe à 2.8
     note: assertion du contraste général, qui dit quelle qualité est comparée (ici la texture, spec §9.7 B) ; le même constat peut s'écrire avec le contraste de texture (ppp:textureContrast) ; contestable (T24), elle ne tient que si la dalle de droite est vraiment brute (voir 0103)
     withdrawn: oui   # retiré le 2026-10-10 (spec 2.3.2, T24) : la photo ne montre pas que la dalle de droite est rugueuse (page Commons : « slabs of polished local granite ») ; id non réutilisé
   - id: ppp-a:pilote-0401
@@ -1973,6 +1980,7 @@ assertions:
     inEpisode: ppp-e:pilote-03
     modality: vision
     source: photo
+    ontologyVersion: "2.2.1"   # série 70 : version d’origine explicitée quand commun passe à 2.8
   - id: ppp-a:pilote-0402
     about:
       - {relatum: app:met-2011-201#decor-incise, role: terme}
@@ -1983,6 +1991,7 @@ assertions:
     inEpisode: ppp-e:pilote-01
     modality: vision
     source: photo
+    ontologyVersion: "2.2.1"   # série 70 : version d’origine explicitée quand commun passe à 2.8
     doute: oui
     note: le décor ne se voit que parce que la glaçure, plus épaisse dans les creux, y paraît un peu plus foncée ; le jugement dépend fortement de l'éclairage
   - id: ppp-a:pilote-0403
@@ -1995,6 +2004,7 @@ assertions:
     inEpisode: ppp-e:pilote-04
     modality: vision
     source: photo
+    ontologyVersion: "2.2.1"   # série 70 : version d’origine explicitée quand commun passe à 2.8
     note: le blanc du bord est craquelé et jauni ; l'écart reste aux extrémités de la clarté
 
   - id: ppp-a:pilote-0104
@@ -2062,7 +2072,7 @@ assertions:
     source: photo de Commons (Sailko, 2011-09-02 ; lumière et balance des couleurs inconnues)   # série 22 : ajustement de formulation après la reconfirmation (« réglages » précisé), sens inchangé
     ontologyVersion: "2.3.1"
     doute: oui
-    note: "sur la photo de Commons vue le 2026-10-11 (Sailko, 2011 ; version éclaircie par Philafrenzy en 2013, historique du fichier Commons), un rouge franc, un peu chaud ; sur l'ancienne reproduction (abcgallery.com, vue le 2026-10-10), il tirait sur l'orange et la région voisine « orange » se défendait aussi ; la couleur vue dépend de la prise de vue, de la lumière et de l'écran (note_conditions de la fiche) : `red` sur les deux images"
+    note: "sur la photo de Commons vue le 2026-10-11 (Sailko, 2011 ; version éclaircie par Philafrenzy en 2013, historique du fichier Commons), un rouge franc, un peu chaud ; sur l'ancienne reproduction (abcgallery.com, vue le 2026-10-10), il tirait sur l'orange et la région voisine « orange » se défendait aussi ; la couleur vue dépend de la prise de vue, de la lumière et de l'écran (note_conditions de la fiche) : « rouge » sur les deux images"
   - id: ppp-a:pilote-0701
     about: app:malevich-black-square-1915#carre-noir
     assertedType: ppp:lightness
@@ -3261,7 +3271,7 @@ assertions:
 # Champs communs à toutes les assertions ci-dessus (sauf valeur propre à une assertion, comme withdrawn de 0201) :
 commun:
   assertedBy: l’équipe (proposition, à valider par la relecture explicative)
-  ontologyVersion: "2.2.1"
+  ontologyVersion: "2.8"
   epistemicStatus: non éprouvé
   withdrawn: non
 

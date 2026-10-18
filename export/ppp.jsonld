@@ -188,7 +188,7 @@
    "dct_license": "https://creativecommons.org/licenses/by/4.0/",
    "owl:versionInfo": "2.8",
    "dct:modified": {
-    "@value": "2026-10-17",
+    "@value": "2026-10-18",
     "@type": "xsd:date"
    },
    "dct:creator": [
@@ -197,7 +197,7 @@
    ],
    "dct:rightsHolder": "Lomig Unger",
    "dct:rights": "Copyright (c) 2026 Lomig Unger et contributeurs du projet PPP",
-   "dct:bibliographicCitation": "Unger, Lomig et Grok Bot. PPP — Propriétés Perceptuelles Pertinentes : spécification d'ontologie, version 2.8, 2026-10-11. Licence CC BY 4.0. https://github.com/blomig/PPP-ontologie.",
+   "dct:bibliographicCitation": "Unger, Lomig et Grok Bot. PPP — Propriétés Perceptuelles Pertinentes : spécification d'ontologie, version 2.8, 2026-10-11. Licence CC BY 4.0. https://w3id.org/ppp.",
    "dct_source": "https://github.com/blomig/PPP-ontologie",
    "hasTopConcept": [
     "https://w3id.org/ppp/contour",

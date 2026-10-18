@@ -4,7 +4,7 @@ Les propriétés perceptuelles pertinentes (PPP) forment un vocabulaire ouvert p
 
 > **Version de travail.** Ce dépôt est publié pour être discuté. Les fiches sont des propositions : aucune n'a encore été mise à l'épreuve, et plusieurs sont incomplètes. Vos remarques nous aident à corriger avant une première version stable.
 
-Site : [blomig.github.io/PPP-ontologie](https://blomig.github.io/PPP-ontologie/) · Dépôt : [github.com/blomig/PPP-ontologie](https://github.com/blomig/PPP-ontologie)
+Adresse pérenne : [w3id.org/ppp](https://w3id.org/ppp) (site hébergé sur [GitHub Pages](https://blomig.github.io/PPP-ontologie/)) · Dépôt : [github.com/blomig/PPP-ontologie](https://github.com/blomig/PPP-ontologie)
 
 ## Par où commencer
 
@@ -66,7 +66,7 @@ Le projet est tenu par Lomig Unger et Grok Bot ; éditeur du projet : Lomig Unge
 
 Citez toujours la version :
 
-> Unger, Lomig et Grok Bot. *PPP — Propriétés Perceptuelles Pertinentes : spécification d'ontologie*, version 2.8, 2026-10-11. Licence CC BY 4.0. https://github.com/blomig/PPP-ontologie
+> Unger, Lomig et Grok Bot. *PPP — Propriétés Perceptuelles Pertinentes : spécification d'ontologie*, version 2.8, 2026-10-11. Licence CC BY 4.0. https://w3id.org/ppp.
 
 Pour une fiche, ajoutez son nom et son identifiant, par exemple « Densité perceptive » (`ppp:perceptualDensity`). L'identifiant ne change jamais, même si le nom change.
 

@@ -289,7 +289,7 @@ enonces_testables:
   epreuve: null
 - id: surfaceGloss-1
   nature: structure
-  enonce: sous une lumière dirigée, une surface de la région « miroir » montre entre reflets et zones voisines un contraste de clarté au moins « évident » (région « évident » du contraste de clarté) (tendsToProduce)
+  enonce: sous une lumière dirigée, une surface de la région « miroir » montre entre reflets et zones voisines un contraste de clarté au moins « évident » (région « évident » du contraste de clarté) (tend à produire)
   statut_epistemique: non éprouvé
   epreuve: null
 cq_couvertes: CQ1, CQ2
@@ -326,6 +326,7 @@ relecture_explicative:
   - identite (re-confirmé en relecture explicative, série 9, 2026-10-11)
   - note_conditions (re-confirmé en relecture explicative, série 9, 2026-10-11)
   - 'harmonisation mécanique des énoncés affichés (série 69, 2026-10-17)'
+  - 'énoncé surfaceGloss-1 : « (tend à produire) » au lieu du nom de relation (série 70, 2026-10-18)'
   a_reconfirmer: []
   reconfirme:
   - champ: identite

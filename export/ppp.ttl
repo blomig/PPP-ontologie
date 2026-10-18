@@ -1,5 +1,5 @@
 # PPP, export SKOS des fiches publiques ; ne pas modifier à la main.
-# Licence : CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Version 2.8 ; dernier changement de contenu : 2026-10-17. Pour citer : CITATION.cff.
+# Licence : CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Version 2.8 ; dernier changement de contenu : 2026-10-18. Pour citer : CITATION.cff.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -20,12 +20,12 @@
         "SKOS vocabulary of the published PPP types (public entries), their regions, scales and reading families. The YAML entries of the repository are the source; this export is derived from them."@en ;
     dct:license <https://creativecommons.org/licenses/by/4.0/> ;
     owl:versionInfo "2.8" ;
-    dct:modified "2026-10-17"^^xsd:date ;
+    dct:modified "2026-10-18"^^xsd:date ;
     dct:creator "Lomig Unger" ,
         "Grok Bot" ;
     dct:rightsHolder "Lomig Unger" ;
     dct:rights "Copyright (c) 2026 Lomig Unger et contributeurs du projet PPP" ;
-    dct:bibliographicCitation "Unger, Lomig et Grok Bot. PPP — Propriétés Perceptuelles Pertinentes : spécification d'ontologie, version 2.8, 2026-10-11. Licence CC BY 4.0. https://github.com/blomig/PPP-ontologie." ;
+    dct:bibliographicCitation "Unger, Lomig et Grok Bot. PPP — Propriétés Perceptuelles Pertinentes : spécification d'ontologie, version 2.8, 2026-10-11. Licence CC BY 4.0. https://w3id.org/ppp." ;
     dct:source <https://github.com/blomig/PPP-ontologie> ;
     skos:hasTopConcept ppp:contour ,
         ppp:curvature ,

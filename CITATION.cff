@@ -11,8 +11,9 @@ version: "2.8"
 date-released: "2026-10-11"
 license: CC-BY-4.0   # série 14 : une seule valeur. En CFF 1.2.0, une liste [CC-BY-4.0, MIT] est valide mais vaut « au choix » (OR, guide du schéma 1.2.0, champ license) : elle offrirait le contenu sous MIT. Le code du site et des outils reste sous MIT (LICENSE).
 # Adresses retenues (série 10) ; 404 sans connexion le 2026-10-11 : le dépôt public n'était pas encore visible. DOI : à renseigner (Zenodo).
+# Série 70 (2026-10-18) : url = adresse de référence w3id (redirige vers le site hébergé par GitHub Pages, https://blomig.github.io/PPP-ontologie).
 repository-code: "https://github.com/blomig/PPP-ontologie"
-url: "https://blomig.github.io/PPP-ontologie"
+url: "https://w3id.org/ppp"
 keywords:
   - ontologie
   - perception
