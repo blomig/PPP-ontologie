@@ -12,6 +12,8 @@ Les champs marqués — ne s’appliquent pas à tous les patrons.
 
 *v2.2 (2026-10-10)* : `dimension_comparee` fixée par un contraste spécialisé, libre pour le général (spec §9.7 B) ; `ce_qui_est_saillant` réservé hors V1 (spec §9.9) ; `facettes` = familles de lecture (spec §9.7 L, X9) ; plus de mode d’assemblage (spec §9.7 A). Aucun nouveau champ.
 
+*2026-10-19 (série 72 bis, décision de l’éditeur du projet ; spec §9.7 P, point 7)* : rappel, dans le patron, de la règle permanente : état de l’art et échelles de mesure existantes, avec sources et statut de lecture. Pour un type, la rubrique `mesure` (gabarit : `docs/proposition-rubrique-mesure.md`) et `references` y satisfont.
+
 *v2.8 (2026-10-12, série 34, décisions de l’éditeur du projet)* : champ optionnel `labels_alternatifs_en` (T38 : labels alternatifs anglais, affichés et cherchables sur le site anglais ; pendant de `labels_alternatifs`, en français) ; `conditions_critiques` : `distance` et `angle` déclarables par un type à deux sens quand ils sont critiques à la vue (spec §9.7 H, règle 3, exception ; règle 4 : « sans objet » n’est pas « inconnu »).
 
 *v2.6 (2026-10-11, série 7)* : champ optionnel `labels_regions_propres` d’un contraste spécialisé (spec §9.7 B, T34) ; renvoi de `etat_de_l_art` au format `docs/bibliographie-par-type.md#groupe-…` et appel des références par `[[id]]` (spec §9.7 P) ; usage des images (`usage`, `lien_externe`, spec X16, Q15).
@@ -63,9 +65,10 @@ définition:         (une phrase, sans jugement ; passe le test de neutralité, 
 question_attentionnelle:
 contre_exemple:
 grandeur_physique_homonyme:   # grandeur mesurée portant le même nom, à ne pas confondre (spec §9.7, J)
-modalites:          # sens par lesquels le type est décrit et éprouvé : vision | toucher | audition | odorat (série 43) ; chaque assertion en déclare une, l’épisode l’ensemble (spec §9.3, §9.7 H) ; ≠ conditions de perception ; identité intermodale : Q13
+mesure:             # gabarit : docs/proposition-rubrique-mesure.md (spec §9.7 P, point 7)
+modalites:          # sens par lesquels le type est décrit et éprouvé : vision | toucher | audition | odorat (série 43) | bouche (série 72) ; chaque assertion en déclare une, l’épisode l’ensemble (spec §9.3, §9.7 H) ; ≠ conditions de perception ; identité intermodale : Q13
 mode_de_presentation:  image | séquence | échantillon | protocole   # minimum pour montrer les régions
-conditions_critiques: []   # optionnel (v2.3) : facettes du régime de perception dont la région dépend fortement, parmi presentation | lumiere | distance | angle | duree | geste | temperature_objet | production | bruit_de_fond | exposition | air (`production` et `bruit_de_fond` pour un type de l’ouïe seule, `exposition` et `air` pour un type de l’odorat seul : spec §9.7 H, règles 9 et 10, série 43, à relire ; `geste` et `temperature_objet` pour un type au toucher seul : spec §9.7 H, règles 3 et 8 ; `distance` et `angle` restent déclarables par un type à deux sens s’ils sont critiques à la vue : règle 3, exception, série 34) ; une facette critique `unknown` dans l’épisode impose « non tranché » (spec §9.7 H, A5)
+conditions_critiques: []   # optionnel (v2.3) : facettes du régime de perception dont la région dépend fortement, parmi presentation | lumiere | distance | angle | duree | geste | temperature_objet | production | bruit_de_fond | exposition | air | nez | temperature_bouchee | avant | moment (`production` et `bruit_de_fond` pour un type de l’ouïe seule, `exposition` et `air` pour un type de l’odorat seul : spec §9.7 H, règles 9 et 10, série 43, à relire ; `geste` et `temperature_objet` pour un type au toucher seul : spec §9.7 H, règles 3 et 8 ; `distance` et `angle` restent déclarables par un type à deux sens s’ils sont critiques à la vue : règle 3, exception, série 34) ; une facette critique `unknown` dans l’épisode impose « non tranché » (spec §9.7 H, A5)
 
 porteur:            # P1 : exactement 1. P2 : arité ≥ 2, rôles nommés. P3 : l’épisode.
 arité:              # P2
@@ -106,6 +109,9 @@ alignements_externes:  # optionnel (spec §9.7 O) : dimension d'une classificati
     reference_id:   (id d'une entrée de references ci-dessous ; la référence complète et son statut y figurent)
     note:           (nature de la source — mesure, système, catégorie ; ce qu'on en reprend)
 
+# Rappel (spec §9.7 P, point 7 ; décision de l’éditeur du projet, 2026-10-19) : état de l'art et échelles de mesure existantes,
+# avec sources et statut de lecture. Pour un type : references, etat_de_l_art et la rubrique mesure
+# (champ mesure ci-dessus ; gabarit : docs/proposition-rubrique-mesure.md). Aucune échelle trouvée : l'écrire, avec la date.
 references_statut:  renseignées | à renseigner | aucune source trouvée (recherche faite le AAAA-MM-JJ, bases consultées)   # spec §9.7 P
 references:         # tout travail existant sur lequel la fiche s'appuie (classification, ontologie, théorie, étude) ; [] si aucune
   - id:             (clé courte, ex. tamura1978)
@@ -120,6 +126,7 @@ references:         # tout travail existant sur lequel la fiche s'appuie (classi
     note_verification:  # optionnel — affirmation de la fiche que la source vue ne permet pas de confirmer
 # Appel dans le texte (v2.6, spec §9.7 P, point 4 bis) : dans etat_de_l_art et les note…, écrire [[id]] juste après la mention en clair
 # (« Durgin (1995) [[durgin1995]] ») ; l'id doit exister dans references de la fiche.
+# Avec la rubrique mesure, etat_de_l_art couvre l'état de l'art et les échelles de mesure existantes (spec §9.7 P, point 7).
 etat_de_l_art:      (2 à 5 phrases en langage courant ; références appelées par [[id]] ; finit par le lien docs/bibliographie-par-type.md#groupe-<groupe>)
 etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-   # v2.6 : ancre stable du groupe (groupe-texture, groupe-couleur, groupe-forme, groupe-organisation, groupe-matiere, groupe-joint, groupe-etagement, groupe-contrastes)
 

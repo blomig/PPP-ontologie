@@ -14,7 +14,7 @@
 | Ticket qui demande une épreuve | réponse motivée dans la semaine, qui dit ce qui est ouvert (anomalie, épreuve) ; le ticket reste `recevable` jusqu'à l'issue de l'épreuve. Raisons : une épreuve reproduite ne se fait pas en sept jours ; le visiteur doit savoir sans attendre ce qui est ouvert | position de travail, à trancher |
 | Conflit d'intérêts | l'équipe ne tranche pas seule une contestation qui la vise : l'issue épistémique repose sur une épreuve reproduite par des observateurs indépendants (§9.7 N) et le motif est publié avec le ticket. Raisons : une équipe fermée de deux membres serait juge et partie ; l'épreuve reproduite est déjà le critère du programme ; le ticket public rend la décision contrôlable. Qui fait la revue extérieure : à trancher | position de travail, à trancher |
 | Rejoindre l'équipe | fermée (décidé) ; pas de procédure d'entrée tant que personne ne la demande ; on contribue par les tickets. Raisons : une procédure sans candidat serait du texte sans usage ; les tickets ouvrent déjà chaque geste à tous | position de travail, à trancher |
-| Dépôt et site | dépôt public neuf `PPP-ontologie`, adresse retenue https://github.com/blomig/PPP-ontologie ; site publié par GitHub Pages, adresse retenue https://blomig.github.io/PPP-ontologie (404 sans connexion le 2026-10-11 à 14 h 58, heure de Paris : dépôt non visible à cette date, ce qui ne prouve pas son absence) | décidé (2026-10-11, séries 9 et 10) |
+| Dépôt et site | dépôt public neuf `PPP-ontologie`, adresse retenue https://github.com/blomig/PPP-ontologie ; site publié par GitHub Pages (hébergement : https://blomig.github.io/PPP-ontologie ; 404 sans connexion le 2026-10-11 à 14 h 58, heure de Paris : dépôt non visible à cette date, ce qui ne prouve pas son absence) ; adresse de référence du site : https://w3id.org/ppp, qui redirige vers cet hébergement | décidé (2026-10-11, séries 9 et 10 ; adresse de référence : série 70, 2026-10-18) |
 | Adresse de dépôt des tickets | formulaires de tickets GitHub du dépôt public (https://github.com/blomig/PPP-ontologie/issues), un par type ; compte GitHub requis | décidé (2026-10-11, séries 9 et 10) |
 | Conversion ticket GitHub → fichier `tickets/` | à la main par l'équipe au jugement de recevabilité ; numéro du fichier = numéro du ticket GitHub (2.1). Raisons : aucun outil à maintenir ; conversion au moment de la lecture | position de travail, à trancher |
 | Identifiant pérenne | archive Zenodo du dépôt public, un DOI par *release* GitHub (Zenodo lit `CITATION.cff`). Raisons : procédure documentée et gratuite ; un DOI par version colle à X6 ; demande un dépôt public | position de travail, à trancher |
@@ -96,6 +96,8 @@ Neuf types pour huit gestes (correspondance : spec §13 ; série 12 : « Signale
 | `anomalie` | Signaler une anomalie | types visés ; objets ou situations décrits de façon reproductible ; ce que la fiche prédit, ce qui est observé ; minimum reproductible |
 | `refutation` | Publier une réfutation | énoncé visé ; protocole et seuil fixés avant l'épreuve (avec la date) ; matériel publiable ou décrit ; résultats bruts |
 | `proposition-type` | Proposer un type | fiche de type complète (`PPP_FicheType.md`), avec au moins un énoncé testable et le test de neutralité |
+
+**État de l'art et échelles de mesure** (décision de l'éditeur du projet, 2026-10-19 ; spec §9.7 P, point 7) : tout type, famille, section ou question proposé par l'équipe comporte un état de l'art et les échelles de mesure existantes, avec sources et statut de lecture. Pour un `proposition-type`, la fiche complète y satisfait (rubrique `mesure` et références). Pour une `suggestion-type`, ce n'est pas une condition de recevabilité : l'équipe les ajoute quand elle convertit le ticket (lecture proposée par la relecture du 2026-10-19, à confirmer par l'éditeur du projet).
 
 ### 2.5 Format du fichier
 
@@ -364,7 +366,7 @@ Ce que disent les pages lues :
 
 | PPP reprend | PPP ne reprend pas (pour l'instant) |
 |---|---|
-| ouverture avec attribution (CC BY 4.0) ; | format OWL publié et réutilisation de la Relations Ontology : pas d'export OWL (§9.8) ; identifiants pérennes : w3id accepté sur le principe le 2026-10-14 (`https://w3id.org/ppp/`, §9.8 point 6), pas encore demandé ; rien n'est inventé ; |
+| ouverture avec attribution (CC BY 4.0) ; | format OWL publié et réutilisation de la Relations Ontology : pas d'export OWL (§9.8) ; identifiants pérennes : w3id en service depuis le 2026-10-18 (`https://w3id.org/ppp/`, §9.8 point 6, série 70) ; rien n'est inventé ; |
 | une personne responsable : l'éditeur du projet ; | la pluralité documentée d'utilisateurs (P9) et le développement collaboratif ouvert (P10) : l'équipe est fermée pour l'instant ; |
 | version marquée, changelog, version citée (X6) ; | le délai de 2 à 5 jours ouvrés : PPP s'engage sur une semaine, délai qu'une équipe de deux personnes peut tenir ; |
 | stabilité des identifiants et dépréciation avec renvoi (A11), qui disent la même chose que P19 ; | |
@@ -410,5 +412,5 @@ Réglé en série 9 (décisions de l'éditeur du projet) : dépôt public neuf, 
 4. ~~Journal des épreuves : renvoi depuis chaque fiche ou page à part~~ : réglé en série 10 (page du journal sur le site, et renvoi depuis chaque fiche).
 5. Champs `createur`, `date`, `variante` des objets du registre (proposés dans `PPP_FicheExemplaire.md`) : à ajouter à `exemplaires.yaml` (passe à faire, et lecture par la maquette).
 6. Délai quand le traitement demande une épreuve : réponse motivée dans la semaine, issue après l'épreuve (position de travail).
-7. Identifiant pérenne : archive Zenodo, un DOI par *release* (position) ; DOI à renseigner après la première archive. L'adresse du site est réglée en série 10 (https://blomig.github.io/PPP-ontologie, adresse retenue).
+7. Identifiant pérenne : archive Zenodo, un DOI par *release* (position) ; DOI à renseigner après la première archive. L'adresse du site est réglée en série 10 (hébergement GitHub Pages, https://blomig.github.io/PPP-ontologie) ; adresse de référence depuis la série 70 (2026-10-18) : https://w3id.org/ppp.
 8. ~~Adresse du dépôt public~~ : réglé en série 10 (https://github.com/blomig/PPP-ontologie, adresse retenue ; reportée dans la citation, `CITATION.cff`, `README.md`). Compte GitHub : `blomig`.
