@@ -1355,8 +1355,8 @@ objets:
       usage: image_reproduite
       motif_usage: "CC BY-SA 4.0 (API Commons, 2026-10-17 : LicenseShortName « CC BY-SA 4.0 », AttributionRequired true ; wikitexte {{self|cc-by-sa-4.0}}) : réellement libre, reproduite avec la mention complète (titre, auteur, lien, licence)"
   # lot 5 ter (docs/propositions-exemples-lot5ter-regions-manquantes.md, relu le 2026-10-19) : 8 objets, crédits relevés par l’API de Wikimedia Commons le 2026-10-19
-  - id: app:palazzo-medici-riccardi-bossage
-    description: "bossage rustique du rez-de-chaussée du palais Medici Riccardi, Florence (blocs de pierre à face brute), avec un anneau d’attache en fer ; Michelozzo (attribution usuelle), à partir de 1444 (date usuelle, approximative) ; pan de mur du rez-de-chaussée photographié le 2008-05-27 ; image Commons recadrée (passante retirée en bas à droite)"
+  - id: app:palazzo-medici-riccardi-bossage   # recadrage manuel : une passante retirée en bas à droite (raison du recadrage, non affichée)
+    description: "bossage rustique du rez-de-chaussée du palais Medici Riccardi, Florence (blocs de pierre à face brute), avec un anneau d’attache en fer ; Michelozzo (attribution usuelle), à partir de 1444 (date usuelle, approximative) ; pan de mur du rez-de-chaussée photographié le 2008-05-27 ; image Commons recadrée"
     page_objet: null   # lot 5 ter : non relevée ; seule la photo est documentée (photo citée comme objet)
     image: https://commons.wikimedia.org/wiki/File:Palazzo_medici_riccardi,_bugnato_03.JPG
     licence_affichee: "CC BY 2.5"
@@ -1376,7 +1376,7 @@ objets:
       usage: image_reproduite
       motif_usage: "CC BY 2.5 (API Commons, 2026-10-19), licence nommée ; recadrage signalé (CC BY 2.5 le permet) — lecture des règles, pas un avis juridique"
   - id: app:commons-ecorce-chene-vorel
-    description: "écorce d’un chêne pédonculé (Quercus robur), vue rapprochée verticale ; le tronc de la photo"
+    description: "écorce d’un chêne pédonculé (Quercus robur), vue rapprochée verticale"
     page_objet: null   # lot 5 ter : non relevée ; seule la photo est documentée (photo citée comme objet)
     image: https://commons.wikimedia.org/wiki/File:Oak_bark.jpg
     licence_affichee: "CC BY-SA 4.0"
@@ -1394,7 +1394,7 @@ objets:
       usage: image_reproduite
       motif_usage: "CC BY-SA 4.0 (API Commons, 2026-10-19), licence nommée"
   - id: app:commons-carreau-delft-puits
-    description: "carreau de Delft (décor bleu d’un puits) encastré dans un mur enduit ; XVIIe ou XVIIIe siècle probablement (description Commons, approximatif) ; le carreau photographié le 2022-02-07"
+    description: "carreau de Delft (décor bleu d’un puits) encastré dans un mur enduit ; XVIIe ou XVIIIe siècle probablement (description Commons, approximatif)"
     page_objet: null   # lot 5 ter : non relevée ; seule la photo est documentée (photo citée comme objet)
     image: https://commons.wikimedia.org/wiki/File:Delft_tiles_02.jpg
     licence_affichee: "CC BY-SA 4.0"
@@ -1416,12 +1416,13 @@ objets:
     page_objet: null   # lot 5 ter : non relevée ; seule la photo est documentée (photo citée comme objet)
     image: https://commons.wikimedia.org/wiki/File:Alice_in_Wonderland_Page_15.jpg
     licence_affichee: "CC0 1.0"
-    auteur_image: "Commons : champ auteur « Lewis Carroll » (numérisation, source Open Library)"
+    auteur_image: "Lewis Carroll (texte) ; numérisation Open Library (Internet Archive), versée sur Commons en CC0"
+    nom_auteur: "Lewis Carroll (texte) ; numérisation Open Library"   # nom court de la légende (sinon tiré de credit.auteur)
     regime: "imprimé (page de livre)"
     parties: ["#page"]
     droits: "CC0 1.0, numérisation Open Library, image reproduite"
     credit:   # lot 5 ter : relevé par l’API de Wikimedia Commons le 2026-10-19
-      auteur: "Commons : champ auteur « Lewis Carroll » (numérisation, source Open Library)"
+      auteur: "Lewis Carroll (texte) ; numérisation Open Library (Internet Archive), versée sur Commons en CC0"
       licence: "CC0 1.0"
       source: "Wikimedia Commons"
       url: "https://commons.wikimedia.org/wiki/File:Alice_in_Wonderland_Page_15.jpg"
@@ -1448,7 +1449,7 @@ objets:
       usage: image_reproduite
       motif_usage: "CC BY 4.0 (API Commons, 2026-10-19), licence nommée"
   - id: app:commons-cafe-torrefie-bol
-    description: "grains de café torréfiés dans un bol blanc ; le bol de la photo"
+    description: "grains de café torréfiés dans un bol blanc"
     page_objet: null   # lot 5 ter : non relevée ; seule la photo est documentée (photo citée comme objet)
     image: https://commons.wikimedia.org/wiki/File:Roasted_coffee_beans_in_white_bowl.png
     licence_affichee: "CC BY 4.0"
@@ -1465,8 +1466,8 @@ objets:
       mention_requise: "« Roasted coffee beans in white bowl », Alorin, Wikimedia Commons, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0)"
       usage: image_reproduite
       motif_usage: "CC BY 4.0 (API Commons, 2026-10-19), licence nommée"
-  - id: app:commons-graine-courge-main
-    description: "graines de courge fraîches posées dans une paume ouverte (échelle corporelle visible) ; image Commons recadrée (magazine et texte retirés) ; photographie mise en ligne le 2006-10-31 sur Wikipédia anglophone (date de prise de vue inconnue) ; la graine isolée près de la base du pouce, sur la photo"
+  - id: app:commons-graine-courge-main   # recadrage manuel : un magazine (visage et marque) et du texte retirés (raison du recadrage, non affichée)
+    description: "graines de courge fraîches posées dans une paume ouverte (échelle corporelle visible) ; image Commons recadrée sur la main ; photographie mise en ligne le 2006-10-31 sur Wikipédia anglophone (date de prise de vue inconnue) ; la graine isolée près de la base du pouce, sur la photo"
     page_objet: null   # lot 5 ter : non relevée ; seule la photo est documentée (photo citée comme objet)
     image: https://commons.wikimedia.org/wiki/File:Pumpkin_seeds_in_hand.jpg
     licence_affichee: "CC BY-SA 3.0"
@@ -1486,7 +1487,7 @@ objets:
       usage: image_reproduite
       motif_usage: "CC BY-SA 3.0 (API Commons, 2026-10-19), licence nommée ; recadrage signalé (CC BY-SA 3.0 le permet) — lecture des règles, pas un avis juridique"
   - id: app:commons-grains-riz-main
-    description: "panicule de riz (grains encore verts) touchée par une main ouverte, dans une rizière du Kerala (catégorie Commons) ; photographie du 2018-09-14 ; les grains de la panicule sur la main de la photo"
+    description: "panicule de riz (grains encore verts) touchée par une main ouverte, dans une rizière du Kerala (catégorie Commons) ; photographie du 2018-09-14"
     page_objet: null   # lot 5 ter : non relevée ; seule la photo est documentée (photo citée comme objet)
     image: https://commons.wikimedia.org/wiki/File:Hand_with_rice_grain.jpg
     licence_affichee: "CC BY-SA 4.0"
@@ -3517,7 +3518,7 @@ assertions:
     source: photo citée (Wikimedia Commons, image recadrée ; lumière, angle et distance estimés d’après le cadrage)
     ontologyVersion: "2.8"
     doute: oui
-    note: "graine de courge vue dans une paume ouverte : le doigt et la main donnent l’échelle corporelle ; la graine isolée près de la base du pouce est plus petite que le bout du doigt ; discutable : la graine isolée a à peu près la taille de la pulpe d’un doigt : limite avec « tient dans la main » ; un tas de graines se jugerait « tient dans la main »"
+    note: "graine de courge dans une paume ouverte : la main et les doigts donnent l’échelle. La graine isolée, près de la base du pouce, a à peu près la taille de la pulpe d’un doigt : rangée dans « plus petit que le bout du doigt », elle est à la limite de « tient dans la main ». Le tas de graines, lui, se jugerait « tient dans la main »."
   - id: ppp-a:pilote-0803
     about: app:commons-grains-riz-main#grains
     assertedType: ppp:perceivedSize
@@ -3560,7 +3561,7 @@ assertions:
     source: photo citée (Wikimedia Commons ; lumière, angle et distance estimés d’après le cadrage)
     ontologyVersion: "2.8"
     doute: oui
-    note: "brun nettement plus sombre qu’un gris moyen, sans être noir ; reflets exclus ; la région « sombre » tient (L* médian ≈ 28, indicatif) ; discutable : une torréfaction plus poussée tire vers « très sombre » ; le bol blanc voisin peut faire paraître les grains plus sombres ; L* médian d’environ 28 sur les pixels, à titre indicatif"
+    note: "brun nettement plus sombre qu’un gris moyen, sans être noir (reflets exclus) ; à titre indicatif, la clarté mesurée sur les pixels est d’environ 28 sur 100 (L*). Discutable : une torréfaction plus poussée tirerait vers « très sombre », et le bol blanc voisin peut faire paraître les grains plus sombres."
 # Champs communs à toutes les assertions ci-dessus (sauf valeur propre à une assertion, comme withdrawn de 0201) :
 commun:
   assertedBy: l’équipe (proposition, à valider par la relecture explicative)

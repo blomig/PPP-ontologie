@@ -250,8 +250,7 @@ relecture_explicative:
   - references (série 6)
   a_reconfirmer: []
 manques:
-- région `fine` sans exemplaire
-- 'région `coarse` sans exemplaire : ppp-a:pilote-0105 (porphyre bouchardé) passe en `medium` (décision de l’éditeur du projet, 2026-10-10, T24, en suivant la relecture explicative) ; exemplaire de « grosse » à renseigner'
+- région « fine » sans exemplaire
 - aucun exemplaire tactile (photos seulement)
 - porteur « matière = surface » à confirmer (T2)
 note_label_alternatif: '« grain » est un label alternatif (décision de l’éditeur du projet, 2026-10-10, T1) : aucun type ni aucune région n''a « grain » pour label canonique (A2) ; le sens physique (taille des grains,

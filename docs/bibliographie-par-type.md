@@ -685,7 +685,7 @@ Matériaux souples (demande de l’éditeur du projet ; vérifiées le 2026-10-1
 
 ### Dureté au toucher : fiche `ppp:hardnessToTouch` (série 54, en préparation)
 
-Fiche rédigée le 2026-10-16 à partir du ticket 4 (`tickets/0004-suggestion-type.md`). Références déjà listées ci-dessus et reprises par la fiche : Srinivasan et LaMotte (1995, relu le 2026-10-16 : rôle `fonde`), Bergmann Tiest et Kappers (2006 ; 2009a), Klatzky et Reed (2009). Nouvelles références :
+Fiche rédigée le 2026-10-16 à partir du [ticket n° 4](https://github.com/blomig/PPP-ontologie/issues/4). Références déjà listées ci-dessus et reprises par la fiche : Srinivasan et LaMotte (1995, relu le 2026-10-16 : rôle `fonde`), Bergmann Tiest et Kappers (2006 ; 2009a), Klatzky et Reed (2009). Nouvelles références :
 
 - Harper, R. & Stevens, S. S. (1964). Subjective hardness of compliant materials. Quarterly Journal of Experimental Psychology, 16, 204–215. https://doi.org/10.1080/17470216408416370
   - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : métadonnées Crossref et résumé (OpenAlex) lus le 2026-10-16 : neuf matières souples, de l'éponge au bloc de caoutchouc ; la dureté jugée suit une loi de puissance de la dureté physique (force sur enfoncement) ; jugements de mollesse à peu près réciproques ; texte intégral non lu ;

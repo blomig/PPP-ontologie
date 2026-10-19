@@ -159,7 +159,7 @@ modifie_en:
 - '2.8'
 remplace_par: []
 manques:
-- 'régions sans exemplaire : `fingertipSized`, `handSized`, `bodySized`'
+- 'régions sans exemplaire : « tient dans la main », « à l’échelle du corps »'
 bloque_par: []
 a_relire: []
 relecture_explicative:

@@ -1,6 +1,6 @@
 # Fiche de type PPP — ppp:hardnessToTouch — format : PPP_FicheType.md (spec v2.8)
 # Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, mesure (rubrique proposée en série 53, docs/proposition-rubrique-mesure.md, gabarit relu ; pas encore dans PPP_FicheType.md ni lue par la maquette).
-# Série 54 (2026-10-16) : fiche en préparation, rédigée sans exemplaire à partir du ticket 4 (tickets/0004-suggestion-type.md) et de la proposition « Toucher » ; aucun champ n’est encore relu. Première fiche propre au toucher.
+# Série 54 (2026-10-16) : fiche en préparation, rédigée sans exemplaire à partir du ticket n° 4 (https://github.com/blomig/PPP-ontologie/issues/4) et de la proposition « Toucher » ; aucun champ n’est encore relu. Première fiche propre au toucher.
 id: ppp:hardnessToTouch
 label_fr: dureté au toucher
 label_en: hardness to the touch
@@ -18,7 +18,7 @@ facettes:
 définition: 'Combien l’objet s’enfonce quand on le presse du bout du doigt, à l’endroit pressé : de ce qui s’enfonce beaucoup sous le doigt à ce qui ne cède pas du tout.'
 question_attentionnelle: Si vous appuyez du bout du doigt, sans regarder, l’objet cède-t-il beaucoup, un peu, à peine, ou pas du tout ?
 contre_exemple: 'Une balle de mousse et une boule de billard peuvent avoir la même surface lisse : c’est ce qu’elles cèdent sous le doigt qui les sépare, pas leur relief (texture). Une éponge et une pâte à modeler cèdent autant ; l’une revient à sa forme, l’autre garde la marque : ce n’est pas une différence de dureté, mais de retour à la forme. Une feuille de papier se plie facilement, mais posée à plat sur une table elle ne cède pas sous le doigt : se plier n’est pas céder.'
-grandeur_physique_homonyme: 'dureté au sens des minéralogistes (échelle de Mohs), qui est une résistance à la rayure, pas à l’enfoncement [[nps_mohs]] ; dureté des métaux (Vickers), mesurée par l’empreinte laissée [[iso6507_1]] ; « hardness » de l’analyse sensorielle des aliments, qui juge en mâchant : aucune région ne s’en déduit. Voir la rubrique « mesure ».'
+grandeur_physique_homonyme: 'dureté au sens des minéralogistes (échelle de Mohs), qui est une résistance à la rayure, pas à l’enfoncement [[nps_mohs]] ; dureté des métaux (Vickers), mesurée par l’empreinte laissée [[iso6507_1]] : aucune région ne s’en déduit. Voir la rubrique « mesure ».'
 mesure:
   etat: methodes
   synthese: 'Des mesures associées existent pour les caoutchoucs et les mousses : un appareil enfonce une pointe ou une bille avec une force réglée et relève la profondeur, ou mesure la force qu’il faut pour écraser une mousse d’une fraction donnée de son épaisseur. Elles portent sur un échantillon de matière préparé, pas sur un objet quelconque touché du doigt. En laboratoire, la mollesse perçue suit la souplesse mesurée de caoutchoucs [[srinivasan_lamotte1995]] et la dureté jugée croît avec la dureté physique selon une loi de puissance [[harper_stevens1964]] ; ces résultats ne fixent pas de régions.'
@@ -240,7 +240,7 @@ statut_epistemique: non éprouvé
 introduit_en: '2.8'
 modifie_en: []
 remplace_par: []
-source_de_la_fiche: 'ticket 4 (tickets/0004-suggestion-type.md, suggestion de type « Dureté ») ; proposition de famille « Toucher » (docs/famille-toucher-proposition.md (document de travail, non publié), §2.2, premier lot, décisions 3 et 9) ; protocole d’échantillons (docs/protocole-echantillons-toucher.md §4.1) ; fiche rédigée le 2026-10-16 par l’équipe, champs à valider par la relecture explicative'
+source_de_la_fiche: 'ticket n° 4 (https://github.com/blomig/PPP-ontologie/issues/4, suggestion de type « Dureté ») ; proposition de famille « Toucher » (docs/famille-toucher-proposition.md (document de travail, non publié), §2.2, premier lot, décisions 3 et 9) ; protocole d’échantillons (docs/protocole-echantillons-toucher.md §4.1) ; fiche rédigée le 2026-10-16 par l’équipe, champs à valider par la relecture explicative'
 manques:
 - 'exemplaires (à renseigner : objets publics qu’on a le droit de presser, ou échantillons de référence reproductibles ; un épisode par objet, geste et température déclarés ; photo d’identification qui ne sert pas au jugement, X17 (g) amendé)'
 bloque_par: []
