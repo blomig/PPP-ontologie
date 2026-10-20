@@ -24,6 +24,7 @@ objets:
     image: "<page de l'image>"
     licence_affichee: "<licence de l'image>"
     auteur_image: "<auteur de la photo>"
+    nom_auteur: "<nom lisible du crédit>"   # facultatif (série 75 bis) : nom lisible à afficher dans la légende de l’image quand l’auteur relevé sur Commons n’est pas un crédit au sens propre (ex. « Lewis Carroll (texte) ; numérisation Open Library ») ; à défaut, la légende reprend le début de `credit.auteur` (avant « ; » ou « ( ») ; le crédit complet reste tel quel ; traduit dans `fiches/en/exemplaires.yaml` (`objets.<id>.nom_auteur`)
     sorte_objet: "<tableau, objet conçu, matériau exposé…>"   # aujourd'hui `regime` (renommage proposé, docs/reponses-maquette-serie8.md)
     parties: ["#<partie>"]
     droits: "<ligne courte : licence, auteur, usage>"

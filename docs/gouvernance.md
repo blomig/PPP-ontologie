@@ -97,7 +97,7 @@ Neuf types pour huit gestes (correspondance : spec §13 ; série 12 : « Signale
 | `refutation` | Publier une réfutation | énoncé visé ; protocole et seuil fixés avant l'épreuve (avec la date) ; matériel publiable ou décrit ; résultats bruts |
 | `proposition-type` | Proposer un type | fiche de type complète (`PPP_FicheType.md`), avec au moins un énoncé testable et le test de neutralité |
 
-**État de l'art et échelles de mesure** (décision de l'éditeur du projet, 2026-10-19 ; spec §9.7 P, point 7) : tout type, famille, section ou question proposé par l'équipe comporte un état de l'art et les échelles de mesure existantes, avec sources et statut de lecture. Pour un `proposition-type`, la fiche complète y satisfait (rubrique `mesure` et références). Pour une `suggestion-type`, ce n'est pas une condition de recevabilité : l'équipe les ajoute quand elle convertit le ticket (lecture proposée par la relecture du 2026-10-19, à confirmer par l'éditeur du projet).
+**État de l'art et échelles de mesure** (décision de l'éditeur du projet, 2026-10-19 ; spec §9.7 P, point 7) : tout type, famille, section ou question proposé par l'équipe comporte un état de l'art et les échelles de mesure existantes, avec sources et statut de lecture. Pour un `proposition-type`, la fiche complète y satisfait (rubrique `mesure` et références). Pour une `suggestion-type`, ce n'est pas une condition de recevabilité : l'équipe les ajoute quand elle convertit le ticket (choix de relecture (2026-10-20)).
 
 ### 2.5 Format du fichier
 

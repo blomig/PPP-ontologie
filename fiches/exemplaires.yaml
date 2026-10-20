@@ -1467,7 +1467,7 @@ objets:
       usage: image_reproduite
       motif_usage: "CC BY 4.0 (API Commons, 2026-10-19), licence nommée"
   - id: app:commons-graine-courge-main   # recadrage manuel : un magazine (visage et marque) et du texte retirés (raison du recadrage, non affichée)
-    description: "graines de courge fraîches posées dans une paume ouverte (échelle corporelle visible) ; image Commons recadrée sur la main ; photographie mise en ligne le 2006-10-31 sur Wikipédia anglophone (date de prise de vue inconnue) ; la graine isolée près de la base du pouce, sur la photo"
+    description: "graines de courge fraîches posées dans une paume ouverte (échelle corporelle visible) ; image Commons recadrée sur la main ; photographie mise en ligne le 2006-10-31 sur Wikipédia anglophone (date de prise de vue inconnue)"
     page_objet: null   # lot 5 ter : non relevée ; seule la photo est documentée (photo citée comme objet)
     image: https://commons.wikimedia.org/wiki/File:Pumpkin_seeds_in_hand.jpg
     licence_affichee: "CC BY-SA 3.0"

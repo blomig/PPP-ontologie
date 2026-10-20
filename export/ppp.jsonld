@@ -188,7 +188,7 @@
    "dct_license": "https://creativecommons.org/licenses/by/4.0/",
    "owl:versionInfo": "2.8",
    "dct:modified": {
-    "@value": "2026-10-19",
+    "@value": "2026-10-20",
     "@type": "xsd:date"
    },
    "dct:creator": [
