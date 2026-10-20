@@ -1,0 +1,416 @@
+# Fiche de type PPP — ppp:flavourComplexity — format : PPP_FicheType.md (spec v2.8)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_base, note_porteur, note_echelle, note_label_alternatif, mesure (rubrique proposée en série 53, docs/proposition-rubrique-mesure.md).
+# Série 78 (2026-10-20) : fiche en préparation de la famille « Goût (en bouche) », rédigée sans exemplaire à partir de la proposition « Goût » ; aucun champ n’est encore relu.
+id: ppp:flavourComplexity
+label_fr: nombre de composantes
+label_en: number of components
+labels_alternatifs:
+- complexité
+labels_alternatifs_en:
+- complexity
+note_label_alternatif: '« complexité » (EN complexity) est un label alternatif d’atelier, marqué comme tel : en dégustation, le mot porte une valence (A10), et la complexité y est vue comme « désirable
+  » (Parr et al., 2011 [[parr2011]]). « Complexe » et « riche » restent au lexique d’atelier (§9.7 K). Homonyme : la complexité globale reste une grille d’analyse et n’est pas un type (spec §9.10) ; ce
+  comptage ne la réintroduit pas.'
+patron: P1
+sorte: qualité
+sous_sorte: —
+strate: semi-formel
+base_dependance:
+  types:
+  - ppp:bitterness
+  - ppp:oralPungency
+  - ppp:astringency
+  facteurs_non_perceptuels: []
+note_base: 'Base proposée (strate semi-formel, à vérifier ; proposition « Goût », 2.8) : on compte des composantes perçues par d’autres types, comme le nombre de formes élémentaires a le contour pour base.
+  Seuls des ids définis sont cités (A12) : l’amer, le piquant en bouche et l’astringence, tous trois formels (A9). Le sucré, l’acide, le salé, l’umami et l’arôme en bouche sont encore en réserve, sans id
+  : ils entreront dans la base quand leurs fiches existeront ; la base déclarée est donc incomplète. Les deux types de texture du premier lot n’y sont pas : la définition exclut la texture de la bouchée
+  (choix de relecture (2026-10-20), série 78 bis).'
+facettes:
+- gout
+définition: 'Le nombre de composantes (saveurs, arômes par voie rétronasale (de l’arrière de la bouche vers le nez), sensations du trijumeau (le nerf qui sent la brûlure du piment, le froid de la menthe,
+  le picotement), astringence ; la texture de la bouchée n’en fait pas partie) que l’on peut distinguer dans la portion en bouche, sous le régime déclaré : un compte, pas une force ni un caractère.'
+question_attentionnelle: Combien de composantes différentes (saveurs, arômes, sensations) distinguez-vous dans la portion ? Une, deux, trois, ou plus de trois, sans pouvoir les compter ?
+contre_exemple: 'Nommer beaucoup d’arômes n’est pas en distinguer beaucoup : on peut compter son vocabulaire plutôt que sa perception. Des composantes qui se succèdent dans le temps ne se comptent pas ensemble
+  : on compte ce qui est distinct à la phase déclarée. Un mélange peut être perçu comme un tout. « Ce vin a plus de trois composantes, et c’est un défaut » doit pouvoir se dire comme « …et c’est une qualité
+  » : « complexe » n’est pas « meilleur ».'
+mesure:
+  etat: methodes
+  synthese: 'Une mesure associée indirecte existe : le nombre de zones odorantes détectées par chromatographie en phase gazeuse couplée à l’olfactométrie (CPG-O). On y compte des composés séparés par la
+    colonne, pas des composantes perçues dans le mélange ; aucun lien n’est établi entre les deux. Aucune méthode proche n’est connue (recherche du 2026-10-20). Le score de la grille CIEL (de 0 à 4) est
+    hors de la rubrique : c’est un jugement de qualité.'
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes:
+  - id: gco_comptage
+    nom: nombre de composés odorants détectés par CPG-O
+    grandeur: un nombre de zones odorantes détectées par des juges qui sentent l’effluent de la colonne (méthodes par fréquence de détection ou par dilution jusqu’au seuil)
+    unite_ou_echelle: nombre (sans unité)
+    references:
+    - delahunty2006
+    proximite: indirecte
+    ecart: on compte des composés séparés par la colonne, pas des composantes perçues dans le mélange, qui plafonnent vers trois ou quatre ; ni saveurs, ni trijumeau, ni toucher ; pas de mélange en bouche
+      ; le résultat dépend de l’extraction et du réglage ; aucune procédure normalisée lue
+    conditions: extraction, colonne, méthode de CPG-O et nombre de juges à déclarer
+    statut_lecture: résumé (Delahunty et al., 2006, sur Crossref)
+  non_retenues:
+  - nom: gLMS et estimation de grandeur
+    references:
+    - green1993lms
+    - green1996lms
+    - stevens1957
+    raison: jugements d’un jury sans référence physique ; à reprendre dans le protocole de l’épreuve d’accord (E1)
+    statut_lecture: résumés (Green et al., 1993 et 1996) ; métadonnées (Stevens, 1957)
+  - nom: échelles de panel et notes sur une échelle de complexité, d’intensité ou d’équilibre, dont le questionnaire de complexité de Medel et al. (2009)
+    references:
+    - medel2009
+    raison: jugements d’un jury sans référence physique ; à reprendre dans le protocole de l’épreuve d’accord (E1)
+    statut_lecture: métadonnées (Medel et al., 2009 ; contenu par source secondaire)
+  - nom: méthode temps-intensité (ASTM E1909-24) et TDS
+    references:
+    - astm_e1909
+    - pineau2009
+    raison: jugements d’un jury sans référence physique ; à reprendre dans le protocole de l’épreuve d’accord (E1)
+    statut_lecture: extrait d’index (page de l’ASTM) ; résumé (Pineau et al., 2009)
+  - nom: CPG-O par intensité directe
+    references:
+    - delahunty2006
+    raison: échelle de jugement d’un jury, sans référence physique
+    statut_lecture: résumé
+  - nom: compte des composés volatils dosés sans olfactométrie
+    references:
+    - goodstein2014
+    raison: une composition, pas une détection ; plus de 1 300 composés détectés dans le vin, la bière, les boissons maltées, le brandy et les spiritueux selon une revue d’Ebeler (2001), connue par source
+      secondaire
+    statut_lecture: 'extraits (introduction de Goodstein et al., 2014, lue le 2026-10-20) ; Ebeler (2001) : source secondaire'
+modalites:
+- bouche
+mode_de_presentation: échantillon
+conditions_critiques:
+- nez
+- moment
+note_conditions: 'règle 12 (spec §9.7 H) : `nez` est critique : fermer le nez retire les arômes du compte (Lawless et al., 2004 [[lawless2004]]). `moment` est critique : le compte change pendant la dégustation
+  (Pineau et al., 2009 [[pineau2009]]) ; l’épisode déclare la phase (`chewing` : « pendant la mastication, ou gorgée gardée en bouche »), et E1 compare à `moment` égal. `temperature_bouchee` et `avant`
+  sont à éprouver.'
+porteur: la portion en bouche (la gorgée ou la bouchée) d’un produit identifié, voie rétronasale comprise
+note_porteur: 'porteur des trois premiers types du lot CIEL (choix de relecture, 2026-10-20 ; proposition « Goût », 2.8) : la portion en bouche, et non le produit identifié, parce que ces jugements portent
+  sur ce qui est en bouche à un moment donné et changent pendant la dégustation [[pineau2009]]. L’objet du registre reste le produit identifié ; la portion en est la partie jugée (§9.7 I).'
+arité: 1
+condition_NA: 'objet non destiné à la bouche (un cuir, un bois verni, un métal : ce n’est ni sûr ni reproductible) ; produit qu’on ne goûte pas (photo, description) : une photo ne compte jamais'
+espace_valeurs:
+  echelle: ordinale
+  sens_croissant: de `one` (rang 1) vers `beyondCount` (rang 4), on distingue de plus en plus de composantes dans la portion
+  numerique: non
+  regions:
+  - cle: one
+    label_fr: une composante
+    label_en: one component
+    rang: 1
+    repere: une seule chose se distingue (une eau sucrée, une eau salée)
+    exemplaires: []
+  - cle: two
+    label_fr: deux composantes
+    label_en: two components
+    rang: 2
+    repere: deux choses se distinguent (une eau sucrée et acide)
+    exemplaires: []
+  - cle: three
+    label_fr: trois composantes
+    label_en: three components
+    rang: 3
+    repere: trois choses se distinguent encore une à une ; repère à choisir avant l’épreuve
+    exemplaires: []
+  - cle: beyondCount
+    label_fr: plus de trois, sans pouvoir les compter
+    label_en: more than three, beyond counting
+    rang: 4
+    repere: on sent qu’il y en a plus, mais on ne peut plus les séparer ni les compter
+    exemplaires: []
+note_echelle: 'comptage ordinal à crans bas (proposition « Goût », 2.8.1 ; clé `beyondCount` reprise de `elementaryShapeCount`) : on ne distingue guère plus de trois ou quatre composantes dans un mélange,
+  même entraîné (Livermore et Laing, 1996 [[livermore_laing1996]] ; Jinks et Laing, 1999 [[jinks_laing1999a]] [[jinks_laing1999b]] ; Jinks et Laing, 2001 [[jinks_laing2001]] ; limite attribuée à Laing et
+  Francis, 1989 [[laing_francis1989]], par Jinks et Laing, 2001). Au-delà de trois, un cran de plus ne serait pas partagé : le dernier cran dit qu’on ne compte plus. Les repères des crans un et deux sont
+  des solutions simples, sans marque, à fixer avant l’épreuve ; ce qui compte comme « composante » est à fixer aussi.'
+identite: 'Un compte de composantes distinguées dans la portion, pas une force ni un caractère : pas l’intensité d’ensemble (intensité (goût)), pas la longueur, pas l’arôme en bouche (en réserve, qui nomme
+  un caractère au lieu de compter). Analogie déclarée, sans relation, avec les types de comptage d’autres sens, `ppp:hueCount` (nombre de teintes) et `ppp:elementaryShapeCount` (nombre de formes élémentaires)
+  : même forme d’espace de valeurs (un compte ordinal à crans bas, borné par ce qu’on saisit d’un coup), autre porteur et autre sens (Q13, option c). Ce n’est pas la complexité globale, qui reste une grille
+  d’analyse (§9.10).'
+relations:
+- type: confusableWith
+  cible: ppp:tastePersistence
+  note: 'la complexité jugée va avec la persistance : une portion dont la trace dure paraît « riche » ; on compte ce qui se distingue à la phase déclarée, pas combien de temps cela dure'
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: livermore_laing1996
+  citation: 'Livermore, A. & Laing, D. G. (1996). Influence of training and experience on the perception of multicomponent odor mixtures. Journal of Experimental Psychology: Human Perception and Performance,
+    22(2), 267–277.'
+  doi_ou_url: https://doi.org/10.1037/0096-1523.22.2.267
+  role: fonde
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: on n’identifie guère plus de trois ou quatre composantes dans un mélange d’odeurs, même entraîné (panels et parfumeurs)
+  ne_reprend_pas: les protocoles d’entraînement
+- id: jinks_laing1999a
+  citation: Jinks, A. & Laing, D. G. (1999). A limit in the processing of components in odour mixtures. Perception, 28(3), 395–404.
+  doi_ou_url: https://doi.org/10.1068/p2898
+  role: fonde
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: résumé (PubMed) ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: avec seize odorants, l’identification tombe au niveau du hasard
+  ne_reprend_pas: les détails du protocole
+- id: jinks_laing1999b
+  citation: Jinks, A. & Laing, D. G. (1999). Temporal processing reveals a mechanism for limiting the capacity of humans to analyze odor mixtures. Cognitive Brain Research, 8(3), 311–325.
+  doi_ou_url: https://doi.org/10.1016/S0926-6410(99)00034-8
+  role: fonde
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: résumé (PubMed) ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: la mémoire de travail olfactive limiterait l’analyse à « environ trois composantes » (cran « trois »)
+  ne_reprend_pas: le mécanisme temporel proposé
+- id: jinks_laing2001
+  citation: 'Jinks, A. & Laing, D. G. (2001). The analysis of odor mixtures by humans: evidence for a configurational process. Physiology & Behavior, 72(1–2), 51–63.'
+  doi_ou_url: https://doi.org/10.1016/S0031-9384(00)00407-8
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: résumé (PubMed) ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: au-delà de deux odorants, l’identification devient difficile ; un mélange est perçu en partie comme un tout ; la limite de trois à quatre attribuée à Laing et Francis (1989)
+  ne_reprend_pas: l’hypothèse configurale comme théorie
+- id: laing_francis1989
+  citation: Laing, D. G. & Francis, G. W. (1989). The capacity of humans to identify odors in mixtures. Physiology & Behavior, 46(5), 809–814.
+  doi_ou_url: https://doi.org/10.1016/0031-9384(89)90041-3
+  role: fonde
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: 'résumé ; la limite de « trois à quatre » composantes n’est pas dans ce résumé : elle lui est attribuée par Jinks et Laing (2001) (source secondaire pour ce chiffre) ; texte non lu (statut
+    repris de docs/bibliographie-par-type.md#groupe-gout)'
+  reprend: dans un mélange de 1 à 5 odeurs courantes, peu de sujets identifient les constituants
+  ne_reprend_pas: le chiffre « trois à quatre », absent du résumé (source secondaire pour ce chiffre)
+- id: laing2002
+  citation: Laing, D. G., Link, C., Jinks, A. & Hutchinson, I. (2002). The limited capacity of humans to identify the components of taste mixtures and taste–odour mixtures. Perception, 31(5), 617–635.
+  doi_ou_url: https://doi.org/10.1068/p3205
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: en bouche, trois saveurs au plus sont identifiées
+  ne_reprend_pas: les mélanges saveur-odeur détaillés
+- id: marshall2006
+  citation: Marshall, K., Laing, D. G., Jinks, A. & Hutchinson, I. (2006). The capacity of humans to identify components in complex odor–taste mixtures. Chemical Senses, 31(6), 539–545.
+  doi_ou_url: https://doi.org/10.1093/chemse/bjj058
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: deux composantes identifiées dans des mélanges de quatre à six odeurs et saveurs
+  ne_reprend_pas: les données détaillées
+- id: lawless2004
+  citation: Lawless, H. T., Schlake, S., Smythe, J., Lim, J., Yang, H., Chapman, K. & Bolton, B. (2004). Metallic taste and retronasal smell. Chemical Senses, 29(1), 25–33.
+  doi_ou_url: https://doi.org/10.1093/chemse/bjh003
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: 'le test du nez pincé : fermer le nez retire les arômes (facette `nez`)'
+  ne_reprend_pas: le cas du métallique
+- id: meillon2010
+  citation: Meillon, S., Viala, D., Medel, M., Urbano, C., Guillot, G. & Schlich, P. (2010). Impact of partial alcohol reduction in Syrah wine on perceived complexity and temporality of sensations and link
+    with preference. Food Quality and Preference, 21(7), 732–740.
+  doi_ou_url: https://doi.org/10.1016/j.foodqual.2010.06.005
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: résumé et extraits (introduction) ; texte non lu en entier (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: la complexité jugée par des consommateurs va avec la persistance, la force et le nombre d’arômes
+  ne_reprend_pas: l’effet de la réduction d’alcool et le lien avec la préférence
+- id: hughson_boakes2002
+  citation: 'Hughson, A. L. & Boakes, R. A. (2002). The knowing nose: the role of knowledge in wine expertise. Food Quality and Preference, 13(7–8), 463–472.'
+  doi_ou_url: https://doi.org/10.1016/S0950-3293(02)00051-4
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: 'l’expertise tient surtout au vocabulaire : piège du compte des mots'
+  ne_reprend_pas: les autres résultats
+- id: schlich2015
+  citation: 'Schlich, P., Medel Maraboli, M., Urbano, C. & Parr, W. V. (2015). Perceived complexity in Sauvignon Blanc wines: influence of domain-specific expertise. Australian Journal of Grape and Wine
+    Research, 21(2), 168–178.'
+  doi_ou_url: https://doi.org/10.1111/ajgw.12129
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: la complexité perçue va avec l’harmonie et l’équilibre plutôt qu’avec la séparabilité
+  ne_reprend_pas: l’effet de l’expertise de domaine
+- id: parr2011
+  citation: 'Parr, W. V., Mouret, M., Blackmore, S., Pelquest-Hunt, T. & Urdapilleta, I. (2011). Representation of complexity in wine: Influence of expertise. Food Quality and Preference, 22(7), 647–660.'
+  doi_ou_url: https://doi.org/10.1016/j.foodqual.2011.04.005
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: résumé et extraits (introduction) (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: 'la complexité est vue en dégustation comme « désirable » : le mot porte une valence (label d’atelier seulement)'
+  ne_reprend_pas: les représentations selon l’expertise
+- id: goodstein2014
+  citation: 'Goodstein, E. S., Bohlscheid, J. C., Evans, M. & Ross, C. F. (2014). Perception of flavor finish in model white wine: A time-intensity study. Food Quality and Preference, 36, 50–60.'
+  doi_ou_url: https://doi.org/10.1016/j.foodqual.2014.02.012
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: résumé et extraits (introduction, lue le 2026-10-20 sur la page de l’éditeur, dont le chiffre d’Ebeler, 2001, par source secondaire) (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: dans un vin modèle à quatre composés, l’écart entre les notes vu dans les vins plus simples n’apparaît plus ; l’introduction cite plus de 1 300 composés détectés selon Ebeler (2001), source secondaire
+  ne_reprend_pas: les résultats temps-intensité comme mesure
+- id: delahunty2006
+  citation: Delahunty, C. M., Eyres, G. & Dufour, J.-P. (2006). Gas chromatography-olfactometry. Journal of Separation Science, 29(14), 2107–2125.
+  doi_ou_url: https://doi.org/10.1002/jssc.200500509
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: résumé (Crossref) ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: la CPG-O, mesure associée indirecte (fréquence de détection, dilution jusqu’au seuil) ; la variante par intensité directe, non retenue
+  ne_reprend_pas: les détails des méthodes
+- id: green1993lms
+  citation: Green, B. G., Shaffer, G. S. & Gilmore, M. M. (1993). Derivation and evaluation of a semantic scale of oral sensation magnitude with apparent ratio properties. Chemical Senses, 18(6), 683–702.
+  doi_ou_url: https://doi.org/10.1093/chemse/18.6.683
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé (OpenAlex) ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: la LMS, un jugement de jury, non retenue comme mesure
+  ne_reprend_pas: les étiquettes et leurs positions
+- id: green1996lms
+  citation: Green, B. G., Dalton, P., Cowart, B., Shaffer, G., Rankin, K. & Higgins, J. (1996). Evaluating the ‘Labeled Magnitude Scale’ for measuring sensations of taste and smell. Chemical Senses, 21(3),
+    323–334.
+  doi_ou_url: https://doi.org/10.1093/chemse/21.3.323
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé (OpenAlex) ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: la comparaison de la LMS et de l’estimation de grandeur (non retenues comme mesure)
+  ne_reprend_pas: les résultats détaillés
+- id: stevens1957
+  citation: Stevens, S. S. (1957). On the psychophysical law. Psychological Review, 64(3), 153–181.
+  doi_ou_url: https://doi.org/10.1037/h0046162
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: métadonnées Crossref ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: l’estimation de grandeur, non retenue comme mesure
+  ne_reprend_pas: la loi psychophysique (texte non lu)
+- id: medel2009
+  citation: 'Medel, M., Viala, D., Meillon, S., Urbano, C. & Schlich, P. (2009). A questionnaire for assessing the perceived complexity of wine: Application to the study of the effect of expertise on perception
+    of wine complexity. Communication orale, 8th Pangborn Sensory Science Symposium, Florence.'
+  doi_ou_url: null
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: métadonnées (liste de références de Meillon et al., 2010, sur Crossref) ; contenu par source secondaire ; pas de DOI (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: un questionnaire de complexité perçue, non retenu comme mesure
+  ne_reprend_pas: le contenu (non lu)
+- id: astm_e1909
+  citation: ASTM E1909-24. Standard Guide for Time-Intensity Evaluation of Sensory Attributes. ASTM International.
+  doi_ou_url: https://doi.org/10.1520/E1909-24
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: 'extrait d’index (page de l’ASTM : une seule sensation, suivie après une seule prise) ; texte payant non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)'
+  reprend: la méthode temps-intensité, un jugement de jury, non retenue comme mesure
+  ne_reprend_pas: le protocole
+- id: pineau2009
+  citation: 'Pineau, N., Schlich, P., Cordelle, S. et al. (2009). Temporal Dominance of Sensations: Construction of the TDS curves and comparison with time–intensity. Food Quality and Preference, 20(6),
+    450–455.'
+  doi_ou_url: https://doi.org/10.1016/j.foodqual.2009.04.005
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: résumé et extraits de l’introduction (ScienceDirect) ; définition complète de l’attribut dominant connue par source secondaire (Visalli et Galmarini, 2024) (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: la TDS, un jugement de jury, non retenue comme mesure
+  ne_reprend_pas: la construction des courbes
+etat_de_l_art: 'On ne distingue guère plus de trois ou quatre composantes dans un mélange d’odeurs, même entraîné (Livermore et Laing, 1996 [[livermore_laing1996]]) ; avec seize odorants, l’identification
+  tombe au hasard, et l’analyse se limiterait à « environ trois composantes » (Jinks et Laing, 1999 [[jinks_laing1999a]] [[jinks_laing1999b]]) ; un mélange est perçu en partie comme un tout (Jinks et Laing,
+  2001 [[jinks_laing2001]], qui attribuent la limite à Laing et Francis, 1989 [[laing_francis1989]]). En bouche, trois saveurs au plus sont identifiées (Laing et al., 2002 [[laing2002]]), et deux composantes
+  dans des mélanges de quatre à six odeurs et saveurs (Marshall et al., 2006 [[marshall2006]]). Des consommateurs lient la complexité à la persistance, à la force et au nombre d’arômes (Meillon et al.,
+  2010 [[meillon2010]]), ou à l’harmonie plutôt qu’à la séparabilité (Schlich et al., 2015 [[schlich2015]]) ; l’expertise tient surtout au vocabulaire (Hughson et Boakes, 2002 [[hughson_boakes2002]]), et
+  la complexité y est vue comme « désirable » (Parr et al., 2011 [[parr2011]]). Dans un vin modèle à quatre composés, l’écart entre les notes s’efface (Goodstein et al., 2014 [[goodstein2014]]). La CPG-O
+  compte des composés, pas des composantes perçues (Delahunty et al., 2006 [[delahunty2006]]). Aucune source lue ne teste l’accord entre observateurs sur un compte de composantes en bouche à crans bas.
+  Détail : docs/bibliographie-par-type.md#groupe-gout.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-gout
+axiomes:
+- conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
+  validation: Toute assertion de type ppp:flavourComplexity a exactement un ppp:about.
+- conceptuel: Les 4 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 4 ppp:Region de l’échelle du type ont des ppp:rank distincts, de 1 à 4 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Une région de cet espace n’est pas un sous-type du type.
+  validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
+nanay: Oui — passer de « je goûte ce vin » à « je compte ce que j’y distingue » change la description (on sépare les composantes au lieu de juger l’ensemble).
+transfert: objet conçu oui (une recette, un assemblage, une boisson) | tableau non | cuisine oui (un plat, une sauce, un vin) | high-tech non | architecture non
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: après l’épreuve du premier lot, sur 6 à 10 produits identifiés (portions du même lot, au même moment), accord inter-observateurs à une région près, au-dessus du seuil fixé avant l’épreuve, à `nez`
+    et `moment` égaux (spec §9.7 H, règle 12), la liste de ce qui compte comme composante fixée avant l’épreuve
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les produits (ceux qui aiment et ceux qui n’aiment pas)
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2
+statut: candidat
+statut_note: 'en préparation (2026-10-20) : fiche créée en série 78, sans exemplaire ni épreuve d’accord ; tous les champs rédigés sont à relire'
+statut_epistemique: non éprouvé
+introduit_en: '2.8'
+modifie_en: []
+remplace_par: []
+source_de_la_fiche: 'création du type : décision de l’éditeur du projet (2026-10-20, série 77 ; lot CIEL, proposition « Goût », 2.8 et 8.3) ; famille « Goût (en bouche) » : décision de l’éditeur du projet
+  (2026-10-19, décision 1) ; contenu repris de la proposition « Goût » (docs/famille-gout-proposition.md (document de travail, non publié), sections 2, 5, 6 et 7) ; le reste (porteur, crans, repères, facettes
+  critiques, classement des mesures, rédaction) : choix de relecture (2026-10-19 et 2026-10-20) ; fiche créée le 2026-10-20 (série 78)'
+manques:
+- 'exemplaires : aucun. Décision 5 de l’éditeur du projet (2026-10-19) : pas d’exemplaire en V1 pour le goût, des repères de région à la place. Si des exemples sont cherchés plus tard, ce seront des objets
+  publics seulement (produits identifiés, sans marque citée), jamais des objets privés'
+- 'épreuve d’accord E1 à faire : portions du même lot, au même moment, repères de région goûtés avant de juger (proposition « Goût », section 6, point 2) ; elle suit celle du premier lot (lot CIEL)'
+- ce qui compte comme « composante » est à fixer avant E1 ; la texture de la bouchée en est exclue (choix de relecture (2026-10-20), série 78 bis)
+- aucune source ne teste un compte de composantes en bouche à crans bas par E1
+- 'base incomplète : le sucré, l’acide, le salé, l’umami et l’arôme en bouche sont en réserve, sans id ; la fiche ne cite que des ids définis (A12)'
+bloque_par: []
+a_relire:
+- label_fr
+- label_en
+- labels_alternatifs
+- labels_alternatifs_en
+- note_label_alternatif
+- strate
+- note_base
+- définition
+- question_attentionnelle
+- contre_exemple
+- mesure
+- mode_de_presentation
+- conditions_critiques
+- note_conditions
+- porteur
+- note_porteur
+- condition_NA
+- espace_valeurs
+- note_echelle
+- identite
+- relations
+- references
+- etat_de_l_art
+- nanay
+- transfert
+- enonces_testables
+- statut_note
+remarque:
+- 'série 78 bis (choix de relecture (2026-10-20), corrections de relecture) : définition : astringence au lieu du toucher en bouche, texture exclue ; note_base ; manques ; gloses de « trijumeau » et de
+  « rétronasale » à la première occurrence ; à relire'
+relecture_explicative:
+  date: null
+  champs: []
+  a_reconfirmer: []

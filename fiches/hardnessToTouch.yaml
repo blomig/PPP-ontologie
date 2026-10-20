@@ -100,7 +100,7 @@ espace_valeurs:
     repere: rien ne cède sous le doigt, même en appuyant fort (une pierre)
     exemplaires: []
 note_echelle: 'quatre crans tirés des cinq exemples du ticket 4, rangés par leur proposant du plus mou au plus dur : le ballon gonflé est rangé avec la mousse à raser (le doigt s’enfonce profondément), le chapeau de champignon seul au cran « cède un peu », la pile de papier à « cède à peine », la pierre à « ne cède pas ». La proposition « Toucher » (§2.2) avait trois crans (« cède beaucoup », « cède un peu », « ne cède pas ») ; le ticket en distingue un de plus entre « un peu » et « pas du tout ». Position de travail : quatre crans, E1 à une région près ; si l’épreuve ne distingue pas « cède à peine » de ses voisins, revenir à trois (spec §9.7 C, accord exact). Repères du cran « cède beaucoup » (série 54 bis) : la mousse à raser reste comme repère, mais elle se déforme sans revenir, et l’examen risque la condition NA (ce qui ne garde pas de forme) ; le ballon gonflé reste en `yieldsMuch`, avec un doute vers `yieldsSome` selon le gonflage.'
-identite: 'Ce que l’objet cède sous la pression du doigt, à l’endroit pressé ; pas la façon dont il revient à sa forme (retour à la forme), pas ce qui plie (souplesse au pli), pas le relief de sa surface (texture), pas la résistance à la rayure (échelle de Mohs).'
+identite: 'Ce que l’objet cède sous la pression du doigt, à l’endroit pressé ; pas la façon dont il revient à sa forme (retour à la forme), pas ce qui plie (souplesse au pli), pas le relief de sa surface (texture), pas la résistance à la rayure (échelle de Mohs) ; pas la dureté en bouche (`ppp:hardnessInMouth`, famille Goût : on mord la bouchée, on ne la presse pas du doigt ; l’aliment est détruit pendant qu’on le juge), sans relation.'
 relations:
 - type: confusableWith
   cible: ppp:texture
@@ -269,6 +269,8 @@ a_relire:
 - transfert
 - enonces_testables
 - statut_note
+remarque:
+- 'série 78 bis (choix de relecture (2026-10-20), corrections de relecture) : identite complétée (pas la dureté en bouche, `ppp:hardnessInMouth`, sans relation) ; à relire'
 relecture_explicative:
   date: null
   champs:

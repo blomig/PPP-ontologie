@@ -1,0 +1,318 @@
+# Fiche de type PPP — ppp:bitterness — format : PPP_FicheType.md (spec v2.8)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_base, note_porteur, note_echelle, note_label_alternatif, mesure (rubrique proposée en série 53, docs/proposition-rubrique-mesure.md).
+# Série 78 (2026-10-20) : fiche en préparation de la famille « Goût (en bouche) », rédigée sans exemplaire à partir de la proposition « Goût » ; aucun champ n’est encore relu.
+id: ppp:bitterness
+label_fr: amer
+label_en: bitterness
+labels_alternatifs: []
+labels_alternatifs_en: []
+patron: P1
+sorte: qualité
+sous_sorte: —
+strate: formel
+base_dependance:
+  types: []
+  facteurs_non_perceptuels: []
+facettes:
+- gout
+définition: 'La force de la saveur amère qu’on perçoit en goûtant une portion du produit, nez pincé ou libre selon la facette `nez`, à la température déclarée : une saveur de la langue, et non l’astringence
+  ni l’arôme.'
+question_attentionnelle: En bouche, est-ce amer ? À peine, nettement, ou fortement ?
+contre_exemple: 'Un vin rouge jeune peut assécher la bouche sans être amer : c’est l’astringence, un toucher, pas une saveur. Une odeur de café brûlé n’est pas l’amer : nez pincé, elle disparaît, l’amer
+  reste. Le sens figuré du mot (« une remarque amère ») ne s’applique pas. « Ce café est nettement amer, et c’est un défaut » se dit comme « …et c’est une qualité » : l’amer est recherché dans le café,
+  le chocolat noir ou l’eau tonique.'
+grandeur_physique_homonyme: 'l’« amertume » des brasseurs, en unités d’amertume (BU), est une teneur en iso-alpha-acides du houblon mesurée par absorbance, pas l’amer perçu [[ebc_9_8]] : aucune région ne
+  s’en déduit. Voir la rubrique « mesure ».'
+mesure:
+  etat: methodes
+  synthese: 'Une mesure associée indirecte existe pour la bière et le moût seulement : les unités d’amertume (méthode internationale commune de l’EBC et de l’ASBC). Elle dose surtout les iso-alpha-acides
+    du houblon, pas l’amer perçu, et ne saisit ni l’observateur, ni la température, ni le nez. Aucune méthode proche n’est connue (recherche du 2026-10-19).'
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes:
+  - id: ebc_9_8
+    nom: unités d’amertume de la bière, méthode internationale (IM) commune (EBC 9.8 ; ASBC Beer-23A)
+    grandeur: absorbance à 275 nm d’un extrait à l’isooctane de la bière acidifiée
+    unite_ou_echelle: unités d’amertume (BU), soit 50 × A275
+    references:
+    - ebc_9_8
+    - asbc_beer_23a
+    proximite: indirecte
+    ecart: la méthode dose surtout les iso-alpha-acides du houblon, pas l’amer perçu ; le texte d’EBC 9.8 (2.3, connu par source secondaire) dit lui-même que, pour les bières houblonnées à cru et les bières
+      colorées, les BU sont plus élevées que l’amertume perçue ; bière et moût seulement ; ni l’observateur, ni la température, ni le nez
+    conditions: bière filtrée, dégazée, vers 20 °C ; résultat faussé par certains additifs (acide sorbique, saccharine…)
+    statut_lecture: extrait d’index (page « Master the Method » de l’ASBC ; pages de l’EBC et de BrewUp, mise à jour de 2020) ; texte d’EBC 9.8 par source secondaire (copie tierce)
+  non_retenues:
+  - nom: gLMS et estimation de grandeur
+    references:
+    - green1993lms
+    - green1996lms
+    - bartoshuk2004
+    raison: jugements d’un jury sans référence physique ; à reprendre dans le protocole de l’épreuve d’accord (E1). Les échelles à étiquettes classiques ne se comparent pas d’un groupe à l’autre ; l’appariement
+      à un repère non gustatif (un son) le permet
+    statut_lecture: résumés (Green et al., 1993 et 1996, sur OpenAlex ; Bartoshuk et al., 2004)
+  - nom: ISO 3972:2011 (sensibilité au goût)
+    references:
+    - iso3972
+    raison: mesure la sensibilité des sujets, pas l’objet ; ses solutions servent de repères de région
+    statut_lecture: extraits (aperçu public)
+modalites:
+- bouche
+mode_de_presentation: échantillon
+conditions_critiques:
+- nez
+note_conditions: 'règle 12 (spec §9.7 H) : `nez` est critique pour tout type de saveur ; le test du nez pincé sépare l’amer de l’odeur (on goûte nez libre, puis nez pincé, dans le même ordre et à la même
+  température) [[lawless2004]]. `temperature_bouchee` et `avant` sont à éprouver pour l’amer. `duree` : le temps passé en bouche avant de juger ; environ 30 s entre deux prises et un rinçage à l’eau après
+  chaque série, comme dans ISO 3972:2011 [[iso3972]]. La salive, ce qu’on a mangé avant, avalé ou recraché vont en note d’épisode ; l’état de l’observateur (sensibilité au PROP, âge, tabac) est une note
+  facultative qui n’identifie personne (règle 12).'
+porteur: le produit identifié dont on goûte une portion (nature, origine, lot, date de production ou d’ouverture, conservation, concentration pour une boisson préparée) ; la portion goûtée n’est pas le
+  porteur
+note_porteur: 'porteur des types de saveur : le produit identifié (proposition « Goût », section 6, et choix de relecture du 2026-10-19, 8.1 point 4) ; la définition dit pourtant « en goûtant une portion
+  du produit » : la portion est ce qu’on goûte, pas ce qui porte la qualité. Pour un produit naturel, le lot ne garantit pas la saveur (maturité, conservation, temps depuis l’ouverture) : ces informations
+  vont dans l’épisode.'
+arité: 1
+condition_NA: 'objet non destiné à la bouche (un cuir, un bois verni, un métal : ce n’est ni sûr ni reproductible) ; produit qu’on ne goûte pas (photo, description) : une photo ne compte jamais'
+espace_valeurs:
+  echelle: ordinale
+  sens_croissant: de `none` (rang 1) vers `strong` (rang 4), l’amer se perçoit de plus en plus fort
+  numerique: non
+  regions:
+  - cle: none
+    label_fr: aucun
+    label_en: none
+    rang: 1
+    repere: de l’eau neutre, à la température des solutions de référence (vers 20 °C)
+    exemplaires: []
+  - cle: faint
+    label_fr: à peine perceptible
+    label_en: faint
+    rang: 2
+    repere: une solution de caféine d’ISO 3972 (tableau 3), à la plus faible concentration de la série (concentration à reprendre de la norme)
+    exemplaires: []
+  - cle: distinct
+    label_fr: net
+    label_en: distinct
+    rang: 3
+    repere: une solution de caféine d’ISO 3972 (tableau 3), à une concentration moyenne de la série (à choisir avant l’épreuve)
+    exemplaires: []
+  - cle: strong
+    label_fr: fort
+    label_en: strong
+    rang: 4
+    repere: une solution de caféine d’ISO 3972 (tableau 3), à la plus forte concentration de la série
+    exemplaires: []
+note_echelle: 'quatre régions, clés reprises de `odourIntensity` (proposition « Goût », 2.2). Les repères sont des solutions de référence, pas des exemplaires (X17), et aucune marque n’est citée (décision
+  5 de l’éditeur du projet, 2026-10-19). Les concentrations exactes du tableau 3 d’ISO 3972:2011 [[iso3972]] ne sont pas reprises ici : la correspondance entre crans et concentrations est à fixer avant
+  l’épreuve.'
+identite: 'La force de la saveur amère, perçue sur la langue ; pas l’astringence (un toucher : la bouche qui sèche ou râpe), pas l’odeur en bouche (arôme en bouche, en réserve), pas le piquant (piquant
+  en bouche), pas l’agrément.'
+relations:
+- type: confusableWith
+  cible: ppp:astringency
+  note: 'dans le vin rouge, l’amer est confondu avec l’astringence : l’amer est une saveur de la langue, l’astringence un état de la bouche qui sèche ou râpe et reste après la gorgée'
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: chandrashekar2006
+  citation: Chandrashekar, J., Hoon, M. A., Ryba, N. J. P. & Zuker, C. S. (2006). The receptors and cells for mammalian taste. Nature, 444(7117), 288–294.
+  doi_ou_url: https://doi.org/10.1038/nature05401
+  role: fonde
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé ; texte non lu (travail surtout mené chez la souris) (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: l’amer est l’une des cinq saveurs de base, détectée par des cellules et des récepteurs distincts
+  ne_reprend_pas: le détail des récepteurs ; le travail chez la souris
+- id: iso3972
+  citation: ISO 3972:2011. Sensory analysis — Methodology — Method of investigating sensitivity of taste (3e éd.), et Cor 1:2012. ISO.
+  doi_ou_url: https://www.iso.org/standard/50110.html
+  role: fonde
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: 'extraits : aperçu public (domaine, points 3, 5, 7 et 8, tableau 3) ; norme confirmée le 2023-09-21 ; texte complet non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)'
+  reprend: les solutions de caféine du tableau 3 comme repères de région ; même température (vers 20 °C) pour les échantillons et l’eau ; rinçage et attente entre deux prises
+  ne_reprend_pas: 'les concentrations exactes ; l’usage de la norme pour vérifier des dégustateurs (contraste : elle mesure la sensibilité des sujets)'
+- id: lawless2004
+  citation: Lawless, H. T., Schlake, S., Smythe, J., Lim, J., Yang, H., Chapman, K. & Bolton, B. (2004). Metallic taste and retronasal smell. Chemical Senses, 29(1), 25–33.
+  doi_ou_url: https://doi.org/10.1093/chemse/bjh003
+  role: fonde
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: le test du nez pincé, qui sépare une saveur d’une odeur rétronasale (de l’arrière de la bouche vers le nez) (facette `nez`)
+  ne_reprend_pas: le cas du métallique
+- id: erickson2008
+  citation: 'Erickson, R. P. (2008). A study of the science of taste: On the origins and influence of the core ideas. Behavioral and Brain Sciences, 31(1), 59–75.'
+  doi_ou_url: https://doi.org/10.1017/S0140525X08003348
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé ; commentaires publiés avec l’article non lus (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: 'la notion de saveur de base est discutée : chaque saveur est ici un type à une dimension, pas une coordonnée de toute saveur'
+  ne_reprend_pas: la thèse générale et les commentaires (non lus)
+- id: bartoshuk1994
+  citation: 'Bartoshuk, L. M., Duffy, V. B. & Miller, I. J. (1994). PTC/PROP tasting: Anatomy, psychophysics, and sex effects. Physiology & Behavior, 56(6), 1165–1171.'
+  doi_ou_url: https://doi.org/10.1016/0031-9384(94)90361-1
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: 'l’amer varie beaucoup d’une personne à l’autre (PROP) : un désaccord peut venir des observateurs'
+  ne_reprend_pas: les données anatomiques et les effets du sexe
+- id: bartoshuk2000
+  citation: 'Bartoshuk, L. M. (2000). Comparing sensory experiences across individuals: Recent psychophysical advances illuminate genetic variation in taste perception. Chemical Senses, 25(4), 447–460.'
+  doi_ou_url: https://doi.org/10.1093/chemse/25.4.447
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: comparer les intensités vécues par deux personnes est un problème de méthode
+  ne_reprend_pas: les méthodes proposées
+- id: nolden_hayes2015
+  citation: Nolden, A. A. & Hayes, J. E. (2015). Perceptual qualities of ethanol depend on concentration, and variation in these percepts associates with drinking frequency. Chemosensory Perception, 8(3),
+    149–157.
+  doi_ou_url: https://doi.org/10.1007/s12078-015-9196-5
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: résumé (PubMed) ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: à faible degré (8 et 16 %), l’éthanol est surtout amer
+  ne_reprend_pas: le lien avec la fréquence de consommation
+- id: fontoin2008
+  citation: Fontoin, H., Saucier, C., Teissedre, P.-L. & Glories, Y. (2008). Effect of pH, ethanol and acidity on astringency and bitterness of grape seed tannin oligomers in model wine solution. Food Quality
+    and Preference, 19(3), 286–291.
+  doi_ou_url: https://doi.org/10.1016/j.foodqual.2007.08.004
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: l’éthanol et le pH changent l’amertume et l’astringence des tanins
+  ne_reprend_pas: les valeurs mesurées
+- id: green1993lms
+  citation: Green, B. G., Shaffer, G. S. & Gilmore, M. M. (1993). Derivation and evaluation of a semantic scale of oral sensation magnitude with apparent ratio properties. Chemical Senses, 18(6), 683–702.
+  doi_ou_url: https://doi.org/10.1093/chemse/18.6.683
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé (OpenAlex) ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: l’échelle de grandeur à étiquettes (LMS), un jugement de jury, non retenue comme mesure
+  ne_reprend_pas: les étiquettes et leurs positions
+- id: green1996lms
+  citation: Green, B. G., Dalton, P., Cowart, B., Shaffer, G., Rankin, K. & Higgins, J. (1996). Evaluating the ‘Labeled Magnitude Scale’ for measuring sensations of taste and smell. Chemical Senses, 21(3),
+    323–334.
+  doi_ou_url: https://doi.org/10.1093/chemse/21.3.323
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé (OpenAlex) ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: la comparaison de la LMS et de l’estimation de grandeur (non retenues comme mesure)
+  ne_reprend_pas: les résultats détaillés
+- id: bartoshuk2004
+  citation: 'Bartoshuk, L. M., Duffy, V. B., Green, B. G. et al. (2004). Valid across-group comparisons with labeled scales: the gLMS versus magnitude matching. Physiology & Behavior, 82(1), 109–114.'
+  doi_ou_url: https://doi.org/10.1016/j.physbeh.2004.02.033
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: les échelles à étiquettes classiques ne se comparent pas d’un groupe à l’autre ; l’appariement à un repère non gustatif le permet
+  ne_reprend_pas: la gLMS comme mesure associée
+- id: ebc_9_8
+  citation: EBC (2020). Analytica EBC, méthode 9.8, Bitterness of Beer (IM). European Brewery Convention.
+  doi_ou_url: https://brewup.eu/ebc-analytica/beer/bitterness-of-beer-im/9.8
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: extrait d’index (pages de l’EBC et de BrewUp, mise à jour de 2020) ; texte de la méthode par source secondaire (copie tierce) (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: les unités d’amertume de la bière, mesure associée indirecte
+  ne_reprend_pas: toute borne de région
+- id: asbc_beer_23a
+  citation: ASBC. Beer-23A, Beer Bitterness — Bitterness Units (International Method). American Society of Brewing Chemists.
+  doi_ou_url: https://www.asbcnet.org/Methods/BeerMethods/pages/Beer-23-MasterMethod.aspx
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: extrait d’index (page « Master the Method » de l’ASBC) ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: la même méthode internationale, côté ASBC
+  ne_reprend_pas: toute borne de région
+etat_de_l_art: 'Chez les mammifères, des cellules distinctes, chacune avec ses récepteurs, détectent les cinq saveurs de base, dont l’amer (Chandrashekar et al., 2006 [[chandrashekar2006]] ; travail surtout
+  mené chez la souris) ; la notion même de saveur de base est discutée (Erickson, 2008 [[erickson2008]]), et l’amer est donc un type à une dimension, pas une coordonnée d’une décomposition. L’amer varie
+  beaucoup d’une personne à l’autre (Bartoshuk et al., 1994 [[bartoshuk1994]]), et comparer les intensités vécues par deux personnes est un problème de méthode (Bartoshuk, 2000 [[bartoshuk2000]]). Le test
+  du nez pincé sépare la saveur de l’odeur rétronasale (Lawless et al., 2004 [[lawless2004]]). Les solutions de caféine d’ISO 3972:2011 [[iso3972]] servent de repères ; les échelles de jury (Green et al.,
+  1993 [[green1993lms]] ; Green et al., 1996 [[green1996lms]] ; Bartoshuk et al., 2004 [[bartoshuk2004]]) ne sont pas des mesures. Dans le vin, l’éthanol et le pH changent l’amertume (Fontoin et al., 2008
+  [[fontoin2008]]) ; à faible degré, l’éthanol est surtout amer (Nolden et Hayes, 2015 [[nolden_hayes2015]]). Aucune source lue ne teste l’accord entre observateurs sur des crans d’amer à repères égaux.
+  Détail : docs/bibliographie-par-type.md#groupe-gout.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-gout
+axiomes:
+- conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
+  validation: Toute assertion de type ppp:bitterness a exactement un ppp:about.
+- conceptuel: Les 4 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 4 ppp:Region de l’échelle du type ont des ppp:rank distincts, de 1 à 4 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Une région de cet espace n’est pas un sous-type du type.
+  validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
+nanay: Oui — passer de « je goûte ce café » à « je regarde s’il est amer, et combien » change la description (on isole une saveur parmi l’arôme, l’astringence et la chaleur).
+transfert: 'objet conçu oui (un aliment ou une boisson conçus : une recette, un produit) | tableau non (rien à goûter) | cuisine oui (café, chocolat noir, endive) | high-tech non | architecture non'
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: sur 6 à 10 produits identifiés (portions du même lot, au même moment), accord inter-observateurs à une région près, au-dessus du seuil fixé avant l’épreuve, à conditions critiques égales (nez
+    pincé ; spec §9.7 H, règle 12), les solutions de caféine de référence goûtées avant de juger
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les produits (ceux qui aiment et ceux qui n’aiment pas)
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2
+statut: candidat
+statut_note: 'en préparation (2026-10-20) : fiche créée en série 78, sans exemplaire ni épreuve d’accord ; tous les champs rédigés sont à relire'
+statut_epistemique: non éprouvé
+introduit_en: '2.8'
+modifie_en: []
+remplace_par: []
+source_de_la_fiche: 'création du type : décision de l’éditeur du projet (2026-10-19, décision 5a ; 2026-10-20, série 76, premier lot, proposition « Goût », 2.2 à 2.4 et 8.2) ; famille « Goût (en bouche)
+  » : décision de l’éditeur du projet (2026-10-19, décision 1) ; contenu repris de la proposition « Goût » (docs/famille-gout-proposition.md (document de travail, non publié), sections 2, 5, 6 et 7) ; le
+  reste (porteur, crans, repères, facettes critiques, classement des mesures, rédaction) : choix de relecture (2026-10-19 et 2026-10-20) ; fiche créée le 2026-10-20 (série 78)'
+manques:
+- 'exemplaires : aucun. Décision 5 de l’éditeur du projet (2026-10-19) : pas d’exemplaire en V1 pour le goût, des repères de région à la place. Si des exemples sont cherchés plus tard, ce seront des objets
+  publics seulement (produits identifiés, sans marque citée), jamais des objets privés'
+- 'épreuve d’accord E1 à faire : portions du même lot, au même moment, repères de région goûtés avant de juger (proposition « Goût », section 6, point 2)'
+- concentrations des solutions de caféine d’ISO 3972 (tableau 3) à reprendre de la norme, et correspondance entre crans et concentrations à fixer avant E1
+bloque_par: []
+a_relire:
+- label_fr
+- label_en
+- labels_alternatifs
+- labels_alternatifs_en
+- strate
+- définition
+- question_attentionnelle
+- contre_exemple
+- grandeur_physique_homonyme
+- mesure
+- mode_de_presentation
+- conditions_critiques
+- note_conditions
+- porteur
+- note_porteur
+- condition_NA
+- espace_valeurs
+- note_echelle
+- identite
+- relations
+- references
+- etat_de_l_art
+- nanay
+- transfert
+- enonces_testables
+- statut_note
+remarque:
+- 'série 78 bis (choix de relecture (2026-10-20), corrections de relecture) : nom de la méthode `ebc_9_8` : « méthode internationale (IM) commune » ; glose de « rétronasale » à la première occurrence ;
+  à relire'
+relecture_explicative:
+  date: null
+  champs: []
+  a_reconfirmer: []

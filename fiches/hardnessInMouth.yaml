@@ -1,0 +1,380 @@
+# Fiche de type PPP — ppp:hardnessInMouth — format : PPP_FicheType.md (spec v2.8)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_base, note_porteur, note_echelle, note_label_alternatif, mesure (rubrique proposée en série 53, docs/proposition-rubrique-mesure.md).
+# Série 78 (2026-10-20) : fiche en préparation de la famille « Goût (en bouche) », rédigée sans exemplaire à partir de la proposition « Goût » ; aucun champ n’est encore relu.
+id: ppp:hardnessInMouth
+label_fr: dureté en bouche
+label_en: hardness in the mouth
+label_court: dureté
+labels_alternatifs: []
+labels_alternatifs_en: []
+note_label_alternatif: '« tendre » va au lexique d’atelier (§9.7 K), qui mène au type (choix de relecture (2026-10-20), série 78 bis) : il nomme le bas de l’échelle (peu de force au premier coup de dent)
+  et mêle souvent description et jugement (une viande « tendre ») ; ce n’est ni un label alternatif ni une région.'
+patron: P1
+sorte: qualité
+sous_sorte: —
+strate: formel
+base_dependance:
+  types: []
+  facteurs_non_perceptuels: []
+facettes:
+- gout
+définition: 'La force qu’il faut, au premier coup de dent (ou, pour un semi-solide, à la première pression de la langue contre le palais), pour enfoncer la bouchée : de la bouchée qui cède sans effort à
+  celle qui demande beaucoup de force. Un toucher en bouche, jugé au moment `firstBite`.'
+question_attentionnelle: Quelle force faut-il, au premier coup de dent (ou de langue), pour enfoncer la bouchée ? Très peu, peu, une force nette, ou beaucoup ?
+contre_exemple: 'Ce n’est pas la mâche : un steak peut céder vite au premier coup de dent et demander longtemps à mâcher. La croûte et la mie d’un même pain sont deux bouchées à juger à part. Ce n’est pas
+  la dureté au toucher : on ne presse pas la bouchée du doigt, on la mord. « Cette carotte crue demande beaucoup de force, et c’est un défaut » se dit comme « …et c’est une qualité ».'
+grandeur_physique_homonyme: 'dureté des minéralogistes (résistance à la rayure) ou des métaux (empreinte laissée) : d’autres grandeurs. La dureté de la TPA (force maximale de la première compression, en
+  newtons) relève de la rubrique « mesure » : aucune région ne s’en déduit.'
+mesure:
+  etat: methodes
+  synthese: 'Une mesure associée proche existe : la force maximale de la première compression de l’analyse instrumentale du profil de texture (TPA), qui vise expressément l’attribut perçu et suit le jury
+    sur la dureté sans le suivre parfaitement. Sa valeur dépend du réglage et ne saisit ni la salive ni la mastication réelle. Les échelles du profil de texture, faites d’aliments de référence, servent
+    de repères de région, pas de mesure (recherche du 2026-10-19).'
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes:
+  - id: tpa_durete
+    nom: TPA, force maximale de la première compression
+    grandeur: une force (pic de la première de deux compressions d’un morceau de la taille d’une bouchée)
+    unite_ou_echelle: newton (N)
+    references:
+    - friedman1963
+    - meullenet1998
+    - rosenthal2010
+    - peleg2019
+    - stokes2013
+    proximite: proche
+    ecart: 'l’écart commun de la TPA : pas de salive, pas de température de bouche, pas de vraie mastication (deux compressions verticales, sans langue ni mouvement latéral), une valeur qui dépend de la
+      taille de l’échantillon, de la vitesse et du taux d’écrasement, et seulement le début de la bouchée. La corrélation avec le jury n’est pas parfaite : 0,76, ou 0,96 après passage au logarithme, sur
+      21 aliments. Sans procédure normalisée lue, la valeur ne se compare qu’à réglage égal. Les définitions détaillées des paramètres (Bourne, 1978, métadonnées) sont à vérifier sur le texte'
+    conditions: taille de l’échantillon, vitesse et taux d’écrasement à déclarer
+    statut_lecture: 'résumés (Friedman et al., 1963 ; Meullenet et al., 1998 ; Rosenthal, 2010 ; Peleg, 2019 ; Stokes et al., 2013) ; Bourne (1978) : métadonnées, sans DOI'
+  non_retenues:
+  - nom: échelle standard de dureté du profil de texture
+    references:
+    - szczesniak_brandt_friedman1963
+    - munoz1986
+    - iso11036
+    raison: échelle de jugement ancrée par des aliments de référence, dont les crans sont fixés par un jury et non par une grandeur physique ; à reprendre comme repères de région dans le protocole de l’épreuve
+      d’accord (E1)
+    statut_lecture: 'résumés (Szczesniak, Brandt et Friedman, 1963 ; Muñoz, 1986) ; ISO 11036:2020 : extraits (6.4 et annexe A non lues)'
+  - nom: cohésion, mâche et gommeux de la TPA
+    references:
+    - meullenet1998
+    - rosenthal2010
+    - peleg2019
+    raison: la TPA ne suit pas le jury sur la cohésion ; elle ne le suit pas sur la mâche dans les données brutes (après logarithmes des deux variables, r = 0,54, P < 0,05) ; le gommeux est le produit de
+      la dureté et de la cohésion, et dépend du réglage ; ce ne sont pas des mesures de ce type
+    statut_lecture: résumés
+  - nom: méthode temps-intensité (ASTM E1909-24) et TDS
+    references:
+    - astm_e1909
+    - pineau2009
+    - lenfant2009
+    raison: jugements d’un jury sans référence physique ; à reprendre dans le protocole de l’épreuve d’accord (E1)
+    statut_lecture: extrait d’index (page de l’ASTM) ; résumés (Pineau et al., 2009 ; Lenfant et al., 2009)
+modalites:
+- bouche
+mode_de_presentation: échantillon
+conditions_critiques:
+- moment
+conditions_fixees:
+  moment: firstBite
+note_conditions: 'règle 12 (spec §9.7 H) : `moment` est critique pour les types de texture ; la définition fixe `firstBite` (la première bouchée, ou la première pression) : une assertion faite à une autre
+  phase que celle que fixe la définition est invalide pour ce type, et le contrôle la refusera (contrôle à écrire) ; l’observation reste en note d’épisode. `unknown` est accepté, mais exclu de E1 (choix
+  de relecture (2026-10-20), série 78 bis). Juger la dureté puis une autre texture d’une même bouchée donne deux épisodes. `nez` n’est pas critique ; `temperature_bouchee` et `avant` sont à éprouver. Le
+  nombre de coups de dent et la taille de la bouchée vont dans l’épisode, sans facette ; la salive est une note d’épisode ; la dentition relève de l’état de l’observateur (note facultative), chacun mâchant
+  à sa façon (Brown et al., 1994 [[brown1994]] ; Kohyama et al., 2002 [[kohyama2002]]).'
+porteur: la bouchée (la portion en bouche) d’un produit identifié, au premier coup de dent
+note_porteur: 'porteur des types de texture : la bouchée ou la gorgée (choix de relecture, 2026-10-20 ; proposition « Goût », 2.7). Ce porteur change pendant qu’on le juge, puisque la mastication le détruit
+  : d’où la facette `moment`. L’objet du registre reste le produit identifié (« ce pain ») ; la bouchée en est la portion sur laquelle porte l’assertion, à la manière d’une partie (§9.7 I).'
+arité: 1
+condition_NA: 'liquide (rien à enfoncer sous la dent) ; objet non destiné à la bouche (un cuir, un bois verni, un métal : ce n’est ni sûr ni reproductible) ; produit qu’on ne goûte pas (photo, description)
+  : une photo ne compte jamais'
+espace_valeurs:
+  echelle: ordinale
+  sens_croissant: de `veryLittleForce` (rang 1) vers `muchForce` (rang 4), il faut de plus en plus de force pour enfoncer la bouchée
+  numerique: non
+  regions:
+  - cle: veryLittleForce
+    label_fr: très peu de force
+    label_en: very little force
+    rang: 1
+    repere: la bouchée s’écrase entre la langue et le palais, sans les dents (une purée, un flan)
+    exemplaires: []
+  - cle: littleForce
+    label_fr: peu de force
+    label_en: little force
+    rang: 2
+    repere: la dent entre sans effort (une banane mûre, la mie d’un pain frais)
+    exemplaires: []
+  - cle: clearForce
+    label_fr: une force nette
+    label_en: noticeable force
+    rang: 3
+    repere: la dent rencontre une résistance nette avant d’entrer (une pomme crue, un fromage à pâte pressée)
+    exemplaires: []
+  - cle: muchForce
+    label_fr: beaucoup de force
+    label_en: a lot of force
+    rang: 4
+    repere: il faut serrer fort pour entamer la bouchée (une carotte crue, une amande, un bonbon dur)
+    exemplaires: []
+note_echelle: 'quatre régions, écrites avec la fiche (la proposition « Goût », 2.7, les laissait à écrire). Les quatre crans et leurs repères sont des choix de relecture provisoires (2026-10-20, série 78
+  bis), à caler avant E1 sur les échelles standard du profil de texture, ici l’échelle standard de dureté [[szczesniak_brandt_friedman1963]] [[munoz1986]], dont les aliments de référence n’ont pas été lus.
+  Les repères sont des aliments courants, sans marque, et non des exemplaires (décision 5 de l’éditeur du projet, 2026-10-19). Un aliment naturel varie d’un lot à l’autre : le repère est goûté le jour de
+  l’épreuve.'
+identite: 'La force pour enfoncer la bouchée au premier coup de dent ; pas la mâche ni la cohésion (des paramètres secondaires ou à revoir), pas le croustillant (en lot suivant : une rupture sonore), pas
+  l’épaisseur d’un liquide (épaisseur en bouche), pas l’astringence (un état de la bouche). Rapprochement avec la dureté au toucher (`ppp:hardnessToTouch`, famille Toucher), sans relation : l’instrument
+  diffère (les dents et la mâchoire, pas le bout du doigt), l’aliment est détruit pendant qu’on le juge, et le son passe par les os ; un test de transfert (Q13, option c) pourra revoir cette séparation.'
+relations: []
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: szczesniak1963
+  citation: Szczesniak, A. S. (1963). Classification of textural characteristics. Journal of Food Science, 28(4), 385–389.
+  doi_ou_url: https://doi.org/10.1111/j.1365-2621.1963.tb00215.x
+  role: fonde
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: la dureté est une caractéristique mécanique primaire de la texture ; la mâche et le gommeux sont secondaires
+  ne_reprend_pas: la classification entière
+- id: iso11036
+  citation: ISO 11036:2020. Sensory analysis — Methodology — Texture profile (2e éd.). ISO.
+  doi_ou_url: https://www.iso.org/standard/76668.html
+  role: fonde
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: 'extraits : aperçu public (3.1, 6.1, 6.2.1, tableau 1, 6.2.3.2, 6.2.3.3, 6.2.4.1) ; 6.4 et annexe A non lues (statut repris de docs/bibliographie-par-type.md#groupe-gout)'
+  reprend: 'tableau 1 : la dureté est la force pour une déformation donnée, sous les molaires pour un solide, entre la langue et le palais pour un semi-solide ; 6.1 : l’ordre d’apparition (premier contact,
+    première mise en bouche, mastication, résidu)'
+  ne_reprend_pas: les échelles de produits de référence (6.4, annexe A, non lues)
+- id: brandt1963
+  citation: Brandt, M. A., Skinner, E. Z. & Coleman, J. A. (1963). Texture profile method. Journal of Food Science, 28(4), 404–409.
+  doi_ou_url: https://doi.org/10.1111/j.1365-2621.1963.tb00218.x
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: l’ordre d’apparition des caractéristiques, de la première bouchée à la mastication complète (facette `moment`)
+  ne_reprend_pas: la méthode de jury elle-même
+- id: hutchings1988
+  citation: Hutchings, J. B. & Lillford, P. J. (1988). The perception of food texture — the philosophy of the breakdown path. Journal of Texture Studies, 19(2), 103–115.
+  doi_ou_url: https://doi.org/10.1111/j.1745-4603.1988.tb00928.x
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: 'la texture est un suivi dynamique des changements de la bouchée : d’où la facette `moment`'
+  ne_reprend_pas: les trois axes du modèle
+- id: brown1994
+  citation: Brown, W. E., Langley, K. R., Martin, A. & MacFie, H. J. H. (1994). Characterisation of patterns of chewing behaviour in human subjects and their influence on texture perception. Journal of
+    Texture Studies, 25(4), 455–468.
+  doi_ou_url: https://doi.org/10.1111/j.1745-4603.1994.tb00774.x
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé ; métadonnées revérifiées sur Crossref le 2026-10-19 (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: chacun mâche à sa façon, ce qui change la perception de la texture
+  ne_reprend_pas: les profils de mastication détaillés
+- id: kohyama2002
+  citation: Kohyama, K., Mioche, L. & Martin, J.-F. (2002). Chewing patterns of various texture foods studied by electromyography in young and elderly populations. Journal of Texture Studies, 33(4), 269–283.
+  doi_ou_url: https://doi.org/10.1111/j.1745-4603.2002.tb01349.x
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé ; métadonnées revérifiées sur Crossref le 2026-10-19 (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: la mastication change avec l’âge
+  ne_reprend_pas: les mesures d’électromyographie
+- id: duizer2001
+  citation: Duizer, L. (2001). A review of acoustic research for studying the sensory perception of crisp, crunchy and crackly textures. Trends in Food Science & Technology, 12(1), 17–24.
+  doi_ou_url: https://doi.org/10.1016/S0924-2244(01)00050-4
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: 'le son de la rupture passe par les os : une raison de ne pas transposer la dureté au toucher'
+  ne_reprend_pas: l’acoustique du croustillant
+- id: friedman1963
+  citation: Friedman, H. H., Whitney, J. E. & Szczesniak, A. S. (1963). The texturometer — a new instrument for objective texture measurement. Journal of Food Science, 28(4), 390–396.
+  doi_ou_url: https://doi.org/10.1111/j.1365-2621.1963.tb00216.x
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: le texturomètre, dont la mesure est corrélée au jugement d’un jury entraîné
+  ne_reprend_pas: l’instrument lui-même
+- id: meullenet1998
+  citation: Meullenet, J.-F., Lyon, B. G., Carpenter, J. A. & Lyon, C. E. (1998). Relationship between sensory and instrumental texture profile attributes. Journal of Sensory Studies, 13(1), 77–93.
+  doi_ou_url: https://doi.org/10.1111/j.1745-459X.1998.tb00076.x
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: 'résumé (OpenAlex) : 21 aliments ; dureté r = 0,76, 0,96 après logarithme ; pas de corrélation significative pour la cohésion et la mâche dans les données brutes ; texte non lu (statut repris
+    de docs/bibliographie-par-type.md#groupe-gout)'
+  reprend: sur 21 aliments, la TPA suit le jury pour la dureté (r = 0,76, 0,96 après logarithme), pas pour la cohésion ni, dans les données brutes, pour la mâche
+  ne_reprend_pas: les autres attributs
+- id: rosenthal2010
+  citation: Rosenthal, A. J. (2010). Texture profile analysis — how important are the parameters? Journal of Texture Studies, 41(5), 672–684.
+  doi_ou_url: https://doi.org/10.1111/j.1745-4603.2010.00248.x
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: les paramètres de la TPA dépendent du réglage
+  ne_reprend_pas: les recommandations détaillées
+- id: peleg2019
+  citation: Peleg, M. (2019). The instrumental texture profile analysis revisited. Journal of Texture Studies, 50(5), 362–368.
+  doi_ou_url: https://doi.org/10.1111/jtxs.12392
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: les paramètres de la TPA dépendent de la taille de l’échantillon et des conditions d’essai, et ne sont pas des propriétés du matériau
+  ne_reprend_pas: l’adhésivité
+- id: stokes2013
+  citation: 'Stokes, J. R., Boehm, M. W. & Baier, S. K. (2013). Oral processing, texture and mouthfeel: from rheology to tribology and beyond. Current Opinion in Colloid & Interface Science, 18(4), 349–359.'
+  doi_ou_url: https://doi.org/10.1016/j.cocis.2013.04.010
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: la TPA et la rhéologie ne saisissent que le début de la bouchée, sans salive
+  ne_reprend_pas: la tribologie
+- id: szczesniak_brandt_friedman1963
+  citation: Szczesniak, A. S., Brandt, M. A. & Friedman, H. H. (1963). Development of standard rating scales for mechanical parameters of texture and correlation between the objective and the sensory methods
+    of texture evaluation. Journal of Food Science, 28(4), 397–403.
+  doi_ou_url: https://doi.org/10.1111/j.1365-2621.1963.tb00217.x
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: 'l’échelle standard de dureté : chaque point est un aliment, choisi pour sa disponibilité, sa familiarité et la constance de sa texture (repères, pas mesure)'
+  ne_reprend_pas: les aliments de l’échelle (non lus)
+- id: munoz1986
+  citation: Muñoz, A. M. (1986). Development and application of texture reference scales. Journal of Sensory Studies, 1(1), 55–83.
+  doi_ou_url: https://doi.org/10.1111/j.1745-459X.1986.tb00159.x
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: 'la révision des échelles : des produits de référence remplacés parce qu’ils n’étaient plus disponibles'
+  ne_reprend_pas: les nouvelles échelles
+- id: astm_e1909
+  citation: ASTM E1909-24. Standard Guide for Time-Intensity Evaluation of Sensory Attributes. ASTM International.
+  doi_ou_url: https://doi.org/10.1520/E1909-24
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: 'extrait d’index (page de l’ASTM : une seule sensation, suivie après une seule prise) ; texte payant non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)'
+  reprend: la méthode temps-intensité, un jugement de jury, non retenue comme mesure
+  ne_reprend_pas: le protocole
+- id: pineau2009
+  citation: 'Pineau, N., Schlich, P., Cordelle, S. et al. (2009). Temporal Dominance of Sensations: Construction of the TDS curves and comparison with time–intensity. Food Quality and Preference, 20(6),
+    450–455.'
+  doi_ou_url: https://doi.org/10.1016/j.foodqual.2009.04.005
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: résumé et extraits de l’introduction (ScienceDirect) ; définition complète de l’attribut dominant connue par source secondaire (Visalli et Galmarini, 2024) (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: la TDS, un jugement de jury, non retenue comme mesure
+  ne_reprend_pas: la construction des courbes
+- id: lenfant2009
+  citation: Lenfant, F., Loret, C., Pineau, N., Hartmann, C. & Martin, N. (2009). Perception of oral food breakdown. The concept of sensory trajectory. Appetite, 52(3), 659–667.
+  doi_ou_url: https://doi.org/10.1016/j.appet.2009.03.003
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: 'la trajectoire de texture vue par la TDS : un jugement de jury, sans référence physique'
+  ne_reprend_pas: les résultats sur les céréales
+etat_de_l_art: 'Le profil de texture de Brandt et al. (1963) [[brandt1963]] décrit les caractéristiques dans leur ordre d’apparition, de la première bouchée à la mastication complète. La dureté y est une
+  caractéristique mécanique primaire (Szczesniak, 1963 [[szczesniak1963]]), avec une échelle standard faite d’aliments de référence (Szczesniak, Brandt et Friedman, 1963 [[szczesniak_brandt_friedman1963]]
+  ; Muñoz, 1986 [[munoz1986]]). ISO 11036:2020 [[iso11036]] la définit comme la force pour une déformation donnée, sous les molaires pour un solide, entre la langue et le palais pour un semi-solide. La
+  texture est un suivi dynamique de la bouchée (Hutchings et Lillford, 1988 [[hutchings1988]]), et chacun mâche à sa façon (Brown et al., 1994 [[brown1994]] ; Kohyama et al., 2002 [[kohyama2002]]). L’instrument
+  (Friedman et al., 1963 [[friedman1963]]) suit le jury pour la dureté sur 21 aliments, mais pas pour la cohésion (Meullenet et al., 1998 [[meullenet1998]]) ; sa valeur dépend du réglage (Rosenthal, 2010
+  [[rosenthal2010]] ; Peleg, 2019 [[peleg2019]]) et ne saisit ni la salive ni la mastication réelle (Stokes et al., 2013 [[stokes2013]]). Le son de la rupture passe par les os (Duizer, 2001 [[duizer2001]]).
+  Aucune source lue ne teste l’accord entre observateurs sur des crans de dureté en bouche sans jury entraîné. Détail : docs/bibliographie-par-type.md#groupe-gout.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-gout
+axiomes:
+- conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
+  validation: Toute assertion de type ppp:hardnessInMouth a exactement un ppp:about.
+- conceptuel: Les 4 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 4 ppp:Region de l’échelle du type ont des ppp:rank distincts, de 1 à 4 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Une région de cet espace n’est pas un sous-type du type.
+  validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
+nanay: Oui — passer de « je mange cette pomme » à « je regarde quelle force il faut pour y entrer » change la description (on suit le premier coup de dent, pas ce qui vient après).
+transfert: objet conçu oui (une recette, un biscuit, un produit) | tableau non | cuisine oui (pain, fruit, légume cru ou cuit) | high-tech non | architecture non
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: sur 6 à 10 produits identifiés (bouchées du même lot, de même taille, au même moment), accord inter-observateurs à une région près, au-dessus du seuil fixé avant l’épreuve, à `moment` = `firstBite`
+    (spec §9.7 H, règle 12), les aliments repères goûtés avant de juger
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les produits (ceux qui aiment et ceux qui n’aiment pas)
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2
+statut: candidat
+statut_note: 'en préparation (2026-10-20) : fiche créée en série 78, sans exemplaire ni épreuve d’accord ; tous les champs rédigés sont à relire'
+statut_epistemique: non éprouvé
+introduit_en: '2.8'
+modifie_en: []
+remplace_par: []
+source_de_la_fiche: 'création du type : décision de l’éditeur du projet (2026-10-19, décision 3b ; 2026-10-20, série 76, premier lot, proposition « Goût », 2.7 et 8.2) ; famille « Goût (en bouche) » : décision
+  de l’éditeur du projet (2026-10-19, décision 1) ; contenu repris de la proposition « Goût » (docs/famille-gout-proposition.md (document de travail, non publié), sections 2, 5, 6 et 7) ; le reste (porteur,
+  crans, repères, facettes critiques, classement des mesures, rédaction) : choix de relecture (2026-10-19 et 2026-10-20) ; fiche créée le 2026-10-20 (série 78)'
+manques:
+- 'exemplaires : aucun. Décision 5 de l’éditeur du projet (2026-10-19) : pas d’exemplaire en V1 pour le goût, des repères de région à la place. Si des exemples sont cherchés plus tard, ce seront des objets
+  publics seulement (produits identifiés, sans marque citée), jamais des objets privés'
+- 'épreuve d’accord E1 à faire : portions du même lot, au même moment, repères de région goûtés avant de juger (proposition « Goût », section 6, point 2)'
+- quatre crans et repères provisoires (choix de relecture (2026-10-20), série 78 bis), à caler avant E1 sur les échelles standard du profil de texture (aliments non lus)
+- définitions détaillées des paramètres de la TPA (Bourne, 1978) à vérifier sur le texte
+bloque_par: []
+a_relire:
+- label_fr
+- label_en
+- label_court
+- labels_alternatifs
+- labels_alternatifs_en
+- note_label_alternatif
+- strate
+- définition
+- question_attentionnelle
+- contre_exemple
+- grandeur_physique_homonyme
+- mesure
+- mode_de_presentation
+- conditions_critiques
+- conditions_fixees
+- note_conditions
+- porteur
+- note_porteur
+- condition_NA
+- espace_valeurs
+- note_echelle
+- identite
+- relations
+- references
+- etat_de_l_art
+- nanay
+- transfert
+- enonces_testables
+- statut_note
+remarque:
+- 'série 78 bis (choix de relecture (2026-10-20), corrections de relecture) : « tendre » retiré des labels alternatifs (note_label_alternatif) ; crans et repères provisoires (note_echelle, manques) ; phase
+  fixée par la définition (note_conditions) ; labels EN « noticeable force », « a lot of force » ; à relire'
+- 'série 78 ter (choix de relecture (2026-10-20), conditions fixées) : champ `conditions_fixees` rempli (`moment: firstBite`, PPP_FicheType.md, spec §9.7 H, règle 12) ; à relire'
+- 'série 78 quater (choix de relecture (2026-10-20), retouches de relecture) : note_conditions : « le contrôle la refusera (contrôle à écrire) » ; à relire'
+relecture_explicative:
+  date: null
+  champs: []
+  a_reconfirmer: []

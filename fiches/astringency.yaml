@@ -1,0 +1,268 @@
+# Fiche de type PPP — ppp:astringency — format : PPP_FicheType.md (spec v2.8)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_base, note_porteur, note_echelle, note_label_alternatif, mesure (rubrique proposée en série 53, docs/proposition-rubrique-mesure.md).
+# Série 78 (2026-10-20) : fiche en préparation de la famille « Goût (en bouche) », rédigée sans exemplaire à partir de la proposition « Goût » ; aucun champ n’est encore relu.
+id: ppp:astringency
+label_fr: astringence
+label_en: astringency
+labels_alternatifs: []
+labels_alternatifs_en: []
+note_label_alternatif: '« sec » est écarté des labels : un biscuit sec manque d’eau (texture), un vin « sec » au sens courant est peu sucré (saveur) ; seul un vin qui « assèche » la bouche est astringent
+  (proposition « Goût », 2.7).'
+patron: P1
+sorte: qualité
+sous_sorte: —
+strate: formel
+base_dependance:
+  types: []
+  facteurs_non_perceptuels: []
+facettes:
+- gout
+définition: 'La force avec laquelle la bouche se sèche, râpe ou se resserre après avoir goûté une portion du produit (vin tannique, thé fort) : un toucher en bouche, et non une saveur.'
+question_attentionnelle: Après la gorgée ou la bouchée, la bouche se sèche-t-elle, râpe-t-elle, se resserre-t-elle ? À peine, nettement, ou fortement ?
+contre_exemple: 'Ce n’est pas l’amer : l’astringence se sent même entre la gencive et la lèvre, où il n’y a pas de papilles. Ce n’est pas une texture : la texture est une résistance de la bouchée quand
+  on la mâche ; l’astringence est un état de la bouche, qui reste après que l’aliment est parti et s’accumule d’une gorgée à l’autre. « Ce thé est nettement astringent, et c’est un défaut » se dit comme
+  « …et c’est une qualité ».'
+grandeur_physique_homonyme: 'la teneur en polyphénols totaux (« tanins ») d’un thé ou d’un vin [[iso14502_1]] : une composition, pas l’astringence perçue ; aucune région ne s’en déduit. Voir la rubrique
+  « mesure ».'
+mesure:
+  etat: methodes
+  synthese: 'Une mesure associée indirecte existe pour le thé seulement : les polyphénols totaux par la méthode au réactif de Folin-Ciocalteu (ISO 14502-1). Les polyphénols totaux ne sont pas l’astringence
+    perçue. Les mesures physiques (frottement, précipitation des protéines salivaires) sont citées par une revue, mais non lues. Aucune méthode proche n’est connue (recherche du 2026-10-19).'
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes:
+  - id: iso14502_1
+    nom: polyphénols totaux du thé, méthode colorimétrique au réactif de Folin-Ciocalteu (ISO 14502-1:2005)
+    grandeur: absorbance à 765 nm
+    unite_ou_echelle: équivalent acide gallique, en % de la matière sèche
+    references:
+    - iso14502_1
+    proximite: indirecte
+    ecart: les polyphénols totaux ne sont pas l’astringence perçue ; le réactif répond à un large éventail de composés, avec des réponses variables (la norme le dit) ; thé seulement (feuilles et thé instantané,
+      vert et noir)
+    conditions: celles de la norme
+    statut_lecture: 'extraits (aperçu public : domaine, principe, réactifs ; page de l’ISO : confirmée en 2025)'
+  non_retenues:
+  - nom: méthode temps-intensité (ASTM E1909-24) et TDS
+    references:
+    - astm_e1909
+    - lee_lawless1991
+    - pineau2009
+    raison: jugements d’un jury sans référence physique ; à reprendre dans le protocole de l’épreuve d’accord (E1) ; le guide ASTM suit une seule sensation après une seule prise, ce qui exclut les prises
+      répétées
+    statut_lecture: extrait d’index (page de l’ASTM) ; résumés (Lee et Lawless, 1991 ; Pineau et al., 2009)
+  - nom: mesures physiques (frottement, précipitation des protéines salivaires)
+    references:
+    - bajec2008
+    raison: 'citées par une revue, non lues : non vérifié'
+    statut_lecture: non vérifié (revue lue en résumé seulement)
+modalites:
+- bouche
+mode_de_presentation: échantillon
+conditions_critiques:
+- avant
+note_conditions: 'règle 12 (spec §9.7 H) : `avant` est critique, parce que l’astringence s’accumule d’une gorgée à l’autre (Green, 1993 [[green1993astr]]) ; on suit l’ordre des gorgées avec cette facette.
+  `moment` n’est pas critique (proposition « Goût », 5.1). `nez` n’est pas critique (ce n’est pas une saveur) ; `temperature_bouchee` est à éprouver. `duree` : les sous-qualités se notent pendant cinq à
+  six minutes et décroissent à peu près de façon exponentielle (Lee et Lawless, 1991 [[lee_lawless1991]]) : le temps entre la prise et le jugement est déclaré. La salive va en note d’épisode.'
+porteur: le produit identifié dont on goûte une portion (nature, origine, lot, date de production ou d’ouverture, conservation, concentration pour une boisson préparée) ; la portion goûtée n’est pas le
+  porteur
+note_porteur: même porteur que les types de saveur (proposition « Goût », section 6 ; choix de relecture du 2026-10-19, 8.1 point 4), bien que l’astringence soit un toucher et qu’elle se sente sur la bouche
+  elle-même.
+arité: 1
+condition_NA: 'objet non destiné à la bouche (un cuir, un bois verni, un métal : ce n’est ni sûr ni reproductible) ; produit qu’on ne goûte pas (photo, description) : une photo ne compte jamais'
+espace_valeurs:
+  echelle: ordinale
+  sens_croissant: de `none` (rang 1) vers `strong` (rang 4), la bouche se sèche, râpe ou se resserre de plus en plus
+  numerique: non
+  regions:
+  - cle: none
+    label_fr: aucune
+    label_en: none
+    rang: 1
+    repere: 'de l’eau neutre : la bouche reste comme avant'
+    exemplaires: []
+  - cle: faint
+    label_fr: à peine perceptible
+    label_en: faint
+    rang: 2
+    repere: aucun repère fixé (à choisir avant l’épreuve, par dilution de la solution d’alun du cran « nette » ?)
+    exemplaires: []
+  - cle: distinct
+    label_fr: nette
+    label_en: distinct
+    rang: 3
+    repere: une solution d’alun à 1 g/l, matériau de référence peu amer et peu acide mais nettement asséchant (cran provisoire, à caler avant E1 ; « forte » reste possible)
+    exemplaires: []
+  - cle: strong
+    label_fr: forte
+    label_en: strong
+    rang: 4
+    repere: aucun repère fixé (à choisir avant l’épreuve)
+    exemplaires: []
+note_echelle: 'quatre régions, comme pour l’amer, au féminin (proposition « Goût », 2.4). ISO 3972 ne donne pas de solution pour l’astringence ; le repère proposé est l’alun à 1 g/l, recommandé comme matériau
+  de référence (Lee et Lawless, 1991 [[lee_lawless1991]] ; décision 5 de l’éditeur du projet, 2026-10-19). Le cran « nette » est un choix de relecture provisoire (2026-10-20), à caler avant E1 : le résumé
+  de la source dit que l’alun à 1 g/l produit des sensations « pronounced » (asséchantes, râpeuses, qui resserrent la bouche), si bien que le cran « forte » reste possible (choix de relecture (2026-10-20),
+  série 78 bis). Plusieurs sous-qualités (sécheresse, râpeux, bouche qui se resserre) sont réunies ici ; un deuxième lot pourrait les séparer si l’épreuve E1 ne passe pas.'
+identite: 'La force avec laquelle la bouche elle-même se sèche, râpe ou se resserre, état cumulatif qui reste après la gorgée ; pas une saveur (amer, acide en réserve), pas une texture de la bouchée (dureté
+  en bouche, épaisseur en bouche : une résistance à la mastication), pas la longueur (une durée de trace), pas l’agrément.'
+relations: []
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: breslin1993
+  citation: Breslin, P. A. S., Gilmore, M. M., Beauchamp, G. K. & Green, B. G. (1993). Psychophysical evidence that oral astringency is a tactile sensation. Chemical Senses, 18(4), 405–417.
+  doi_ou_url: https://doi.org/10.1093/chemse/18.4.405
+  role: fonde
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: 'l’astringence se sent entre la gencive et la lèvre, sans papilles, et diminue quand on lubrifie la bouche : c’est surtout un toucher'
+  ne_reprend_pas: les protocoles détaillés
+- id: green1993astr
+  citation: 'Green, B. G. (1993). Oral astringency: A tactile component of flavor. Acta Psychologica, 84(1), 119–125.'
+  doi_ou_url: https://doi.org/10.1016/0001-6918(93)90078-6
+  role: fonde
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: l’astringence vient d’une hausse du frottement (les protéines de la salive précipitent) et s’accumule d’une gorgée à l’autre
+  ne_reprend_pas: le mécanisme détaillé
+- id: lee_lawless1991
+  citation: Lee, C. B. & Lawless, H. T. (1991). Time-course of astringent sensations. Chemical Senses, 16(3), 225–238.
+  doi_ou_url: https://doi.org/10.1093/chemse/16.3.225
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé (dont l’alun à 1 g/l comme matériau de référence) ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: plusieurs sous-qualités (sécheresse, râpeux, bouche qui se resserre), qui décroissent en cinq à six minutes ; l’alun à 1 g/l comme matériau de référence
+  ne_reprend_pas: les courbes temps-intensité comme mesure
+- id: bajec2008
+  citation: 'Bajec, M. R. & Pickering, G. J. (2008). Astringency: Mechanisms and perception. Critical Reviews in Food Science and Nutrition, 48(9), 858–875.'
+  doi_ou_url: https://doi.org/10.1080/10408390701724223
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé ; texte non lu (les mesures physiques qu’il cite ne sont pas lues) (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: la revue des mécanismes et de la perception de l’astringence, méthodes de mesure comprises
+  ne_reprend_pas: les mesures physiques qu’elle cite (non lues)
+- id: fontoin2008
+  citation: Fontoin, H., Saucier, C., Teissedre, P.-L. & Glories, Y. (2008). Effect of pH, ethanol and acidity on astringency and bitterness of grape seed tannin oligomers in model wine solution. Food Quality
+    and Preference, 19(3), 286–291.
+  doi_ou_url: https://doi.org/10.1016/j.foodqual.2007.08.004
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: l’éthanol et le pH changent l’astringence et l’amertume des tanins dans un vin modèle
+  ne_reprend_pas: les valeurs mesurées
+- id: iso14502_1
+  citation: 'ISO 14502-1:2005. Determination of substances characteristic of green and black tea — Part 1: Content of total polyphenols in tea — Colorimetric method using Folin-Ciocalteu reagent. ISO.'
+  doi_ou_url: https://www.iso.org/standard/31356.html
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: 'extraits : aperçu public (domaine, principe, réactifs) ; confirmée en 2025 (statut repris de docs/bibliographie-par-type.md#groupe-gout)'
+  reprend: les polyphénols totaux du thé, mesure associée indirecte
+  ne_reprend_pas: toute borne de région
+- id: astm_e1909
+  citation: ASTM E1909-24. Standard Guide for Time-Intensity Evaluation of Sensory Attributes. ASTM International.
+  doi_ou_url: https://doi.org/10.1520/E1909-24
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: 'extrait d’index (page de l’ASTM : une seule sensation, suivie après une seule prise) ; texte payant non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)'
+  reprend: la méthode temps-intensité, un jugement de jury, non retenue comme mesure
+  ne_reprend_pas: le protocole
+- id: pineau2009
+  citation: 'Pineau, N., Schlich, P., Cordelle, S. et al. (2009). Temporal Dominance of Sensations: Construction of the TDS curves and comparison with time–intensity. Food Quality and Preference, 20(6),
+    450–455.'
+  doi_ou_url: https://doi.org/10.1016/j.foodqual.2009.04.005
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: résumé et extraits de l’introduction (ScienceDirect) ; définition complète de l’attribut dominant connue par source secondaire (Visalli et Galmarini, 2024) (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: la TDS, un jugement de jury, non retenue comme mesure
+  ne_reprend_pas: la construction des courbes
+etat_de_l_art: 'L’astringence se sent même entre la gencive et la lèvre, où il n’y a pas de papilles, et diminue quand on lubrifie la bouche : c’est surtout un toucher (Breslin et al., 1993 [[breslin1993]]).
+  Green (1993) [[green1993astr]] l’attribue à une hausse du frottement, quand les protéines de la salive précipitent ; elle s’accumule d’une gorgée à l’autre. Lee et Lawless (1991) [[lee_lawless1991]] y
+  distinguent plusieurs sous-qualités, notées pendant cinq à six minutes, et recommandent l’alun à 1 g/l comme matériau de référence ; Bajec et Pickering (2008) [[bajec2008]] en font la revue. Dans un vin
+  modèle, l’éthanol et le pH changent l’astringence (Fontoin et al., 2008 [[fontoin2008]]). La seule mesure associée trouvée, ISO 14502-1:2005 [[iso14502_1]], porte sur les polyphénols du thé ; le temps-intensité
+  (ASTM E1909-24 [[astm_e1909]]) et la TDS (Pineau et al., 2009 [[pineau2009]]) sont des jugements de jury. Aucune source lue ne teste l’accord entre observateurs sur des crans d’astringence. Détail : docs/bibliographie-par-type.md#groupe-gout.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-gout
+axiomes:
+- conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
+  validation: Toute assertion de type ppp:astringency a exactement un ppp:about.
+- conceptuel: Les 4 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 4 ppp:Region de l’échelle du type ont des ppp:rank distincts, de 1 à 4 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Une région de cet espace n’est pas un sous-type du type.
+  validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
+nanay: Oui — passer de « je bois ce thé » à « je regarde si ma bouche se sèche ou râpe » change la description (on suit l’état de la bouche après la gorgée, et non ce qu’on goûte).
+transfert: objet conçu oui (une boisson, une infusion, un vin) | tableau non | cuisine oui (vin rouge jeune, thé fort, kaki pas mûr) | high-tech non | architecture non
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: 'sur 6 à 10 produits identifiés (portions du même lot, au même moment), accord inter-observateurs à une région près, au-dessus du seuil fixé avant l’épreuve, à conditions critiques égales (`avant`
+    : première prise ou après rinçage ; spec §9.7 H, règle 12), la solution d’alun de référence goûtée avant de juger, à temps égal après la prise'
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les produits (ceux qui aiment et ceux qui n’aiment pas)
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2
+statut: candidat
+statut_note: 'en préparation (2026-10-20) : fiche créée en série 78, sans exemplaire ni épreuve d’accord ; tous les champs rédigés sont à relire'
+statut_epistemique: non éprouvé
+introduit_en: '2.8'
+modifie_en: []
+remplace_par: []
+source_de_la_fiche: 'création du type : décision de l’éditeur du projet (2026-10-19, décision 5a ; 2026-10-20, série 76, premier lot, proposition « Goût », 2.2 à 2.4 et 8.2) ; famille « Goût (en bouche)
+  » : décision de l’éditeur du projet (2026-10-19, décision 1) ; contenu repris de la proposition « Goût » (docs/famille-gout-proposition.md (document de travail, non publié), sections 2, 5, 6 et 7) ; le
+  reste (porteur, crans, repères, facettes critiques, classement des mesures, rédaction) : choix de relecture (2026-10-19 et 2026-10-20) ; fiche créée le 2026-10-20 (série 78)'
+manques:
+- 'exemplaires : aucun. Décision 5 de l’éditeur du projet (2026-10-19) : pas d’exemplaire en V1 pour le goût, des repères de région à la place. Si des exemples sont cherchés plus tard, ce seront des objets
+  publics seulement (produits identifiés, sans marque citée), jamais des objets privés'
+- 'épreuve d’accord E1 à faire : portions du même lot, au même moment, repères de région goûtés avant de juger (proposition « Goût », section 6, point 2)'
+- 'repères des crans « à peine perceptible » et « forte » ; cran de l’alun à 1 g/l provisoire (« nette »), à caler avant E1 : la source dit « pronounced », « forte » reste possible (choix de relecture (2026-10-20),
+  série 78 bis)'
+- 'mesures physiques de l’astringence (frottement, précipitation des protéines salivaires) : non lues'
+bloque_par: []
+a_relire:
+- label_fr
+- label_en
+- labels_alternatifs
+- labels_alternatifs_en
+- note_label_alternatif
+- strate
+- définition
+- question_attentionnelle
+- contre_exemple
+- grandeur_physique_homonyme
+- mesure
+- mode_de_presentation
+- conditions_critiques
+- note_conditions
+- porteur
+- note_porteur
+- condition_NA
+- espace_valeurs
+- note_echelle
+- identite
+- relations
+- references
+- etat_de_l_art
+- nanay
+- transfert
+- enonces_testables
+- statut_note
+remarque:
+- 'série 78 bis (choix de relecture (2026-10-20), corrections de relecture) : cran « nette » de l’alun provisoire, « forte » possible (repère, note_echelle, manques) ; à relire'
+relecture_explicative:
+  date: null
+  champs: []
+  a_reconfirmer: []

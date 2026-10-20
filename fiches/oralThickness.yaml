@@ -1,0 +1,328 @@
+# Fiche de type PPP — ppp:oralThickness — format : PPP_FicheType.md (spec v2.8)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_base, note_porteur, note_echelle, note_label_alternatif, mesure (rubrique proposée en série 53, docs/proposition-rubrique-mesure.md).
+# Série 78 (2026-10-20) : fiche en préparation de la famille « Goût (en bouche) », rédigée sans exemplaire à partir de la proposition « Goût » ; aucun champ n’est encore relu.
+id: ppp:oralThickness
+label_fr: épaisseur en bouche
+label_en: thickness in the mouth
+label_court: épaisseur
+labels_alternatifs: []
+labels_alternatifs_en: []
+patron: P1
+sorte: qualité
+sous_sorte: —
+strate: formel
+base_dependance:
+  types: []
+  facteurs_non_perceptuels: []
+facettes:
+- gout
+définition: 'La résistance qu’oppose la gorgée ou la bouchée quand on la fait passer entre la langue et le palais, à la première mise en bouche (moment `firstContact`) : de ce qui coule comme l’eau à ce
+  qui résiste fortement. Un toucher en bouche.'
+question_attentionnelle: Quelle résistance la gorgée ou la bouchée oppose-t-elle quand on la fait passer entre la langue et le palais ? Aucune, un peu, nettement, ou beaucoup ?
+contre_exemple: 'Ce n’est pas l’onctueux, un mélange d’épaisseur, de lisse et de gras. Un même velouté paraît moins épais chaud que tiède : la température se déclare. Ce n’est pas l’astringence : un thé
+  fort peut être fluide et assécher la bouche. « Ce yaourt est très épais, et c’est un défaut » se dit comme « …et c’est une qualité ».'
+grandeur_physique_homonyme: 'viscosité (en pascals-seconde) : une grandeur de rhéologie, qui relève de la rubrique « mesure » ; aucune région ne s’en déduit.'
+mesure:
+  etat: methodes
+  synthese: 'Une mesure associée proche existe : la viscosité au rhéomètre, à une vitesse de cisaillement choisie pour la perception de l’épaisseur. Aucune vitesse unique ne vaut pour tous les aliments,
+    et la mesure ne saisit ni la salive, ni la chaleur de la bouche, ni le passage en couche mince. L’échelle standard de viscosité du profil de texture sert de repère de région, pas de mesure (recherche
+    du 2026-10-19).'
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes:
+  - id: viscosite_cisaillement
+    nom: viscosité au rhéomètre, à une vitesse de cisaillement déclarée
+    grandeur: la viscosité
+    unite_ou_echelle: pascal-seconde (Pa·s), à une vitesse de cisaillement donnée (s⁻¹)
+    references:
+    - van_vliet2002
+    - shama_sherman1973
+    - kokini1977
+    - stokes2013
+    proximite: proche
+    ecart: proche quand la vitesse est choisie pour la perception de l’épaisseur (Wood, 1968, par source secondaire) ; aucune vitesse unique ne vaut pour tous les aliments (de 0,1 à 1 000 s⁻¹ selon l’aliment)
+      ; la mesure ne saisit ni la salive, ni la chaleur de la bouche, ni le passage en couche mince, ni les particules
+    conditions: température de l’échantillon et vitesse de cisaillement à déclarer
+    statut_lecture: 'résumés (Shama et Sherman, 1973 ; Kokini et al., 1977 ; Stokes et al., 2013) ; Wood (1968) : source secondaire ; van Vliet (2002) : extraits, à relire sur le texte'
+  non_retenues:
+  - nom: échelle standard de viscosité du profil de texture
+    references:
+    - szczesniak_brandt_friedman1963
+    raison: échelle de jugement ancrée par des aliments de référence, dont les crans sont fixés par un jury et non par une grandeur physique ; à reprendre comme repères de région dans le protocole de l’épreuve
+      d’accord (E1)
+    statut_lecture: résumé
+  - nom: TPA pour les liquides
+    references:
+    - nishinari2013
+    raison: les auteurs mettent en garde contre l’usage des paramètres de la TPA pour les aliments liquides
+    statut_lecture: résumé
+  - nom: méthode temps-intensité (ASTM E1909-24) et TDS
+    references:
+    - astm_e1909
+    - pineau2009
+    - lenfant2009
+    raison: jugements d’un jury sans référence physique ; à reprendre dans le protocole de l’épreuve d’accord (E1)
+    statut_lecture: extrait d’index (page de l’ASTM) ; résumés (Pineau et al., 2009 ; Lenfant et al., 2009)
+modalites:
+- bouche
+mode_de_presentation: échantillon
+conditions_critiques:
+- moment
+- temperature_bouchee
+conditions_fixees:
+  moment: firstContact
+note_conditions: 'règle 12 (spec §9.7 H) : `moment` est critique pour les types de texture ; la définition fixe `firstContact` (la première mise en bouche, avant de mâcher) : une assertion faite à une autre
+  phase que celle que fixe la définition est invalide pour ce type, et le contrôle la refusera (contrôle à écrire) ; l’observation reste en note d’épisode. `unknown` est accepté, mais exclu de E1 (choix
+  de relecture (2026-10-20), série 78 bis). `temperature_bouchee` est critique : l’épaisseur perçue baisse quand le produit est plus chaud (Engelen et al., 2003 [[engelen2003]], produits à 10, 22 et 35
+  °C). `nez` n’est pas critique ; `avant` est à éprouver. La taille de la gorgée va dans l’épisode, sans facette ; la salive est une note d’épisode (seuls les premiers temps se prédisent sans elle : Stokes
+  et al., 2013 [[stokes2013]]).'
+porteur: la gorgée ou la bouchée (la portion en bouche) d’un produit identifié, à la première mise en bouche
+note_porteur: 'porteur des types de texture : la bouchée ou la gorgée (choix de relecture, 2026-10-20 ; proposition « Goût », 2.7) ; il change pendant qu’on le juge (salive, chaleur, mastication), d’où
+  la facette `moment`. L’objet du registre reste le produit identifié ; la portion en est la partie jugée (§9.7 I).'
+arité: 1
+condition_NA: 'solide qu’on mord et qu’on mâche, sans le faire passer en couche entre la langue et le palais (un biscuit sec, une noix) ; objet non destiné à la bouche (un cuir, un bois verni, un métal
+  : ce n’est ni sûr ni reproductible) ; produit qu’on ne goûte pas (photo, description) : une photo ne compte jamais'
+espace_valeurs:
+  echelle: ordinale
+  sens_croissant: de `waterThin` (rang 1) vers `veryThick` (rang 4), la portion résiste de plus en plus entre la langue et le palais
+  numerique: non
+  regions:
+  - cle: waterThin
+    label_fr: fluide comme l’eau
+    label_en: thin as water
+    rang: 1
+    repere: de l’eau, à la température déclarée
+    exemplaires: []
+  - cle: slightlyThick
+    label_fr: un peu épais
+    label_en: slightly thick
+    rang: 2
+    repere: un lait entier, un jus de fruit avec pulpe
+    exemplaires: []
+  - cle: thick
+    label_fr: épais
+    label_en: thick
+    rang: 3
+    repere: une crème anglaise, un yaourt à boire
+    exemplaires: []
+  - cle: veryThick
+    label_fr: très épais
+    label_en: very thick
+    rang: 4
+    repere: un miel, une purée lisse
+    exemplaires: []
+note_echelle: quatre régions, écrites avec la fiche (la proposition « Goût », 2.7, les laissait à écrire). Les quatre crans et leurs repères sont des choix de relecture provisoires (2026-10-20, série 78
+  bis), à caler avant E1 sur les échelles standard du profil de texture, ici l’échelle standard de viscosité (Szczesniak, Brandt et Friedman, 1963 [[szczesniak_brandt_friedman1963]]), dont les aliments
+  de référence n’ont pas été lus. Les repères sont des produits courants, sans marque, et non des exemplaires (décision 5 de l’éditeur du projet, 2026-10-19) ; ils se goûtent à la même température.
+identite: La résistance de la portion entre la langue et le palais, à la première mise en bouche ; pas l’onctueux (un terme composite, en réserve, qui n’entrerait que décomposé), pas le lisse ni la glisse
+  (des pistes notées), pas la dureté au premier coup de dent (dureté en bouche), pas l’astringence (un état de la bouche), pas le collant (en lot suivant).
+relations: []
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: kokini1977
+  citation: Kokini, J. L., Kadane, J. B. & Cussler, E. L. (1977). Liquid texture perceived in the mouth. Journal of Texture Studies, 8(2), 195–218.
+  doi_ou_url: https://doi.org/10.1111/j.1745-4603.1977.tb01175.x
+  role: fonde
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: l’épaisseur est l’un des trois attributs auxquels se réduisent dix attributs des liquides, liée à la force visqueuse entre la langue et le palais
+  ne_reprend_pas: le lisse et la glisse
+- id: iso11036
+  citation: ISO 11036:2020. Sensory analysis — Methodology — Texture profile (2e éd.). ISO.
+  doi_ou_url: https://www.iso.org/standard/76668.html
+  role: fonde
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: 'extraits : aperçu public (3.1, 6.1, 6.2.1, tableau 1, 6.2.3.2, 6.2.3.3, 6.2.4.1) ; 6.4 et annexe A non lues (statut repris de docs/bibliographie-par-type.md#groupe-gout)'
+  reprend: 'tableau 1 : la viscosité, force pour tirer un liquide d’une cuillère sur la langue ; 6.1 : l’ordre d’apparition'
+  ne_reprend_pas: les échelles de produits de référence (non lues)
+- id: shama_sherman1973
+  citation: Shama, F. & Sherman, P. (1973). Identification of stimuli controlling the sensory evaluation of viscosity. II. Oral methods. Journal of Texture Studies, 4(1), 111–118.
+  doi_ou_url: https://doi.org/10.1111/j.1745-4603.1973.tb00657.x
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: le stimulus de la viscosité jugée en bouche va de 0,1 à 1 000 s⁻¹ selon l’aliment
+  ne_reprend_pas: les méthodes orales détaillées
+- id: van_vliet2002
+  citation: van Vliet, T. (2002). On the relation between texture perception and fundamental mechanical parameters for liquids and time dependent solids. Food Quality and Preference, 13(4), 227–236.
+  doi_ou_url: https://doi.org/10.1016/S0950-3293(01)00044-1
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: extraits (passage sur Wood, 1968, dont la monographie n’est connue que par cette source secondaire ; à relire sur le texte) (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: le passage sur Wood (1968), qui associe l’épaisseur perçue à une vitesse de cisaillement choisie (source secondaire)
+  ne_reprend_pas: le reste de l’article ; la monographie de Wood (non consultée)
+- id: engelen2003
+  citation: Engelen, L., de Wijk, R. A., Prinz, J. F., Janssen, A. M., Weenen, H. & Bosman, F. (2003). The effect of oral and product temperature on the perception of flavor and texture attributes of semi-solids.
+    Appetite, 41(3), 273–281.
+  doi_ou_url: https://doi.org/10.1016/S0195-6663(03)00105-3
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé (produits à 10, 22 et 35 °C) ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: l’épaisseur perçue baisse quand le produit est plus chaud (facette `temperature_bouchee`)
+  ne_reprend_pas: les autres attributs étudiés
+- id: stokes2013
+  citation: 'Stokes, J. R., Boehm, M. W. & Baier, S. K. (2013). Oral processing, texture and mouthfeel: from rheology to tribology and beyond. Current Opinion in Colloid & Interface Science, 18(4), 349–359.'
+  doi_ou_url: https://doi.org/10.1016/j.cocis.2013.04.010
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: la rhéologie ne saisit que le début de la bouchée, ni la salive ni le passage en couche mince
+  ne_reprend_pas: la tribologie
+- id: hutchings1988
+  citation: Hutchings, J. B. & Lillford, P. J. (1988). The perception of food texture — the philosophy of the breakdown path. Journal of Texture Studies, 19(2), 103–115.
+  doi_ou_url: https://doi.org/10.1111/j.1745-4603.1988.tb00928.x
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: 'la texture est un suivi dynamique de la bouchée : d’où la facette `moment`'
+  ne_reprend_pas: les trois axes du modèle
+- id: kilcast_clegg2002
+  citation: Kilcast, D. & Clegg, S. (2002). Sensory perception of creaminess and its relationship with food structure. Food Quality and Preference, 13(7–8), 609–623.
+  doi_ou_url: https://doi.org/10.1016/S0950-3293(02)00074-5
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: 'l’onctuosité est un attribut complexe : elle n’est pas l’épaisseur'
+  ne_reprend_pas: les mesures de structure
+- id: szczesniak_brandt_friedman1963
+  citation: Szczesniak, A. S., Brandt, M. A. & Friedman, H. H. (1963). Development of standard rating scales for mechanical parameters of texture and correlation between the objective and the sensory methods
+    of texture evaluation. Journal of Food Science, 28(4), 397–403.
+  doi_ou_url: https://doi.org/10.1111/j.1365-2621.1963.tb00217.x
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: l’échelle standard de viscosité, faite d’aliments de référence (repères, pas mesure)
+  ne_reprend_pas: les aliments de l’échelle (non lus)
+- id: nishinari2013
+  citation: Nishinari, K., Kohyama, K., Kumagai, H., Funami, T. & Bourne, M. C. (2013). Parameters of texture profile analysis. Food Science and Technology Research, 19(3), 519–521.
+  doi_ou_url: https://doi.org/10.3136/fstr.19.519
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: la mise en garde contre l’usage de la TPA pour les liquides
+  ne_reprend_pas: les définitions des paramètres
+- id: astm_e1909
+  citation: ASTM E1909-24. Standard Guide for Time-Intensity Evaluation of Sensory Attributes. ASTM International.
+  doi_ou_url: https://doi.org/10.1520/E1909-24
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: 'extrait d’index (page de l’ASTM : une seule sensation, suivie après une seule prise) ; texte payant non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)'
+  reprend: la méthode temps-intensité, un jugement de jury, non retenue comme mesure
+  ne_reprend_pas: le protocole
+- id: pineau2009
+  citation: 'Pineau, N., Schlich, P., Cordelle, S. et al. (2009). Temporal Dominance of Sensations: Construction of the TDS curves and comparison with time–intensity. Food Quality and Preference, 20(6),
+    450–455.'
+  doi_ou_url: https://doi.org/10.1016/j.foodqual.2009.04.005
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: résumé et extraits de l’introduction (ScienceDirect) ; définition complète de l’attribut dominant connue par source secondaire (Visalli et Galmarini, 2024) (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: la TDS, un jugement de jury, non retenue comme mesure
+  ne_reprend_pas: la construction des courbes
+- id: lenfant2009
+  citation: Lenfant, F., Loret, C., Pineau, N., Hartmann, C. & Martin, N. (2009). Perception of oral food breakdown. The concept of sensory trajectory. Appetite, 52(3), 659–667.
+  doi_ou_url: https://doi.org/10.1016/j.appet.2009.03.003
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: 'la trajectoire de texture vue par la TDS : un jugement de jury, sans référence physique'
+  ne_reprend_pas: les résultats sur les céréales
+etat_de_l_art: 'Kokini et al. (1977) [[kokini1977]] réduisent dix attributs des liquides à trois, dont l’épaisseur, liée à la force visqueuse entre la langue et le palais ; ISO 11036:2020 [[iso11036]] définit
+  la viscosité par la force pour tirer un liquide d’une cuillère sur la langue. Le stimulus de la viscosité jugée en bouche va de 0,1 à 1 000 s⁻¹ selon l’aliment (Shama et Sherman, 1973 [[shama_sherman1973]])
+  ; Wood (1968), connu par van Vliet (2002) [[van_vliet2002]], associe l’épaisseur perçue à une vitesse de cisaillement choisie. L’épaisseur perçue baisse quand le produit est plus chaud (Engelen et al.,
+  2003 [[engelen2003]]), et la rhéologie ne saisit ni la salive ni le passage en couche mince (Stokes et al., 2013 [[stokes2013]]). L’onctuosité est un attribut complexe, distinct (Kilcast et Clegg, 2002
+  [[kilcast_clegg2002]]). Une échelle standard de viscosité, faite d’aliments de référence, existe (Szczesniak, Brandt et Friedman, 1963 [[szczesniak_brandt_friedman1963]]) ; la TPA est déconseillée pour
+  les liquides (Nishinari et al., 2013 [[nishinari2013]]). Aucune source lue ne teste l’accord entre observateurs non entraînés sur des crans d’épaisseur. Détail : docs/bibliographie-par-type.md#groupe-gout.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-gout
+axiomes:
+- conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
+  validation: Toute assertion de type ppp:oralThickness a exactement un ppp:about.
+- conceptuel: Les 4 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 4 ppp:Region de l’échelle du type ont des ppp:rank distincts, de 1 à 4 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Une région de cet espace n’est pas un sous-type du type.
+  validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
+nanay: Oui — passer de « je bois ce velouté » à « je regarde comment il résiste entre ma langue et mon palais » change la description (on suit le passage en bouche, pas la saveur).
+transfert: objet conçu oui (une boisson, une sauce, un dessert) | tableau non | cuisine oui (soupe, sauce, crème, sirop) | high-tech non | architecture non
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: sur 6 à 10 produits identifiés (gorgées du même lot, de même volume, au même moment), accord inter-observateurs à une région près, au-dessus du seuil fixé avant l’épreuve, à `moment` = `firstContact`
+    et `temperature_bouchee` égale (spec §9.7 H, règle 12), les produits repères goûtés avant de juger
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les produits (ceux qui aiment et ceux qui n’aiment pas)
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2
+statut: candidat
+statut_note: 'en préparation (2026-10-20) : fiche créée en série 78, sans exemplaire ni épreuve d’accord ; tous les champs rédigés sont à relire'
+statut_epistemique: non éprouvé
+introduit_en: '2.8'
+modifie_en: []
+remplace_par: []
+source_de_la_fiche: 'création du type : décision de l’éditeur du projet (2026-10-19, décision 3b ; 2026-10-20, série 76, premier lot, proposition « Goût », 2.7 et 8.2) ; famille « Goût (en bouche) » : décision
+  de l’éditeur du projet (2026-10-19, décision 1) ; contenu repris de la proposition « Goût » (docs/famille-gout-proposition.md (document de travail, non publié), sections 2, 5, 6 et 7) ; le reste (porteur,
+  crans, repères, facettes critiques, classement des mesures, rédaction) : choix de relecture (2026-10-19 et 2026-10-20) ; fiche créée le 2026-10-20 (série 78)'
+manques:
+- 'exemplaires : aucun. Décision 5 de l’éditeur du projet (2026-10-19) : pas d’exemplaire en V1 pour le goût, des repères de région à la place. Si des exemples sont cherchés plus tard, ce seront des objets
+  publics seulement (produits identifiés, sans marque citée), jamais des objets privés'
+- 'épreuve d’accord E1 à faire : portions du même lot, au même moment, repères de région goûtés avant de juger (proposition « Goût », section 6, point 2)'
+- quatre crans et repères provisoires (choix de relecture (2026-10-20), série 78 bis), à caler avant E1 sur les échelles standard du profil de texture (aliments non lus) ; passage sur Wood (1968) à relire
+  sur le texte de van Vliet (2002)
+bloque_par: []
+a_relire:
+- label_fr
+- label_en
+- label_court
+- labels_alternatifs
+- labels_alternatifs_en
+- strate
+- définition
+- question_attentionnelle
+- contre_exemple
+- grandeur_physique_homonyme
+- mesure
+- mode_de_presentation
+- conditions_critiques
+- conditions_fixees
+- note_conditions
+- porteur
+- note_porteur
+- condition_NA
+- espace_valeurs
+- note_echelle
+- identite
+- relations
+- references
+- etat_de_l_art
+- nanay
+- transfert
+- enonces_testables
+- statut_note
+remarque:
+- 'série 78 bis (choix de relecture (2026-10-20), corrections de relecture) : crans et repères provisoires (note_echelle, manques) ; phase fixée par la définition (note_conditions) ; à relire'
+- 'série 78 ter (choix de relecture (2026-10-20), conditions fixées) : champ `conditions_fixees` rempli (`moment: firstContact`, PPP_FicheType.md, spec §9.7 H, règle 12) ; à relire'
+- 'série 78 quater (choix de relecture (2026-10-20), retouches de relecture) : note_conditions : « le contrôle la refusera (contrôle à écrire) » ; à relire'
+relecture_explicative:
+  date: null
+  champs: []
+  a_reconfirmer: []

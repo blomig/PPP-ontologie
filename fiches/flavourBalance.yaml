@@ -1,0 +1,430 @@
+# Fiche de type PPP — ppp:flavourBalance — format : PPP_FicheType.md (spec v2.8)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_base, note_porteur, note_echelle, note_label_alternatif, mesure (rubrique proposée en série 53, docs/proposition-rubrique-mesure.md).
+# Série 78 (2026-10-20) : fiche en préparation de la famille « Goût (en bouche) », rédigée sans exemplaire à partir de la proposition « Goût » ; aucun champ n’est encore relu.
+id: ppp:flavourBalance
+label_fr: composante dominante
+label_en: dominant component
+labels_alternatifs:
+- équilibre
+labels_alternatifs_en:
+- balance
+note_label_alternatif: '« équilibre » (EN balance) est un label alternatif d’atelier, marqué comme tel ; l’id `flavourBalance` est gardé pour ne pas changer d’id d’un document à l’autre. « Harmonieux »,
+  « bien équilibré », « déséquilibré » sont des jugements : ils ne sont ni des régions ni des labels alternatifs, parce qu’ils qualifient une région en bien ou en mal (A10) ; ils vont au lexique d’atelier
+  (§9.7 K), qui renvoie « équilibré » au type, jamais à la région `noneDominant`.'
+patron: P1
+sorte: qualité
+sous_sorte: —
+strate: semi-formel
+base_dependance:
+  types:
+  - ppp:bitterness
+  - ppp:oralPungency
+  - ppp:astringency
+  facteurs_non_perceptuels: []
+note_base: 'Base proposée (strate semi-formel, à vérifier ; proposition « Goût », 2.8) : la composante dominante se lit sur des composantes perçues. Les valeurs nominales (`sweet`, `sour`…) ne renvoient
+  pas à des types : ce sont des valeurs de l’espace de valeurs (choix de relecture, 2026-10-20), et le sucré et l’acide, en réserve, ne bloquent pas la fiche. Seuls des ids définis sont cités (A12) : l’amer,
+  le piquant en bouche et l’astringence, tous trois formels (A9). Le sucré, l’acide, le salé, l’umami et l’arôme en bouche sont encore en réserve, sans id : ils entreront dans la base quand leurs fiches
+  existeront ; la base déclarée est donc incomplète. Les deux types de texture du premier lot n’y sont pas : la définition exclut la texture de la bouchée (choix de relecture (2026-10-20), série 78 bis).'
+facettes:
+- gout
+définition: 'La composante perçue comme la plus forte parmi les composantes principales de la portion en bouche (sucré, acide, amer, salé, umami, astringence, piquant ou chaleur de l’alcool, arôme en bouche),
+  ou aucune si aucune ne l’emporte : laquelle l’emporte, pas de combien.'
+question_attentionnelle: 'Laquelle des composantes se fait sentir le plus fort : le sucré, l’acide, l’amer, le salé, l’umami, l’astringence, le piquant ou la chaleur, l’arôme ? Ou aucune ne l’emporte-t-elle
+  ?'
+contre_exemple: 'On juge la composante perçue comme la plus forte, pas celle qu’on attend de la composition : l’acide peut cacher le sucré. Ce n’est pas la composante qui attire l’attention à un moment
+  donné, qui n’est pas forcément la plus forte. « Aucune dominante » n’est pas « bon » : « ce vin a l’acide pour composante dominante, et c’est un défaut » doit pouvoir se dire comme « …et c’est une qualité
+  » (un vin blanc vif), et « aucune dominante perçue, et c’est un défaut » (un vin plat) aussi.'
+grandeur_physique_homonyme: 'le rapport °Brix / acidité (indice de maturité des fruits) : un rapport de composition, qui n’est pas une définition de ce type ; voir la rubrique « mesure ».'
+mesure:
+  etat: methodes
+  synthese: 'Une mesure associée indirecte existe : le rapport entre le °Brix (ISO 2173) et l’acidité titrable (ISO 750). Elle ne porte que sur deux composantes (sucré et acide), sur la composition et non
+    sur la perception ; aucune source lue ne la relie à la composante perçue comme la plus forte (non vérifié). Aucune méthode proche n’est connue (recherche du 2026-10-20). Le score de la grille CIEL (de
+    0 à 4) est hors de la rubrique : c’est un jugement de qualité.'
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes:
+  - id: rapport_brix_acidite
+    nom: rapport °Brix / acidité titrable
+    grandeur: le rapport entre le °Brix (teneur en matières dissoutes, lue au réfractomètre) et l’acidité titrable
+    unite_ou_echelle: un rapport sans unité
+    references:
+    - iso2173
+    - iso750
+    proximite: indirecte
+    ecart: 'deux composantes seulement (sucré et acide), sur la composition et non sur la perception ; les interactions entre saveurs changent la force perçue de chacune ; ni amer, ni astringence, ni chaleur,
+      ni arôme ; aucune source lue ne relie ce rapport à la composante perçue comme la plus forte (non vérifié) ; les limites des deux normes s’ajoutent (ISO 2173 : résultat approché quand d’autres substances
+      sont dissoutes ; ISO 750 : sans valeur avec du dioxyde de soufre, méthode à indicateur non applicable aux vins)'
+    conditions: celles d’ISO 2173 et d’ISO 750
+    statut_lecture: extrait d’index (ISO 2173) ; extraits (ISO 750)
+  non_retenues:
+  - nom: gLMS et estimation de grandeur
+    references:
+    - green1993lms
+    - green1996lms
+    - stevens1957
+    raison: jugements d’un jury sans référence physique ; à reprendre dans le protocole de l’épreuve d’accord (E1)
+    statut_lecture: résumés (Green et al., 1993 et 1996) ; métadonnées (Stevens, 1957)
+  - nom: échelles de panel et notes sur une échelle de complexité, d’intensité ou d’équilibre, dont le questionnaire de complexité de Medel et al. (2009)
+    references:
+    - medel2009
+    raison: jugements d’un jury sans référence physique ; à reprendre dans le protocole de l’épreuve d’accord (E1)
+    statut_lecture: métadonnées (Medel et al., 2009 ; contenu par source secondaire)
+  - nom: méthode temps-intensité (ASTM E1909-24) et TDS
+    references:
+    - astm_e1909
+    - pineau2009
+    raison: jugements d’un jury sans référence physique ; à reprendre dans le protocole de l’épreuve d’accord (E1)
+    statut_lecture: extrait d’index (page de l’ASTM) ; résumé (Pineau et al., 2009)
+modalites:
+- bouche
+mode_de_presentation: échantillon
+conditions_critiques:
+- nez
+- moment
+- temperature_bouchee
+- avant
+note_conditions: 'règle 12 (spec §9.7 H) : `nez` est critique (avec le nez pincé, l’arôme sort des composantes possibles, et le sucré « par l’odeur » aussi : Lim et Johnson, 2011 [[lim_johnson2011]]) ;
+  `moment` est critique (les notes n’ont ni la même durée ni le même pic d’intensité dans la finale : Goodstein et al., 2014 [[goodstein2014]] ; la plus forte peut donc changer, ce qui reste à tester par
+  E1) ; `temperature_bouchee` est critique (sucré : Talavera et al., 2005 [[talavera2005]]) ; `avant` est critique (l’astringence est cumulative [[green1993astr]]).'
+porteur: la portion en bouche (la gorgée ou la bouchée) d’un produit identifié, voie rétronasale (de l’arrière de la bouche vers le nez) comprise
+note_porteur: 'porteur des trois premiers types du lot CIEL (choix de relecture, 2026-10-20 ; proposition « Goût », 2.8) : la portion en bouche, et non le produit identifié, parce que ces jugements portent
+  sur ce qui est en bouche à un moment donné et changent pendant la dégustation [[pineau2009]]. L’objet du registre reste le produit identifié ; la portion en est la partie jugée (§9.7 I).'
+arité: 1
+condition_NA: 'objet non destiné à la bouche (un cuir, un bois verni, un métal : ce n’est ni sûr ni reproductible) ; produit qu’on ne goûte pas (photo, description) : une photo ne compte jamais'
+espace_valeurs:
+  echelle: nominale
+  voisinages: []
+  numerique: non
+  regions:
+  - cle: sweet
+    label_fr: le sucré
+    label_en: sweetness
+    repere: une solution de saccharose d’ISO 3972 (tableau 3) goûtée seule
+    exemplaires: []
+  - cle: sour
+    label_fr: l’acide
+    label_en: sourness
+    repere: une solution d’acide citrique d’ISO 3972 (tableau 3) goûtée seule
+    exemplaires: []
+  - cle: bitter
+    label_fr: l’amer
+    label_en: bitterness
+    repere: une solution de caféine d’ISO 3972 (tableau 3) goûtée seule
+    exemplaires: []
+  - cle: salty
+    label_fr: le salé
+    label_en: saltiness
+    repere: une solution de chlorure de sodium d’ISO 3972 (tableau 3) goûtée seule
+    exemplaires: []
+  - cle: umami
+    label_fr: l’umami
+    label_en: umami
+    repere: une solution de glutamate monosodique d’ISO 3972 (tableau 3) goûtée seule
+    exemplaires: []
+  - cle: astringent
+    label_fr: l’astringence
+    label_en: astringency
+    repere: une solution d’alun à 1 g/l goûtée seule
+    exemplaires: []
+  - cle: pungent
+    label_fr: le piquant ou la chaleur
+    label_en: pungency or heat
+    repere: aucun repère public sûr (pas de capsaïcine pure)
+    exemplaires: []
+  - cle: aroma
+    label_fr: l’arôme en bouche
+    label_en: aroma in the mouth
+    repere: ce qui disparaît quand on pince le nez
+    exemplaires: []
+  - cle: noneDominant
+    label_fr: aucune dominante perçue
+    label_en: no dominant component perceived
+    repere: aucune composante ne l’emporte sur les autres
+    exemplaires: []
+note_echelle: 'une seule dimension, nominale (choix de relecture, 2026-10-20, série 77 ter ; C7) : la composante perçue comme la plus forte, ou aucune. La dominance est ici la force relative perçue, pas
+  la dominance de la TDS, qui est attentionnelle (Pineau et al., 2009 [[pineau2009]], dont la définition complète est connue par Visalli et Galmarini, 2024 [[visalli2024]]). Le degré de dominance (légère
+  ; nette ; forte) n’est pas retenu : il part en réserve, comme type distinct éventuel, sans id. Aucun voisinage n’est déclaré entre les valeurs. Les repères sont des solutions goûtées seules pour reconnaître
+  chaque composante, pas des exemplaires ; la liste des valeurs doit être fixée avant E1 et contenir l’arôme (Clark et Lawless, 1994 [[clark_lawless1994]]).'
+identite: 'Laquelle des composantes l’emporte, pas une force d’ensemble (intensité (goût)) ni la force d’une qualité (types du premier lot) ; pas un rapport de composition (le rapport °Brix / acidité n’en
+  est pas une définition) ; pas la composante qui attire l’attention (dominance de la TDS, proche de la saillance) ; pas l’agrément. Les valeurs ne renvoient pas à des types : le sucré, l’acide, le salé,
+  l’umami et l’arôme en bouche sont encore en réserve.'
+relations:
+- type: confusableWith
+  cible: ppp:flavourIntensity
+  note: 'la force d’ensemble n’est pas la composante qui l’emporte : une portion faible peut avoir une dominante nette, une portion forte n’en avoir aucune'
+- type: confusableWith
+  cible: ppp:bitterness
+  note: 'dans le vin rouge, l’amer et l’astringence se confondent : dire laquelle domine demande de les séparer'
+- type: confusableWith
+  cible: ppp:astringency
+  note: 'dans le vin rouge, l’amer et l’astringence se confondent : dire laquelle domine demande de les séparer'
+- type: confusableWith
+  cible: ppp:oralPungency
+  note: 'la chaleur de l’alcool, jugée comme piquant, reste à éprouver : à fort degré, l’éthanol est surtout brûlant'
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: keast_breslin2003
+  citation: Keast, R. S. J. & Breslin, P. A. S. (2003). An overview of binary taste–taste interactions. Food Quality and Preference, 14(2), 111–124.
+  doi_ou_url: https://doi.org/10.1016/S0950-3293(02)00110-6
+  role: fonde
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: résumé et extraits (introduction, conclusion) (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: 'renforcement, additivité ou suppression selon l’intensité : la force de chaque composante change dans le mélange, d’où la lecture de la dominante comme profil perçu'
+  ne_reprend_pas: le détail des interactions binaires
+- id: zamora2006
+  citation: 'Zamora, M. C., Goldner, M. C. & Galmarini, M. V. (2006). Sourness–sweetness interactions in different media: white wine, ethanol and water. Journal of Sensory Studies, 21(6), 601–611.'
+  doi_ou_url: https://doi.org/10.1111/j.1745-459X.2006.00085.x
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: dans le vin blanc, l’acide tartrique supprime le sucré du fructose plus que l’inverse
+  ne_reprend_pas: les autres milieux étudiés
+- id: fontoin2008
+  citation: Fontoin, H., Saucier, C., Teissedre, P.-L. & Glories, Y. (2008). Effect of pH, ethanol and acidity on astringency and bitterness of grape seed tannin oligomers in model wine solution. Food Quality
+    and Preference, 19(3), 286–291.
+  doi_ou_url: https://doi.org/10.1016/j.foodqual.2007.08.004
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: l’éthanol et le pH changent l’astringence et l’amertume
+  ne_reprend_pas: les valeurs mesurées
+- id: nolden_hayes2015
+  citation: Nolden, A. A. & Hayes, J. E. (2015). Perceptual qualities of ethanol depend on concentration, and variation in these percepts associates with drinking frequency. Chemosensory Perception, 8(3),
+    149–157.
+  doi_ou_url: https://doi.org/10.1007/s12078-015-9196-5
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: résumé (PubMed) ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: à faible degré, l’éthanol est surtout amer, à fort degré surtout brûlant
+  ne_reprend_pas: le lien avec la fréquence de consommation
+- id: peynaud2022
+  citation: Peynaud, É. & Blouin, J. (2022). Le goût du vin (1re éd. Bordas, 1980). Dunod.
+  doi_ou_url: ISBN 978-2-10-085002-0
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: 'extraits : préfaces et sommaire de l’extrait de l’éditeur (ISBN 978-2-10-085002-0) ; chapitre sur les équilibres des saveurs non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)'
+  reprend: un chapitre consacré aux « Interférences et équilibres des saveurs » ; la préface rappelle « l’importance majeure de l’équilibre entre les saveurs sucrées et les saveurs acides et tanniques des
+    vins »
+  ne_reprend_pas: 'la définition de l’équilibre du chapitre (non lu : non vérifié)'
+- id: clark_lawless1994
+  citation: 'Clark, C. C. & Lawless, H. T. (1994). Limiting response alternatives in time-intensity scaling: an examination of the halo-dumping effect. Chemical Senses, 19(6), 583–594.'
+  doi_ou_url: https://doi.org/10.1093/chemse/19.6.583
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: résumé (PubMed) ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: 'la liste des réponses offertes change ce qu’on note (effet de « halo-dumping ») : la liste des valeurs est fixée avant E1 et contient l’arôme'
+  ne_reprend_pas: les détails du protocole temps-intensité
+- id: lim_johnson2011
+  citation: Lim, J. & Johnson, M. B. (2011). Potential mechanisms of retronasal odor referral to the mouth. Chemical Senses, 36(3), 283–289.
+  doi_ou_url: https://doi.org/10.1093/chemse/bjq125
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: une odeur peut se faire passer pour du sucré (facette `nez`)
+  ne_reprend_pas: les mécanismes proposés
+- id: talavera2005
+  citation: Talavera, K., Yasumatsu, K., Voets, T. et al. (2005). Heat activation of TRPM5 underlies thermal sensitivity of sweet taste. Nature, 438(7070), 1022–1025.
+  doi_ou_url: https://doi.org/10.1038/nature04248
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé ; texte non lu (travail chez la souris) (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: le sucré varie avec la température (facette `temperature_bouchee`)
+  ne_reprend_pas: le mécanisme chez la souris
+- id: green1993astr
+  citation: 'Green, B. G. (1993). Oral astringency: A tactile component of flavor. Acta Psychologica, 84(1), 119–125.'
+  doi_ou_url: https://doi.org/10.1016/0001-6918(93)90078-6
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: l’astringence s’accumule d’une gorgée à l’autre (facette `avant`)
+  ne_reprend_pas: le mécanisme détaillé
+- id: goodstein2014
+  citation: 'Goodstein, E. S., Bohlscheid, J. C., Evans, M. & Ross, C. F. (2014). Perception of flavor finish in model white wine: A time-intensity study. Food Quality and Preference, 36, 50–60.'
+  doi_ou_url: https://doi.org/10.1016/j.foodqual.2014.02.012
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: résumé et extraits (introduction, lue le 2026-10-20 sur la page de l’éditeur, dont le chiffre d’Ebeler, 2001, par source secondaire) (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: les notes n’ont ni la même durée ni le même pic d’intensité dans la finale (facette `moment`)
+  ne_reprend_pas: les résultats temps-intensité comme mesure
+- id: visalli2024
+  citation: 'Visalli, M. & Galmarini, M. V. (2024). Multi-attribute temporal descriptive methods in sensory analysis applied in food science: A systematic scoping review. Comprehensive Reviews in Food Science
+    and Food Safety, 23(1), e13294.'
+  doi_ou_url: https://doi.org/10.1111/1541-4337.13294
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: métadonnées Crossref (conformes) ; extrait d’index pour la phrase citée, connue par la relecture ; texte non lu (page de l’éditeur fermée, dépôt HAL derrière une page anti-robot) (statut
+    repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: 'source secondaire pour la définition complète de la dominance de la TDS : l’attribut qui attire l’attention, pas forcément le plus intense'
+  ne_reprend_pas: le reste de la revue (non lue)
+- id: iso2173
+  citation: ISO 2173:2003. Fruit and vegetable products — Determination of soluble solids — Refractometric method. ISO.
+  doi_ou_url: https://www.iso.org/standard/35851.html
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: extrait d’index (page de l’ISO ; confirmée en 2022) ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: le °Brix, l’un des deux termes du rapport, mesure associée indirecte
+  ne_reprend_pas: la température de mesure de l’édition 2003 (non vérifiée)
+- id: iso750
+  citation: ISO 750:1998. Fruit and vegetable products — Determination of titratable acidity. ISO.
+  doi_ou_url: https://www.iso.org/standard/22569.html
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: 'extraits : aperçu public (domaine, principe, expression des résultats) ; confirmée en 2022 (statut repris de docs/bibliographie-par-type.md#groupe-gout)'
+  reprend: l’acidité titrable, l’autre terme du rapport, et ses limites
+  ne_reprend_pas: toute borne de région
+- id: green1993lms
+  citation: Green, B. G., Shaffer, G. S. & Gilmore, M. M. (1993). Derivation and evaluation of a semantic scale of oral sensation magnitude with apparent ratio properties. Chemical Senses, 18(6), 683–702.
+  doi_ou_url: https://doi.org/10.1093/chemse/18.6.683
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé (OpenAlex) ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: la LMS, un jugement de jury, non retenue comme mesure
+  ne_reprend_pas: les étiquettes et leurs positions
+- id: green1996lms
+  citation: Green, B. G., Dalton, P., Cowart, B., Shaffer, G., Rankin, K. & Higgins, J. (1996). Evaluating the ‘Labeled Magnitude Scale’ for measuring sensations of taste and smell. Chemical Senses, 21(3),
+    323–334.
+  doi_ou_url: https://doi.org/10.1093/chemse/21.3.323
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé (OpenAlex) ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: la comparaison de la LMS et de l’estimation de grandeur (non retenues comme mesure)
+  ne_reprend_pas: les résultats détaillés
+- id: stevens1957
+  citation: Stevens, S. S. (1957). On the psychophysical law. Psychological Review, 64(3), 153–181.
+  doi_ou_url: https://doi.org/10.1037/h0046162
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: métadonnées Crossref ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: l’estimation de grandeur, non retenue comme mesure
+  ne_reprend_pas: la loi psychophysique (texte non lu)
+- id: medel2009
+  citation: 'Medel, M., Viala, D., Meillon, S., Urbano, C. & Schlich, P. (2009). A questionnaire for assessing the perceived complexity of wine: Application to the study of the effect of expertise on perception
+    of wine complexity. Communication orale, 8th Pangborn Sensory Science Symposium, Florence.'
+  doi_ou_url: null
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: métadonnées (liste de références de Meillon et al., 2010, sur Crossref) ; contenu par source secondaire ; pas de DOI (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: un questionnaire de complexité perçue, non retenu comme mesure
+  ne_reprend_pas: le contenu (non lu)
+- id: astm_e1909
+  citation: ASTM E1909-24. Standard Guide for Time-Intensity Evaluation of Sensory Attributes. ASTM International.
+  doi_ou_url: https://doi.org/10.1520/E1909-24
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: 'extrait d’index (page de l’ASTM : une seule sensation, suivie après une seule prise) ; texte payant non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)'
+  reprend: la méthode temps-intensité, un jugement de jury, non retenue comme mesure
+  ne_reprend_pas: le protocole
+- id: pineau2009
+  citation: 'Pineau, N., Schlich, P., Cordelle, S. et al. (2009). Temporal Dominance of Sensations: Construction of the TDS curves and comparison with time–intensity. Food Quality and Preference, 20(6),
+    450–455.'
+  doi_ou_url: https://doi.org/10.1016/j.foodqual.2009.04.005
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: résumé et extraits de l’introduction (ScienceDirect) ; définition complète de l’attribut dominant connue par source secondaire (Visalli et Galmarini, 2024) (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: la TDS, un jugement de jury, non retenue comme mesure
+  ne_reprend_pas: la construction des courbes
+etat_de_l_art: 'Peynaud et Blouin (2022) [[peynaud2022]] consacrent un chapitre aux « Interférences et équilibres des saveurs », dont la définition de l’équilibre n’est pas lue (non vérifié). Dans un mélange,
+  les saveurs se renforcent, s’additionnent ou se suppriment selon l’intensité (Keast et Breslin, 2003 [[keast_breslin2003]]) ; dans le vin blanc, l’acide supprime le sucré plus que l’inverse (Zamora et
+  al., 2006 [[zamora2006]]) ; l’éthanol et le pH changent l’astringence et l’amertume (Fontoin et al., 2008 [[fontoin2008]]) ; à faible degré, l’éthanol est surtout amer, à fort degré surtout brûlant (Nolden
+  et Hayes, 2015 [[nolden_hayes2015]]). La TDS définit l’attribut dominant comme celui qui attire l’attention, pas forcément le plus intense (Pineau et al., 2009 [[pineau2009]], cité par Visalli et Galmarini,
+  2024 [[visalli2024]]) : cette dominance attentionnelle n’est pas la force relative perçue retenue ici. La liste des réponses offertes change ce qu’on note (Clark et Lawless, 1994 [[clark_lawless1994]]).
+  Le rapport °Brix / acidité (ISO 2173:2003 [[iso2173]] ; ISO 750:1998 [[iso750]]) porte sur la composition. Aucune source lue ne teste l’accord sur une dominante en bouche. Détail : docs/bibliographie-par-type.md#groupe-gout.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-gout
+axiomes:
+- conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
+  validation: Toute assertion de type ppp:flavourBalance a exactement un ppp:about.
+- conceptuel: Une région de cet espace n’est pas un sous-type du type.
+  validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
+nanay: Oui — passer de « je goûte ce vin » à « je regarde quelle composante l’emporte » change la description (on compare les composantes entre elles au lieu de les suivre une à une).
+transfert: objet conçu oui (une recette, un assemblage, une boisson) | tableau non | cuisine oui (une vinaigrette, un jus, un vin) | high-tech non | architecture non
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: après l’épreuve du premier lot, sur 6 à 10 produits identifiés (portions du même lot, au même moment), accord inter-observateurs exact sur la valeur (échelle nominale), au-dessus du seuil fixé
+    avant l’épreuve, à `nez`, `moment`, `temperature_bouchee` et `avant` égaux (spec §9.7 H, règle 12), la liste des valeurs offertes fixée avant l’épreuve et contenant l’arôme
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les produits (ceux qui aiment et ceux qui n’aiment pas)
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2
+statut: candidat
+statut_note: 'en préparation (2026-10-20) : fiche créée en série 78, sans exemplaire ni épreuve d’accord ; tous les champs rédigés sont à relire'
+statut_epistemique: non éprouvé
+introduit_en: '2.8'
+modifie_en: []
+remplace_par: []
+source_de_la_fiche: 'création du type : décision de l’éditeur du projet (2026-10-20, série 77 ; lot CIEL, proposition « Goût », 2.8 et 8.3) ; famille « Goût (en bouche) » : décision de l’éditeur du projet
+  (2026-10-19, décision 1) ; contenu repris de la proposition « Goût » (docs/famille-gout-proposition.md (document de travail, non publié), sections 2, 5, 6 et 7) ; le reste (porteur, crans, repères, facettes
+  critiques, classement des mesures, rédaction) : choix de relecture (2026-10-19 et 2026-10-20) ; fiche créée le 2026-10-20 (série 78)'
+manques:
+- 'exemplaires : aucun. Décision 5 de l’éditeur du projet (2026-10-19) : pas d’exemplaire en V1 pour le goût, des repères de région à la place. Si des exemples sont cherchés plus tard, ce seront des objets
+  publics seulement (produits identifiés, sans marque citée), jamais des objets privés'
+- 'épreuve d’accord E1 à faire : portions du même lot, au même moment, repères de région goûtés avant de juger (proposition « Goût », section 6, point 2) ; elle suit celle du premier lot (lot CIEL)'
+- 'définition de l’équilibre chez Peynaud (chapitre non lu) : non vérifiée'
+- aucune source ne teste l’accord sur une dominante en bouche ; liste des valeurs offertes à fixer avant E1
+- 'repère du piquant : aucun repère public sûr'
+- 'degré de dominance (légère ; nette ; forte) : en réserve, sans id'
+- 'base incomplète : le sucré, l’acide, le salé, l’umami et l’arôme en bouche sont en réserve, sans id ; la fiche ne cite que des ids définis (A12)'
+bloque_par: []
+a_relire:
+- label_fr
+- label_en
+- labels_alternatifs
+- labels_alternatifs_en
+- note_label_alternatif
+- strate
+- note_base
+- définition
+- question_attentionnelle
+- contre_exemple
+- grandeur_physique_homonyme
+- mesure
+- mode_de_presentation
+- conditions_critiques
+- note_conditions
+- porteur
+- note_porteur
+- condition_NA
+- espace_valeurs
+- note_echelle
+- identite
+- relations
+- references
+- etat_de_l_art
+- nanay
+- transfert
+- enonces_testables
+- statut_note
+remarque:
+- 'série 78 bis (choix de relecture (2026-10-20), corrections de relecture) : note_base : la définition exclut la texture de la bouchée ; glose de « rétronasale » à la première occurrence ; à relire'
+relecture_explicative:
+  date: null
+  champs: []
+  a_reconfirmer: []

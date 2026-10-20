@@ -1,0 +1,310 @@
+# Fiche de type PPP — ppp:oralPungency — format : PPP_FicheType.md (spec v2.8)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_base, note_porteur, note_echelle, note_label_alternatif, mesure (rubrique proposée en série 53, docs/proposition-rubrique-mesure.md).
+# Série 78 (2026-10-20) : fiche en préparation de la famille « Goût (en bouche) », rédigée sans exemplaire à partir de la proposition « Goût » ; aucun champ n’est encore relu.
+id: ppp:oralPungency
+label_fr: piquant en bouche
+label_en: oral pungency
+labels_alternatifs: []
+labels_alternatifs_en: []
+patron: P1
+sorte: qualité
+sous_sorte: —
+strate: formel
+base_dependance:
+  types: []
+  facteurs_non_perceptuels: []
+facettes:
+- gout
+définition: 'La force de la brûlure ou du picotement ressentis dans la bouche en goûtant une portion du produit (piment, poivre, gingembre) : une sensation du trijumeau (le nerf qui sent la brûlure du piment,
+  le froid de la menthe, le picotement), pas une saveur ; ce n’est ni le pétillant ni le piquant au nez.'
+question_attentionnelle: Est-ce que ça brûle ou pique en bouche ? À peine, nettement, ou fortement ?
+contre_exemple: 'L’eau gazeuse picote, mais c’est le pétillant (mi-saveur, mi-toucher), pas ce type. La moutarde ou le raifort qui montent au nez relèvent du piquant au nez, en réserve dans la famille Odorat.
+  Un plat très chaud brûle par sa température, pas par ce qu’il contient. « Fort » n’est pas « trop fort » : « ce plat est nettement piquant, et c’est une qualité » se dit comme « …et c’est un défaut ».'
+grandeur_physique_homonyme: 'le « piquant » d’un piment en unités de chaleur Scoville (SHU) ou en teneur en capsaïcinoïdes [[iso7543_2]] [[asta_21_3]] : une conversion chimique d’un extrait, pas la brûlure
+  perçue ; aucune région ne s’en déduit. Voir la rubrique « mesure ».'
+mesure:
+  etat: methodes
+  synthese: 'Des mesures associées indirectes existent pour les piments seulement : la teneur en capsaïcinoïdes par chromatographie (ISO 7543-2, ASTA 21.3) et l’indice de Scoville, un seuil de dilution
+    par jury (ISO 3513). Elles portent sur un extrait de piment, pas sur la bouchée, et ne valent ni pour le poivre ni pour le gingembre. Aucune méthode proche n’est connue (recherche du 2026-10-19).'
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes:
+  - id: iso7543_2
+    nom: teneur en capsaïcinoïdes totaux par CLHP (ISO 7543-2:1993)
+    grandeur: somme de la capsaïcine, de la nordihydrocapsaïcine et de la dihydrocapsaïcine, exprimée en nonyl acide vanillylamide
+    unite_ou_echelle: '% en masse'
+    references:
+    - iso7543_2
+    proximite: indirecte
+    ecart: une composition d’extrait de piment, pas la brûlure perçue ; ni le poivre ni le gingembre ; ni l’observateur, ni l’accumulation d’une prise à l’autre
+    conditions: piments et oléorésines de piment ; substance de référence à manipuler avec précaution (« strongly irritating »)
+    statut_lecture: 'extraits (aperçu public : domaine, principe, calcul ; page de l’ISO : confirmée en 2026)'
+  - id: asta_21_3
+    nom: piquant des piments par CLHP (méthode ASTA 21.3, révision 2026)
+    grandeur: capsaïcinoïdes, convertis en unités de chaleur Scoville
+    unite_ou_echelle: unités de chaleur Scoville (SHU)
+    references:
+    - asta_21_3
+    proximite: indirecte
+    ecart: une conversion chimique, pas un jugement de jury ; une révision de 2026 corrige les facteurs de réponse ; piments seulement
+    conditions: piments et oléorésines de piment
+    statut_lecture: extrait d’index (pages de l’ASTA)
+  - id: iso3513
+    nom: indice de Scoville (ISO 3513:1995)
+    grandeur: la plus grande dilution d’un extrait éthanolique de piment, dans une solution de saccharose à 50 g/l, à laquelle un jury de cinq personnes perçoit encore le piquant
+    unite_ou_echelle: facteur de dilution
+    references:
+    - iso3513
+    proximite: indirecte
+    ecart: un seuil de dilution, comme EN 13725 pour les odeurs, pas la force perçue au-dessus du seuil ; extrait de piment, pas la bouchée
+    conditions: extrait éthanolique ; jury de cinq personnes
+    statut_lecture: 'extraits (aperçu public : domaine, définition 3.1, principe, réactifs, préparation des dilutions ; page de l’ISO : confirmée en 2024)'
+  non_retenues:
+  - nom: gLMS
+    references:
+    - green1993lms
+    raison: jugements d’un jury sans référence physique ; à reprendre dans le protocole de l’épreuve d’accord (E1), alors même qu’elle a été éprouvée sur l’irritation chimique
+    statut_lecture: résumé (OpenAlex)
+modalites:
+- bouche
+mode_de_presentation: échantillon
+conditions_critiques:
+- avant
+note_conditions: 'règle 12 (spec §9.7 H) : `avant` est critique, parce que la brûlure s’accumule d’une prise à l’autre, et que l’irritation par l’éthanol diminue au contraire à force de répéter (Prescott
+  et Swain-Campbell, 2000 [[prescott2000]]). `duree` compte : la sensation monte et dure, on ne juge pas à la première seconde ; le temps passé en bouche avant de juger est déclaré. `nez` n’est pas critique
+  (ce n’est pas une saveur) ; `temperature_bouchee` est à éprouver (la capsaïcine active un canal qui répond aussi à la chaleur [[caterina1997]]). L’état de l’observateur (supergoûteurs) est une note facultative
+  qui n’identifie personne.'
+porteur: le produit identifié dont on goûte une portion (nature, origine, lot, date de production ou d’ouverture, conservation, concentration pour une boisson préparée) ; la portion goûtée n’est pas le
+  porteur
+note_porteur: même porteur que les autres types de saveur et de trijumeau (proposition « Goût », section 6 ; choix de relecture du 2026-10-19, 8.1 point 4).
+arité: 1
+condition_NA: 'objet non destiné à la bouche (un cuir, un bois verni, un métal : ce n’est ni sûr ni reproductible) ; produit qu’on ne goûte pas (photo, description) : une photo ne compte jamais'
+espace_valeurs:
+  echelle: ordinale
+  sens_croissant: de `none` (rang 1) vers `strong` (rang 4), la brûlure ou le picotement se sentent de plus en plus fort
+  numerique: non
+  regions:
+  - cle: none
+    label_fr: aucun
+    label_en: none
+    rang: 1
+    repere: 'de l’eau neutre : rien ne brûle ni ne pique'
+    exemplaires: []
+  - cle: faint
+    label_fr: à peine perceptible
+    label_en: faint
+    rang: 2
+    repere: aucun repère public sûr (à trouver avant l’épreuve)
+    exemplaires: []
+  - cle: distinct
+    label_fr: net
+    label_en: distinct
+    rang: 3
+    repere: aucun repère public sûr (à trouver avant l’épreuve)
+    exemplaires: []
+  - cle: strong
+    label_fr: fort
+    label_en: strong
+    rang: 4
+    repere: aucun repère public sûr (à trouver avant l’épreuve)
+    exemplaires: []
+note_echelle: quatre régions, comme pour l’amer (proposition « Goût », 2.3). ISO 3972 ne donne aucune solution pour le piquant ; aucun repère public sûr n’a été trouvé, et la capsaïcine pure, irritant extrême,
+  n’est pas proposée (proposition « Goût », sections 6 et 9).
+identite: La force de la brûlure ou du picotement en bouche, par le trijumeau ; pas une saveur (amer), pas le pétillant (en réserve), pas le piquant au nez (en réserve dans la famille Odorat), pas la fraîcheur
+  de la menthe (en réserve), pas la chaleur d’un plat chaud, pas l’agrément.
+relations: []
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: caterina1997
+  citation: 'Caterina, M. J., Schumacher, M. A., Tominaga, M., Rosen, T. A., Levine, J. D. & Julius, D. (1997). The capsaicin receptor: a heat-activated ion channel in the pain pathway. Nature, 389(6653),
+    816–824.'
+  doi_ou_url: https://doi.org/10.1038/39807
+  role: fonde
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: 'la capsaïcine active un canal qui répond aussi à la chaleur douloureuse : le piquant est une sensation du trijumeau'
+  ne_reprend_pas: la biologie moléculaire du récepteur
+- id: viana2011
+  citation: Viana, F. (2011). Chemosensory properties of the trigeminal system. ACS Chemical Neuroscience, 2(1), 38–50.
+  doi_ou_url: https://doi.org/10.1021/cn100102c
+  role: fonde
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: le trijumeau sert au toucher, à la douleur et à des sensations chimiques en bouche, qu’on dit « goût » sans être des saveurs
+  ne_reprend_pas: le détail des récepteurs
+- id: green1996chem
+  citation: 'Green, B. G. (1996). Chemesthesis: pungency as a component of flavor. Trends in Food Science & Technology, 7(12), 415–420.'
+  doi_ou_url: https://doi.org/10.1016/S0924-2244(96)10043-1
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: métadonnées Crossref ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: 'rien que le titre : le piquant comme composante de la flaveur'
+  ne_reprend_pas: le contenu (non lu)
+- id: bartoshuk1994
+  citation: 'Bartoshuk, L. M., Duffy, V. B. & Miller, I. J. (1994). PTC/PROP tasting: Anatomy, psychophysics, and sex effects. Physiology & Behavior, 56(6), 1165–1171.'
+  doi_ou_url: https://doi.org/10.1016/0031-9384(94)90361-1
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: les supergoûteurs perçoivent plus de brûlure
+  ne_reprend_pas: les données anatomiques et les effets du sexe
+- id: bartoshuk2000
+  citation: 'Bartoshuk, L. M. (2000). Comparing sensory experiences across individuals: Recent psychophysical advances illuminate genetic variation in taste perception. Chemical Senses, 25(4), 447–460.'
+  doi_ou_url: https://doi.org/10.1093/chemse/25.4.447
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: comparer les intensités vécues par deux personnes est un problème de méthode
+  ne_reprend_pas: les méthodes proposées
+- id: prescott2000
+  citation: Prescott, J. & Swain-Campbell, N. (2000). Responses to repeated oral irritation by capsaicin, cinnamaldehyde and ethanol in PROP tasters and non-tasters. Chemical Senses, 25(3), 239–246.
+  doi_ou_url: https://doi.org/10.1093/chemse/25.3.239
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: résumé (PubMed) ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: l’éthanol irrite la bouche, avec une désensibilisation quand on répète les prises (facette `avant`)
+  ne_reprend_pas: les comparaisons entre goûteurs et non-goûteurs du PROP
+- id: trevisani2002
+  citation: Trevisani, M., Smart, D., Gunthorpe, M. J. et al. (2002). Ethanol elicits and potentiates nociceptor responses via the vanilloid receptor-1. Nature Neuroscience, 5(6), 546–551.
+  doi_ou_url: https://doi.org/10.1038/nn0602-852
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: résumé (PubMed) ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: 'l’éthanol active le même récepteur que la capsaïcine (TRPV1) : la chaleur de l’alcool est à éprouver comme piquant'
+  ne_reprend_pas: les données chez l’animal
+- id: nolden_hayes2015
+  citation: Nolden, A. A. & Hayes, J. E. (2015). Perceptual qualities of ethanol depend on concentration, and variation in these percepts associates with drinking frequency. Chemosensory Perception, 8(3),
+    149–157.
+  doi_ou_url: https://doi.org/10.1007/s12078-015-9196-5
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: résumé (PubMed) ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: à fort degré (32 et 48 %), l’éthanol est surtout brûlant
+  ne_reprend_pas: le lien avec la fréquence de consommation
+- id: green1993lms
+  citation: Green, B. G., Shaffer, G. S. & Gilmore, M. M. (1993). Derivation and evaluation of a semantic scale of oral sensation magnitude with apparent ratio properties. Chemical Senses, 18(6), 683–702.
+  doi_ou_url: https://doi.org/10.1093/chemse/18.6.683
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: résumé (OpenAlex) ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: la LMS, éprouvée sur l’irritation chimique, reste un jugement de jury (non retenue comme mesure)
+  ne_reprend_pas: les étiquettes et leurs positions
+- id: iso7543_2
+  citation: 'ISO 7543-2:1993. Chillies and chilli oleoresins — Determination of total capsaicinoid content — Part 2: Method using high-performance liquid chromatography. ISO.'
+  doi_ou_url: https://www.iso.org/standard/14328.html
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: 'extraits : aperçu public (domaine, principe, calcul) ; confirmée en 2026 (statut repris de docs/bibliographie-par-type.md#groupe-gout)'
+  reprend: la teneur en capsaïcinoïdes, mesure associée indirecte ; la mise en garde sur la substance de référence
+  ne_reprend_pas: toute borne de région
+- id: asta_21_3
+  citation: ASTA. Analytical Method 21.3, Pungency of Capsicums and Their Oleoresins (HPLC Method — Preferred), révision 2026. American Spice Trade Association.
+  doi_ou_url: https://astaspice.org/resources/asta-method-21-3-2026-pungency-of-capsicums-and-their-oleoresins-hplc-method-preferred
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: extrait d’index (pages de l’ASTA) ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: la conversion en unités Scoville, mesure associée indirecte
+  ne_reprend_pas: toute borne de région
+- id: iso3513
+  citation: ISO 3513:1995. Chillies — Determination of Scoville index. ISO.
+  doi_ou_url: https://www.iso.org/standard/8880.html
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: 'extraits : aperçu public (domaine, définition 3.1, principe, réactifs, préparation des dilutions) ; confirmée en 2024 (statut repris de docs/bibliographie-par-type.md#groupe-gout)'
+  reprend: l’indice de Scoville, seuil de dilution par jury, mesure associée indirecte
+  ne_reprend_pas: toute borne de région
+etat_de_l_art: 'Le piquant n’est pas une saveur : il passe par le nerf trijumeau, qui sert aussi au toucher et à la douleur (Viana, 2011 [[viana2011]]) ; la capsaïcine active un canal qui répond aussi à
+  la chaleur douloureuse (Caterina et al., 1997 [[caterina1997]]), et Green (1996) [[green1996chem]] en fait une composante de la flaveur (titre seulement). Les supergoûteurs perçoivent plus de brûlure
+  (Bartoshuk et al., 1994 [[bartoshuk1994]] ; Bartoshuk, 2000 [[bartoshuk2000]]). L’éthanol active le même récepteur (Trevisani et al., 2002 [[trevisani2002]]), irrite la bouche avec une désensibilisation
+  quand on répète (Prescott et Swain-Campbell, 2000 [[prescott2000]]) et devient surtout brûlant à fort degré (Nolden et Hayes, 2015 [[nolden_hayes2015]]). Les mesures connues portent sur un extrait de
+  piment : ISO 7543-2:1993 [[iso7543_2]], ASTA 21.3 [[asta_21_3]] et ISO 3513:1995 [[iso3513]] ; la LMS, éprouvée sur l’irritation chimique, reste un jugement de jury (Green et al., 1993 [[green1993lms]]).
+  Aucune source lue ne teste l’accord entre observateurs sur des crans de piquant ; aucun repère public sûr n’est connu. Détail : docs/bibliographie-par-type.md#groupe-gout.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-gout
+axiomes:
+- conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
+  validation: Toute assertion de type ppp:oralPungency a exactement un ppp:about.
+- conceptuel: Les 4 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 4 ppp:Region de l’échelle du type ont des ppp:rank distincts, de 1 à 4 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Une région de cet espace n’est pas un sous-type du type.
+  validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
+nanay: Oui — passer de « je mange ce plat » à « je regarde combien il brûle ou pique » change la description (on suit une sensation qui monte et dure, à part des saveurs).
+transfert: objet conçu oui (une recette, une sauce, une boisson) | tableau non | cuisine oui (piment, poivre, gingembre, alcool fort) | high-tech non | architecture non
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: 'sur 6 à 10 produits identifiés (portions du même lot, au même moment), accord inter-observateurs à une région près, au-dessus du seuil fixé avant l’épreuve, à conditions critiques égales (`avant`
+    : première prise ou après rinçage ; spec §9.7 H, règle 12), en jugeant après un temps en bouche déclaré'
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les produits (ceux qui aiment et ceux qui n’aiment pas)
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2
+statut: candidat
+statut_note: 'en préparation (2026-10-20) : fiche créée en série 78, sans exemplaire ni épreuve d’accord ; tous les champs rédigés sont à relire'
+statut_epistemique: non éprouvé
+introduit_en: '2.8'
+modifie_en: []
+remplace_par: []
+source_de_la_fiche: 'création du type : décision de l’éditeur du projet (2026-10-19, décision 5a ; 2026-10-20, série 76, premier lot, proposition « Goût », 2.2 à 2.4 et 8.2) ; famille « Goût (en bouche)
+  » : décision de l’éditeur du projet (2026-10-19, décision 1) ; contenu repris de la proposition « Goût » (docs/famille-gout-proposition.md (document de travail, non publié), sections 2, 5, 6 et 7) ; le
+  reste (porteur, crans, repères, facettes critiques, classement des mesures, rédaction) : choix de relecture (2026-10-19 et 2026-10-20) ; fiche créée le 2026-10-20 (série 78)'
+manques:
+- 'exemplaires : aucun. Décision 5 de l’éditeur du projet (2026-10-19) : pas d’exemplaire en V1 pour le goût, des repères de région à la place. Si des exemples sont cherchés plus tard, ce seront des objets
+  publics seulement (produits identifiés, sans marque citée), jamais des objets privés'
+- 'épreuve d’accord E1 à faire : portions du même lot, au même moment, repères de région goûtés avant de juger (proposition « Goût », section 6, point 2)'
+- 'repère de région : aucun repère public sûr (la capsaïcine pure n’est pas proposée) ; à trouver avant E1'
+- 'chaleur de l’alcool jugée comme piquant : à éprouver'
+bloque_par: []
+a_relire:
+- label_fr
+- label_en
+- labels_alternatifs
+- labels_alternatifs_en
+- strate
+- définition
+- question_attentionnelle
+- contre_exemple
+- grandeur_physique_homonyme
+- mesure
+- mode_de_presentation
+- conditions_critiques
+- note_conditions
+- porteur
+- note_porteur
+- condition_NA
+- espace_valeurs
+- note_echelle
+- identite
+- relations
+- references
+- etat_de_l_art
+- nanay
+- transfert
+- enonces_testables
+- statut_note
+remarque:
+- 'série 78 bis (choix de relecture (2026-10-20), corrections de relecture) : glose de « trijumeau » à la première occurrence ; à relire'
+relecture_explicative:
+  date: null
+  champs: []
+  a_reconfirmer: []

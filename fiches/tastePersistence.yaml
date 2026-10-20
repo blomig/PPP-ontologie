@@ -1,0 +1,281 @@
+# Fiche de type PPP — ppp:tastePersistence — format : PPP_FicheType.md (spec v2.8)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_base, note_porteur, note_echelle, note_label_alternatif, mesure (rubrique proposée en série 53, docs/proposition-rubrique-mesure.md).
+# Série 78 (2026-10-20) : fiche en préparation de la famille « Goût (en bouche) », rédigée sans exemplaire à partir de la proposition « Goût » ; aucun champ n’est encore relu.
+id: ppp:tastePersistence
+label_fr: longueur
+label_en: length
+labels_alternatifs:
+- caudalie
+- persistance en bouche
+- persistance aromatique intense
+labels_alternatifs_en:
+- finish
+- lingering taste
+note_label_alternatif: '« caudalie » est un jargon d’atelier, marqué comme tel : c’est une unité (1 caudalie = 1 seconde de persistance, selon le Grand dictionnaire terminologique [[oqlf_caudalie]]) ; une
+  forme plus ancienne, « codalie », est attestée en 1963 par source secondaire [[slate2010]]. « Persistance en bouche » est l’ancien label ; « persistance aromatique intense » vient du Grand dictionnaire
+  terminologique (extraits). EN : finish, lingering taste (ancien label). « Belle longueur », « court » au sens de défaut : lexique d’atelier (§9.7 K).'
+patron: P1
+sorte: qualité
+sous_sorte: —
+strate: formel
+base_dependance:
+  types: []
+  facteurs_non_perceptuels: []
+note_base: 'strate formel, à vérifier (proposition « Goût », 2.8.4) : on juge la durée sans devoir nommer ce qui persiste.'
+facettes:
+- gout
+définition: 'La durée pendant laquelle quelque chose de la portion, saveur ou arôme, reste perçu après avoir avalé ou recraché, jusqu’à la dernière trace perçue : une durée, en secondes, pas ce qu’on sent.'
+question_attentionnelle: Après avoir avalé ou recraché, combien de secondes quelque chose de la portion reste-t-il perçu ?
+contre_exemple: 'On n’arrête pas le chronomètre à la première baisse, mais à la dernière trace. Sa propre salive, ou un arrière-goût d’une gorgée précédente, ne comptent pas. L’astringence qui reste n’est
+  pas une trace qui s’éteint : c’est un état de la bouche qui s’accumule. « Reste longtemps » ne juge pas : « ce vin reste longtemps, et c’est un défaut » se dit comme « …et c’est une qualité ».'
+mesure:
+  etat: aucune_methode_robuste
+  synthese: 'Aucune méthode robuste n’est connue (recherche du 2026-10-20). Le chronométrage en secondes (caudalies) est l’unité native de l’espace de valeurs, pas une mesure associée : le chronomètre est
+    physique, mais le point final est jugé par le dégustateur, sans série de référence physique ; il n’est donc pas « proche ». Piste à évaluer, indirecte : le dosage en bouche des odorants relâchés après
+    avoir recraché [[esteban2016]] mesure une quantité d’odorants, pas leur perception ; tant qu’elle n’est pas évaluée, l’état reste celui-ci. Le score de la grille CIEL (de 0 à 4) est hors de la rubrique
+    : c’est un jugement de qualité.'
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes: []
+  non_retenues:
+  - nom: la caudalie comme mesure
+    references:
+    - oqlf_caudalie
+    raison: 'un jugement chronométré : le point final est jugé par le dégustateur, sans série de référence physique ; c’est l’unité de l’espace de valeurs, pas une mesure associée'
+    statut_lecture: extraits (Grand dictionnaire terminologique)
+  - nom: méthode temps-intensité (ASTM E1909-24) et TDS
+    references:
+    - astm_e1909
+    - goodstein2014
+    - baker_ross2014
+    - pineau2009
+    raison: jugements d’un jury sans référence physique ; à reprendre dans le protocole de l’épreuve d’accord (E1)
+    statut_lecture: extrait d’index (page de l’ASTM) ; résumés (Goodstein et al., 2014 ; Baker et Ross, 2014 ; Pineau et al., 2009)
+modalites:
+- bouche
+mode_de_presentation: échantillon
+conditions_critiques:
+- nez
+conditions_fixees:
+  moment: residual
+note_conditions: 'règle 12 (spec §9.7 H) : `nez` est critique, déclaré par la fiche (la règle ne le rend critique que pour les types de saveur) ; `nez` est déclaré à chaque épisode : `open` pour la longueur
+  de l’ensemble (saveur et arôme), `pinched` pour la seule saveur ; E1 compare à `nez` égal (choix de relecture (2026-10-20), série 78 bis). `moment` vaut `residual` par définition : la phase est fixée
+  dans la définition, et `moment` n’est pas déclaré critique. Une assertion faite à une autre phase que celle que fixe la définition est invalide pour ce type, et le contrôle la refusera (contrôle à écrire)
+  ; l’observation reste en note d’épisode. `unknown` est accepté, mais exclu de E1 (choix de relecture (2026-10-20), série 78 bis). `temperature_bouchee` et `avant` sont à éprouver. Avalé ou recraché va
+  dans l’épisode.'
+porteur: la portion qu’on vient d’avaler ou de recracher (d’un produit identifié) ; ce qui en reste perçu
+note_porteur: 'porteur propre à la longueur (choix de relecture, 2026-10-20 ; proposition « Goût », 2.8.4) : la portion avalée ou recrachée, et non la portion en bouche des trois autres types du lot. L’objet
+  du registre reste le produit identifié (§9.7 I).'
+arité: 1
+condition_NA: 'objet non destiné à la bouche (un cuir, un bois verni, un métal : ce n’est ni sûr ni reproductible) ; produit qu’on ne goûte pas (photo, description) : une photo ne compte jamais'
+espace_valeurs:
+  echelle: ratio
+  sens_croissant: de `vanishes` (rang 1) vers `long` (rang 3), la dernière trace perçue dure de plus en plus longtemps
+  numerique: 'oui (unité : la seconde)'
+  regions:
+  - cle: vanishes
+    label_fr: disparaît aussitôt
+    label_en: vanishes at once
+    rang: 1
+    repere: plus rien n’est perçu dès qu’on a avalé ou recraché (de l’eau neutre) ; sans borne chiffrée
+    exemplaires: []
+  - cle: brief
+    label_fr: reste quelques instants
+    label_en: lingers briefly
+    rang: 2
+    repere: une trace reste quelques instants, puis s’éteint ; sans borne chiffrée
+    exemplaires: []
+  - cle: long
+    label_fr: reste longtemps
+    label_en: lingers for a long time
+    rang: 3
+    repere: une trace reste longtemps après la gorgée ; sans borne chiffrée
+    exemplaires: []
+note_echelle: 'une seule dimension, la durée de la dernière trace perçue, en secondes (échelle `ratio`, valeur numérique) ; les trois régions sont une lecture de cette durée, reprises de la réserve, sans
+  bornes en secondes avant E1 (choix de relecture, 2026-10-20, proposition « Goût », 2.8.4, choix 5). Un seul type, mixte : on ne sépare persistance de l’arôme et persistance des saveurs que si E1 échoue
+  ; les sources d’atelier comptent surtout l’arôme, d’autres la persistance « gustative » (Académie française [[academie_caudalie]]) : le type ne tranche pas entre elles.'
+identite: 'Une durée, pas ce qu’on sent : jugée à la phase `residual` (après avoir avalé ou recraché), mais ce n’est pas cette phase : la phase dit quand on juge, la longueur combien de temps dure la trace
+  (choix de relecture (2026-10-20), série 78 bis) ; pas l’astringence (un état de la bouche qui s’accumule) ; pas l’arôme en bouche (en réserve : le caractère de ce qui reste n’est pas sa durée) ; pas l’intensité.
+  Rapprochement avec la persistance de l’odeur (en réserve dans la famille Odorat : l’odeur à l’air, sans prise en bouche), sans relation : homonyme de domaine.'
+relations:
+- type: confusableWith
+  cible: ppp:astringency
+  note: 'l’astringence reste après que l’aliment est parti et s’accumule : ce n’est pas une trace qui s’éteint, et elle ne se chronomètre pas comme la longueur'
+- type: confusableWith
+  cible: ppp:flavourIntensity
+  note: 'une finale forte paraît longue : l’éthanol allonge et renforce la finale à la fois ; on juge ici combien de temps dure la trace, pas sa force'
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: baker_ross2014
+  citation: 'Baker, A. K. & Ross, C. F. (2014). Wine finish in red wine: The effect of ethanol and tannin concentration. Food Quality and Preference, 38, 65–74.'
+  doi_ou_url: https://doi.org/10.1016/j.foodqual.2014.05.014
+  role: fonde
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: résumé ; définition de Jackson (2002) par source secondaire (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: la finale, « the tastes and aromas that linger after swallowing wine » ; plus d’éthanol allonge la finale de certaines notes
+  ne_reprend_pas: les résultats temps-intensité comme mesure
+- id: jackson2002
+  citation: 'Jackson, R. S. (2002). Wine Tasting: A Professional Handbook. Academic Press.'
+  doi_ou_url: ISBN 0-12-379076-X
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: métadonnées (notices de bibliothèques, ISBN 0-12-379076-X) ; définition de la finale par source secondaire (Baker et Ross, 2014) (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: la définition de la finale, connue par source secondaire (Baker et Ross, 2014)
+  ne_reprend_pas: le texte (non lu)
+- id: goodstein2014
+  citation: 'Goodstein, E. S., Bohlscheid, J. C., Evans, M. & Ross, C. F. (2014). Perception of flavor finish in model white wine: A time-intensity study. Food Quality and Preference, 36, 50–60.'
+  doi_ou_url: https://doi.org/10.1016/j.foodqual.2014.02.012
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: résumé et extraits (introduction, lue le 2026-10-20 sur la page de l’éditeur, dont le chiffre d’Ebeler, 2001, par source secondaire) (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: 'la finale varie selon la note : la note qui dure le plus fixe la longueur'
+  ne_reprend_pas: les résultats temps-intensité comme mesure
+- id: esteban2016
+  citation: Esteban-Fernández, A., Rocha-Alcubilla, N., Muñoz-González, C., Moreno-Arribas, M. V. & Pozo-Bayón, M. Á. (2016). Intra-oral adsorption and release of aroma compounds following in-mouth wine
+    exposure. Food Chemistry, 205, 280–288.
+  doi_ou_url: https://doi.org/10.1016/j.foodchem.2016.03.030
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: résumé (trois sujets, vin aromatisé) ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: après avoir recraché, 6 à 43 % des odorants ajoutés restent fixés en bouche (piste de mesure indirecte, à évaluer)
+  ne_reprend_pas: le dosage comme mesure de la perception
+- id: oqlf_caudalie
+  citation: Office québécois de la langue française. Grand dictionnaire terminologique, « caudalie ».
+  doi_ou_url: https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/17594568/caudalie
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: 'extraits (fiche lue ; auteur indiqué : INAO, 1972, source non consultée) (statut repris de docs/bibliographie-par-type.md#groupe-gout)'
+  reprend: « 1 cdl = 1 seconde de persistance » ; « persistance aromatique intense » (label alternatif)
+  ne_reprend_pas: la source de 1972 (non consultée)
+- id: slate2010
+  citation: Nau, J.-Y. (2010). « Caudalie (Houellebecq et « longueurs en bouche ») ». Slate.fr, 11 décembre 2010.
+  doi_ou_url: https://www.slate.fr/story/31277/caudalies-houellebecq-vin
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: source secondaire (article lu) ; le bulletin de l’INAO de 1963 qu’il cite n’est pas consulté (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: un emploi plus ancien, « codalie », dans un bulletin de l’INAO de 1963 (par source secondaire)
+  ne_reprend_pas: le bulletin (non consulté) ; l’invention de l’unité par Peynaud (non vérifiée)
+- id: academie_caudalie
+  citation: Académie française. Dictionnaire, 9e éd., « caudalie ».
+  doi_ou_url: https://www.dictionnaire-academie.fr/article/A9_0224
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: extrait d’index ; article non lu en entier (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: la caudalie mesure une persistance « gustative », en désaccord avec « aromatique »
+  ne_reprend_pas: l’article entier
+- id: astm_e1909
+  citation: ASTM E1909-24. Standard Guide for Time-Intensity Evaluation of Sensory Attributes. ASTM International.
+  doi_ou_url: https://doi.org/10.1520/E1909-24
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-19'
+  verifie_sur: 'extrait d’index (page de l’ASTM : une seule sensation, suivie après une seule prise) ; texte payant non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)'
+  reprend: la méthode temps-intensité, un jugement de jury, non retenue comme mesure
+  ne_reprend_pas: le protocole
+- id: pineau2009
+  citation: 'Pineau, N., Schlich, P., Cordelle, S. et al. (2009). Temporal Dominance of Sensations: Construction of the TDS curves and comparison with time–intensity. Food Quality and Preference, 20(6),
+    450–455.'
+  doi_ou_url: https://doi.org/10.1016/j.foodqual.2009.04.005
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-20'
+  verifie_sur: résumé et extraits de l’introduction (ScienceDirect) ; définition complète de l’attribut dominant connue par source secondaire (Visalli et Galmarini, 2024) (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  reprend: la TDS, un jugement de jury, non retenue comme mesure
+  ne_reprend_pas: la construction des courbes
+etat_de_l_art: 'La finale (*wine finish*) est définie comme « the tastes and aromas that linger after swallowing wine » (Baker et Ross, 2014 [[baker_ross2014]], d’après Jackson, 2002 [[jackson2002]], par
+  source secondaire) ; plus d’éthanol allonge la finale de certaines notes. La finale varie selon la note (Goodstein et al., 2014 [[goodstein2014]]). Après avoir recraché, une part des odorants reste fixée
+  en bouche (Esteban-Fernández et al., 2016 [[esteban2016]]). La caudalie vaut une seconde de persistance (Grand dictionnaire terminologique [[oqlf_caudalie]]) ; une forme « codalie » est attestée en 1963
+  par source secondaire [[slate2010]] ; l’invention de l’unité par Peynaud n’est pas vérifiée ; persistance « aromatique » ou « gustative » : les sources ne s’accordent pas [[academie_caudalie]]. Le temps-intensité
+  (ASTM E1909-24 [[astm_e1909]]) et la TDS (Pineau et al., 2009 [[pineau2009]]) sont des jugements de jury. Aucune source lue ne porte sur la persistance d’une saveur (et non d’un arôme) dans le vin, ni
+  sur l’accord entre personnes sur une durée chronométrée. Détail : docs/bibliographie-par-type.md#groupe-gout.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-gout
+axiomes:
+- conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
+  validation: Toute assertion de type ppp:tastePersistence a exactement un ppp:about.
+- conceptuel: La valeur est une durée en secondes, positive ou nulle ; les 3 régions de lecture sont deux à deux disjointes et ordonnées par rang, sans bornes chiffrées.
+  validation: Les 3 ppp:Region de l’échelle du type ont des ppp:rank distincts, de 1 à 3 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Une région de cet espace n’est pas un sous-type du type.
+  validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
+nanay: Oui — passer de « j’ai bu ce vin » à « je compte combien de temps il en reste quelque chose » change la description (on suit la trace après la gorgée, pas la gorgée).
+transfert: objet conçu oui (une boisson, un assemblage) | tableau non | cuisine oui (un vin, un café, un chocolat) | high-tech non | architecture non
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: après l’épreuve du premier lot, sur 6 à 10 produits identifiés (portions du même lot, au même moment), accord inter-observateurs sur la durée chronométrée (écart au-dessous d’un seuil fixé avant
+    l’épreuve) et sur la région de lecture, à `nez` égal (spec §9.7 H, règle 12), la portion avalée ou recrachée de la même façon par tous
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les produits (ceux qui aiment et ceux qui n’aiment pas)
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2
+statut: candidat
+statut_note: 'en préparation (2026-10-20) : fiche créée en série 78, sans exemplaire ni épreuve d’accord ; tous les champs rédigés sont à relire'
+statut_epistemique: non éprouvé
+introduit_en: '2.8'
+modifie_en: []
+remplace_par: []
+source_de_la_fiche: 'création du type : décision de l’éditeur du projet (2026-10-20, série 77 ; lot CIEL, proposition « Goût », 2.8 et 8.3) ; famille « Goût (en bouche) » : décision de l’éditeur du projet
+  (2026-10-19, décision 1) ; contenu repris de la proposition « Goût » (docs/famille-gout-proposition.md (document de travail, non publié), sections 2, 5, 6 et 7) ; le reste (porteur, crans, repères, facettes
+  critiques, classement des mesures, rédaction) : choix de relecture (2026-10-19 et 2026-10-20) ; fiche créée le 2026-10-20 (série 78)'
+manques:
+- 'exemplaires : aucun. Décision 5 de l’éditeur du projet (2026-10-19) : pas d’exemplaire en V1 pour le goût, des repères de région à la place. Si des exemples sont cherchés plus tard, ce seront des objets
+  publics seulement (produits identifiés, sans marque citée), jamais des objets privés'
+- 'épreuve d’accord E1 à faire : portions du même lot, au même moment, repères de région goûtés avant de juger (proposition « Goût », section 6, point 2) ; elle suit celle du premier lot (lot CIEL)'
+- 'invention de la caudalie par Peynaud : non vérifiée'
+- aucune source lue sur la persistance d’une saveur (et non d’un arôme) dans le vin ; accord entre personnes sur une durée chronométrée non lu
+- 'bornes en secondes des régions de lecture : aucune avant E1'
+bloque_par: []
+a_relire:
+- label_fr
+- label_en
+- labels_alternatifs
+- labels_alternatifs_en
+- note_label_alternatif
+- strate
+- note_base
+- définition
+- question_attentionnelle
+- contre_exemple
+- mesure
+- mode_de_presentation
+- conditions_critiques
+- conditions_fixees
+- note_conditions
+- porteur
+- note_porteur
+- condition_NA
+- espace_valeurs
+- note_echelle
+- identite
+- relations
+- references
+- etat_de_l_art
+- nanay
+- transfert
+- enonces_testables
+- statut_note
+remarque:
+- 'série 78 bis (choix de relecture (2026-10-20), corrections de relecture) : note_conditions : facette `nez` et phase fixée par la définition ; identite ; label EN « lingers for a long time » ; manques
+  ; à relire'
+- 'série 78 ter (choix de relecture (2026-10-20), conditions fixées) : champ `conditions_fixees` rempli (`moment: residual`, PPP_FicheType.md, spec §9.7 H, règle 12) ; note_conditions : phrase sur la phase
+  reformulée sans double parenthèse, sans changement de fond ; à relire'
+- 'série 78 quater (choix de relecture (2026-10-20), retouches de relecture) : note_conditions : « le contrôle la refusera (contrôle à écrire) » ; à relire'
+relecture_explicative:
+  date: null
+  champs: []
+  a_reconfirmer: []

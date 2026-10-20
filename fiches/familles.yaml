@@ -116,6 +116,24 @@ familles:
     relecture_explicative: {date: "2026-10-15", champs: [introduction]}   # série 49 bis : introduction écrite par la relecture explicative
     types: [ppp:odourIntensity, ppp:odourCharacter]   # série 50 : premières fiches, en préparation
 
+  - cle: gout
+    label_fr: Goût (en bouche)
+    label_en: taste (in the mouth)
+    statut: en préparation   # série 78 (2026-10-20) : comme le Son et l'Odorat, famille montrée « en préparation » tant qu'aucune fiche n'est publiée
+    introduction: >-
+      Ce qu’on perçoit en bouche, et non ce qu’on aime : les saveurs, ce qui brûle ou pique, ce qui
+      assèche la bouche, la résistance de la bouchée ou l’épaisseur de la gorgée, et, pour l’ensemble de ce qu’on a en bouche,
+      combien de composantes on y distingue, leur force, celle qui l’emporte et combien de temps il
+      en reste quelque chose. Une photo ne dit rien du goût : on décrit le produit et les conditions
+      dans lesquelles on l’a goûté. Cette famille est en préparation : elle n’a encore aucune fiche publiée.
+    # Série 78 : famille inscrite avec ses premières fiches (T4). Label : décision 1 de l'éditeur du projet (2026-10-19),
+    # « Goût (en bouche) », taste (in the mouth) ; la première phrase écarte le sens de préférence (même décision).
+    # Règle d'appartenance (proposition, section 3) : tous les types dont `modalites` contient `bouche`, et eux seuls.
+    # Proposition et décisions : docs/famille-gout-proposition.md (document de travail, non publié), sections 2, 3 et 8.
+    a_relire: [introduction]
+    relecture_explicative: {date: null, champs: []}
+    types: [ppp:bitterness, ppp:oralPungency, ppp:astringency, ppp:hardnessInMouth, ppp:oralThickness, ppp:flavourComplexity, ppp:flavourIntensity, ppp:flavourBalance, ppp:tastePersistence]   # série 78 : premier lot et lot CIEL, en préparation
+
 hors_registre:
   - cle: temps
     raison: >-
