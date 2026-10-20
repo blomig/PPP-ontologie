@@ -60,7 +60,7 @@ conditions_fixees:
   moment: residual
 note_conditions: 'règle 12 (spec §9.7 H) : `nez` est critique, déclaré par la fiche (la règle ne le rend critique que pour les types de saveur) ; `nez` est déclaré à chaque épisode : `open` pour la longueur
   de l’ensemble (saveur et arôme), `pinched` pour la seule saveur ; E1 compare à `nez` égal (choix de relecture (2026-10-20), série 78 bis). `moment` vaut `residual` par définition : la phase est fixée
-  dans la définition, et `moment` n’est pas déclaré critique. Une assertion faite à une autre phase que celle que fixe la définition est invalide pour ce type, et le contrôle la refusera (contrôle à écrire)
+  dans la définition, et `moment` n’est pas déclaré critique. Une assertion faite à une autre phase que celle que fixe la définition est invalide pour ce type, et le contrôle du site la refuse
   ; l’observation reste en note d’épisode. `unknown` est accepté, mais exclu de E1 (choix de relecture (2026-10-20), série 78 bis). `temperature_bouchee` et `avant` sont à éprouver. Avalé ou recraché va
   dans l’épisode.'
 porteur: la portion qu’on vient d’avaler ou de recracher (d’un produit identifié) ; ce qui en reste perçu
@@ -121,8 +121,8 @@ references:
   reprend: la finale, « the tastes and aromas that linger after swallowing wine » ; plus d’éthanol allonge la finale de certaines notes
   ne_reprend_pas: les résultats temps-intensité comme mesure
 - id: jackson2002
-  citation: 'Jackson, R. S. (2002). Wine Tasting: A Professional Handbook. Academic Press.'
-  doi_ou_url: ISBN 0-12-379076-X
+  citation: 'Jackson, R. S. (2002). Wine Tasting: A Professional Handbook. Academic Press. ISBN 0-12-379076-X'
+  doi_ou_url: null
   role: alimente
   statut_verification: vérifiée sur résumé ou source secondaire
   verifie_le: '2026-10-20'
@@ -275,6 +275,7 @@ remarque:
 - 'série 78 ter (choix de relecture (2026-10-20), conditions fixées) : champ `conditions_fixees` rempli (`moment: residual`, PPP_FicheType.md, spec §9.7 H, règle 12) ; note_conditions : phrase sur la phase
   reformulée sans double parenthèse, sans changement de fond ; à relire'
 - 'série 78 quater (choix de relecture (2026-10-20), retouches de relecture) : note_conditions : « le contrôle la refusera (contrôle à écrire) » ; à relire'
+- 'série 78 quinquies (choix de relecture (2026-10-20), retouches de relecture) : note_conditions : « le contrôle du site la refuse » ; référence Jackson (2002) : ISBN déplacé dans la citation, doi_ou_url vide ; à relire'
 relecture_explicative:
   date: null
   champs: []

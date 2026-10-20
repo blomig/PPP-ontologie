@@ -69,7 +69,7 @@ mesure:             # gabarit : docs/proposition-rubrique-mesure.md (spec §9.7 
 modalites:          # sens par lesquels le type est décrit et éprouvé : vision | toucher | audition | odorat (série 43) | bouche (série 72) ; chaque assertion en déclare une, l’épisode l’ensemble (spec §9.3, §9.7 H) ; ≠ conditions de perception ; identité intermodale : Q13
 mode_de_presentation:  image | séquence | échantillon | protocole   # minimum pour montrer les régions
 conditions_critiques: []   # optionnel (v2.3) : facettes du régime de perception dont la région dépend fortement, parmi presentation | lumiere | distance | angle | duree | geste | temperature_objet | production | bruit_de_fond | exposition | air | nez | temperature_bouchee | avant | moment (`production` et `bruit_de_fond` pour un type de l’ouïe seule, `exposition` et `air` pour un type de l’odorat seul : spec §9.7 H, règles 9 et 10, série 43, à relire ; `geste` et `temperature_objet` pour un type au toucher seul : spec §9.7 H, règles 3 et 8 ; `distance` et `angle` restent déclarables par un type à deux sens s’ils sont critiques à la vue : règle 3, exception, série 34) ; une facette critique `unknown` dans l’épisode impose « non tranché » (spec §9.7 H, A5)
-conditions_fixees: {}     # optionnel (série 78 ter, choix de relecture (2026-10-20)) : valeurs de facette que la définition du type impose, ex. `conditions_fixees: {moment: firstBite}` ; une assertion dont l’épisode déclare une autre valeur est invalide pour ce type, et le contrôle la refusera (contrôle à écrire), l’observation restant en note d’épisode ; `unknown` est accepté, noté « non tranché » et exclu de E1. Une facette de `conditions_fixees` est d’office comparée à valeur égale dans E1 ; la mettre aussi dans `conditions_critiques` ne change rien (spec §9.7 H, règle 12)
+conditions_fixees: {}     # optionnel (série 78 ter, choix de relecture (2026-10-20)) : valeurs de facette que la définition du type impose, ex. `conditions_fixees: {moment: firstBite}` ; une assertion dont l’épisode déclare une autre valeur est invalide pour ce type, et le contrôle du site la refuse, l’observation restant en note d’épisode ; `unknown` est accepté, noté « non tranché » et exclu de E1. Une facette de `conditions_fixees` est d’office comparée à valeur égale dans E1 ; la mettre aussi dans `conditions_critiques` ne change rien (spec §9.7 H, règle 12)
 
 porteur:            # P1 : exactement 1. P2 : arité ≥ 2, rôles nommés. P3 : l’épisode.
 arité:              # P2
@@ -117,7 +117,7 @@ references_statut:  renseignées | à renseigner | aucune source trouvée (reche
 references:         # tout travail existant sur lequel la fiche s'appuie (classification, ontologie, théorie, étude) ; [] si aucune
   - id:             (clé courte, ex. tamura1978)
     citation:       (auteurs, année, titre, support, pages)
-    doi_ou_url:     (DOI sous forme https://doi.org/…, ou URL de la notice ou de la page vérifiée)
+    doi_ou_url:     (DOI sous forme https://doi.org/…, ou URL de la notice ou de la page vérifiée ; `null` si aucune page n'a été consultée (l'ISBN va alors à la fin de `citation`))
     role:           fonde | alimente | discute | contraste
     statut_verification: vérifiée sur la source | vérifiée sur résumé ou source secondaire | non vérifiée
     verifie_le:     (AAAA-MM-JJ)

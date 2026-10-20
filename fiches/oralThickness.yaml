@@ -72,7 +72,7 @@ conditions_critiques:
 conditions_fixees:
   moment: firstContact
 note_conditions: 'règle 12 (spec §9.7 H) : `moment` est critique pour les types de texture ; la définition fixe `firstContact` (la première mise en bouche, avant de mâcher) : une assertion faite à une autre
-  phase que celle que fixe la définition est invalide pour ce type, et le contrôle la refusera (contrôle à écrire) ; l’observation reste en note d’épisode. `unknown` est accepté, mais exclu de E1 (choix
+  phase que celle que fixe la définition est invalide pour ce type, et le contrôle du site la refuse ; l’observation reste en note d’épisode. `unknown` est accepté, mais exclu de E1 (choix
   de relecture (2026-10-20), série 78 bis). `temperature_bouchee` est critique : l’épaisseur perçue baisse quand le produit est plus chaud (Engelen et al., 2003 [[engelen2003]], produits à 10, 22 et 35
   °C). `nez` n’est pas critique ; `avant` est à éprouver. La taille de la gorgée va dans l’épisode, sans facette ; la salive est une note d’épisode (seuls les premiers temps se prédisent sans elle : Stokes
   et al., 2013 [[stokes2013]]).'
@@ -322,6 +322,7 @@ remarque:
 - 'série 78 bis (choix de relecture (2026-10-20), corrections de relecture) : crans et repères provisoires (note_echelle, manques) ; phase fixée par la définition (note_conditions) ; à relire'
 - 'série 78 ter (choix de relecture (2026-10-20), conditions fixées) : champ `conditions_fixees` rempli (`moment: firstContact`, PPP_FicheType.md, spec §9.7 H, règle 12) ; à relire'
 - 'série 78 quater (choix de relecture (2026-10-20), retouches de relecture) : note_conditions : « le contrôle la refusera (contrôle à écrire) » ; à relire'
+- 'série 78 quinquies (choix de relecture (2026-10-20), retouches de relecture) : note_conditions : « le contrôle du site la refuse » ; à relire'
 relecture_explicative:
   date: null
   champs: []

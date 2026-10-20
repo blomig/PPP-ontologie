@@ -21,7 +21,7 @@ base_dependance:
   - ppp:astringency
   facteurs_non_perceptuels: []
 note_base: 'Base proposée (strate semi-formel, à vérifier ; proposition « Goût », 2.8) : la force du mélange perçu comme un tout (une qualité d’ensemble), dont la base est la liste des composantes en bouche
-  (réponse proposée à A9 ; choix de relecture, 2026-10-20). La proximité avec la saillance reste à éprouver par E1. `ppp:perceptualIntensity` reste en attente (T10) et n’est pas rouvert ; si T10 est repris,
+  (réponse proposée à A9 ; choix de relecture, 2026-10-20). La proximité avec ce qui attire l’attention (notion réservée hors V1, spec §9.9) reste à éprouver par E1. L’intensité perceptive commune à tous les sens (notion mise en attente, T10, spec §9.9) n’est pas rouverte ; si T10 est repris,
   ce type en deviendra la spécialisation pour le goût (piste de ceinture). Seuls des ids définis sont cités (A12) : l’amer, le piquant en bouche et l’astringence, tous trois formels (A9). Le sucré, l’acide,
   le salé, l’umami et l’arôme en bouche sont encore en réserve, sans id : ils entreront dans la base quand leurs fiches existeront ; la base déclarée est donc incomplète. Les deux types de texture du premier
   lot n’y sont pas : la définition exclut la texture de la bouchée (choix de relecture (2026-10-20), série 78 bis).'
@@ -112,7 +112,7 @@ note_echelle: 'ordinal, sur le modèle des types du premier lot ; clés reprises
   d’ISO 3972 ne vaut pour l’ensemble.'
 identite: 'La force de l’ensemble de ce qui est perçu en bouche, et non l’intensité propre d’une qualité, qui reste une dimension des types du premier lot (leurs régions) ; pas la somme des intensités ;
   pas le nombre de composantes ; pas l’agrément. Rapprochement avec l’intensité de l’odeur (`ppp:odourIntensity`, famille Odorat : l’odeur au nez, par voie orthonasale), sans relation. Ce n’est pas l’intensité
-  perceptive amodale (`ppp:perceptualIntensity`, en attente, T10).'
+  perceptive commune à tous les sens (notion mise en attente, T10, spec §9.9).'
 relations:
 - type: confusableWith
   cible: ppp:bitterness
@@ -166,7 +166,7 @@ references:
   doi_ou_url: https://doi.org/10.1016/S0195-6663(03)00105-3
   role: alimente
   statut_verification: vérifiée sur résumé ou source secondaire
-  verifie_le: '2026-10-19'
+  verifie_le: '2026-10-20'
   verifie_sur: résumé (produits à 10, 22 et 35 °C) ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
   reprend: l’intensité des saveurs monte quand le produit est plus chaud (crème dessert et mayonnaise, à 10, 22 et 35 °C ; résumé)
   ne_reprend_pas: les attributs de texture, dont l’épaisseur (texture exclue des composantes)
@@ -208,8 +208,8 @@ references:
   reprend: l’intensité se compare mal d’une personne à l’autre
   ne_reprend_pas: les méthodes proposées
 - id: rousselin2023
-  citation: 'Rousselin, Y. (2023). Le vin pas à pas : apprenez les clés sur le vin, et vivez votre passion ! Ellipses.'
-  doi_ou_url: ISBN 978-2-340-08349-3
+  citation: 'Rousselin, Y. (2023). Le vin pas à pas : apprenez les clés sur le vin, et vivez votre passion ! Ellipses. ISBN 978-2-340-08349-3'
+  doi_ou_url: null
   role: contraste
   statut_verification: vérifiée sur résumé ou source secondaire
   verifie_le: '2026-10-20'
@@ -287,7 +287,7 @@ etat_de_l_art: 'Dans un mélange, l’intensité d’ensemble est en général i
   [[rousselin2023]], par source secondaire). L’intensité se compare mal d’une personne à l’autre (Bartoshuk, 2000 [[bartoshuk2000]]) ; les échelles d’intensité (échelle de grandeur à étiquettes [[green1993lms]]
   [[green1996lms]] ; estimation de grandeur, Stevens, 1957 [[stevens1957]]) sont des jugements de jury, sans série de référence physique. La force perçue dépend du nez (Lawless et al., 2004 [[lawless2004]]),
   de la température (Talavera et al., 2005 [[talavera2005]] ; Engelen et al., 2003 [[engelen2003]]) et de ce qui précède (accumulation de l’astringence [[green1993astr]] ; Prescott et Swain-Campbell, 2000
-  [[prescott2000]]). La complexité jugée va avec la force (Meillon et al., 2010 [[meillon2010]]). L’intensité perceptive amodale reste en attente (T10, spec §9.9). Aucune source lue ne teste l’accord sur
+  [[prescott2000]]). La complexité jugée va avec la force (Meillon et al., 2010 [[meillon2010]]). L’intensité perceptive commune à tous les sens reste en attente (T10, spec §9.9). Aucune source lue ne teste l’accord sur
   une intensité globale de flaveur. Détail : docs/bibliographie-par-type.md#groupe-gout.'
 etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-gout
 axiomes:
@@ -303,7 +303,7 @@ enonces_testables:
 - id: E1
   nature: existence
   enonce: après l’épreuve du premier lot, sur 6 à 10 produits identifiés (portions du même lot, au même moment), accord inter-observateurs à une région près, au-dessus du seuil fixé avant l’épreuve, à `nez`,
-    `moment`, `temperature_bouchee` et `avant` égaux (spec §9.7 H, règle 12) ; la proximité avec la saillance est à éprouver dans la même épreuve
+    `moment`, `temperature_bouchee` et `avant` égaux (spec §9.7 H, règle 12) ; la proximité avec ce qui attire l’attention (notion réservée hors V1, spec §9.9) est à éprouver dans la même épreuve
   statut_epistemique: non éprouvé
   epreuve: null
 - id: E4
@@ -363,6 +363,8 @@ remarque:
 - 'série 78 bis (choix de relecture (2026-10-20), corrections de relecture) : définition : astringence au lieu du toucher en bouche, texture exclue ; note_conditions sans Engelen et al. (2003) ; note_base
   ; gloses de « trijumeau » et de « rétronasale » à la première occurrence ; à relire'
 - 'série 78 quater (choix de relecture (2026-10-20), retouches de relecture) : référence Engelen et al. (2003) : reprend et ne_reprend_pas corrigés sur le résumé PubMed (14637326) ; à relire'
+- 'série 78 quinquies (choix de relecture (2026-10-20), retouches de relecture) : note_base, identite, état de l’art et E1 : l’intensité perceptive commune à tous les sens et ce qui attire l’attention nommés sans id (A12) ; référence Rousselin (2023) : ISBN déplacé dans la citation, doi_ou_url vide ; Engelen et al. (2003) : verifie_le 2026-10-20 ; à relire'
+- 'série 78 sexies (choix de relecture (2026-10-20), retouches de relecture) : note_base et E1 : ce qui attire l’attention, « notion réservée hors V1, spec §9.9 » ; à relire'
 relecture_explicative:
   date: null
   champs: []

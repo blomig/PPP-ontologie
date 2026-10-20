@@ -81,7 +81,7 @@ conditions_critiques:
 conditions_fixees:
   moment: firstBite
 note_conditions: 'règle 12 (spec §9.7 H) : `moment` est critique pour les types de texture ; la définition fixe `firstBite` (la première bouchée, ou la première pression) : une assertion faite à une autre
-  phase que celle que fixe la définition est invalide pour ce type, et le contrôle la refusera (contrôle à écrire) ; l’observation reste en note d’épisode. `unknown` est accepté, mais exclu de E1 (choix
+  phase que celle que fixe la définition est invalide pour ce type, et le contrôle du site la refuse ; l’observation reste en note d’épisode. `unknown` est accepté, mais exclu de E1 (choix
   de relecture (2026-10-20), série 78 bis). Juger la dureté puis une autre texture d’une même bouchée donne deux épisodes. `nez` n’est pas critique ; `temperature_bouchee` et `avant` sont à éprouver. Le
   nombre de coups de dent et la taille de la bouchée vont dans l’épisode, sans facette ; la salive est une note d’épisode ; la dentition relève de l’état de l’observateur (note facultative), chacun mâchant
   à sa façon (Brown et al., 1994 [[brown1994]] ; Kohyama et al., 2002 [[kohyama2002]]).'
@@ -374,6 +374,7 @@ remarque:
   fixée par la définition (note_conditions) ; labels EN « noticeable force », « a lot of force » ; à relire'
 - 'série 78 ter (choix de relecture (2026-10-20), conditions fixées) : champ `conditions_fixees` rempli (`moment: firstBite`, PPP_FicheType.md, spec §9.7 H, règle 12) ; à relire'
 - 'série 78 quater (choix de relecture (2026-10-20), retouches de relecture) : note_conditions : « le contrôle la refusera (contrôle à écrire) » ; à relire'
+- 'série 78 quinquies (choix de relecture (2026-10-20), retouches de relecture) : note_conditions : « le contrôle du site la refuse » ; à relire'
 relecture_explicative:
   date: null
   champs: []

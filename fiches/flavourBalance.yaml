@@ -146,7 +146,7 @@ note_echelle: 'une seule dimension, nominale (choix de relecture, 2026-10-20, s�
   ; nette ; forte) n’est pas retenu : il part en réserve, comme type distinct éventuel, sans id. Aucun voisinage n’est déclaré entre les valeurs. Les repères sont des solutions goûtées seules pour reconnaître
   chaque composante, pas des exemplaires ; la liste des valeurs doit être fixée avant E1 et contenir l’arôme (Clark et Lawless, 1994 [[clark_lawless1994]]).'
 identite: 'Laquelle des composantes l’emporte, pas une force d’ensemble (intensité (goût)) ni la force d’une qualité (types du premier lot) ; pas un rapport de composition (le rapport °Brix / acidité n’en
-  est pas une définition) ; pas la composante qui attire l’attention (dominance de la TDS, proche de la saillance) ; pas l’agrément. Les valeurs ne renvoient pas à des types : le sucré, l’acide, le salé,
+  est pas une définition) ; pas la composante qui attire l’attention (dominance de la TDS ; notion réservée hors V1, spec §9.9) ; pas l’agrément. Les valeurs ne renvoient pas à des types : le sucré, l’acide, le salé,
   l’umami et l’arôme en bouche sont encore en réserve.'
 relations:
 - type: confusableWith
@@ -207,8 +207,8 @@ references:
   reprend: à faible degré, l’éthanol est surtout amer, à fort degré surtout brûlant
   ne_reprend_pas: le lien avec la fréquence de consommation
 - id: peynaud2022
-  citation: Peynaud, É. & Blouin, J. (2022). Le goût du vin (1re éd. Bordas, 1980). Dunod.
-  doi_ou_url: ISBN 978-2-10-085002-0
+  citation: Peynaud, É. & Blouin, J. (2022). Le goût du vin (1re éd. Bordas, 1980). Dunod. ISBN 978-2-10-085002-0
+  doi_ou_url: null
   role: alimente
   statut_verification: vérifiée sur résumé ou source secondaire
   verifie_le: '2026-10-20'
@@ -424,6 +424,8 @@ a_relire:
 - statut_note
 remarque:
 - 'série 78 bis (choix de relecture (2026-10-20), corrections de relecture) : note_base : la définition exclut la texture de la bouchée ; glose de « rétronasale » à la première occurrence ; à relire'
+- 'série 78 quinquies (choix de relecture (2026-10-20), retouches de relecture) : identite : ce qui attire l’attention nommé comme notion mise en attente (A12) ; référence Peynaud et Blouin (2022) : ISBN déplacé dans la citation, doi_ou_url vide ; à relire'
+- 'série 78 sexies (choix de relecture (2026-10-20), retouches de relecture) : identite : ce qui attire l’attention, « notion réservée hors V1, spec §9.9 » ; à relire'
 relecture_explicative:
   date: null
   champs: []
