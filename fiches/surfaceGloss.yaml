@@ -165,21 +165,29 @@ references:
   ne_reprend_pas: 'la valeur de brillant comme borne de région'
   note_verification: 'l’ancienne phrase de grandeur_physique_homonyme (« la norme elle-même avertit… ») n’était pas vérifiée (texte payant) ; elle est remplacée en 2.5 par la phrase vérifiée d’ASTM D523 section 5.3 ; les classes « haute / moyenne / basse brillance » associées aux angles 20°, 60°, 85° ne sont pas vérifiées sur le texte de la norme'
 - id: oqlf_brillance
-  citation: Office québécois de la langue française, Grand dictionnaire terminologique, fiches « brillance » (peinture, contrôle de la qualité des peintures, 1983) et « luminance lumineuse » (physique,
-    photométrie et colorimétrie, mise à jour 1993).
-  doi_ou_url: https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8885899/brillance ; https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8876545/luminance-lumineuse
+  citation: Office québécois de la langue française, Grand dictionnaire terminologique, fiche « brillance » (peinture, contrôle de la qualité des peintures, 1983).
+  doi_ou_url: https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8885899/brillance
   role: contraste
   statut_verification: vérifiée sur la source
   verifie_le: '2026-10-10'
-  verifie_sur: 'fiches lues en ligne le 2026-10-10. Fiche 8885899 « brillance » (peinture, 1983) : appellation ancienne, encore quelquefois utilisée, de la luminosité d’une surface qui émet un rayonnement
-    lumineux ; la CIE ne retient que « luminosité » ; emploi déconseillé pour la confusion entre « brillance » (réflexion diffuse) et « brillant » (réflexion régulière). Fiche 8876545 « luminance lumineuse
-    » : « brillance », marqué désuet, ancien nom de la luminance lumineuse, encore en usage en astronomie'
-  reprend: 'l’avertissement de label : « brillance », ancien nom de la luminance, désuet sauf en astronomie (fiche « luminance lumineuse ») ; dans le vocabulaire des peintures, appellation ancienne de la
-    luminosité d’une surface qui émet de la lumière, emploi déconseillé pour la confusion avec « brillant », réflexion régulière (fiche « brillance »)'
-  ne_reprend_pas: rien d’autre ; en particulier, aucune des deux fiches ne parle de la netteté des reflets ni de niveaux de brillance
+  verifie_sur: 'fiche lue en ligne le 2026-10-10. Fiche 8885899 « brillance » (peinture, 1983) : appellation ancienne, encore quelquefois utilisée, de la luminosité d’une surface qui émet un rayonnement
+    lumineux ; la CIE ne retient que « luminosité » ; emploi déconseillé pour la confusion entre « brillance » (réflexion diffuse) et « brillant » (réflexion régulière)'
+  reprend: 'l’avertissement de label : dans le vocabulaire des peintures, appellation ancienne de la luminosité d’une surface qui émet de la lumière, emploi déconseillé pour la confusion avec « brillant »,
+    réflexion régulière (fiche « brillance »)'
+  ne_reprend_pas: rien d’autre ; en particulier, la fiche ne parle ni de la netteté des reflets ni de niveaux de brillance
   note_verification: 'corrigé en série 6, partie 7 : en 2.5 (T33), « emploi déconseillé » était rattaché à la fiche « brillance » comme si elle parlait de la luminance ; elle parle de la luminosité (le
     correspondant perçu de la luminance, selon sa note) et motive le déconseil par la confusion avec « brillant » ; c’est la fiche « luminance lumineuse » qui donne « brillance » comme ancien nom de la
-    luminance. Domaine de la fiche « brillance » corrigé (peinture, pas éclairage). Re-confirmé par la relecture explicative (série 6, vérification finale)'
+    luminance. Domaine de la fiche « brillance » corrigé (peinture, pas éclairage). Re-confirmé par la relecture explicative (série 6, vérification finale). Série 79 : la fiche « luminance lumineuse »,
+    citée jusque-là dans la même référence, a sa propre référence (oqlf_luminance)'
+- id: oqlf_luminance
+  citation: Office québécois de la langue française, Grand dictionnaire terminologique, fiche « luminance lumineuse » (physique, photométrie et colorimétrie, mise à jour 1993).
+  doi_ou_url: https://vitrinelinguistique.oqlf.gouv.qc.ca/fiche-gdt/fiche/8876545/luminance-lumineuse
+  role: contraste
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-10-10'
+  verifie_sur: 'fiche lue en ligne le 2026-10-10. Fiche 8876545 « luminance lumineuse » : « brillance », marqué désuet, ancien nom de la luminance lumineuse, encore en usage en astronomie'
+  reprend: 'l’avertissement de label : « brillance », ancien nom de la luminance, désuet sauf en astronomie (fiche « luminance lumineuse »)'
+  ne_reprend_pas: rien d’autre ; en particulier, la fiche ne parle ni de la netteté des reflets ni de niveaux de brillance
 - id: academie_brillance
   citation: Académie française, Dictionnaire de l'Académie française, 9e édition, article « brillance ».
   doi_ou_url: https://www.dictionnaire-academie.fr/article/A9B2144
@@ -260,7 +268,7 @@ etat_de_l_art: 'La brillance perçue a une littérature récente : Pellacini, Fe
   leurs propriétés physiques. Hunter (1937) [[hunter1937]] distingue six sortes de brillance, dont la netteté de l''image réfléchie, voisine de ce type ; Leloup et al. (2014) [[leloup2014]] rappellent que
   la mesure de brillant faite par un appareil ne prédit pas bien la brillance vue, et Fleming, Dror et Adelson (2003) [[fleming2003]] que le jugement dépend de l''éclairage. Dans ce qui en a été lu (résumés,
   pages d''éditeur), aucune ne nomme des niveaux perçus. La mesure de brillant des normes (ISO 2813, ASTM D523) [[iso2813]] [[astm_d523]] porte le même nom sans être ce type ; le mot « brillance » est aussi
-  l''ancien nom de la luminance (OQLF, Académie française) [[oqlf_brillance]] [[academie_brillance]]. Détail : docs/bibliographie-par-type.md#groupe-matiere.'
+  l''ancien nom de la luminance (OQLF, Académie française) [[oqlf_luminance]] [[academie_brillance]]. Détail : docs/bibliographie-par-type.md#groupe-matiere.'
 etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-matiere
 axiomes:
 - conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
@@ -309,6 +317,8 @@ manques:
 - 'ne s’explique pas sans aide (relecture explicative, série 6) : exemple concret : l’avertissement est lourd et « brillant » est ambigu (couleur vive ou reflet net) ; au 2026-10-14, les quatre régions ont un exemplaire relu ; reste un exemple concret, en tête de fiche, qui montre la différence entre « brillant » (reflet net) et « vif » (saturation)'
 bloque_par: []
 a_relire: []
+remarque:
+- 'série 79 (choix de relecture (2026-10-20)) : référence oqlf_brillance scindée : doi_ou_url ne garde que la fiche « brillance » ; la fiche « luminance lumineuse », sur laquelle s’appuie l’avertissement de label, devient la référence oqlf_luminance (même statut, même date de vérification) ; appel de l’état de l’art sur « l’ancien nom de la luminance » porté sur oqlf_luminance ; à relire'
 relecture_explicative:
   date: '2026-10-11'
   champs:
