@@ -17,8 +17,9 @@ Tout passe par un **ticket GitHub**, ouvert avec l'un des formulaires du dépôt
 | Signaler une anomalie | un cas reproductible que la fiche ne prévoit pas | observation reproductible |
 | Publier une réfutation | une épreuve dont le protocole et le seuil ont été fixés avant | protocole et résultats |
 | Proposer un type | une fiche complète au patron `PPP_FicheType.md` | fiche complète |
+| Soumettre une image | une image d'un objet public, sous licence libre, pour une analyse publiée en exemple sur la page Analyses | lien vers l'image, auteur, licence |
 
-Le contenu minimal de chaque formulaire est celui de `docs/gouvernance.md` (section 2.4).
+Le contenu minimal de chaque formulaire est celui de `docs/gouvernance.md` (section 2.4). Le formulaire « Soumettre une image » est décrit sur la page Analyses du site.
 
 ## Ce qui se passe ensuite
 

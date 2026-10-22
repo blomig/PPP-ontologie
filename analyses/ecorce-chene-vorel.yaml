@@ -1,6 +1,6 @@
 # Analyse d'un objet depuis une image, au format de l'annexe D de docs/avis-analyse-depuis-image.md (série 82, 2026-10-22).
 # Assertions reprises de l'annexe E de l'avis (série 80 bis, ligne localIrregularity mise à jour en série 81).
-# Non publiée tant que relue_le est vide (décision de l'éditeur du projet, Q16). Ce fichier n'est lu par aucun script.
+# Non publiée tant que relue_le est vide (décision de l'éditeur du projet, Q16). Ce fichier est lu par la maquette (maquette/analyses_pub.py) et affiché sur la page Analyses.
 date: "2026-10-22"                       # date de l'analyse (ajout au gabarit de l'annexe D, pour l'affichage)
 relue_le: "2026-10-22"                   # date de relecture, choix de relecture (2026-10-22) ; vide = non publiable (ajout au gabarit de l'annexe D)
 analyse:
@@ -31,7 +31,7 @@ assertions:
     hypothese: null
     acces: observé sur l'image
     depuis: null
-    indice: "crêtes et sillons profonds, chacun visible ; même région que l'exemplaire déjà publié pour cette photo"
+    indice: "crêtes et sillons profonds, chacun visible ; même région que l’exemplaire déjà publié pour cette photo"
     confiance: haute
     doute: "aucun"
   - type: ppp:textureDirectionality
@@ -40,9 +40,9 @@ assertions:
     hypothese: null
     acces: observé sur l'image
     depuis: null
-    indice: "les crêtes suivent l'axe vertical sur toute la hauteur de l'image"
+    indice: "les crêtes suivent l’axe vertical sur toute la hauteur de l’image"
     confiance: moyenne
-    doute: "quelques crêtes obliques ; la région \"en partie orientée\" reste possible"
+    doute: "quelques crêtes obliques ; la région « en partie orientée » reste possible"
   - type: ppp:hueRange
     about: app:commons-ecorce-chene-vorel#ecorce
     region: ppp:hueRange/neighbouringHues
@@ -60,7 +60,7 @@ assertions:
     depuis: null
     indice: "fonds de sillons presque noirs à côté de petites taches presque blanches"
     confiance: basse
-    doute: "le très sombre est l'ombre des sillons : il dépend de la lumière (condition déterminante, ici estimée diffuse) et de l'exposition"
+    doute: "le très sombre est l’ombre des sillons : il dépend de la lumière (condition déterminante, ici estimée diffuse) et de l’exposition"
   - type: ppp:surfaceGloss
     about: app:commons-ecorce-chene-vorel#ecorce
     region: null                         # « non tranché »
@@ -76,9 +76,9 @@ assertions:
     hypothese: null
     acces: non décidable
     depuis: null
-    indice: "aucun repère d'échelle dans le cadre"
+    indice: "aucun repère d’échelle dans le cadre"
     confiance: null
-    doute: "la largeur du champ montré n'est pas connue"
+    doute: "la largeur du champ montré n’est pas connue"
   - type: ppp:hardnessToTouch
     about: app:commons-ecorce-chene-vorel#ecorce
     region: null
@@ -94,13 +94,13 @@ assertions:
     hypothese: null
     acces: observé sur l'image
     depuis: null
-    indice: "crêtes et sillons verticaux, de largeurs inégales, sur toute l'image : c'est l'ordre d'ensemble de l'écorce ; aucune cicatrice, aucun nœud, aucune plaque arrachée ne se détache ; les écailles soulevées au fond du sillon central se retrouvent dans d'autres sillons et font partie de cette régularité"
+    indice: "crêtes et sillons verticaux, de largeurs inégales, sur toute l’image : c’est l’ordre d’ensemble de l’écorce ; aucune cicatrice, aucun nœud, aucune plaque arrachée ne se détache ; les écailles soulevées au fond du sillon central se retrouvent dans d’autres sillons et font partie de cette régularité"
     confiance: moyenne
-    doute: "un accident hors cadre ou masqué par l'ombre ne se voit pas"
+    doute: "un accident hors cadre ou masqué par l’ombre ne se voit pas"
 anomalies:
   - type: ppp:hueRange
     constat: "le brun rejoint la question du brun, déjà ouverte"
     ticket: null
   - type: null                           # porte sur l'objet, pas sur un type
-    constat: "les crêtes, les sillons et les plaques vert-gris ne sont pas déclarés comme parties de l'objet"
+    constat: "les crêtes, les sillons et les plaques vert-gris ne sont pas déclarés comme parties de l’objet"
     ticket: null

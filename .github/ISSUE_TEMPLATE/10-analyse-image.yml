@@ -1,4 +1,4 @@
-# Formulaire de ticket « analyse-image » (Q16, docs/page-analyses.md). Modèle pour .github/ISSUE_TEMPLATE/ du dépôt public.
+# Formulaire de ticket « analyse-image » (page « Analyses » du site). Modèle pour .github/ISSUE_TEMPLATE/ du dépôt public.
 # Syntaxe : GitHub Docs, « Syntax for issue forms » et « Syntax for GitHub's form schema » (comme les modèles 01 à 09).
 name: Soumettre une image
 description: Proposer une image d'un objet public pour une analyse publiée en exemple (ouvert à tous).
