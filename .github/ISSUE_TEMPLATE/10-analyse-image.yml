@@ -1,0 +1,88 @@
+# Formulaire de ticket « analyse-image » (Q16, docs/page-analyses.md). Modèle pour .github/ISSUE_TEMPLATE/ du dépôt public.
+# Syntaxe : GitHub Docs, « Syntax for issue forms » et « Syntax for GitHub's form schema » (comme les modèles 01 à 09).
+name: Soumettre une image
+description: Proposer une image d'un objet public pour une analyse publiée en exemple (ouvert à tous).
+title: '[analyse-image] '
+labels:
+- analyse-image
+- reçu
+body:
+- type: markdown
+  attributes:
+    value: 'Ce ticket est **public**. N''y mettez ni adresse électronique ni donnée personnelle : un pseudonyme suffit.'
+- type: input
+  id: lien_image
+  attributes:
+    label: Lien vers l'image
+    description: 'Le lien de la page où se trouve l''image, chez sa source (par exemple sa page sur Wikimedia Commons), pas un lien direct vers le fichier ni une recherche. Ne déposez aucun fichier.'
+    placeholder: https://commons.wikimedia.org/wiki/File:…
+  validations:
+    required: true
+- type: input
+  id: source_auteur
+  attributes:
+    label: Source et auteur
+    description: 'Le site qui publie l''image et la personne qui l''a faite (photographe, auteur du scan).'
+    placeholder: Wikimedia Commons, photo de …
+  validations:
+    required: true
+- type: input
+  id: licence_image
+  attributes:
+    label: Licence de l'image
+    description: 'Le nom de la licence et le lien vers son texte, tels qu''ils figurent sur la page de l''image.'
+    placeholder: CC BY-SA 4.0, https://creativecommons.org/licenses/by-sa/4.0
+  validations:
+    required: true
+- type: textarea
+  id: objet
+  attributes:
+    label: L'objet
+    description: 'Ce que montre l''image et où l''objet est visible par tous : lieu public, musée ou paysage. Si l''objet est la photo publiée elle-même, sous licence libre, dites-le.'
+  validations:
+    required: false
+- type: textarea
+  id: contexte
+  attributes:
+    label: Contexte
+    description: 'Quelques lignes : ce que vous savez de l''objet et de la prise de vue (lumière, distance, retouche, recadrage). « Je ne sais pas » est une réponse.'
+  validations:
+    required: false
+- type: markdown
+  attributes:
+    value: '**L''analyse décrit, elle ne juge pas : les avis (beau, élégant, trop chargé…) ne sont pas repris.**'
+- type: checkboxes
+  id: attestation
+  attributes:
+    label: Attestation
+    options:
+    - label: "J'atteste que l'image est sous licence libre ou dans le domaine public, et que l'objet est public : visible par tous dans un lieu public, un musée ou un paysage, ou bien la photo publiée elle-même sous licence libre."
+      required: true
+- type: markdown
+  attributes:
+    value: 'L''équipe vérifie les droits et peut refuser une soumission. La publication d''une analyse n''est pas garantie.'
+- type: input
+  id: pseudonyme
+  attributes:
+    label: Pseudonyme
+    description: Facultatif. Le nom sous lequel vous voulez apparaître. Jamais d'adresse électronique.
+  validations:
+    required: false
+- type: dropdown
+  id: langue
+  attributes:
+    label: Langue / Language
+    description: Langue du ticket (facultatif) / Language of the ticket (optional).
+    options:
+    - fr
+    - en
+    default: 0
+  validations:
+    required: false
+- type: checkboxes
+  id: licence
+  attributes:
+    label: Licence
+    options:
+    - label: J'accepte que ma contribution soit versée sous les licences du projet (contenu CC BY 4.0, code MIT), sans accord à signer.
+      required: true

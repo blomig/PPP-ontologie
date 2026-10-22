@@ -21,7 +21,9 @@ question_attentionnelle: La surface, le trait, le bord ou l’intérieur visible
 contre_exemple: 'Une surface à gros relief régulier (tôle gaufrée) a une texture grosse, sans irrégularité locale. Un verre bullé, semé partout de bulles pareilles, n’a pas d’irrégularité locale : ces bulles
   sont sa régularité. Qu’un verre ait plus ou moins de bulles relève de la densité perceptive ; leur répartition, de la distribution. Des accidents isolés dans une matière par ailleurs régulière (trois
   bulles dans un verre clair, un fil dans une coupe soufflée, une grosse bulle parmi des petites) relèvent de l’irrégularité locale ; un amas de bulles relève des deux types : c’est un écart, et la distribution
-  est groupée. Des bulles si fines qu’on ne les distingue plus une à une rendent le verre trouble : c’est sa transparence qui change.'
+  est groupée. Des bulles si fines qu’on ne les distingue plus une à une rendent le verre trouble : c’est sa transparence qui change. Sur une écorce de chêne, les crêtes et les sillons
+  verticaux, de largeurs inégales, sont sa régularité : sans accident isolé, l’irrégularité locale est « aucune » ; une cicatrice, un nœud ou une plaque arrachée y fait un écart, comme un nœud dans
+  le fil d’une planche ou une marque sur une peau tannée. Un tas de cailloux mêlés n’a pas d’ordre d’ensemble : le type n’y est pas applicable.'
 grandeur_physique_homonyme: 'aucune pour le label canonique ; l’ancien label v0.2 « rugosité », retiré, était homonyme de la rugosité de surface mesurée, qui relève de la texture.'
 mesure:
   etat: aucune_methode_robuste
@@ -69,7 +71,9 @@ note_porteur: 'Intérieur : on ne juge que ce qui se voit dans l’épaisseur, i
   La transparence est une condition d’accès à l’intérieur, pas une base du type : les bulles ont déjà un bord perçu (netteté du bord), et une piqûre sur un métal opaque ne dépend pas de la transparence.
   Seule compte la bulle vue, pas celle qu’on sait là. Les indices bulle / piqûre sont des positions de travail, à éprouver.'
 arité: 1
-condition_NA: porteur sans régularité d’ensemble perceptible (rien par rapport à quoi un écart se lirait).
+condition_NA: 'porteur sans aucun ordre d’ensemble perceptible, ni répétition, ni alternance, ni orientation commune, ni grain homogène : rien par rapport à quoi un endroit se lirait comme un écart
+  (un tas de cailloux mêlés, un sol de forêt couvert de débris variés). Un ordre naturel ou inexact compte : une alternance irrégulière dans son détail est une régularité d’ensemble dès qu’elle se maintient
+  sur le porteur ou la partie considérée, et les variations présentes partout en font partie ; une irrégularité locale est un endroit borné qui rompt cet ordre.'
 espace_valeurs:
   echelle: ordinale
   sens_croissant: de `none` (rang 1) vers `marked` (rang 3), l’ampleur des écarts augmente
@@ -276,7 +280,27 @@ references:
   verifie_sur: métadonnées Crossref (titre court, ouvrage, pages) ; résumé non disponible ; texte non lu
   reprend: la parallaxe de mouvement comme indice de profondeur reconnu
   ne_reprend_pas: leur analyse des indices (contenu non lu)
-etat_de_l_art: 'La régularité d’une texture est une des dimensions de Tamura, Mori et Yamawaki (1978) [[tamura1978]], calculée à partir des variations de leurs autres mesures (grossièreté, contraste, orientation, linéarité) ; Liu et Picard (1996) [[liu_picard1996]] traitent le caractère aléatoire d’une texture comme une composante à part. Aucune source trouvée ne nomme l’écart local à une régularité comme qualité perçue. Dans l’intérieur d’une matière, aucune étude de perception sur les bulles ou les inclusions n’a été trouvée (recherche du 2026-10-17). La perception des matières translucides et transparentes est étudiée : flou, contraste, reflets et lumière y jouent [[fleming_bulthoff2005]] [[motoyoshi2010]], et le phénomène perçu dépend des conditions d’observation [[gigilashvili2021]] ; le modèle des filtres minces [[metelli1974]] convient mal à un volume ; dans un verre épais, les déformations dues à l’objet servent d’indice [[fleming_jakel_maloney2011]]. Pour séparer une bulle d’une piqûre, la parallaxe de mouvement, indice de profondeur reconnu [[cutting_vishton1995]], et le reflet qui reste entier au-dessus d’une bulle sont des positions de travail. Les normes et notes techniques du verre décrivent bulles et inclusions comme des défauts, comptés par rapport à un verre sans bulle (ISO 10110-18 [[iso_10110_18]], ISO 12123 [[iso_12123]], SCHOTT TIE-28 [[schott_tie28]], ISO 12543-6 [[iso_12543_6]]) ; le vocabulaire d’atelier distingue seed, blister, cord et stone [[astm_c162]]. La base retenue (texture et netteté du bord) est une décision du projet, révisable après épreuve (T11, série 48) ; la transparence n’en fait pas partie : c’est une condition d’accès à l’intérieur. Détail : docs/bibliographie-par-type.md#groupe-texture.'
+- id: nothdurft1991
+  citation: Nothdurft, H. C. (1991). Texture segmentation and pop-out from orientation contrast. Vision Research, 31(6), 1073–1078.
+  doi_ou_url: https://doi.org/10.1016/0042-6989(91)90211-M
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-22'
+  verifie_sur: 'métadonnées Crossref et résumé lu (PubMed 1858322) : dans un réseau de traits orientés, un trait d’une autre orientation se détecte sans effort ; la segmentation des textures et cette
+    détection viennent des différences d’orientation plutôt que des orientations elles-mêmes ; texte non lu'
+  reprend: un écart local se lit par rapport à ce qui l’entoure (différence avec les voisins), pas par sa seule propriété
+  ne_reprend_pas: les modèles et les données neurophysiologiques ; la détection n’est pas une ampleur d’écart
+- id: julesz1981
+  citation: Julesz, B. (1981). Textons, the elements of texture perception, and their interactions. Nature, 290(5802), 91–97.
+  doi_ou_url: https://doi.org/10.1038/290091a0
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-10-22'
+  verifie_sur: 'métadonnées Crossref et résumé lu (PubMed 7207603) : la discrimination préattentive des textures résulte de quelques éléments locaux bien visibles (textons) ; seules leurs statistiques
+    de premier ordre comptent, leur position relative demande un examen attentif ; texte non lu'
+  reprend: des éléments locaux suffisent à faire voir une différence dans une texture
+  ne_reprend_pas: la théorie des textons et les statistiques d’ordre supérieur
+etat_de_l_art: 'La régularité d’une texture est une des dimensions de Tamura, Mori et Yamawaki (1978) [[tamura1978]], calculée à partir des variations de leurs autres mesures (grossièreté, contraste, orientation, linéarité) ; Liu et Picard (1996) [[liu_picard1996]] traitent le caractère aléatoire d’une texture comme une composante à part. Aucune source trouvée ne nomme l’écart local à une régularité comme qualité perçue. La perception d’un élément qui rompt une texture est étudiée en psychophysique : dans un réseau de traits orientés, un trait d’une autre orientation se détecte d’emblée, et c’est la différence d’orientation avec ses voisins qui compte, plus que l’orientation elle-même (Nothdurft, 1991) [[nothdurft1991]] ; Julesz (1981) [[julesz1981]] attribue la discrimination rapide des textures à quelques éléments locaux bien visibles, les textons. Ces travaux mesurent une détection ou une discrimination, pas l’ampleur d’un écart : aucune échelle de l’irrégularité locale n’est connue (recherche du 2026-10-22). Dans l’intérieur d’une matière, aucune étude de perception sur les bulles ou les inclusions n’a été trouvée (recherche du 2026-10-17). La perception des matières translucides et transparentes est étudiée : flou, contraste, reflets et lumière y jouent [[fleming_bulthoff2005]] [[motoyoshi2010]], et le phénomène perçu dépend des conditions d’observation [[gigilashvili2021]] ; le modèle des filtres minces [[metelli1974]] convient mal à un volume ; dans un verre épais, les déformations dues à l’objet servent d’indice [[fleming_jakel_maloney2011]]. Pour séparer une bulle d’une piqûre, la parallaxe de mouvement, indice de profondeur reconnu [[cutting_vishton1995]], et le reflet qui reste entier au-dessus d’une bulle sont des positions de travail. Les normes et notes techniques du verre décrivent bulles et inclusions comme des défauts, comptés par rapport à un verre sans bulle (ISO 10110-18 [[iso_10110_18]], ISO 12123 [[iso_12123]], SCHOTT TIE-28 [[schott_tie28]], ISO 12543-6 [[iso_12543_6]]) ; le vocabulaire d’atelier distingue seed, blister, cord et stone [[astm_c162]]. La base retenue (texture et netteté du bord) est une décision du projet, révisable après épreuve (T11, série 48) ; la transparence n’en fait pas partie : c’est une condition d’accès à l’intérieur. Détail : docs/bibliographie-par-type.md#groupe-texture.'
 etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-texture
 axiomes:
 - conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
@@ -323,8 +347,10 @@ manques:
 - 'série 67 : indices bulle / piqûre (parallaxe, reflet) et énoncé E2 à éprouver'
 bloque_par: []
 a_relire: []
+remarque:
+- 'série 81 (choix de relecture (2026-10-22), sur décision du fond prise pour le modèle) : condition_NA précisée (régularité d’ensemble : ordre perceptible sur le porteur ou la partie, naturel ou inexact, variations présentes partout comprises ; non applicable sans aucun ordre) ; contre_exemple : écorce de chêne et tas de cailloux ; état de l’art : Nothdurft (1991) et Julesz (1981), aucune échelle connue ; relu en relecture explicative le 2026-10-22'
 relecture_explicative:
-  date: '2026-10-17'
+  date: '2026-10-22'
   champs:
   - question_attentionnelle
   - définition
@@ -347,6 +373,9 @@ relecture_explicative:
   - 'transfert (validé en relecture explicative, série 67 bis, 2026-10-17)'
   - 'etat_de_l_art (validé en relecture explicative, série 67 bis, 2026-10-17)'
   - 'mesure (raison ISO 10110-18 reformulée) (validé en relecture explicative, série 67 bis, 2026-10-17)'
+  - 'contre_exemple (série 81) (validé en relecture explicative, série 82 bis, 2026-10-22)'
+  - 'condition_NA (série 81) (validé en relecture explicative, série 81 bis, 2026-10-22)'
+  - 'etat_de_l_art (série 81) (validé en relecture explicative, série 81 bis, 2026-10-22)'
   - 'note_conditions (phrase sur la photo proposée par la relecture explicative, série 67 ter, 2026-10-17)'
   - 'enonces_testables E1 et E2 (E2 validé en relecture explicative, série 67 bis ; formulation de E1 et E2 proposée par la relecture explicative, série 68 bis ; 2026-10-17)'
   a_reconfirmer: []

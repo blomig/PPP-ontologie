@@ -1,0 +1,106 @@
+# Analyse d'un objet depuis une image, au format de l'annexe D de docs/avis-analyse-depuis-image.md (série 82, 2026-10-22).
+# Assertions reprises de l'annexe E de l'avis (série 80 bis, ligne localIrregularity mise à jour en série 81).
+# Non publiée tant que relue_le est vide (décision de l'éditeur du projet, Q16). Ce fichier n'est lu par aucun script.
+date: "2026-10-22"                       # date de l'analyse (ajout au gabarit de l'annexe D, pour l'affichage)
+relue_le: "2026-10-22"                   # date de relecture, choix de relecture (2026-10-22) ; vide = non publiable (ajout au gabarit de l'annexe D)
+analyse:
+  objet: app:commons-ecorce-chene-vorel   # l'objet public est ici la photographie publique citée comme objet (pratique des fiches d'exemplaires), le lieu de l'arbre n'étant pas connu
+  image: "https://commons.wikimedia.org/wiki/File:Oak_bark.jpg"
+  credit:
+    auteur: "Martin Vorel"
+    licence: "CC BY-SA 4.0"
+    licence_url: "https://creativecommons.org/licenses/by-sa/4.0"
+    source: "Wikimedia Commons"
+    url: "https://commons.wikimedia.org/wiki/File:Oak_bark.jpg"
+    date_verification: "2026-10-22"      # API Commons : auteur, licence et URL de licence identiques à fiches/exemplaires.yaml (relevé du 2026-10-19)
+    mention_requise: "« Oak bark », Martin Vorel, Wikimedia Commons, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)"
+  contexte_declare: "écorce d’un chêne pédonculé (Quercus robur), vue rapprochée verticale"
+  episode:
+    id: ppp-e:pilote-78                  # épisode existant de fiches/exemplaires.yaml, repris tel quel sauf note_distance, écrite en mots simples pour l'affichage
+    target: app:commons-ecorce-chene-vorel
+    observedUnder: {presentation: screen, lumiere: diffuse, distance: near, angle: frontal, duree: exam}
+    note_distance: "lumière, angle et distance estimés sur l’image (2026-10-19) ; condition recommandée : sur place, de près, à la lumière du jour"
+    note_image: "inconnue"
+    usesModality: [vision]
+    observer: "l’équipe (un seul observateur ; aucun accord déclaré)"
+    date: "2026-10-19"
+assertions:
+  - type: ppp:texture
+    about: app:commons-ecorce-chene-vorel#ecorce
+    region: ppp:texture/coarse
+    hypothese: null
+    acces: observé sur l'image
+    depuis: null
+    indice: "crêtes et sillons profonds, chacun visible ; même région que l'exemplaire déjà publié pour cette photo"
+    confiance: haute
+    doute: "aucun"
+  - type: ppp:textureDirectionality
+    about: app:commons-ecorce-chene-vorel#ecorce
+    region: ppp:textureDirectionality/oriented
+    hypothese: null
+    acces: observé sur l'image
+    depuis: null
+    indice: "les crêtes suivent l'axe vertical sur toute la hauteur de l'image"
+    confiance: moyenne
+    doute: "quelques crêtes obliques ; la région \"en partie orientée\" reste possible"
+  - type: ppp:hueRange
+    about: app:commons-ecorce-chene-vorel#ecorce
+    region: ppp:hueRange/neighbouringHues
+    hypothese: null
+    acces: observé sur l'image
+    depuis: null
+    indice: "orangés et bruns dominants, plaques vert-gris"
+    confiance: moyenne
+    doute: "balance des blancs inconnue ; le vert-gris est-il une teinte ou un gris ?"
+  - type: ppp:lightnessRange
+    about: app:commons-ecorce-chene-vorel#ecorce
+    region: ppp:lightnessRange/distantLightnesses
+    hypothese: null
+    acces: observé sur l'image
+    depuis: null
+    indice: "fonds de sillons presque noirs à côté de petites taches presque blanches"
+    confiance: basse
+    doute: "le très sombre est l'ombre des sillons : il dépend de la lumière (condition déterminante, ici estimée diffuse) et de l'exposition"
+  - type: ppp:surfaceGloss
+    about: app:commons-ecorce-chene-vorel#ecorce
+    region: null                         # « non tranché »
+    hypothese: null
+    acces: non décidable
+    depuis: null
+    indice: "un seul point de vue, lumière diffuse estimée"
+    confiance: null
+    doute: "« aucun reflet, sous aucun angle » ne se vérifie pas sur une vue fixe"
+  - type: ppp:perceivedSize
+    about: app:commons-ecorce-chene-vorel#ecorce
+    region: null                         # « non tranché »
+    hypothese: null
+    acces: non décidable
+    depuis: null
+    indice: "aucun repère d'échelle dans le cadre"
+    confiance: null
+    doute: "la largeur du champ montré n'est pas connue"
+  - type: ppp:hardnessToTouch
+    about: app:commons-ecorce-chene-vorel#ecorce
+    region: null
+    hypothese: ppp:hardnessToTouch/doesNotYield
+    acces: inféré
+    depuis: contexte déclaré             # écorce d'un chêne
+    indice: "aucun indice visuel de souplesse"
+    confiance: basse
+    doute: "aucune affirmation : « non évalué » sur la carte ; à éprouver au toucher, en appuyant du doigt ; la fiche est en préparation"
+  - type: ppp:localIrregularity
+    about: app:commons-ecorce-chene-vorel#ecorce
+    region: ppp:localIrregularity/none
+    hypothese: null
+    acces: observé sur l'image
+    depuis: null
+    indice: "crêtes et sillons verticaux, de largeurs inégales, sur toute l'image : c'est l'ordre d'ensemble de l'écorce ; aucune cicatrice, aucun nœud, aucune plaque arrachée ne se détache ; les écailles soulevées au fond du sillon central se retrouvent dans d'autres sillons et font partie de cette régularité"
+    confiance: moyenne
+    doute: "un accident hors cadre ou masqué par l'ombre ne se voit pas"
+anomalies:
+  - type: ppp:hueRange
+    constat: "le brun rejoint la question du brun, déjà ouverte"
+    ticket: null
+  - type: null                           # porte sur l'objet, pas sur un type
+    constat: "les crêtes, les sillons et les plaques vert-gris ne sont pas déclarés comme parties de l'objet"
+    ticket: null
