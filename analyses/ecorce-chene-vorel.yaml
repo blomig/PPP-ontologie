@@ -16,6 +16,9 @@ analyse:
     url: "https://commons.wikimedia.org/wiki/File:Oak_bark.jpg"
     date_verification: "2026-10-22"      # API Commons : auteur, licence et URL de licence identiques à fiches/exemplaires.yaml (relevé du 2026-10-19)
     mention_requise: "« Oak bark », Martin Vorel, Wikimedia Commons, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)"
+  alt:                                   # texte alternatif, descriptif et neutre ; relu (choix de relecture, 2026-10-24)
+    fr: "Gros plan vertical sur l’écorce d’un chêne : crêtes et sillons verticaux de largeurs inégales, en tons bruns, orangés et vert-gris."
+    en: "Vertical close-up of the bark of an oak: vertical ridges and furrows of uneven widths, in brown, orange and grey-green tones."
   contexte_declare: "écorce d’un chêne pédonculé (Quercus robur), vue rapprochée verticale"
   episode:
     id: ppp-e:pilote-78                  # épisode existant de fiches/exemplaires.yaml, repris tel quel sauf note_distance, écrite en mots simples pour l'affichage

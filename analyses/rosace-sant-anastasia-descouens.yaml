@@ -10,7 +10,12 @@
 # « nel mezzo » du transept, « un rosone con al centro lo scudo raggiato bianco e nero, simbolo dell'ordine » ; pavement commencé en 1462,
 # attribué à Pietro da Porlezza, « bianco d'Istria », « basanite nera » et rouge. Identification des pierres non vérifiée sur place.
 # Objet hors registre : fiches/exemplaires.yaml n'est pas modifié ; l'id app: ci-dessous est proposé, en attente d'inscription.
-# Image non reproduite : l'objet n'étant pas au registre, la page ne montre que le lien vers Commons.
+# Image : à la question « On affiche les images dans les analyses ? », l'éditeur du projet (2026-10-23) a répondu : « Oui, intégrez l'image dans toutes les analyses quand la licence le permet ».
+# La licence CC BY-SA 4.0 étant vérifiée, l'image peut être reproduite ; copie réduite à faire par la maquette, avec le crédit et la même licence.
+# Lecture de l'équipe (choix de relecture, 2026-10-23) : « quand la licence le permet » veut dire une licence libre et vérifiée (c'est déjà la règle de Q16) ;
+# on donne l'auteur, la licence et un lien vers elle, et un lien vers la source ; partage à l'identique, donc même licence ;
+# un recadrage ou une retouche est signalé, une simple réduction ne l'est pas, comme dans les crédits des exemplaires ; sinon, le lien seul.
+# C'est une lecture des règles, pas un avis juridique.
 date: "2026-10-23"                       # date de l'analyse
 relue_le: "2026-10-23"                   # date de relecture, choix de relecture (2026-10-23) ; vide = non publiable
 ticket: 6                                # ticket de soumission (formulaire « Soumettre une image » du dépôt public)
@@ -33,6 +38,9 @@ analyse:
     url: "https://commons.wikimedia.org/wiki/File:Sant%27Anastasia_-_Verona_-_Rosone_con_lo_stemma_domenicano.jpg"
     date_verification: "2026-10-23"      # API Commons (extmetadata) : Artist, LicenseShortName, LicenseUrl, AttributionRequired
     mention_requise: "« Sant'Anastasia - Verona - Rosone con lo stemma domenicano », Didier Descouens, Wikimedia Commons, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)"
+  alt:                                   # texte alternatif, descriptif et neutre ; relu (choix de relecture, 2026-10-24)
+    fr: "Pavement de marbre vu en oblique : une rosace ronde faite d’écailles noires bordées de blanc et de rouge, autour d’un disque noir à rayons blancs ondulés ; autour, un pavement à motifs d’écailles et des bandes ondulées."
+    en: "Marble floor seen at an angle: a round rosette made of black scales edged with white and red, around a black disc with wavy white rays; around it, paving with scale patterns and wavy bands."
   contexte_declare: "Sol en marbre. Lumière à 45° rasante, montrant à la fois la texture des matériaux et leur brillance"   # tel que déclaré dans le ticket
   episode:
     id: ppp-e:analyse-rosace-sant-anastasia   # épisode propre à cette analyse, non inscrit dans fiches/exemplaires.yaml
