@@ -14,6 +14,14 @@
 date: "2026-10-23"                       # date de l'analyse
 relue_le: "2026-10-23"                   # date de relecture, choix de relecture (2026-10-23) ; vide = non publiable
 ticket: 6                                # ticket de soumission (formulaire « Soumettre une image » du dépôt public)
+parties:                                 # libellés lisibles des parties (FR et EN), pour la colonne « Partie » de la page
+  rosace: {fr: "rosace", en: "rosette"}
+  pavement-autour: {fr: "pavement autour de la rosace", en: "paving around the rosette"}
+  champ-ecailles: {fr: "champ d’écailles", en: "field of scales"}
+  pierre-noire: {fr: "pierre noire", en: "black stone"}
+  pierre-blanche: {fr: "pierre blanche", en: "white stone"}
+  pierre-rouge: {fr: "pierre rouge", en: "red stone"}
+  joints: {fr: "joints entre les pierres", en: "joints between the stones"}
 analyse:
   objet: "rosace du pavement de la basilique Sant’Anastasia, Vérone"   # texte : objet proposé, hors registre
   image: "https://commons.wikimedia.org/wiki/File:Sant%27Anastasia_-_Verona_-_Rosone_con_lo_stemma_domenicano.jpg"

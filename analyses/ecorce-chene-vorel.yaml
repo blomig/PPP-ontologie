@@ -3,6 +3,8 @@
 # Non publiée tant que relue_le est vide (décision de l'éditeur du projet, Q16). Ce fichier est lu par la maquette (maquette/analyses_pub.py) et affiché sur la page Analyses.
 date: "2026-10-22"                       # date de l'analyse (ajout au gabarit de l'annexe D, pour l'affichage)
 relue_le: "2026-10-22"                   # date de relecture, choix de relecture (2026-10-22) ; vide = non publiable (ajout au gabarit de l'annexe D)
+parties:                                 # libellés lisibles des parties (FR et EN), pour la colonne « Partie » de la page
+  ecorce: {fr: "écorce", en: "bark"}
 analyse:
   objet: app:commons-ecorce-chene-vorel   # l'objet public est ici la photographie publique citée comme objet (pratique des fiches d'exemplaires), le lieu de l'arbre n'étant pas connu
   image: "https://commons.wikimedia.org/wiki/File:Oak_bark.jpg"

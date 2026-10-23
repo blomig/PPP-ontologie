@@ -85,7 +85,7 @@ espace_valeurs:
   regions:
   - cle: weak
     label_fr: faible
-    label_en: weak
+    label_en: slight
     rang: 1
     repere: deux zones de clarté très proche, qu’on distingue à peine (deux gris voisins)
     exemplaires:
@@ -99,13 +99,13 @@ espace_valeurs:
     exemplaires: []
   - cle: marked
     label_fr: évident
-    label_en: marked
+    label_en: evident
     rang: 3
     repere: écart visible d’emblée (un gris foncé sur un fond clair)
     exemplaires: []
   - cle: strong
     label_fr: maximal
-    label_en: strong
+    label_en: maximal
     rang: 4
     repere: une zone très sombre contre une zone très claire (noir sur blanc)
     exemplaires:
@@ -265,6 +265,7 @@ relecture_explicative:
   - exemplaires
   - etat_de_l_art (série 6, vérification finale)
   - references (série 6, vérification finale)
+  - espace_valeurs.regions.label_en (label_en alignés sur perceptualContrast, choix de relecture, série 29)
   a_reconfirmer: []
   reconfirme:
   - champ: question_attentionnelle
