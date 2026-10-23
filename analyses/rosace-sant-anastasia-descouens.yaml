@@ -1,0 +1,219 @@
+# Analyse d'un objet depuis une image, au format de l'annexe D de docs/avis-analyse-depuis-image.md, comme analyses/ecorce-chene-vorel.yaml.
+# Première analyse soumise par la page Analyses du site (ticket 6 du dépôt public, 2026-10-23). Assertions faites en série 84 ; aucune fiche modifiée.
+# Non publiée tant que relue_le est vide (décision de l'éditeur du projet, Q16).
+# Vérifications (API de Wikimedia Commons, 2026-10-23) : auteur Didier Descouens (compte Archaeodontosaurus, « Own work ») ; licence CC BY-SA 4.0 ;
+# 7360 × 4912 pixels ; prise de vue du 14 mai 2015 ; Nikon D800E, 27 mm, f/4, 1/60 s, ISO 2000, flash non déclenché, balance des blancs manuelle.
+# Écarts avec la déclaration du ticket : « Wikimedia » est l'hébergeur, pas l'auteur ; « sol en marbre » est précisé en rosace du pavement ;
+# « lumière à 45° rasante » ne se vérifie pas sur l'image (voir note_distance et la ligne surfaceGloss).
+# Objet : la rosace incrustée au pavement de la basilique Sant'Anastasia à Vérone, lieu de culte ouvert au public (objet public).
+# Description Commons : rosace « in the nave front of the choir » ; Wikipédia en italien (« Basilica di Santa Anastasia », révision 152787708) :
+# « nel mezzo » du transept, « un rosone con al centro lo scudo raggiato bianco e nero, simbolo dell'ordine » ; pavement commencé en 1462,
+# attribué à Pietro da Porlezza, « bianco d'Istria », « basanite nera » et rouge. Identification des pierres non vérifiée sur place.
+# Objet hors registre : fiches/exemplaires.yaml n'est pas modifié ; l'id app: ci-dessous est proposé, en attente d'inscription.
+# Image non reproduite : l'objet n'étant pas au registre, la page ne montre que le lien vers Commons.
+date: "2026-10-23"                       # date de l'analyse
+relue_le: "2026-10-23"                   # date de relecture, choix de relecture (2026-10-23) ; vide = non publiable
+ticket: 6                                # ticket de soumission (formulaire « Soumettre une image » du dépôt public)
+analyse:
+  objet: "rosace du pavement de la basilique Sant’Anastasia, Vérone"   # texte : objet proposé, hors registre
+  image: "https://commons.wikimedia.org/wiki/File:Sant%27Anastasia_-_Verona_-_Rosone_con_lo_stemma_domenicano.jpg"
+  credit:
+    auteur: "Didier Descouens"
+    licence: "CC BY-SA 4.0"
+    licence_url: "https://creativecommons.org/licenses/by-sa/4.0"
+    source: "Wikimedia Commons"
+    url: "https://commons.wikimedia.org/wiki/File:Sant%27Anastasia_-_Verona_-_Rosone_con_lo_stemma_domenicano.jpg"
+    date_verification: "2026-10-23"      # API Commons (extmetadata) : Artist, LicenseShortName, LicenseUrl, AttributionRequired
+    mention_requise: "« Sant'Anastasia - Verona - Rosone con lo stemma domenicano », Didier Descouens, Wikimedia Commons, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)"
+  contexte_declare: "Sol en marbre. Lumière à 45° rasante, montrant à la fois la texture des matériaux et leur brillance"   # tel que déclaré dans le ticket
+  episode:
+    id: ppp-e:analyse-rosace-sant-anastasia   # épisode propre à cette analyse, non inscrit dans fiches/exemplaires.yaml
+    target: app:commons-rosace-sant-anastasia # id proposé, hors registre
+    observedUnder: {presentation: screen, lumiere: diffuse, distance: room, angle: oblique, duree: exam}
+    note_distance: "lumière, angle et distance estimés sur l’image : photo prise debout, le sol vu de biais, de plus en plus rasant vers le haut de l’image ; lumière du jour de l’église, sans flash d’après les données de l’appareil, sans ombre portée nette ; le contexte déclaré parle d’une lumière rasante à 45° : l’image montre plutôt un regard à environ 45° sur le sol, la lumière n’y est pas rasante ; condition recommandée : sur place, debout puis accroupi, à la lumière du jour"
+    note_image: "photo originale de 7360 × 4912 pixels, regardée entière puis en recadrages ; aucune retouche déclarée ; balance des blancs réglée à la main d’après les données de l’appareil ; prise de vue du 14 mai 2015"
+    usesModality: [vision]
+    observer: "l’équipe (un seul observateur ; aucun accord déclaré)"
+    date: "2026-10-23"
+assertions:
+  - type: ppp:texture
+    about: app:commons-rosace-sant-anastasia#rosace
+    region: ppp:texture/smooth
+    hypothese: null
+    acces: observé sur l'image
+    depuis: null
+    indice: "pierres polies et usées par la marche ; à cette distance, aucun grain ne se voit, seulement des rayures, des fissures, des éclats aux bords des pièces et quelques petits trous"
+    confiance: moyenne
+    doute: "de près, ou en lumière vraiment rasante, les éclats et les trous pourraient se sentir comme un relief fin"
+  - type: ppp:texture
+    about: app:commons-rosace-sant-anastasia#pavement-autour
+    region: ppp:texture/fine
+    hypothese: null
+    acces: observé sur l'image
+    depuis: null
+    indice: "dans le pavement autour de la rosace, en haut à gauche, la pierre blanche et la pierre rouge sont piquées de petits creux serrés ; la surface paraît moins lisse que celle de la rosace"
+    confiance: basse
+    doute: "les creux sont vus de loin et de biais ; au toucher, l’écart avec la rosace peut être plus faible"
+  - type: ppp:surfaceGloss
+    about: app:commons-rosace-sant-anastasia#rosace
+    region: ppp:surfaceGloss/satin
+    hypothese: null
+    acces: observé sur l'image
+    depuis: null
+    indice: "un reflet doux et étalé, sans bord net, se voit au fond, vers l’écu central, là où le regard devient presque rasant ; aucune fenêtre ne s’y reflète nettement ; plus près, où le regard est moins incliné, aucun reflet clair"
+    confiance: basse
+    doute: "le reflet ne se voit qu’en un endroit, sous un regard presque rasant ; sous une lampe ou au soleil, il pourrait paraître plus net ; les pierres usées ne brillent pas toutes de même"
+  - type: ppp:lightnessContrast
+    about: [app:commons-rosace-sant-anastasia#pierre-noire, app:commons-rosace-sant-anastasia#pierre-blanche]
+    region: ppp:lightnessContrast/strong
+    hypothese: null
+    acces: observé sur l'image
+    depuis: null
+    indice: "la pierre noire, gris très sombre, touche partout la pierre blanche, crème très claire : rayons, triangles, écailles"
+    confiance: moyenne
+    doute: "le noir tire sur le gris sombre et le blanc sur le crème ; l’écran peut resserrer ou élargir l’écart"
+  - type: ppp:lightnessRange
+    about: app:commons-rosace-sant-anastasia#rosace
+    region: ppp:lightnessRange/distantLightnesses
+    hypothese: null
+    acces: observé sur l'image
+    depuis: null
+    indice: "du gris très sombre au crème très clair, avec le rouge entre les deux"
+    confiance: haute
+    doute: null
+  - type: ppp:hue
+    about: app:commons-rosace-sant-anastasia#pierre-rouge
+    region: ppp:hue/orange
+    hypothese: null
+    acces: observé sur l'image
+    depuis: null
+    indice: "un rouge brun tirant sur l’orangé, tacheté de nodules plus clairs, saumon"
+    confiance: basse
+    doute: "entre rouge et orange ; la part brune rejoint la question du brun ; la balance des blancs, réglée à la main, a pu déplacer la teinte"
+  - type: ppp:saturation
+    about: app:commons-rosace-sant-anastasia#pierre-rouge
+    region: ppp:saturation/medium
+    hypothese: null
+    acces: observé sur l'image
+    depuis: null
+    indice: "une couleur nette mais sourde, ni vive ni grisée"
+    confiance: basse
+    doute: "l’usure et la poussière éteignent la couleur ; mouillée ou cirée, la pierre paraîtrait plus vive"
+  - type: ppp:hueRange
+    about: app:commons-rosace-sant-anastasia#rosace
+    region: ppp:hueRange/neighbouringHues
+    hypothese: null
+    acces: observé sur l'image
+    depuis: null
+    indice: "le rouge orangé des pierres rouges et le jaune de petites pièces placées entre les demi-disques de la bordure ; le blanc, le gris et le noir ne comptent pas comme teintes"
+    confiance: basse
+    doute: "les petites pièces jaunes sont minuscules à cette distance ; sans elles, une seule teinte"
+  - type: ppp:symmetry
+    about: app:commons-rosace-sant-anastasia#rosace
+    region: ppp:symmetry/nearSymmetric
+    hypothese: null
+    acces: observé sur l'image
+    depuis: null
+    indice: "anneaux concentriques réguliers autour du centre, chaque anneau répétant le même motif ; l’emblème du centre, un chevron blanc sur fond noir, n’a qu’un axe ; les pièces posées à la main varient un peu de taille"
+    confiance: moyenne
+    doute: "vu de biais, le cercle paraît ovale ; de face, les écarts pourraient se réduire à ceux de la pose"
+  - type: ppp:distribution
+    about: app:commons-rosace-sant-anastasia#champ-ecailles
+    region: ppp:distribution/regular
+    hypothese: null
+    acces: observé sur l'image
+    depuis: null
+    indice: "écailles noires bordées d’arcs blancs et rouges, rangées en cercles à intervalles égaux"
+    confiance: moyenne
+    doute: "la perspective serre les rangs du fond"
+  - type: ppp:perceptualDensity
+    about: app:commons-rosace-sant-anastasia#rosace
+    region: ppp:perceptualDensity/dense
+    hypothese: null
+    acces: observé sur l'image
+    depuis: null
+    indice: "les pièces couvrent toute la rosace ; le fond noir ne se voit plus qu’entre les arcs et les rayons"
+    confiance: moyenne
+    doute: "vu de plus près, la rosace se lirait peut-être comme une mosaïque serrée"
+  - type: ppp:partNesting
+    about: app:commons-rosace-sant-anastasia#rosace
+    region: ppp:partNesting/threeOrMoreLevels
+    hypothese: null
+    acces: observé sur l'image
+    depuis: null
+    indice: "la rosace se lit en anneaux (centre, couronne de triangles, champ d’écailles, bordure de demi-disques, tresse) ; chaque anneau se lit en motifs ; chaque écaille se lit en arcs blanc et rouge"
+    confiance: moyenne
+    doute: null
+  - type: ppp:localIrregularity
+    about: app:commons-rosace-sant-anastasia#rosace
+    region: ppp:localIrregularity/slight
+    hypothese: null
+    acces: observé sur l'image
+    depuis: null
+    indice: "l’ordre des anneaux est rompu en quelques endroits bornés : une longue fissure traverse plusieurs pièces près du centre, des bords sont écornés, quelques trous et bouchages ; ils se voient à l’examen, pas d’emblée ; les taches et les veines des pierres, partout, font partie de l’ordre"
+    confiance: moyenne
+    doute: "de face et de près, d’autres éclats apparaîtraient ; une fissure dit l’état de la pierre autant que le dessin"
+  - type: ppp:contour
+    about: app:commons-rosace-sant-anastasia#rosace
+    region: ppp:contour/sharp
+    hypothese: null
+    acces: observé sur l'image
+    depuis: null
+    indice: "d’une pierre à l’autre, le passage est franc, sans transition"
+    confiance: moyenne
+    doute: "aux bords écornés, le contour s’adoucit"
+  - type: ppp:jointSpacing
+    about: app:commons-rosace-sant-anastasia#joints
+    region: ppp:jointSpacing/narrow
+    hypothese: null
+    acces: observé sur l'image
+    depuis: null
+    indice: "entre les pièces, un filet fin, plus clair ou plus sombre, se voit en recadrage"
+    confiance: basse
+    doute: "à cette distance, un joint serré et un filet étroit se confondent"
+  - type: ppp:jointLevelOffset
+    about: app:commons-rosace-sant-anastasia#joints
+    region: ppp:jointLevelOffset/flush
+    hypothese: null
+    acces: observé sur l'image
+    depuis: null
+    indice: "au fond, le reflet passe d’une pierre à l’autre sans se briser ; aucun bord ne fait ombre"
+    confiance: basse
+    doute: "sur une photo de biais, un léger décalage peut ne pas se voir ; à vérifier au doigt"
+  - type: ppp:perceivedSize
+    about: app:commons-rosace-sant-anastasia#rosace
+    region: null
+    hypothese: ppp:perceivedSize/beyondBody
+    acces: inféré
+    depuis: indice visuel                # perspective d'un sol photographié debout
+    indice: "la rosace occupe un large pan du sol, qui fuit fortement vers le haut de l’image"
+    confiance: basse
+    doute: "aucun repère d’échelle dans le cadre ; à mesurer ou à voir sur place"
+  - type: ppp:hardnessToTouch
+    about: app:commons-rosace-sant-anastasia#rosace
+    region: null
+    hypothese: ppp:hardnessToTouch/doesNotYield
+    acces: inféré
+    depuis: contexte déclaré             # sol en marbre
+    indice: "aucun indice visuel de souplesse"
+    confiance: basse
+    doute: "aucune affirmation : « non évalué » sur la carte ; à éprouver au toucher, en appuyant du doigt ; la fiche est en préparation"
+anomalies:
+  - type: null                           # lacune de ceinture
+    constat: "rien ne permet de dire qu’un décor est fait de pièces de pierre découpées et posées à fleur dans un fond (incrustation, marqueterie de pierre) ; l’écart des joints, leur niveau et le contour en disent chacun une part ; la technique elle-même relève de la description de l’objet"
+    ticket: 6
+  - type: ppp:elementaryShapeCount
+    constat: "le nombre de formes simples se compte en volumes ; pour un décor à plat (cercles, arcs, triangles, écailles), rien ne compte les formes ; et une analyse ne sait pas écrire « non applicable »"
+    ticket: 6
+  - type: ppp:symmetry
+    constat: "une seule échelle pour la symétrie : elle ne distingue pas une symétrie autour d’un centre, comme celle des anneaux, d’une symétrie par un axe, comme celle de l’emblème ; rien ne dit non plus l’ordre en anneaux concentriques"
+    ticket: 6
+  - type: ppp:hue
+    constat: "le rouge brun rejoint la question du brun, déjà ouverte"
+    ticket: 6
+  - type: null                           # porte sur l'objet, pas sur un type
+    constat: "la rosace n’est pas au registre ; l’écu, les anneaux, les pierres noire, blanche et rouge, les joints et le pavement autour ne sont pas déclarés comme parties de l’objet"
+    ticket: 6
+  - type: null                           # porte sur la déclaration
+    constat: "la lumière déclarée, « à 45° rasante », ne se voit pas sur l’image : aucune ombre portée ; une lumière rasante est presque parallèle au sol, pas à 45°"
+    ticket: 6
