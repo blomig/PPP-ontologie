@@ -82,7 +82,8 @@ familles:
     a_relire: []
     relecture_explicative: {date: "2026-10-12", champs: [introduction]}
     types: [ppp:texture, ppp:textureContrast, ppp:textureDirectionality, ppp:localIrregularity,
-            ppp:curvature, ppp:jointLevelOffset, ppp:elementaryShapeCount, ppp:hardnessToTouch]   # série 54 (2026-10-16) : hardnessToTouch, première fiche propre au toucher (en préparation, à relire ; ticket 4)
+            ppp:curvature, ppp:jointLevelOffset, ppp:elementaryShapeCount, ppp:hardnessToTouch,
+            ppp:perceivedWeight]   # série 54 (2026-10-16) : hardnessToTouch, première fiche propre au toucher (en préparation, à relire ; ticket 4) ; série 87 (2026-10-27) : perceivedWeight (en préparation, à relire ; ticket 5, poids pour sa taille intégré)
   - cle: son
     label_fr: Son
     label_en: sound

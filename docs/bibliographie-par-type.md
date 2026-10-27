@@ -579,7 +579,7 @@ Sources sur la manière dont des ontologies et vocabulaires ouverts reçoivent l
   - usage : `docs/depot-public.md` (alimente).
 
 <a id="groupe-toucher"></a>
-## Toucher (proposition de famille, série 24 ; une fiche en préparation, série 54)
+## Toucher (proposition de famille, série 24 ; deux fiches en préparation, séries 54 et 87)
 
 Références de `famille-toucher-proposition.md` (document du dépôt, non publié) et de `protocole-echantillons-toucher.md` (document du dépôt, non publié) (série 30), vérifiées le 2026-10-12 (métadonnées Crossref, résumés PubMed ou OpenAlex ; notes de la relecture explicative recoupées). Aucune fiche n'existe encore : l'usage renvoie aux types **proposés** (ids non enregistrés).
 
@@ -689,7 +689,7 @@ Matériaux souples (demande de l’éditeur du projet ; vérifiées le 2026-10-1
 - Katz, D. (1925). *Der Aufbau der Tastwelt*. Leipzig : J. A. Barth (Open Library OL1124180W) ; trad. L. E. Krueger, *The World of Touch*, Hillsdale (NJ) : Lawrence Erlbaum, 1989, ISBN 9780805805291. Statut : métadonnées seulement ; contenu connu par Hollins et Risner (2000) et Ho (2018) ; rien ne lui est attribué directement.
 - Gibson, J. J. (1962). Observations on active touch. Psychological Review, 69(6), 477–491. https://doi.org/10.1037/h0046962. Statut : métadonnées seulement (PubMed sans résumé) ; rien ne lui est attribué.
 - ISO 11036:2020, *Sensory analysis — Methodology — Texture profile*. Statut : page de l'ISO lue par la relecture explicative ; texte non lu. Sert seulement à signaler l'homonyme de domaine « texture » (en analyse sensorielle, elle inclut la dureté) ; le détail des attributs reste à vérifier.
-- Jones, L. A. (1986). Perception of force and weight: Theory and research. Psychological Bulletin, 100(1), 29–42. https://doi.org/10.1037/0033-2909.100.1.29. Statut : métadonnées Crossref seulement (aucun résumé trouvé) ; non citée.
+- Jones, L. A. (1986). Perception of force and weight: Theory and research. Psychological Bulletin, 100(1), 29–42. https://doi.org/10.1037/0033-2909.100.1.29. Statut : métadonnées Crossref seulement (aucun résumé trouvé) ; non citée ici ; citée par `perceivedWeight` depuis la série 87 (statut *non vérifiée* : voir « Poids perçu » ci-dessous).
 - Kawabata, S. (éd.), *The Standardization and Analysis of Hand Evaluation*, 2e éd., Hand Evaluation and Standardization Committee, The Textile Machinery Society of Japan, Osaka (date de la 2e édition non vérifiée) ; réimpr. en annexe de Behery (éd.), *Effect of Mechanical and Physical Properties on Fabric Hand*, Woodhead, 2005, https://doi.org/10.1533/9781845690984.appendix_a. Statut : métadonnées Crossref seulement (réimpression) ; contenu connu par Mahar et al. (1990) ; non citée directement.
 
 ### Dureté au toucher : fiche `ppp:hardnessToTouch` (série 54, en préparation)
@@ -721,35 +721,49 @@ Fiche rédigée le 2026-10-16 à partir du [ticket n° 4](https://github.com/blo
   - statut : *vérifiée sur la source* ; vérifié sur : page lue le 2026-10-16 (résistance relative à la rayure ; dix minéraux, du talc au diamant) ;
   - usage : `hardnessToTouch` (contraste ; homonyme de domaine, méthode non retenue).
 
-**Poids pour sa taille** (ticket 5, série 73 ; suggestion recevable, suite à confirmer par l'éditeur du projet ; aucune fiche). Références vérifiées le 2026-10-19 (métadonnées Crossref ; résumés OpenAlex ou Europe PMC). Buckingham (2014), plus haut, sert aussi ici (illusions de poids ; usage ajouté : poids pour sa taille, alimente).
+### Poids perçu : fiche `ppp:perceivedWeight` (série 87, en préparation) ; poids pour sa taille (ticket 5)
+
+Fiche rédigée le 2026-10-27. Le « poids pour sa taille » du [ticket n° 5](https://github.com/blomig/PPP-ontologie/issues/5) (série 73 : suggestion recevable, type à part proposé sous l’id `weightForSize`) n’est pas un type à part : décision de l’éditeur du projet transmise le 2026-10-27, intégré à `ppp:perceivedWeight` (définition, contre-exemple, repères et note d’échelle ; intégration : choix de relecture (2026-10-27)). Ce n’est pas la densité perceptive (`ppp:perceptualDensity`, qualité vue). Références vérifiées le 2026-10-19 (métadonnées Crossref ; résumés OpenAlex ou Europe PMC), revérifiées le 2026-10-27 (les quatorze DOI de la fiche résolus par Crossref, métadonnées concordantes) ; quatre références ajoutées le 2026-10-27, en fin de liste. Reprises de plus haut : Buckingham (2014) (illusions de poids ; usage : `perceivedWeight`, alimente), Klatzky et Reed (2009) (geste). Statut de lecture : *résumé lu* pour toutes, sauf Charpentier (1891, *source secondaire*), Harshfield et DeHardt (1970), Stevens (1957) et Jones (1986) (*métadonnées seules* ; statut *non vérifiée*, série 87 bis). Aucune source trouvée ne fixe des régions perçues du poids, ni ne fait du « poids pour sa taille » une qualité distincte du poids perçu.
 
 - Murray, D. J., Ellis, R. R., Bandomir, C. A. & Ross, H. E. (1999). Charpentier (1891) on the size–weight illusion. *Perception & Psychophysics*, 61(8), 1681–1685. https://doi.org/10.3758/BF03213127
   - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : métadonnées Crossref et résumé (Europe PMC, PMID 10598479) : traduction et présentation de Charpentier (1891), première preuve expérimentale de l'illusion taille-poids ; Charpentier lui-même n'est connu que par cette *source secondaire* ;
-  - usage : poids pour sa taille (alimente ; contre-exemple).
+  - usage : `perceivedWeight` (fonde ; contre-exemple et état de l’art ; poids pour sa taille).
 - Ross, H. E. (1969). When is a weight not illusory? *Quarterly Journal of Experimental Psychology*, 21(4), 346–355. https://doi.org/10.1080/14640746908400230
   - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : métadonnées Crossref et résumé (OpenAlex) : masse volumique « non illusoire » propre à la matière (vers 1,7 pour des boîtes, 0,14 pour du polystyrène) ; rôle de l'attente ;
-  - usage : poids pour sa taille (alimente ; régions et attente).
+  - usage : `perceivedWeight` (alimente ; mesure associée « indirecte » : masse volumique ; poids pour sa taille).
 - Ellis, R. R. & Lederman, S. J. (1998). The golf-ball illusion: evidence for top-down processing in weight perception. *Perception*, 27(2), 193–201. https://doi.org/10.1068/p270193
   - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : métadonnées Crossref et résumé (OpenAlex) : balles de même poids jugées différemment par des golfeurs ;
-  - usage : poids pour sa taille (alimente ; attente).
+  - usage : `perceivedWeight` (alimente ; attente, état de l’art).
 - Ellis, R. R. & Lederman, S. J. (1999). The material-weight illusion revisited. *Perception & Psychophysics*, 61(8), 1564–1576. https://doi.org/10.3758/BF03213118
   - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : métadonnées Crossref et résumé (Europe PMC, PMID 10598470) : illusion matière-poids surtout tactile ; absente à 357 g ; abolie par une prise ferme ;
-  - usage : poids pour sa taille (alimente ; geste et prise).
+  - usage : `perceivedWeight` (alimente ; prise, en note des conditions ; matière).
 - Amazeen, E. L. & Turvey, M. T. (1996). Weight perception and the haptic size–weight illusion are functions of the inertia tensor. *Journal of Experimental Psychology: Human Perception and Performance*, 22(1), 213–232. https://doi.org/10.1037/0096-1523.22.1.213
   - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : métadonnées Crossref et résumé (OpenAlex) : lourdeur d'un objet caché manié selon l'inertie de rotation ;
-  - usage : poids pour sa taille (alimente ; geste) ; mesure associée « indirecte » (inertie de rotation).
+  - usage : `perceivedWeight` (alimente ; répartition de la masse, en note des conditions) ; mesure associée « indirecte » (inertie de rotation).
 - Flanagan, J. R. & Beltzner, M. A. (2000). Independence of perceptual and sensorimotor predictions in the size–weight illusion. *Nature Neuroscience*, 3(7), 737–741. https://doi.org/10.1038/76701
   - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : métadonnées Crossref et résumé (Europe PMC, PMID 10862708) : forces justes, illusion persistante ;
-  - usage : poids pour sa taille (alimente ; contre-exemple).
+  - usage : `perceivedWeight` (alimente ; contre-exemple et état de l’art ; poids pour sa taille).
 - Peters, M. A. K., Ma, W. J. & Shams, L. (2016). The size–weight illusion is not anti-Bayesian after all: a unifying Bayesian account. *PeerJ*, 4, e2124. https://doi.org/10.7717/peerj.2124
   - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : métadonnées Crossref et résumé (OpenAlex) : inférence de la densité relative, puis du poids ;
-  - usage : poids pour sa taille (alimente ; jugement de densité).
+  - usage : `perceivedWeight` (alimente ; la densité entre dans le jugement du poids : argument de l’intégration).
 - Harshfield, S. P. & DeHardt, D. C. (1970). Weight judgment as a function of apparent density of objects. *Psychonomic Science*, 20(6), 365–366. https://doi.org/10.3758/BF03335692
-  - statut : *vérifiée sur résumé ou source secondaire* (métadonnées seules : titre, revue ; aucun résumé trouvé) ;
-  - usage : poids pour sa taille (signalée ; rien n'en est repris).
+  - statut : *non vérifiée* (métadonnées seules : DOI résolu et métadonnées vérifiées sur Crossref le 2026-10-27, titre, revue ; aucun résumé trouvé ; texte non lu) ;
+  - usage : `perceivedWeight` (discute ; signalée pour son titre, rien n’en est repris).
 - Stevens, S. S. (1957). On the psychophysical law. *Psychological Review*, 64(3), 153–181. https://doi.org/10.1037/h0046162
-  - statut : *vérifiée sur résumé ou source secondaire* (métadonnées seules ; texte non lu ; l'exposant de la lourdeur soulevée n'est **pas vérifié**) ;
-  - usage : poids pour sa taille (méthode non retenue : estimation de grandeur par jury, sans série de référence physique).
+  - statut : *non vérifiée* (métadonnées seules : DOI résolu et métadonnées vérifiées sur Crossref le 2026-10-27 ; texte non lu ; l’exposant de la lourdeur soulevée n’est **pas vérifié**) ;
+  - usage : `perceivedWeight` (contraste ; méthode non retenue : estimation de grandeur par jury, sans série de référence physique).
+- Ellis, R. R. & Lederman, S. J. (1993). The role of haptic versus visual volume cues in the size-weight illusion. *Perception & Psychophysics*, 53(3), 315–324. https://doi.org/10.3758/BF03205186
+  - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : métadonnées Crossref et résumé PubMed (PMID 8483695) lus le 2026-10-27 : illusion taille-poids d’abord tactile ; indices de volume de la main suffisants et nécessaires, ceux de la vue seulement suffisants, effet plus faible ; aveugles de naissance et voyants aux yeux bandés ; texte non lu ;
+  - usage : `perceivedWeight` (fonde ; épreuve sans voir, note des conditions).
+- Buckingham, G., Cant, J. S. & Goodale, M. A. (2009). Living in a material world: How visual cues to material properties affect the way that we lift objects and perceive their weight. *Journal of Neurophysiology*, 102(6), 3111–3118. https://doi.org/10.1152/jn.00515.2009
+  - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : métadonnées Crossref et résumé (OpenAlex) lus le 2026-10-27 : cubes de métal, de bois et de polystyrène lestés ; la force s’ajuste vite au vrai poids, l’illusion matière-poids persiste ; texte non lu ;
+  - usage : `perceivedWeight` (alimente ; matière vue, état de l’art).
+- Peters, M. A. K., Balzer, J. & Shams, L. (2015). Smaller = denser, and the brain knows it: Natural statistics of object density shape weight expectations. *PLOS ONE*, 10(3), e0119794. https://doi.org/10.1371/journal.pone.0119794
+  - statut : *vérifiée sur résumé ou source secondaire* ; vérifié sur : métadonnées Crossref et résumé Europe PMC (PMID 25768977) lus le 2026-10-27 : parmi les objets fabriqués qu’on soulève, les plus petits sont en général plus denses ; prédictions de poids conformes ; texte non lu ;
+  - usage : `perceivedWeight` (alimente ; poids pour sa taille, attente).
+- Jones, L. A. (1986). Perception of force and weight: Theory and research. *Psychological Bulletin*, 100(1), 29–42. https://doi.org/10.1037/0033-2909.100.1.29
+  - statut : *non vérifiée* (métadonnées seules : DOI résolu et métadonnées vérifiées sur Crossref le 2026-10-27 ; PubMed, PMID 2942958, sans résumé ; texte non lu ; la fraction de Weber pour le poids n’est **pas vérifiée**) ;
+  - usage : `perceivedWeight` (contraste ; méthode non retenue : seuil différentiel, loi de Weber).
 
 <a id="groupe-son"></a>
 ## Son (proposition de famille, séries 41 et 42 ; aucune fiche)
