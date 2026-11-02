@@ -233,12 +233,12 @@ source_de_la_fiche: 'création du type : décision de l’éditeur du projet (20
   (2026-10-19, décision 1) ; contenu repris de la proposition « Goût » (docs/famille-gout-proposition.md (document de travail, non publié), sections 2, 5, 6 et 7) ; le reste (porteur, crans, repères, facettes
   critiques, classement des mesures, rédaction) : choix de relecture (2026-10-19 et 2026-10-20) ; fiche créée le 2026-10-20 (série 78)'
 manques:
-- 'exemplaires : aucun. Décision 5 de l’éditeur du projet (2026-10-19) : pas d’exemplaire en V1 pour le goût, des repères de région à la place. Si des exemples sont cherchés plus tard, ce seront des objets
-  publics seulement (produits identifiés, sans marque citée), jamais des objets privés'
+- 'exemplaires : aucun. Décision 5 de l’éditeur du projet (2026-10-19) : pas d’exemplaire en V1 pour le goût, des repères de région à la place. Si des exemples sont cherchés plus tard, ce seront des objets publics seulement (produits identifiés, sans marque citée), jamais des objets privés'
 - 'épreuve d’accord E1 à faire : portions du même lot, au même moment, repères de région goûtés avant de juger (proposition « Goût », section 6, point 2) ; elle suit celle du premier lot (lot CIEL)'
 - 'invention de la caudalie par Peynaud : non vérifiée'
 - aucune source lue sur la persistance d’une saveur (et non d’un arôme) dans le vin ; accord entre personnes sur une durée chronométrée non lu
 - 'bornes en secondes des régions de lecture : aucune avant E1'
+- 'repères « à caler » (X17, série 90) : tous ; les crans se jugent à la durée d’une trace, qu’aucune solution de la norme ne fixe ; X17 non satisfait'
 bloque_par: []
 a_relire:
 - label_fr
@@ -270,12 +270,11 @@ a_relire:
 - enonces_testables
 - statut_note
 remarque:
-- 'série 78 bis (choix de relecture (2026-10-20), corrections de relecture) : note_conditions : facette `nez` et phase fixée par la définition ; identite ; label EN « lingers for a long time » ; manques
-  ; à relire'
-- 'série 78 ter (choix de relecture (2026-10-20), conditions fixées) : champ `conditions_fixees` rempli (`moment: residual`, PPP_FicheType.md, spec §9.7 H, règle 12) ; note_conditions : phrase sur la phase
-  reformulée sans double parenthèse, sans changement de fond ; à relire'
+- 'série 78 bis (choix de relecture (2026-10-20), corrections de relecture) : note_conditions : facette `nez` et phase fixée par la définition ; identite ; label EN « lingers for a long time » ; manques ; à relire'
+- 'série 78 ter (choix de relecture (2026-10-20), conditions fixées) : champ `conditions_fixees` rempli (`moment: residual`, PPP_FicheType.md, spec §9.7 H, règle 12) ; note_conditions : phrase sur la phase reformulée sans double parenthèse, sans changement de fond ; à relire'
 - 'série 78 quater (choix de relecture (2026-10-20), retouches de relecture) : note_conditions : « le contrôle la refusera (contrôle à écrire) » ; à relire'
 - 'série 78 quinquies (choix de relecture (2026-10-20), retouches de relecture) : note_conditions : « le contrôle du site la refuse » ; référence Jackson (2002) : ISBN déplacé dans la citation, doi_ou_url vide ; à relire'
+- 'série 90 (choix de relecture (2026-11-02), suivant la décision de l’éditeur du projet (2026-11-02) : « B : les repères de région (solutions ISO 3972, alun 1 g/l) ») : aucun repère calé : les crans se jugent à la durée d’une trace, qu’aucune solution de la norme ne fixe ; à relire'
 relecture_explicative:
   date: null
   champs: []

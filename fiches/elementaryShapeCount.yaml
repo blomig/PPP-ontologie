@@ -118,8 +118,8 @@ references:
   doi_ou_url: https://doi.org/10.1016/0010-0277(84)90022-2
   role: contraste
   statut_verification: vérifiée sur résumé ou source secondaire
-  verifie_le: '2026-10-11'
-  verifie_sur: métadonnées Crossref (auteurs, titre, revue, pages) ; titre seulement, contenu non lu
+  verifie_le: '2026-11-02'
+  verifie_sur: 'métadonnées Crossref ; résumé lu le 2026-11-02 dans la version antérieure des auteurs (Hoffman et Richards, « Parts of Recognition », MIT AI Memo 732, décembre 1983, DSpace du MIT, http://hdl.handle.net/1721.1/6391) : le système visuel décomposerait une forme en parties par une règle de frontières (transversalité) ; résumé de l’article de 1984 non lu, texte non lu'
   reprend: rien que le titre
   ne_reprend_pas: le contenu (non lu)
 - id: kaufman1949

@@ -82,12 +82,60 @@ def discutable(a):
     """Exemplaire marqué comme discutable par son auteur (champ `doute: oui` de exemplaires.yaml, v2.6, T35)."""
     return str(a.get('doute', 'non')).lower() in ('oui', 'true')
 
+# --- X17, exemplaires selon le sens (amendements des séries 34 et 43, à relire) -----------------------------------------------
+# Toucher seul et odorat : l'exemplaire est l'objet décrit (épisode qui n'est pas une image : ni `screen`, ni `printedImage`, ni `recording` ;
+# objet avec photo d'identification et descriptif) ; une photo ne compte jamais. Ouïe : un enregistrement cité compte (`presentation: recording`),
+# pour l'acuité seulement avec un casque ou des enceintes déclarés (restitution en note d'épisode, spec §9.7 H) ; à défaut, l'objet décrit.
+# Aucun type de la force du son n'existe à ce jour (un enregistrement n'y compterait jamais).
+SENS_MODALITES = {'toucher': 'toucher', 'audition': 'ouie', 'odorat': 'odorat'}
+MODALITE_DU_SENS = {v: k for k, v in SENS_MODALITES.items()}
+MENTIONS_SENS = {'toucher': 'exemplaires à toucher : la photo ne montre pas la qualité',   # textes de la spec (X17), lus tels quels par le site
+                 'ouie': 'exemplaires à écouter : la photo ne montre pas la qualité',
+                 'odorat': 'exemplaires à sentir : la photo ne montre pas la qualité'}
+PRESENTATIONS_IMAGE = ('screen', 'printedImage')
+ACUITE_RESTITUTION = {'ppp:soundSharpness': ('casque', 'enceinte')}   # acuité : restitution déclarée (le haut-parleur d'un téléphone ne suffit pas)
+
+def sens(d):
+    """'toucher', 'ouie' ou 'odorat' pour un type d'un seul de ces sens (champ `modalites`), sinon None (règles de la photo)."""
+    m = [str(x) for x in d.get('modalites') or []]
+    return SENS_MODALITES.get(m[0]) if len(m) == 1 else None
+
+def objet_decrit(o):
+    """Objet décrit : photo d'identification (`image`) et descriptif (`description`) renseignés."""
+    return bool(str(o.get('description') or '').strip()) and bool(str(o.get('image') or '').strip())
+
+def maniere(a, d, ex):
+    """Pour un type d'un seul sens (toucher, ouïe, odorat) : 'enregistrement', 'objet' ou None (l'exemplaire ne compte pas) ;
+    pour les autres types : 'photo' (règles inchangées)."""
+    s = sens(d)
+    if not s:
+        return 'photo'
+    ep = next((e for e in ex.get('episodes') or [] if e.get('id') == a.get('inEpisode')), {}) or {}
+    mods = [str(x) for x in (a.get('modality') if isinstance(a.get('modality'), list) else [a.get('modality')]) + list(ep.get('usesModality') or []) if x]
+    if MODALITE_DU_SENS[s] not in mods:
+        return None
+    pres = str((ep.get('observedUnder') or {}).get('presentation') or 'unknown')
+    if pres == 'recording':
+        if s != 'ouie':
+            return None
+        mots = ACUITE_RESTITUTION.get(d['id'])
+        if mots and not any(m in ' '.join(str(ep.get(k) or '') for k in ('note', 'note_distance')).lower() for m in mots):
+            return None
+        return 'enregistrement'
+    if pres in PRESENTATIONS_IMAGE:
+        return None
+    objets = {o['id']: o for o in ex.get('objets') or []}
+    return 'objet' if objet_decrit(objets.get(objet_de(a), {})) else None
+
 def exemplaires(d, ex, relues_seulement=False, sans_discutables=False):
-    """Assertions non retirées du type ; options : seulement relues en relecture explicative, sans celles marquées `doute: oui`."""
+    """Assertions non retirées du type ; options : seulement relues en relecture explicative, sans celles marquées `doute: oui`.
+    Pour un type du toucher seul, de l'ouïe ou de l'odorat, seuls comptent les exemplaires admis par X17 (maniere())."""
     rel = assertions_relues(ex)
     out = []
     for a in ex['assertions']:
         if str(a.get('withdrawn', 'non')) == 'oui' or a['assertedType'] != d['id']:
+            continue
+        if sens(d) and not maniere(a, d, ex):
             continue
         if relues_seulement and a['id'] not in rel:
             continue
@@ -117,6 +165,45 @@ def objet_de(a):
     part = about if isinstance(about, str) else about[0]['relatum']
     return part.split('#')[0]
 
+# --- X17, série 90 : substituts d'exemplaires par sens (décisions de l'éditeur du projet du 2026-11-02 et choix de relecture) -----------------
+SENS_EPISODES = ('toucher', 'odorat', 'audition')   # audition : à défaut d'enregistrement relu (l'union région par région revient à « à défaut »)
+MENTION_A_REALISER = 'exemples à réaliser : épisodes proposés, pas encore observés'
+MENTION_REPERES_GOUT = 'repères de région : solutions à goûter, pas des exemplaires d’aliments'
+
+def region_attendue(e):
+    """Région prédite d'un épisode à réaliser (`region_attendue` ; `region` accepté, forme du commit 42e5c50)."""
+    return e.get('region_attendue', e.get('region'))
+
+def episodes_a_realiser(d, sans_discutables=False):
+    """Épisodes proposés « à réaliser » de la fiche (toucher, odorat ; ouïe à défaut), comptés seulement si la fiche est relue (c)."""
+    if not set(d.get('modalites') or []) & set(SENS_EPISODES):
+        return []
+    cles = {r['cle'] for r in (d.get('espace_valeurs') or {}).get('regions') or []}
+    out = []
+    for e in d.get('episodes_a_realiser') or []:
+        if e.get('realisation') != 'a_realiser' or region_attendue(e) not in cles or not e.get('objet'):
+            continue
+        if sans_discutables and discutable(e):
+            continue
+        out.append(e)
+    return out
+
+def preparation_complete(d, r):
+    """Goût : repère de région dont la préparation est déclarée (substance, concentration, solvant, température) et sourcée
+    par des références de la fiche dont aucune n'est « non vérifiée » (choix de relecture (2026-11-02))."""
+    p = r.get('preparation') or {}
+    if not all(p.get(k) for k in ('substance', 'concentration', 'solvant', 'temperature', 'source')):
+        return False
+    refs = {x.get('id'): x for x in d.get('references') or []}
+    return all(i in refs and refs[i].get('statut_verification') != 'non vérifiée' for i in p['source'])
+
+def reperes_gout(d, sans_discutables=False):
+    """Régions d'un type du Goût dont le repère est calé ; sans_discutables : sans les repères marqués `doute: oui` (comme un épisode, palier 2 seulement ; choix de relecture (2026-11-02))."""
+    if 'bouche' not in (d.get('modalites') or []):
+        return []
+    return [r['cle'] for r in (d.get('espace_valeurs') or {}).get('regions') or []
+            if preparation_complete(d, r) and not (sans_discutables and discutable(r.get('preparation') or {}))]
+
 def palier(d, ex):
     """X17 (T35, tranché) : 'publiable', 'publiable avec exemplaires incomplets' ou 'pas publiable',
     les raisons, et la mention à afficher s'il y a lieu."""
@@ -141,21 +228,31 @@ def palier(d, ex):
         raisons.append('référence non vérifiée')
     # (f) exemplaires : seuls comptent les exemplaires relus en relecture explicative (c)
     ill2, cles = regions_illustrees(d, ex, relues_seulement=True)
+    sub2 = {region_attendue(e) for e in episodes_a_realiser(d)} | set(reperes_gout(d))   # série 90 : substituts (X17)
+    ill2 = [c for c in cles if c in set(ill2) | sub2]
     if not ill2:
         n_tous = len(exemplaires(d, ex))
-        raisons.append('aucun exemplaire relu' if n_tous else 'aucun exemplaire')
+        _s = {'toucher': ' à toucher (objet décrit)', 'ouie': ' à écouter (enregistrement cité ou objet décrit)', 'odorat': ' à sentir (objet décrit)'}.get(sens(d), '')
+        raisons.append(('aucun exemplaire relu' if n_tous else 'aucun exemplaire') + _s)
     if raisons:
         return 'pas publiable', raisons, None
     # palier 1 : exemplaires relus que leur auteur n'a pas marqués comme discutables, dans deux régions non voisines ; une image reproduite, sinon mention
     forts = exemplaires(d, ex, relues_seulement=True, sans_discutables=True)
-    ill1 = [c for c in cles if c in {a['inRegion'].split('/')[-1] for a in forts}]
+    vrais1 = {a['inRegion'].split('/')[-1] for a in forts}
+    sub1 = {region_attendue(e) for e in episodes_a_realiser(d, sans_discutables=True)} | set(reperes_gout(d, sans_discutables=True))
+    ill1 = [c for c in cles if c in vrais1 | sub1]
+    substitut = (MENTION_REPERES_GOUT if reperes_gout(d) else MENTION_A_REALISER) if (set(ill2) - {a['inRegion'].split('/')[-1] for a in exemplaires(d, ex, relues_seulement=True)}) else None
     if ecart_montre(d, ill1):
         objets = {o['id']: o for o in ex['objets']}
+        if sens(d):   # (g) pour le toucher, l'ouïe et l'odorat : la mention du sens remplace l'image reproduite (un enregistrement cité n'en a pas besoin)
+            m_sens = None if sens(d) == 'ouie' and all(maniere(a, d, ex) == 'enregistrement' for a in forts) else MENTIONS_SENS[sens(d)]
+            return 'publiable', [], (substitut or m_sens)   # la mention des épisodes à réaliser prime sur celle du sens
         repro = any((objets.get(objet_de(a), {}).get('credit') or {}).get('usage') == 'image_reproduite' for a in forts)
-        return 'publiable', [], (None if repro else 'exemplaires en lien seulement')
+        return 'publiable', [], (substitut or (None if repro else 'exemplaires en lien seulement'))
     f = lambda L: ', '.join(L) or 'aucune'
-    pourquoi = ['écart non montré au palier 1 : régions illustrées par des exemplaires relus : %s ; dont non marquées discutables (`doute`) : %s (sur %d régions)' % (f(ill2), f(ill1), len(cles))]
-    return 'publiable avec exemplaires incomplets', pourquoi, None
+    par = 'des exemplaires relus ou leurs substituts (X17, série 90)' if substitut else 'des exemplaires relus'
+    pourquoi = ['écart non montré au palier 1 : régions illustrées par %s : %s ; dont non marquées discutables (`doute`) : %s (sur %d régions)' % (par, f(ill2), f(ill1), len(cles))]
+    return 'publiable avec exemplaires incomplets', pourquoi, substitut
 
 # --- appels [[id]] (spec §9.7 P, point 4 bis) ---------------------------------------
 import re
@@ -285,6 +382,60 @@ def appels_manquants(d):
                 break
     return sorted(set(out))
 
+def verifier_sens():
+    """--verifier : règles X17 du toucher, de l'ouïe et de l'odorat sur des cas fabriqués (aucune donnée réelle) ; mentions lues dans la spec."""
+    fautes = []
+    obj = {'id': 'o:decrit', 'description': 'bloc de bois, 5 cm', 'image': 'https://exemple.org/p.jpg'}
+    nu = {'id': 'o:nu', 'description': '', 'image': 'https://exemple.org/p.jpg'}
+    eps = [{'id': 'e:%s' % p_, 'usesModality': [m_], 'observedUnder': {'presentation': p_}, 'note': n_} for p_, m_, n_ in
+           (('inHand', 'toucher', ''), ('screen', 'toucher', ''), ('tableTop', 'odorat', ''), ('screen', 'odorat', ''))]
+    eps += [{'id': 'e:rec-casque', 'usesModality': ['audition'], 'observedUnder': {'presentation': 'recording'}, 'note': 'écouté au casque'},
+            {'id': 'e:rec-tel', 'usesModality': ['audition'], 'observedUnder': {'presentation': 'recording'}, 'note': 'haut-parleur d’un téléphone'},
+            {'id': 'e:screen-vue', 'usesModality': ['vision'], 'observedUnder': {'presentation': 'screen'}, 'note': ''}]
+    ex_ = {'objets': [obj, nu], 'episodes': eps}
+    cas = [('ppp:t', ['toucher'], 'e:inHand', 'o:decrit', 'objet'), ('ppp:t', ['toucher'], 'e:screen', 'o:decrit', None),
+           ('ppp:t', ['toucher'], 'e:inHand', 'o:nu', None), ('ppp:t', ['toucher'], 'e:rec-casque', 'o:decrit', None),
+           ('ppp:o', ['odorat'], 'e:tableTop', 'o:decrit', 'objet'), ('ppp:o', ['odorat'], 'e:screen', 'o:decrit', None),
+           ('ppp:s', ['audition'], 'e:rec-tel', 'o:nu', 'enregistrement'), ('ppp:soundSharpness', ['audition'], 'e:rec-tel', 'o:nu', None),
+           ('ppp:soundSharpness', ['audition'], 'e:rec-casque', 'o:nu', 'enregistrement'), ('ppp:v', ['vision'], 'e:screen-vue', 'o:nu', 'photo'),
+           ('ppp:vt', ['vision', 'toucher'], 'e:screen-vue', 'o:nu', 'photo')]
+    for tid, mods, ep, ob, attendu in cas:
+        a = {'id': 'a', 'about': ob, 'inEpisode': ep, 'modality': None}
+        r = maniere(a, {'id': tid, 'modalites': mods}, ex_)
+        if r != attendu:
+            fautes.append('X17, exemplaire selon le sens : %s %s, épisode %s, objet %s : %s au lieu de %s' % (tid, mods, ep, ob, r, attendu))
+    # la mention des épisodes à réaliser prime sur celle du sens : copie de hardnessToTouch sans a_relire ni bloque_par
+    import copy
+    fiches_, exr = charger()
+    if 'ppp:hardnessToTouch' in fiches_:
+        d_ = copy.deepcopy(fiches_['ppp:hardnessToTouch']); d_['a_relire'] = []; d_['bloque_par'] = []
+        r_ = palier(d_, exr)
+        if r_[0] != 'publiable' or r_[2] != MENTION_A_REALISER:
+            fautes.append('toucher avec épisodes à réaliser (hardnessToTouch, copie sans a_relire ni bloque_par) : %s, mention %r au lieu de %r' % (r_[0], r_[2], MENTION_A_REALISER))
+    spec = os.path.join(os.path.dirname(FD), 'PPP_Specification.md')
+    if os.path.exists(spec):
+        t = ' '.join(open(spec, encoding='utf-8').read().split())
+        for m in ('« exemplaires à toucher : la photo ne montre pas la qualité »', '« exemplaires à écouter »', '« à sentir : la photo ne montre pas la qualité »'):
+            if m not in t:
+                fautes.append('mention de la spec (X17) introuvable : %s' % m)
+    return fautes
+
+def motifs_blocage(ids, fiches):
+    """Bloc du README : chaque fiche bloquée avec son motif court (série 90 quater, choix de relecture (2026-11-02))."""
+    out = []
+    for i in sorted(ids):
+        m = str((fiches[i].get('bloque_par') or [''])[0])
+        t = re.match(r'([TC])\d', m)
+        if t:
+            motif = 'par un point %s' % t.group(1)
+        elif m.startswith('affichage'):
+            motif = 'en attente de l’%s' % m.split(' : ')[0]
+        else:
+            motif = 'par : %s' % m.split(' : ')[0]
+        out.append('`%s` %s' % (i.replace('ppp:', ''), motif))
+    return ', '.join(out) or '—'
+
+
 def bloc():
     fiches, ex = charger()
     n = len(fiches)
@@ -310,11 +461,11 @@ def bloc():
     pl = lambda k, sg, plu: '%d %s' % (k, sg if k == 1 else plu)   # accord : « 1 bloquée », « 1 fiche » (série 48 bis)
     lignes = [
         '<!-- compte:debut (calculé par fiches/compte.py ; ne pas corriger à la main) -->',
-        '- **%d fiches de type actives** ; **%d sans point bloquant** (`bloque_par` vide) : %d à explicabilité validée par la relecture explicative (%s), %d au langage courant validé avec exemple concret manquant (%s), %d en attente de la relecture explicative (champs à valider ou à re-confirmer : %s) ; **%s** par un point T ou C (%s) ; dont **%d minimales** (2.5, C6) : %s.'
+        '- **%d fiches de type actives** ; **%d sans point bloquant** (`bloque_par` vide) : %d à explicabilité validée par la relecture explicative (%s), %d au langage courant validé avec exemple concret manquant (%s), %d en attente de la relecture explicative (champs à valider ou à re-confirmer : %s) ; **%s** : %s ; dont **%d minimales** (2.5, C6) : %s.'
         % (n, n - len(etats.get('bloquée', [])), len(etats.get('explicabilité validée', [])), c(etats.get('explicabilité validée', [])),
            len(etats.get('exemple concret manquant', [])), c(etats.get('exemple concret manquant', [])),
            len(etats.get('en attente de la relecture explicative', [])), c(etats.get('en attente de la relecture explicative', [])),
-           pl(len(etats.get('bloquée', [])), 'bloquée', 'bloquées'), c(etats.get('bloquée', [])), len(minimales), c(minimales)),
+           pl(len(etats.get('bloquée', [])), 'bloquée', 'bloquées'), motifs_blocage(etats.get('bloquée', []), fiches), len(minimales), c(minimales)),
         '- **Références** : %d fiches sur %d en ont (%d références distinctes, comptées par DOI ou URL : %s) ; sans référence : %s.'
         % (len(avec_refs), n, len(distinctes), ', '.join('%d %s' % (v, k) for k, v in sorted(statuts.items())), c(sans_refs)),
         '- **Relecture explicative en attente** (`a_relire` ou `a_reconfirmer` non vides), bloquées comprises : %s (%s).' % (pl(len(attente), 'fiche', 'fiches'), c(attente)),
@@ -347,11 +498,14 @@ def ligne_familles(fiches):
 # Lot 3 bis : les douze fiches des lots 1 à 3 entrent (assertions des lots 1, 2 et 3 validées par la relecture).
 # Série 67 : `localIrregularity` sort de la liste le temps de la relecture explicative de sa portée élargie à la masse (a_relire non vide, X17).
 # Série 67 bis : `localIrregularity` revient dans la liste (portée élargie relue et validée par la relecture explicative, a_relire vide, X17).
+# Série 89 : `textureContrast` entre (statut_note et mesure relus, choix de relecture du 2026-11-02 ; a_relire vide, X17) : 30 fiches.
+# Série 90 : `palier` compte aussi les épisodes « à réaliser » (toucher, odorat ; ouïe à défaut) et les repères du Goût à préparation déclarée et sourcée (X17) ; aucune fiche n'entre (a_relire non vide) : 30 fiches.
 FICHES_PUBLIQUES_ATTENDUES = {'hue', 'lightness', 'lightnessContrast', 'perceivedSize', 'perceptualDensity', 'texture',
                               'textureDirectionality', 'distribution', 'hueContrast', 'hueCount', 'hueRange', 'jointLevelOffset',
                               'jointSpacing', 'perceptualContrast', 'saturation', 'scaleContrast', 'surfaceGloss',
                               'contour', 'lightnessRange', 'saturationRange', 'symmetry', 'translucency', 'curvature',
-                              'outlineIndentation', 'negativeSpace', 'localIrregularity', 'partNesting', 'subsurfaceDepth', 'perceivedDepth'}
+                              'outlineIndentation', 'negativeSpace', 'localIrregularity', 'partNesting', 'subsurfaceDepth', 'perceivedDepth',
+                              'textureContrast'}
 
 def publiques(paliers):
     return sorted(paliers.get('publiable', []) + paliers.get('publiable avec exemplaires incomplets', []))
@@ -534,12 +688,15 @@ if __name__ == '__main__':
         for f, n, nom in noms_publics():
             print('nom hors des fichiers autorisés : %s:%d : %s' % (f, n, nom))
             ok = False
+        for f in verifier_sens():
+            print(f)
+            ok = False
         for i, d in sorted(fiches.items()):
             for msg in controle_mesure(i, d):
                 print('mesure (non bloquant) : %s : %s' % (i, msg))
         if not ok:
             sys.exit(1)
-        print('fiches/README.md : comptes à jour ; appels [[id]] complets ; cq_couvertes valides ; rôles de références dans la liste fermée ; %d fiches publiques, comme attendu ; aucun nom hors des fichiers autorisés.' % len(FICHES_PUBLIQUES_ATTENDUES))
+        print('fiches/README.md : comptes à jour ; appels [[id]] complets ; cq_couvertes valides ; rôles de références dans la liste fermée ; %d fiches publiques, comme attendu ; aucun nom hors des fichiers autorisés ; exemplaires du toucher, de l’ouïe et de l’odorat comptés selon la spec.' % len(FICHES_PUBLIQUES_ATTENDUES))
     elif '--ecrire' in sys.argv:
         ecrire_readme(texte)
     elif '--noms' in sys.argv:

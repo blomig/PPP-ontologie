@@ -180,6 +180,58 @@ bloque_par: []
 
 Une nouvelle fiche porte en `a_relire` tous ses champs en langage courant et ses références (`fiches/compte.py` la compte « en attente de la relecture explicative »).
 
+### Substituts d’exemplaires (spec X17, série 90)
+
+Deux champs facultatifs, ajoutés par choix de relecture (2026-11-02), pour appliquer les décisions de l’éditeur du projet (*à relire*). Ils comptent pour les paliers de publication seulement si la fiche est relue (rien en `a_relire`) ; leurs textes se relisent avec elle (`a_relire: [episodes_a_realiser]`, `[espace_valeurs]`).
+
+```
+episodes_a_realiser:          # toucher, odorat ; ouïe à défaut d'enregistrement cité sous licence libre
+  - id:             # ppp-a:… (id réservé à l’assertion qui sera écrite dans fiches/exemplaires.yaml à la réalisation)
+    realisation:    a_realiser      # seule valeur admise ; ni observateur, ni date d'observation, ni résultat
+    region_attendue:  # clé d’une région de la fiche : une prédiction, pas une assertion (`region` accepté, forme antérieure)
+    rang_exemplaire:  # facultatif : principal | second, quand une région a deux épisodes
+    lie_a:          # facultatif : id d’un autre épisode portant sur le même objet (deux vues, deux distances), chacun avec sa propre assertion (choix de relecture (2026-11-02))
+    objet:          # description : matériaux, dimensions, état, provenance déclarée ; aucun nom de marchand
+    objet_en:
+    preparation:    # ce qu’il faut faire avant : se procurer, mesurer, peser (la masse réelle prime), déclarer (fraîcheur, plis, colle)
+    preparation_en:
+    consigne:       # ce qu’on dit à l’observateur, mot pour mot (la question attentionnelle, ou le geste et la question)
+    consigne_en:
+    conditions:     # facettes : presentation, geste, temperature_objet, duree, yeux (ouverts | fermés), yeux_en ; note, note_en : posture, sécurité, étalonnage
+    doute:          oui | non       # oui : compte pour le palier 2, pas pour X17 (f) (choix de relecture (2026-11-02))
+    motif_doute:    # si doute: oui
+    motif_doute_en:
+    note:           # facultatif : repère de la fiche repris, raison du choix
+    note_en:
+    texte_fr:       # la prédiction, en une ou deux phrases
+    texte_en:
+espace_valeurs:
+  regions:
+    - cle:
+      repere:       # la phrase reprend la substance et la concentration
+      preparation:  # Goût seulement ; absente : le repère reste « à caler » et ne compte pas (choix de relecture (2026-11-02))
+        substance:      # ex. caféine
+        substance_en:
+        concentration:  # ex. 0,195 g/l ; jamais une valeur qui ne figure pas dans la source
+        concentration_en: # même valeur, point décimal (0.195 g/l)
+        solvant:        # ex. eau neutre (ISO 3972, 5.1)
+        solvant_en:
+        temperature:    # ex. vers 20 °C, comme l’eau de rinçage
+        temperature_en:
+        origine:        # où la source donne la valeur (tableau, point)
+        origine_en:
+        source: []      # ids de references de la fiche ; aucune « non vérifiée »
+        doute:          oui | non   # oui : le cran choisi pour cette concentration est discutable ; compte pour le palier 2, pas pour X17 (f) (choix de relecture (2026-11-02))
+        motif_doute:    # si doute: oui
+        motif_doute_en:
+        note:           # facultatif : ce qui reste à déclarer, même si doute: non
+        note_en:
+```
+
+Champs traduisibles (pendants `_en`, affichés sur la page anglaise ; série 91, choix de relecture (2026-11-02)) : épisodes : `objet`, `preparation`, `consigne`, `conditions.yeux`, `conditions.note`, `motif_doute`, `note`, `texte_fr` (`texte_en`) ; préparation d’une région : `substance`, `concentration`, `solvant`, `temperature`, `origine`, `motif_doute`, `note`. Un champ `_en` absent : la page anglaise montre le français.
+
+Un épisode à réaliser n’est ni une épreuve faite ni un accord entre observateurs. Il porte ce qu’il faut pour qu’un tiers le réalise tel quel : objet, préparation, consigne, conditions, région attendue (choix de relecture (2026-11-02)). Une solution de référence cale l’échelle ; elle n’est pas un exemplaire d’aliment.
+
 ---
 
 ## Exemple rempli — Densité perceptive (P1)

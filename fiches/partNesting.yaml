@@ -86,30 +86,21 @@ references:
   doi_ou_url: https://doi.org/10.1016/0010-0285(77)90012-3
   role: discute
   statut_verification: vérifiée sur résumé ou source secondaire
-  verifie_le: '2026-10-10'
-  verifie_sur: métadonnées Crossref (titre, revue) ; résumé non disponible, texte non lu
-  reprend: la différence entre traits globaux et locaux
+  verifie_le: '2026-11-02'
+  verifie_sur: 'métadonnées Crossref et résumé (notice de l’université de Haïfa, https://cris.haifa.ac.il/en/publications/forest-before-trees-the-precedence-of-global-features-in-visual-p/) lus le 2026-11-02 : grandes lettres faites de petites lettres ; le niveau global gêne la réponse au niveau local, pas l’inverse ; texte non lu'
+  reprend: 'la différence entre traits globaux et locaux, sur des figures à deux niveaux emboîtés (grandes lettres faites de petites lettres)'
   ne_reprend_pas: l'ordre de traitement (contenu non lu)
-- id: palmer1977
-  citation: Palmer, S. E. (1977). Hierarchical structure in perceptual representation. Cognitive Psychology, 9(4), 441–474.
-  doi_ou_url: https://doi.org/10.1016/0010-0285(77)90016-0
-  role: alimente
-  statut_verification: vérifiée sur résumé ou source secondaire
-  verifie_le: '2026-10-10'
-  verifie_sur: métadonnées Crossref (titre, revue) ; résumé non disponible, texte non lu
-  reprend: une représentation perceptive faite de parties emboîtées
-  ne_reprend_pas: son formalisme (contenu non lu)
 - id: hoffman_richards1984
   citation: Hoffman, D. D. & Richards, W. A. (1984). Parts of recognition. Cognition, 18(1–3), 65–96.
   doi_ou_url: https://doi.org/10.1016/0010-0277(84)90022-2
   role: discute
   statut_verification: vérifiée sur résumé ou source secondaire
-  verifie_le: '2026-10-10'
-  verifie_sur: métadonnées Crossref et notice PubMed (PMID 6543164), sans résumé ; contenu non lu
+  verifie_le: '2026-11-02'
+  verifie_sur: 'métadonnées Crossref ; résumé lu le 2026-11-02 dans la version antérieure des auteurs (Hoffman et Richards, « Parts of Recognition », MIT AI Memo 732, décembre 1983, DSpace du MIT, http://hdl.handle.net/1721.1/6391) : le système visuel décomposerait une forme en parties par une règle de frontières (transversalité) ; résumé de l’article de 1984 non lu, texte non lu'
   reprend: la décomposition d'une forme en parties
-  ne_reprend_pas: la règle de découpage (contenu non lu)
-etat_de_l_art: 'La perception de structures hiérarchiques (des parties dans des parties) est étudiée depuis Navon (1977) [[navon1977]], qui compare traits globaux et locaux (l’ensemble et les détails),
-  et Palmer (1977) [[palmer1977]], qui décrit la représentation perceptive comme hiérarchique. Hoffman et Richards (1984) [[hoffman_richards1984]] étudient la décomposition d’une forme en parties. Aucune
+  ne_reprend_pas: la règle de découpage (frontières de parties, transversalité) et l’indexation en mémoire
+etat_de_l_art: 'La perception de structures hiérarchiques (des parties dans des parties) est étudiée depuis Navon (1977) [[navon1977]], qui compare traits globaux et locaux (l’ensemble et les détails)
+  sur des figures à deux niveaux emboîtés, de grandes lettres faites de petites lettres. Hoffman et Richards (1984) [[hoffman_richards1984]] étudient la décomposition d’une forme en parties. Aucune
   source trouvée ne fixe des régions perçues du nombre de niveaux. Détail : docs/bibliographie-par-type.md#groupe-organisation.'
 etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-organisation
 axiomes:

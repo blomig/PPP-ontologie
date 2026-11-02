@@ -28,15 +28,16 @@ mesure:
   methodes:
   - id: iso_25178_2
     nom: écart de rugosité surfacique entre deux surfaces
-    grandeur: différence entre les hauteurs moyennes (Sa) et entre les longueurs d’autocorrélation (Sal) mesurées sur chacune des deux surfaces
+    grandeur: 'différence entre les écarts moyens du relief (Sa) et entre les longueurs d’autocorrélation (Sal) mesurés sur chacune des deux surfaces ; Sa, l’écart moyen des creux et des bosses par rapport au niveau moyen de la surface ; Sal, la plus courte distance de décalage à laquelle le relief ne ressemble presque plus à lui-même (ressemblance tombée à 0,2 par défaut), soit à peu près la taille typique d’un motif du relief'
     unite_ou_echelle: micromètres
     references:
     - iso_25178_2
     - npl_gpg116
+    - npl_gpg108
     proximite: indirecte
     ecart: 'compare deux valeurs mesurées au micromètre sur de petites zones, alors que les reliefs qu’on voit ou qu’on sent se comptent souvent en millimètres ; ne saisit ni la distance de vue, ni l’éclairage, ni l’observateur, ni, au toucher, la force et le geste'
     conditions: surfaces relevées par un même instrument surfacique, avec les mêmes filtres
-    statut_lecture: résumé public lu (page de l’ISO ; sommaire de l’extrait public) ; symboles d’après NPL, Measurement Good Practice Guide No. 116 (2010), table 1
+    statut_lecture: résumé public lu (page de l’ISO ; sommaire de l’extrait public) ; symboles d’après NPL, Measurement Good Practice Guide No. 116 (2010), table 1 ; définitions de Sa et de Sal lues dans les guides NPL n° 116 et n° 108
 modalites:
 - vision
 - toucher
@@ -120,10 +121,19 @@ references:
   doi_ou_url: https://eprintspublications.npl.co.uk/4833/1/mgpg116.pdf
   role: contraste
   statut_verification: vérifiée sur la source
-  verifie_le: '2026-10-16'
+  verifie_le: '2026-11-02'
   verifie_sur: 'guide lu en partie le 2026-10-16 (PDF du NPL) : table 1, « The S parameter set » (Sa, hauteur moyenne arithmétique, µm ; Sal, longueur d’autocorrélation, µm ; Str, rapport d’aspect de la
-    texture ; Std, direction de la texture, degrés) ; le guide suit les projets de normes ISO 25178 alors en préparation'
-  reprend: 'rien : les symboles et noms des paramètres surfaciques, cités dans la rubrique « mesure »'
+    texture ; Std, direction de la texture, degrés) ; le guide suit les projets de normes ISO 25178 alors en préparation ; relu le 2026-11-02 : Sa, moyenne arithmétique de la valeur absolue de la hauteur sur la zone d’échantillonnage (section des paramètres de hauteur) ; Sal n’y est que nommé (table 1), sans définition'
+  reprend: 'rien : les symboles et noms des paramètres surfaciques et la définition de Sa, cités dans la rubrique « mesure »'
+  ne_reprend_pas: les valeurs des paramètres comme bornes de régions ; les procédés d’interférométrie
+- id: npl_gpg108
+  citation: 'Leach, R., Brown, L. & Jiang, X. (2008). Guide to the Measurement of Smooth Surface Topography using Coherence Scanning Interferometry. Measurement Good Practice Guide No. 108. Teddington : National Physical Laboratory.'
+  doi_ou_url: https://eprintspublications.npl.co.uk/4099/1/mgpg108.pdf
+  role: contraste
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-11-02'
+  verifie_sur: 'guide lu en partie le 2026-11-02 (PDF du NPL), chapitre 2, paramètres d’espacement : Sal, distance horizontale de la fonction d’autocorrélation qui décroît le plus vite jusqu’à une valeur s (0 ≤ s < 1), s pouvant être pris égal à 0,2 ; un grand Sal signale une surface dominée par les basses fréquences spatiales ; Sa défini comme dans le guide n° 116'
+  reprend: 'rien : la définition de Sal, citée dans la rubrique « mesure »'
   ne_reprend_pas: les valeurs des paramètres comme bornes de régions ; les procédés d’interférométrie
 etat_de_l_art: 'Les mesures de texture de Tamura, Mori et Yamawaki (1978) [[tamura1978]] permettent de comparer deux surfaces, mais elles ne définissent pas un contraste perçu entre elles. Aucune source
   trouvée ne propose une échelle perçue du contraste de texture entre deux parties d''un objet ; les labels des régions restent en position de travail (T3). Détail : docs/bibliographie-par-type.md#groupe-contrastes.'
@@ -159,9 +169,7 @@ modifie_en:
 - '2.8'
 remplace_par: []
 statut_note: 'Position de travail : les régions de ce contraste se lisent avec celles de la texture (lisse, fine, moyenne, grosse), qui restent elles-mêmes en position de travail et peuvent encore changer.'
-a_relire:
-- statut_note
-- mesure
+a_relire: []
 remarque:
 - 'série 29 (2026-10-12, demande de la relecture explicative pour la publication bilingue) : label_en des régions weak, marked, strong : slight, evident, maximal (moderate inchangé ; clés inchangées), comme les labels FR faible, modéré, évident, maximal ; à relire ; validé en série 31'
 relecture_explicative:
@@ -176,6 +184,8 @@ relecture_explicative:
   - etat_de_l_art (série 6)
   - references (série 6)
   - espace_valeurs.regions.label_en (validé en relecture explicative, série 31, 2026-10-12)
+  - statut_note (choix de relecture, série 89, 2026-11-02)
+  - mesure (choix de relecture, série 89, 2026-11-02 — glose de Sa et de Sal ajoutée)
   a_reconfirmer: []
   reconfirme:
   - champ: question_attentionnelle

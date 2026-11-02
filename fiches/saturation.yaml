@@ -119,8 +119,8 @@ references:
   doi_ou_url: https://doi.org/10.1002/9781118653128
   role: discute
   statut_verification: vérifiée sur résumé ou source secondaire
-  verifie_le: '2026-10-10'
-  verifie_sur: métadonnées Crossref (titre, auteur, 2013) ; contenu non lu
+  verifie_le: '2026-11-02'
+  verifie_sur: 'métadonnées Crossref et description de l’éditeur (Wiley, page de la 3e édition, ISBN 978-1-119-96703-3, https://www.wiley.com/en-us/Color+Appearance+Models%2C+3rd+Edition-p-9781119967033) lues le 2026-11-02 : ouvrage de référence sur l’apparence des couleurs et les modèles qui la mesurent et la prédisent ; contenu non lu'
   reprend: l'existence de modèles d'apparence de la couleur
   ne_reprend_pas: 'leurs attributs et formules : non repris (contenu non lu)'
 - id: cie015

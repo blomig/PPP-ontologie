@@ -79,7 +79,21 @@ espace_valeurs:
     label_fr: aucune
     label_en: none
     rang: 1
-    repere: 'de l’eau neutre : la bouche reste comme avant'
+    repere: 'de l’eau neutre, plate, sans goût ni odeur (ISO 3972, 5.1), vers 20 °C : la bouche reste comme avant'
+    preparation:
+      substance: eau, sans soluté
+      substance_en: water, no solute
+      concentration: 0 g/l
+      concentration_en: 0 g/l
+      solvant: eau neutre, plate, sans goût ni odeur, de dureté connue de préférence (ISO 3972, 5.1)
+      solvant_en: neutral still water, tasteless and odourless, preferably of known hardness (ISO 3972, 5.1)
+      temperature: vers 20 °C, comme l’eau de rinçage (ISO 3972, 7.2 d)
+      temperature_en: about 20 °C, like the rinsing water (ISO 3972, 7.2 d)
+      origine: ISO 3972:2011, 5.1 (eau) et 7.2 d (température)
+      origine_en: ISO 3972:2011, 5.1 (water) and 7.2 d (temperature)
+      source:
+      - iso3972
+      doute: non
     exemplaires: []
   - cle: faint
     label_fr: à peine perceptible
@@ -91,7 +105,24 @@ espace_valeurs:
     label_fr: nette
     label_en: distinct
     rang: 3
-    repere: une solution d’alun à 1 g/l, matériau de référence peu amer et peu acide mais nettement asséchant (cran provisoire, à caler avant E1 ; « forte » reste possible)
+    repere: 'une solution d’alun à 1 g/l dans l’eau neutre, vers 20 °C : matériau de référence peu amer et peu acide mais nettement asséchant (Lee et Lawless, 1991) ; cran provisoire, à caler avant E1 (« forte » reste possible)'
+    preparation:
+      substance: 'alun (forme non précisée par la source : à déclarer à la préparation)'
+      substance_en: 'alum (form not stated by the source: to be declared when prepared)'
+      concentration: 1 g/l
+      concentration_en: 1 g/l
+      solvant: eau neutre, plate, sans goût ni odeur, de dureté connue de préférence (ISO 3972, 5.1)
+      solvant_en: neutral still water, tasteless and odourless, preferably of known hardness (ISO 3972, 5.1)
+      temperature: vers 20 °C, comme l’eau de rinçage (ISO 3972, 7.2 d)
+      temperature_en: about 20 °C, like the rinsing water (ISO 3972, 7.2 d)
+      origine: 'Lee et Lawless (1991), résumé : alun à 1 g/l comme matériau de référence ; eau et température reprises d’ISO 3972:2011 (5.1, 7.2 d) : choix de relecture (2026-11-02)'
+      origine_en: 'Lee and Lawless (1991), abstract: alum at 1 g/l as reference material; water and temperature taken from ISO 3972:2011 (5.1, 7.2 d): review choice (2026-11-02)'
+      source:
+      - lee_lawless1991
+      - iso3972
+      doute: oui
+      motif_doute: 'forme de l’alun non précisée (dodécahydraté ou anhydre : jusqu’à 1,8 fois plus de sel actif)'
+      motif_doute_en: 'form of the alum not stated (dodecahydrate or anhydrous: up to 1.8 times more active salt)'
     exemplaires: []
   - cle: strong
     label_fr: forte
@@ -99,10 +130,7 @@ espace_valeurs:
     rang: 4
     repere: aucun repère fixé (à choisir avant l’épreuve)
     exemplaires: []
-note_echelle: 'quatre régions, comme pour l’amer, au féminin (proposition « Goût », 2.4). ISO 3972 ne donne pas de solution pour l’astringence ; le repère proposé est l’alun à 1 g/l, recommandé comme matériau
-  de référence (Lee et Lawless, 1991 [[lee_lawless1991]] ; décision 5 de l’éditeur du projet, 2026-10-19). Le cran « nette » est un choix de relecture provisoire (2026-10-20), à caler avant E1 : le résumé
-  de la source dit que l’alun à 1 g/l produit des sensations « pronounced » (asséchantes, râpeuses, qui resserrent la bouche), si bien que le cran « forte » reste possible (choix de relecture (2026-10-20),
-  série 78 bis). Plusieurs sous-qualités (sécheresse, râpeux, bouche qui se resserre) sont réunies ici ; un deuxième lot pourrait les séparer si l’épreuve E1 ne passe pas.'
+note_echelle: 'quatre régions, comme pour l’amer, au féminin (proposition « Goût », 2.4). ISO 3972 ne donne pas de solution pour l’astringence ; le repère proposé est l’alun à 1 g/l, recommandé comme matériau de référence (Lee et Lawless, 1991 [[lee_lawless1991]] ; décision 5 de l’éditeur du projet, 2026-10-19). Le cran « nette » est un choix de relecture provisoire (2026-10-20), à caler avant E1 : le résumé de la source dit que l’alun à 1 g/l produit des sensations « pronounced » (asséchantes, râpeuses, qui resserrent la bouche), si bien que le cran « forte » reste possible (choix de relecture (2026-10-20), série 78 bis). Plusieurs sous-qualités (sécheresse, râpeux, bouche qui se resserre) sont réunies ici ; un deuxième lot pourrait les séparer si l’épreuve E1 ne passe pas. Série 90 (choix de relecture (2026-11-02), suivant la décision de l’éditeur du projet (2026-11-02) : « B : les repères de région (solutions ISO 3972, alun 1 g/l) ») : la solution d’alun est préparée dans l’eau neutre d’ISO 3972 [[iso3972]] (5.1), vers 20 °C (7.2 d) ; la forme de l’alun, que le résumé de la source ne précise pas, est à déclarer à la préparation ; le cran « aucune » est calé sur cette eau. Les crans « à peine perceptible » et « forte » restent à caler.'
 identite: 'La force avec laquelle la bouche elle-même se sèche, râpe ou se resserre, état cumulatif qui reste après la gorgée ; pas une saveur (amer, acide en réserve), pas une texture de la bouchée (dureté
   en bouche, épaisseur en bouche : une résistance à la mastication), pas la longueur (une durée de trace), pas l’agrément.'
 relations: []
@@ -136,8 +164,8 @@ references:
   doi_ou_url: https://doi.org/10.1093/chemse/16.3.225
   role: alimente
   statut_verification: vérifiée sur résumé ou source secondaire
-  verifie_le: '2026-10-19'
-  verifie_sur: résumé (dont l’alun à 1 g/l comme matériau de référence) ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  verifie_le: '2026-11-02'
+  verifie_sur: 'résumé (OpenAlex) relu le 2026-11-02 : « using 1 g/l alum as a reference material, since it is relatively low in perceived bitterness and sourness, but produces pronounced drying, roughing, puckery/drawing sensations » ; la forme de l’alun et le solvant ne sont pas précisés ; texte non lu'
   reprend: plusieurs sous-qualités (sécheresse, râpeux, bouche qui se resserre), qui décroissent en cinq à six minutes ; l’alun à 1 g/l comme matériau de référence
   ne_reprend_pas: les courbes temps-intensité comme mesure
 - id: bajec2008
@@ -187,6 +215,15 @@ references:
   verifie_sur: résumé et extraits de l’introduction (ScienceDirect) ; définition complète de l’attribut dominant connue par source secondaire (Visalli et Galmarini, 2024) (statut repris de docs/bibliographie-par-type.md#groupe-gout)
   reprend: la TDS, un jugement de jury, non retenue comme mesure
   ne_reprend_pas: la construction des courbes
+- id: iso3972
+  citation: ISO 3972:2011. Sensory analysis — Methodology — Method of investigating sensitivity of taste (3e éd.), et Cor 1:2012. ISO.
+  doi_ou_url: https://www.iso.org/standard/50110.html
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-11-02'
+  verifie_sur: 'extraits : aperçu public de l’édition 2011 diffusé par iTeh Standards (https://standards.iteh.ai/catalog/standards/sist/9d3b5579-aea7-40d6-9216-d4825f5a0a83/iso-3972-2011 ; l’aperçu de iso.org ne montre que les points 1 à 3) : points 5.1, 7.2, 8.1, tableaux 1, 2 et 3, relus le 2026-11-02 ; norme confirmée le 2023-09-21 ; Cor 1:2012 non lu ; texte complet non lu'
+  reprend: l’eau neutre du point 5.1 et la température d’environ 20 °C (7.2 d) pour la solution d’alun et pour le cran « aucune »
+  ne_reprend_pas: les solutions des saveurs de base (la norme ne traite pas l’astringence)
 etat_de_l_art: 'L’astringence se sent même entre la gencive et la lèvre, où il n’y a pas de papilles, et diminue quand on lubrifie la bouche : c’est surtout un toucher (Breslin et al., 1993 [[breslin1993]]).
   Green (1993) [[green1993astr]] l’attribue à une hausse du frottement, quand les protéines de la salive précipitent ; elle s’accumule d’une gorgée à l’autre. Lee et Lawless (1991) [[lee_lawless1991]] y
   distinguent plusieurs sous-qualités, notées pendant cinq à six minutes, et recommandent l’alun à 1 g/l comme matériau de référence ; Bajec et Pickering (2008) [[bajec2008]] en font la revue. Dans un vin
@@ -225,11 +262,9 @@ source_de_la_fiche: 'création du type : décision de l’éditeur du projet (20
   » : décision de l’éditeur du projet (2026-10-19, décision 1) ; contenu repris de la proposition « Goût » (docs/famille-gout-proposition.md (document de travail, non publié), sections 2, 5, 6 et 7) ; le
   reste (porteur, crans, repères, facettes critiques, classement des mesures, rédaction) : choix de relecture (2026-10-19 et 2026-10-20) ; fiche créée le 2026-10-20 (série 78)'
 manques:
-- 'exemplaires : aucun. Décision 5 de l’éditeur du projet (2026-10-19) : pas d’exemplaire en V1 pour le goût, des repères de région à la place. Si des exemples sont cherchés plus tard, ce seront des objets
-  publics seulement (produits identifiés, sans marque citée), jamais des objets privés'
+- 'exemplaires : aucun. Décision 5 de l’éditeur du projet (2026-10-19) : pas d’exemplaire en V1 pour le goût, des repères de région à la place. Si des exemples sont cherchés plus tard, ce seront des objets publics seulement (produits identifiés, sans marque citée), jamais des objets privés'
 - 'épreuve d’accord E1 à faire : portions du même lot, au même moment, repères de région goûtés avant de juger (proposition « Goût », section 6, point 2)'
-- 'repères des crans « à peine perceptible » et « forte » ; cran de l’alun à 1 g/l provisoire (« nette »), à caler avant E1 : la source dit « pronounced », « forte » reste possible (choix de relecture (2026-10-20),
-  série 78 bis)'
+- 'repères des crans « à peine perceptible » et « forte » à caler ; cran de l’alun à 1 g/l provisoire (« nette », marqué `doute: oui`), à caler avant E1 : la source dit « pronounced », « forte » reste possible (choix de relecture (2026-10-20), série 78 bis) ; forme de l’alun à déclarer (série 90)'
 - 'mesures physiques de l’astringence (frottement, précipitation des protéines salivaires) : non lues'
 bloque_par: []
 a_relire:
@@ -262,6 +297,7 @@ a_relire:
 - statut_note
 remarque:
 - 'série 78 bis (choix de relecture (2026-10-20), corrections de relecture) : cran « nette » de l’alun provisoire, « forte » possible (repère, note_echelle, manques) ; à relire'
+- 'série 90 (choix de relecture (2026-11-02), suivant la décision de l’éditeur du projet (2026-11-02) : « B : les repères de région (solutions ISO 3972, alun 1 g/l) ») : eau et alun à 1 g/l calés (Lee et Lawless 1991, résumé relu ; eau et température d’ISO 3972, ajoutée aux références) ; à relire'
 relecture_explicative:
   date: null
   champs: []

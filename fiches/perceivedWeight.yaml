@@ -17,7 +17,7 @@ base_dependance:
 facettes:
 - toucher
 définition: 'Ce que l’objet paraît peser quand on le soulève à la main et qu’on le soupèse, sans appui : de ce qui se soulève du bout des doigts à ce qui demande les deux mains. Le cran se juge à l’effort que demande le poids, non à la prise que la taille impose : un objet encombrant mais léger, qu’on doit prendre à pleine main ou à deux bras, se range au cran où son poids seul se tiendrait. Ce poids se sent avec la taille et la matière de l’objet tenu : qu’un objet paraisse lourd ou léger pour sa taille (un bloc d’ébène, un bloc de balsa) relève de ce type, pas d’un type à part.'
-question_attentionnelle: En soulevant l’objet sans appui, puis en le soupesant, son poids se tiendrait-il du bout des doigts, d’une main, ou faudrait-il les deux mains, quelle que soit la prise que sa taille impose ?
+question_attentionnelle: 'Soulevez l’objet sans appui et soupesez-le : rien que pour son poids, suffirait-il du bout des doigts, d’une main, ou faudrait-il les deux mains ?'
 contre_exemple: 'Deux blocs de même taille et de même forme, l’un de balsa, l’autre d’ébène, ne pèsent pas autant dans la main : c’est leur poids perçu qui les sépare, pas leur taille (taille perçue). À l’inverse, de deux objets de même masse, le plus petit paraît souvent le plus lourd : ce que dit la balance n’est pas ce que décrit ce type. Un carton vide assez grand pour demander les deux bras ne demande pas les deux mains par son poids : c’est sa taille qui oblige à le prendre ainsi.'
 grandeur_physique_homonyme: 'masse (gramme) et poids au sens de la physique (newton) ; masse volumique (kilogramme par mètre cube), que le ticket n° 5 appelle « densité » : aucune région ne s’en déduit. Voir la rubrique « mesure ».'
 mesure:
@@ -45,19 +45,19 @@ mesure:
     statut_lecture: résumé lu (Amazeen et Turvey, 1996, OpenAlex, 2026-10-27) ; texte non lu
   non_retenues:
   - nom: estimation de grandeur de la lourdeur (Stevens)
-    references: [stevens1957]
+    references: []
     raison: 'échelle de jugement par jury, sans série de référence physique (spec §9.7 P, point 7) ; l’exposant de la lourdeur soulevée n’a été lu dans aucune source : non vérifié'
-    statut_lecture: métadonnées seules (Crossref) ; texte non lu
+    statut_lecture: 'aucune source lue (série 88 : Stevens (1957) retirée des références, aucun résumé lisible)'
   - nom: seuil différentiel du poids (loi de Weber)
-    references: [jones1986]
+    references: []
     raison: 'mesure le plus petit écart qu’on distingue entre deux poids, pas des régions ; la valeur de la fraction de Weber pour le poids n’a été lue dans aucune source : non vérifiée'
-    statut_lecture: métadonnées seules de la revue de Jones (1986) (Crossref) ; rien n’en est repris
+    statut_lecture: 'aucune source lue (série 88 : la revue de Jones (1986) retirée des références, aucun résumé lisible)'
 modalites:
 - toucher
 mode_de_presentation: échantillon
 conditions_critiques:
 - geste
-note_conditions: 'le jugement se fait en soulevant l’objet et en le soupesant, sans appuyer le bras ni la main (facette `geste` : `unsupportedHolding`, spec §9.7 H, règle 8) [[klatzky_reed2009]] ; objet tenu en main (`inHand`), durée `glance`. On ne juge pas en portant l’objet : l’effort, la fatigue et la durée s’en mêlent. La prise, la répartition de la masse, la vue et la température de l’objet vont en note d’épisode, sans facette : une prise ferme abolit l’illusion matière-poids pour des objets légers (Ellis et Lederman 1999) [[ellis_lederman1999]] ; la lourdeur d’un objet qu’on manie suit sa répartition de masse (Amazeen et Turvey 1996) [[amazeen_turvey1996]] ; voir l’objet change ce qu’on en attend, mais l’illusion taille-poids naît aussi sans voir (Ellis et Lederman 1993) [[ellis_lederman1993]] ; la température figure parmi les causes d’illusions de poids (Buckingham 2014) [[buckingham2014]]. Épreuve sans voir de préférence, ou yeux ouverts déclarés. Une photo ne dit rien du poids : aucune assertion sur image ; qu’un objet ait l’air lourd est une attente (poids apparent, piste visuelle hors du périmètre actuel), pas une assertion de ce type.'
+note_conditions: 'le jugement se fait en soulevant l’objet et en le soupesant, sans appuyer le bras ni la main (facette `geste` : `unsupportedHolding`, spec §9.7 H, règle 8) [[klatzky_reed2009]] ; objet tenu en main (`inHand`), durée `glance`. On ne juge pas en portant l’objet : l’effort, la fatigue et la durée s’en mêlent. La prise, la répartition de la masse, la vue et la température de l’objet vont en note d’épisode, sans facette : une prise ferme abolit l’illusion matière-poids pour des objets légers (Ellis et Lederman 1999) [[ellis_lederman1999]] ; la lourdeur d’un objet qu’on manie suit sa répartition de masse (Amazeen et Turvey 1996) [[amazeen_turvey1996]] ; voir l’objet change ce qu’on en attend, mais l’illusion taille-poids naît aussi sans voir (Ellis et Lederman 1993) [[ellis_lederman1993]] ; la température figure parmi les causes d’illusions de poids (Buckingham 2014) [[buckingham2014]]. Épreuve sans voir de préférence, ou yeux ouverts déclarés ; un objet de « deux mains » (carton de livres, sac de riz) se juge yeux ouverts, exception déclarée pour la sécurité, soulevé depuis une table et non depuis le sol, à une masse visée de 10 kg (plafond : 12 kg) (choix de relecture (2026-11-02)). Une photo ne dit rien du poids : aucune assertion sur image ; qu’un objet ait l’air lourd est une attente (poids apparent, piste visuelle hors du périmètre actuel), pas une assertion de ce type.'
 porteur: 'un objet qu’on peut soulever d’une main ou des deux, pris en entier (pas une partie d’objet ni une matière en général : une boîte de métal mince est légère alors que le métal est lourd pour sa taille)'
 arité: 1
 condition_NA: 'objet qu’on ne peut pas ou qu’on n’a pas le droit de soulever (un mur, une façade, une œuvre de musée, un meuble fixé, un objet trop lourd pour être soulevé sans risque) ; objet vu seulement en image.'
@@ -82,9 +82,9 @@ espace_valeurs:
     label_fr: demande les deux mains
     label_en: needs both hands
     rang: 3
-    repere: 'son poids oblige à le soulever des deux mains (un carton plein de livres, un parpaing)'
+    repere: 'son poids oblige à le soulever des deux mains (un carton plein de livres, un sac de riz de 10 kg, un parpaing)'
     exemplaires: []
-note_echelle: 'trois crans rapportés au corps, comme ceux de la taille perçue (proposition « Toucher », §2.5 ; décision 6 : régions rapportées au corps de préférence) ; les repères sont des illustrations à éprouver, pas des valeurs vérifiées. Les labels des crans nomment une prise, mais le cran se juge à l’effort que demande le poids, non à la prise que la taille impose (définition) : un objet encombrant mais léger ne passe pas au cran « demande les deux mains » à cause de sa taille (contre-exemple). Poids pour sa taille (ticket n° 5 ; intégration : choix de relecture (2026-10-27)) : ce n’est ni un type à part ni une seconde échelle, mais une façon dont ce même poids se sent. Deux blocs de même taille, de balsa et d’ébène, gros comme le poing, tombent dans des crans différents : celui d’ébène demande la main entière (repère ci-dessus) ; celui de balsa, que sa taille oblige à prendre à pleine main, a un poids qui se tiendrait du bout des doigts, comme la baguette de balsa du repère ; quand deux objets de même taille et de même forme tombent dans le même cran, l’écart se note en note d’épisode, par comparaison (« plus lourd pour sa taille que… »), de préférence sur une série de comparaison observable : des blocs de même taille et de même forme (balsa, pin, chêne, ébène) soupesés l’un après l’autre. Le « poids pour sa taille » n’est pas la densité perceptive (`ppp:perceptualDensity`) : en PPP, « densité » désigne une qualité vue, une surface plus ou moins remplie d’éléments ; le sens du ticket (« densité perçue en tenant un objet ») est ici, sous le nom de poids perçu. Position de travail : trois crans, E1 en accord exact (spec §9.7 C).'
+note_echelle: 'trois crans rapportés au corps, comme ceux de la taille perçue (proposition « Toucher », §2.5 ; décision 6 : régions rapportées au corps de préférence) ; les repères sont des illustrations à éprouver, pas des valeurs vérifiées. Les labels des crans nomment une prise, mais le cran se juge à l’effort que demande le poids, non à la prise que la taille impose (définition) : un objet encombrant mais léger ne passe pas au cran « demande les deux mains » à cause de sa taille (contre-exemple). Poids pour sa taille (ticket n° 5 ; intégration : choix de relecture (2026-10-27)) : ce n’est ni un type à part ni une seconde échelle, mais une façon dont ce même poids se sent. Deux blocs de même taille, de balsa et d’ébène, gros comme le poing, tombent dans des crans différents : celui d’ébène demande la main entière (repère ci-dessus) ; celui de balsa, que sa taille oblige à prendre à pleine main, a un poids qui se tiendrait du bout des doigts, comme la baguette de balsa du repère ; quand deux objets de même taille et de même forme tombent dans le même cran, l’écart se note en note d’épisode, par comparaison (« plus lourd pour sa taille que… »), de préférence sur une série de comparaison observable : des cubes de 10 cm de même finition (balsa, pin, chêne, buis) soupesés l’un après l’autre ; un buis contrecollé est admis s’il est déclaré (nombre et épaisseur des plis, colle) et pesé, la masse réelle pesée avant l’épreuve primant sur la masse estimée, l’ébène seulement en chute de provenance déclarée (choix de relecture (2026-11-02)). Le parpaing reste un repère en mots : il n’est pas proposé à l’épreuve (choix de relecture (2026-11-02)). Le « poids pour sa taille » n’est pas la densité perceptive (`ppp:perceptualDensity`) : en PPP, « densité » désigne une qualité vue, une surface plus ou moins remplie d’éléments ; le sens du ticket (« densité perçue en tenant un objet ») est ici, sous le nom de poids perçu. Position de travail : trois crans, E1 en accord exact (spec §9.7 C).'
 identite: 'Ce que l’objet paraît peser, soulevé et soupesé sans appui, sa taille et sa matière senties comprises : qu’il paraisse lourd ou léger pour sa taille en fait partie (ticket n° 5) ; pas sa taille (`ppp:perceivedSize`) ; pas la densité perceptive (`ppp:perceptualDensity`, vue : combien une surface paraît remplie d’éléments), malgré le mot « densité » du ticket ; pas la masse ni la masse volumique mesurées ; pas le poids apparent, jugé à la vue sans toucher (une attente, piste hors du périmètre actuel) ; pas l’effort de porter (fatigue, durée).'
 relations:
 - type: confusableWith
@@ -190,12 +190,12 @@ references:
 - id: harshfield_dehardt1970
   citation: Harshfield, S. P. & DeHardt, D. C. (1970). Weight judgment as a function of apparent density of objects. Psychonomic Science, 20(6), 365–366.
   doi_ou_url: https://doi.org/10.3758/BF03335692
-  role: discute
-  statut_verification: non vérifiée
-  verifie_le: '2026-10-27'
-  verifie_sur: DOI résolu et métadonnées vérifiées sur Crossref le 2026-10-27 (titre, revue) ; aucun résumé trouvé ; texte non lu (page de l’éditeur non accessible le 2026-10-27)
-  reprend: rien (signalée pour son titre)
-  ne_reprend_pas: tout son contenu, non lu
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-11-02'
+  verifie_sur: métadonnées Crossref et résumé de la page de l’éditeur (Springer Nature Link, https://link.springer.com/article/10.3758/BF03335692) lus le 2026-11-02 ; texte non lu
+  reprend: 'cinq cubes de même taille et de même poids (balsa, acajou, aluminium, laiton, acier) : soulevés, ils sont rangés du plus lourd au plus léger dans cet ordre, le balsa en tête ; vus sans être soulevés, ils sont rangés dans l’ordre inverse, comme le veut leur densité apparente (illusion densité-poids, proche de l’illusion taille-poids)'
+  ne_reprend_pas: le détail du protocole et des résultats, non lus
 - id: amazeen_turvey1996
   citation: 'Amazeen, E. L. & Turvey, M. T. (1996). Weight perception and the haptic size–weight illusion are functions of the inertia tensor. Journal of Experimental Psychology: Human Perception and Performance, 22(1), 213–232.'
   doi_ou_url: https://doi.org/10.1037/0096-1523.22.1.213
@@ -214,25 +214,7 @@ references:
   verifie_sur: article lu (série 30, passages relus pour le protocole d’échantillons)
   reprend: le geste de tenue sans appui pour le poids
   ne_reprend_pas: les autres procédures exploratoires comme conditions de ce type
-- id: stevens1957
-  citation: Stevens, S. S. (1957). On the psychophysical law. Psychological Review, 64(3), 153–181.
-  doi_ou_url: https://doi.org/10.1037/h0046162
-  role: contraste
-  statut_verification: non vérifiée
-  verifie_le: '2026-10-27'
-  verifie_sur: DOI résolu et métadonnées vérifiées sur Crossref le 2026-10-27 ; texte non lu ; l’exposant de la lourdeur n’est pas vérifié
-  reprend: rien (méthode non retenue, rubrique « mesure »)
-  ne_reprend_pas: l’exposant de la lourdeur soulevée
-- id: jones1986
-  citation: 'Jones, L. A. (1986). Perception of force and weight: Theory and research. Psychological Bulletin, 100(1), 29–42.'
-  doi_ou_url: https://doi.org/10.1037/0033-2909.100.1.29
-  role: contraste
-  statut_verification: non vérifiée
-  verifie_le: '2026-10-27'
-  verifie_sur: DOI résolu et métadonnées vérifiées sur Crossref le 2026-10-27 (PubMed, PMID 2942958, sans résumé) ; texte non lu
-  reprend: rien (méthode non retenue, rubrique « mesure »)
-  ne_reprend_pas: la fraction de Weber pour le poids, non lue
-etat_de_l_art: 'Sources : depuis Charpentier (1891), connu par Murray et al. (1999) [[murray_etal1999]], on sait que de deux objets de même poids, le plus petit paraît le plus lourd (illusion taille-poids). Cette illusion est d’abord tactile : les indices de volume de la main suffisent et sont nécessaires, ceux de la vue seulement suffisants, avec un effet plus faible (Ellis et Lederman 1993) [[ellis_lederman1993]] ; elle persiste quand la main a appris la force juste (Flanagan et Beltzner 2000) [[flanagan_beltzner2000]]. La matière sentie (Ellis et Lederman 1999) [[ellis_lederman1999]] ou vue (Buckingham et al. 2009) [[buckingham_etal2009]] et ce qu’on sait de l’objet (Ellis et Lederman 1998) [[ellis_lederman1998]] changent aussi le poids senti ; une revue fait le point sur ces illusions et le rôle des attentes (Buckingham 2014) [[buckingham2014]]. La densité entre dans le jugement du poids lui-même : un objet visible n’est jugé sans illusion qu’à une masse volumique propre à sa matière (Ross 1969) [[ross1969]] ; un modèle infère la densité relative des objets pour produire le poids perçu (Peters et al. 2016) [[peters_etal2016]] ; parmi les objets fabriqués qu’on soulève, les plus petits sont en général plus denses, et les prédictions de poids suivent cette régularité (Peters et al. 2015) [[peters_etal2015]]. Harshfield et DeHardt (1970) [[harshfield_dehardt1970]] lient le jugement de poids à la densité apparente (titre seul lu). Échelles existantes : estimation de grandeur (Stevens 1957) [[stevens1957]] et seuils différentiels (loi de Weber ; revue de Jones 1986 [[jones1986]]), non retenues (rubrique « mesure »). Aucune source trouvée ne fixe des régions perçues du poids, ni ne fait du « poids pour sa taille » une qualité distincte du poids perçu. Détail : docs/bibliographie-par-type.md#groupe-toucher.'
+etat_de_l_art: 'Sources : depuis Charpentier (1891), connu par Murray et al. (1999) [[murray_etal1999]], on sait que de deux objets de même poids, le plus petit paraît le plus lourd (illusion taille-poids). Cette illusion est d’abord tactile : les indices de volume de la main suffisent et sont nécessaires, ceux de la vue seulement suffisants, avec un effet plus faible (Ellis et Lederman 1993) [[ellis_lederman1993]] ; elle persiste quand la main a appris la force juste (Flanagan et Beltzner 2000) [[flanagan_beltzner2000]]. La matière sentie (Ellis et Lederman 1999) [[ellis_lederman1999]] ou vue (Buckingham et al. 2009) [[buckingham_etal2009]] et ce qu’on sait de l’objet (Ellis et Lederman 1998) [[ellis_lederman1998]] changent aussi le poids senti ; une revue fait le point sur ces illusions et le rôle des attentes (Buckingham 2014) [[buckingham2014]]. La densité entre dans le jugement du poids lui-même : un objet visible n’est jugé sans illusion qu’à une masse volumique propre à sa matière (Ross 1969) [[ross1969]] ; un modèle infère la densité relative des objets pour produire le poids perçu (Peters et al. 2016) [[peters_etal2016]] ; parmi les objets fabriqués qu’on soulève, les plus petits sont en général plus denses, et les prédictions de poids suivent cette régularité (Peters et al. 2015) [[peters_etal2015]]. Avec cinq cubes de même taille et de même poids, du balsa à l’acier, Harshfield et DeHardt (1970) [[harshfield_dehardt1970]] trouvent qu’à la main le moins dense paraît le plus lourd, et qu’à la vue seule l’ordre s’inverse (illusion densité-poids). Échelles existantes : estimation de grandeur et seuils différentiels (loi de Weber), non retenues (rubrique « mesure ») ; aucune source lue ne les documente pour le poids. Aucune source trouvée ne fixe des régions perçues du poids, ni ne fait du « poids pour sa taille » une qualité distincte du poids perçu. Détail : docs/bibliographie-par-type.md#groupe-toucher.'
 etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-toucher
 axiomes:
 - conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
@@ -256,45 +238,270 @@ enonces_testables:
   epreuve: null
 cq_couvertes: CQ1, CQ2
 statut: candidat
-statut_note: 'en préparation (2026-10-27) : fiche rédigée à partir de la proposition « Toucher » et du ticket n° 5, sans exemplaire ; tous les champs rédigés sont à relire'
+statut_note: 'relue (2026-11-02, série 90 bis) : fiche validée par la relecture explicative ; aucun exemplaire observé : elle repose sur neuf épisodes proposés « à réaliser » (episodes_a_realiser), qui ne sont ni des épreuves faites ni un accord entre observateurs'
 statut_epistemique: non éprouvé
 introduit_en: '2.8'
 modifie_en: []
 remplace_par: []
 source_de_la_fiche: 'proposition de famille « Toucher » (docs/famille-toucher-proposition.md (document de travail, non publié), §2.5, premier lot, décisions 3 et 6) ; ticket n° 5 (https://github.com/blomig/PPP-ontologie/issues/5, suggestion de type « Densité », intégrée à ce type : décision de l’éditeur du projet, transmise le 2026-10-27) ; protocole d’échantillons (docs/protocole-echantillons-toucher.md §4.4) ; fiche rédigée le 2026-10-27 par l’équipe, champs à valider par la relecture explicative'
+# Série 90 : épisodes proposés « à réaliser » (spec X17 ; décision de l’éditeur du projet du 2026-11-02 pour le principe ; champs et détail du lot : choix de relecture (2026-11-02)) ; ni épreuve faite ni accord entre observateurs ;
+# ni observateur, ni date, ni résultat. Objets et prédictions repris du lot 6 (docs/propositions-exemples-lot6-poids-percu.md, révisé : choix de relecture (2026-11-02)).
+episodes_a_realiser:
+- id: ppp-a:prop6-perceivedWeight-01
+  realisation: a_realiser
+  region_attendue: fingertipLift
+  objet: bouchon cylindrique de vin tranquille, en liège naturel, sans marque (format nominal 44 × 24 mm)
+  objet_en: cylindrical natural cork stopper for still wine, unbranded (nominal size 44 × 24 mm)
+  preparation: un bouchon de liège naturel de 44 × 24 mm, sec, laissé dans la pièce depuis la veille ; le peser au gramme (la masse réelle prime sur l’estimation de 3 à 5 g)
+  preparation_en: a 44 × 24 mm natural cork stopper, dry, left in the room since the day before; weigh it to the gram (the real mass takes precedence over the 3 to 5 g estimate)
+  consigne: 'Soulevez l’objet sans appui et soupesez-le : rien que pour son poids, suffirait-il du bout des doigts, d’une main, ou faudrait-il les deux mains ?'
+  consigne_en: 'Lift the object without support and heft it: for its weight alone, would the fingertips be enough, one hand, or would it take both hands?'
+  conditions:
+    presentation: inHand
+    geste: unsupportedHolding
+    temperature_objet: ambient
+    duree: glance
+    yeux: fermés (ou bandés)
+    yeux_en: closed (or blindfolded)
+    note: assis face à une table ; objet posé devant soi ; soulevé de quelques centimètres, coude décollé, sans appui ; yeux fermés ou bandés ; une autre personne pose l’objet ; objets dans la pièce depuis la veille ; mains nues et sèches ; main dominante d’abord, main notée
+    note_en: seated facing a table; object placed in front of you; lifted a few centimetres, elbow raised, without support; eyes closed or blindfolded; another person puts the object down; objects in the room since the day before; bare, dry hands; dominant hand first, hand noted
+  doute: non
+  note: 'se pince entre le pouce et deux doigts (repère de la fiche : « un bouchon »)'
+  note_en: 'pinched between the thumb and two fingers (reference point of the entry: “a cork stopper”)'
+  texte_fr: 'Un bouchon de liège : se soulève du bout des doigts (prédiction, à éprouver).'
+  texte_en: 'A cork stopper: lifts with the fingertips (prediction, to be tested).'
+- id: ppp-a:prop6-perceivedWeight-02
+  realisation: a_realiser
+  region_attendue: fingertipLift
+  objet: baguette de balsa de maquettiste, section carrée de 5 × 5 mm, coupée à 300 mm
+  objet_en: balsa stick for model making, 5 × 5 mm square section, cut to 300 mm
+  preparation: une baguette de balsa de 5 × 5 mm coupée à 300 mm ; la peser au gramme près, ou au dixième de gramme si possible
+  preparation_en: a 5 × 5 mm balsa stick cut to 300 mm; weigh it to the nearest gram, or to a tenth of a gram if possible
+  consigne: 'Soulevez l’objet sans appui et soupesez-le : rien que pour son poids, suffirait-il du bout des doigts, d’une main, ou faudrait-il les deux mains ?'
+  consigne_en: 'Lift the object without support and heft it: for its weight alone, would the fingertips be enough, one hand, or would it take both hands?'
+  conditions:
+    presentation: inHand
+    geste: unsupportedHolding
+    temperature_objet: ambient
+    duree: glance
+    yeux: fermés (ou bandés)
+    yeux_en: closed (or blindfolded)
+    note: assis face à une table ; objet posé devant soi ; soulevé de quelques centimètres, coude décollé, sans appui ; yeux fermés ou bandés ; une autre personne pose l’objet ; objets dans la pièce depuis la veille ; mains nues et sèches ; main dominante d’abord, main notée ; la baguette est pincée en son milieu
+    note_en: seated facing a table; object placed in front of you; lifted a few centimetres, elbow raised, without support; eyes closed or blindfolded; another person puts the object down; objects in the room since the day before; bare, dry hands; dominant hand first, hand noted; the stick is pinched at its middle
+  doute: non
+  note: pincée au milieu pour éviter le couple d’une longue baguette tenue par un bout (repère de la fiche)
+  note_en: pinched at the middle to avoid the torque of a long stick held by one end (reference point of the entry)
+  texte_fr: 'Une baguette de balsa : se soulève du bout des doigts (prédiction, à éprouver).'
+  texte_en: 'A balsa stick: lifts with the fingertips (prediction, to be tested).'
+- id: ppp-a:prop6-perceivedWeight-03
+  realisation: a_realiser
+  region_attendue: oneHandLift
+  objet: livre relié épais (un dictionnaire de langue, par exemple), d’environ 24 × 17 × 5 cm ; titre et éditeur non cités
+  objet_en: thick hardback book (a language dictionary, for example), about 24 × 17 × 5 cm; title and publisher not given
+  preparation: un livre relié d’environ 24 × 17 × 5 cm, de préférence entre 1 et 1,5 kg sur la balance ; titre masqué ; noter la masse réelle
+  preparation_en: a hardback book of about 24 × 17 × 5 cm, preferably between 1 and 1.5 kg on the scale; title hidden; note the real mass
+  consigne: 'Soulevez l’objet sans appui et soupesez-le : rien que pour son poids, suffirait-il du bout des doigts, d’une main, ou faudrait-il les deux mains ?'
+  consigne_en: 'Lift the object without support and heft it: for its weight alone, would the fingertips be enough, one hand, or would it take both hands?'
+  conditions:
+    presentation: inHand
+    geste: unsupportedHolding
+    temperature_objet: ambient
+    duree: glance
+    yeux: fermés (ou bandés)
+    yeux_en: closed (or blindfolded)
+    note: assis face à une table ; objet posé devant soi ; soulevé de quelques centimètres, coude décollé, sans appui ; yeux fermés ou bandés ; une autre personne pose l’objet ; objets dans la pièce depuis la veille ; mains nues et sèches ; main dominante d’abord, main notée
+    note_en: seated facing a table; object placed in front of you; lifted a few centimetres, elbow raised, without support; eyes closed or blindfolded; another person puts the object down; objects in the room since the day before; bare, dry hands; dominant hand first, hand noted
+  doute: oui
+  motif_doute: 'au-delà de 2 kg environ, un gros dictionnaire tenu par la tranche peut faire hésiter avec « demande les deux mains » ; la prise (pince large sur 5 cm) se mêle au poids : la noter'
+  motif_doute_en: 'above about 2 kg, a big dictionary held by its edge may cause hesitation with “needs both hands”; the grip (a wide pinch over 5 cm) mixes with the weight: note it'
+  texte_fr: 'Un livre épais : se soulève d’une main (prédiction, à éprouver).'
+  texte_en: 'A thick book: lifts with one hand (prediction, to be tested).'
+- id: ppp-a:prop6-perceivedWeight-04
+  realisation: a_realiser
+  region_attendue: oneHandLift
+  objet: cube de chêne pédonculé (Quercus robur) de 10 cm de côté, faces rabotées, sans vernis (ou le même vernis pour toute la série)
+  objet_en: 10 cm cube of pedunculate oak (Quercus robur), planed faces, unvarnished (or the same varnish for the whole series)
+  preparation: cube de chêne pédonculé de 10 cm, même finition que les trois autres cubes ; le peser (≈ 675 g estimés, la masse réelle prime)
+  preparation_en: 10 cm pedunculate oak cube, same finish as the other three cubes; weigh it (≈ 675 g estimated, the real mass takes precedence)
+  consigne: 'Soulevez l’objet sans appui et soupesez-le : rien que pour son poids, suffirait-il du bout des doigts, d’une main, ou faudrait-il les deux mains ?'
+  consigne_en: 'Lift the object without support and heft it: for its weight alone, would the fingertips be enough, one hand, or would it take both hands?'
+  conditions:
+    presentation: inHand
+    geste: unsupportedHolding
+    temperature_objet: ambient
+    duree: glance
+    yeux: fermés (ou bandés)
+    yeux_en: closed (or blindfolded)
+    note: assis face à une table ; objet posé devant soi ; soulevé de quelques centimètres, coude décollé, sans appui ; yeux fermés ou bandés ; une autre personne pose l’objet ; objets dans la pièce depuis la veille ; mains nues et sèches ; main dominante d’abord, main notée
+    note_en: seated facing a table; object placed in front of you; lifted a few centimetres, elbow raised, without support; eyes closed or blindfolded; another person puts the object down; objects in the room since the day before; bare, dry hands; dominant hand first, hand noted
+  doute: non
+  note: un cube de 10 cm se prend à pleine main, et son poids le demande aussi
+  note_en: a 10 cm cube is taken with the whole hand, and its weight requires it too
+  texte_fr: 'Un cube de chêne de 10 cm : se soulève d’une main (prédiction, à éprouver).'
+  texte_en: 'A 10 cm oak cube: lifts with one hand (prediction, to be tested).'
+- id: ppp-a:prop6-perceivedWeight-05
+  realisation: a_realiser
+  region_attendue: twoHandLift
+  objet: 'carton ondulé fermé d’environ 40 × 30 × 20 cm, rempli de livres à plat jusqu’à une masse visée de 10 kg pesés (plafond : 12 kg)'
+  objet_en: 'closed corrugated box of about 40 × 30 × 20 cm, filled with books laid flat up to a target mass of 10 kg weighed (ceiling: 12 kg)'
+  preparation: carton d’environ 40 × 30 × 20 cm rempli de livres sur le pèse-personne jusqu’à 10 kg (jamais plus de 12 kg), fermé ; le poser sur une table solide
+  preparation_en: box of about 40 × 30 × 20 cm filled with books on the bathroom scale up to 10 kg (never more than 12 kg), closed; place it on a sturdy table
+  consigne: 'Soulevez l’objet sans appui et soupesez-le : rien que pour son poids, suffirait-il du bout des doigts, d’une main, ou faudrait-il les deux mains ?'
+  consigne_en: 'Lift the object without support and heft it: for its weight alone, would the fingertips be enough, one hand, or would it take both hands?'
+  conditions:
+    presentation: inHand
+    geste: unsupportedHolding
+    temperature_objet: ambient
+    duree: glance
+    yeux: ouverts (exception déclarée pour la sécurité)
+    yeux_en: open (declared exception, for safety)
+    note: debout face à une table solide (jamais depuis le sol) ; dos droit, une main de chaque côté ; soulevé de quelques centimètres, sans se tourner ; yeux ouverts, exception déclarée pour la sécurité ; arrêt à la moindre gêne ; pas d’épreuve en cas de mal de dos ; plafond 12 kg
+    note_en: standing facing a sturdy table (never from the floor); back straight, one hand on each side; lifted a few centimetres, without twisting; eyes open, an exception declared for safety; stop at the slightest discomfort; no trial in case of back pain; ceiling 12 kg
+  doute: oui
+  motif_doute: 'la taille du carton impose de toute façon les deux mains : c’est le cas que la définition écarte (le cran se juge à l’effort du poids, non à la prise) ; jugé yeux ouverts (exception de sécurité)'
+  motif_doute_en: 'the size of the box requires both hands anyway: this is the case the definition sets aside (the step is judged by the effort the weight demands, not by the grip); judged with eyes open (safety exception)'
+  note: 'repère de la fiche : « un carton plein de livres »'
+  note_en: 'reference point of the entry: “a box full of books”'
+  texte_fr: 'Un carton plein de livres : demande les deux mains (prédiction, à éprouver).'
+  texte_en: 'A box full of books: needs both hands (prediction, to be tested).'
+- id: ppp-a:prop6-perceivedWeight-06
+  realisation: a_realiser
+  region_attendue: fingertipLift
+  objet: cube de balsa (Ochroma pyramidale) de 10 cm de côté, faces rabotées, sans vernis (ou le même vernis pour toute la série)
+  objet_en: 10 cm cube of balsa (Ochroma pyramidale), planed faces, unvarnished (or the same varnish for the whole series)
+  preparation: cube de balsa de 10 cm, même finition que les autres cubes ; le peser (≈ 150 g estimés, 128 à 224 g selon le bois ; la masse réelle prime)
+  preparation_en: 10 cm balsa cube, same finish as the other cubes; weigh it (≈ 150 g estimated, 128 to 224 g depending on the wood; the real mass takes precedence)
+  consigne: 'Soulevez l’objet sans appui et soupesez-le : rien que pour son poids, suffirait-il du bout des doigts, d’une main, ou faudrait-il les deux mains ?'
+  consigne_en: 'Lift the object without support and heft it: for its weight alone, would the fingertips be enough, one hand, or would it take both hands?'
+  conditions:
+    presentation: inHand
+    geste: unsupportedHolding
+    temperature_objet: ambient
+    duree: glance
+    yeux: fermés (ou bandés)
+    yeux_en: closed (or blindfolded)
+    note: assis face à une table ; objet posé devant soi ; soulevé de quelques centimètres, coude décollé, sans appui ; yeux fermés ou bandés ; une autre personne pose l’objet ; objets dans la pièce depuis la veille ; mains nues et sèches ; main dominante d’abord, main notée
+    note_en: seated facing a table; object placed in front of you; lifted a few centimetres, elbow raised, without support; eyes closed or blindfolded; another person puts the object down; objects in the room since the day before; bare, dry hands; dominant hand first, hand noted
+  doute: oui
+  motif_doute: léger, mais un cube de 10 cm impose la main entière ; c’est le cas que la définition écarte ; frontière avec « se soulève d’une main »
+  motif_doute_en: light, but a 10 cm cube requires the whole hand; this is the case the definition sets aside; boundary with “lifts with one hand”
+  texte_fr: 'Un cube de balsa de 10 cm : se soulève du bout des doigts, malgré sa taille (prédiction, à éprouver).'
+  texte_en: 'A 10 cm balsa cube: lifts with the fingertips, despite its size (prediction, to be tested).'
+- id: ppp-a:prop6-perceivedWeight-07
+  realisation: a_realiser
+  region_attendue: oneHandLift
+  objet: cube de pin sylvestre (Pinus sylvestris) de 10 cm de côté, faces rabotées, sans vernis (ou le même vernis pour toute la série)
+  objet_en: 10 cm cube of Scots pine (Pinus sylvestris), planed faces, unvarnished (or the same varnish for the whole series)
+  preparation: cube de pin sylvestre de 10 cm, même finition ; le peser (≈ 550 g estimés ; la masse réelle prime)
+  preparation_en: 10 cm Scots pine cube, same finish; weigh it (≈ 550 g estimated; the real mass takes precedence)
+  consigne: 'Soulevez l’objet sans appui et soupesez-le : rien que pour son poids, suffirait-il du bout des doigts, d’une main, ou faudrait-il les deux mains ?'
+  consigne_en: 'Lift the object without support and heft it: for its weight alone, would the fingertips be enough, one hand, or would it take both hands?'
+  conditions:
+    presentation: inHand
+    geste: unsupportedHolding
+    temperature_objet: ambient
+    duree: glance
+    yeux: fermés (ou bandés)
+    yeux_en: closed (or blindfolded)
+    note: assis face à une table ; objet posé devant soi ; soulevé de quelques centimètres, coude décollé, sans appui ; yeux fermés ou bandés ; une autre personne pose l’objet ; objets dans la pièce depuis la veille ; mains nues et sèches ; main dominante d’abord, main notée
+    note_en: seated facing a table; object placed in front of you; lifted a few centimetres, elbow raised, without support; eyes closed or blindfolded; another person puts the object down; objects in the room since the day before; bare, dry hands; dominant hand first, hand noted
+  doute: non
+  texte_fr: 'Un cube de pin de 10 cm : se soulève d’une main (prédiction, à éprouver).'
+  texte_en: 'A 10 cm pine cube: lifts with one hand (prediction, to be tested).'
+- id: ppp-a:prop6-perceivedWeight-08
+  realisation: a_realiser
+  region_attendue: oneHandLift
+  objet: cube de buis (Buxus sempervirens) de 10 cm de côté, massif ou contrecollé, faces rabotées, sans vernis (ou le même vernis pour toute la série) ; bout dense de la série
+  objet_en: 10 cm cube of boxwood (Buxus sempervirens), solid or glued-laminated, planed faces, unvarnished (or the same varnish for the whole series); the dense end of the series
+  preparation: 'cube de buis de 10 cm, massif ou contrecollé ; s’il est contrecollé, déclarer le nombre de plis, leur épaisseur et la colle ; le peser (≈ 965 g estimés pour le massif) : la masse réelle prime sur la masse estimée, car la colle et les plis changent la masse'
+  preparation_en: '10 cm boxwood cube, solid or glued-laminated; if laminated, declare the number of plies, their thickness and the glue; weigh it (≈ 965 g estimated for solid wood): the real mass takes precedence over the estimate, since glue and plies change the mass'
+  consigne: 'Soulevez l’objet sans appui et soupesez-le : rien que pour son poids, suffirait-il du bout des doigts, d’une main, ou faudrait-il les deux mains ?'
+  consigne_en: 'Lift the object without support and heft it: for its weight alone, would the fingertips be enough, one hand, or would it take both hands?'
+  conditions:
+    presentation: inHand
+    geste: unsupportedHolding
+    temperature_objet: ambient
+    duree: glance
+    yeux: fermés (ou bandés)
+    yeux_en: closed (or blindfolded)
+    note: assis face à une table ; objet posé devant soi ; soulevé de quelques centimètres, coude décollé, sans appui ; yeux fermés ou bandés ; une autre personne pose l’objet ; objets dans la pièce depuis la veille ; mains nues et sèches ; main dominante d’abord, main notée
+    note_en: seated facing a table; object placed in front of you; lifted a few centimetres, elbow raised, without support; eyes closed or blindfolded; another person puts the object down; objects in the room since the day before; bare, dry hands; dominant hand first, hand noted
+  doute: non
+  note: plus lourd pour sa taille que les trois autres cubes (note de comparaison attendue, à éprouver)
+  note_en: heavier for its size than the other three cubes (expected comparison note, to be tested)
+  texte_fr: 'Un cube de buis de 10 cm : se soulève d’une main (prédiction, à éprouver).'
+  texte_en: 'A 10 cm boxwood cube: lifts with one hand (prediction, to be tested).'
+- id: ppp-a:prop6-perceivedWeight-09
+  realisation: a_realiser
+  region_attendue: twoHandLift
+  objet: sac de riz blanc de 10 kg (masse nette annoncée), fermé, sans marque visible ou marque masquée par un ruban adhésif opaque
+  objet_en: closed 10 kg bag of white rice (stated net mass), no visible brand or brand covered with opaque tape
+  preparation: un sac de riz de 10 kg (masse nette annoncée), fermé, marque masquée ; le peser sur le pèse-personne, emballage compris (plafond 12 kg) ; le poser à plat sur une table solide
+  preparation_en: a 10 kg bag of rice (stated net mass), closed, brand covered; weigh it on the bathroom scale, packaging included (ceiling 12 kg); lay it flat on a sturdy table
+  consigne: 'Soulevez l’objet sans appui et soupesez-le : rien que pour son poids, suffirait-il du bout des doigts, d’une main, ou faudrait-il les deux mains ?'
+  consigne_en: 'Lift the object without support and heft it: for its weight alone, would the fingertips be enough, one hand, or would it take both hands?'
+  conditions:
+    presentation: inHand
+    geste: unsupportedHolding
+    temperature_objet: ambient
+    duree: glance
+    yeux: ouverts (exception déclarée pour la sécurité)
+    yeux_en: open (declared exception, for safety)
+    note: 'mêmes consignes de sécurité que le carton : debout face à la table, dos droit, une main de chaque côté du sac posé à plat ; soulevé de quelques centimètres, sans se tourner ; yeux ouverts, exception déclarée pour la sécurité ; arrêt à la moindre gêne ; plafond 12 kg'
+    note_en: 'same safety instructions as the box: standing facing the table, back straight, one hand on each side of the bag laid flat; lifted a few centimetres, without twisting; eyes open, an exception declared for safety; stop at the slightest discomfort; ceiling 12 kg'
+  doute: oui
+  motif_doute: 'un sac souple peut se saisir d’une main par le haut ; la prise se mêle alors au poids : on juge l’effort du poids, et on note la prise ; même masse que le carton, autre forme, d’où l’intérêt de la comparaison'
+  motif_doute_en: 'a soft bag can be grabbed with one hand from the top; the grip then mixes with the weight: the effort of the weight is judged, and the grip is noted; same mass as the box, different shape, hence the value of the comparison'
+  note: 'deuxième exemplaire « deux mains », reproductible : la masse nette est fixée par l’emballage, puis vérifiée sur la balance'
+  note_en: 'second “both hands” exemplar, reproducible: the net mass is set by the packaging, then checked on the scale'
+  texte_fr: 'Un sac de riz de 10 kg : demande les deux mains (prédiction, à éprouver).'
+  texte_en: 'A 10 kg bag of rice: needs both hands (prediction, to be tested).'
 manques:
-- 'exemplaires (à renseigner : objets qu’on a le droit de soulever, ou échantillons de référence reproductibles, par exemple des blocs de même taille et de même forme de balsa, de pin, de chêne et d’ébène ; un épisode par objet, geste déclaré ; photo d’identification qui ne sert pas au jugement, X17 (g) amendé)'
-bloque_par: []
-a_relire:
-- label_fr
-- label_en
-- label_court
-- labels_alternatifs
-- strate
-- définition
-- question_attentionnelle
-- contre_exemple
-- grandeur_physique_homonyme
-- mesure
-- mode_de_presentation
-- conditions_critiques
-- note_conditions
-- porteur
-- condition_NA
-- espace_valeurs
-- note_echelle
-- identite
-- relations
-- references
-- etat_de_l_art
-- nanay
-- transfert
-- enonces_testables
-- statut_note
+- 'exemplaires : neuf épisodes proposés « à réaliser » (episodes_a_realiser), à réaliser par au moins cinq observateurs, chacun seul ; à la réalisation, chaque objet est pesé et photographié (photo d’identification, X17 (g)), et l’assertion entre dans fiches/exemplaires.yaml'
+- 'aucun épisode de « demande les deux mains » sans doute de son auteur (carton et sac de riz marqués `doute: oui`) : la fiche ne peut viser que le palier 2 tant qu’un tel épisode manque'
+bloque_par:
+- 'affichage des épisodes à réaliser sur le site : la fiche se publie quand le site montre ses épisodes avec l’étiquette « à réaliser » (choix de relecture (2026-11-02))'
+a_relire: []
 remarque:
 - 'série 87 (2026-10-27) : fiche créée. Le « poids pour sa taille » du ticket n° 5 (balsa contre ébène) n’est pas un type à part : il est fondu dans le poids perçu (décision de l’éditeur du projet, transmise le 2026-10-27) ; l’id provisoire `weightForSize` est abandonné. Manière de l’intégrer : choix de relecture (2026-10-27) : dans la définition, l’identité, le contre-exemple, les repères et la note d’échelle, sans dimension nouvelle. Raisons : un type P1 n’a qu’un espace de valeurs, et une seconde échelle « pour sa taille » en ferait deux qualités dans une fiche ; les travaux lus traitent la taille et la densité comme des choses qui entrent dans le poids senti lui-même (illusion taille-poids, densité inférée), et non comme un second jugement ; les crans restent rapportés au corps (décision 6 de la proposition « Toucher »), et l’écart entre deux objets de même taille se note par comparaison en note d’épisode. Homonymie levée avec la densité perceptive (`ppp:perceptualDensity`). À relire.'
 - 'série 87 bis (choix de relecture (2026-10-27), corrections de relecture) : définition et question attentionnelle précisées (le cran se juge à l’effort que demande le poids, non à la prise que la taille impose) ; repère du cran « se soulève du bout des doigts » : le bloc de balsa gros comme le poing, qu’on ne tient pas du bout des doigts à cause de sa taille, remplacé par une baguette de balsa qu’on pince ; note d’échelle ajustée ; Harshfield et DeHardt (1970), Stevens (1957) et Jones (1986), vus en métadonnées seulement, passés à « non vérifiée » ; à relire'
+- 'série 88 (2026-11-02, références) : Harshfield et DeHardt (1970), résumé lu sur la page de l’éditeur : statut « vérifiée sur résumé ou source secondaire », rôle « alimente », état de l’art précisé ; Stevens (1957) et Jones (1986) retirées (aucun résumé lisible sur Crossref, OpenAlex, Semantic Scholar, Europe PMC ou PhilPapers ; rien n’en était repris) : les deux méthodes restent non retenues, sans référence ; à relire'
+- 'série 90 (2026-11-02) : épisodes proposés « à réaliser » du lot 6 repris dans la fiche (décision de l’éditeur du projet du 2026-11-02 : « B : publier avec des épisodes proposés marqués « à réaliser » ») ; choix de relecture (2026-11-02) : parpaing retiré des épreuves, repère en mots seulement ; cubes de 10 cm (balsa, pin, chêne, buis), buis contrecollé admis s’il est déclaré et pesé, ébène seulement en chute de provenance déclarée ; carton de livres visé à 10 kg, plafond 12 kg, soulevé depuis une table ; sac de riz de 10 kg ; carton et sac jugés yeux ouverts (exception déclarée pour la sécurité), cubes yeux fermés ; aucun nom de marchand. Repère « deux mains », note_echelle et note_conditions mis à jour (EN et empreintes).'
+- 'série 90, correctif (choix de relecture (2026-11-02)) : épisodes réalignés sur la version révisée du lot 6 (hors dépôt) : cinq champs explicites par épisode (objet, preparation, consigne, conditions, region_attendue) ; sac de riz de 10 kg ; buis contrecollé déclaré (plis, colle), la masse réelle primant sur la masse estimée ; carton et sac jugés yeux ouverts par exception déclarée, cubes yeux fermés ; à relire'
+- 'série 90 bis (choix de relecture (2026-11-02)) : série de comparaison en cubes de 10 cm (balsa, pin, chêne, buis ; ébène retiré des épreuves, repère en mots seulement) ; question attentionnelle et consignes des épisodes reformulées (« Soulevez l’objet sans appui et soupesez-le… ») ; fiche relue en relecture explicative, a_relire vidé ; elle repose sur des épisodes proposés « à réaliser », sans exemplaire observé'
 relecture_explicative:
-  date: null
-  champs: []
+  date: '2026-11-02'
+  champs:
+  - 'label_fr (choix de relecture, série 90 bis, 2026-11-02)'
+  - 'label_en (choix de relecture, série 90 bis, 2026-11-02)'
+  - 'label_court (choix de relecture, série 90 bis, 2026-11-02)'
+  - 'labels_alternatifs (choix de relecture, série 90 bis, 2026-11-02)'
+  - 'strate (choix de relecture, série 90 bis, 2026-11-02)'
+  - 'définition (choix de relecture, série 90 bis, 2026-11-02)'
+  - 'question_attentionnelle (choix de relecture, série 90 bis, 2026-11-02 — reformulée, voir reconfirme)'
+  - 'contre_exemple (choix de relecture, série 90 bis, 2026-11-02)'
+  - 'grandeur_physique_homonyme (choix de relecture, série 90 bis, 2026-11-02)'
+  - 'mesure (choix de relecture, série 90 bis, 2026-11-02)'
+  - 'mode_de_presentation (choix de relecture, série 90 bis, 2026-11-02)'
+  - 'conditions_critiques (choix de relecture, série 90 bis, 2026-11-02)'
+  - 'note_conditions (choix de relecture, série 90 bis, 2026-11-02)'
+  - 'porteur (choix de relecture, série 90 bis, 2026-11-02)'
+  - 'condition_NA (choix de relecture, série 90 bis, 2026-11-02)'
+  - 'espace_valeurs (choix de relecture, série 90 bis, 2026-11-02)'
+  - 'note_echelle (choix de relecture, série 90 bis, 2026-11-02)'
+  - 'identite (choix de relecture, série 90 bis, 2026-11-02)'
+  - 'relations (choix de relecture, série 90 bis, 2026-11-02)'
+  - 'references (choix de relecture, série 90 bis, 2026-11-02)'
+  - 'etat_de_l_art (choix de relecture, série 90 bis, 2026-11-02)'
+  - 'nanay (choix de relecture, série 90 bis, 2026-11-02)'
+  - 'transfert (choix de relecture, série 90 bis, 2026-11-02)'
+  - 'enonces_testables (choix de relecture, série 90 bis, 2026-11-02)'
+  - 'statut_note (choix de relecture, série 90 bis, 2026-11-02 — épisodes à réaliser)'
+  - 'episodes_a_realiser (choix de relecture, série 90 bis, 2026-11-02)'
   a_reconfirmer: []
+  reconfirme:
+  - champ: question_attentionnelle
+    avant: 'En soulevant l’objet sans appui, puis en le soupesant, son poids se tiendrait-il du bout des doigts, d’une main, ou faudrait-il les deux mains, quelle que soit la prise que sa taille impose ?'
+    apres: 'Soulevez l’objet sans appui et soupesez-le : rien que pour son poids, suffirait-il du bout des doigts, d’une main, ou faudrait-il les deux mains ?'
+    date: '2026-11-02'
+    raison: 'choix de relecture (2026-11-02) : consigne à l’impératif, qui demande de soulever puis de soupeser ; « rien que pour son poids » remplace « quelle que soit la prise que sa taille impose », même sens (définition inchangée)'

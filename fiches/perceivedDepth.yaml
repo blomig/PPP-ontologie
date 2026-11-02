@@ -89,17 +89,17 @@ references:
   doi_ou_url: https://openlibrary.org/works/OL5589052W
   role: discute
   statut_verification: vérifiée sur résumé ou source secondaire
-  verifie_le: '2026-10-10'
-  verifie_sur: 'notice Open Library (titre, auteur, 1950, Houghton Mifflin, OCLC 560396 ; sujets : perception, vision, perception visuelle, perception de l’espace) ; contenu non lu'
+  verifie_le: '2026-11-02'
+  verifie_sur: 'notice Open Library (titre, auteur, 1950, Houghton Mifflin, OCLC 560396 ; sujets : perception, vision, perception visuelle, perception de l’espace) ; source secondaire lue le 2026-11-02 : Cutting, J. E. & Vishton, P. M. (1995), p. 69 (copie du chapitre publié déposée par P. M. Vishton, coauteur, William & Mary), qui range Gibson (1950) parmi les travaux ayant dressé des listes de sources d’information sur la profondeur et l’agencement ; ouvrage non lu'
   reprend: la perception de l'espace et de la profondeur comme objet d'étude
-  ne_reprend_pas: sa théorie (contenu non lu)
+  ne_reprend_pas: sa théorie (ouvrage non lu)
 - id: cutting_vishton1995
   citation: Cutting, J. E. & Vishton, P. M. (1995). Perceiving layout and knowing distances. In Perception of Space and Motion, Academic Press (Elsevier), 69–117.
   doi_ou_url: https://doi.org/10.1016/B978-012240530-3/50005-5
   role: discute
   statut_verification: vérifiée sur résumé ou source secondaire
-  verifie_le: '2026-10-10'
-  verifie_sur: métadonnées Crossref (titre court, ouvrage, pages) ; résumé non disponible ; texte non lu
+  verifie_le: '2026-11-02'
+  verifie_sur: 'métadonnées Crossref, résumé et texte du chapitre (version manuscrite du chapitre trouvée en ligne) lus le 2026-11-02 : neuf sources d’information sur l’agencement, dont la perspective de mouvement (parallaxe de mouvement), comparées selon la distance ; copie numérisée du chapitre publié déposée par P. M. Vishton (coauteur) sur sa page de publications (William & Mary, https://wmit-pages-prod.s3.amazonaws.com/wp-content/uploads/sites/316/2026/06/30141034/CuttingVishton1995DepthChapter.pdf), vue le 2026-11-02 (titre, auteurs, p. 69), texte publié non relu en entier'
   reprend: la perception de l'agencement en profondeur comme objet d'étude
   ne_reprend_pas: leur analyse des indices (contenu non lu)
 - id: mather_smith2002

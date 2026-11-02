@@ -1,5 +1,5 @@
 # PPP, export SKOS des fiches publiques ; ne pas modifier à la main.
-# Licence : CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Version 2.8 ; dernier changement de contenu : 2026-10-27. Pour citer : CITATION.cff.
+# Licence : CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Version 2.8 ; dernier changement de contenu : 2026-11-02. Pour citer : CITATION.cff.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -20,7 +20,7 @@
         "SKOS vocabulary of the published PPP types (public entries), their regions, scales and reading families. The YAML entries of the repository are the source; this export is derived from them."@en ;
     dct:license <https://creativecommons.org/licenses/by/4.0/> ;
     owl:versionInfo "2.8" ;
-    dct:modified "2026-10-27"^^xsd:date ;
+    dct:modified "2026-11-02"^^xsd:date ;
     dct:creator "Lomig Unger" ,
         "Grok Bot" ;
     dct:rightsHolder "Lomig Unger" ;
@@ -831,7 +831,8 @@ ppp:perceptualContrast
         <https://w3id.org/ppp/perceptualContrast/moderate> ,
         <https://w3id.org/ppp/perceptualContrast/marked> ,
         <https://w3id.org/ppp/perceptualContrast/strong> ,
-        ppp:scaleContrast ;
+        ppp:scaleContrast ,
+        ppp:textureContrast ;
     a skos:Concept ;
     skos:inScheme <https://w3id.org/ppp/> ;
     skos:notation "perceptualContrast" ;
@@ -1082,7 +1083,8 @@ ppp:lightnessContrast
         ppp:jointLevelOffset ,
         ppp:lightness ,
         ppp:hueContrast ,
-        ppp:lightnessRange ;
+        ppp:lightnessRange ,
+        ppp:textureContrast ;
     a skos:Concept ;
     skos:inScheme <https://w3id.org/ppp/> ;
     skos:notation "lightnessContrast" ;
@@ -2983,8 +2985,8 @@ ppp:textureDirectionality
         "areal roughness (Sa, autocorrelation length)"@en ;
     ppp:quantity "hauteur moyenne des écarts sur une surface relevée, et longueur sur laquelle le relief se répète"@fr ,
         "mean height of deviations over a measured area, and the length over which the relief repeats"@en ;
-    ppp:unitOrScale "micromètres (hauteur moyenne arithmétique, Sa ; longueur d’autocorrélation, Sal)"@fr ,
-        "micrometres (arithmetic mean height, Sa; autocorrelation length, Sal)"@en ;
+    ppp:unitOrScale "micromètres (écart moyen du relief, Sa ; longueur d’autocorrélation, Sal)"@fr ,
+        "micrometres (average departure of the relief, Sa; autocorrelation length, Sal)"@en ;
     ppp:gap "mesure le relief à l’échelle du micromètre, sur une petite zone et après des filtrages choisis par l’opérateur, alors que les reliefs qu’on voit ou qu’on sent se comptent souvent en millimètres ; Sa est une hauteur, Sal un espacement ; ne saisit ni la distance de vue, ni l’éclairage (une lumière rasante révèle les reliefs), ni l’observateur, ni, au toucher, la force et le geste"@fr ,
         "measures relief at micrometre scale, over a small area and after filtering chosen by the operator, whereas the relief one sees or feels is often counted in millimetres; Sa is a height, Sal a spacing; it captures neither the viewing distance, nor the lighting (raking light reveals relief), nor the observer, nor, by touch, the force and the movement of the hand"@en ;
     ppp:measurementConditions "surface relevée par un instrument surfacique (optique ou à contact) ; zone d’évaluation et filtres fixés par l’opérateur et la norme"@fr ,
@@ -3051,6 +3053,109 @@ ppp:textureDirectionality
         "individual reliefs that can be seen and felt (a split, unworked stone, a tree bark)"@en ;
     ppp:regionOf ppp:texture ;
     skos:broader ppp:texture .
+
+ppp:textureContrast
+    a skos:Concept ;
+    skos:inScheme <https://w3id.org/ppp/> ;
+    skos:notation "textureContrast" ;
+    skos:prefLabel "contraste de texture"@fr ,
+        "texture contrast"@en ;
+    skos:definition "Différence perçue de texture, c’est-à-dire de taille des reliefs, entre deux surfaces, à la vue ou au toucher."@fr ,
+        "The perceived difference in texture, that is, in the size of the relief, between two surfaces, by sight or by touch."@en ;
+    skos:scopeNote "À la vue ou sous la main, la différence de relief entre ces deux surfaces est-elle faible (même relief, ou presque), modérée (une surface lisse et une à texture fine), évidente (une lisse et une moyenne, ou une fine et une grosse) ou maximale (une lisse et une grosse) ?"@fr ,
+        "By sight or under the hand, is the difference in relief between these two surfaces slight (the same relief, or almost), moderate (one smooth surface and one with a fine texture), evident (a smooth one and a medium one, or a fine one and a coarse one) or maximal (a smooth one and a coarse one)?"@en ,
+        "Deux carreaux également lisses, l’un blanc, l’autre noir, ont un contraste de texture faible : ce qui les distingue est un contraste de clarté."@fr ,
+        "Two equally smooth tiles, one white, the other black, have a slight texture contrast: what distinguishes them is a lightness contrast."@en ;
+    skos:note "candidat ; non éprouvé"@fr ,
+        "candidate; untested"@en ;
+    skos:broader ppp:perceptualContrast ;
+    skos:related ppp:lightnessContrast ;
+    ppp:measurementState <https://w3id.org/ppp/mesure/etat/methodes> ;
+    ppp:measurementSummary "La différence de texture entre deux surfaces peut se calculer comme l’écart entre leurs paramètres de rugosité surfacique (Sa, Sal) : c’est une mesure associée indirecte, qui hérite des limites décrites dans la fiche texture et ne saisit ni la distance de vue, ni l’éclairage, ni l’observateur."@fr ,
+        "The difference in texture between two surfaces can be computed as the gap between their areal roughness parameters (Sa, Sal): it is an indirect associated measurement, which inherits the limits described in the texture entry and captures neither the viewing distance, nor the lighting, nor the observer."@en ;
+    ppp:measurementCaveat "Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen."@fr ,
+        "The regions of this entry remain perceptual: they describe what an observer sees, hears, smells or feels by touch under the declared conditions. An associated measurement can inform an observation, but it does not set the boundaries of the regions and does not replace examination."@en ;
+    ppp:associatedMeasure <https://w3id.org/ppp/textureContrast/mesure/iso_25178_2> ;
+    ppp:hasScale <https://w3id.org/ppp/textureContrast/echelle> ;
+    skos:narrower <https://w3id.org/ppp/textureContrast/weak> ,
+        <https://w3id.org/ppp/textureContrast/moderate> ,
+        <https://w3id.org/ppp/textureContrast/marked> ,
+        <https://w3id.org/ppp/textureContrast/strong> .
+
+<https://w3id.org/ppp/textureContrast/mesure/iso_25178_2>
+    a ppp:AssociatedMeasure ;
+    rdfs:label "écart de rugosité surfacique entre deux surfaces"@fr ,
+        "gap in areal roughness between two surfaces"@en ;
+    ppp:quantity "différence entre les écarts moyens du relief (Sa) et entre les longueurs d’autocorrélation (Sal) mesurés sur chacune des deux surfaces ; Sa, l’écart moyen des creux et des bosses par rapport au niveau moyen de la surface ; Sal, la plus courte distance de décalage à laquelle le relief ne ressemble presque plus à lui-même (ressemblance tombée à 0,2 par défaut), soit à peu près la taille typique d’un motif du relief"@fr ,
+        "the difference between the average departures of the relief (Sa) and between the autocorrelation lengths (Sal) measured on each of the two surfaces; Sa, the average departure of the hollows and bumps from the mean level of the surface; Sal, the shortest shift at which the relief no longer looks much like itself (similarity fallen to 0.2 by default), roughly the typical size of a feature of the relief"@en ;
+    ppp:unitOrScale "micromètres"@fr ,
+        "micrometres"@en ;
+    ppp:gap "compare deux valeurs mesurées au micromètre sur de petites zones, alors que les reliefs qu’on voit ou qu’on sent se comptent souvent en millimètres ; ne saisit ni la distance de vue, ni l’éclairage, ni l’observateur, ni, au toucher, la force et le geste"@fr ,
+        "compares two values measured at micrometre scale over small areas, whereas the relief one sees or feels is often counted in millimetres; it captures neither the viewing distance, nor the lighting, nor the observer, nor, by touch, the force and the movement of the hand"@en ;
+    ppp:measurementConditions "surfaces relevées par un même instrument surfacique, avec les mêmes filtres"@fr ,
+        "surfaces measured by the same areal instrument, with the same filters"@en ;
+    ppp:proximity <https://w3id.org/ppp/mesure/proximite/indirecte> ;
+    dct:bibliographicCitation "ISO 25178-2:2021. Geometrical product specifications (GPS) — Surface texture: Areal — Part 2: Terms, definitions and surface texture parameters. Genève : ISO." ,
+        "Petzing, J., Coupland, J. & Leach, R. K. (2010). The Measurement of Rough Surface Topography using Coherence Scanning Interferometry. Measurement Good Practice Guide No. 116. Teddington : National Physical Laboratory." ,
+        "Leach, R., Brown, L. & Jiang, X. (2008). Guide to the Measurement of Smooth Surface Topography using Coherence Scanning Interferometry. Measurement Good Practice Guide No. 108. Teddington : National Physical Laboratory." .
+
+<https://w3id.org/ppp/textureContrast/echelle>
+    a skos:OrderedCollection ;
+    skos:prefLabel "échelle de « contraste de texture »"@fr ,
+        "scale of “texture contrast”"@en ;
+    skos:memberList ( <https://w3id.org/ppp/textureContrast/weak> <https://w3id.org/ppp/textureContrast/moderate> <https://w3id.org/ppp/textureContrast/marked> <https://w3id.org/ppp/textureContrast/strong> ) .
+
+<https://w3id.org/ppp/textureContrast/weak>
+    a skos:Concept ;
+    skos:inScheme <https://w3id.org/ppp/> ;
+    skos:notation "weak" ;
+    skos:prefLabel "contraste de texture : faible"@fr ,
+        "texture contrast: slight"@en ;
+    skos:hiddenLabel "faible"@fr ,
+        "slight"@en ;
+    skos:example "deux surfaces de même texture, ou presque (deux surfaces lisses)"@fr ,
+        "two surfaces with the same texture, or almost (two smooth surfaces)"@en ;
+    ppp:regionOf ppp:textureContrast ;
+    skos:broader ppp:textureContrast .
+
+<https://w3id.org/ppp/textureContrast/moderate>
+    a skos:Concept ;
+    skos:inScheme <https://w3id.org/ppp/> ;
+    skos:notation "moderate" ;
+    skos:prefLabel "contraste de texture : modéré"@fr ,
+        "texture contrast: moderate"@en ;
+    skos:hiddenLabel "modéré"@fr ,
+        "moderate"@en ;
+    skos:example "lisse contre fine"@fr ,
+        "smooth against fine"@en ;
+    ppp:regionOf ppp:textureContrast ;
+    skos:broader ppp:textureContrast .
+
+<https://w3id.org/ppp/textureContrast/marked>
+    a skos:Concept ;
+    skos:inScheme <https://w3id.org/ppp/> ;
+    skos:notation "marked" ;
+    skos:prefLabel "contraste de texture : évident"@fr ,
+        "texture contrast: evident"@en ;
+    skos:hiddenLabel "évident"@fr ,
+        "evident"@en ;
+    skos:example "lisse contre moyenne, ou fine contre grosse"@fr ,
+        "smooth against medium, or fine against coarse"@en ;
+    ppp:regionOf ppp:textureContrast ;
+    skos:broader ppp:textureContrast .
+
+<https://w3id.org/ppp/textureContrast/strong>
+    a skos:Concept ;
+    skos:inScheme <https://w3id.org/ppp/> ;
+    skos:notation "strong" ;
+    skos:prefLabel "contraste de texture : maximal"@fr ,
+        "texture contrast: maximal"@en ;
+    skos:hiddenLabel "maximal"@fr ,
+        "maximal"@en ;
+    skos:example "lisse contre grosse"@fr ,
+        "smooth against coarse"@en ;
+    ppp:regionOf ppp:textureContrast ;
+    skos:broader ppp:textureContrast .
 
 <https://w3id.org/ppp/textureDirectionality/mesure/iso_25178_2>
     a ppp:AssociatedMeasure ;
@@ -3268,6 +3373,7 @@ ppp:translucency
         "Reading family: a guide for orientation, not a hierarchy."@en ;
     skos:member ppp:texture ,
         ppp:localIrregularity ,
+        ppp:textureContrast ,
         ppp:textureDirectionality ,
         ppp:translucency ,
         ppp:surfaceGloss ,
@@ -3301,6 +3407,7 @@ ppp:translucency
         "Famille de lecture : aide à s’orienter, pas une hiérarchie."@fr ,
         "Reading family: a guide for orientation, not a hierarchy."@en ;
     skos:member ppp:texture ,
+        ppp:textureContrast ,
         ppp:textureDirectionality ,
         ppp:localIrregularity ,
         ppp:curvature ,

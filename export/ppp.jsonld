@@ -188,7 +188,7 @@
    "dct_license": "https://creativecommons.org/licenses/by/4.0/",
    "owl:versionInfo": "2.8",
    "dct:modified": {
-    "@value": "2026-10-27",
+    "@value": "2026-11-02",
     "@type": "xsd:date"
    },
    "dct:creator": [
@@ -1521,7 +1521,8 @@
     "https://w3id.org/ppp/perceptualContrast/moderate",
     "https://w3id.org/ppp/perceptualContrast/marked",
     "https://w3id.org/ppp/perceptualContrast/strong",
-    "https://w3id.org/ppp/scaleContrast"
+    "https://w3id.org/ppp/scaleContrast",
+    "https://w3id.org/ppp/textureContrast"
    ],
    "@type": "skos:Concept",
    "inScheme": "https://w3id.org/ppp/",
@@ -1938,7 +1939,8 @@
     "https://w3id.org/ppp/jointLevelOffset",
     "https://w3id.org/ppp/lightness",
     "https://w3id.org/ppp/hueContrast",
-    "https://w3id.org/ppp/lightnessRange"
+    "https://w3id.org/ppp/lightnessRange",
+    "https://w3id.org/ppp/textureContrast"
    ],
    "@type": "skos:Concept",
    "inScheme": "https://w3id.org/ppp/",
@@ -5142,8 +5144,8 @@
     "en": "mean height of deviations over a measured area, and the length over which the relief repeats"
    },
    "unitOrScale": {
-    "fr": "micromètres (hauteur moyenne arithmétique, Sa ; longueur d’autocorrélation, Sal)",
-    "en": "micrometres (arithmetic mean height, Sa; autocorrelation length, Sal)"
+    "fr": "micromètres (écart moyen du relief, Sa ; longueur d’autocorrélation, Sal)",
+    "en": "micrometres (average departure of the relief, Sa; autocorrelation length, Sal)"
    },
    "gap": {
     "fr": "mesure le relief à l’échelle du micromètre, sur une petite zone et après des filtrages choisis par l’opérateur, alors que les reliefs qu’on voit ou qu’on sent se comptent souvent en millimètres ; Sa est une hauteur, Sal un espacement ; ne saisit ni la distance de vue, ni l’éclairage (une lumière rasante révèle les reliefs), ni l’observateur, ni, au toucher, la force et le geste",
@@ -5255,6 +5257,177 @@
    },
    "regionOf": "https://w3id.org/ppp/texture",
    "broader": "https://w3id.org/ppp/texture"
+  },
+  {
+   "@id": "https://w3id.org/ppp/textureContrast",
+   "@type": "skos:Concept",
+   "inScheme": "https://w3id.org/ppp/",
+   "skos:notation": "textureContrast",
+   "prefLabel": {
+    "fr": "contraste de texture",
+    "en": "texture contrast"
+   },
+   "definition": {
+    "fr": "Différence perçue de texture, c’est-à-dire de taille des reliefs, entre deux surfaces, à la vue ou au toucher.",
+    "en": "The perceived difference in texture, that is, in the size of the relief, between two surfaces, by sight or by touch."
+   },
+   "scopeNote": {
+    "fr": [
+     "À la vue ou sous la main, la différence de relief entre ces deux surfaces est-elle faible (même relief, ou presque), modérée (une surface lisse et une à texture fine), évidente (une lisse et une moyenne, ou une fine et une grosse) ou maximale (une lisse et une grosse) ?",
+     "Deux carreaux également lisses, l’un blanc, l’autre noir, ont un contraste de texture faible : ce qui les distingue est un contraste de clarté."
+    ],
+    "en": [
+     "By sight or under the hand, is the difference in relief between these two surfaces slight (the same relief, or almost), moderate (one smooth surface and one with a fine texture), evident (a smooth one and a medium one, or a fine one and a coarse one) or maximal (a smooth one and a coarse one)?",
+     "Two equally smooth tiles, one white, the other black, have a slight texture contrast: what distinguishes them is a lightness contrast."
+    ]
+   },
+   "note": {
+    "fr": "candidat ; non éprouvé",
+    "en": "candidate; untested"
+   },
+   "broader": "https://w3id.org/ppp/perceptualContrast",
+   "related": "https://w3id.org/ppp/lightnessContrast",
+   "measurementState": "https://w3id.org/ppp/mesure/etat/methodes",
+   "measurementSummary": {
+    "fr": "La différence de texture entre deux surfaces peut se calculer comme l’écart entre leurs paramètres de rugosité surfacique (Sa, Sal) : c’est une mesure associée indirecte, qui hérite des limites décrites dans la fiche texture et ne saisit ni la distance de vue, ni l’éclairage, ni l’observateur.",
+    "en": "The difference in texture between two surfaces can be computed as the gap between their areal roughness parameters (Sa, Sal): it is an indirect associated measurement, which inherits the limits described in the texture entry and captures neither the viewing distance, nor the lighting, nor the observer."
+   },
+   "measurementCaveat": {
+    "fr": "Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.",
+    "en": "The regions of this entry remain perceptual: they describe what an observer sees, hears, smells or feels by touch under the declared conditions. An associated measurement can inform an observation, but it does not set the boundaries of the regions and does not replace examination."
+   },
+   "associatedMeasure": "https://w3id.org/ppp/textureContrast/mesure/iso_25178_2",
+   "hasScale": "https://w3id.org/ppp/textureContrast/echelle",
+   "narrower": [
+    "https://w3id.org/ppp/textureContrast/weak",
+    "https://w3id.org/ppp/textureContrast/moderate",
+    "https://w3id.org/ppp/textureContrast/marked",
+    "https://w3id.org/ppp/textureContrast/strong"
+   ]
+  },
+  {
+   "@id": "https://w3id.org/ppp/textureContrast/mesure/iso_25178_2",
+   "@type": "ppp:AssociatedMeasure",
+   "rdfs_label": {
+    "fr": "écart de rugosité surfacique entre deux surfaces",
+    "en": "gap in areal roughness between two surfaces"
+   },
+   "quantity": {
+    "fr": "différence entre les écarts moyens du relief (Sa) et entre les longueurs d’autocorrélation (Sal) mesurés sur chacune des deux surfaces ; Sa, l’écart moyen des creux et des bosses par rapport au niveau moyen de la surface ; Sal, la plus courte distance de décalage à laquelle le relief ne ressemble presque plus à lui-même (ressemblance tombée à 0,2 par défaut), soit à peu près la taille typique d’un motif du relief",
+    "en": "the difference between the average departures of the relief (Sa) and between the autocorrelation lengths (Sal) measured on each of the two surfaces; Sa, the average departure of the hollows and bumps from the mean level of the surface; Sal, the shortest shift at which the relief no longer looks much like itself (similarity fallen to 0.2 by default), roughly the typical size of a feature of the relief"
+   },
+   "unitOrScale": {
+    "fr": "micromètres",
+    "en": "micrometres"
+   },
+   "gap": {
+    "fr": "compare deux valeurs mesurées au micromètre sur de petites zones, alors que les reliefs qu’on voit ou qu’on sent se comptent souvent en millimètres ; ne saisit ni la distance de vue, ni l’éclairage, ni l’observateur, ni, au toucher, la force et le geste",
+    "en": "compares two values measured at micrometre scale over small areas, whereas the relief one sees or feels is often counted in millimetres; it captures neither the viewing distance, nor the lighting, nor the observer, nor, by touch, the force and the movement of the hand"
+   },
+   "measurementConditions": {
+    "fr": "surfaces relevées par un même instrument surfacique, avec les mêmes filtres",
+    "en": "surfaces measured by the same areal instrument, with the same filters"
+   },
+   "proximity": "https://w3id.org/ppp/mesure/proximite/indirecte",
+   "dct:bibliographicCitation": [
+    "ISO 25178-2:2021. Geometrical product specifications (GPS) — Surface texture: Areal — Part 2: Terms, definitions and surface texture parameters. Genève : ISO.",
+    "Petzing, J., Coupland, J. & Leach, R. K. (2010). The Measurement of Rough Surface Topography using Coherence Scanning Interferometry. Measurement Good Practice Guide No. 116. Teddington : National Physical Laboratory.",
+    "Leach, R., Brown, L. & Jiang, X. (2008). Guide to the Measurement of Smooth Surface Topography using Coherence Scanning Interferometry. Measurement Good Practice Guide No. 108. Teddington : National Physical Laboratory."
+   ]
+  },
+  {
+   "@id": "https://w3id.org/ppp/textureContrast/echelle",
+   "@type": "skos:OrderedCollection",
+   "prefLabel": {
+    "fr": "échelle de « contraste de texture »",
+    "en": "scale of “texture contrast”"
+   },
+   "memberList": [
+    "https://w3id.org/ppp/textureContrast/weak",
+    "https://w3id.org/ppp/textureContrast/moderate",
+    "https://w3id.org/ppp/textureContrast/marked",
+    "https://w3id.org/ppp/textureContrast/strong"
+   ]
+  },
+  {
+   "@id": "https://w3id.org/ppp/textureContrast/weak",
+   "@type": "skos:Concept",
+   "inScheme": "https://w3id.org/ppp/",
+   "skos:notation": "weak",
+   "prefLabel": {
+    "fr": "contraste de texture : faible",
+    "en": "texture contrast: slight"
+   },
+   "hiddenLabel": {
+    "fr": "faible",
+    "en": "slight"
+   },
+   "example": {
+    "fr": "deux surfaces de même texture, ou presque (deux surfaces lisses)",
+    "en": "two surfaces with the same texture, or almost (two smooth surfaces)"
+   },
+   "regionOf": "https://w3id.org/ppp/textureContrast",
+   "broader": "https://w3id.org/ppp/textureContrast"
+  },
+  {
+   "@id": "https://w3id.org/ppp/textureContrast/moderate",
+   "@type": "skos:Concept",
+   "inScheme": "https://w3id.org/ppp/",
+   "skos:notation": "moderate",
+   "prefLabel": {
+    "fr": "contraste de texture : modéré",
+    "en": "texture contrast: moderate"
+   },
+   "hiddenLabel": {
+    "fr": "modéré",
+    "en": "moderate"
+   },
+   "example": {
+    "fr": "lisse contre fine",
+    "en": "smooth against fine"
+   },
+   "regionOf": "https://w3id.org/ppp/textureContrast",
+   "broader": "https://w3id.org/ppp/textureContrast"
+  },
+  {
+   "@id": "https://w3id.org/ppp/textureContrast/marked",
+   "@type": "skos:Concept",
+   "inScheme": "https://w3id.org/ppp/",
+   "skos:notation": "marked",
+   "prefLabel": {
+    "fr": "contraste de texture : évident",
+    "en": "texture contrast: evident"
+   },
+   "hiddenLabel": {
+    "fr": "évident",
+    "en": "evident"
+   },
+   "example": {
+    "fr": "lisse contre moyenne, ou fine contre grosse",
+    "en": "smooth against medium, or fine against coarse"
+   },
+   "regionOf": "https://w3id.org/ppp/textureContrast",
+   "broader": "https://w3id.org/ppp/textureContrast"
+  },
+  {
+   "@id": "https://w3id.org/ppp/textureContrast/strong",
+   "@type": "skos:Concept",
+   "inScheme": "https://w3id.org/ppp/",
+   "skos:notation": "strong",
+   "prefLabel": {
+    "fr": "contraste de texture : maximal",
+    "en": "texture contrast: maximal"
+   },
+   "hiddenLabel": {
+    "fr": "maximal",
+    "en": "maximal"
+   },
+   "example": {
+    "fr": "lisse contre grosse",
+    "en": "smooth against coarse"
+   },
+   "regionOf": "https://w3id.org/ppp/textureContrast",
+   "broader": "https://w3id.org/ppp/textureContrast"
   },
   {
    "@id": "https://w3id.org/ppp/textureDirectionality/mesure/iso_25178_2",
@@ -5624,6 +5797,7 @@
    "member": [
     "https://w3id.org/ppp/texture",
     "https://w3id.org/ppp/localIrregularity",
+    "https://w3id.org/ppp/textureContrast",
     "https://w3id.org/ppp/textureDirectionality",
     "https://w3id.org/ppp/translucency",
     "https://w3id.org/ppp/surfaceGloss",
@@ -5679,6 +5853,7 @@
    },
    "member": [
     "https://w3id.org/ppp/texture",
+    "https://w3id.org/ppp/textureContrast",
     "https://w3id.org/ppp/textureDirectionality",
     "https://w3id.org/ppp/localIrregularity",
     "https://w3id.org/ppp/curvature",

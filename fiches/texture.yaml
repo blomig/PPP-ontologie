@@ -40,7 +40,7 @@ mesure:
   - id: iso_25178_2
     nom: rugosité surfacique (Sa, longueur d’autocorrélation)
     grandeur: hauteur moyenne des écarts sur une surface relevée, et longueur sur laquelle le relief se répète
-    unite_ou_echelle: 'micromètres (hauteur moyenne arithmétique, Sa ; longueur d’autocorrélation, Sal)'
+    unite_ou_echelle: 'micromètres (écart moyen du relief, Sa ; longueur d’autocorrélation, Sal)'
     references:
     - iso_25178_2
     - npl_gpg116

@@ -112,8 +112,8 @@ references:
   doi_ou_url: https://doi.org/10.1038/scientificamerican0474-90
   role: discute
   statut_verification: vérifiée sur résumé ou source secondaire
-  verifie_le: '2026-10-10'
-  verifie_sur: métadonnées Crossref ; résumé non disponible ; décrit comme modèle des filtres minces par une source secondaire (résumé de Fleming et Bülthoff 2005) ; texte non lu
+  verifie_le: '2026-11-02'
+  verifie_sur: 'métadonnées Crossref et chapeau de l’article sur la page de l’éditeur (Scientific American, https://www.scientificamerican.com/article/the-perception-of-transparency/) lus le 2026-11-02 : des mosaïques de couleurs et de formes opaques donnent l’impression de transparence, et un modèle théorique simple prédit quand elle apparaît ; décrit comme modèle des filtres minces par une source secondaire (résumé de Fleming et Bülthoff 2005) ; texte non lu'
   reprend: la transparence perçue comme objet d'étude
   ne_reprend_pas: le modèle des filtres minces
 - id: fleming_bulthoff2005

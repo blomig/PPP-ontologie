@@ -81,29 +81,71 @@ espace_valeurs:
     label_fr: aucun
     label_en: none
     rang: 1
-    repere: de l’eau neutre, à la température des solutions de référence (vers 20 °C)
+    repere: de l’eau neutre, plate, sans goût ni odeur (ISO 3972, 5.1), à la température des solutions (vers 20 °C)
+    preparation:
+      substance: eau, sans soluté
+      substance_en: water, no solute
+      concentration: 0 g/l
+      concentration_en: 0 g/l
+      solvant: eau neutre, plate, sans goût ni odeur, de dureté connue de préférence (ISO 3972, 5.1)
+      solvant_en: neutral still water, tasteless and odourless, preferably of known hardness (ISO 3972, 5.1)
+      temperature: vers 20 °C, comme l’eau de rinçage (ISO 3972, 7.2 d)
+      temperature_en: about 20 °C, like the rinsing water (ISO 3972, 7.2 d)
+      origine: ISO 3972:2011, 5.1 (eau) et 7.2 d (température)
+      origine_en: ISO 3972:2011, 5.1 (water) and 7.2 d (temperature)
+      source:
+      - iso3972
+      doute: non
     exemplaires: []
   - cle: faint
     label_fr: à peine perceptible
     label_en: faint
     rang: 2
-    repere: une solution de caféine d’ISO 3972 (tableau 3), à la plus faible concentration de la série (concentration à reprendre de la norme)
+    repere: 'une solution de caféine à 0,195 g/l dans l’eau neutre, vers 20 °C (ISO 3972, tableau 3 : mélange à parts égales des dilutions D2 et D3, seuil d’identification d’un jury entraîné)'
+    preparation:
+      substance: caféine
+      substance_en: caffeine
+      concentration: 0,195 g/l
+      concentration_en: 0.195 g/l
+      solvant: eau neutre, plate, sans goût ni odeur, de dureté connue de préférence (ISO 3972, 5.1)
+      solvant_en: neutral still water, tasteless and odourless, preferably of known hardness (ISO 3972, 5.1)
+      temperature: vers 20 °C, comme l’eau de rinçage (ISO 3972, 7.2 d)
+      temperature_en: about 20 °C, like the rinsing water (ISO 3972, 7.2 d)
+      origine: ISO 3972:2011, tableau 3 (D2 + D3) ; dilutions du tableau 2, solution mère du tableau 1 (0,54 g/l, caféine dissoute dans l’eau chaude, 80 °C)
+      origine_en: 'ISO 3972:2011, table 3 (D2 + D3); dilutions from table 2, stock solution from table 1 (0.54 g/l, caffeine dissolved in hot water, 80 °C)'
+      source:
+      - iso3972
+      doute: non
     exemplaires: []
   - cle: distinct
     label_fr: net
     label_en: distinct
     rang: 3
-    repere: une solution de caféine d’ISO 3972 (tableau 3), à une concentration moyenne de la série (à choisir avant l’épreuve)
+    repere: 'une solution de caféine à 0,27 g/l dans l’eau neutre, vers 20 °C (ISO 3972, tableau 2 : dilution D1, la plus forte de la série) ; cran provisoire, à confirmer avant E1'
+    preparation:
+      substance: caféine
+      substance_en: caffeine
+      concentration: 0,27 g/l
+      concentration_en: 0.27 g/l
+      solvant: eau neutre, plate, sans goût ni odeur, de dureté connue de préférence (ISO 3972, 5.1)
+      solvant_en: neutral still water, tasteless and odourless, preferably of known hardness (ISO 3972, 5.1)
+      temperature: vers 20 °C, comme l’eau de rinçage (ISO 3972, 7.2 d)
+      temperature_en: about 20 °C, like the rinsing water (ISO 3972, 7.2 d)
+      origine: 'ISO 3972:2011, tableau 2 (dilution D1, la plus forte de la série) ; cran « net » : choix de relecture (2026-11-02), écart d’un facteur 1,4 seulement avec le cran précédent'
+      origine_en: 'ISO 3972:2011, table 2 (dilution D1, the strongest of the series); “distinct” step: review choice (2026-11-02), only a factor of 1.4 from the previous step'
+      source:
+      - iso3972
+      doute: oui
+      motif_doute: '0,27 g/l (D1) n’est qu’à un facteur 1,4 de 0,195 g/l ; la norme en fait des dilutions d’une série de seuils, pas des crans distincts'
+      motif_doute_en: '0.27 g/l (D1) is only a factor of 1.4 from 0.195 g/l; the standard makes them dilutions of a threshold series, not distinct steps'
     exemplaires: []
   - cle: strong
     label_fr: fort
     label_en: strong
     rang: 4
-    repere: une solution de caféine d’ISO 3972 (tableau 3), à la plus forte concentration de la série
+    repere: 'à caler : aucune solution d’ISO 3972 plus forte que 0,27 g/l n’est à goûter (la solution mère du tableau 1, 0,54 g/l, sert à préparer les dilutions) ; repère à choisir avant l’épreuve'
     exemplaires: []
-note_echelle: 'quatre régions, clés reprises de `odourIntensity` (proposition « Goût », 2.2). Les repères sont des solutions de référence, pas des exemplaires (X17), et aucune marque n’est citée (décision
-  5 de l’éditeur du projet, 2026-10-19). Les concentrations exactes du tableau 3 d’ISO 3972:2011 [[iso3972]] ne sont pas reprises ici : la correspondance entre crans et concentrations est à fixer avant
-  l’épreuve.'
+note_echelle: 'quatre régions, clés reprises de `odourIntensity` (proposition « Goût », 2.2). Les repères sont des solutions de référence, pas des exemplaires (X17), et aucune marque n’est citée (décision 5 de l’éditeur du projet, 2026-10-19). Série 90 (choix de relecture (2026-11-02), suivant la décision de l’éditeur du projet (2026-11-02) : « B : les repères de région (solutions ISO 3972, alun 1 g/l) ») : les crans sont calés sur les solutions d’ISO 3972:2011 [[iso3972]], lues dans l’aperçu public : eau neutre (aucun) ; caféine à 0,195 g/l, seuil d’identification du tableau 3 (à peine perceptible) ; caféine à 0,27 g/l, dilution D1 du tableau 2 (net, provisoire : l’écart avec le cran précédent n’est que d’un facteur 1,4). Le cran « fort » reste à caler. Chaque préparation est déclarée dans le champ `preparation` de sa région (X17).'
 identite: 'La force de la saveur amère, perçue sur la langue ; pas l’astringence (un toucher : la bouche qui sèche ou râpe), pas l’odeur en bouche (arôme en bouche, en réserve), pas le piquant (piquant
   en bouche), pas l’agrément.'
 relations:
@@ -131,10 +173,10 @@ references:
   doi_ou_url: https://www.iso.org/standard/50110.html
   role: fonde
   statut_verification: vérifiée sur résumé ou source secondaire
-  verifie_le: '2026-10-19'
-  verifie_sur: 'extraits : aperçu public (domaine, points 3, 5, 7 et 8, tableau 3) ; norme confirmée le 2023-09-21 ; texte complet non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)'
-  reprend: les solutions de caféine du tableau 3 comme repères de région ; même température (vers 20 °C) pour les échantillons et l’eau ; rinçage et attente entre deux prises
-  ne_reprend_pas: 'les concentrations exactes ; l’usage de la norme pour vérifier des dégustateurs (contraste : elle mesure la sensibilité des sujets)'
+  verifie_le: '2026-11-02'
+  verifie_sur: 'extraits : aperçu public de l’édition 2011 diffusé par iTeh Standards (https://standards.iteh.ai/catalog/standards/sist/9d3b5579-aea7-40d6-9216-d4825f5a0a83/iso-3972-2011 ; l’aperçu de iso.org ne montre que les points 1 à 3) : points 5.1, 7.2, 8.1, tableaux 1, 2 et 3, relus le 2026-11-02 ; norme confirmée le 2023-09-21 ; Cor 1:2012 non lu ; texte complet non lu'
+  reprend: l’eau neutre du point 5.1 ; la caféine à 0,195 g/l (tableau 3) et à 0,27 g/l (tableau 2, D1) comme repères de région ; même température (vers 20 °C) pour les échantillons et l’eau ; rinçage et attente entre deux prises
+  ne_reprend_pas: 'la solution mère du tableau 1 (0,54 g/l), qui sert à préparer les dilutions ; l’usage de la norme pour vérifier des dégustateurs (contraste : elle mesure la sensibilité des sujets)'
 - id: lawless2004
   citation: Lawless, H. T., Schlake, S., Smythe, J., Lim, J., Yang, H., Chapman, K. & Bolton, B. (2004). Metallic taste and retronasal smell. Chemical Senses, 29(1), 25–33.
   doi_ou_url: https://doi.org/10.1093/chemse/bjh003
@@ -277,10 +319,9 @@ source_de_la_fiche: 'création du type : décision de l’éditeur du projet (20
   » : décision de l’éditeur du projet (2026-10-19, décision 1) ; contenu repris de la proposition « Goût » (docs/famille-gout-proposition.md (document de travail, non publié), sections 2, 5, 6 et 7) ; le
   reste (porteur, crans, repères, facettes critiques, classement des mesures, rédaction) : choix de relecture (2026-10-19 et 2026-10-20) ; fiche créée le 2026-10-20 (série 78)'
 manques:
-- 'exemplaires : aucun. Décision 5 de l’éditeur du projet (2026-10-19) : pas d’exemplaire en V1 pour le goût, des repères de région à la place. Si des exemples sont cherchés plus tard, ce seront des objets
-  publics seulement (produits identifiés, sans marque citée), jamais des objets privés'
+- 'exemplaires : aucun. Décision 5 de l’éditeur du projet (2026-10-19) : pas d’exemplaire en V1 pour le goût, des repères de région à la place. Si des exemples sont cherchés plus tard, ce seront des objets publics seulement (produits identifiés, sans marque citée), jamais des objets privés'
 - 'épreuve d’accord E1 à faire : portions du même lot, au même moment, repères de région goûtés avant de juger (proposition « Goût », section 6, point 2)'
-- concentrations des solutions de caféine d’ISO 3972 (tableau 3) à reprendre de la norme, et correspondance entre crans et concentrations à fixer avant E1
+- 'repère du cran « fort » à caler (aucune solution d’ISO 3972 plus forte que 0,27 g/l n’est à goûter) ; cran « net » provisoire (0,27 g/l, à un facteur 1,4 du cran « à peine perceptible », marqué `doute: oui`), à confirmer avant E1 (choix de relecture (2026-11-02), série 90)'
 bloque_par: []
 a_relire:
 - label_fr
@@ -310,8 +351,8 @@ a_relire:
 - enonces_testables
 - statut_note
 remarque:
-- 'série 78 bis (choix de relecture (2026-10-20), corrections de relecture) : nom de la méthode `ebc_9_8` : « méthode internationale (IM) commune » ; glose de « rétronasale » à la première occurrence ;
-  à relire'
+- 'série 78 bis (choix de relecture (2026-10-20), corrections de relecture) : nom de la méthode `ebc_9_8` : « méthode internationale (IM) commune » ; glose de « rétronasale » à la première occurrence ; à relire'
+- 'série 90 (choix de relecture (2026-11-02), suivant la décision de l’éditeur du projet (2026-11-02) : « B : les repères de région (solutions ISO 3972, alun 1 g/l) ») : repères calés sur ISO 3972 (aperçu public relu le 2026-11-02), champ `preparation` ajouté ; « fort » à caler ; à relire'
 relecture_explicative:
   date: null
   champs: []

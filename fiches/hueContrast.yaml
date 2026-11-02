@@ -142,11 +142,11 @@ references:
   doi_ou_url: https://openlibrary.org/works/OL3134338W
   role: discute
   statut_verification: vérifiée sur résumé ou source secondaire
-  verifie_le: '2026-10-10'
+  verifie_le: '2026-11-02'
   verifie_sur: 'notice Open Library lue le 2026-10-10 (œuvre OL3134338W) : titre, auteur, première publication 1961 ; éditions allemandes chez O. Maier / Otto Maier Verlag, Ravensburg, en 1967, 1971 et
-    1979 ; éditions anglaises The Art of Color chez Reinhold, New York, dès 1961 ; aucune édition allemande de 1961 n’y est listée, l’éditeur de 1961 n’est donc pas vérifié ; contenu non lu'
-  reprend: 'rien de son contenu (non lu) ; cité comme ouvrage repéré sur la couleur (titre ; sujets de la notice : couleur, esthétique, peinture)'
-  ne_reprend_pas: tout son contenu (non lu) ; une règle d'harmonie, s'il en donne, serait axiologique (§0.4)
+    1979 ; éditions anglaises The Art of Color chez Reinhold, New York, dès 1961 ; aucune édition allemande de 1961 n’y est listée, l’éditeur de 1961 n’est donc pas vérifié ; source secondaire lue le 2026-11-02 : Hirschler, R. & Schwarz, A. (2023), « Itten’s seven colour contrasts – a review. Part II », Journal of the International Colour Association, 33, 155–170, https://www.aic-publishing.org/ojs/index.php/JAIC/article/view/288 : l’ouvrage présente sept contrastes de couleur, dont le contraste de teinte, que les auteurs critiquent (catégories de teintes trop générales) ; ouvrage non lu'
+  reprend: 'l’existence, dans l’ouvrage, d’un « contraste de teinte » parmi sept contrastes de couleur (d’après Hirschler et Schwarz 2023) ; rien d’autre'
+  ne_reprend_pas: la définition du contraste de teinte et le reste de l’ouvrage (non lu) ; une règle d'harmonie, s'il en donne, serait axiologique (§0.4)
   note_verification: 'série 6, partie 7 : l’ancien verifie_sur disait « 1961, éditeurs dont Otto Maier Verlag », ce qui laissait croire l’édition de 1961 vérifiée chez Otto Maier ; la notice ne le dit pas
     (mis en cohérence avec docs/couleur-teinte-etat-de-l-art.md)'
 - id: albers1963
@@ -204,9 +204,7 @@ references:
   verifie_sur: 'page de l’ISO lue le 2026-10-16 (résumé), et présentation de la CIE : formule CIEDE2000, sur des coordonnées CIELAB, avec des corrections selon la clarté, le chroma, la teinte et leur interaction ; objets réfléchissants ou transmettants, écrans s’ils les simulent ; ne s’applique pas aux sources de lumière ni aux reflets spéculaires ; texte payant non lu'
   reprend: rien (mesure associée ou méthode voisine, rubrique « mesure »)
   ne_reprend_pas: les valeurs ΔE00 comme bornes de régions
-etat_de_l_art: 'Itten (*Kunst der Farbe*, 1961) [[itten1961]] et Albers (*Interaction of Color*, 1963) [[albers1963]] sont des ouvrages repérés sur la couleur (notices seules, contenu non lu). Le système
-  de Munsell (1905) [[munsell1905]] situe les teintes sur un cercle (« a circuit of hues », passage lu), ce qui donne un sens à « teintes éloignées ». Aucune source trouvée ne propose une échelle perçue
-  du contraste de teinte entre deux zones ; les labels des régions sont ceux de tous les contrastes (T3). Détail : docs/bibliographie-par-type.md#groupe-contrastes.'
+etat_de_l_art: 'Itten (*Kunst der Farbe*, 1961) [[itten1961]] compte un contraste de teinte parmi sept contrastes de couleur (d’après une source secondaire, ouvrage non lu) ; Albers (*Interaction of Color*, 1963) [[albers1963]] est un ouvrage repéré sur la couleur (notice seule, contenu non lu). Le système de Munsell (1905) [[munsell1905]] situe les teintes sur un cercle (« a circuit of hues », passage lu), ce qui donne un sens à « teintes éloignées ». Aucune source trouvée ne propose une échelle perçue du contraste de teinte entre deux zones ; les labels des régions sont ceux de tous les contrastes (T3). Détail : docs/bibliographie-par-type.md#groupe-contrastes.'
 etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-contrastes
 axiomes:
 - conceptuel: Tout contraste particulier médie exactement deux termes.

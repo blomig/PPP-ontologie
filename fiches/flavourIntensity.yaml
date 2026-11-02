@@ -49,9 +49,8 @@ mesure:
     references:
     - green1993lms
     - green1996lms
-    - stevens1957
     raison: jugements d’un jury sans référence physique ; à reprendre dans le protocole de l’épreuve d’accord (E1)
-    statut_lecture: résumés (Green et al., 1993 et 1996) ; métadonnées (Stevens, 1957)
+    statut_lecture: 'résumés (Green et al., 1993 et 1996) ; estimation de grandeur : aucune source lue (Stevens, 1957, retiré en série 90 : métadonnées seulement)'
   - nom: échelles de panel et notes sur une échelle de complexité, d’intensité ou d’équilibre, dont le questionnaire de complexité de Medel et al. (2009)
     references:
     - medel2009
@@ -244,15 +243,6 @@ references:
   verifie_sur: résumé (OpenAlex) ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
   reprend: la comparaison de la LMS et de l’estimation de grandeur (non retenues comme mesure)
   ne_reprend_pas: les résultats détaillés
-- id: stevens1957
-  citation: Stevens, S. S. (1957). On the psychophysical law. Psychological Review, 64(3), 153–181.
-  doi_ou_url: https://doi.org/10.1037/h0046162
-  role: contraste
-  statut_verification: vérifiée sur résumé ou source secondaire
-  verifie_le: '2026-10-20'
-  verifie_sur: métadonnées Crossref ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
-  reprend: l’estimation de grandeur, non retenue comme mesure
-  ne_reprend_pas: la loi psychophysique (texte non lu)
 - id: medel2009
   citation: 'Medel, M., Viala, D., Meillon, S., Urbano, C. & Schlich, P. (2009). A questionnaire for assessing the perceived complexity of wine: Application to the study of the effect of expertise on perception
     of wine complexity. Communication orale, 8th Pangborn Sensory Science Symposium, Florence.'
@@ -282,13 +272,7 @@ references:
   verifie_sur: résumé et extraits de l’introduction (ScienceDirect) ; définition complète de l’attribut dominant connue par source secondaire (Visalli et Galmarini, 2024) (statut repris de docs/bibliographie-par-type.md#groupe-gout)
   reprend: la TDS, un jugement de jury, non retenue comme mesure
   ne_reprend_pas: la construction des courbes
-etat_de_l_art: 'Dans un mélange, l’intensité d’ensemble est en général inférieure à la somme des intensités séparées (Keast et Breslin, 2003 [[keast_breslin2003]]). Une grille de dégustation lue sépare
-  des crans d’intensité descriptifs du jugement de qualité (WSET, 2016 [[wset2016]]), alors que la grille CIEL, présentée comme méthode d’évaluation de la qualité, parle de « puissance » (Rousselin, 2023
-  [[rousselin2023]], par source secondaire). L’intensité se compare mal d’une personne à l’autre (Bartoshuk, 2000 [[bartoshuk2000]]) ; les échelles d’intensité (échelle de grandeur à étiquettes [[green1993lms]]
-  [[green1996lms]] ; estimation de grandeur, Stevens, 1957 [[stevens1957]]) sont des jugements de jury, sans série de référence physique. La force perçue dépend du nez (Lawless et al., 2004 [[lawless2004]]),
-  de la température (Talavera et al., 2005 [[talavera2005]] ; Engelen et al., 2003 [[engelen2003]]) et de ce qui précède (accumulation de l’astringence [[green1993astr]] ; Prescott et Swain-Campbell, 2000
-  [[prescott2000]]). La complexité jugée va avec la force (Meillon et al., 2010 [[meillon2010]]). L’intensité perceptive commune à tous les sens reste en attente (T10, spec §9.9). Aucune source lue ne teste l’accord sur
-  une intensité globale de flaveur. Détail : docs/bibliographie-par-type.md#groupe-gout.'
+etat_de_l_art: 'Dans un mélange, l’intensité d’ensemble est en général inférieure à la somme des intensités séparées (Keast et Breslin, 2003 [[keast_breslin2003]]). Une grille de dégustation lue sépare des crans d’intensité descriptifs du jugement de qualité (WSET, 2016 [[wset2016]]), alors que la grille CIEL, présentée comme méthode d’évaluation de la qualité, parle de « puissance » (Rousselin, 2023 [[rousselin2023]], par source secondaire). L’intensité se compare mal d’une personne à l’autre (Bartoshuk, 2000 [[bartoshuk2000]]) ; les échelles d’intensité (échelle de grandeur à étiquettes [[green1993lms]] [[green1996lms]] ; estimation de grandeur, sans source lue ici) sont des jugements de jury, sans série de référence physique. La force perçue dépend du nez (Lawless et al., 2004 [[lawless2004]]), de la température (Talavera et al., 2005 [[talavera2005]] ; Engelen et al., 2003 [[engelen2003]]) et de ce qui précède (accumulation de l’astringence [[green1993astr]] ; Prescott et Swain-Campbell, 2000 [[prescott2000]]). La complexité jugée va avec la force (Meillon et al., 2010 [[meillon2010]]). L’intensité perceptive commune à tous les sens reste en attente (T10, spec §9.9). Aucune source lue ne teste l’accord sur une intensité globale de flaveur. Détail : docs/bibliographie-par-type.md#groupe-gout.'
 etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-gout
 axiomes:
 - conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
@@ -322,12 +306,12 @@ source_de_la_fiche: 'création du type : décision de l’éditeur du projet (20
   (2026-10-19, décision 1) ; contenu repris de la proposition « Goût » (docs/famille-gout-proposition.md (document de travail, non publié), sections 2, 5, 6 et 7) ; le reste (porteur, crans, repères, facettes
   critiques, classement des mesures, rédaction) : choix de relecture (2026-10-19 et 2026-10-20) ; fiche créée le 2026-10-20 (série 78)'
 manques:
-- 'exemplaires : aucun. Décision 5 de l’éditeur du projet (2026-10-19) : pas d’exemplaire en V1 pour le goût, des repères de région à la place. Si des exemples sont cherchés plus tard, ce seront des objets
-  publics seulement (produits identifiés, sans marque citée), jamais des objets privés'
+- 'exemplaires : aucun. Décision 5 de l’éditeur du projet (2026-10-19) : pas d’exemplaire en V1 pour le goût, des repères de région à la place. Si des exemples sont cherchés plus tard, ce seront des objets publics seulement (produits identifiés, sans marque citée), jamais des objets privés'
 - 'épreuve d’accord E1 à faire : portions du même lot, au même moment, repères de région goûtés avant de juger (proposition « Goût », section 6, point 2) ; elle suit celle du premier lot (lot CIEL)'
 - repère de région à choisir (aucune solution d’ISO 3972 ne vaut pour l’ensemble)
 - aucune source lue ne teste l’accord sur une intensité globale de flaveur
 - 'base incomplète : le sucré, l’acide, le salé, l’umami et l’arôme en bouche sont en réserve, sans id ; la fiche ne cite que des ids définis (A12)'
+- 'repères « à caler » (X17, série 90) : tous ; aucune solution d’ISO 3972 ne vaut pour l’ensemble ; l’eau seule ne compte pas comme repère calé ; X17 non satisfait'
 bloque_par: []
 a_relire:
 - label_fr
@@ -360,11 +344,12 @@ a_relire:
 - enonces_testables
 - statut_note
 remarque:
-- 'série 78 bis (choix de relecture (2026-10-20), corrections de relecture) : définition : astringence au lieu du toucher en bouche, texture exclue ; note_conditions sans Engelen et al. (2003) ; note_base
-  ; gloses de « trijumeau » et de « rétronasale » à la première occurrence ; à relire'
+- 'série 78 bis (choix de relecture (2026-10-20), corrections de relecture) : définition : astringence au lieu du toucher en bouche, texture exclue ; note_conditions sans Engelen et al. (2003) ; note_base ; gloses de « trijumeau » et de « rétronasale » à la première occurrence ; à relire'
 - 'série 78 quater (choix de relecture (2026-10-20), retouches de relecture) : référence Engelen et al. (2003) : reprend et ne_reprend_pas corrigés sur le résumé PubMed (14637326) ; à relire'
 - 'série 78 quinquies (choix de relecture (2026-10-20), retouches de relecture) : note_base, identite, état de l’art et E1 : l’intensité perceptive commune à tous les sens et ce qui attire l’attention nommés sans id (A12) ; référence Rousselin (2023) : ISBN déplacé dans la citation, doi_ou_url vide ; Engelen et al. (2003) : verifie_le 2026-10-20 ; à relire'
 - 'série 78 sexies (choix de relecture (2026-10-20), retouches de relecture) : note_base et E1 : ce qui attire l’attention, « notion réservée hors V1, spec §9.9 » ; à relire'
+- 'série 90 (choix de relecture (2026-11-02)) : Stevens (1957) retiré des références (métadonnées seulement, aucun résumé trouvé le 2026-11-02 ; même choix que la série 88 pour le poids perçu) ; à relire'
+- 'série 90 (choix de relecture (2026-11-02), suivant la décision de l’éditeur du projet (2026-11-02) : « B : les repères de région (solutions ISO 3972, alun 1 g/l) ») : aucun repère calé : aucune solution d’ISO 3972 ne vaut pour l’ensemble ; l’eau seule ne compte pas comme repère calé ; à relire'
 relecture_explicative:
   date: null
   champs: []

@@ -66,7 +66,7 @@ mode_de_presentation: échantillon
 conditions_critiques:
 - geste
 - temperature_objet
-note_conditions: 'le jugement se fait en pressant (facette `geste` : `pressure`, spec §9.7 H, règle 8), du bout de l’index, perpendiculairement à la surface, puis on relâche ; la température de l’objet (facette `temperature_objet`) change la dureté de certaines matières (beurre, cire, chocolat) : elle est critique. La force (« sans appuyer », « appui ferme »), la partie de la main (bout du doigt ou paume), la durée de l’appui, la main nue ou gantée et l’état de la peau vont en note d’épisode, sans facette. Objet posé à plat sur une table dure (`tableTop`) pour qu’il ne bouge pas, ou touché sur place (`inSitu`) ; durée `glance`. Épreuve sans voir : on presse plus fort quand on s’attend à un objet rigide (Klatzky et Reed, 2009) [[klatzky_reed2009]]. Une photo ne dit rien de la dureté : aucune assertion sur image, sauf indice visuel déclaré (un coussin creusé, une mousse écrasée), qui reste une assertion de vue sur cet indice, pas sur la dureté (spec X17 ; protocole d’échantillons, docs/protocole-echantillons-toucher.md §4.1).'
+note_conditions: 'le jugement se fait en pressant (facette `geste` : `pressure`, spec §9.7 H, règle 8), du bout de l’index, perpendiculairement à la surface, puis on relâche ; la température de l’objet (facette `temperature_objet`) change la dureté de certaines matières (beurre, cire, chocolat) : elle est critique. La force (« sans appuyer », « appui ferme »), la partie de la main (bout du doigt ou paume), la durée de l’appui, la main nue ou gantée et l’état de la peau vont en note d’épisode, sans facette. L’appui ferme s’apprend avant l’épreuve sur une balance de cuisine : presser du bout de l’index jusqu’à environ 1 kg affiché, puis presser l’objet à la main de la même façon ; cet étalonnage se refait une fois à mi-épreuve (après trois objets) et la force visée se déclare ; cet appui appris n’est pas une mesure de la dureté (choix de relecture (2026-11-02)). Objet posé à plat sur une table dure (`tableTop`) pour qu’il ne bouge pas, ou touché sur place (`inSitu`) ; durée `glance`. Épreuve sans voir : on presse plus fort quand on s’attend à un objet rigide (Klatzky et Reed, 2009) [[klatzky_reed2009]]. Une photo ne dit rien de la dureté : aucune assertion sur image, sauf indice visuel déclaré (un coussin creusé, une mousse écrasée), qui reste une assertion de vue sur cet indice, pas sur la dureté (spec X17 ; protocole d’échantillons, docs/protocole-echantillons-toucher.md §4.1).'
 porteur: 'un objet, ou une partie d’objet, à l’endroit pressé (pas la matière en général : une boîte de métal mince cède alors que le métal est dur)'
 arité: 1
 condition_NA: 'objet qu’on n’a pas le droit ou pas la possibilité de presser (œuvre de musée, objet fragile ou dangereux) ; ce qui ne garde pas de forme sous le doigt (un liquide, un gaz) ; objet vu seulement en image.'
@@ -79,19 +79,19 @@ espace_valeurs:
     label_fr: cède beaucoup
     label_en: yields a lot
     rang: 1
-    repere: 'le doigt s’enfonce profondément (de la mousse à raser, une éponge sèche, un ballon de baudruche gonflé)'
+    repere: le doigt s’enfonce profondément (de la mousse à raser, une éponge synthétique (mousse) sèche, un ballon de baudruche gonflé)
     exemplaires: []
   - cle: yieldsSome
     label_fr: cède un peu
     label_en: yields somewhat
     rang: 2
-    repere: le doigt s’enfonce nettement, mais la matière résiste (un chapeau de champignon)
+    repere: le doigt s’enfonce nettement, mais la matière résiste (une balle de mousse dense, un chapeau de champignon frais)
     exemplaires: []
   - cle: yieldsBarely
     label_fr: cède à peine
     label_en: yields barely
     rang: 3
-    repere: on sent un léger enfoncement en appuyant fort, sans voir de creux (une pile de papier)
+    repere: on sent un léger enfoncement en appuyant fort, sans voir de creux (une pile de papier, une gomme, un bouchon de liège)
     exemplaires: []
   - cle: doesNotYield
     label_fr: ne cède pas
@@ -99,7 +99,7 @@ espace_valeurs:
     rang: 4
     repere: rien ne cède sous le doigt, même en appuyant fort (une pierre)
     exemplaires: []
-note_echelle: 'quatre crans tirés des cinq exemples du ticket 4, rangés par leur proposant du plus mou au plus dur : le ballon gonflé est rangé avec la mousse à raser (le doigt s’enfonce profondément), le chapeau de champignon seul au cran « cède un peu », la pile de papier à « cède à peine », la pierre à « ne cède pas ». La proposition « Toucher » (§2.2) avait trois crans (« cède beaucoup », « cède un peu », « ne cède pas ») ; le ticket en distingue un de plus entre « un peu » et « pas du tout ». Position de travail : quatre crans, E1 à une région près ; si l’épreuve ne distingue pas « cède à peine » de ses voisins, revenir à trois (spec §9.7 C, accord exact). Repères du cran « cède beaucoup » (série 54 bis) : la mousse à raser reste comme repère, mais elle se déforme sans revenir, et l’examen risque la condition NA (ce qui ne garde pas de forme) ; le ballon gonflé reste en `yieldsMuch`, avec un doute vers `yieldsSome` selon le gonflage.'
+note_echelle: 'quatre crans tirés des cinq exemples du ticket 4, rangés par leur proposant du plus mou au plus dur : le ballon gonflé est rangé avec la mousse à raser (le doigt s’enfonce profondément), le chapeau de champignon seul au cran « cède un peu », la pile de papier à « cède à peine », la pierre à « ne cède pas ». La proposition « Toucher » (§2.2) avait trois crans (« cède beaucoup », « cède un peu », « ne cède pas ») ; le ticket en distingue un de plus entre « un peu » et « pas du tout ». Position de travail : quatre crans, E1 à une région près ; si l’épreuve ne distingue pas « cède à peine » de ses voisins, revenir à trois (spec §9.7 C, accord exact). Repères du cran « cède beaucoup » (série 54 bis) : la mousse à raser reste comme repère, mais elle se déforme sans revenir, et l’examen risque la condition NA (ce qui ne garde pas de forme) ; le ballon gonflé reste en `yieldsMuch`, avec un doute vers `yieldsSome` selon le gonflage. Repères précisés (choix de relecture (2026-11-02)) : l’éponge du cran « cède beaucoup » est une éponge synthétique (mousse) sèche, car une éponge de cellulose se raidit en séchant (Rey et Vandamme, 2013) [[rey_vandamme2013]] ; au cran « cède un peu », une balle de mousse dense est le repère principal, reproductible, et le chapeau de champignon le second, sa fraîcheur déclarée ; une gomme et un bouchon de liège rejoignent la pile de papier au cran « cède à peine ».'
 identite: 'Ce que l’objet cède sous la pression du doigt, à l’endroit pressé ; pas la façon dont il revient à sa forme (retour à la forme), pas ce qui plie (souplesse au pli), pas le relief de sa surface (texture), pas la résistance à la rayure (échelle de Mohs) ; pas la dureté en bouche (`ppp:hardnessInMouth`, famille Goût : on mord la bouchée, on ne la presse pas du doigt ; l’aliment est détruit pendant qu’on le juge), sans relation.'
 relations:
 - type: confusableWith
@@ -211,6 +211,15 @@ references:
   verifie_sur: 'page lue en ligne le 2026-10-16 : dureté d’un minéral = résistance relative à la rayure, mesurée en le rayant avec une substance de dureté connue ; dix minéraux de référence, du talc (1) au diamant (10)'
   reprend: 'l’homonyme de domaine : la dureté des minéralogistes est une résistance à la rayure'
   ne_reprend_pas: l’échelle
+- id: rey_vandamme2013
+  citation: Rey, J. & Vandamme, M. (2013). On the shrinkage and stiffening of a cellulose sponge upon drying. Journal of Applied Mechanics, 80(2), 020908.
+  doi_ou_url: https://doi.org/10.1115/1.4007906
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-11-02'
+  verifie_sur: résumé (OpenAlex) lu le 2026-11-02 ; texte non lu
+  reprend: 'en séchant, une éponge de cellulose rétrécit de plus de moitié et se raidit (module de compressibilité multiplié par près de cent) : une éponge de cellulose sèche n’est pas un repère du cran « cède beaucoup »'
+  ne_reprend_pas: le modèle poromécanique
 etat_de_l_art: 'Sources : la dureté (ou mollesse) est une dimension du toucher des matériaux (Bergmann Tiest et Kappers 2006) [[bergmann_tiest_kappers2006]] ; la dureté jugée suit une loi de puissance de la dureté physique pour des matières souples (Harper et Stevens 1964) [[harper_stevens1964]] ; pour des caoutchoucs, la mollesse se discrimine finement au doigt et suit la souplesse mesurée (Srinivasan et LaMotte 1995) [[srinivasan_lamotte1995]] ; la déformation de la surface et l’épaisseur de l’objet comptent (Bergmann Tiest et Kappers 2009) [[bergmann_tiest_kappers2009a]]. Aucune source trouvée ne fixe des régions perçues de la dureté au toucher. Détail : docs/bibliographie-par-type.md#groupe-toucher.'
 etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-toucher
 axiomes:
@@ -241,8 +250,156 @@ introduit_en: '2.8'
 modifie_en: []
 remplace_par: []
 source_de_la_fiche: 'ticket n° 4 (https://github.com/blomig/PPP-ontologie/issues/4, suggestion de type « Dureté ») ; proposition de famille « Toucher » (docs/famille-toucher-proposition.md (document de travail, non publié), §2.2, premier lot, décisions 3 et 9) ; protocole d’échantillons (docs/protocole-echantillons-toucher.md §4.1) ; fiche rédigée le 2026-10-16 par l’équipe, champs à valider par la relecture explicative'
+# Série 90 : épisodes proposés « à réaliser » (spec X17 ; décision de l’éditeur du projet du 2026-11-02 pour le principe ; champs et détail du lot : choix de relecture (2026-11-02)) ; ni épreuve faite ni accord entre observateurs ;
+# ni observateur, ni date, ni résultat. Objets et prédictions repris de la proposition de lot 7, révisés : choix de relecture (2026-11-02).
+episodes_a_realiser:
+- id: ppp-a:prop7-hardnessToTouch-01
+  realisation: a_realiser
+  region_attendue: yieldsMuch
+  objet: éponge de ménage en mousse synthétique (polyuréthane), sans face grattante, sèche, d’environ 11 × 7 × 3 cm ; pas une éponge de cellulose
+  objet_en: household sponge of synthetic foam (polyurethane), without a scouring face, dry, about 11 × 7 × 3 cm; not a cellulose sponge
+  preparation: éponge en mousse synthétique, sans face grattante, d’au moins 3 cm d’épaisseur (pour que le doigt ne touche pas la table), sèche depuis au moins un jour ; pas une éponge de cellulose ; la peser ; étalonnage fait avant
+  preparation_en: synthetic foam sponge, without a scouring face, at least 3 cm thick (so that the finger does not reach the table), dry for at least a day; not a cellulose sponge; weigh it; calibration done beforehand
+  consigne: 'Presser du bout de l’index, bien droit, au milieu de l’objet : d’abord doucement, puis jusqu’à la force sentie à l’étalonnage ; relâcher. L’objet cède-t-il beaucoup, un peu, à peine, ou pas du tout, à l’endroit pressé ? Ne juger ni le retour à la forme, ni le relief, ni le froid.'
+  consigne_en: 'Press with the tip of the index finger, straight down, in the middle of the object: gently at first, then up to the force felt during calibration; release. Does the object yield a lot, somewhat, barely, or not at all, where it is pressed? Judge neither the return to shape, nor the relief, nor the cold.'
+  conditions:
+    presentation: tableTop
+    geste: pressure
+    temperature_objet: ambient
+    duree: glance
+    yeux: fermés (ou bandés)
+    yeux_en: closed (or blindfolded)
+    note: 'objet posé à plat sur une table dure ; yeux fermés ou bandés, une autre personne pose l’objet ; index de la main dominante, main nue et sèche ; objet dans la pièce depuis au moins une heure (la veille pour le galet) ; étalonnage : avant l’épreuve, appuyer du bout de l’index, bien droit, sur le plateau d’une balance de cuisine jusqu’à lire environ 1 kg, pour sentir cette force ; le refaire une fois à mi-épreuve (après trois objets) ; les objets se pressent ensuite à la main, sans balance : une perception, pas une mesure ; force visée déclarée sur la feuille'
+    note_en: 'object laid flat on a hard table; eyes closed or blindfolded, another person puts the object down; index finger of the dominant hand, bare and dry; object in the room for at least one hour (since the day before for the pebble); calibration: before the trial, press with the tip of the index finger, straight down, on the pan of a kitchen scale until it reads about 1 kg, to feel that force; do it again once halfway through the trial (after three objects); the objects are then pressed by hand, without the scale: a perception, not a measurement; target force declared on the sheet'
+  doute: non
+  note: 'repère de la fiche : « une éponge synthétique (mousse) sèche » ; une éponge de cellulose devient raide en séchant (Rey et Vandamme, 2013) et tomberait à un cran plus dur'
+  note_en: 'reference point of the entry: “a dry synthetic foam sponge”; a cellulose sponge stiffens as it dries (Rey and Vandamme, 2013) and would fall one step harder'
+  texte_fr: 'Une éponge synthétique (mousse) sèche : cède beaucoup (prédiction, à éprouver).'
+  texte_en: 'A dry synthetic foam sponge: yields a lot (prediction, to be tested).'
+- id: ppp-a:prop7-hardnessToTouch-02
+  realisation: a_realiser
+  region_attendue: yieldsSome
+  rang_exemplaire: principal
+  objet: balle de mousse pleine et dense, d’environ 6 à 7 cm de diamètre, sans noyau dur
+  objet_en: solid dense foam ball, about 6 to 7 cm in diameter, without a hard core
+  preparation: balle de mousse pleine, dense, de 6 à 7 cm, sans noyau dur, choisie par une personne qui ne sera pas observateur ; la peser ; noter si la mousse revient lentement ou vite
+  preparation_en: solid dense foam ball of 6 to 7 cm, without a hard core, chosen by someone who will not be an observer; weigh it; note whether the foam springs back slowly or quickly
+  consigne: 'Presser du bout de l’index, bien droit, au milieu de l’objet : d’abord doucement, puis jusqu’à la force sentie à l’étalonnage ; relâcher. L’objet cède-t-il beaucoup, un peu, à peine, ou pas du tout, à l’endroit pressé ? Ne juger ni le retour à la forme, ni le relief, ni le froid.'
+  consigne_en: 'Press with the tip of the index finger, straight down, in the middle of the object: gently at first, then up to the force felt during calibration; release. Does the object yield a lot, somewhat, barely, or not at all, where it is pressed? Judge neither the return to shape, nor the relief, nor the cold.'
+  conditions:
+    presentation: tableTop
+    geste: pressure
+    temperature_objet: ambient
+    duree: glance
+    yeux: fermés (ou bandés)
+    yeux_en: closed (or blindfolded)
+    note: 'objet posé à plat sur une table dure ; yeux fermés ou bandés, une autre personne pose l’objet ; index de la main dominante, main nue et sèche ; objet dans la pièce depuis au moins une heure (la veille pour le galet) ; étalonnage : avant l’épreuve, appuyer du bout de l’index, bien droit, sur le plateau d’une balance de cuisine jusqu’à lire environ 1 kg, pour sentir cette force ; le refaire une fois à mi-épreuve (après trois objets) ; les objets se pressent ensuite à la main, sans balance : une perception, pas une mesure ; force visée déclarée sur la feuille'
+    note_en: 'object laid flat on a hard table; eyes closed or blindfolded, another person puts the object down; index finger of the dominant hand, bare and dry; object in the room for at least one hour (since the day before for the pebble); calibration: before the trial, press with the tip of the index finger, straight down, on the pan of a kitchen scale until it reads about 1 kg, to feel that force; do it again once halfway through the trial (after three objects); the objects are then pressed by hand, without the scale: a perception, not a measurement; target force declared on the sheet'
+  doute: oui
+  motif_doute: 'ces balles vont d’une mousse très molle (« cède beaucoup ») à une mousse ferme : décrire la balle retenue assez pour qu’un tiers en retrouve une semblable'
+  motif_doute_en: 'these balls range from a very soft foam (“yields a lot”) to a firm one: describe the chosen ball well enough for someone else to find a similar one'
+  note: 'reproductible et non périssable : exemplaire principal du cran'
+  note_en: 'reproducible and non-perishable: main exemplar of the step'
+  texte_fr: 'Une balle de mousse dense : cède un peu (prédiction, à éprouver).'
+  texte_en: 'A dense foam ball: yields somewhat (prediction, to be tested).'
+- id: ppp-a:prop7-hardnessToTouch-03
+  realisation: a_realiser
+  region_attendue: yieldsSome
+  rang_exemplaire: second
+  objet: champignon de Paris (Agaricus bisporus) frais, entier, chapeau d’environ 4 à 5 cm, pressé au sommet du chapeau
+  objet_en: fresh whole button mushroom (Agaricus bisporus), cap about 4 to 5 cm, pressed at the top of the cap
+  preparation: 'champignon de Paris frais, chapeau de 4 à 5 cm, ferme ; un champignon neuf par observateur ; sorti du réfrigérateur au moins une heure avant ; fraîcheur à déclarer sur la feuille : date d’achat, conservation, chapeau fermé ou ouvert, ferme ou mou, taches'
+  preparation_en: 'fresh button mushroom, cap of 4 to 5 cm, firm; a new mushroom for each observer; taken out of the refrigerator at least one hour before; freshness to be declared on the sheet: date of purchase, storage, cap closed or open, firm or soft, spots'
+  consigne: 'Presser du bout de l’index, bien droit, au milieu de l’objet : d’abord doucement, puis jusqu’à la force sentie à l’étalonnage ; relâcher. L’objet cède-t-il beaucoup, un peu, à peine, ou pas du tout, à l’endroit pressé ? Ne juger ni le retour à la forme, ni le relief, ni le froid.'
+  consigne_en: 'Press with the tip of the index finger, straight down, in the middle of the object: gently at first, then up to the force felt during calibration; release. Does the object yield a lot, somewhat, barely, or not at all, where it is pressed? Judge neither the return to shape, nor the relief, nor the cold.'
+  conditions:
+    presentation: tableTop
+    geste: pressure
+    temperature_objet: ambient
+    duree: glance
+    yeux: fermés (ou bandés)
+    yeux_en: closed (or blindfolded)
+    note: 'le chapeau pressé en son sommet, le champignon debout sur son pied ou couché, chapeau vers le haut ; objet posé à plat sur une table dure ; yeux fermés ou bandés, une autre personne pose l’objet ; index de la main dominante, main nue et sèche ; objet dans la pièce depuis au moins une heure (la veille pour le galet) ; étalonnage : avant l’épreuve, appuyer du bout de l’index, bien droit, sur le plateau d’une balance de cuisine jusqu’à lire environ 1 kg, pour sentir cette force ; le refaire une fois à mi-épreuve (après trois objets) ; les objets se pressent ensuite à la main, sans balance : une perception, pas une mesure ; force visée déclarée sur la feuille'
+    note_en: 'the cap pressed at its top, the mushroom standing on its stem or lying down, cap upwards; object laid flat on a hard table; eyes closed or blindfolded, another person puts the object down; index finger of the dominant hand, bare and dry; object in the room for at least one hour (since the day before for the pebble); calibration: before the trial, press with the tip of the index finger, straight down, on the pan of a kitchen scale until it reads about 1 kg, to feel that force; do it again once halfway through the trial (after three objects); the objects are then pressed by hand, without the scale: a perception, not a measurement; target force declared on the sheet'
+  doute: oui
+  motif_doute: 'variable : le chapeau change avec la fraîcheur et la température ; un vieux champignon mollit, un très frais peut passer à « cède à peine » ; la pression le marque'
+  motif_doute_en: 'variable: the cap changes with freshness and temperature; an old mushroom softens, a very fresh one may move to “yields barely”; pressing marks it'
+  note: 'repère de la fiche : « un chapeau de champignon frais » ; se laver les mains après'
+  note_en: 'reference point of the entry: “a fresh mushroom cap”; wash hands afterwards'
+  texte_fr: 'Un chapeau de champignon de Paris : cède un peu (prédiction, à éprouver).'
+  texte_en: 'A button mushroom cap: yields somewhat (prediction, to be tested).'
+- id: ppp-a:prop7-hardnessToTouch-04
+  realisation: a_realiser
+  region_attendue: yieldsBarely
+  objet: gomme blanche ou beige ordinaire, en bloc, sans étui, neuve, d’environ 5 × 2 × 1 cm
+  objet_en: ordinary white or beige eraser, in a block, without a sleeve, new, about 5 × 2 × 1 cm
+  preparation: gomme blanche ou beige ordinaire, d’environ 5 × 2 × 1 cm, neuve, sans étui, posée à plat sur sa grande face ; la peser
+  preparation_en: ordinary white or beige eraser of about 5 × 2 × 1 cm, new, without a sleeve, laid flat on its large face; weigh it
+  consigne: 'Presser du bout de l’index, bien droit, au milieu de l’objet : d’abord doucement, puis jusqu’à la force sentie à l’étalonnage ; relâcher. L’objet cède-t-il beaucoup, un peu, à peine, ou pas du tout, à l’endroit pressé ? Ne juger ni le retour à la forme, ni le relief, ni le froid.'
+  consigne_en: 'Press with the tip of the index finger, straight down, in the middle of the object: gently at first, then up to the force felt during calibration; release. Does the object yield a lot, somewhat, barely, or not at all, where it is pressed? Judge neither the return to shape, nor the relief, nor the cold.'
+  conditions:
+    presentation: tableTop
+    geste: pressure
+    temperature_objet: ambient
+    duree: glance
+    yeux: fermés (ou bandés)
+    yeux_en: closed (or blindfolded)
+    note: 'objet posé à plat sur une table dure ; yeux fermés ou bandés, une autre personne pose l’objet ; index de la main dominante, main nue et sèche ; objet dans la pièce depuis au moins une heure (la veille pour le galet) ; étalonnage : avant l’épreuve, appuyer du bout de l’index, bien droit, sur le plateau d’une balance de cuisine jusqu’à lire environ 1 kg, pour sentir cette force ; le refaire une fois à mi-épreuve (après trois objets) ; les objets se pressent ensuite à la main, sans balance : une perception, pas une mesure ; force visée déclarée sur la feuille'
+    note_en: 'object laid flat on a hard table; eyes closed or blindfolded, another person puts the object down; index finger of the dominant hand, bare and dry; object in the room for at least one hour (since the day before for the pebble); calibration: before the trial, press with the tip of the index finger, straight down, on the pan of a kitchen scale until it reads about 1 kg, to feel that force; do it again once halfway through the trial (after three objects); the objects are then pressed by hand, without the scale: a perception, not a measurement; target force declared on the sheet'
+  doute: oui
+  motif_doute: frontière avec « cède un peu » ; aucune mesure de dureté n’est retenue comme seuil de région
+  motif_doute_en: boundary with “yields somewhat”; no hardness measurement is retained as a region threshold
+  texte_fr: 'Une gomme : cède à peine (prédiction, à éprouver).'
+  texte_en: 'An eraser: yields barely (prediction, to be tested).'
+- id: ppp-a:prop7-hardnessToTouch-05
+  realisation: a_realiser
+  region_attendue: yieldsBarely
+  objet: bouchon de liège naturel (environ 44 × 24 mm), couché sur la table et calé, pressé sur sa face cylindrique
+  objet_en: natural cork stopper (about 44 × 24 mm), lying on the table and wedged, pressed on its cylindrical face
+  preparation: bouchon de liège naturel de 44 × 24 mm, couché, calé par une petite boulette de pâte à fixe pour qu’il ne roule pas ; le peser
+  preparation_en: 44 × 24 mm natural cork stopper, lying down, wedged with a small ball of adhesive putty so that it does not roll; weigh it
+  consigne: 'Presser du bout de l’index, bien droit, au milieu de l’objet : d’abord doucement, puis jusqu’à la force sentie à l’étalonnage ; relâcher. L’objet cède-t-il beaucoup, un peu, à peine, ou pas du tout, à l’endroit pressé ? Ne juger ni le retour à la forme, ni le relief, ni le froid.'
+  consigne_en: 'Press with the tip of the index finger, straight down, in the middle of the object: gently at first, then up to the force felt during calibration; release. Does the object yield a lot, somewhat, barely, or not at all, where it is pressed? Judge neither the return to shape, nor the relief, nor the cold.'
+  conditions:
+    presentation: tableTop
+    geste: pressure
+    temperature_objet: ambient
+    duree: glance
+    yeux: fermés (ou bandés)
+    yeux_en: closed (or blindfolded)
+    note: 'objet posé à plat sur une table dure ; yeux fermés ou bandés, une autre personne pose l’objet ; index de la main dominante, main nue et sèche ; objet dans la pièce depuis au moins une heure (la veille pour le galet) ; étalonnage : avant l’épreuve, appuyer du bout de l’index, bien droit, sur le plateau d’une balance de cuisine jusqu’à lire environ 1 kg, pour sentir cette force ; le refaire une fois à mi-épreuve (après trois objets) ; les objets se pressent ensuite à la main, sans balance : une perception, pas une mesure ; force visée déclarée sur la feuille'
+    note_en: 'object laid flat on a hard table; eyes closed or blindfolded, another person puts the object down; index finger of the dominant hand, bare and dry; object in the room for at least one hour (since the day before for the pebble); calibration: before the trial, press with the tip of the index finger, straight down, on the pan of a kitchen scale until it reads about 1 kg, to feel that force; do it again once halfway through the trial (after three objects); the objects are then pressed by hand, without the scale: a perception, not a measurement; target force declared on the sheet'
+  doute: oui
+  motif_doute: sous le doigt seul, l’enfoncement est faible
+  motif_doute_en: under the finger alone, the indentation is small
+  texte_fr: 'Un bouchon de liège : cède à peine (prédiction, à éprouver).'
+  texte_en: 'A cork stopper: yields barely (prediction, to be tested).'
+- id: ppp-a:prop7-hardnessToTouch-06
+  realisation: a_realiser
+  region_attendue: doesNotYield
+  objet: galet de rivière ou de plage, plat, lisse, sans fissure, d’environ 8 × 6 × 3 cm ; nature de la pierre notée si connue ; ramassé là où c’est permis
+  objet_en: flat, smooth river or beach pebble without cracks, about 8 × 6 × 3 cm; kind of stone noted if known; collected where this is allowed
+  preparation: galet plat et lisse d’environ 8 × 6 × 3 cm, sans fissure, nature de la pierre notée si connue ; laissé dans la pièce depuis la veille ; le peser
+  preparation_en: flat, smooth pebble of about 8 × 6 × 3 cm, without cracks, kind of stone noted if known; left in the room since the day before; weigh it
+  consigne: 'Presser du bout de l’index, bien droit, au milieu de l’objet : d’abord doucement, puis jusqu’à la force sentie à l’étalonnage ; relâcher. L’objet cède-t-il beaucoup, un peu, à peine, ou pas du tout, à l’endroit pressé ? Ne juger ni le retour à la forme, ni le relief, ni le froid.'
+  consigne_en: 'Press with the tip of the index finger, straight down, in the middle of the object: gently at first, then up to the force felt during calibration; release. Does the object yield a lot, somewhat, barely, or not at all, where it is pressed? Judge neither the return to shape, nor the relief, nor the cold.'
+  conditions:
+    presentation: tableTop
+    geste: pressure
+    temperature_objet: ambient
+    duree: glance
+    yeux: fermés (ou bandés)
+    yeux_en: closed (or blindfolded)
+    note: 'objet posé à plat sur une table dure ; yeux fermés ou bandés, une autre personne pose l’objet ; index de la main dominante, main nue et sèche ; objet dans la pièce depuis au moins une heure (la veille pour le galet) ; étalonnage : avant l’épreuve, appuyer du bout de l’index, bien droit, sur le plateau d’une balance de cuisine jusqu’à lire environ 1 kg, pour sentir cette force ; le refaire une fois à mi-épreuve (après trois objets) ; les objets se pressent ensuite à la main, sans balance : une perception, pas une mesure ; force visée déclarée sur la feuille'
+    note_en: 'object laid flat on a hard table; eyes closed or blindfolded, another person puts the object down; index finger of the dominant hand, bare and dry; object in the room for at least one hour (since the day before for the pebble); calibration: before the trial, press with the tip of the index finger, straight down, on the pan of a kitchen scale until it reads about 1 kg, to feel that force; do it again once halfway through the trial (after three objects); the objects are then pressed by hand, without the scale: a perception, not a measurement; target force declared on the sheet'
+  doute: non
+  note: 'repère de la fiche : « une pierre » ; le froid n’est pas la dureté (autre type) : à noter sans le juger ici'
+  note_en: 'reference point of the entry: “a stone”; coldness is not hardness (another type): note it without judging it here'
+  texte_fr: 'Un galet : ne cède pas (prédiction, à éprouver).'
+  texte_en: 'A pebble: does not yield (prediction, to be tested).'
 manques:
-- 'exemplaires (à renseigner : objets publics qu’on a le droit de presser, ou échantillons de référence reproductibles ; un épisode par objet, geste et température déclarés ; photo d’identification qui ne sert pas au jugement, X17 (g) amendé)'
+- 'exemplaires : six épisodes proposés « à réaliser » (episodes_a_realiser), à réaliser par plusieurs observateurs, chacun seul ; à la réalisation, chaque objet est mesuré et photographié (photo d’identification, X17 (g)), et l’assertion entre dans fiches/exemplaires.yaml'
+- 'épisodes sans doute de leur auteur : « cède beaucoup » (éponge synthétique sèche) et « ne cède pas » (galet), régions non voisines ; « cède un peu » et « cède à peine » n’ont que des épisodes marqués `doute: oui` ; le palier visé dépend de la relecture et de la règle X17 (f)'
 bloque_par: []
 a_relire:
 - label_fr
@@ -269,8 +426,11 @@ a_relire:
 - transfert
 - enonces_testables
 - statut_note
+- episodes_a_realiser
 remarque:
 - 'série 78 bis (choix de relecture (2026-10-20), corrections de relecture) : identite complétée (pas la dureté en bouche, `ppp:hardnessInMouth`, sans relation) ; à relire'
+- 'série 90 (2026-11-02) : épisodes proposés « à réaliser » du lot 7 repris dans la fiche (décision de l’éditeur du projet du 2026-11-02 : « B : publier avec des épisodes proposés marqués « à réaliser » ») ; choix de relecture (2026-11-02) : repère « éponge synthétique (mousse) sèche » (Rey et Vandamme 2013, résumé lu, ajouté aux références) ; « cède un peu » : balle de mousse dense en repère principal, chapeau de champignon frais en second, fraîcheur déclarée ; gomme et bouchon de liège à « cède à peine » ; appui ferme appris avant l’épreuve sur une balance de cuisine (environ 1 kg), puis pression à la main. Repères, note_conditions et note_echelle mis à jour (EN et empreintes).'
+- 'série 90, correctif (choix de relecture (2026-11-02)) : épisodes réalignés sur la version révisée du lot 7 (hors dépôt) : cinq champs explicites par épisode (objet, preparation, consigne, conditions, region_attendue), éponge synthétique sans doute, balle de mousse en exemplaire principal (02) et champignon en second (03), gomme et bouchon à « cède à peine », étalonnage à environ 1 kg refait une fois à mi-épreuve ; à relire'
 relecture_explicative:
   date: null
   champs:

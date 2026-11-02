@@ -269,11 +269,11 @@ source_de_la_fiche: 'création du type : décision de l’éditeur du projet (20
   » : décision de l’éditeur du projet (2026-10-19, décision 1) ; contenu repris de la proposition « Goût » (docs/famille-gout-proposition.md (document de travail, non publié), sections 2, 5, 6 et 7) ; le
   reste (porteur, crans, repères, facettes critiques, classement des mesures, rédaction) : choix de relecture (2026-10-19 et 2026-10-20) ; fiche créée le 2026-10-20 (série 78)'
 manques:
-- 'exemplaires : aucun. Décision 5 de l’éditeur du projet (2026-10-19) : pas d’exemplaire en V1 pour le goût, des repères de région à la place. Si des exemples sont cherchés plus tard, ce seront des objets
-  publics seulement (produits identifiés, sans marque citée), jamais des objets privés'
+- 'exemplaires : aucun. Décision 5 de l’éditeur du projet (2026-10-19) : pas d’exemplaire en V1 pour le goût, des repères de région à la place. Si des exemples sont cherchés plus tard, ce seront des objets publics seulement (produits identifiés, sans marque citée), jamais des objets privés'
 - 'épreuve d’accord E1 à faire : portions du même lot, au même moment, repères de région goûtés avant de juger (proposition « Goût », section 6, point 2)'
 - 'repère de région : aucun repère public sûr (la capsaïcine pure n’est pas proposée) ; à trouver avant E1'
 - 'chaleur de l’alcool jugée comme piquant : à éprouver'
+- 'repères « à caler » (X17, série 90) : tous ; aucun repère public sûr ; l’eau seule ne compte pas comme repère calé ; X17 non satisfait'
 bloque_par: []
 a_relire:
 - label_fr
@@ -304,6 +304,7 @@ a_relire:
 - statut_note
 remarque:
 - 'série 78 bis (choix de relecture (2026-10-20), corrections de relecture) : glose de « trijumeau » à la première occurrence ; à relire'
+- 'série 90 (choix de relecture (2026-11-02), suivant la décision de l’éditeur du projet (2026-11-02) : « B : les repères de région (solutions ISO 3972, alun 1 g/l) ») : aucun repère calé : aucun repère public sûr ; l’eau seule ne compte pas comme repère calé ; à relire'
 relecture_explicative:
   date: null
   champs: []
