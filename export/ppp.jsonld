@@ -216,6 +216,7 @@
     "https://w3id.org/ppp/partNesting",
     "https://w3id.org/ppp/perceivedDepth",
     "https://w3id.org/ppp/perceivedSize",
+    "https://w3id.org/ppp/perceivedWeight",
     "https://w3id.org/ppp/perceptualContrast",
     "https://w3id.org/ppp/perceptualDensity",
     "https://w3id.org/ppp/saturation",
@@ -3741,7 +3742,10 @@
     "fr": "candidat ; non éprouvé",
     "en": "candidate; untested"
    },
-   "related": "https://w3id.org/ppp/scaleContrast",
+   "related": [
+    "https://w3id.org/ppp/scaleContrast",
+    "https://w3id.org/ppp/perceivedWeight"
+   ],
    "topConceptOf": "https://w3id.org/ppp/",
    "measurementState": "https://w3id.org/ppp/mesure/etat/methodes",
    "measurementSummary": {
@@ -3880,6 +3884,214 @@
    },
    "regionOf": "https://w3id.org/ppp/perceivedSize",
    "broader": "https://w3id.org/ppp/perceivedSize"
+  },
+  {
+   "@id": "https://w3id.org/ppp/perceivedWeight",
+   "@type": "skos:Concept",
+   "inScheme": "https://w3id.org/ppp/",
+   "skos:notation": "perceivedWeight",
+   "prefLabel": {
+    "fr": "poids perçu",
+    "en": "perceived weight"
+   },
+   "altLabel": {
+    "fr": "poids en main",
+    "en": "weight in the hand"
+   },
+   "definition": {
+    "fr": "Ce que l’objet paraît peser quand on le soulève à la main et qu’on le soupèse, sans appui : de ce qui se soulève du bout des doigts à ce qui demande les deux mains. Le cran se juge à l’effort que demande le poids, non à la prise que la taille impose : un objet encombrant mais léger, qu’on doit prendre à pleine main ou à deux bras, se range au cran où son poids seul se tiendrait. Ce poids se sent avec la taille et la matière de l’objet tenu : qu’un objet paraisse lourd ou léger pour sa taille (un bloc d’ébène, un bloc de balsa) relève de ce type, pas d’un type à part.",
+    "en": "What the object seems to weigh when lifted by hand and hefted, without support: from what lifts with the fingertips to what needs both hands. The step is judged by the effort the weight demands, not by the grip the size imposes: a bulky but light object, which has to be taken in the full hand or in both arms, goes in the step where its weight alone would be held. This weight is felt together with the size and material of the object held: whether an object feels heavy or light for its size (a block of ebony, a block of balsa) falls under this type, not under a separate type."
+   },
+   "scopeNote": {
+    "fr": [
+     "Soulevez l’objet sans appui et soupesez-le : rien que pour son poids, suffirait-il du bout des doigts, d’une main, ou faudrait-il les deux mains ?",
+     "Deux blocs de même taille et de même forme, l’un de balsa, l’autre d’ébène, ne pèsent pas autant dans la main : c’est leur poids perçu qui les sépare, pas leur taille (taille perçue). À l’inverse, de deux objets de même masse, le plus petit paraît souvent le plus lourd : ce que dit la balance n’est pas ce que décrit ce type. Un carton vide assez grand pour demander les deux bras ne demande pas les deux mains par son poids : c’est sa taille qui oblige à le prendre ainsi.",
+     "trois crans rapportés au corps, comme ceux de la taille perçue (proposition « Toucher », décision 6 : régions rapportées au corps de préférence) ; les repères sont des illustrations à éprouver, pas des valeurs vérifiées. Les labels des crans nomment une prise, mais le cran se juge à l’effort que demande le poids, non à la prise que la taille impose (définition) : un objet encombrant mais léger ne passe pas au cran « demande les deux mains » à cause de sa taille (contre-exemple). Poids pour sa taille (ticket n° 5 ; intégration : choix de relecture (2026-10-27)) : ce n’est ni un type à part ni une seconde échelle, mais une façon dont ce même poids se sent. Deux blocs de même taille, de balsa et d’ébène, gros comme le poing, tombent dans des crans différents : celui d’ébène demande la main entière (repère ci-dessus) ; celui de balsa, que sa taille oblige à prendre à pleine main, a un poids qui se tiendrait du bout des doigts, comme la baguette de balsa du repère ; quand deux objets de même taille et de même forme tombent dans le même cran, l’écart se note en note d’épisode, par comparaison (« plus lourd pour sa taille que… »), de préférence sur une série de comparaison observable : des cubes de 10 cm de même finition (balsa, pin, chêne, buis) soupesés l’un après l’autre ; un buis contrecollé est admis s’il est déclaré (nombre et épaisseur des plis, colle) et pesé, la masse réelle pesée avant l’épreuve primant sur la masse estimée, l’ébène seulement en chute de provenance déclarée (choix de relecture (2026-11-02)). Le parpaing reste un repère en mots : il n’est pas proposé à l’épreuve (choix de relecture (2026-11-02)). Le « poids pour sa taille » n’est pas la densité perceptive (`ppp:perceptualDensity`) : en PPP, « densité » désigne une qualité vue, une surface plus ou moins remplie d’éléments ; le sens du ticket (« densité perçue en tenant un objet ») est ici, sous le nom de poids perçu. Position de travail : trois crans, en accord exact."
+    ],
+    "en": [
+     "Lift the object without support and heft it: for its weight alone, would the fingertips be enough, one hand, or would it take both hands?",
+     "Two blocks of the same size and shape, one of balsa, the other of ebony, do not weigh the same in the hand: what sets them apart is their perceived weight, not their size (perceived size). Conversely, of two objects of the same mass, the smaller often feels the heavier: what the scales say is not what this type describes. An empty box large enough to need both arms does not need both hands because of its weight: it is its size that forces one to take it that way.",
+     "three steps related to the body, like those of perceived size (“Touch” proposal, decision 6: regions related to the body by preference); the reference points are illustrations to be tried out, not verified values. The labels of the steps name a grip, but the step is judged by the effort the weight demands, not by the grip the size imposes (definition): a bulky but light object does not move to the “needs both hands” step because of its size (counter-example). Weight for its size (ticket no. 5; integration: review choice (2026-10-27)): it is neither a separate type nor a second scale, but one way in which this same weight is felt. Two blocks of the same size, of balsa and of ebony, as big as a fist, fall in different steps: the ebony one takes the whole hand (reference point above); the balsa one, which its size forces one to take in the full hand, has a weight that would be held with the fingertips, like the balsa stick of the reference point; when two objects of the same size and shape fall in the same step, the difference is recorded in the episode note, by comparison (“heavier for its size than…”), preferably on an observable comparison series: 10 cm cubes with the same finish (balsa, pine, oak, boxwood) hefted one after the other; glued-laminated boxwood is accepted if declared (number and thickness of plies, glue) and weighed, the real mass weighed before the test taking precedence over the estimated mass, ebony only as an offcut of declared provenance (review choice (2026-11-02)). The concrete block remains a reference point in words only: it is not proposed for testing (review choice (2026-11-02)). Weight for its size is not perceptual density (`ppp:perceptualDensity`): in PPP, “density” names a quality that is seen, a surface more or less filled with elements; the sense of the ticket (“density perceived when holding an object”) is here, under the name perceived weight. Working position: three steps, with exact agreement."
+    ]
+   },
+   "note": {
+    "fr": "candidat ; non éprouvé",
+    "en": "candidate; untested"
+   },
+   "related": "https://w3id.org/ppp/perceivedSize",
+   "topConceptOf": "https://w3id.org/ppp/",
+   "measurementState": "https://w3id.org/ppp/mesure/etat/methodes",
+   "measurementSummary": {
+    "fr": "Des grandeurs physiques liées se mesurent : la masse, à la balance ; la masse volumique, masse divisée par le volume (la « densité » au sens du ticket n° 5) ; et, pour un objet qu’on manie, son inertie de rotation. Aucune ne vise le poids senti : de deux objets de même masse, le plus petit paraît souvent le plus lourd ; un objet visible n’est jugé sans illusion qu’à une masse volumique propre à sa matière ; la lourdeur d’un objet caché qu’on manie suit son inertie de rotation. Ces résultats ne fixent pas de régions.",
+    "en": "Related physical quantities can be measured: mass, on scales; density, mass divided by volume (“density” in the sense of ticket no. 5); and, for an object that is wielded, its rotational inertia. None targets the weight felt: of two objects of the same mass, the smaller often feels the heavier; a visible object is judged without illusion only at a density specific to its material; the heaviness of a hidden object that is wielded follows its rotational inertia. These results do not set regions."
+   },
+   "measurementCaveat": {
+    "fr": "Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.",
+    "en": "The regions of this entry remain perceptual: they describe what an observer sees, hears, smells or feels by touch under the declared conditions. An associated measurement can inform an observation, but it does not set the boundaries of the regions and does not replace examination."
+   },
+   "associatedMeasure": [
+    "https://w3id.org/ppp/perceivedWeight/mesure/masse_volumique",
+    "https://w3id.org/ppp/perceivedWeight/mesure/inertie_rotation"
+   ],
+   "notRetainedMeasure": [
+    "https://w3id.org/ppp/perceivedWeight/mesure/non-retenue-1",
+    "https://w3id.org/ppp/perceivedWeight/mesure/non-retenue-2"
+   ],
+   "hasScale": "https://w3id.org/ppp/perceivedWeight/echelle",
+   "narrower": [
+    "https://w3id.org/ppp/perceivedWeight/fingertipLift",
+    "https://w3id.org/ppp/perceivedWeight/oneHandLift",
+    "https://w3id.org/ppp/perceivedWeight/twoHandLift"
+   ]
+  },
+  {
+   "@id": "https://w3id.org/ppp/perceivedWeight/mesure/masse_volumique",
+   "@type": "ppp:AssociatedMeasure",
+   "rdfs_label": {
+    "fr": "masse volumique",
+    "en": "density"
+   },
+   "quantity": {
+    "fr": "masse de l’objet divisée par son volume",
+    "en": "mass of the object divided by its volume"
+   },
+   "unitOrScale": {
+    "fr": "kilogramme par mètre cube (ou gramme par centimètre cube)",
+    "en": "kilogram per cubic metre (or gram per cubic centimetre)"
+   },
+   "gap": {
+    "fr": "ne dit rien du poids lui-même (un grand bloc de balsa peut peser plus qu’un petit bloc d’ébène) ; ne saisit ni la prise, ni la répartition de la masse, ni la matière sentie sous les doigts, ni ce qu’on attend de l’objet ; à masse volumique égale, des objets de matières différentes ne paraissent pas sans illusion au même point",
+    "en": "says nothing about the weight itself (a large block of balsa can weigh more than a small block of ebony); it captures neither the grip, nor the mass distribution, nor the material felt under the fingers, nor what one expects of the object; at equal density, objects of different materials are not felt without illusion at the same point"
+   },
+   "measurementConditions": {
+    "fr": "objet homogène, dont on connaît la masse et le volume",
+    "en": "homogeneous object whose mass and volume are known"
+   },
+   "proximity": "https://w3id.org/ppp/mesure/proximite/indirecte",
+   "dct:bibliographicCitation": "Ross, H. E. (1969). When is a weight not illusory? Quarterly Journal of Experimental Psychology, 21(4), 346–355."
+  },
+  {
+   "@id": "https://w3id.org/ppp/perceivedWeight/mesure/inertie_rotation",
+   "@type": "ppp:AssociatedMeasure",
+   "rdfs_label": {
+    "fr": "inertie de rotation (tenseur d’inertie)",
+    "en": "rotational inertia (inertia tensor)"
+   },
+   "quantity": {
+    "fr": "résistance de l’objet à la rotation quand on le manie autour du poignet",
+    "en": "resistance of the object to rotation when wielded about the wrist"
+   },
+   "unitOrScale": {
+    "fr": "kilogramme mètre carré (kg·m²), par axe de rotation",
+    "en": "kilogram square metre (kg·m²), per axis of rotation"
+   },
+   "gap": {
+    "fr": "prédit la lourdeur d’un objet qu’on fait tourner dans la main, caché à la vue ; ne vise pas un objet soulevé et tenu sans le faire tourner, ni la matière sentie, ni l’attente ; mesure l’objet, pas l’observateur",
+    "en": "predicts the heaviness of an object turned in the hand, hidden from sight; does not target an object lifted and held without turning it, nor the material felt, nor expectation; measures the object, not the observer"
+   },
+   "measurementConditions": {
+    "fr": "objet caché, manié au poignet ; répartition de la masse connue",
+    "en": "hidden object, wielded about the wrist; mass distribution known"
+   },
+   "proximity": "https://w3id.org/ppp/mesure/proximite/indirecte",
+   "dct:bibliographicCitation": "Amazeen, E. L. & Turvey, M. T. (1996). Weight perception and the haptic size–weight illusion are functions of the inertia tensor. Journal of Experimental Psychology: Human Perception and Performance, 22(1), 213–232."
+  },
+  {
+   "@id": "https://w3id.org/ppp/perceivedWeight/mesure/non-retenue-1",
+   "@type": "ppp:NotRetainedMeasure",
+   "rdfs_label": {
+    "fr": "estimation de grandeur de la lourdeur (Stevens)",
+    "en": "magnitude estimation of heaviness (Stevens)"
+   },
+   "reason": {
+    "fr": "échelle de jugement par jury, sans série de référence physique (point 7) ; l’exposant de la lourdeur soulevée n’a été lu dans aucune source : non vérifié",
+    "en": "a panel judgement scale, without a physical reference series (point 7); the exponent for lifted heaviness has not been read in any source: not verified"
+   }
+  },
+  {
+   "@id": "https://w3id.org/ppp/perceivedWeight/mesure/non-retenue-2",
+   "@type": "ppp:NotRetainedMeasure",
+   "rdfs_label": {
+    "fr": "seuil différentiel du poids (loi de Weber)",
+    "en": "difference threshold for weight (Weber’s law)"
+   },
+   "reason": {
+    "fr": "mesure le plus petit écart qu’on distingue entre deux poids, pas des régions ; la valeur de la fraction de Weber pour le poids n’a été lue dans aucune source : non vérifiée",
+    "en": "measures the smallest difference one can tell between two weights, not regions; the value of the Weber fraction for weight has not been read in any source: not verified"
+   }
+  },
+  {
+   "@id": "https://w3id.org/ppp/perceivedWeight/echelle",
+   "@type": "skos:OrderedCollection",
+   "prefLabel": {
+    "fr": "échelle de « poids perçu »",
+    "en": "scale of “perceived weight”"
+   },
+   "memberList": [
+    "https://w3id.org/ppp/perceivedWeight/fingertipLift",
+    "https://w3id.org/ppp/perceivedWeight/oneHandLift",
+    "https://w3id.org/ppp/perceivedWeight/twoHandLift"
+   ]
+  },
+  {
+   "@id": "https://w3id.org/ppp/perceivedWeight/fingertipLift",
+   "@type": "skos:Concept",
+   "inScheme": "https://w3id.org/ppp/",
+   "skos:notation": "fingertipLift",
+   "prefLabel": {
+    "fr": "poids perçu : se soulève du bout des doigts",
+    "en": "perceived weight: lifts with the fingertips"
+   },
+   "hiddenLabel": {
+    "fr": "se soulève du bout des doigts",
+    "en": "lifts with the fingertips"
+   },
+   "example": {
+    "fr": "on le soulève et on le tient entre le pouce et deux doigts sans effort (une boîte d’allumettes, un bouchon, une baguette de balsa de maquettiste qu’on pince entre deux doigts)",
+    "en": "it is lifted and held between the thumb and two fingers without effort (a matchbox, a cork, a model-maker’s balsa stick that one pinches between two fingers)"
+   },
+   "regionOf": "https://w3id.org/ppp/perceivedWeight",
+   "broader": "https://w3id.org/ppp/perceivedWeight"
+  },
+  {
+   "@id": "https://w3id.org/ppp/perceivedWeight/oneHandLift",
+   "@type": "skos:Concept",
+   "inScheme": "https://w3id.org/ppp/",
+   "skos:notation": "oneHandLift",
+   "prefLabel": {
+    "fr": "poids perçu : se soulève d’une main",
+    "en": "perceived weight: lifts with one hand"
+   },
+   "hiddenLabel": {
+    "fr": "se soulève d’une main",
+    "en": "lifts with one hand"
+   },
+   "example": {
+    "fr": "il faut la main entière, mais une seule main suffit (une tasse pleine, un livre épais, un bloc d’ébène gros comme le poing)",
+    "en": "it takes the whole hand, but one hand is enough (a full cup, a thick book, a block of ebony as big as a fist)"
+   },
+   "regionOf": "https://w3id.org/ppp/perceivedWeight",
+   "broader": "https://w3id.org/ppp/perceivedWeight"
+  },
+  {
+   "@id": "https://w3id.org/ppp/perceivedWeight/twoHandLift",
+   "@type": "skos:Concept",
+   "inScheme": "https://w3id.org/ppp/",
+   "skos:notation": "twoHandLift",
+   "prefLabel": {
+    "fr": "poids perçu : demande les deux mains",
+    "en": "perceived weight: needs both hands"
+   },
+   "hiddenLabel": {
+    "fr": "demande les deux mains",
+    "en": "needs both hands"
+   },
+   "example": {
+    "fr": "son poids oblige à le soulever des deux mains (un carton plein de livres, un sac de riz de 10 kg, un parpaing)",
+    "en": "its weight forces one to lift it with both hands (a box full of books, a 10 kg bag of rice, a concrete block)"
+   },
+   "regionOf": "https://w3id.org/ppp/perceivedWeight",
+   "broader": "https://w3id.org/ppp/perceivedWeight"
   },
   {
    "@id": "https://w3id.org/ppp/perceptualContrast/mesure/peli1990",
@@ -5857,7 +6069,8 @@
     "https://w3id.org/ppp/textureDirectionality",
     "https://w3id.org/ppp/localIrregularity",
     "https://w3id.org/ppp/curvature",
-    "https://w3id.org/ppp/jointLevelOffset"
+    "https://w3id.org/ppp/jointLevelOffset",
+    "https://w3id.org/ppp/perceivedWeight"
    ]
   }
  ]
