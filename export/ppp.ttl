@@ -1,5 +1,5 @@
 # PPP, export SKOS des fiches publiques ; ne pas modifier à la main.
-# Licence : CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Version 2.8 ; dernier changement de contenu : 2026-11-02. Pour citer : CITATION.cff.
+# Licence : CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Version 2.8 ; dernier changement de contenu : 2026-11-03. Pour citer : CITATION.cff.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -20,7 +20,7 @@
         "SKOS vocabulary of the published PPP types (public entries), their regions, scales and reading families. The YAML entries of the repository are the source; this export is derived from them."@en ;
     dct:license <https://creativecommons.org/licenses/by/4.0/> ;
     owl:versionInfo "2.8" ;
-    dct:modified "2026-11-02"^^xsd:date ;
+    dct:modified "2026-11-03"^^xsd:date ;
     dct:creator "Lomig Unger" ,
         "Grok Bot" ;
     dct:rightsHolder "Lomig Unger" ;
@@ -42,10 +42,12 @@
         ppp:outlineIndentation ,
         ppp:partNesting ,
         ppp:perceivedDepth ,
+        ppp:perceivedPitch ,
         ppp:perceivedSize ,
         ppp:perceivedWeight ,
         ppp:perceptualContrast ,
         ppp:perceptualDensity ,
+        ppp:pitchClarity ,
         ppp:saturation ,
         ppp:saturationRange ,
         ppp:subsurfaceDepth ,
@@ -2134,6 +2136,147 @@ ppp:scaleContrast
     ppp:regionOf ppp:perceivedDepth ;
     skos:broader ppp:perceivedDepth .
 
+ppp:perceivedPitch
+    a skos:Concept ;
+    skos:inScheme <https://w3id.org/ppp/> ;
+    skos:notation "perceivedPitch" ;
+    skos:prefLabel "hauteur perçue"@fr ,
+        "perceived pitch"@en ;
+    skos:definition "Si le son paraît grave ou aigu : sa place entre les sons les plus bas et les plus hauts. Ne vaut que pour un son qui a une note, qu’on pourrait chanter ou au moins fredonner."@fr ,
+        "Whether the sound seems low or high: its place between the lowest and the highest sounds. Applies only to a sound that has a note, one you could sing or at least hum."@en ;
+    skos:scopeNote "Ce son est-il grave (une contrebasse, une grosse cloche), médium (une voix d’adulte qui parle normalement), ou aigu (un piccolo, une clochette) ?"@fr ,
+        "Is this sound low (a double bass, a large bell), mid (an adult speaking normally), or high (a piccolo, a small bell)?"@en ,
+        "Le « pschhh » d’une bombe aérosol ou d’un jet de vapeur paraît « aigu » sans avoir de note : c’est l’acuité du son (`ppp:soundSharpness`), et ce type ne s’y applique pas. Un son plus fort n’est pas plus aigu : la force du son est une autre qualité. Une même note jouée par une flûte et par un violon a la même hauteur et deux timbres (le timbre est la couleur du son, ce qui fait reconnaître l’instrument) : un son peut être étouffé et aigu, ou brillant et grave."@fr ,
+        "The “pssshh” of an aerosol can or a jet of steam sounds “high” without having a note: that is the sharpness of the sound (`ppp:soundSharpness`), and this type does not apply to it. A louder sound is not a higher one: loudness is another quality. The same note played by a flute and by a violin has the same pitch and two timbres (timbre is the colour of the sound, what lets you recognise the instrument): a sound can be muffled and high, or bright and low."@en ,
+        "Trois régions, du grave à l’aigu : les repères sont des sons qu’on connaît (une voix d’adulte qui parle normalement, des instruments), pas des fréquences. Aucune source lue ne fixe de limite perçue entre grave, médium et aigu : les fréquences données dans les épisodes sont mesurées par l’équipe et restent indicatives, non vérifiées comme bornes. La terminologie acoustique normalisée (norme américaine ANSI/ASA S1.1) distingue la hauteur sur une échelle du grave à l’aigu (« pitch height », aussi appelée registre) et la place de la note dans l’octave (un do reste un do, grave ou aigu) ; ce type ne retient que la première. Shepard (1964) a construit par ordinateur des sons dont chacun paraît plus aigu que le précédent, alors que la série revient à son point de départ : on ne peut donc pas toujours ranger les hauteurs sur une seule ligne."@fr ,
+        "Three regions, from low to high: the reference points are familiar sounds (an adult speaking normally, instruments), not frequencies. No source read sets a perceived boundary between low, mid and high: the frequencies given in the episodes were measured by the team and remain indicative, not checked as boundaries. Standard acoustical terminology (the American standard ANSI/ASA S1.1) distinguishes pitch on a scale from low to high (“pitch height”, also called register) from the place of the note within the octave (a C stays a C, low or high); this type keeps only the former. Shepard (1964) built computer-generated tones each of which sounds higher than the one before, while the series comes back to its starting point: pitches therefore cannot always be ordered on a single line."@en ;
+    skos:note "candidat ; non éprouvé"@fr ,
+        "candidate; untested"@en ;
+    skos:topConceptOf <https://w3id.org/ppp/> ;
+    ppp:measurementState <https://w3id.org/ppp/mesure/etat/methodes> ;
+    ppp:measurementSummary "La hauteur d’un son se rapporte d’abord à sa fréquence fondamentale, qu’on peut mesurer sur un enregistrement, ou nommer comme une note à partir du la du diapason, que la norme internationale ISO 16 fixe à 440 Hz. L’échelle des mels, unité de la hauteur dans la terminologie acoustique normalisée, vise la hauteur entendue elle-même, mais sa version de 1940 a été critiquée. Aucune de ces valeurs ne fixe les limites entre grave, médium et aigu."@fr ,
+        "The pitch of a sound relates first to its fundamental frequency, which can be measured on a recording, or named as a note from the tuning A, which the international standard ISO 16 sets at 440 Hz. The mel scale, the unit of pitch in standard acoustical terminology, targets heard pitch itself, but its 1940 version has been criticised. None of these values sets the boundaries between low, mid and high."@en ;
+    ppp:measurementCaveat "Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen."@fr ,
+        "The regions of this entry remain perceptual: they describe what an observer sees, hears, smells or feels by touch under the declared conditions. An associated measurement can inform an observation, but it does not set the boundaries of the regions and does not replace examination."@en ;
+    ppp:associatedMeasure <https://w3id.org/ppp/perceivedPitch/mesure/mel> ,
+        <https://w3id.org/ppp/perceivedPitch/mesure/f0> ,
+        <https://w3id.org/ppp/perceivedPitch/mesure/note_diapason> ;
+    ppp:notRetainedMeasure <https://w3id.org/ppp/perceivedPitch/mesure/non-retenue-1> ,
+        <https://w3id.org/ppp/perceivedPitch/mesure/non-retenue-2> ;
+    ppp:hasScale <https://w3id.org/ppp/perceivedPitch/echelle> ;
+    skos:narrower <https://w3id.org/ppp/perceivedPitch/low> ,
+        <https://w3id.org/ppp/perceivedPitch/mid> ,
+        <https://w3id.org/ppp/perceivedPitch/high> .
+
+<https://w3id.org/ppp/perceivedPitch/mesure/mel>
+    a ppp:AssociatedMeasure ;
+    rdfs:label "échelle des mels"@fr ,
+        "mel scale"@en ;
+    ppp:quantity "hauteur estimée par des auditeurs, qui règlent un son pour qu’il paraisse deux fois moins haut qu’un autre (fractionnement), rapportée à un son pur de référence"@fr ,
+        "pitch estimated by listeners, who adjust a tone until it sounds half as high as another (fractionation), relative to a reference pure tone"@en ;
+    ppp:unitOrScale "mel (par définition, un son pur de 1000 Hz, 40 dB au-dessus du seuil d’audition de l’auditeur, vaut 1000 mels ; un son pur est un son électronique d’une seule fréquence, sans timbre)"@fr ,
+        "mel (by definition, a 1000 Hz pure tone, 40 dB above the listener’s hearing threshold, is 1000 mels; a pure tone is an electronic sound of a single frequency, with no timbre)"@en ;
+    ppp:gap "vise expressément la hauteur entendue, mais a été établie sur des sons purs, avec peu d’auditeurs (cinq en 1937) ; Greenwood (1997) trouve dans des réglages de 1956 un biais d’ordre (hystérésis : les réglages diffèrent selon qu’on parcourt les sons en montant ou en descendant) et en conclut que l’échelle des mels de 1940 (Stevens et Volkmann) a le même biais ; une valeur en mels ne dit pas si un son est grave, médium ou aigu"@fr ,
+        "explicitly targets heard pitch, but was established on pure tones, with few listeners (five in 1937); Greenwood (1997) finds an order bias in 1956 settings (hysteresis: settings differ depending on whether the tones are taken in rising or falling order) and concludes that the 1940 mel scale (Stevens and Volkmann) has the same bias; a value in mels does not say whether a sound is low, mid or high"@en ;
+    ppp:measurementConditions "sons purs, niveau fixé, écoute en laboratoire"@fr ,
+        "pure tones, fixed level, laboratory listening"@en ;
+    ppp:proximity <https://w3id.org/ppp/mesure/proximite/proche> ;
+    dct:bibliographicCitation "ANSI/ASA S1.1-2013 (R2024). American National Standard Acoustical Terminology. Melville (NY) : Acoustical Society of America." ,
+        "Stevens, S. S., Volkmann, J. & Newman, E. B. (1937). A scale for the measurement of the psychological magnitude pitch. The Journal of the Acoustical Society of America, 8(3), 185–190." ,
+        "Greenwood, D. D. (1997). The Mel Scale’s disqualifying bias and a consistency of pitch-difference equisections in 1956 with equal cochlear distances and equal frequency ratios. Hearing Research, 103(1–2), 199–224." .
+
+<https://w3id.org/ppp/perceivedPitch/mesure/f0>
+    a ppp:AssociatedMeasure ;
+    rdfs:label "fréquence fondamentale mesurée sur un enregistrement"@fr ,
+        "fundamental frequency measured on a recording"@en ;
+    ppp:quantity "périodicité du son (fréquence fondamentale)"@fr ,
+        "periodicity of the sound (fundamental frequency)"@en ;
+    ppp:unitOrScale "hertz (Hz)"@fr ,
+        "hertz (Hz)"@en ;
+    ppp:gap "grandeur physique, pas un degré perçu : la hauteur est ce qu’on entend de la régularité du son (une vibration qui se répète), mais on entend la même hauteur quand la fondamentale manque, et la brillance (un aspect du timbre) varie à part ; au-dessus d’environ 4 kHz (4000 vibrations par seconde), on distingue mal les hauteurs"@fr ,
+        "a physical quantity, not a perceived degree: pitch is what we hear of the regularity of the sound (a vibration that repeats), but the same pitch is heard when the fundamental is missing, and brightness (an aspect of timbre) varies separately; above about 4 kHz (4,000 vibrations per second), pitches are hard to tell apart"@en ;
+    ppp:measurementConditions "son à hauteur repérable ; enregistrement ou mesure sur place ; une seule note à la fois"@fr ,
+        "sound with a discernible pitch; recording or on-site measurement; one note at a time"@en ;
+    ppp:proximity <https://w3id.org/ppp/mesure/proximite/indirecte> ;
+    dct:bibliographicCitation "McDermott, J. H. & Oxenham, A. J. (2008). Music perception, pitch, and the auditory system. Current Opinion in Neurobiology, 18(4), 452–463." ,
+        "Oxenham, A. J. (2023). Questions and controversies surrounding the perception and neural coding of pitch. Frontiers in Neuroscience, 16, 1074752." .
+
+<https://w3id.org/ppp/perceivedPitch/mesure/note_diapason>
+    a ppp:AssociatedMeasure ;
+    rdfs:label "nom de la note, rapporté au diapason"@fr ,
+        "note name, relative to standard tuning"@en ;
+    ppp:quantity "fréquence fondamentale nommée sur la gamme musicale, à partir du la de référence"@fr ,
+        "fundamental frequency named on the musical scale, from the reference A"@en ;
+    ppp:unitOrScale "nom de note ; la de référence à 440 Hz (ISO 16)"@fr ,
+        "note name; reference A at 440 Hz (ISO 16)"@en ;
+    ppp:gap "une convention d’accord, pas une mesure de la hauteur entendue : il faut une oreille exercée ou un accordeur, et la note répète son nom à chaque octave (un do reste un do, grave ou aigu), alors que ce type ne retient que la position du grave à l’aigu"@fr ,
+        "a tuning convention, not a measure of heard pitch: it takes a trained ear or a tuner, and the note repeats its name at every octave (a C stays a C, low or high), whereas this type keeps only the position from low to high"@en ;
+    ppp:measurementConditions "son à hauteur nette (`singable` : une note qu’on pourrait chanter) ; instrument accordé"@fr ,
+        "sound with a clear pitch (`singable`: a note you could sing); tuned instrument"@en ;
+    ppp:proximity <https://w3id.org/ppp/mesure/proximite/indirecte> ;
+    dct:bibliographicCitation "ISO 16:1975. Acoustics — Standard tuning frequency (Standard musical pitch). Genève : Organisation internationale de normalisation (confirmée en 2022)." ,
+        "ANSI/ASA S1.1-2013 (R2024). American National Standard Acoustical Terminology. Melville (NY) : Acoustical Society of America." .
+
+<https://w3id.org/ppp/perceivedPitch/mesure/non-retenue-1>
+    a ppp:NotRetainedMeasure ;
+    rdfs:label "échelle des bandes critiques (Bark)"@fr ,
+        "critical-band scale (Bark)"@en ;
+    ppp:reason "découpe les fréquences en bandes selon la finesse de l’oreille interne (bandes critiques), pas selon la hauteur entendue ; aucune source lue au-delà des métadonnées"@fr ,
+        "divides frequencies into bands according to the resolution of the inner ear (critical bands), not according to heard pitch; no source read beyond the metadata"@en .
+
+<https://w3id.org/ppp/perceivedPitch/mesure/non-retenue-2>
+    a ppp:NotRetainedMeasure ;
+    rdfs:label "échelle des largeurs de bande rectangulaires équivalentes (ERB)"@fr ,
+        "equivalent rectangular bandwidth scale (ERB)"@en ;
+    ppp:reason "décrit la largeur des filtres de l’oreille selon la fréquence, pas la hauteur entendue"@fr ,
+        "describes the width of the ear’s filters as a function of frequency, not heard pitch"@en ;
+    dct:bibliographicCitation "Glasberg, B. R. & Moore, B. C. J. (1990). Derivation of auditory filter shapes from notched-noise data. Hearing Research, 47(1–2), 103–138." .
+
+<https://w3id.org/ppp/perceivedPitch/echelle>
+    a skos:OrderedCollection ;
+    skos:prefLabel "échelle de « hauteur perçue »"@fr ,
+        "scale of “perceived pitch”"@en ;
+    skos:memberList ( <https://w3id.org/ppp/perceivedPitch/low> <https://w3id.org/ppp/perceivedPitch/mid> <https://w3id.org/ppp/perceivedPitch/high> ) .
+
+<https://w3id.org/ppp/perceivedPitch/low>
+    a skos:Concept ;
+    skos:inScheme <https://w3id.org/ppp/> ;
+    skos:notation "low" ;
+    skos:prefLabel "hauteur perçue : grave"@fr ,
+        "perceived pitch: low"@en ;
+    skos:hiddenLabel "grave"@fr ,
+        "low"@en ;
+    skos:example "plus bas qu’une voix d’adulte qui parle normalement (une contrebasse, une grosse cloche)"@fr ,
+        "lower than an adult speaking normally (a double bass, a large bell)"@en ;
+    ppp:regionOf ppp:perceivedPitch ;
+    skos:broader ppp:perceivedPitch .
+
+<https://w3id.org/ppp/perceivedPitch/mid>
+    a skos:Concept ;
+    skos:inScheme <https://w3id.org/ppp/> ;
+    skos:notation "mid" ;
+    skos:prefLabel "hauteur perçue : médium"@fr ,
+        "perceived pitch: mid"@en ;
+    skos:hiddenLabel "médium"@fr ,
+        "mid"@en ;
+    skos:example "à peu près à la hauteur d’une voix d’adulte qui parle normalement"@fr ,
+        "roughly at the pitch of an adult speaking normally"@en ;
+    ppp:regionOf ppp:perceivedPitch ;
+    skos:broader ppp:perceivedPitch .
+
+<https://w3id.org/ppp/perceivedPitch/high>
+    a skos:Concept ;
+    skos:inScheme <https://w3id.org/ppp/> ;
+    skos:notation "high" ;
+    skos:prefLabel "hauteur perçue : aigu"@fr ,
+        "perceived pitch: high"@en ;
+    skos:hiddenLabel "aigu"@fr ,
+        "high"@en ;
+    skos:example "bien au-dessus d’une voix d’adulte qui parle normalement (un piccolo, une clochette)"@fr ,
+        "well above an adult speaking normally (a piccolo, a small bell)"@en ;
+    ppp:regionOf ppp:perceivedPitch ;
+    skos:broader ppp:perceivedPitch .
+
 ppp:perceivedSize
     a skos:Concept ;
     skos:inScheme <https://w3id.org/ppp/> ;
@@ -2549,6 +2692,95 @@ ppp:texture
         "the background can hardly be perceived any more (a tight mosaic)"@en ;
     ppp:regionOf ppp:perceptualDensity ;
     skos:broader ppp:perceptualDensity .
+
+ppp:pitchClarity
+    a skos:Concept ;
+    skos:inScheme <https://w3id.org/ppp/> ;
+    skos:notation "pitchClarity" ;
+    skos:prefLabel "netteté de la hauteur"@fr ,
+        "pitch clarity"@en ;
+    skos:definition "À quel point on entend une note dans un son : une note précise, qu’on pourrait chanter ; seulement une note à peu près, qu’on pourrait fredonner sans être sûr de la chanter juste ; ou aucune note."@fr ,
+        "How clearly you hear a note in a sound: a precise note you could sing; only a rough note, which you could hum without being sure you were singing it right; or no note at all."@en ;
+    skos:scopeNote "Pourrait-on chanter ce son juste, seulement le fredonner à peu près, ou n’y a-t-il aucune note à chanter ?"@fr ,
+        "Could you sing this sound in tune, only hum it roughly, or is there no note to sing?"@en ,
+        "Un son aigu n’a pas pour autant une note nette : le « pschhh » d’une bombe aérosol est aigu, mais on ne peut pas le chanter (c’est l’acuité, une autre fiche). Une note fausse, qui ne tombe pas juste sur une gamme, peut être très nette : la justesse n’est pas la netteté."@fr ,
+        "A high sound does not thereby have a clear note: the “pssshh” of an aerosol can is high, but you cannot sing it (that is sharpness, another entry). An out-of-tune note, one that does not fall right on a scale, can be very clear: being in tune is not clarity."@en ,
+        "Les trois régions sont plus grossières que l’échelle en pourcentage de Fastl et Stoll, sans correspondance chiffrée ; elles suivent le même ordre : le son pur vaut 100 % ; les autres sons qui ont une hauteur, de 100 à 50 % ; les bruits filtrés ou modulés, de 25 à 0 %. Vocabulaire de Schaeffer, lu via Chion : `singable` correspond au son pur (un son électronique sans timbre ; un diapason en est proche) et au son « tonique », dont on repère la note, comme une note de piano (art. 65 et 89) ; `approximatePitch` est rapproché du son « cannelé », fait de notes et de blocs sans hauteur superposés, comme certains sons de tôles, de gongs ou de cloches (art. 91), sans en être l’équivalent ; `noPitch` correspond au son « nodal », un bloc compact où l’on ne distingue aucune hauteur précise (art. 90), et au bruit blanc."@fr ,
+        "The three regions are coarser than Fastl and Stoll’s percentage scale, with no numerical correspondence; they follow the same order: the pure tone scores 100%; other sounds that have a pitch, 100 to 50%; filtered or modulated noises, 25 to 0%. Schaeffer’s vocabulary, read via Chion: `singable` corresponds to the pure sound (an electronic sound with no timbre; a tuning fork comes close) and to the “tonic” sound, whose note can be located, like a piano note (art. 65 and 89); `approximatePitch` is likened to the “channelled” sound, made of notes and pitchless blocks superimposed, like some sounds of metal sheets, gongs or bells (art. 91), without being its equivalent; `noPitch` corresponds to the “nodal” sound, a compact block in which no precise pitch can be made out (art. 90), and to white noise."@en ;
+    skos:note "candidat ; non éprouvé"@fr ,
+        "candidate; untested"@en ;
+    skos:topConceptOf <https://w3id.org/ppp/> ;
+    ppp:measurementState <https://w3id.org/ppp/mesure/etat/aucune-methode-robuste> ;
+    ppp:measurementSummary "Aucune méthode de mesure robuste n’est connue pour la netteté avec laquelle on entend une note (recherche du 2026-10-16). La force de hauteur (pitch strength) se mesure en demandant à des auditeurs de donner un chiffre (estimation de grandeur), en pourcentage de celle d’un son pur : ce sont des jugements d’auditeurs, sans référence physique ni procédure normalisée, et ils ne sont pas retenus."@fr ,
+        "No robust measurement method is known for how clearly a note is heard (search of 2026-10-16). Pitch strength is measured by asking listeners to give a number (magnitude estimation), as a percentage of that of a pure tone: these are listeners’ judgements, with no physical reference and no standardised procedure, and they are not retained."@en ;
+    ppp:measurementCaveat "Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen."@fr ,
+        "The regions of this entry remain perceptual: they describe what an observer sees, hears, smells or feels by touch under the declared conditions. An associated measurement can inform an observation, but it does not set the boundaries of the regions and does not replace examination."@en ;
+    ppp:notRetainedMeasure <https://w3id.org/ppp/pitchClarity/mesure/non-retenue-1> ,
+        <https://w3id.org/ppp/pitchClarity/mesure/non-retenue-2> ;
+    ppp:hasScale <https://w3id.org/ppp/pitchClarity/echelle> ;
+    skos:narrower <https://w3id.org/ppp/pitchClarity/singable> ,
+        <https://w3id.org/ppp/pitchClarity/approximatePitch> ,
+        <https://w3id.org/ppp/pitchClarity/noPitch> .
+
+<https://w3id.org/ppp/pitchClarity/mesure/non-retenue-1>
+    a ppp:NotRetainedMeasure ;
+    rdfs:label "échelle de force de hauteur (pitch strength)"@fr ,
+        "pitch strength scale"@en ;
+    ppp:reason "échelle de jugements d’auditeurs sans référence physique ni procédure normalisée (à la différence de la norme ASTM E544, qui compare une odeur à une gamme de concentrations d’un produit de référence, le butanol) ; elle ne dit pas si une note peut se chanter"@fr ,
+        "a scale of listeners’ judgements with no physical reference and no standardised procedure (unlike ASTM E544, which compares an odour with a series of concentrations of a reference substance, butanol); it does not say whether a note can be sung"@en ;
+    dct:bibliographicCitation "Fastl, H. & Stoll, G. (1979). Scaling of pitch strength. Hearing Research, 1(4), 293–301." .
+
+<https://w3id.org/ppp/pitchClarity/mesure/non-retenue-2>
+    a ppp:NotRetainedMeasure ;
+    rdfs:label "rapport harmonique sur bruit"@fr ,
+        "harmonics-to-noise ratio"@en ;
+    ppp:reason "se calcule sur un enregistrement (part du son régulier par rapport au bruit) ; aucune source lue ne le relie à la netteté de la note entendue"@fr ,
+        "computed on a recording (share of regular sound relative to noise); no source read relates it to how clearly the note is heard"@en .
+
+<https://w3id.org/ppp/pitchClarity/echelle>
+    a skos:OrderedCollection ;
+    skos:prefLabel "échelle de « netteté de la hauteur »"@fr ,
+        "scale of “pitch clarity”"@en ;
+    skos:memberList ( <https://w3id.org/ppp/pitchClarity/singable> <https://w3id.org/ppp/pitchClarity/approximatePitch> <https://w3id.org/ppp/pitchClarity/noPitch> ) .
+
+<https://w3id.org/ppp/pitchClarity/singable>
+    a skos:Concept ;
+    skos:inScheme <https://w3id.org/ppp/> ;
+    skos:notation "singable" ;
+    skos:prefLabel "netteté de la hauteur : une note qu’on pourrait chanter ou retrouver sur un instrument"@fr ,
+        "pitch clarity: a note you could sing or find on an instrument"@en ;
+    skos:hiddenLabel "une note qu’on pourrait chanter ou retrouver sur un instrument"@fr ,
+        "a note you could sing or find on an instrument"@en ;
+    skos:example "une note précise (une note de flûte)"@fr ,
+        "a precise note (a flute note)"@en ;
+    ppp:regionOf ppp:pitchClarity ;
+    skos:broader ppp:pitchClarity .
+
+<https://w3id.org/ppp/pitchClarity/approximatePitch>
+    a skos:Concept ;
+    skos:inScheme <https://w3id.org/ppp/> ;
+    skos:notation "approximatePitch" ;
+    skos:prefLabel "netteté de la hauteur : une hauteur approximative"@fr ,
+        "pitch clarity: an approximate pitch"@en ;
+    skos:hiddenLabel "une hauteur approximative"@fr ,
+        "an approximate pitch"@en ;
+    skos:example "une hauteur à peu près (un coup sur une casserole)"@fr ,
+        "a rough pitch (a knock on a saucepan)"@en ;
+    ppp:regionOf ppp:pitchClarity ;
+    skos:broader ppp:pitchClarity .
+
+<https://w3id.org/ppp/pitchClarity/noPitch>
+    a skos:Concept ;
+    skos:inScheme <https://w3id.org/ppp/> ;
+    skos:notation "noPitch" ;
+    skos:prefLabel "netteté de la hauteur : aucune hauteur repérable"@fr ,
+        "pitch clarity: no discernible pitch"@en ;
+    skos:hiddenLabel "aucune hauteur repérable"@fr ,
+        "no discernible pitch"@en ;
+    skos:example "aucune note (un froissement de papier, un souffle)"@fr ,
+        "no note (paper rustling, a breath)"@en ;
+    ppp:regionOf ppp:pitchClarity ;
+    skos:broader ppp:pitchClarity .
 
 <https://w3id.org/ppp/saturation/mesure/cie015>
     a ppp:AssociatedMeasure ;
@@ -3538,3 +3770,14 @@ ppp:translucency
         ppp:curvature ,
         ppp:jointLevelOffset ,
         ppp:perceivedWeight .
+
+<https://w3id.org/ppp/famille/son>
+    a skos:Collection ;
+    skos:prefLabel "Son"@fr ,
+        "Sound"@en ;
+    skos:scopeNote "Ce qu’on remarque en écoutant un son : celui d’un objet qu’on fait sonner (en le frappant, en le frottant), d’un appareil qui fonctionne, ou d’une voix. Une photo ne dit rien du son : elle sert seulement à reconnaître l’objet. Un enregistrement publié peut servir d’exemple, sauf pour la force du son ; sinon, on décrit l’objet et les conditions d’écoute. Cette famille est en préparation : deux fiches y sont publiées, la netteté de la hauteur et la hauteur perçue."@fr ,
+        "What you notice when you listen to a sound: that of an object you make sound (by striking or rubbing it), of a device that is running, or of a voice. A photo says nothing about sound: it only helps to recognise the object. A published recording can serve as an example, except for loudness; otherwise the object and the listening conditions are described. This family is in preparation: two entries are published so far, pitch clarity and perceived pitch."@en ,
+        "Famille de lecture : aide à s’orienter, pas une hiérarchie."@fr ,
+        "Reading family: a guide for orientation, not a hierarchy."@en ;
+    skos:member ppp:pitchClarity ,
+        ppp:perceivedPitch .

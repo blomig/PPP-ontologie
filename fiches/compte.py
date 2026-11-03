@@ -501,12 +501,14 @@ def ligne_familles(fiches):
 # Série 89 : `textureContrast` entre (statut_note et mesure relus, choix de relecture du 2026-11-02 ; a_relire vide, X17) : 30 fiches.
 # Série 90 : `palier` compte aussi les épisodes « à réaliser » (toucher, odorat ; ouïe à défaut) et les repères du Goût à préparation déclarée et sourcée (X17) ; aucune fiche n'entre (a_relire non vide) : 30 fiches.
 # Série 92 : `perceivedWeight` entre (affichage des épisodes à réaliser en place, `bloque_par` retiré, choix de relecture (2026-11-02)) : 31 fiches.
+# Série 95 : `pitchClarity` entre (relecture explicative du 2026-11-03, a_relire vide, épisodes à réaliser, X17 ; choix de relecture (2026-11-03)) : 32 fiches.
+# Série 96 : `perceivedPitch` entre (relecture explicative du 2026-11-03, a_relire et bloque_par vides, épisodes à réaliser, X17 ; choix de relecture (2026-11-03)) : 33 fiches.
 FICHES_PUBLIQUES_ATTENDUES = {'hue', 'lightness', 'lightnessContrast', 'perceivedSize', 'perceptualDensity', 'texture',
                               'textureDirectionality', 'distribution', 'hueContrast', 'hueCount', 'hueRange', 'jointLevelOffset',
                               'jointSpacing', 'perceptualContrast', 'saturation', 'scaleContrast', 'surfaceGloss',
                               'contour', 'lightnessRange', 'saturationRange', 'symmetry', 'translucency', 'curvature',
                               'outlineIndentation', 'negativeSpace', 'localIrregularity', 'partNesting', 'subsurfaceDepth', 'perceivedDepth',
-                              'textureContrast', 'perceivedWeight'}
+                              'textureContrast', 'perceivedWeight', 'pitchClarity', 'perceivedPitch'}
 
 def publiques(paliers):
     return sorted(paliers.get('publiable', []) + paliers.get('publiable avec exemplaires incomplets', []))

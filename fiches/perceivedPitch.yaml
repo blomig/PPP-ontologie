@@ -1,0 +1,366 @@
+# Fiche de type PPP — ppp:perceivedPitch — format : PPP_FicheType.md (spec v2.8)
+# Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_base, note_categories, avertissement_label.
+# Série 93 (2026-11-02) : fiche rédigée ; série 96 (2026-11-03) : relecture explicative faite (choix de relecture), fiche publiée (palier 2, épisodes à réaliser, X17).
+id: ppp:perceivedPitch
+label_fr: hauteur perçue
+label_en: perceived pitch
+labels_alternatifs: []
+avertissement_label: 'Ici, « hauteur » veut dire la hauteur d’un son, du grave à l’aigu, et non la taille d’une chose du bas vers le haut (`ppp:perceivedSize`). Ce n’est pas non plus la note exacte, ni le fait qu’elle soit juste.'
+patron: P1
+sorte: qualité
+sous_sorte: —
+strate: semi-formel
+base_dependance:
+  types:
+  - ppp:pitchClarity
+  facteurs_non_perceptuels: []
+note_base: 'La hauteur ne se juge que si le son a une note, au moins à peu près : elle dépend donc de la netteté de la hauteur (`ppp:pitchClarity`) et ne s’applique pas quand celle-ci est « aucune hauteur
+  repérable » (un froissement de papier, un souffle). Un son à hauteur approximative, comme un coup sur une casserole, se range encore du grave à l’aigu. Base vérifiée à la rédaction de la fiche (2026-11-02).'
+facettes:
+- son
+définition: 'Si le son paraît grave ou aigu : sa place entre les sons les plus bas et les plus hauts. Ne vaut que pour un son qui a une note, qu’on pourrait chanter ou au moins fredonner.'
+question_attentionnelle: Ce son est-il grave (une contrebasse, une grosse cloche), médium (une voix d’adulte qui parle normalement), ou aigu (un piccolo, une clochette) ?
+contre_exemple: 'Le « pschhh » d’une bombe aérosol ou d’un jet de vapeur paraît « aigu » sans avoir de note : c’est l’acuité du son (`ppp:soundSharpness`), et ce type ne s’y applique pas. Un son plus fort
+  n’est pas plus aigu : la force du son est une autre qualité. Une même note jouée par une flûte et par un violon a la même hauteur et deux timbres (le timbre est la couleur du son, ce qui fait reconnaître
+  l’instrument) : un son peut être étouffé et aigu, ou brillant et grave.'
+grandeur_physique_homonyme: 'fréquence, en hertz (Hz : nombre de vibrations par seconde), et fréquence fondamentale (F0 : la fréquence de base d’un son à note, dont ses composantes sont des multiples) :
+  la hauteur en dépend surtout, sans s’y réduire [[mcdermott_oxenham2008]] ; les régions de ce type ne sont pas des bandes de fréquence.'
+mesure:
+  etat: methodes
+  synthese: La hauteur d’un son se rapporte d’abord à sa fréquence fondamentale, qu’on peut mesurer sur un enregistrement [[mcdermott_oxenham2008]], ou nommer comme une note à partir du la du diapason, que
+    la norme internationale ISO 16 fixe à 440 Hz [[iso16_1975]]. L’échelle des mels [[stevens_volkmann_newman1937]], unité de la hauteur dans la terminologie acoustique normalisée [[ansi_s1_1_2013]], vise
+    la hauteur entendue elle-même, mais sa version de 1940 a été critiquée [[greenwood1997]]. Aucune de ces valeurs ne fixe les limites entre grave, médium et aigu.
+  regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
+    une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
+  methodes:
+  - id: mel
+    nom: échelle des mels
+    grandeur: hauteur estimée par des auditeurs, qui règlent un son pour qu’il paraisse deux fois moins haut qu’un autre (fractionnement), rapportée à un son pur de référence
+    unite_ou_echelle: mel (par définition, un son pur de 1000 Hz, 40 dB au-dessus du seuil d’audition de l’auditeur, vaut 1000 mels ; un son pur est un son électronique d’une seule fréquence, sans timbre)
+    references:
+    - ansi_s1_1_2013
+    - stevens_volkmann_newman1937
+    - greenwood1997
+    proximite: proche
+    ecart: 'vise expressément la hauteur entendue, mais a été établie sur des sons purs, avec peu d’auditeurs (cinq en 1937) ; Greenwood (1997) trouve dans des réglages de 1956 un biais d’ordre (hystérésis
+      : les réglages diffèrent selon qu’on parcourt les sons en montant ou en descendant) et en conclut que l’échelle des mels de 1940 (Stevens et Volkmann) a le même biais ; une valeur en mels ne dit pas si
+      un son est grave, médium ou aigu'
+    conditions: sons purs, niveau fixé, écoute en laboratoire
+    statut_lecture: 'résumé lu (Stevens, Volkmann et Newman 1937 ; Greenwood 1997) ; définition 11.02 lue dans la base terminologique de l’éditeur de la norme'
+  - id: f0
+    nom: fréquence fondamentale mesurée sur un enregistrement
+    grandeur: périodicité du son (fréquence fondamentale)
+    unite_ou_echelle: hertz (Hz)
+    references:
+    - mcdermott_oxenham2008
+    - oxenham2023
+    proximite: indirecte
+    ecart: 'grandeur physique, pas un degré perçu : la hauteur est ce qu’on entend de la régularité du son (une vibration qui se répète), mais on entend la même hauteur quand la fondamentale manque, et la brillance
+      (un aspect du timbre) varie à part ; au-dessus d’environ 4 kHz (4000 vibrations par seconde), on distingue mal les hauteurs'
+    conditions: son à hauteur repérable ; enregistrement ou mesure sur place ; une seule note à la fois
+    statut_lecture: 'lu en partie : McDermott et Oxenham 2008, section sur la hauteur et glossaire (manuscrit d’auteur) ; Oxenham 2023, introduction et section sur la hauteur et la brillance (accès libre)'
+  - id: note_diapason
+    nom: nom de la note, rapporté au diapason
+    grandeur: fréquence fondamentale nommée sur la gamme musicale, à partir du la de référence
+    unite_ou_echelle: 'nom de note ; la de référence à 440 Hz (ISO 16)'
+    references:
+    - iso16_1975
+    - ansi_s1_1_2013
+    proximite: indirecte
+    ecart: 'une convention d’accord, pas une mesure de la hauteur entendue : il faut une oreille exercée ou un accordeur, et la note répète son nom à chaque octave (un do reste un do, grave ou aigu), alors
+      que ce type ne retient que la position du grave à l’aigu [[ansi_s1_1_2013]]'
+    conditions: 'son à hauteur nette (`singable` : une note qu’on pourrait chanter) ; instrument accordé'
+    statut_lecture: résumé lu (page de la norme chez l’éditeur)
+  non_retenues:
+  - nom: échelle des bandes critiques (Bark)
+    references: []
+    raison: découpe les fréquences en bandes selon la finesse de l’oreille interne (bandes critiques), pas selon la hauteur entendue ; aucune source lue au-delà des métadonnées
+    statut_lecture: métadonnées seules (Zwicker 1961, non cité)
+  - nom: échelle des largeurs de bande rectangulaires équivalentes (ERB)
+    references:
+    - glasberg_moore1990
+    raison: décrit la largeur des filtres de l’oreille selon la fréquence, pas la hauteur entendue
+    statut_lecture: résumé lu (Glasberg et Moore 1990)
+modalites:
+- audition
+mode_de_presentation: échantillon
+conditions_critiques:
+- production
+- bruit_de_fond
+note_conditions: 'la façon dont le son est produit compte (facette `production` : un geste sur un objet, un appareil qui fonctionne, une voix) ; le bruit de fond masque la note (facette `bruit_de_fond`)
+  (spec §9.7 H, règle 9). Pour un enregistrement (`presentation: recording`), ces facettes décrivent la prise de son ; l’écoute se déclare dans la note : casque ou enceintes, jamais le haut-parleur d’un
+  téléphone, car beaucoup de petits appareils ne rendent pas les sons graves [[mcdermott_oxenham2008]] ; on entend souvent encore la même note, mais une note très grave peut presque disparaître (choix de
+  relecture (2026-11-03)) ; niveau réglé une fois, puis non modifié, pour qu’un son plus fort ne passe pas pour plus aigu.'
+porteur: un son entendu, produit par un objet, un appareil ou une voix, de la façon déclarée (facette `production`)
+arité: 1
+condition_NA: 'rien ne sonne de la façon déclarée (un objet qui ne sonne pas sous le geste déclaré) ; son sans hauteur repérable (`ppp:pitchClarity` en `noPitch` : un froissement de papier, un souffle).'
+espace_valeurs:
+  echelle: ordinale
+  sens_croissant: de `low` (rang 1) vers `high` (rang 3), le son paraît de plus en plus aigu
+  numerique: non
+  regions:
+  - cle: low
+    label_fr: grave
+    label_en: low
+    rang: 1
+    repere: plus bas qu’une voix d’adulte qui parle normalement (une contrebasse, une grosse cloche)
+    exemplaires: []
+  - cle: mid
+    label_fr: médium
+    label_en: mid
+    rang: 2
+    repere: à peu près à la hauteur d’une voix d’adulte qui parle normalement
+    exemplaires: []
+  - cle: high
+    label_fr: aigu
+    label_en: high
+    rang: 3
+    repere: bien au-dessus d’une voix d’adulte qui parle normalement (un piccolo, une clochette)
+    exemplaires: []
+note_categories: 'Trois régions, du grave à l’aigu : les repères sont des sons qu’on connaît (une voix d’adulte qui parle normalement, des instruments), pas des fréquences. Aucune source lue ne fixe de
+  limite perçue entre grave, médium et aigu : les fréquences données dans les épisodes sont mesurées par l’équipe et restent indicatives, non vérifiées comme bornes. La terminologie acoustique normalisée
+  (norme américaine ANSI/ASA S1.1) [[ansi_s1_1_2013]] distingue la hauteur sur une échelle du grave à l’aigu (« pitch height », aussi appelée registre) et la place de la note dans l’octave (un do reste
+  un do, grave ou aigu) ; ce type ne retient que la première. Shepard (1964) [[shepard1964]] a construit par ordinateur des sons dont chacun paraît plus aigu que le précédent, alors que la série revient
+  à son point de départ : on ne peut donc pas toujours ranger les hauteurs sur une seule ligne.'
+identite: 'Où le son se place du grave à l’aigu ; pas la netteté de cette hauteur (`ppp:pitchClarity`), pas l’acuité ni la brillance du son (`ppp:soundSharpness`, le timbre), pas la force du son, pas la note exacte ni sa justesse.'
+relations:
+- type: confusableWith
+  cible: ppp:soundSharpness
+  note: 'on dit aussi « aigu » d’un son qui chuinte (un « pschhh »), même sans note : c’est l’acuité. Un son qui a une note nette peut être grave et brillant, ou aigu et étouffé.'
+ontoClean:
+  rigidite: +R
+  identite_propre: +I
+  unite: —
+  dependance: +D
+references_statut: renseignées
+references:
+- id: ansi_s1_1_2013
+  citation: 'ANSI/ASA S1.1-2013 (R2024). American National Standard Acoustical Terminology. Melville (NY) : Acoustical Society of America.'
+  doi_ou_url: https://asastandards.org/terms/pitch-height/
+  role: fonde
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-11-02'
+  verifie_sur: 'définitions 11.01 (pitch), 11.02 (mel), 11.03 (loudness), 11.09 (timbre) et 12.10 (pitch height) lues dans la base terminologique de l’éditeur de la norme (asastandards.org/terms/) ; texte de la norme non lu'
+  reprend: 'la hauteur comme position sur un continuum du grave à l’aigu (12.10, « also referred to as register ») ; la distinction entre hauteur et place dans l’octave (note de 11.01) ; le timbre défini à force et hauteur égales (11.09)'
+  ne_reprend_pas: la définition par l’échelle de la mélodie (11.01) comme label ; les unités (mel, demi-ton, cent) comme régions
+- id: mcdermott_oxenham2008
+  citation: 'McDermott, J. H. & Oxenham, A. J. (2008). Music perception, pitch, and the auditory system. Current Opinion in Neurobiology, 18(4), 452–463.'
+  doi_ou_url: https://doi.org/10.1016/j.conb.2008.09.005
+  role: alimente
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-11-02'
+  verifie_sur: 'manuscrit d’auteur accepté (https://pmc.ncbi.nlm.nih.gov/articles/PMC2629434/) : section « Pitch » et glossaire lus ; le reste parcouru'
+  reprend: 'la hauteur, corrélat perçu de la périodicité ; la même hauteur quand la fondamentale manque, par exemple sur des appareils qui ne rendent pas les basses ; le timbre défini comme ce qui n’est ni la force ni la hauteur'
+  ne_reprend_pas: les modèles de codage neuronal ; la limite basse chiffrée de la hauteur
+- id: oxenham2023
+  citation: 'Oxenham, A. J. (2023). Questions and controversies surrounding the perception and neural coding of pitch. Frontiers in Neuroscience, 16, 1074752.'
+  doi_ou_url: https://doi.org/10.3389/fnins.2022.1074752
+  role: alimente
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-11-02'
+  verifie_sur: 'texte en accès libre (CC BY) chez l’éditeur et sur PMC (PMC9868815) : introduction et section sur hauteur et brillance lues'
+  reprend: 'hauteur (liée à la fondamentale) et brillance (un aspect du timbre, liée au centre de gravité du spectre) se dissocient ; la discrimination des hauteurs se dégrade au-dessus d’environ 4 kHz'
+  ne_reprend_pas: les controverses sur le codage temporel ou spatial ; les valeurs chiffrées comme bornes de régions
+- id: stevens_volkmann_newman1937
+  citation: 'Stevens, S. S., Volkmann, J. & Newman, E. B. (1937). A scale for the measurement of the psychological magnitude pitch. The Journal of the Acoustical Society of America, 8(3), 185–190.'
+  doi_ou_url: https://doi.org/10.1121/1.1915893
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-11-02'
+  verifie_sur: résumé lu (métadonnées Crossref et page de l’éditeur) ; texte non lu
+  reprend: l’échelle des mels, établie par fractionnement avec cinq observateurs, 1000 Hz valant 1000 mels
+  ne_reprend_pas: la fonction chiffrée ; ses valeurs comme bornes
+- id: greenwood1997
+  citation: 'Greenwood, D. D. (1997). The Mel Scale’s disqualifying bias and a consistency of pitch-difference equisections in 1956 with equal cochlear distances and equal frequency ratios. Hearing Research, 103(1–2), 199–224.'
+  doi_ou_url: https://doi.org/10.1016/s0378-5955(96)00175-x
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-11-02'
+  verifie_sur: résumé lu (PubMed) ; texte non lu
+  reprend: 'la critique de l’échelle des mels de Stevens et Volkmann (1940) : un biais d’ordre des jugements (hystérésis)'
+  ne_reprend_pas: sa relation avec les distances cochléaires
+- id: shepard1964
+  citation: 'Shepard, R. N. (1964). Circularity in judgments of relative pitch. The Journal of the Acoustical Society of America, 36(12), 2346–2353.'
+  doi_ou_url: https://doi.org/10.1121/1.1919362
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-11-02'
+  verifie_sur: résumé lu (page de l’éditeur) ; texte non lu
+  reprend: avec des sons construits exprès, on ne peut pas toujours ranger les hauteurs sur une seule ligne
+  ne_reprend_pas: les sons de Shepard comme exemplaires
+- id: glasberg_moore1990
+  citation: 'Glasberg, B. R. & Moore, B. C. J. (1990). Derivation of auditory filter shapes from notched-noise data. Hearing Research, 47(1–2), 103–138.'
+  doi_ou_url: https://doi.org/10.1016/0378-5955(90)90170-t
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-11-02'
+  verifie_sur: résumé lu (PubMed) ; texte non lu
+  reprend: des formules qui décrivent la largeur du filtre auditif selon la fréquence (le résumé ne nomme pas l’échelle ERB, qui en découle)
+  ne_reprend_pas: les formules
+- id: iso16_1975
+  citation: 'ISO 16:1975. Acoustics — Standard tuning frequency (Standard musical pitch). Genève : Organisation internationale de normalisation (confirmée en 2022).'
+  doi_ou_url: https://www.iso.org/standard/3601.html
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-11-02'
+  verifie_sur: page de la norme chez l’éditeur (résumé) lue ; texte non lu
+  reprend: le la de référence à 440 Hz, pour nommer les notes des épisodes
+  ne_reprend_pas: le nom des notes comme régions
+- id: fastl_zwicker2007
+  citation: 'Fastl, H. & Zwicker, E. (2007). Psychoacoustics: Facts and Models (3e éd.). Berlin, Heidelberg : Springer.'
+  doi_ou_url: https://doi.org/10.1007/978-3-540-68888-4
+  role: alimente
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-10-15'
+  verifie_sur: ch. 5 « Pitch and Pitch Strength » lu en partie (p. 111-112) ; titres des autres chapitres seulement
+  reprend: hauteur et force de hauteur traitées comme deux sensations (ch. 5, p. 111-112), d’où deux types
+  ne_reprend_pas: la notion de « hauteur virtuelle » (non lue) ; les valeurs chiffrées
+etat_de_l_art: 'La terminologie acoustique normalisée (norme américaine ANSI/ASA S1.1) [[ansi_s1_1_2013]] définit la hauteur comme ce qui range les sons sur l’échelle de la mélodie, et distingue sa position
+  du grave à l’aigu (le registre) de la place de la note dans l’octave (un do reste un do, grave ou aigu) ; ce type ne retient que la première. Shepard (1964) [[shepard1964]] montre, avec des sons construits
+  par ordinateur, qu’on ne peut pas toujours ranger les hauteurs sur une seule ligne. La hauteur suit surtout la fréquence fondamentale (la fréquence de base du son), même quand celle-ci manque dans le
+  son [[mcdermott_oxenham2008]], et se sépare de la brillance, un aspect du timbre qui dépend de la part des aigus dans le son [[oxenham2023]] ; Fastl et Zwicker (2007, ch. 5, lu en partie) [[fastl_zwicker2007]]
+  la traitent à part de la force de hauteur (à quel point un son a une note). L’échelle des mels [[stevens_volkmann_newman1937]] la mesure par des réglages d’auditeurs, mais sa version de 1940 est critiquée
+  [[greenwood1997]]. Les trois régions de PPP ne correspondent à aucune bande de fréquence chiffrée. Détail : docs/bibliographie-par-type.md#groupe-son.'
+etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-son
+axiomes:
+- conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
+  validation: Toute assertion de type ppp:perceivedPitch a exactement un ppp:about.
+- conceptuel: Les 3 régions sont deux à deux disjointes et totalement ordonnées par rang.
+  validation: Les 3 ppp:Region de l’échelle du type ont des ppp:rank distincts, de 1 à 3 ; une assertion a au plus un ppp:inRegion.
+- conceptuel: Une région de cet espace n’est pas un sous-type du type.
+  validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
+nanay: Oui — passer de « j’entends une note » à « est-elle grave ou aiguë » change la description, sans dire quel instrument joue.
+transfert: objet conçu oui (un carillon, une sonnette, un klaxon) | tableau non (sans son) | cuisine oui (le sifflet d’une bouilloire, une minuterie) | high-tech oui (un bip grave ou aigu) | architecture oui (une cloche d’église, le bourdon d’une ventilation)
+enonces_testables:
+- id: E1
+  nature: existence
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs exact (échelle à trois régions ou moins, spec §9.7 C, v2.5), au-dessus du seuil fixé avant l’épreuve, à conditions critiques égales
+    (spec §9.7 H)
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E4
+  nature: existence
+  enonce: l’accord ne baisse pas significativement entre observateurs en désaccord de goût sur les objets
+  statut_epistemique: non éprouvé
+  epreuve: null
+- id: E2
+  nature: structure
+  enonce: 'on peut changer la hauteur sans changer l’acuité, et l’acuité sans changer la hauteur : une même note jouée par une flûte puis par un violon change l’acuité, pas la hauteur ; deux notes proches
+    d’un même instrument changent surtout la hauteur'
+  statut_epistemique: non éprouvé
+  epreuve: null
+cq_couvertes: CQ1, CQ2
+statut: candidat
+statut_note: fiche relue en langage courant (relecture explicative, 2026-11-03) ; quatre épisodes proposés « à réaliser », sur des enregistrements placés dans le domaine public (CC0), pas encore observés
+statut_epistemique: non éprouvé
+introduit_en: '2.8'
+modifie_en: []
+remplace_par: []
+source_de_la_fiche: 'proposition de famille « Son » (docs/famille-son-proposition.md (document de travail, non publié), §2.3, série 43, décision 5) ; remarque de l’éditeur du projet du 2026-11-02 : « Je constate que sur le son il manque une fiche sur la hauteur du son (pitch). S’il y a une fiche sur pitchclarity il faut une fiche pitch non ? » ; fiche rédigée le 2026-11-02 par l’équipe (choix de relecture (2026-11-02)), champs à valider par la relecture explicative'
+manques:
+- 'exemplaires observés : aucun épisode encore réalisé (quatre proposés, sur des enregistrements CC0)'
+bloque_par: []
+a_relire: []
+relecture_explicative:
+  date: '2026-11-03'
+  champs:
+  - 'label_fr, label_en, avertissement_label, strate, question_attentionnelle, mode_de_presentation, conditions_critiques, porteur, condition_NA, espace_valeurs, identite, references, nanay, transfert : relus en langage courant le 2026-11-03, validés tels quels'
+  - 'note_base, définition, contre_exemple, grandeur_physique_homonyme, note_conditions, note_categories, relations, etat_de_l_art, enonces_testables (E2), statut_note, mesure, episodes_a_realiser : relus et corrigés en langage courant le 2026-11-03'
+  a_reconfirmer: []
+# Série 93 : épisodes proposés « à réaliser » (spec X17 ; choix de relecture (2026-11-02)) ; ni épreuve faite ni accord entre observateurs ; ni observateur, ni date, ni résultat.
+# Enregistrements CC0 (Creative Commons 0), pages vérifiées le 2026-11-02 ; fréquences fondamentales mesurées par l’équipe sur l’aperçu MP3 de chaque page (autocorrélation), indicatives, non vérifiées comme bornes.
+episodes_a_realiser:
+- id: ppp-a:ep-perceivedPitch-01
+  realisation: a_realiser
+  region_attendue: low
+  objet: 'enregistrement d’une note tenue de contrebasse, jouée à l’archet avec vibrato, environ 11 s, par sgossner, sur Freesound (https://freesound.org/people/sgossner/sounds/373153/), licence CC0, page vérifiée le 2026-11-02'
+  objet_en: 'recording of a sustained double-bass note, bowed with vibrato, about 11 s, by sgossner, on Freesound (https://freesound.org/people/sgossner/sounds/373153/), CC0 licence, page checked on 2026-11-02'
+  preparation: 'ouvrir la page et écouter l’enregistrement en entier, sans le télécharger ni le modifier ; régler le niveau une fois, sur la note de flûte de l’épisode 03, puis ne plus le toucher'
+  preparation_en: 'open the page and listen to the whole recording, without downloading or editing it; set the level once, on the flute note of episode 03, then leave it unchanged'
+  consigne: Ce son est-il grave (une contrebasse, une grosse cloche), médium (une voix d’adulte qui parle normalement), ou aigu (un piccolo, une clochette) ?
+  consigne_en: 'Is this sound low (a double bass, a large bell), mid (an adult speaking normally), or high (a piccolo, a small bell)?'
+  conditions:
+    presentation: recording
+    distance: near
+    production: scraping
+    bruit_de_fond: quiet
+    duree: glance
+    note: 'enregistré dans une salle de classe, avec un micro proche et une paire de micros espacés (d’après la page) ; archet : frottement entretenu, noté `scraping` (frotté ; la facette n’a pas de valeur propre pour l’archet) ; écoute au casque fermé ou sur enceintes, jamais sur le haut-parleur d’un téléphone, qui rend mal les sons très graves ; pièce calme ; jugement sur les premières secondes ; écoute complète de 11,3 s'
+    note_en: 'recorded in a classroom, with a close microphone and a spaced pair (according to the page); bow: sustained friction, recorded as `scraping` (rubbed; the facet has no specific value for bowing); listen on closed headphones or loudspeakers, never on a phone speaker, which reproduces very low sounds poorly; quiet room; judged on the first seconds; full listening of 11.3 s'
+  doute: non
+  note: 'fondamentale (la fréquence de base de la note) mesurée ≈ 49 Hz (un sol, deux octaves et une quarte sous le do du milieu du piano), valeur indicative ; le titre de la page annonce un fa dièse, le nom du fichier un sol : la mesure prime'
+  note_en: 'measured fundamental (the base frequency of the note) ≈ 49 Hz (a G, two octaves and a fourth below middle C), an indicative value; the page title gives F sharp, the file name G: the measurement takes precedence'
+  texte_fr: 'Une note tenue de contrebasse, très basse : grave (prédiction, à éprouver).'
+  texte_en: 'A sustained, very low double-bass note: low (prediction, to be tested).'
+- id: ppp-a:ep-perceivedPitch-02
+  realisation: a_realiser
+  region_attendue: mid
+  rang_exemplaire: second
+  objet: 'enregistrement d’une note tenue de contrebasse, jouée à l’archet sans vibrato, environ 9 s, par sgossner, sur Freesound (https://freesound.org/people/sgossner/sounds/373126/), licence CC0, page vérifiée le 2026-11-02'
+  objet_en: 'recording of a sustained double-bass note, bowed without vibrato, about 9 s, by sgossner, on Freesound (https://freesound.org/people/sgossner/sounds/373126/), CC0 licence, page checked on 2026-11-02'
+  preparation: 'comme l’épisode 01 ; même niveau d’écoute'
+  preparation_en: 'as in episode 01; same listening level'
+  consigne: Ce son est-il grave (une contrebasse, une grosse cloche), médium (une voix d’adulte qui parle normalement), ou aigu (un piccolo, une clochette) ?
+  consigne_en: 'Is this sound low (a double bass, a large bell), mid (an adult speaking normally), or high (a piccolo, a small bell)?'
+  conditions:
+    presentation: recording
+    distance: near
+    production: scraping
+    bruit_de_fond: quiet
+    duree: glance
+    note: 'enregistré dans une salle de classe, avec un micro proche et une paire de micros espacés (d’après la page) ; archet : frottement entretenu, noté `scraping` (la facette n’a pas de valeur pour l’archet) ; casque fermé ou enceintes, pièce calme ; jugement sur les premières secondes ; écoute complète de 9,0 s'
+    note_en: 'recorded in a classroom, with a close microphone and a spaced pair (according to the page); bow: sustained friction, recorded as `scraping` (the facet has no value for bowing); closed headphones or loudspeakers, quiet room; judged on the first seconds; full listening of 9.0 s'
+  doute: oui
+  motif_doute: 'l’instrument est connu pour être grave : l’auditeur peut répondre selon l’instrument plutôt que selon la note ; aucune source lue ne fixe la limite entre grave et médium'
+  motif_doute_en: 'the instrument is known to be low: listeners may answer from the instrument rather than the note; no source read sets the boundary between low and mid'
+  note: 'fondamentale mesurée ≈ 207 Hz (un sol dièse, sous le do du milieu du piano), valeur indicative ; le titre annonce un sol : la mesure prime. Épisode de contrôle : même instrument que l’épisode 01, note plus haute'
+  note_en: 'measured fundamental ≈ 207 Hz (a G sharp, below middle C), an indicative value; the title gives G: the measurement takes precedence. Control episode: same instrument as episode 01, higher note'
+  texte_fr: 'Une note haute de contrebasse : médium (prédiction, à éprouver).'
+  texte_en: 'A high double-bass note: mid (prediction, to be tested).'
+- id: ppp-a:ep-perceivedPitch-03
+  realisation: a_realiser
+  region_attendue: mid
+  rang_exemplaire: principal
+  objet: 'enregistrement d’une note tenue de flûte traversière, environ 4 s, par yano1, sur Freesound (https://freesound.org/people/yano1/sounds/257363/), licence CC0, page vérifiée le 2026-11-02'
+  objet_en: 'recording of a sustained concert-flute note, about 4 s, by yano1, on Freesound (https://freesound.org/people/yano1/sounds/257363/), CC0 licence, page checked on 2026-11-02'
+  preparation: 'ouvrir la page et écouter l’enregistrement en entier ; régler le niveau sur cette note, à peu près comme une conversation calme, puis ne plus le toucher pour les autres épisodes'
+  preparation_en: 'open the page and listen to the whole recording; set the level on this note, roughly like a calm conversation, then leave it unchanged for the other episodes'
+  consigne: Ce son est-il grave (une contrebasse, une grosse cloche), médium (une voix d’adulte qui parle normalement), ou aigu (un piccolo, une clochette) ?
+  consigne_en: 'Is this sound low (a double bass, a large bell), mid (an adult speaking normally), or high (a piccolo, a small bell)?'
+  conditions:
+    presentation: recording
+    distance: near
+    production: airflow
+    bruit_de_fond: quiet
+    duree: glance
+    note: 'prise de son proche (estimée ; la page ne décrit pas la prise de son) ; écoute au casque fermé ou sur enceintes, jamais sur le haut-parleur d’un téléphone ; pièce calme ; jugement sur les premières secondes ; écoute complète de 4,0 s'
+    note_en: 'close recording (estimated; the page does not describe the recording); listen on closed headphones or loudspeakers, never on a phone speaker; quiet room; judged on the first seconds; full listening of 4.0 s'
+  doute: oui
+  motif_doute: 'une des notes les plus basses de la flûte : certains la diront grave pour une flûte ; aucune source lue ne fixe la limite entre grave et médium'
+  motif_doute_en: 'one of the lowest notes of the flute: some will call it low for a flute; no source read sets the boundary between low and mid'
+  note: 'fondamentale mesurée ≈ 262 Hz (le do du milieu du piano), valeur indicative, conforme au titre de la page'
+  note_en: 'measured fundamental ≈ 262 Hz (middle C), an indicative value, matching the page title'
+  texte_fr: 'Une note de flûte, le do du milieu du piano : médium (prédiction, à éprouver).'
+  texte_en: 'A flute note, middle C: mid (prediction, to be tested).'
+- id: ppp-a:ep-perceivedPitch-04
+  realisation: a_realiser
+  region_attendue: high
+  objet: 'enregistrement d’une note tenue de piccolo, environ 8 s, par sgossner, sur Freesound (https://freesound.org/people/sgossner/sounds/373747/), licence CC0, page vérifiée le 2026-11-02'
+  objet_en: 'recording of a sustained piccolo note, about 8 s, by sgossner, on Freesound (https://freesound.org/people/sgossner/sounds/373747/), CC0 licence, page checked on 2026-11-02'
+  preparation: 'comme l’épisode 03 ; même niveau d’écoute'
+  preparation_en: 'as in episode 03; same listening level'
+  consigne: Ce son est-il grave (une contrebasse, une grosse cloche), médium (une voix d’adulte qui parle normalement), ou aigu (un piccolo, une clochette) ?
+  consigne_en: 'Is this sound low (a double bass, a large bell), mid (an adult speaking normally), or high (a piccolo, a small bell)?'
+  conditions:
+    presentation: recording
+    distance: unknown
+    production: airflow
+    bruit_de_fond: quiet
+    duree: glance
+    note: 'studio traité (d’après la page) ; d’après la page, paire espacée ; casque fermé ou enceintes, pièce calme ; jugement sur les premières secondes ; écoute complète de 8,1 s'
+    note_en: 'treated studio (according to the page); according to the page, spaced pair; closed headphones or loudspeakers, quiet room; judged on the first seconds; full listening of 8.1 s'
+  doute: non
+  note: 'fondamentale mesurée ≈ 3100 Hz (un sol un peu bas, trois octaves et une quinte au-dessus du do du milieu du piano), valeur indicative ; le titre annonce un fa dièse 6 et le nom du fichier un sol 6, notes écrites : le piccolo sonne une octave plus haut qu’il ne s’écrit ; la mesure prime'
+  note_en: 'measured fundamental ≈ 3100 Hz (a slightly flat G, three octaves and a fifth above middle C), an indicative value; the title gives F sharp 6 and the file name G 6, written notes: the piccolo sounds an octave higher than written; the measurement takes precedence'
+  texte_fr: 'Une note tenue de piccolo : aiguë (prédiction, à éprouver).'
+  texte_en: 'A sustained piccolo note: high (prediction, to be tested).'

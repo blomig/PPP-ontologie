@@ -1,6 +1,6 @@
 # Fiche de type PPP — ppp:pitchClarity — format : PPP_FicheType.md (spec v2.8)
 # Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_base, note_categories, avertissement_label.
-# Série 50 (2026-10-15) : fiche en préparation, rédigée sans exemplaire ; aucun champ n’est encore relu.
+# Série 50 (2026-10-15) : fiche rédigée sans exemplaire ; séries 94 et 94 bis (2026-11-03) : sources relues, huit épisodes proposés « à réaliser » ; série 95 (2026-11-03) : relecture explicative faite (choix de relecture), fiche publiée (palier 2, épisodes à réaliser, X17).
 id: ppp:pitchClarity
 label_fr: netteté de la hauteur
 label_en: pitch clarity
@@ -14,12 +14,14 @@ base_dependance:
   facteurs_non_perceptuels: []
 facettes:
 - son
-définition: À quel point on entend dans le son une note précise, qu’on pourrait chanter, ou seulement une hauteur à peu près, ou aucune.
-question_attentionnelle: Pourrait-on chanter ce son, en dire seulement à peu près la hauteur, ou n’a-t-il pas de hauteur ?
-contre_exemple: 'Un son aigu n’a pas pour autant une hauteur nette : un souffle sifflant est aigu sans note (acuité). La justesse d’une note, par rapport à une gamme, n’est pas la netteté de sa hauteur.'
+définition: 'À quel point on entend une note dans un son : une note précise, qu’on pourrait chanter ; seulement une note à peu près, qu’on pourrait fredonner sans être sûr de la chanter juste ; ou aucune
+  note.'
+question_attentionnelle: Pourrait-on chanter ce son juste, seulement le fredonner à peu près, ou n’y a-t-il aucune note à chanter ?
+contre_exemple: 'Un son aigu n’a pas pour autant une note nette : le « pschhh » d’une bombe aérosol est aigu, mais on ne peut pas le chanter (c’est l’acuité, une autre fiche). Une note fausse, qui ne tombe
+  pas juste sur une gamme, peut être très nette : la justesse n’est pas la netteté.'
 mesure:
   etat: aucune_methode_robuste
-  synthese: 'Aucune méthode de mesure robuste n’est connue pour la netteté avec laquelle on entend une note (recherche du 2026-10-16). La force de hauteur (pitch strength) se mesure par des jugements sur une échelle continue [[fastl_stoll1979]] : ce sont des jugements d’auditeurs, sans référence physique ni procédure normalisée, et ils ne sont pas retenus.'
+  synthese: 'Aucune méthode de mesure robuste n’est connue pour la netteté avec laquelle on entend une note (recherche du 2026-10-16). La force de hauteur (pitch strength) se mesure en demandant à des auditeurs de donner un chiffre (estimation de grandeur), en pourcentage de celle d’un son pur [[fastl_stoll1979]] : ce sont des jugements d’auditeurs, sans référence physique ni procédure normalisée, et ils ne sont pas retenus.'
   regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
     une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
   methodes: []
@@ -27,11 +29,11 @@ mesure:
   - nom: échelle de force de hauteur (pitch strength)
     references:
     - fastl_stoll1979
-    raison: 'échelle de jugements d’auditeurs sans référence physique ni procédure normalisée (à la différence d’ASTM E544 pour les odeurs) ; elle ne dit pas si une note peut se chanter'
-    statut_lecture: résumé lu (Fastl et Stoll 1979)
+    raison: 'échelle de jugements d’auditeurs sans référence physique ni procédure normalisée (à la différence de la norme ASTM E544, qui compare une odeur à une gamme de concentrations d’un produit de référence, le butanol) ; elle ne dit pas si une note peut se chanter'
+    statut_lecture: résumé lu (Fastl et Stoll 1979 ; relu le 2026-11-03)
   - nom: rapport harmonique sur bruit
     references: []
-    raison: se calcule sur un enregistrement ; aucune source lue ne le relie à la netteté de la note entendue
+    raison: se calcule sur un enregistrement (part du son régulier par rapport au bruit) ; aucune source lue ne le relie à la netteté de la note entendue
     statut_lecture: aucune source lue (décisions de relecture du 2026-10-16)
 modalites:
 - audition
@@ -39,11 +41,12 @@ mode_de_presentation: échantillon
 conditions_critiques:
 - production
 - bruit_de_fond
-note_conditions: le bruit de fond masque la hauteur (facette `bruit_de_fond`) ; le geste qui fait sonner l’objet compte (facette `production`) (spec §9.7 H, règle 9). Les crans sont plus grossiers que l’échelle
-  continue de Fastl et Stoll (1979) [[fastl_stoll1979]], sans correspondance chiffrée.
-porteur: le son d’un objet, sous un geste ou un fonctionnement déclaré
+note_conditions: 'le bruit de fond masque la note (facette `bruit_de_fond`) ; la façon dont le son est produit compte aussi (facette `production` : un geste sur un objet, un appareil qui fonctionne, une
+  voix) : le même objet ne sonne pas pareil frappé ou frotté (spec §9.7 H, règle 9). Pour un enregistrement (`presentation: recording`), ces facettes décrivent la prise de son ; l’écoute (casque ou enceintes,
+  niveau réglé une fois) est notée dans l’épisode.'
+porteur: un son entendu, produit par un objet, un appareil ou une voix, de la façon déclarée (facette `production`)
 arité: 1
-condition_NA: objet qui ne sonne pas sous le geste déclaré.
+condition_NA: rien ne sonne de la façon déclarée (un objet qui ne sonne pas sous le geste déclaré).
 espace_valeurs:
   echelle: ordinale
   sens_croissant: de `singable` (rang 1) vers `noPitch` (rang 3), la hauteur est de moins en moins repérable
@@ -67,9 +70,12 @@ espace_valeurs:
     rang: 3
     repere: aucune note (un froissement de papier, un souffle)
     exemplaires: []
-note_categories: 'Les crans sont plus grossiers que l’échelle continue de Fastl (pitch strength), sans correspondance chiffrée. Vocabulaire de Schaeffer [[schaeffer1966]], lu via Chion : `singable` correspond
-  à la masse tonique ; `approximatePitch` est rapproché du son cannelé (Chion, 1983, art. 91) [[chion1983]] sans en être l’équivalent ; `noPitch` correspond au son nodal et au bruit blanc.'
-identite: À quel point on entend une hauteur, pas la hauteur elle-même (grave ou aigu), pas l’acuité (un son sifflant peut n’avoir aucune hauteur).
+note_categories: 'Les trois régions sont plus grossières que l’échelle en pourcentage de Fastl et Stoll, sans correspondance chiffrée ; elles suivent le même ordre : le son pur vaut 100 % ; les autres sons
+  qui ont une hauteur, de 100 à 50 % ; les bruits filtrés ou modulés, de 25 à 0 % [[fastl_stoll1979]]. Vocabulaire de Schaeffer [[schaeffer1966]], lu via Chion [[chion1983]] : `singable` correspond au son
+  pur (un son électronique sans timbre ; un diapason en est proche) et au son « tonique », dont on repère la note, comme une note de piano (art. 65 et 89) ; `approximatePitch` est rapproché du son « cannelé
+  », fait de notes et de blocs sans hauteur superposés, comme certains sons de tôles, de gongs ou de cloches (art. 91), sans en être l’équivalent ; `noPitch` correspond au son « nodal », un bloc compact
+  où l’on ne distingue aucune hauteur précise (art. 90), et au bruit blanc.'
+identite: 'À quel point on entend une note, pas la note elle-même (grave ou aiguë : c’est la hauteur perçue), pas l’acuité (un « pschhh » peut être aigu sans aucune note).'
 relations: []
 ontoClean:
   rigidite: +R
@@ -86,15 +92,15 @@ references:
   verifie_le: '2026-10-15'
   verifie_sur: ch. 5 « Pitch and Pitch Strength » lu en partie (p. 111-112) ; titres des autres chapitres seulement
   reprend: la pitch strength, sensation traitée à part de la hauteur (ch. 5, p. 111-112)
-  ne_reprend_pas: la hauteur virtuelle, non lue ; les valeurs chiffrées
+  ne_reprend_pas: la notion de « hauteur virtuelle » (non lue) ; les valeurs chiffrées
 - id: fastl_stoll1979
   citation: Fastl, H. & Stoll, G. (1979). Scaling of pitch strength. Hearing Research, 1(4), 293–301.
   doi_ou_url: https://doi.org/10.1016/0378-5955(79)90002-9
   role: alimente
   statut_verification: vérifiée sur résumé ou source secondaire
-  verifie_le: '2026-10-15'
-  verifie_sur: résumé lu ; texte non lu
-  reprend: une échelle continue de la pitch strength
+  verifie_le: '2026-11-03'
+  verifie_sur: résumé lu (PubMed ; relu le 2026-11-03) ; texte non lu
+  reprend: la pitch strength estimée en pourcentage de celle d’un son pur ; son pur à 100 %, autres sons qui ont une hauteur de 100 à 50 %, bruits filtrés ou modulés de 25 à 0 %
   ne_reprend_pas: ses valeurs ; aucune correspondance chiffrée avec les crans
 - id: chion1983
   citation: 'Chion, M. (1983). Guide des objets sonores. Pierre Schaeffer et la recherche musicale. Paris : Buchet/Chastel ; INA (coll. « Bibliothèque de recherche musicale »). Trad. angl. Guide to Sound
@@ -103,8 +109,8 @@ references:
   role: alimente
   statut_verification: vérifiée sur la source
   verifie_le: '2026-10-15'
-  verifie_sur: sections IV et V (art. 58 à 100) lues en entier dans la traduction anglaise de Dack et North
-  reprend: masse tonique, son cannelé (art. 91), son nodal
+  verifie_sur: sections IV et V (art. 58 à 100) lues en entier dans la traduction anglaise de Dack et North ; art. 65, 89, 90 et 91 relus le 2026-11-03 (copie tierce de la traduction ; site d’EARS en erreur ce jour-là)
+  reprend: son pur et masse tonique (art. 65, 89), son cannelé (art. 91), son nodal (art. 90)
   ne_reprend_pas: le vocabulaire de Schaeffer comme labels
 - id: schaeffer1966
   citation: 'Schaeffer, P. (1966). Traité des objets musicaux. Paris : Seuil (coll. « Pierres vives »).'
@@ -116,9 +122,11 @@ references:
     lu'
   reprend: le critère de masse
   ne_reprend_pas: la typo-morphologie entière
-etat_de_l_art: 'Fastl et Zwicker (2007, ch. 5, lu en partie, p. 111-112) [[fastl_zwicker2007]] traitent la pitch strength à part de la hauteur ; Fastl et Stoll (1979) [[fastl_stoll1979]] la jugent sur une
-  échelle continue (résumé lu). Schaeffer [[schaeffer1966]], lu via Chion (1983 ; sections IV et V (art. 58 à 100) lues en entier dans la traduction anglaise de Dack et North) [[chion1983]], distingue la
-  masse tonique, le son cannelé (art. 91) et le son nodal. Les trois crans de PPP sont plus grossiers que l’échelle de Fastl, sans correspondance chiffrée. Détail : docs/bibliographie-par-type.md#groupe-son.'
+etat_de_l_art: 'Fastl et Zwicker (2007, ch. 5, lu en partie, p. 111-112) [[fastl_zwicker2007]] traitent la force de hauteur (pitch strength : à quel point un son a une hauteur) à part de la hauteur elle-même.
+  Fastl et Stoll (1979) [[fastl_stoll1979]] la font estimer par des auditeurs, qui donnent un chiffre à ce qu’ils entendent (estimation de grandeur), en pourcentage du son pur : son pur 100 % (à 125, 250
+  et 500 Hz) ; autres sons qui ont une hauteur, de 100 à 50 % ; bruits filtrés ou modulés, de 25 à 0 % (résumé lu). Schaeffer [[schaeffer1966]], lu via Chion (1983 ; sections IV et V (art. 58 à 100) lues
+  en entier dans la traduction anglaise de Dack et North) [[chion1983]], distingue le son pur et le son tonique, dont on repère la note (art. 65), le son cannelé, fait de notes et de blocs sans hauteur
+  (art. 91), et le son nodal, sans hauteur précise (art. 90). Les trois régions de PPP sont plus grossières que l’échelle de Fastl et Stoll, sans correspondance chiffrée. Détail : docs/bibliographie-par-type.md#groupe-son.'
 etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-son
 axiomes:
 - conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
@@ -144,12 +152,12 @@ enonces_testables:
   epreuve: null
 - id: E2
   nature: structure
-  enonce: la netteté de la hauteur peut varier à acuité constante (deux souffles filtrés, l’un sur une note)
+  enonce: la netteté de la note peut changer sans que le son soit plus ou moins aigu (deux souffles filtrés aussi aigus l’un que l’autre, dont un seul fait entendre une note)
   statut_epistemique: non éprouvé
   epreuve: null
 cq_couvertes: CQ1, CQ2
 statut: candidat
-statut_note: 'en préparation (2026-10-15) : fiche rédigée, sans exemplaire ; tous les champs rédigés sont à relire'
+statut_note: fiche relue en relecture explicative (2026-11-03) ; huit épisodes proposés « à réaliser », sur des enregistrements versés au domaine public (CC0), pas encore observés
 statut_epistemique: non éprouvé
 introduit_en: '2.8'
 modifie_en: []
@@ -157,32 +165,243 @@ remplace_par: []
 source_de_la_fiche: proposition de famille « Son » (docs/famille-son-proposition.md (document de travail, non publié), séries 41 à 43 ; premier lot recommandé par la relecture explicative en série 49 bis, à confirmer par l’éditeur) ; fiche
   rédigée le 2026-10-15 par l’équipe, champs à valider par la relecture explicative
 manques:
-- 'exemplaires (à renseigner : objets publics vérifiés, un épisode par objet, conditions déclarées ; enregistrement cité ou objet décrit, X17)'
+- 'exemplaires observés : aucun épisode encore réalisé (huit proposés)'
 bloque_par: []
-a_relire:
-- label_fr
-- label_en
-- strate
-- définition
-- question_attentionnelle
-- contre_exemple
-- mode_de_presentation
-- conditions_critiques
-- note_conditions
-- porteur
-- condition_NA
-- espace_valeurs
-- note_categories
-- identite
-- references
-- etat_de_l_art
-- nanay
-- transfert
-- enonces_testables
-- statut_note
-- mesure
+a_relire: []
 relecture_explicative:
-  date: null
+  date: '2026-11-03'
   champs:
-  - 'harmonisation mécanique des énoncés affichés (série 69, 2026-10-17)'
+  - 'harmonisation mécanique des énoncés affichés (2026-10-17)'
+  - 'label_fr, label_en, strate, mode_de_presentation, conditions_critiques, espace_valeurs, references (reprend de fastl_stoll1979 aligné sur l''état de l''art), nanay, transfert : relus en langage courant le 2026-11-03, validés tels quels'
+  - 'définition, question_attentionnelle (et les huit consignes), contre_exemple, identite, note_conditions, porteur, condition_NA, note_categories, etat_de_l_art, mesure, enonces_testables (E2), statut_note, episodes_a_realiser : relus et corrigés en langage courant le 2026-11-03'
   a_reconfirmer: []
+# Séries 94 et 94 bis (épisode 08) : épisodes proposés « à réaliser » (spec X17 ; choix de relecture (2026-11-03)) ; ni épreuve faite ni accord entre observateurs ; ni observateur, ni date, ni résultat.
+# Enregistrements CC0 (Creative Commons 0), pages vérifiées le 2026-11-03 ; partiels, fréquences et bandes mesurés par l’équipe sur l’aperçu MP3 de chaque page (spectre), indicatifs, non vérifiés comme bornes.
+episodes_a_realiser:
+- id: ppp-a:ep-pitchClarity-01
+  realisation: a_realiser
+  region_attendue: singable
+  rang_exemplaire: principal
+  objet: enregistrement d’une note tenue de flûte traversière, environ 4 s, par yano1, sur Freesound (https://freesound.org/people/yano1/sounds/257363/), licence CC0, page vérifiée le 2026-11-03
+  objet_en: recording of a sustained concert-flute note, about 4 s, by yano1, on Freesound (https://freesound.org/people/yano1/sounds/257363/), CC0 licence, page checked on 2026-11-03
+  preparation: ouvrir la page et écouter l’enregistrement en entier, sans le télécharger ni le modifier ; régler le niveau sur cette note, à peu près comme une conversation calme, puis ne plus le toucher
+    pour les autres épisodes
+  preparation_en: open the page and listen to the whole recording, without downloading or editing it; set the level on this note, roughly like a calm conversation, then leave it unchanged for the other
+    episodes
+  consigne: Pourrait-on chanter ce son juste, seulement le fredonner à peu près, ou n’y a-t-il aucune note à chanter ?
+  consigne_en: Could you sing this sound in tune, only hum it roughly, or is there no note to sing?
+  conditions:
+    presentation: recording
+    distance: near
+    production: airflow
+    bruit_de_fond: quiet
+    duree: glance
+    note: prise de son proche (estimée ; la page ne décrit pas la prise de son) ; écoute au casque fermé ou sur enceintes ; pièce calme ; jugement sur les premières secondes ; écoute complète de 4,0 s
+    note_en: close recording (estimated; the page does not describe the recording); listen on closed headphones or loudspeakers; quiet room; judged on the first seconds; full listening of 4.0 s
+  doute: non
+  note: fondamentale mesurée ≈ 262 Hz (le do du milieu du piano), conforme au titre de la page ; partiels (les sons simples dont le son est fait) aux multiples entiers de la fondamentale (la fréquence la plus basse, celle de la note) (série harmonique mesurée par l’équipe sur l’aperçu MP3)
+    ; valeurs indicatives. Même enregistrement que l’épisode 03 de `perceivedPitch`
+  note_en: measured fundamental ≈ 262 Hz (middle C), matching the page title; partials (the simple tones the sound is made of) at whole multiples of the fundamental (the lowest frequency, that of the note) (harmonic series measured by the team on the MP3 preview); indicative values.
+    Same recording as episode 03 of `perceivedPitch`
+  texte_fr: 'Une note de flûte, le do du milieu du piano : une note qu’on pourrait chanter (prédiction, à éprouver).'
+  texte_en: 'A flute note, middle C: a note you could sing (prediction, to be tested).'
+- id: ppp-a:ep-pitchClarity-02
+  realisation: a_realiser
+  region_attendue: singable
+  rang_exemplaire: second
+  objet: enregistrement d’un diapason, environ 16 s (le son commence vers 3,5 s), par jensen1, sur Freesound (https://freesound.org/people/jensen1/sounds/331038/), licence CC0, page vérifiée le 2026-11-03
+  objet_en: recording of a tuning fork, about 16 s (the sound starts at about 3.5 s), by jensen1, on Freesound (https://freesound.org/people/jensen1/sounds/331038/), CC0 licence, page checked on 2026-11-03
+  preparation: comme l’épisode 01 ; même niveau d’écoute
+  preparation_en: as in episode 01; same listening level
+  consigne: Pourrait-on chanter ce son juste, seulement le fredonner à peu près, ou n’y a-t-il aucune note à chanter ?
+  consigne_en: Could you sing this sound in tune, only hum it roughly, or is there no note to sing?
+  conditions:
+    presentation: recording
+    distance: contact
+    production: impact
+    bruit_de_fond: quiet
+    duree: glance
+    note: 'enregistré avec un capteur de guitare, non avec un micro (d’après la page) : on entend la vibration captée sur le diapason, d’où `contact` ; diapason frappé (estimé ; la page ne le dit pas) ;
+      casque fermé ou enceintes, pièce calme ; jugement sur les premières secondes du son ; écoute complète de 16,2 s'
+    note_en: 'recorded with a guitar pickup, not a microphone (according to the page): what is heard is the vibration picked up on the fork, hence `contact`; fork struck (estimated; the page does not say);
+      closed headphones or loudspeakers, quiet room; judged on the first seconds of the sound; full listening of 16.2 s'
+  doute: non
+  note: 'fréquence mesurée ≈ 440 Hz (le la du diapason), la page dit « un peu moins de 440 Hz » ; deuxième partiel (≈ 880 Hz, le double de la note) environ 25 à 36 dB plus faible, selon le moment (choix de relecture (2026-11-03)) : un son presque
+    pur (le son pur de Chion, 1983, art. 65) ; valeurs indicatives. Épisode de contrôle : un son pur, à côté de la note d’instrument de l’épisode 01'
+  note_en: 'measured frequency ≈ 440 Hz (concert A), the page says “a little less than 440Hz”; second partial (≈ 880 Hz, twice the note) about 25 to 36 dB weaker, depending on the moment (review choice (2026-11-03)): an almost pure tone
+    (Chion’s pure sound, 1983, art. 65); indicative values. Control episode: a pure tone, beside the instrument note of episode 01'
+  texte_fr: 'Un diapason, son presque pur, le la : une note qu’on pourrait chanter (prédiction, à éprouver).'
+  texte_en: 'A tuning fork, an almost pure tone, concert A: a note you could sing (prediction, to be tested).'
+- id: ppp-a:ep-pitchClarity-03
+  realisation: a_realiser
+  region_attendue: approximatePitch
+  rang_exemplaire: principal
+  objet: enregistrement d’un coup de cuillère en bois sur une casserole, environ 3 s, par RoyalRose, sur Freesound (https://freesound.org/people/RoyalRose/sounds/560303/), licence CC0, page vérifiée le
+    2026-11-03
+  objet_en: recording of a wooden spoon hitting a saucepan, about 3 s, by RoyalRose, on Freesound (https://freesound.org/people/RoyalRose/sounds/560303/), CC0 licence, page checked on 2026-11-03
+  preparation: comme l’épisode 01 ; même niveau d’écoute
+  preparation_en: as in episode 01; same listening level
+  consigne: Pourrait-on chanter ce son juste, seulement le fredonner à peu près, ou n’y a-t-il aucune note à chanter ?
+  consigne_en: Could you sing this sound in tune, only hum it roughly, or is there no note to sing?
+  conditions:
+    presentation: recording
+    distance: near
+    production: impact
+    bruit_de_fond: quiet
+    duree: glance
+    note: 'enregistrement brut, sans retouche (d’après la page) ; la page signale un bruit de fond possible : le fond mesuré reste environ 50 à 60 dB sous le coup, selon la fenêtre mesurée (choix de relecture (2026-11-03)), d’où `quiet` (estimé) ; prise de son proche
+      (estimée) ; casque fermé ou enceintes, pièce calme ; jugement sur le coup principal ; écoute complète de 3,4 s'
+    note_en: 'raw recording, no edits (according to the page); the page warns of possible background noise: the measured floor stays about 50 to 60 dB below the hit, depending on the window measured (review choice (2026-11-03)), hence `quiet` (estimated); close recording
+      (estimated); closed headphones or loudspeakers, quiet room; judged on the main hit; full listening of 3.4 s'
+  doute: non
+  note: 'partiels mesurés ≈ 693, 1135, 1639 (le plus fort), 2007 et 2682 Hz : ils ne sont pas multiples d’une même fondamentale (son inharmonique) ; valeurs indicatives. C’est le repère de la région (un
+    coup sur une casserole)'
+  note_en: 'measured partials ≈ 693, 1135, 1639 (the strongest), 2007 and 2682 Hz: they are not multiples of one fundamental (an inharmonic sound); indicative values. This is the reference point of the
+    region (a knock on a saucepan)'
+  texte_fr: 'Un coup sur une casserole : une hauteur approximative (prédiction, à éprouver).'
+  texte_en: 'A knock on a saucepan: an approximate pitch (prediction, to be tested).'
+- id: ppp-a:ep-pitchClarity-04
+  realisation: a_realiser
+  region_attendue: approximatePitch
+  rang_exemplaire: second
+  objet: enregistrement d’une grosse cloche frappée neuf fois, un coup toutes les 4 s, longue résonance, environ 40 s, par daytripper, sur Freesound (https://freesound.org/people/daytripper/sounds/118851/),
+    licence CC0, page vérifiée le 2026-11-03
+  objet_en: recording of a large bell struck nine times, one strike every 4 s, long resonance, about 40 s, by daytripper, on Freesound (https://freesound.org/people/daytripper/sounds/118851/), CC0 licence,
+    page checked on 2026-11-03
+  preparation: comme l’épisode 01 ; même niveau d’écoute
+  preparation_en: as in episode 01; same listening level
+  consigne: Pourrait-on chanter ce son juste, seulement le fredonner à peu près, ou n’y a-t-il aucune note à chanter ?
+  consigne_en: Could you sing this sound in tune, only hum it roughly, or is there no note to sing?
+  conditions:
+    presentation: recording
+    distance: unknown
+    production: impact
+    bruit_de_fond: quiet
+    duree: glance
+    note: la page ne décrit ni la distance ni le lieu (`unknown`) ; entre les coups on n’entend que la résonance, d’où `quiet` (estimé) ; casque fermé ou enceintes, pièce calme ; jugement sur le premier
+      coup (4 s) ; écoute complète de 39,9 s
+    note_en: the page describes neither the distance nor the place (`unknown`); between strikes only the resonance is heard, hence `quiet` (estimated); closed headphones or loudspeakers, quiet room; judged
+      on the first strike (4 s); full listening of 39.9 s
+  doute: oui
+  motif_doute: 'la note de frappe d’une cloche peut s’entendre assez nettement pour être chantée : certains sons cannelés sont « si étroits qu’ils sonnent comme des toniques » (Chion, 1983, art. 91)'
+  motif_doute_en: 'the strike note of a bell can be heard clearly enough to be sung: some channelled sounds are “so narrow that they sound like tonics” (Chion, 1983, art. 91)'
+  note: 'partiels mesurés au premier coup ≈ 298, 336, 432 (le plus fort), 576 et 758 Hz : ils ne sont pas multiples d’une même fondamentale (son inharmonique) ; valeurs indicatives. Région et doute maintenus,
+    choix de relecture (2026-11-03)'
+  note_en: 'partials measured on the first strike ≈ 298, 336, 432 (the strongest), 576 and 758 Hz: they are not multiples of one fundamental (an inharmonic sound); indicative values. Region and doubt kept,
+    review choice (2026-11-03)'
+  texte_fr: 'Une grosse cloche, dont les partiels ne s’alignent pas sur une seule note : une hauteur approximative (prédiction, à éprouver).'
+  texte_en: 'A large bell, whose partials do not line up on a single note: an approximate pitch (prediction, to be tested).'
+- id: ppp-a:ep-pitchClarity-05
+  realisation: a_realiser
+  region_attendue: approximatePitch
+  rang_exemplaire: second
+  objet: enregistrement d’un bruit blanc électronique passé dans un filtre passe-bande réglé vers 4,5 kHz, résonance réglée à 9 (d’après la page), 2 s, par cabled_mess, sur Freesound (https://freesound.org/people/cabled_mess/sounds/339562/),
+    licence CC0, page vérifiée le 2026-11-03
+  objet_en: recording of electronic white noise through a band-pass filter set at about 4.5 kHz, resonance set to 9 (according to the page), 2 s, by cabled_mess, on Freesound (https://freesound.org/people/cabled_mess/sounds/339562/),
+    CC0 licence, page checked on 2026-11-03
+  preparation: comme l’épisode 01 ; même niveau d’écoute ; ce son est enregistré plus fort que les autres et peut être écouté en boucle (la page dit l’avoir coupé pour cela)
+  preparation_en: as in episode 01; same listening level; this sound is recorded louder than the others and can be looped (the page says it was cut for that)
+  consigne: Pourrait-on chanter ce son juste, seulement le fredonner à peu près, ou n’y a-t-il aucune note à chanter ?
+  consigne_en: Could you sing this sound in tune, only hum it roughly, or is there no note to sing?
+  conditions:
+    presentation: recording
+    distance: unknown
+    production: operation
+    bruit_de_fond: quiet
+    duree: glance
+    note: 'son d’un appareil électronique enregistré par une interface audio (marque nommée par la page ; sans micro, déduit), choix de relecture (2026-11-03) : ni distance (`unknown`) ni bruit de la pièce (`quiet`) ; `operation` :
+      la page nomme l’appareil et le filtre, choix de relecture (2026-11-03) ; casque fermé ou enceintes, pièce calme ; jugement sur l’écoute entière ; écoute complète de 2,0 s'
+    note_en: 'sound of an electronic device recorded through an audio interface (brand named by the page; no microphone, inferred), review choice (2026-11-03): no distance (`unknown`) and no room noise (`quiet`); `operation`:
+      the page names the device and the filter, review choice (2026-11-03); closed headphones or loudspeakers, quiet room; judged on the whole recording; full listening of 2.0 s'
+  doute: oui
+  motif_doute: 'bande étroite et très aiguë, 2 s seulement : certains n’y entendront qu’un sifflement sans hauteur, d’autres une note ; aucune source lue ne fixe la largeur de bande où naît une hauteur'
+  motif_doute_en: 'narrow, very high band, only 2 s: some will hear only a hiss with no pitch, others a note; no source read sets the bandwidth at which a pitch appears'
+  note: 'bande mesurée ≈ 4,3 à 4,8 kHz à 3 dB sous le maximum (là où le son garde au moins la moitié de sa puissance) (≈ 4,6 kHz), sans série harmonique ; valeurs indicatives. Bruit filtré : Fastl et Stoll (1979, résumé) donnent aux bruits filtrés ou modulés la force de hauteur la plus faible (de 25 à 0 %)'
+  note_en: 'measured band ≈ 4.3 to 4.8 kHz at 3 dB below the maximum (where the sound keeps at least half its power) (≈ 4.6 kHz), with no harmonic series; indicative values. Filtered noise: Fastl and Stoll (1979, abstract) give filtered or modulated noises the weakest pitch strength (25 to 0%)'
+  texte_fr: 'Un souffle électronique très aigu, resserré sur une bande étroite : une hauteur approximative (prédiction, à éprouver).'
+  texte_en: 'An electronic hiss, very high, narrowed to a thin band: an approximate pitch (prediction, to be tested).'
+- id: ppp-a:ep-pitchClarity-06
+  realisation: a_realiser
+  region_attendue: noPitch
+  rang_exemplaire: principal
+  objet: enregistrement de feuilles de papier froissées, environ 6 s, par 12beesinatrenchcoat, sur Freesound (https://freesound.org/people/12beesinatrenchcoat/sounds/653952/), licence CC0, page vérifiée
+    le 2026-11-03
+  objet_en: recording of sheets of paper being crumpled, about 6 s, by 12beesinatrenchcoat, on Freesound (https://freesound.org/people/12beesinatrenchcoat/sounds/653952/), CC0 licence, page checked on 2026-11-03
+  preparation: comme l’épisode 01 ; même niveau d’écoute
+  preparation_en: as in episode 01; same listening level
+  consigne: Pourrait-on chanter ce son juste, seulement le fredonner à peu près, ou n’y a-t-il aucune note à chanter ?
+  consigne_en: Could you sing this sound in tune, only hum it roughly, or is there no note to sing?
+  conditions:
+    presentation: recording
+    distance: near
+    production: deformation
+    bruit_de_fond: quiet
+    duree: glance
+    note: micro tenu au-dessus d’une pile de papier (d’après la page) ; fond mesuré environ 50 dB sous le froissement, d’où `quiet` (estimé) ; casque fermé ou enceintes, pièce calme ; jugement sur les premières
+      secondes ; écoute complète de 5,8 s
+    note_en: microphone held above a stack of paper (according to the page); measured floor about 50 dB below the crumpling, hence `quiet` (estimated); closed headphones or loudspeakers, quiet room; judged
+      on the first seconds; full listening of 5.8 s
+  doute: non
+  note: spectre large et plat, sans partiel dominant ni série harmonique ; valeur indicative. C’est le repère de la région (un froissement de papier)
+  note_en: broad, flat spectrum, with no dominant partial and no harmonic series; indicative. This is the reference point of the region (paper rustling)
+  texte_fr: 'Du papier froissé : aucune hauteur repérable (prédiction, à éprouver).'
+  texte_en: 'Crumpled paper: no discernible pitch (prediction, to be tested).'
+- id: ppp-a:ep-pitchClarity-07
+  realisation: a_realiser
+  region_attendue: noPitch
+  rang_exemplaire: second
+  objet: enregistrement de 30 s de bruit rose, par JarredGibb, sur Freesound (https://freesound.org/people/JarredGibb/sounds/249314/), licence CC0, page vérifiée le 2026-11-03
+  objet_en: recording of 30 s of pink noise, by JarredGibb, on Freesound (https://freesound.org/people/JarredGibb/sounds/249314/), CC0 licence, page checked on 2026-11-03
+  preparation: comme l’épisode 01 ; même niveau d’écoute
+  preparation_en: as in episode 01; same listening level
+  consigne: Pourrait-on chanter ce son juste, seulement le fredonner à peu près, ou n’y a-t-il aucune note à chanter ?
+  consigne_en: Could you sing this sound in tune, only hum it roughly, or is there no note to sing?
+  conditions:
+    presentation: recording
+    distance: unknown
+    production: unknown
+    bruit_de_fond: quiet
+    duree: glance
+    note: 'son de synthèse ; la page ne nomme ni geste ni appareil (`unknown`, choix de relecture (2026-11-03)) ; ni distance (`unknown`) ni bruit de la pièce (`quiet`) ; casque fermé ou enceintes, pièce
+      calme ; jugement sur les premières secondes ; écoute complète de 30,0 s. À l’épreuve, cet épisode sera « non tranché » sur la production : la page ne dit pas comment le son est produit ; le repère
+      du bruit sans hauteur reste l’épisode 06 (choix de relecture (2026-11-03)).'
+    note_en: 'synthesized sound; the page names neither gesture nor device (`unknown`, review choice (2026-11-03)); no distance (`unknown`) and no room noise (`quiet`); closed headphones or loudspeakers,
+      quiet room; judged on the first seconds; full listening of 30.0 s. At test, this episode will be “undecided” on production: the page does not say how the sound is produced; the reference for
+      unpitched noise remains episode 06 (review choice (2026-11-03)).'
+  doute: non
+  note: 'énergie mesurée à peu près égale dans chaque octave, de 100 Hz à 12,8 kHz (bruit rose), sans partiel ; valeur indicative. Épisode de contrôle : un bruit sans objet, à côté du papier de l’épisode
+    06'
+  note_en: 'measured energy roughly equal in each octave, from 100 Hz to 12.8 kHz (pink noise), with no partial; indicative. Control episode: a noise without an object, beside the paper of episode 06'
+  texte_fr: 'Un souffle électronique régulier (bruit rose) : aucune hauteur repérable (prédiction, à éprouver).'
+  texte_en: 'A steady electronic hiss (pink noise): no discernible pitch (prediction, to be tested).'
+- id: ppp-a:ep-pitchClarity-08
+  realisation: a_realiser
+  region_attendue: singable
+  rang_exemplaire: second
+  objet: enregistrement d’une voix de femme chantant des notes tenues improvisées, environ 11 s, par owstu, sur Freesound (https://freesound.org/people/owstu/sounds/628817/), licence CC0, page vérifiée
+    le 2026-11-03
+  objet_en: recording of a female voice singing improvised sustained notes, about 11 s, by owstu, on Freesound (https://freesound.org/people/owstu/sounds/628817/), CC0 licence, page checked on 2026-11-03
+  preparation: comme l’épisode 01 ; même niveau d’écoute ; écouter la première note tenue, de 0,2 à 4,9 s
+  preparation_en: as in episode 01; same listening level; listen to the first sustained note, from 0.2 to 4.9 s
+  consigne: Pourrait-on chanter ce son juste, seulement le fredonner à peu près, ou n’y a-t-il aucune note à chanter ?
+  consigne_en: Could you sing this sound in tune, only hum it roughly, or is there no note to sing?
+  conditions:
+    presentation: recording
+    distance: unknown
+    production: voiceOrBreath
+    bruit_de_fond: quiet
+    duree: glance
+    note: 'la page ne décrit ni la prise de son ni la distance (`unknown`) ; voix chantée, notée `voiceOrBreath` : une voix produit le son, seule (définition amendée de `voiceOrBreath`, spec §9.7 H, règle 9 ; choix de relecture (2026-11-03)) ; fond
+      mesuré environ 35 à 40 dB sous la note, d’où `quiet` (estimé) ; casque fermé ou enceintes, pièce calme ; jugement sur la première note tenue ; écoute de 0,2 à 4,9 s (4,7 s), sur un enregistrement
+      de 10,9 s'
+    note_en: 'the page describes neither the recording nor the distance (`unknown`); singing voice, recorded as `voiceOrBreath`: a voice produces the sound, alone (amended definition of `voiceOrBreath`, spec §9.7 H, rule 9; review choice (2026-11-03)); measured
+      floor about 35 to 40 dB below the note, hence `quiet` (estimated); closed headphones or loudspeakers, quiet room; judged on the first sustained note; listening from 0.2 to 4.9 s (4.7 s), out of a
+      10.9 s recording'
+  doute: non
+  note: 'fondamentale mesurée ≈ 396 Hz (un sol, une quinte au-dessus du do du milieu du piano ; de 395 à 403 Hz entre 0,6 et 4,2 s), valeur indicative ; partiels à ≈ 791, 1187, 1582, 1977, 2383, 2768 et
+    3167 Hz, multiples entiers de la fondamentale (série harmonique mesurée par l’équipe sur l’aperçu MP3) ; un pic faible vers 198 Hz (environ 29 dB sous la fondamentale), sans partiel net aux multiples impairs de 198 Hz (vers 594 et 990 Hz) : la fondamentale n’est pas à l’octave inférieure. Rang second : le repère de la région est une note de flûte (épisode 01, principal) ; la voix est une autre façon de produire le son'
+  note_en: 'measured fundamental ≈ 396 Hz (a G, a fifth above middle C; 395 to 403 Hz between 0.6 and 4.2 s), an indicative value; partials at ≈ 791, 1187, 1582, 1977, 2383, 2768 and 3167 Hz, whole multiples
+    of the fundamental (harmonic series measured by the team on the MP3 preview); a weak peak near 198 Hz (about 29 dB below the fundamental), with no clear partial at odd multiples of 198 Hz (near 594 and 990 Hz): the fundamental
+    is not an octave lower. Second rank: the reference point of the region is a flute note (episode 01, principal); the voice is another way of producing the sound'
+  texte_fr: 'Une note tenue chantée par une voix de femme, un sol : une note qu’on pourrait chanter (prédiction, à éprouver).'
+  texte_en: 'A sustained note sung by a female voice, a G: a note you could sing (prediction, to be tested).'

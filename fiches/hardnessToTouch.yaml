@@ -253,7 +253,7 @@ source_de_la_fiche: 'ticket n° 4 (https://github.com/blomig/PPP-ontologie/issue
 # Série 90 : épisodes proposés « à réaliser » (spec X17 ; décision de l’éditeur du projet du 2026-11-02 pour le principe ; champs et détail du lot : choix de relecture (2026-11-02)) ; ni épreuve faite ni accord entre observateurs ;
 # ni observateur, ni date, ni résultat. Objets et prédictions repris de la proposition de lot 7, révisés : choix de relecture (2026-11-02).
 episodes_a_realiser:
-- id: ppp-a:prop7-hardnessToTouch-01
+- id: ppp-a:ep-hardnessToTouch-01
   realisation: a_realiser
   region_attendue: yieldsMuch
   objet: éponge de ménage en mousse synthétique (polyuréthane), sans face grattante, sèche, d’environ 11 × 7 × 3 cm ; pas une éponge de cellulose
@@ -276,7 +276,7 @@ episodes_a_realiser:
   note_en: 'reference point of the entry: “a dry synthetic foam sponge”; a cellulose sponge stiffens as it dries (Rey and Vandamme, 2013) and would fall one step harder'
   texte_fr: 'Une éponge synthétique (mousse) sèche : cède beaucoup (prédiction, à éprouver).'
   texte_en: 'A dry synthetic foam sponge: yields a lot (prediction, to be tested).'
-- id: ppp-a:prop7-hardnessToTouch-02
+- id: ppp-a:ep-hardnessToTouch-02
   realisation: a_realiser
   region_attendue: yieldsSome
   rang_exemplaire: principal
@@ -302,7 +302,7 @@ episodes_a_realiser:
   note_en: 'reproducible and non-perishable: main exemplar of the step'
   texte_fr: 'Une balle de mousse dense : cède un peu (prédiction, à éprouver).'
   texte_en: 'A dense foam ball: yields somewhat (prediction, to be tested).'
-- id: ppp-a:prop7-hardnessToTouch-03
+- id: ppp-a:ep-hardnessToTouch-03
   realisation: a_realiser
   region_attendue: yieldsSome
   rang_exemplaire: second
@@ -328,7 +328,7 @@ episodes_a_realiser:
   note_en: 'reference point of the entry: “a fresh mushroom cap”; wash hands afterwards'
   texte_fr: 'Un chapeau de champignon de Paris : cède un peu (prédiction, à éprouver).'
   texte_en: 'A button mushroom cap: yields somewhat (prediction, to be tested).'
-- id: ppp-a:prop7-hardnessToTouch-04
+- id: ppp-a:ep-hardnessToTouch-04
   realisation: a_realiser
   region_attendue: yieldsBarely
   objet: gomme blanche ou beige ordinaire, en bloc, sans étui, neuve, d’environ 5 × 2 × 1 cm
@@ -351,7 +351,7 @@ episodes_a_realiser:
   motif_doute_en: boundary with “yields somewhat”; no hardness measurement is retained as a region threshold
   texte_fr: 'Une gomme : cède à peine (prédiction, à éprouver).'
   texte_en: 'An eraser: yields barely (prediction, to be tested).'
-- id: ppp-a:prop7-hardnessToTouch-05
+- id: ppp-a:ep-hardnessToTouch-05
   realisation: a_realiser
   region_attendue: yieldsBarely
   objet: bouchon de liège naturel (environ 44 × 24 mm), couché sur la table et calé, pressé sur sa face cylindrique
@@ -374,7 +374,7 @@ episodes_a_realiser:
   motif_doute_en: under the finger alone, the indentation is small
   texte_fr: 'Un bouchon de liège : cède à peine (prédiction, à éprouver).'
   texte_en: 'A cork stopper: yields barely (prediction, to be tested).'
-- id: ppp-a:prop7-hardnessToTouch-06
+- id: ppp-a:ep-hardnessToTouch-06
   realisation: a_realiser
   region_attendue: doesNotYield
   objet: galet de rivière ou de plage, plat, lisse, sans fissure, d’environ 8 × 6 × 3 cm ; nature de la pierre notée si connue ; ramassé là où c’est permis
