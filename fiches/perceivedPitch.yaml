@@ -22,7 +22,7 @@ définition: 'Si le son paraît grave ou aigu : sa place entre les sons les plus
 question_attentionnelle: Ce son est-il grave (une contrebasse, une grosse cloche), médium (une voix d’adulte qui parle normalement), ou aigu (un piccolo, une clochette) ?
 contre_exemple: 'Le « pschhh » d’une bombe aérosol ou d’un jet de vapeur paraît « aigu » sans avoir de note : c’est l’acuité du son (`ppp:soundSharpness`), et ce type ne s’y applique pas. Un son plus fort
   n’est pas plus aigu : la force du son est une autre qualité. Une même note jouée par une flûte et par un violon a la même hauteur et deux timbres (le timbre est la couleur du son, ce qui fait reconnaître
-  l’instrument) : un son peut être étouffé et aigu, ou brillant et grave.'
+  l’instrument) : un son peut être sombre et aigu, ou clair et grave.'
 grandeur_physique_homonyme: 'fréquence, en hertz (Hz : nombre de vibrations par seconde), et fréquence fondamentale (F0 : la fréquence de base d’un son à note, dont ses composantes sont des multiples) :
   la hauteur en dépend surtout, sans s’y réduire [[mcdermott_oxenham2008]] ; les régions de ce type ne sont pas des bandes de fréquence.'
 mesure:
@@ -122,11 +122,13 @@ note_categories: 'Trois régions, du grave à l’aigu : les repères sont des s
   (norme américaine ANSI/ASA S1.1) [[ansi_s1_1_2013]] distingue la hauteur sur une échelle du grave à l’aigu (« pitch height », aussi appelée registre) et la place de la note dans l’octave (un do reste
   un do, grave ou aigu) ; ce type ne retient que la première. Shepard (1964) [[shepard1964]] a construit par ordinateur des sons dont chacun paraît plus aigu que le précédent, alors que la série revient
   à son point de départ : on ne peut donc pas toujours ranger les hauteurs sur une seule ligne.'
-identite: 'Où le son se place du grave à l’aigu ; pas la netteté de cette hauteur (`ppp:pitchClarity`), pas l’acuité ni la brillance du son (`ppp:soundSharpness`, le timbre), pas la force du son, pas la note exacte ni sa justesse.'
+identite: Où le son se place du grave à l’aigu ; pas la netteté de cette hauteur (`ppp:pitchClarity`), pas l’acuité du son (clair ou sombre ; `ppp:soundSharpness`, le timbre), pas la force du son, pas la
+  note exacte ni sa justesse.
 relations:
 - type: confusableWith
   cible: ppp:soundSharpness
-  note: 'on dit aussi « aigu » d’un son qui chuinte (un « pschhh »), même sans note : c’est l’acuité. Un son qui a une note nette peut être grave et brillant, ou aigu et étouffé.'
+  note: 'on dit aussi « aigu » d’un son clair, presque sifflant (un « pschhh »), même sans note : c’est l’acuité. Un son qui a une note nette peut être grave et clair, ou aigu et sombre (réciproque écrite
+    aussi dans soundSharpness).'
 ontoClean:
   rigidite: +R
   identite_propre: +I
@@ -266,6 +268,7 @@ relecture_explicative:
   champs:
   - 'label_fr, label_en, avertissement_label, strate, question_attentionnelle, mode_de_presentation, conditions_critiques, porteur, condition_NA, espace_valeurs, identite, references, nanay, transfert : relus en langage courant le 2026-11-03, validés tels quels'
   - 'note_base, définition, contre_exemple, grandeur_physique_homonyme, note_conditions, note_categories, relations, etat_de_l_art, enonces_testables (E2), statut_note, mesure, episodes_a_realiser : relus et corrigés en langage courant le 2026-11-03'
+  - 'contre_exemple, identite, relations (alignés sur l’acuité du son : clair ou sombre ; réciproque, choix de relecture (2026-11-05))'
   a_reconfirmer: []
 # Série 93 : épisodes proposés « à réaliser » (spec X17 ; choix de relecture (2026-11-02)) ; ni épreuve faite ni accord entre observateurs ; ni observateur, ni date, ni résultat.
 # Enregistrements CC0 (Creative Commons 0), pages vérifiées le 2026-11-02 ; fréquences fondamentales mesurées par l’équipe sur l’aperçu MP3 de chaque page (autocorrélation), indicatives, non vérifiées comme bornes.

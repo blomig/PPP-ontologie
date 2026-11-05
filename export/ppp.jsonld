@@ -188,7 +188,7 @@
    "dct_license": "https://creativecommons.org/licenses/by/4.0/",
    "owl:versionInfo": "2.8",
    "dct:modified": {
-    "@value": "2026-11-03",
+    "@value": "2026-11-05",
     "@type": "xsd:date"
    },
    "dct:creator": [
@@ -3731,12 +3731,12 @@
    "scopeNote": {
     "fr": [
      "Ce son est-il grave (une contrebasse, une grosse cloche), médium (une voix d’adulte qui parle normalement), ou aigu (un piccolo, une clochette) ?",
-     "Le « pschhh » d’une bombe aérosol ou d’un jet de vapeur paraît « aigu » sans avoir de note : c’est l’acuité du son (`ppp:soundSharpness`), et ce type ne s’y applique pas. Un son plus fort n’est pas plus aigu : la force du son est une autre qualité. Une même note jouée par une flûte et par un violon a la même hauteur et deux timbres (le timbre est la couleur du son, ce qui fait reconnaître l’instrument) : un son peut être étouffé et aigu, ou brillant et grave.",
+     "Le « pschhh » d’une bombe aérosol ou d’un jet de vapeur paraît « aigu » sans avoir de note : c’est l’acuité du son (`ppp:soundSharpness`), et ce type ne s’y applique pas. Un son plus fort n’est pas plus aigu : la force du son est une autre qualité. Une même note jouée par une flûte et par un violon a la même hauteur et deux timbres (le timbre est la couleur du son, ce qui fait reconnaître l’instrument) : un son peut être sombre et aigu, ou clair et grave.",
      "Trois régions, du grave à l’aigu : les repères sont des sons qu’on connaît (une voix d’adulte qui parle normalement, des instruments), pas des fréquences. Aucune source lue ne fixe de limite perçue entre grave, médium et aigu : les fréquences données dans les épisodes sont mesurées par l’équipe et restent indicatives, non vérifiées comme bornes. La terminologie acoustique normalisée (norme américaine ANSI/ASA S1.1) distingue la hauteur sur une échelle du grave à l’aigu (« pitch height », aussi appelée registre) et la place de la note dans l’octave (un do reste un do, grave ou aigu) ; ce type ne retient que la première. Shepard (1964) a construit par ordinateur des sons dont chacun paraît plus aigu que le précédent, alors que la série revient à son point de départ : on ne peut donc pas toujours ranger les hauteurs sur une seule ligne."
     ],
     "en": [
      "Is this sound low (a double bass, a large bell), mid (an adult speaking normally), or high (a piccolo, a small bell)?",
-     "The “pssshh” of an aerosol can or a jet of steam sounds “high” without having a note: that is the sharpness of the sound (`ppp:soundSharpness`), and this type does not apply to it. A louder sound is not a higher one: loudness is another quality. The same note played by a flute and by a violin has the same pitch and two timbres (timbre is the colour of the sound, what lets you recognise the instrument): a sound can be muffled and high, or bright and low.",
+     "The “pssshh” of an aerosol can or a jet of steam sounds “high” without having a note: that is the sharpness of the sound (`ppp:soundSharpness`), and this type does not apply to it. A louder sound is not a higher one: loudness is another quality. The same note played by a flute and by a violin has the same pitch and two timbres (timbre is the colour of the sound, what lets you recognise the instrument): a sound can be dark and high, or bright and low.",
      "Three regions, from low to high: the reference points are familiar sounds (an adult speaking normally, instruments), not frequencies. No source read sets a perceived boundary between low, mid and high: the frequencies given in the episodes were measured by the team and remain indicative, not checked as boundaries. Standard acoustical terminology (the American standard ANSI/ASA S1.1) distinguishes pitch on a scale from low to high (“pitch height”, also called register) from the place of the note within the octave (a C stays a C, low or high); this type keeps only the former. Shepard (1964) built computer-generated tones each of which sounds higher than the one before, while the series comes back to its starting point: pitches therefore cannot always be ordered on a single line."
     ]
    },

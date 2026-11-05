@@ -1,11 +1,13 @@
 # Fiche de type PPP — ppp:soundDecay — format : PPP_FicheType.md (spec v2.8)
 # Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_base, note_categories, avertissement_label.
 # Série 50 (2026-10-15) : fiche en préparation, rédigée sans exemplaire ; aucun champ n’est encore relu.
+# Série 98 (2026-11-04) : sources lues et mesures complétées, porteur élargi à l’appareil, épisodes proposés « à réaliser » ; relecture explicative à faire.
+# Série 98 bis (2026-11-04) : relecture appliquée (18 points) ; label « extinction du son » (« résonance » en alternatif), label anglais « sound decay » ; relecture explicative à faire.
 id: ppp:soundDecay
-label_fr: résonance
-label_en: decay
+label_fr: extinction du son
+label_en: sound decay
 labels_alternatifs:
-- extinction du son
+- résonance
 patron: P1
 sorte: qualité
 sous_sorte: —
@@ -15,40 +17,92 @@ base_dependance:
   facteurs_non_perceptuels: []
 facettes:
 - son
-définition: 'Ce que fait le son après le geste bref qui l’a produit : il s’éteint aussitôt, résonne un moment, ou résonne longtemps.'
-question_attentionnelle: Après le coup, le son s’arrête-t-il tout de suite, résonne-t-il un moment, ou longtemps ?
-contre_exemple: 'Dans une salle très réverbérante, un objet qui s’éteint aussitôt paraît résonner : c’est la salle qu’on entend. « Ça sonne métal » n’est pas une résonance : c’est une identification de
-  la matière, qui peut se tromper.'
+définition: 'Quand on frappe ou qu’on pince un objet, le son continue un peu après le geste, puis se tait. On décrit combien de temps il continue : il s’arrête aussitôt, résonne un moment, ou résonne longtemps.
+  On écoute la fin du son, pas son début.'
+question_attentionnelle: Après le coup ou le pincement, le son s’arrête-t-il tout de suite, résonne-t-il un moment, ou résonne-t-il longtemps ?
+contre_exemple: 'Dans une salle très réverbérante, un objet qui s’éteint aussitôt paraît résonner : c’est la salle qu’on entend, pas l’objet. « Ça sonne métal » ne dit pas que le son résonne : c’est une
+  idée sur la matière, qui peut se tromper (un objet en métal serré dans la main pendant qu’on le frappe s’arrête court).'
 grandeur_physique_homonyme: 'temps de réverbération (celui de la salle, pas de l’objet) ; résonance mécanique ou acoustique (accord d’un système sur une fréquence propre) : aucune région ne s’en déduit.'
 mesure:
   etat: methodes
-  synthese: 'La vitesse à laquelle le son d’un objet frappé s’éteint (son amortissement) a été étudiée comme indice de la matière entendue [[klatzky2000]] [[giordano_mcadams2006]] : c’est une mesure associée
-    proche. Elle se calcule sur un enregistrement ; la réverbération de la salle s’y ajoute, et elle ne saisit ni la distance d’écoute ni l’auditeur.'
+  synthese: 'La vitesse à laquelle le son d’un objet frappé s’éteint (son amortissement) a été étudiée comme indice de la matière entendue, sur des sons synthétisés [[klatzky2000]] [[mcadams2004]] et sur
+    des sons enregistrés [[giordano_mcadams2006]]. La combinaison de McAdams et al. (2004) [[mcadams2004]] est proposée comme corrélat de l’amortissement perçu : c’est une mesure associée proche. Le paramètre
+    d’amortissement de Klatzky et al. [[klatzky2000]], proposé comme propriété de la matière, et la pente de décroissance de l’enveloppe d’énergie [[peeters2011]], un descripteur calculé, sont des mesures
+    indirectes. Ces mesures se calculent sur un enregistrement : la réverbération de la salle s’y ajoute, le bruit de fond et la fin du fichier en fixent la fin, et elles ne saisissent ni la distance d’écoute
+    ni l’auditeur.'
   regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
     une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
   methodes:
   - id: klatzky2000
     nom: vitesse de décroissance (amortissement)
     grandeur: vitesse à laquelle l’amplitude du son décroît après le choc, selon la fréquence
-    unite_ou_echelle: taux de décroissance (par seconde), selon la fréquence
+    unite_ou_echelle: 'paramètre d’amortissement τd, sans unité, pris en logarithme : le temps qu’une composante met pour tomber à 1/e de son amplitude vaut τd divisé par sa fréquence'
     references:
     - klatzky2000
     - giordano_mcadams2006
+    proximite: indirecte
+    ecart: paramètre du modèle de synthèse, proposé par les auteurs comme propriété de la matière indépendante de la forme, pas comme mesure de la durée perçue ; étudié sur des sons synthétisés de barres
+      fixées frappées, joués 500 ms puis coupés sans fondu (Klatzky et al. 2000) ; les valeurs critiques de τd trouvées pour classer un son parmi caoutchouc, bois, verre et acier valent pour ce modèle,
+      pas comme bornes ; selon les auteurs, l’amortissement y variait sur une plage plus large que la fréquence ; sur des plaques réelles frappées, une mesure de l’amortissement explique les grandes catégories
+      de matière, mais la durée du signal les explique aussi bien (Giordano et McAdams 2006) ; se calcule sur un enregistrement où la réverbération de la salle s’ajoute ; ne saisit ni la distance d’écoute
+      ni l’auditeur
+    conditions: enregistrement du son après un geste bref ; analyse par composante ou par bande de fréquence
+    statut_lecture: 'extraits (Klatzky et al. 2000 : méthode, analyses, discussion, version des auteurs à l’université de Colombie-Britannique ; Giordano et McAdams 2006 : méthode, descripteurs, conclusions,
+      copie de l’auteur) ; résumés sur Crossref et PubMed'
+  - id: mcadams2004
+    nom: constante de décroissance de fin de son, avec le centre de gravité spectral
+    grandeur: pente de la chute de l’enveloppe d’amplitude sur une fenêtre de 100 ms à la fin du son, combinée au centre de gravité spectral
+    unite_ou_echelle: logarithme d’une constante de décroissance (par seconde) ; centre de gravité spectral (une fréquence)
+    references:
+    - mcadams2004
     proximite: proche
-    ecart: étudiée sur des sons synthétisés de barres frappées (Klatzky et al. 2000) ; sur des sons réels, la durée du signal explique les jugements aussi bien que l’amortissement (Giordano et McAdams 2006)
-      ; la décroissance dépend de la fréquence ; se calcule sur un enregistrement où la réverbération de la salle s’ajoute ; ne saisit ni la distance d’écoute ni l’auditeur
-    conditions: enregistrement du son après un geste bref ; analyse par bande de fréquence
-    statut_lecture: résumé lu (Klatzky et al. 2000, OpenAlex ; Giordano et McAdams 2006, OpenAlex)
+    ecart: 'trouvée sur des sons synthétisés de barres frappées, avec un tube résonateur, d’au plus 1 s (certains coupés à 1 s) : selon les auteurs, cette combinaison est un candidat raisonnable pour porter
+      l’amortissement perçu (92 à 98 % de la variance des coordonnées perceptives) ; elle mêle le temps et le spectre ; la fenêtre de calcul est réglée par les auteurs ; se calcule sur un enregistrement
+      où la réverbération de la salle s’ajoute ; ne saisit ni la distance d’écoute ni l’auditeur'
+    conditions: enregistrement du son après un geste bref ; enveloppe d’amplitude et fenêtre de calcul déclarées
+    statut_lecture: 'extraits (McAdams et al. 2004 : descripteurs et discussion, copie mise en ligne par le laboratoire de l’auteur, université McGill) ; résumé sur Crossref'
+  - id: peeters2011
+    nom: pente de décroissance de l’enveloppe d’énergie
+    grandeur: vitesse à laquelle l’énergie du son décroît depuis son maximum, selon un modèle exponentiel
+    unite_ou_echelle: coefficient de la décroissance exponentielle (pente du logarithme de l’énergie, par seconde)
+    references:
+    - peeters2011
+    proximite: indirecte
+    ecart: descripteur calculé, que la partie lue ne relie à aucun jugement d’écoute ; selon les auteurs, il sépare les sons non entretenus (sons frappés, pizzicato) des sons entretenus ; un seul modèle
+      exponentiel depuis le maximum, alors que l’enveloppe d’un son frappé peut avoir deux pentes (McAdams et al. 2004) ; se calcule sur un enregistrement où la réverbération de la salle s’ajoute ; ne saisit
+      ni la distance d’écoute ni l’auditeur
+    conditions: enregistrement du son ; enveloppe d’énergie calculée depuis son maximum
+    statut_lecture: extraits (section sur l’enveloppe d’énergie, Peeters et al. 2011) ; résumé sur le dépôt de l’université McGill
+  non_retenues:
+  - nom: durée effective (temps passé au-dessus de 40 % du maximum de l’enveloppe d’énergie)
+    references:
+    - peeters2011
+    raison: 'selon les auteurs, elle vise la durée perçue et dépend de la durée de l’événement : elle mêle la durée du geste et la résonance ; le seuil de 40 % est un réglage des auteurs, pas une borne
+      entre régions'
+    statut_lecture: extraits (Peeters et al. 2011, même section)
+  - nom: durées équivalentes (temps passé à moins de 3 ou 10 dB du maximum)
+    references:
+    - mcadams2004
+    - mcadams1995
+    raison: 'elles ne regardent que le début de la chute, pas la résonance qui suit ; chez McAdams et al. (1995), la durée à moins de 3 dB du maximum suit une dimension qui, selon les auteurs, sépare les
+      sons excités par une impulsion des sons entretenus : elle dit si le son est impulsif, pas comment il s’éteint'
+    statut_lecture: extraits (McAdams et al. 2004) ; texte lu en entier (McAdams et al. 1995)
 modalites:
 - audition
 mode_de_presentation: échantillon
 conditions_critiques:
 - production
-note_conditions: 'un geste bref déclaré (facette `production`, en général `impact`) ; une salle très réverbérante allonge la résonance : la noter dans l’épisode (spec §9.7 H, règle 9). Piège : pour un son
-  frappé, l’oreille juge aussi l’attaque par la façon dont le son s’éteint (Chion, 1983, art. 97) [[chion1983]] : la résonance se juge à part de l’attaque.'
-porteur: un objet qu’on fait sonner par un geste bref (frappé, pincé)
+note_conditions: 'un geste bref déclaré (facette `production` : en général `impact` ; `deformation` pour une corde pincée ; `operation` pour un appareil qu’on déclenche) ; une salle très réverbérante allonge
+  la résonance : la noter dans l’épisode (spec §9.7 H, règle 9). Le niveau d’écoute est réglé une fois, puis laissé fixe : la fin d’une résonance faible s’entend plus ou moins longtemps selon le niveau.
+  La fin de l’enregistrement compte : un fichier coupé ou fondu avant que le son se taise raccourcit la résonance, et un bruit de fond en masque la fin (Giordano et McAdams (2006) mesurent la durée d’un
+  son jusqu’au niveau du bruit de fond) [[giordano_mcadams2006]] ; l’épisode dit si le son se tait avant la fin du fichier. Sur des sons très brefs (10 à 200 ms), un son qui s’éteint paraît plus court qu’un
+  son qui monte (Schlauch et al., 2001, résumé) [[schlauch2001]]. Piège : pour un son frappé suivi d’une résonance, l’oreille juge la raideur de l’attaque plus par la façon dont le son s’éteint que par
+  la façon dont il apparaît (Chion, 1983, art. 97) [[chion1983]] : on s’efforce de juger la résonance à part de l’attaque.'
+porteur: un son produit par un geste bref sur un objet ou un appareil (un coup, un pincement, un déclenchement), dont on écoute la fin (facette `production`)
 arité: 1
-condition_NA: son continu (une machine en marche, un souffle), ou objet qui ne sonne pas sous le geste déclaré.
+condition_NA: 'son entretenu, qui dure tant qu’on l’alimente (une machine en marche, un souffle, une voix) : quand l’apport d’énergie cesse, sa fin n’est pas une résonance de l’objet. Chion (1983, art.
+  61) range parmi les entretiens actifs les sons prolongés par un apport d’énergie renouvelé (un instrument à vent, un violon à l’archet) ; il n’y cite pas la voix, rangée ici par choix de relecture (2026-11-04).
+  Ou objet ou appareil qui ne sonne pas sous le geste déclaré.'
 espace_valeurs:
   echelle: ordinale
   sens_croissant: de `stopsAtOnce` (rang 1) vers `ringsLong` (rang 3), le son dure de plus en plus après le geste
@@ -58,25 +112,30 @@ espace_valeurs:
     label_fr: s’éteint aussitôt
     label_en: stops at once
     rang: 1
-    repere: le son s’arrête tout de suite (un bois plein frappé)
+    repere: le son s’arrête tout de suite (un coup sourd sur un coussin)
     exemplaires: []
   - cle: ringsAMoment
     label_fr: résonne un moment
     label_en: rings for a moment
     rang: 2
-    repere: le son dure un peu (un verre)
+    repere: le son dure un peu (une cuillère contre une tasse)
     exemplaires: []
   - cle: ringsLong
     label_fr: résonne longtemps
     label_en: rings for a long time
     rang: 3
-    repere: le son dure longtemps (une cloche, un gong)
+    repere: le son dure longtemps (une cloche d’église)
     exemplaires: []
-identite: Ce que fait le son après le geste, pas la façon dont il commence (attaque), pas la matière qu’on croit reconnaître, pas la réverbération de la salle.
+note_categories: 'Trois régions, du son qui s’éteint aussitôt à celui qui résonne longtemps : c’est une position de travail de l’équipe (choix de relecture (2026-11-04)), qu’aucune source ne fixe, sans
+  borne en secondes ni en décibels ; les durées données dans les épisodes sont mesurées par l’équipe sur les enregistrements et restent indicatives. Schaeffer [[schaeffer1966]], lu via Chion (art. 61) [[chion1983]],
+  distingue deux sortes d’entretien « passif » : le son sans durée propre ou presque (un claquement de fouet, un wood-block) et le son que la résonance prolonge (un piano, une guitare). Cette distinction
+  rejoint « s’éteint aussitôt » d’un côté, et les deux régions où le son résonne de l’autre ; elle ne sépare pas une résonance courte d’une longue. Les valeurs critiques de l’amortissement trouvées par
+  Klatzky et al. (2000) [[klatzky2000]] séparent des catégories de matière sur des sons synthétisés : ce ne sont pas des bornes de régions.'
+identite: Ce que fait le son après le geste, pas la façon dont il commence (attaque du son), pas la matière qu’on croit reconnaître, pas la réverbération de la salle.
 relations:
 - type: confusableWith
   cible: ppp:soundAttack
-  note: 'pour un son frappé, l’oreille juge l’attaque en partie par la façon dont le son s’éteint (Chion, 1983, art. 97) [[chion1983]] : on juge la fin et le début à part (réciproque écrite aussi dans soundAttack)'
+  note: 'pour un son frappé suivi d’une résonance, l’oreille juge la raideur de l’attaque plus par la façon dont le son s’éteint que par la façon dont il apparaît (Chion, 1983, art. 97) [[chion1983]] : on s’efforce de juger la fin et le début à part (réciproque écrite aussi dans soundAttack)'
 ontoClean:
   rigidite: +R
   identite_propre: +I
@@ -88,21 +147,76 @@ references:
   citation: 'Klatzky, R. L., Pai, D. K. & Krotkov, E. P. (2000). Perception of material from contact sounds. Presence: Teleoperators and Virtual Environments, 9(4), 399–410.'
   doi_ou_url: https://doi.org/10.1162/105474600566907
   role: fonde
-  statut_verification: vérifiée sur résumé ou source secondaire
-  verifie_le: '2026-10-15'
-  verifie_sur: résumé lu (OpenAlex) ; texte non lu
-  reprend: la vitesse d’extinction, indice principal de la matière entendue
-  ne_reprend_pas: l’identification de la matière comme qualité
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-11-04'
+  verifie_sur: 'extraits lus (méthode, analyses par catégorie de matière, discussion) dans la version des auteurs (laboratoire d’un des auteurs, université de Colombie-Britannique : https://www.cs.ubc.ca/labs/lci/papers/docs2000/pai-KlaPai00.pdf)
+    ; résumé et métadonnées sur Crossref ; résumé lu sur OpenAlex le 2026-10-15'
+  reprend: la vitesse de décroissance, qui pèse plus que la fréquence dans les jugements de similarité (sons synthétisés de barres frappées, coupés à 500 ms) ; le paramètre d’amortissement τd
+  ne_reprend_pas: l’identification de la matière comme qualité ; les valeurs critiques de τd comme bornes
 - id: giordano_mcadams2006
   citation: 'Giordano, B. L. & McAdams, S. (2006). Material identification of real impact sounds: Effects of size variation in steel, glass, wood, and plexiglass plates. The Journal of the Acoustical Society
     of America, 119(2), 1171–1181.'
   doi_ou_url: https://doi.org/10.1121/1.2149839
   role: alimente
-  statut_verification: vérifiée sur résumé ou source secondaire
-  verifie_le: '2026-10-15'
-  verifie_sur: résumé lu (PubMed, PMID 16521778) ; texte non lu
-  reprend: l’amortissement et la durée, qui expliquent les grandes catégories
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-11-04'
+  verifie_sur: extraits lus (méthode, descripteurs, conclusions) dans la copie de l’auteur (https://brungio.github.io/BLG_SMC_2006_JASA.pdf) ; résumé lu sur PubMed (PMID 16521778) ; métadonnées sur Crossref
+  reprend: l’amortissement et la durée, qui expliquent aussi bien les grandes catégories de matière ; la durée mesurée jusqu’au niveau du bruit de fond ; les sons de plus de 1 s raccourcis par un fondu
+    de 5 ms
   ne_reprend_pas: l’identification de la matière comme qualité
+- id: mcadams2004
+  citation: 'McAdams, S., Chaigne, A. & Roussarie, V. (2004). The psychomechanics of simulated sound sources: Material properties of impacted bars. The Journal of the Acoustical Society of America, 115(3),
+    1306–1320.'
+  doi_ou_url: https://doi.org/10.1121/1.1645855
+  role: alimente
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-11-04'
+  verifie_sur: 'extraits lus (descripteurs du signal, discussion, conclusion) dans la copie mise en ligne par le laboratoire de l’auteur (université McGill : https://www.mcgill.ca/mpcl/files/mpcl/mcadams_2004_jasa_0.pdf)
+    ; résumé et métadonnées sur Crossref'
+  reprend: la constante de décroissance de fin de son, combinée au centre de gravité spectral, proposée par les auteurs comme corrélat le plus probable de l’amortissement perçu (92 à 98 % de la variance
+    des coordonnées perceptives) ; les durées équivalentes à 3 et 10 dB sous le maximum
+  ne_reprend_pas: le modèle physique de la barre ; les classes d’auditeurs
+- id: lutfi_oh1997
+  citation: Lutfi, R. A. & Oh, E. L. (1997). Auditory discrimination of material changes in a struck-clamped bar. The Journal of the Acoustical Society of America, 102(6), 3647–3656.
+  doi_ou_url: https://doi.org/10.1121/1.420151
+  role: discute
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-11-04'
+  verifie_sur: résumé lu sur Crossref ; texte non lu
+  reprend: pour juger un changement de matière, les auditeurs donnent trop de poids à la fréquence des composantes
+  ne_reprend_pas: l’identification de la matière comme qualité
+- id: mcadams1995
+  citation: 'McAdams, S., Winsberg, S., Donnadieu, S., De Soete, G. & Krimphoff, J. (1995). Perceptual scaling of synthesized musical timbres: Common dimensions, specificities, and latent subject classes.
+    Psychological Research, 58(3), 177–192.'
+  doi_ou_url: https://doi.org/10.1007/BF00419633
+  role: alimente
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-11-04'
+  verifie_sur: 'texte des auteurs lu en entier (médiathèque de l’IRCAM, institut des auteurs : http://articles.ircam.fr/textes/McAdams95a/) ; résumé aussi lu sur PubMed (PMID 8570786)'
+  reprend: le temps passé à moins de 3 dB du maximum, qui suit une dimension que les auteurs rapprochent de la séparation entre sons excités par une impulsion et sons entretenus ; des sons égalisés en durée
+    perçue
+  ne_reprend_pas: le temps de montée (repris par soundAttack) ; les dimensions spectrales ; les classes d’auditeurs
+- id: peeters2011
+  citation: 'Peeters, G., Giordano, B. L., Susini, P., Misdariis, N. & McAdams, S. (2011). The Timbre Toolbox: Extracting audio descriptors from musical signals. The Journal of the Acoustical Society of
+    America, 130(5), 2902–2916.'
+  doi_ou_url: https://doi.org/10.1121/1.3642604
+  role: alimente
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-11-04'
+  verifie_sur: section sur l’enveloppe d’énergie lue (copie mise en ligne par un laboratoire des auteurs) ; résumé lu sur le dépôt de l’université McGill (https://mcgill.scholaris.ca/items/b6b7c55e-9bf7-4000-9ac6-e441946dde22)
+    ; reste du texte non lu
+  reprend: la pente de décroissance de l’enveloppe d’énergie ; la durée effective (seuil de 40 %), non retenue
+  ne_reprend_pas: les autres descripteurs, l’outil de calcul (non lus)
+- id: schlauch2001
+  citation: Schlauch, R. S., Ries, D. T. & DiGiovanni, J. J. (2001). Duration discrimination and subjective duration for ramped and damped sounds. The Journal of the Acoustical Society of America, 109(6),
+    2880–2887.
+  doi_ou_url: https://doi.org/10.1121/1.1372913
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-11-04'
+  verifie_sur: résumé lu sur Crossref ; texte non lu
+  reprend: sur des sons de 10 à 200 ms, un son qui s’éteint paraît plus court qu’un son qui monte (note des conditions ; état de l’art, avec l’une des deux explications des auteurs, l’écho)
+  ne_reprend_pas: les seuils de discrimination de durée
 - id: chion1983
   citation: 'Chion, M. (1983). Guide des objets sonores. Pierre Schaeffer et la recherche musicale. Paris : Buchet/Chastel ; INA (coll. « Bibliothèque de recherche musicale »). Trad. angl. Guide to Sound
     Objects, J. Dack et C. North (2009), EARS ; traduction anglaise lue.'
@@ -110,12 +224,29 @@ references:
   role: alimente
   statut_verification: vérifiée sur la source
   verifie_le: '2026-10-15'
-  verifie_sur: sections IV et V (art. 58 à 100) lues en entier dans la traduction anglaise de Dack et North
-  reprend: l’attaque jugée par l’extinction (art. 97)
-  ne_reprend_pas: le vocabulaire de Schaeffer comme labels
-etat_de_l_art: 'Klatzky, Pai et Krotkov (2000) [[klatzky2000]] montrent que la vitesse d’extinction décide fortement de la matière perçue d’un son de contact ; Giordano et McAdams (2006) [[giordano_mcadams2006]]
-  trouvent que l’amortissement, mais aussi la durée, expliquent l’identification des grandes catégories (résumés lus). PPP en garde la résonance, pas la matière identifiée. Chion (1983, art. 97, lu en traduction)
-  [[chion1983]] note que l’oreille juge l’attaque d’un son frappé par son extinction. Aucune source trouvée ne fixe des régions perçues. Détail : docs/bibliographie-par-type.md#groupe-son.'
+  verifie_sur: sections IV et V (art. 58 à 100) lues en entier dans la traduction anglaise de Dack et North ; art. 61, 63, 96, 97 et 98 relus le 2026-11-04
+  reprend: l’impulsion, son bref prolongé ou non par une résonance, et l’entretien « passif » par résonance (art. 61 et 63) ; la loi de décroissance progressive de l’intensité des sons percussion-résonance
+    (art. 96) ; l’attaque d’un son frappé suivi d’une résonance jugée plus par la façon dont le son s’éteint (art. 97)
+  ne_reprend_pas: le vocabulaire de Schaeffer comme labels ; l’allure (art. 98), qui porte sur les oscillations de l’entretien, pas sur l’extinction
+- id: schaeffer1966
+  citation: 'Schaeffer, P. (1966). Traité des objets musicaux. Paris : Seuil (coll. « Pierres vives »).'
+  doi_ou_url: https://openlibrary.org/works/OL1318246W
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-11-04'
+  verifie_sur: 'lu via Chion (Guide des objets sonores, 1983 : sections IV et V (art. 58 à 100) lues en entier dans la traduction anglaise de Dack et North ; le reste via Chion) ; texte de Schaeffer non
+    lu'
+  reprend: l’entretien (impulsion, résonance) et la décroissance des sons percussion-résonance (lus via Chion, art. 61, 63 et 96)
+  ne_reprend_pas: la typo-morphologie entière
+etat_de_l_art: 'Sources : sur des sons synthétisés de barres frappées, la vitesse de décroissance pèse nettement plus que la fréquence quand on juge la matière (Klatzky, Pai et Krotkov, 2000) [[klatzky2000]]
+  ; selon McAdams, Chaigne et Roussarie (2004) [[mcadams2004]], le corrélat le plus probable de l’amortissement perçu est une combinaison de la constante de décroissance de fin de son et du centre de gravité
+  spectral (92 à 98 % de la variance des positions perçues). Sur des plaques réelles frappées, Giordano et McAdams (2006) [[giordano_mcadams2006]] trouvent que la durée du signal explique la matière aussi
+  bien que l’amortissement, et concluent à un faible appui pour le rôle de l’amortissement ; Lutfi et Oh (1997, résumé lu) [[lutfi_oh1997]] trouvent que les auditeurs donnent trop de poids à la fréquence.
+  Sur des sons de 10 à 200 ms, un son qui s’éteint paraît plus court qu’un son qui monte ; une des deux explications avancées par Schlauch, Ries et DiGiovanni (2001, résumé lu) [[schlauch2001]] est que
+  l’auditeur ignorerait une partie de la fin, prise pour un écho. Schaeffer [[schaeffer1966]], lu via Chion (1983, art. 61 et 96) [[chion1983]], range le son bref, prolongé ou non par une résonance, parmi
+  les entretiens « passifs », et note une loi de décroissance progressive des sons percussion-résonance ; McAdams et al. (1995) [[mcadams1995]] et Peeters et al. (2011) [[peeters2011]] décrivent des mesures
+  qui séparent, selon eux, les sons impulsifs des sons entretenus. Aucune source trouvée ne fixe des régions perçues de la résonance, ni des bornes entre elles ; PPP en garde la résonance, pas la matière
+  identifiée (détail : docs/bibliographie-par-type.md#groupe-son).'
 etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-son
 axiomes:
 - conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
@@ -141,15 +272,17 @@ enonces_testables:
   epreuve: null
 cq_couvertes: CQ1, CQ2
 statut: candidat
-statut_note: 'en préparation (2026-10-15) : fiche rédigée, sans exemplaire ; tous les champs rédigés sont à relire'
+statut_note: 'en préparation (2026-11-04) : fiche rédigée, sources complétées, épisodes proposés « à réaliser » (aucun réalisé) ; tous les champs rédigés sont à relire'
 statut_epistemique: non éprouvé
 introduit_en: '2.8'
 modifie_en: []
 remplace_par: []
-source_de_la_fiche: proposition de famille « Son » (docs/famille-son-proposition.md (document de travail, non publié), séries 41 à 43 ; premier lot recommandé par la relecture explicative en série 49 bis, à confirmer par l’éditeur) ; fiche
-  rédigée le 2026-10-15 par l’équipe, champs à valider par la relecture explicative
+source_de_la_fiche: 'proposition de famille « Son » (docs/famille-son-proposition.md (document de travail, non publié), séries 41 à 43) ; premier lot : décision 3 du 2026-10-14 (série 43), « recommandation
+  suivie », sous la note de l’éditeur du projet dans ce document : « je suis en accrod avec toutes les propositions/ recommandations. » ; fiche rédigée le 2026-10-15 par l’équipe ; sources, mesures et épisodes
+  complétés le 2026-11-04 (choix de relecture (2026-11-04)) ; champs à valider par la relecture explicative'
 manques:
-- 'exemplaires (à renseigner : objets publics vérifiés, un épisode par objet, conditions déclarées ; enregistrement cité ou objet décrit, X17)'
+- 'exemplaires observés : aucun épisode encore réalisé (six proposés, sur des enregistrements CC0)'
+- relecture explicative de tous les champs
 bloque_par: []
 a_relire:
 - label_fr
@@ -159,6 +292,7 @@ a_relire:
 - question_attentionnelle
 - contre_exemple
 - grandeur_physique_homonyme
+- note_categories
 - mode_de_presentation
 - conditions_critiques
 - note_conditions
@@ -174,8 +308,206 @@ a_relire:
 - enonces_testables
 - statut_note
 - mesure
+- episodes_a_realiser
 relecture_explicative:
   date: null
   champs:
   - 'harmonisation mécanique des énoncés affichés (série 69, 2026-10-17)'
   a_reconfirmer: []
+# Série 98 : épisodes proposés « à réaliser » (spec X17 ; choix de relecture (2026-11-04)) ; ni épreuve faite ni accord entre observateurs ; ni observateur, ni date, ni résultat.
+# Enregistrements CC0 (Creative Commons 0 : lien vers la licence lu sur chaque page), pages vérifiées le 2026-11-04 ; chutes mesurées par l’équipe sur l’aperçu MP3 de chaque page (enveloppe en décibels sous le maximum), indicatives, non vérifiées comme bornes ; aucun enregistrement des épisodes de soundAttack n’est repris.
+episodes_a_realiser:
+- id: ppp-a:ep-soundDecay-01
+  realisation: a_realiser
+  region_attendue: stopsAtOnce
+  rang_exemplaire: principal
+  objet: enregistrement d’un coup doux de baguette sur un wood-block (un bloc de bois creux de percussion), environ 0,5 s, page « Woodblock-soft.wav », par hollandm, sur Freesound (https://freesound.org/people/hollandm/sounds/692828/),
+    licence CC0, page vérifiée le 2026-11-04
+  objet_en: recording of a soft stroke of a stick on a woodblock (a hollow wooden percussion block), about 0.5 s, page “Woodblock-soft.wav”, by hollandm, on Freesound (https://freesound.org/people/hollandm/sounds/692828/),
+    CC0 licence, page checked on 2026-11-04
+  preparation: comme l’épisode 03 ; même niveau d’écoute ; écouter l’enregistrement jusqu’au bout, deux ou trois fois, et juger ce que fait le son après le coup
+  preparation_en: as in episode 03; same listening level; listen to the recording to the end, two or three times, and judge what the sound does after the stroke
+  consigne: Après le coup ou le pincement, le son s’arrête-t-il tout de suite (un coup sourd sur un coussin), résonne-t-il un moment (une cuillère contre une tasse), ou longtemps (une cloche d’église) ?
+  consigne_en: After the stroke or the pluck, does the sound stop at once (a dull thud on a cushion), ring for a moment (a spoon against a cup), or ring for a long time (a church bell)?
+  conditions:
+    presentation: recording
+    distance: unknown
+    production: impact
+    bruit_de_fond: quiet
+    duree: glance
+    note: enregistré avec un micro à large membrane (d’après la page), distance et salle non dites (`unknown`) ; bois contre bois, noté `impact` ; casque fermé ou enceintes, pièce calme ; écoute complète
+      de 0,5 s
+    note_en: recorded with a large-diaphragm microphone (according to the page), distance and room not given (`unknown`); wood against wood, recorded as `impact`; closed headphones or loudspeakers, quiet
+      room; full listening of 0.5 s
+  doute: oui
+  motif_doute: 'la page dit qu’une égalisation et une compression ont été ajoutées : une compression peut changer la façon dont le son s’éteint ; l’enregistrement commence au coup, sans silence avant'
+  motif_doute_en: 'the page says that equalisation and compression were added: compression can change the way the sound dies away; the recording starts at the stroke, with no silence before it'
+  note: 'son au plus fort dès le début, environ 30 dB plus bas vers 40 ms, 40 dB plus bas vers 0,1 s ; le fichier finit bien en dessous (environ −68 dB) (mesure de l’équipe sur l’aperçu MP3, enveloppe sur
+    des fenêtres de 10 à 50 ms, indicative) : le son se tait avant la fin du fichier'
+  note_en: 'sound at its loudest from the start, about 30 dB lower at around 40 ms, 40 dB lower at around 0.1 s; the file ends well below (about −68 dB) (team measurement on the MP3 preview, envelope over
+    10 to 50 ms windows, indicative): the sound falls silent before the end of the file'
+  texte_fr: 'Un coup doux sur un wood-block : s’éteint aussitôt (prédiction, à éprouver).'
+  texte_en: 'A soft stroke on a woodblock: stops at once (prediction, to be tested).'
+- id: ppp-a:ep-soundDecay-02
+  realisation: a_realiser
+  region_attendue: stopsAtOnce
+  rang_exemplaire: second
+  objet: enregistrement d’un coup sur un triangle (d’après le nom du fichier), note sol, environ 1 s, page « Percussion - G5 (Triangle6-HitFM_v2_rr1_Sum.wav) », par sgossner, sur Freesound (https://freesound.org/people/sgossner/sounds/373542/),
+    licence CC0, page vérifiée le 2026-11-04
+  objet_en: recording of a stroke on a triangle (according to the file name), note G, about 1 s, page “Percussion - G5 (Triangle6-HitFM_v2_rr1_Sum.wav)”, by sgossner, on Freesound (https://freesound.org/people/sgossner/sounds/373542/),
+    CC0 licence, page checked on 2026-11-04
+  preparation: comme l’épisode 03 ; même niveau d’écoute ; écouter l’enregistrement jusqu’au bout, deux ou trois fois, et juger ce que fait le son après le coup
+  preparation_en: as in episode 03; same listening level; listen to the recording to the end, two or three times, and judge what the sound does after the stroke
+  consigne: Après le coup ou le pincement, le son s’arrête-t-il tout de suite (un coup sourd sur un coussin), résonne-t-il un moment (une cuillère contre une tasse), ou longtemps (une cloche d’église) ?
+  consigne_en: After the stroke or the pluck, does the sound stop at once (a dull thud on a cushion), ring for a moment (a spoon against a cup), or ring for a long time (a church bell)?
+  conditions:
+    presentation: recording
+    distance: near
+    production: impact
+    bruit_de_fond: quiet
+    duree: glance
+    note: enregistré dans un grand auditorium, avec une paire de micros espacés, des micros au-dessus et un micro proche (d’après la page) ; coup sur une barre de métal, noté `impact` ; casque fermé ou
+      enceintes, pièce calme ; écoute complète de 1 s
+    note_en: recorded in a large auditorium, with a spaced pair, overhead microphones and a close microphone (according to the page); stroke on a metal bar, recorded as `impact`; closed headphones or loudspeakers,
+      quiet room; full listening of 1 s
+  doute: oui
+  motif_doute: 'la page dit seulement « Percussion » : le triangle vient du nom du fichier, et rien ne dit pourquoi le son s’arrête si vite (« HitFM » n’est pas expliqué ; un triangle tenu à la main, peut-être)
+    ; « ça sonne métal » peut faire attendre une résonance (contre-exemple de la fiche) ; le fichier finit par un silence numérique'
+  motif_doute_en: 'the page only says “Percussion”: the triangle comes from the file name, and nothing says why the sound stops so quickly (“HitFM” is not explained; a triangle held in the hand, perhaps);
+    “it sounds like metal” may lead one to expect a resonance (counter-example in the entry); the file ends with digital silence'
+  note: 'son au plus fort dès le début, environ 20 dB plus bas vers 60 ms, 40 dB plus bas vers 0,3 s ; silence numérique après environ 0,8 s, quand le son est déjà vers −55 dB (mesure de l’équipe sur l’aperçu
+    MP3, enveloppe sur des fenêtres de 10 à 50 ms, indicative). Épisode de contrôle : un objet en métal qui s’éteint aussitôt'
+  note_en: 'sound at its loudest from the start, about 20 dB lower at around 60 ms, 40 dB lower at around 0.3 s; digital silence after about 0.8 s, when the sound is already around −55 dB (team measurement
+    on the MP3 preview, envelope over 10 to 50 ms windows, indicative). Control episode: a metal object that stops at once'
+  texte_fr: 'Un coup sur un triangle, qui s’arrête court : s’éteint aussitôt (prédiction, à éprouver).'
+  texte_en: 'A stroke on a triangle, which stops short: stops at once (prediction, to be tested).'
+- id: ppp-a:ep-soundDecay-03
+  realisation: a_realiser
+  region_attendue: ringsAMoment
+  rang_exemplaire: principal
+  objet: enregistrement d’une note de marimba (lames de bois frappées), note fa dièse, environ 7 s, page « Marimba - F#3 (Marimba_hit_Outrigger_G2_loud_01.wav) », par sgossner, sur Freesound (https://freesound.org/people/sgossner/sounds/373585/),
+    licence CC0, page vérifiée le 2026-11-04
+  objet_en: recording of a marimba note (struck wooden bars), note F sharp, about 7 s, page “Marimba - F#3 (Marimba_hit_Outrigger_G2_loud_01.wav)”, by sgossner, on Freesound (https://freesound.org/people/sgossner/sounds/373585/),
+    CC0 licence, page checked on 2026-11-04
+  preparation: ouvrir la page et écouter l’enregistrement en entier, sans le télécharger ni le modifier ; régler le niveau une fois, sur cette note, à peu près comme une conversation calme, puis ne plus
+    le toucher pour les autres épisodes ; juger ce que fait le son après le coup, pas l’attaque
+  preparation_en: open the page and listen to the whole recording, without downloading or editing it; set the level once, on this note, roughly like a calm conversation, then leave it unchanged for the
+    other episodes; judge what the sound does after the stroke, not the attack
+  consigne: Après le coup ou le pincement, le son s’arrête-t-il tout de suite (un coup sourd sur un coussin), résonne-t-il un moment (une cuillère contre une tasse), ou longtemps (une cloche d’église) ?
+  consigne_en: After the stroke or the pluck, does the sound stop at once (a dull thud on a cushion), ring for a moment (a spoon against a cup), or ring for a long time (a church bell)?
+  conditions:
+    presentation: recording
+    distance: unknown
+    production: impact
+    bruit_de_fond: quiet
+    duree: glance
+    note: enregistré dans un grand auditorium, avec une paire de micros espacés (d’après la page), distance non dite (`unknown`) ; la salle ajoute sa réverbération ; coup de maillet sur une lame de bois,
+      noté `impact` ; casque fermé ou enceintes, pièce calme ; jugement sur les premières secondes ; écoute complète de 7 s
+    note_en: recorded in a large auditorium, with a spaced pair of microphones (according to the page), distance not given (`unknown`); the room adds its reverberation; mallet stroke on a wooden bar, recorded
+      as `impact`; closed headphones or loudspeakers, quiet room; judged on the first seconds; full listening of 7 s
+  doute: non
+  note: 'son au plus fort dès le début, environ 10 dB plus bas vers 0,75 s, 20 dB vers 1,5 s, 40 dB vers 3,4 s ; silence numérique après environ 5,6 s, vers −66 dB (mesure de l’équipe sur l’aperçu MP3,
+    enveloppe sur des fenêtres d’environ 0,2 s, indicative ; sur des fenêtres de 10 ms, le son est 10 dB plus bas dès 0,3 s) : le son se tait avant la fin du fichier'
+  note_en: 'sound at its loudest from the start, about 10 dB lower at around 0.75 s, 20 dB at around 1.5 s, 40 dB at around 3.4 s; digital silence after about 5.6 s, around −66 dB (team measurement on the
+    MP3 preview, envelope over windows of about 0.2 s, indicative; over 10 ms windows, the sound is 10 dB lower as early as 0.3 s): the sound falls silent before the end of the file'
+  texte_fr: 'Une note de marimba : résonne un moment (prédiction, à éprouver).'
+  texte_en: 'A marimba note: rings for a moment (prediction, to be tested).'
+- id: ppp-a:ep-soundDecay-04
+  realisation: a_realiser
+  region_attendue: ringsAMoment
+  rang_exemplaire: second
+  objet: enregistrement d’une note de glockenspiel (lames de métal frappées), note fa dièse aiguë, environ 4,8 s, page « Glockenspiel - F#6 (glock_medium_G6.wav) », par sgossner, sur Freesound (https://freesound.org/people/sgossner/sounds/373369/),
+    licence CC0, page vérifiée le 2026-11-04
+  objet_en: recording of a glockenspiel note (struck metal bars), high F sharp, about 4.8 s, page “Glockenspiel - F#6 (glock_medium_G6.wav)”, by sgossner, on Freesound (https://freesound.org/people/sgossner/sounds/373369/),
+    CC0 licence, page checked on 2026-11-04
+  preparation: comme l’épisode 03 ; même niveau d’écoute ; écouter l’enregistrement jusqu’au bout, deux ou trois fois, et juger ce que fait le son après le coup
+  preparation_en: as in episode 03; same listening level; listen to the recording to the end, two or three times, and judge what the sound does after the stroke
+  consigne: Après le coup ou le pincement, le son s’arrête-t-il tout de suite (un coup sourd sur un coussin), résonne-t-il un moment (une cuillère contre une tasse), ou longtemps (une cloche d’église) ?
+  consigne_en: After the stroke or the pluck, does the sound stop at once (a dull thud on a cushion), ring for a moment (a spoon against a cup), or ring for a long time (a church bell)?
+  conditions:
+    presentation: recording
+    distance: unknown
+    production: impact
+    bruit_de_fond: quiet
+    duree: glance
+    note: enregistré dans une salle de répétition, avec une paire de micros espacés et un micro au-dessus (d’après la page), distance non dite (`unknown`) ; coup de maillet sur une lame de métal, noté `impact`
+      ; casque fermé ou enceintes, pièce calme ; écoute complète de 4,8 s
+    note_en: recorded in a rehearsal room, with a spaced pair and an overhead microphone (according to the page), distance not given (`unknown`); mallet stroke on a metal bar, recorded as `impact`; closed
+      headphones or loudspeakers, quiet room; full listening of 4.8 s
+  doute: oui
+  motif_doute: 'la chute mesurée est proche de celle du marimba de l’épisode 03, mais une note aiguë de métal peut sembler résonner plus longtemps qu’elle ne dure : aucune source lue ne fixe la limite entre
+    « résonne un moment » et « résonne longtemps »'
+  motif_doute_en: 'the measured fall is close to that of the marimba in episode 03, but a high metal note may seem to ring longer than it lasts: no source read sets the boundary between “rings for a moment”
+    and “rings for a long time”'
+  note: 'son au plus fort dès le début, environ 10 dB plus bas vers 0,6 s, 20 dB vers 1,25 s, 40 dB vers 2,6 s ; silence numérique après environ 3,9 s, vers −60 dB (mesure de l’équipe sur l’aperçu MP3,
+    enveloppe sur des fenêtres d’environ 0,2 s, indicative ; sur des fenêtres de 10 ms, le son est 10 dB plus bas dès 0,35 s) : le son se tait avant la fin du fichier'
+  note_en: 'sound at its loudest from the start, about 10 dB lower at around 0.6 s, 20 dB at around 1.25 s, 40 dB at around 2.6 s; digital silence after about 3.9 s, around −60 dB (team measurement on the
+    MP3 preview, envelope over windows of about 0.2 s, indicative; over 10 ms windows, the sound is 10 dB lower as early as 0.35 s): the sound falls silent before the end of the file'
+  texte_fr: 'Une note de glockenspiel : résonne un moment (prédiction, à éprouver).'
+  texte_en: 'A glockenspiel note: rings for a moment (prediction, to be tested).'
+- id: ppp-a:ep-soundDecay-05
+  realisation: a_realiser
+  region_attendue: ringsLong
+  rang_exemplaire: principal
+  objet: enregistrement d’un coup doux sur un gong (d’après le nom du fichier), note la dièse grave, environ 29 s, page « Percussion - A#2 (gongHit_p.wav) », par sgossner, sur Freesound (https://freesound.org/people/sgossner/sounds/373433/),
+    licence CC0, page vérifiée le 2026-11-04
+  objet_en: recording of a soft stroke on a gong (according to the file name), low A sharp, about 29 s, page “Percussion - A#2 (gongHit_p.wav)”, by sgossner, on Freesound (https://freesound.org/people/sgossner/sounds/373433/),
+    CC0 licence, page checked on 2026-11-04
+  preparation: comme l’épisode 03 ; même niveau d’écoute ; écouter l’enregistrement jusqu’au bout, deux ou trois fois, et juger ce que fait le son après le coup
+  preparation_en: as in episode 03; same listening level; listen to the recording to the end, two or three times, and judge what the sound does after the stroke
+  consigne: Après le coup ou le pincement, le son s’arrête-t-il tout de suite (un coup sourd sur un coussin), résonne-t-il un moment (une cuillère contre une tasse), ou longtemps (une cloche d’église) ?
+  consigne_en: After the stroke or the pluck, does the sound stop at once (a dull thud on a cushion), ring for a moment (a spoon against a cup), or ring for a long time (a church bell)?
+  conditions:
+    presentation: recording
+    distance: near
+    production: impact
+    bruit_de_fond: quiet
+    duree: exam
+    note: enregistré dans un grand auditorium, avec une paire de micros espacés, des micros au-dessus et des micros proches mélangés (d’après la page) ; la salle ajoute sa réverbération ; coup de maillet
+      sur un disque de métal, noté `impact` ; casque fermé ou enceintes, pièce calme ; écoute complète de 29 s
+    note_en: recorded in a large auditorium, with a spaced pair, overhead and close microphones mixed (according to the page); the room adds its reverberation; mallet stroke on a metal disc, recorded as
+      `impact`; closed headphones or loudspeakers, quiet room; full listening of 29 s
+  doute: oui
+  motif_doute: 'le fichier s’arrête avant que le son se taise (la fin de la résonance n’est pas entendue) ; la page dit seulement « Percussion » : le gong vient du nom du fichier, et la nuance douce du
+    nom du fichier (« _p ») et de la vélocité MIDI donnée par la page (16) ; la réverbération du grand auditorium s’ajoute à celle du gong'
+  motif_doute_en: 'the file stops before the sound falls silent (the end of the resonance is not heard); the page only says “Percussion”: the gong comes from the file name, and the soft dynamic from the
+    file name (“_p”) and from the MIDI velocity given on the page (16); the reverberation of the large auditorium adds to that of the gong'
+  note: son au plus fort vers 0,3 s, environ 10 dB plus bas vers 8 s, 20 dB vers 17 s, 30 dB vers 24 s ; encore vers −36 dB quand le fichier s’arrête, à 29,4 s (mesure de l’équipe sur l’aperçu MP3, enveloppe
+    sur des fenêtres de 0,2 à 0,5 s, indicative ; sur des fenêtres de 10 ms, 30 dB plus bas dès 22 s)
+  note_en: sound at its loudest at around 0.3 s, about 10 dB lower at around 8 s, 20 dB at around 17 s, 30 dB at around 24 s; still around −36 dB when the file stops, at 29.4 s (team measurement on the
+    MP3 preview, envelope over 0.2 to 0.5 s windows, indicative; over 10 ms windows, 30 dB lower as early as 22 s)
+  texte_fr: 'Un coup doux sur un gong : résonne longtemps (prédiction, à éprouver).'
+  texte_en: 'A soft stroke on a gong: rings for a long time (prediction, to be tested).'
+- id: ppp-a:ep-soundDecay-06
+  realisation: a_realiser
+  region_attendue: ringsLong
+  rang_exemplaire: second
+  objet: enregistrement de deux cordes à vide pincées d’une vieille guitare acoustique, l’une après l’autre (mi grave, puis mi aigu), environ 20 s, page « Acoustic Guitar Open E and e Strings.wav », par
+    Stan_Rech, sur Freesound (https://freesound.org/people/Stan_Rech/sounds/250147/), licence CC0, page vérifiée le 2026-11-04
+  objet_en: recording of two open strings of an old acoustic guitar plucked one after the other (low E, then high E), about 20 s, page “Acoustic Guitar Open E and e Strings.wav”, by Stan_Rech, on Freesound
+    (https://freesound.org/people/Stan_Rech/sounds/250147/), CC0 licence, page checked on 2026-11-04
+  preparation: comme l’épisode 03 ; même niveau d’écoute ; écouter l’enregistrement jusqu’au bout, deux ou trois fois, et juger la première note seulement, après le pincement
+  preparation_en: as in episode 03; same listening level; listen to the recording to the end, two or three times, and judge the first note only, after the pluck
+  consigne: Après le coup ou le pincement, le son s’arrête-t-il tout de suite (un coup sourd sur un coussin), résonne-t-il un moment (une cuillère contre une tasse), ou longtemps (une cloche d’église) ?
+  consigne_en: After the stroke or the pluck, does the sound stop at once (a dull thud on a cushion), ring for a moment (a spoon against a cup), or ring for a long time (a church bell)?
+  conditions:
+    presentation: recording
+    distance: unknown
+    production: deformation
+    bruit_de_fond: quiet
+    duree: exam
+    note: micro nommé sur la page, distance et salle non dites (`unknown`) ; corde tirée puis lâchée, notée `deformation` (la facette n’a pas de valeur propre pour le pincement ; à relire) ; casque fermé
+      ou enceintes, pièce calme ; jugement sur la première note (de 0 à 10 s environ) ; écoute complète de 20 s
+    note_en: microphone named on the page, distance and room not given (`unknown`); string pulled then released, recorded as `deformation` (the facet has no specific value for plucking; to be reviewed);
+      closed headphones or loudspeakers, quiet room; judged on the first note (from 0 to about 10 s); full listening of 20 s
+  doute: oui
+  motif_doute: 'chaque note est coupée (descente rapide, puis silence numérique) avant de se taire : la fin de la résonance n’est pas entendue ; deux notes dans le même fichier ; « à vide » vient du titre
+    (« Open ») : la page ne dit pas comment la corde a été pincée ni si rien ne l’a touchée ensuite'
+  motif_doute_en: 'each note is cut (a quick fall, then digital silence) before it falls silent: the end of the resonance is not heard; two notes in the same file; “open” comes from the title: the page
+    does not say how the string was plucked or whether nothing touched it afterwards'
+  note: première note au plus fort dès le début, environ 10 dB plus bas vers 2 s, 20 dB vers 6 s, 30 dB vers 7,5 s ; elle sonne encore vers −30 à −40 dB quand le fichier la fait descendre, en environ 0,15
+    s, jusqu’au silence numérique, vers 10,3 s ; seconde note à partir de 12 s environ, coupée de même vers 18 s (mesure de l’équipe sur l’aperçu MP3, enveloppe sur des fenêtres de 10 à 50 ms, indicative)
+  note_en: first note at its loudest from the start, about 10 dB lower at around 2 s, 20 dB at around 6 s, 30 dB at around 7.5 s; it is still sounding around −30 to −40 dB when the file brings it down,
+    in about 0.15 s, to digital silence, at around 10.3 s; second note from about 12 s, cut in the same way at around 18 s (team measurement on the MP3 preview, envelope over 10 to 50 ms windows, indicative)
+  texte_fr: 'Une corde de guitare à vide, pincée et laissée sonner : résonne longtemps (prédiction, à éprouver).'
+  texte_en: 'An open guitar string, plucked and left to sound: rings for a long time (prediction, to be tested).'

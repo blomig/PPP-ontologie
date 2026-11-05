@@ -1,9 +1,11 @@
 # Fiche de type PPP — ppp:soundAttack — format : PPP_FicheType.md (spec v2.8)
 # Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_base, note_categories, avertissement_label.
 # Série 50 (2026-10-15) : fiche en préparation, rédigée sans exemplaire ; aucun champ n’est encore relu.
+# Série 97 (2026-11-04) : sources lues et mesures complétées, porteur élargi à l’appareil et à la voix, épisodes proposés « à réaliser » ; relecture explicative à faire.
+# Série 97 bis (2026-11-04) : relecture appliquée (19 points, choix de relecture (2026-11-04)) ; références en double retirées ; note_categories ajoutée.
 id: ppp:soundAttack
 label_fr: attaque du son
-label_en: attack
+label_en: sound attack
 labels_alternatifs: []
 patron: P1
 sorte: qualité
@@ -14,14 +16,16 @@ base_dependance:
   facteurs_non_perceptuels: []
 facettes:
 - son
-définition: La façon dont le son commence, du son qui part d’un coup à celui qui monte peu à peu.
-question_attentionnelle: Le son part-il d’un coup, vite, ou monte-t-il progressivement ?
+définition: 'La façon dont un son commence : d’un coup, comme un claquement de mains, ou peu à peu, comme un moteur qui démarre. On n’écoute que le tout début du son, pas la façon dont il s’éteint.'
+question_attentionnelle: Le son part-il d’un coup, en claquant ; vite, mais sans claquer ; ou monte-t-il peu à peu ?
 contre_exemple: 'Une machine déjà en marche quand on arrive n’a pas d’attaque qu’on puisse entendre : le type ne s’applique pas. Un son fort n’a pas pour autant une attaque abrupte : la force du son est
-  une autre qualité.'
+  une autre qualité. Une cloche qui résonne longtemps n’a pas pour autant une attaque lente : elle part d’un coup, puis s’éteint lentement ; la façon dont le son s’éteint est une autre qualité (l’extinction
+  du son).'
 mesure:
   etat: methodes
-  synthese: 'Le temps de montée de l’enveloppe d’un son, pris en logarithme, est un corrélat acoustique d’une dimension commune du timbre [[mcadams1995]] : c’est une mesure associée proche. Il se calcule
-    sur un enregistrement ; il ne saisit ni la salle, ni la distance d’écoute, ni l’auditeur.'
+  synthese: 'Le temps de montée de l’enveloppe d’un son, pris en logarithme, est un corrélat acoustique d’une dimension commune du timbre [[mcadams1995]] ; calculé avec des seuils adaptés à chaque son,
+    il donne un descripteur plus fiable [[peeters2011]] : ce sont deux mesures associées proches. Le temps d’attaque perçu [[gordon1987]] dit quand l’attaque s’entend, pas comment le son commence : c’est
+    une mesure indirecte. Ces mesures se calculent sur un enregistrement ; elles ne saisissent ni la salle, ni la distance d’écoute, ni l’auditeur.'
   regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
     une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
   methodes:
@@ -32,19 +36,50 @@ mesure:
     references:
     - mcadams1995
     proximite: proche
-    ecart: 'corrélat trouvé sur des sons d’instruments synthétisés ; la valeur dépend de la façon dont on fixe le début et la fin de la montée sur l’enveloppe ; se calcule sur un enregistrement : ne saisit ni la salle, ni la distance d’écoute, ni l’auditeur'
+    ecart: 'corrélat trouvé sur 18 sons d’instruments synthétisés ; la montée y est comptée, selon la mesure de Krimphoff et al. (1994) reprise par les auteurs, depuis 2 % du maximum de l’enveloppe jusqu’au
+      maximum, et la valeur change si l’on change ces bornes ; se calcule sur un enregistrement : ne saisit ni la salle, ni la distance d’écoute, ni l’auditeur'
     conditions: enregistrement du son ; enveloppe d’amplitude calculée ; bornes de la montée déclarées
-    statut_lecture: résumé lu (McAdams et al. 1995, PubMed, PMID 8570786)
+    statut_lecture: texte lu (McAdams et al. 1995, version des auteurs à la médiathèque de l’IRCAM)
+  - id: peeters2011
+    nom: temps d’attaque en logarithme, avec des seuils adaptés à chaque son
+    grandeur: durée de la montée de l’enveloppe d’énergie du son, entre un début et une fin choisis pour chaque son
+    unite_ou_echelle: logarithme d’une durée (en secondes)
+    references:
+    - peeters2011
+    proximite: proche
+    ecart: 'descripteur calculé, dont un réglage a été fixé par les auteurs après des essais sur environ 1 500 sons d’instruments ; selon eux, des seuils fixes (par exemple de 10 % à 100 % du maximum) donnent
+      une valeur peu fiable ; se calcule sur un enregistrement : ne saisit ni la salle, ni la distance d’écoute, ni l’auditeur'
+    conditions: enregistrement du son ; enveloppe d’énergie calculée ; façon de choisir les seuils déclarée
+    statut_lecture: extraits (section sur l’enveloppe d’énergie, Peeters et al. 2011) ; résumé sur le dépôt de l’université McGill
+  - id: gordon1987
+    nom: temps d’attaque perçu
+    grandeur: moment où l’auditeur entend l’attaque, compté depuis le début physique du son
+    unite_ou_echelle: durée (en millisecondes)
+    references:
+    - gordon1987
+    proximite: indirecte
+    ecart: situe le moment où l’attaque s’entend, pas la façon dont le son commence ; dépend du temps de montée et du niveau d’écoute ; trouvé sur des notes enregistrées d’instruments d’orchestre
+    conditions: enregistrement du son ; niveau d’écoute déclaré
+    statut_lecture: résumé (Gordon 1987, sur Crossref)
+  non_retenues:
+  - nom: seuil du début perçu (environ 15 dB sous le maximum de l’enveloppe)
+    references:
+    - vos_rasch1981
+    raison: situe le moment où un son commence à s’entendre, pas la façon dont il commence ; utile seulement pour fixer le niveau d’écoute
+    statut_lecture: résumé (Vos et Rasch 1981, page de l’éditeur)
 modalites:
 - audition
 mode_de_presentation: échantillon
 conditions_critiques:
 - production
-note_conditions: 'l’attaque dépend du geste qui fait sonner l’objet (facette `production`, spec §9.7 H, règle 9) : le même objet frappé ou frotté ne commence pas pareil ; la salle est notée dans l’épisode.
-  Piège : pour un son frappé, l’oreille juge l’attaque en partie par la façon dont le son s’éteint (Chion, 1983, art. 97) [[chion1983]] ; on juge le début du son, et la résonance à part.'
-porteur: un son qui commence pendant l’écoute, produit par un objet sous un geste ou un fonctionnement déclaré
+note_conditions: 'l’attaque dépend de la façon dont le son est produit (facette `production`, spec §9.7 H, règle 9) : le même objet frappé ou frotté ne commence pas pareil, et une voix peut partir d’un
+  coup ou monter peu à peu ; la salle est notée dans l’épisode. Le niveau d’écoute est réglé une fois, puis laissé fixe : le moment où l’on entend le début d’un son change avec le niveau (Vos et Rasch,
+  1981 ; Gordon, 1987) [[vos_rasch1981]] [[gordon1987]]. Un enregistrement doit commencer avant le son : un début coupé retire une partie de la montée. Piège : pour un son frappé suivi d’une résonance,
+  l’oreille juge la raideur de l’attaque plus par la façon dont le son s’éteint que par la façon dont il apparaît (Chion, 1983, art. 97) [[chion1983]] ; on s’efforce de juger le début du son, et la résonance
+  à part.'
+porteur: un son qui commence pendant l’écoute, produit par un objet, un appareil ou une voix, de la façon déclarée (facette `production`)
 arité: 1
-condition_NA: son déjà en cours quand l’écoute commence (une machine en marche), ou objet qui ne sonne pas sous le geste déclaré.
+condition_NA: son déjà en cours quand l’écoute commence (une machine en marche), ou rien ne sonne de la façon déclarée (un objet qui ne sonne pas sous le geste déclaré).
 espace_valeurs:
   echelle: ordinale
   sens_croissant: de `abrupt` (rang 1) vers `gradual` (rang 3), le son met de plus en plus de temps à s’installer
@@ -54,25 +89,28 @@ espace_valeurs:
     label_fr: abrupte
     label_en: abrupt
     rang: 1
-    repere: le son part d’un coup (un claquement de mains, une baguette sur un bois)
+    repere: le son part d’un coup (un claquement de mains, une porte qui claque)
     exemplaires: []
   - cle: quick
     label_fr: rapide
     label_en: quick
     rang: 2
-    repere: le son part vite, sans éclater (une corde pincée)
+    repere: le son part vite, sans claquer (une touche de piano enfoncée doucement)
     exemplaires: []
   - cle: gradual
     label_fr: progressive
     label_en: gradual
     rang: 3
-    repere: le son monte peu à peu (un archet qui attaque doucement, une soufflerie qui démarre)
+    repere: le son monte peu à peu (une soufflerie ou un aspirateur qui démarre)
     exemplaires: []
-identite: La façon dont le son commence, pas sa force (force du son), pas la façon dont il s’éteint (résonance), pas le timbre dans son ensemble.
+note_categories: 'Trois régions, de l’attaque la plus raide à la plus lente : c’est une position de travail de l’équipe (choix de relecture (2026-11-04)), qu’aucune source ne fixe, sans borne en millisecondes
+  ; les durées données dans les épisodes sont mesurées par l’équipe sur les enregistrements et restent indicatives. Schaeffer [[schaeffer1966]], lu via Chion (art. 97) [[chion1983]], distingue sept « genres
+  d’attaque » (noms lus dans la traduction anglaise : sudden, steep, soft, flat, gentle, sforzando, non-existent) ; les trois régions de PPP sont plus grossières, sans correspondance vérifiée.'
+identite: La façon dont le son commence, pas sa force (force du son), pas la façon dont il s’éteint (extinction du son), pas le timbre dans son ensemble (la couleur du son, ce qui fait reconnaître l’instrument).
 relations:
 - type: confusableWith
   cible: ppp:soundDecay
-  note: 'pour un son frappé, l’oreille juge l’attaque en partie par la façon dont le son s’éteint (Chion, 1983, art. 97) [[chion1983]] : on juge le début et la fin à part (réciproque écrite aussi dans soundDecay)'
+  note: 'pour un son frappé suivi d’une résonance, l’oreille juge la raideur de l’attaque plus par la façon dont le son s’éteint que par la façon dont il apparaît (Chion, 1983, art. 97) [[chion1983]] : on s’efforce de juger le début et la fin à part (réciproque écrite aussi dans soundDecay)'
 ontoClean:
   rigidite: +R
   identite_propre: +I
@@ -85,18 +123,19 @@ references:
     Psychological Research, 58(3), 177–192.'
   doi_ou_url: https://doi.org/10.1007/BF00419633
   role: fonde
-  statut_verification: vérifiée sur résumé ou source secondaire
-  verifie_le: '2026-10-15'
-  verifie_sur: résumé lu (PubMed, PMID 8570786) ; texte non lu
-  reprend: le temps de montée, dimension commune du timbre
-  ne_reprend_pas: les poids des classes d’auditeurs, les traits propres (texte non lu)
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-11-04'
+  verifie_sur: 'texte des auteurs lu en entier (médiathèque de l’IRCAM, institut des auteurs : http://articles.ircam.fr/textes/McAdams95a/) ; résumé aussi lu sur PubMed (PMID 8570786)'
+  reprend: le temps de montée en logarithme, qui explique 88 % d’une des trois dimensions communes du timbre ; la montée comptée depuis 2 % du maximum, selon la mesure de Krimphoff et al. (1994) reprise
+    par les auteurs ; la dimension, qui suit aussi le temps passé à moins de 3 dB du maximum, suggère selon eux une séparation entre sources excitées par impulsion et sources entretenues
+  ne_reprend_pas: les poids des classes d’auditeurs, les traits propres à chaque son, les dimensions spectrales
 - id: grey1977
   citation: Grey, J. M. (1977). Multidimensional perceptual scaling of musical timbres. The Journal of the Acoustical Society of America, 61(5), 1270–1277.
   doi_ou_url: https://doi.org/10.1121/1.381428
   role: alimente
   statut_verification: vérifiée sur résumé ou source secondaire
-  verifie_le: '2026-10-15'
-  verifie_sur: résumé lu (OpenAlex) ; texte non lu
+  verifie_le: '2026-11-04'
+  verifie_sur: résumé lu (métadonnées Crossref ; OpenAlex le 2026-10-15) ; texte non lu
   reprend: deux dimensions qui touchent l’attaque, plutôt sa couleur que sa vitesse
   ne_reprend_pas: l’interprétation détaillée des dimensions (texte non lu)
 - id: chion1983
@@ -107,7 +146,7 @@ references:
   statut_verification: vérifiée sur la source
   verifie_le: '2026-10-15'
   verifie_sur: sections IV et V (art. 58 à 100) lues en entier dans la traduction anglaise de Dack et North
-  reprend: la raideur de l’attaque (art. 97) ; l’attaque jugée par l’extinction
+  reprend: la raideur de l’attaque et les sept genres d’attaque (art. 97) ; l’attaque jugée par l’extinction pour un son frappé suivi d’une résonance
   ne_reprend_pas: le vocabulaire de Schaeffer comme labels
 - id: schaeffer1966
   citation: 'Schaeffer, P. (1966). Traité des objets musicaux. Paris : Seuil (coll. « Pierres vives »).'
@@ -117,10 +156,47 @@ references:
   verifie_le: '2026-10-15'
   verifie_sur: 'lu via Chion (Guide des objets sonores, 1983 : sections IV et V (art. 58 à 100) lues en entier dans la traduction anglaise de Dack et North ; le reste via Chion) ; texte de Schaeffer non
     lu'
-  reprend: le critère de dynamique, dont l’attaque
+  reprend: le critère de dynamique, dont l’attaque et ses sept genres (lus via Chion, art. 97)
   ne_reprend_pas: la typo-morphologie entière
-etat_de_l_art: 'Sources : temps de montée (McAdams et al. 1995) [[mcadams1995]] ; chez Grey (1977) [[grey1977]], deux dimensions touchent l’attaque, plutôt sa couleur que sa vitesse ; raideur de l’attaque
-  chez Schaeffer [[schaeffer1966]] (Chion 1983, art. 97, lu en traduction) [[chion1983]]. Aucune source trouvée ne fixe des régions perçues de l’attaque. Détail : docs/bibliographie-par-type.md#groupe-son.'
+- id: peeters2011
+  citation: 'Peeters, G., Giordano, B. L., Susini, P., Misdariis, N. & McAdams, S. (2011). The Timbre Toolbox: Extracting audio descriptors from musical signals. The Journal of the Acoustical Society of
+    America, 130(5), 2902–2916.'
+  doi_ou_url: https://doi.org/10.1121/1.3642604
+  role: alimente
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-11-04'
+  verifie_sur: section sur l’enveloppe d’énergie lue (copie mise en ligne par un laboratoire des auteurs) ; résumé lu sur le dépôt de l’université McGill (https://mcgill.scholaris.ca/items/b6b7c55e-9bf7-4000-9ac6-e441946dde22)
+    ; reste du texte non lu
+  reprend: le temps d’attaque en logarithme, avec des seuils adaptés à chaque son ; les seuils fixes jugés peu fiables
+  ne_reprend_pas: les autres descripteurs, l’outil de calcul (non lus)
+- id: gordon1987
+  citation: Gordon, J. W. (1987). The perceptual attack time of musical tones. The Journal of the Acoustical Society of America, 82(1), 88–105.
+  doi_ou_url: https://doi.org/10.1121/1.395441
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-11-04'
+  verifie_sur: résumé lu (métadonnées Crossref ; PubMed, PMID 3624645) ; texte non lu
+  reprend: le temps d’attaque perçu dépend du temps de montée et du niveau d’écoute
+  ne_reprend_pas: les modèles comparés et leurs paramètres (texte non lu)
+- id: vos_rasch1981
+  citation: Vos, J. & Rasch, R. (1981). The perceptual onset of musical tones. Perception & Psychophysics, 29(4), 323–335.
+  doi_ou_url: https://doi.org/10.3758/BF03207341
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-11-04'
+  verifie_sur: 'résumé lu (page de l’éditeur, Springer) ; PubMed (PMID 7279555) : métadonnées seules ; texte non lu'
+  reprend: le début perçu se place quand l’enveloppe atteint un seuil relatif, environ 15 dB sous son maximum, et bouge un peu avec le niveau
+  ne_reprend_pas: le détail des expériences (texte non lu)
+etat_de_l_art: 'Sources : chez McAdams et al. (1995) [[mcadams1995]], sur 18 sons d’instruments synthétisés (imitations et hybrides, de même hauteur et de même force), le logarithme du temps de montée explique
+  88 % d’une des trois dimensions communes du timbre. Cette dimension suit aussi le temps pendant lequel le son reste près de son maximum : selon les auteurs, cela suggère qu’elle sépare les sources mises
+  en vibration par une impulsion brève (un coup, un pincement) de celles entretenues (un souffle, un archet) ; dans ces sons, une attaque raide va souvent avec une extinction immédiate. Chez Grey (1977)
+  [[grey1977]], deux dimensions tiennent au début du son : les harmoniques aigus y apparaissent plus ou moins ensemble, et une énergie faible et aiguë y est plus ou moins présente ; elles touchent la couleur
+  de l’attaque plutôt que sa vitesse (résumé lu). Peeters et al. (2011) [[peeters2011]] jugent peu fiable un temps d’attaque mesuré avec des seuils fixes sur l’enveloppe, et adaptent les seuils à chaque
+  son. On entend un son commencer quand son enveloppe atteint environ 15 dB sous son maximum, et ce moment bouge un peu avec le niveau (Vos et Rasch 1981) [[vos_rasch1981]] ; le moment où l’on entend l’attaque
+  dépend du temps de montée et du niveau d’écoute (Gordon 1987) [[gordon1987]]. Schaeffer [[schaeffer1966]], lu via Chion (1983, art. 97, lu en traduction) [[chion1983]], distingue la raideur de l’attaque
+  et sa couleur, et sept « genres d’attaque » ; pour un son entretenu, l’oreille juge la raideur par la façon dont l’énergie apparaît (ses expériences de montage de bande portent sur des apparitions de
+  l’énergie d’environ 3 à 50 ms) ; pour un son frappé suivi d’une résonance, plutôt par la façon dont elle disparaît. Aucune source trouvée ne fixe des régions perçues de l’attaque, ni des bornes en millisecondes
+  entre elles. Détail : docs/bibliographie-par-type.md#groupe-son.'
 etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-son
 axiomes:
 - conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
@@ -146,15 +222,17 @@ enonces_testables:
   epreuve: null
 cq_couvertes: CQ1, CQ2
 statut: candidat
-statut_note: 'en préparation (2026-10-15) : fiche rédigée, sans exemplaire ; tous les champs rédigés sont à relire'
+statut_note: 'en préparation (2026-11-04) : fiche rédigée, sources complétées, épisodes proposés « à réaliser » (aucun réalisé) ; tous les champs rédigés sont à relire'
 statut_epistemique: non éprouvé
 introduit_en: '2.8'
 modifie_en: []
 remplace_par: []
-source_de_la_fiche: proposition de famille « Son » (docs/famille-son-proposition.md (document de travail, non publié), séries 41 à 43 ; premier lot recommandé par la relecture explicative en série 49 bis, à confirmer par l’éditeur) ; fiche
-  rédigée le 2026-10-15 par l’équipe, champs à valider par la relecture explicative
+source_de_la_fiche: 'proposition de famille « Son » (docs/famille-son-proposition.md (document de travail, non publié), séries 41 à 43) ; premier lot : décision 3 du 2026-10-14 (série 43), « recommandation
+  suivie », sous la note de l’éditeur du projet dans ce document : « je suis en accrod avec toutes les propositions/ recommandations. » ; fiche rédigée le 2026-10-15 par l’équipe ; sources, mesures et épisodes
+  complétés le 2026-11-04 (choix de relecture (2026-11-04)) ; champs à valider par la relecture explicative'
 manques:
-- 'exemplaires (à renseigner : objets publics vérifiés, un épisode par objet, conditions déclarées ; enregistrement cité ou objet décrit, X17)'
+- 'exemplaires observés : aucun épisode encore réalisé (six proposés, sur des enregistrements CC0)'
+- relecture explicative de tous les champs
 bloque_par: []
 a_relire:
 - label_fr
@@ -163,6 +241,7 @@ a_relire:
 - définition
 - question_attentionnelle
 - contre_exemple
+- note_categories
 - mode_de_presentation
 - conditions_critiques
 - note_conditions
@@ -178,8 +257,207 @@ a_relire:
 - enonces_testables
 - statut_note
 - mesure
+- episodes_a_realiser
 relecture_explicative:
   date: null
   champs:
   - 'harmonisation mécanique des énoncés affichés (série 69, 2026-10-17)'
   a_reconfirmer: []
+# Série 97 : épisodes proposés « à réaliser » (spec X17 ; choix de relecture (2026-11-04)) ; ni épreuve faite ni accord entre observateurs ; ni observateur, ni date, ni résultat.
+# Enregistrements CC0 (Creative Commons 0 : lien vers la licence lu sur chaque page), pages vérifiées le 2026-11-04 ; montées mesurées par l’équipe sur l’aperçu MP3 de chaque page (enveloppe en décibels), indicatives, non vérifiées comme bornes.
+episodes_a_realiser:
+- id: ppp-a:ep-soundAttack-01
+  realisation: a_realiser
+  region_attendue: abrupt
+  rang_exemplaire: principal
+  objet: enregistrement d’un coup de claves (deux baguettes de bois frappées l’une contre l’autre), environ 0,8 s, page « Claves (claves_ff.wav) », par sgossner, sur Freesound (https://freesound.org/people/sgossner/sounds/375640/),
+    licence CC0, page vérifiée le 2026-11-04
+  objet_en: recording of a stroke of claves (two wooden sticks struck together), about 0.8 s, page “Claves (claves_ff.wav)”, by sgossner, on Freesound (https://freesound.org/people/sgossner/sounds/375640/),
+    CC0 licence, page checked on 2026-11-04
+  preparation: comme l’épisode 03 ; même niveau d’écoute ; écouter l’enregistrement en entier, deux ou trois fois
+  preparation_en: as in episode 03; same listening level; listen to the whole recording two or three times
+  consigne: Le son part-il d’un coup, en claquant (un claquement de mains, une porte qui claque) ; vite, mais sans claquer (une touche de piano enfoncée doucement) ; ou monte-t-il peu à peu (une soufflerie
+    ou un aspirateur qui démarre) ?
+  consigne_en: Does the sound start all at once, with a snap (a hand clap, a door slamming); quickly, but without a snap (a piano key pressed gently); or does it build up little by little (a blower or a
+    vacuum cleaner starting up)?
+  conditions:
+    presentation: recording
+    distance: unknown
+    production: impact
+    bruit_de_fond: quiet
+    duree: glance
+    note: enregistré dans une salle de répétition, avec une paire de micros espacés (d’après la page), distance non dite (`unknown`) ; bois contre bois, noté `impact` ; casque fermé ou enceintes, pièce
+      calme ; écoute complète de 0,8 s
+    note_en: recorded in a rehearsal room, with a spaced pair of microphones (according to the page), distance not given (`unknown`); wood against wood, recorded as `impact`; closed headphones or loudspeakers,
+      quiet room; full listening of 0.8 s
+  doute: non
+  note: son au plus fort environ 8 ms après le début de l’enregistrement (mesure de l’équipe sur l’aperçu MP3, indicative) ; l’enregistrement commence presque avec le coup
+  note_en: sound at its loudest about 8 ms after the start of the recording (team measurement on the MP3 preview, indicative); the recording starts almost with the stroke
+  texte_fr: 'Un coup de claves, bois contre bois : abrupte (prédiction, à éprouver).'
+  texte_en: 'A stroke of claves, wood against wood: abrupt (prediction, to be tested).'
+- id: ppp-a:ep-soundAttack-02
+  realisation: a_realiser
+  region_attendue: abrupt
+  rang_exemplaire: second
+  objet: enregistrement d’un coup sur une cloche tubulaire (un tube de métal d’orchestre), note do, environ 19 s, page « Tubular Bells - C4 (TB_hit_C4_v4_rr1.wav) », par sgossner, sur Freesound (https://freesound.org/people/sgossner/sounds/374273/),
+    licence CC0, page vérifiée le 2026-11-04
+  objet_en: recording of a stroke on a tubular bell (an orchestral metal tube), note C, about 19 s, page “Tubular Bells - C4 (TB_hit_C4_v4_rr1.wav)”, by sgossner, on Freesound (https://freesound.org/people/sgossner/sounds/374273/),
+    CC0 licence, page checked on 2026-11-04
+  preparation: comme l’épisode 03 ; même niveau d’écoute ; juger les premières secondes, puis écouter la résonance à part
+  preparation_en: as in episode 03; same listening level; judge the first seconds, then listen to the resonance separately
+  consigne: Le son part-il d’un coup, en claquant (un claquement de mains, une porte qui claque) ; vite, mais sans claquer (une touche de piano enfoncée doucement) ; ou monte-t-il peu à peu (une soufflerie
+    ou un aspirateur qui démarre) ?
+  consigne_en: Does the sound start all at once, with a snap (a hand clap, a door slamming); quickly, but without a snap (a piano key pressed gently); or does it build up little by little (a blower or a
+    vacuum cleaner starting up)?
+  conditions:
+    presentation: recording
+    distance: near
+    production: impact
+    bruit_de_fond: quiet
+    duree: glance
+    note: enregistré dans un grand auditorium, avec une paire de micros espacés et des micros proches (d’après la page) ; coup de maillet sur un tube de métal, noté `impact` ; casque fermé ou enceintes,
+      pièce calme ; jugement sur les premières secondes ; écoute complète de 19,1 s
+    note_en: recorded in a large auditorium, with a spaced pair and close microphones (according to the page); mallet stroke on a metal tube, recorded as `impact`; closed headphones or loudspeakers, quiet
+      room; judged on the first seconds; full listening of 19.1 s
+  doute: oui
+  motif_doute: 'la cloche résonne longtemps : l’oreille peut juger l’attaque par la façon dont le son s’éteint (piège noté dans les conditions) ; l’enregistrement commence au coup, sans silence avant, ce
+    qui va contre la règle de la note des conditions : un début coupé peut faire paraître l’attaque plus abrupte qu’elle n’est'
+  motif_doute_en: 'the bell rings for a long time: the ear may judge the attack by the way the sound dies away (trap noted in the conditions); the recording starts at the stroke, with no silence before
+    it, which goes against the rule in the conditions note: a cut start can make the attack sound more abrupt than it is'
+  note: 'son déjà presque au plus fort dès le début de l’enregistrement, puis lente extinction (environ −32 dB à 10 s) (mesure de l’équipe sur l’aperçu MP3, indicative). Épisode de contrôle du piège : attaque
+    franche, longue résonance'
+  note_en: 'sound already close to its loudest at the very start of the recording, then a slow dying away (about −32 dB at 10 s) (team measurement on the MP3 preview, indicative). Control episode for the
+    trap: sharp attack, long resonance'
+  texte_fr: 'Un coup sur une cloche tubulaire, qui résonne longtemps : abrupte (prédiction, à éprouver).'
+  texte_en: 'A stroke on a tubular bell, with a long resonance: abrupt (prediction, to be tested).'
+- id: ppp-a:ep-soundAttack-03
+  realisation: a_realiser
+  region_attendue: quick
+  rang_exemplaire: principal
+  objet: enregistrement d’une note de harpe pincée, note ré, environ 11 s, page « Harp - D4 (KSHarp_D4_mf.wav) », par sgossner, sur Freesound (https://freesound.org/people/sgossner/sounds/373565/), licence
+    CC0, page vérifiée le 2026-11-04
+  objet_en: recording of a plucked harp note, note D, about 11 s, page “Harp - D4 (KSHarp_D4_mf.wav)”, by sgossner, on Freesound (https://freesound.org/people/sgossner/sounds/373565/), CC0 licence, page
+    checked on 2026-11-04
+  preparation: ouvrir la page et écouter l’enregistrement en entier, sans le télécharger ni le modifier ; régler le niveau une fois, sur cette note, à peu près comme une conversation calme, puis ne plus
+    le toucher pour les autres épisodes ; juger le début du son, la résonance à part
+  preparation_en: open the page and listen to the whole recording, without downloading or editing it; set the level once, on this note, roughly like a calm conversation, then leave it unchanged for the
+    other episodes; judge the start of the sound, the resonance separately
+  consigne: Le son part-il d’un coup, en claquant (un claquement de mains, une porte qui claque) ; vite, mais sans claquer (une touche de piano enfoncée doucement) ; ou monte-t-il peu à peu (une soufflerie
+    ou un aspirateur qui démarre) ?
+  consigne_en: Does the sound start all at once, with a snap (a hand clap, a door slamming); quickly, but without a snap (a piano key pressed gently); or does it build up little by little (a blower or a
+    vacuum cleaner starting up)?
+  conditions:
+    presentation: recording
+    distance: near
+    production: deformation
+    bruit_de_fond: quiet
+    duree: glance
+    note: enregistré dans un salon, avec une paire de micros espacés et des micros proches (d’après la page) ; corde tirée puis lâchée, notée `deformation` (la facette n’a pas de valeur propre pour le pincement
+      ; à relire) ; casque fermé ou enceintes, pièce calme ; jugement sur la première seconde ; écoute complète de 10,9 s
+    note_en: recorded in a living room, with a spaced pair and close microphones (according to the page); string pulled then released, recorded as `deformation` (the facet has no specific value for plucking;
+      to be reviewed); closed headphones or loudspeakers, quiet room; judged on the first second; full listening of 10.9 s
+  doute: oui
+  motif_doute: 'la montée mesurée est presque aussi courte que celle d’un son frappé : aucune source lue ne fixe la limite entre abrupte et rapide ; la question cite la corde pincée comme repère, ce qui
+    peut guider la réponse'
+  motif_doute_en: 'the measured rise is almost as short as that of a struck sound: no source read sets the boundary between abrupt and quick; the question cites the plucked string as a reference, which
+    may guide the answer'
+  note: environ 20 ms de silence, puis le son atteint son plus fort en 15 à 25 ms (mesure de l’équipe sur l’aperçu MP3, indicative), à peine plus lentement que les claves de l’épisode 01
+  note_en: about 20 ms of silence, then the sound reaches its loudest within 15 to 25 ms (team measurement on the MP3 preview, indicative), barely more slowly than the claves of episode 01
+  texte_fr: 'Une note de harpe pincée : rapide (prédiction, à éprouver).'
+  texte_en: 'A plucked harp note: quick (prediction, to be tested).'
+- id: ppp-a:ep-soundAttack-04
+  realisation: a_realiser
+  region_attendue: quick
+  rang_exemplaire: second
+  objet: enregistrement d’une voix de femme qui improvise des notes seules (« female single notes improvisation », d’après la page), environ 11 s, page « female vocal long.wav », par owstu, sur Freesound
+    (https://freesound.org/people/owstu/sounds/628817/), licence CC0, page vérifiée le 2026-11-04
+  objet_en: recording of a female voice improvising single notes (“female single notes improvisation”, according to the page), about 11 s, page “female vocal long.wav”, by owstu, on Freesound (https://freesound.org/people/owstu/sounds/628817/),
+    CC0 licence, page checked on 2026-11-04
+  preparation: comme l’épisode 03 ; même niveau d’écoute ; juger le début de la première note (de 0 à 2 s environ)
+  preparation_en: as in episode 03; same listening level; judge the start of the first note (from 0 to about 2 s)
+  consigne: Le son part-il d’un coup, en claquant (un claquement de mains, une porte qui claque) ; vite, mais sans claquer (une touche de piano enfoncée doucement) ; ou monte-t-il peu à peu (une soufflerie
+    ou un aspirateur qui démarre) ?
+  consigne_en: Does the sound start all at once, with a snap (a hand clap, a door slamming); quickly, but without a snap (a piano key pressed gently); or does it build up little by little (a blower or a
+    vacuum cleaner starting up)?
+  conditions:
+    presentation: recording
+    distance: unknown
+    production: voiceOrBreath
+    bruit_de_fond: quiet
+    duree: glance
+    note: la page ne décrit ni la prise de son ni la distance (`unknown`) ; voix chantée, notée `voiceOrBreath` ; casque fermé ou enceintes, pièce calme ; jugement sur le début de la première note ; écoute
+      complète de 10,9 s
+    note_en: the page describes neither the recording nor the distance (`unknown`); singing voice, recorded as `voiceOrBreath`; closed headphones or loudspeakers, quiet room; judged on the start of the
+      first note; full listening of 10.9 s
+  doute: oui
+  motif_doute: 'la note part vite, puis continue de monter pendant près de 2 s : l’auditeur peut juger le départ (rapide) ou la montée d’ensemble (progressive)'
+  motif_doute_en: 'the note starts quickly, then keeps rising for almost 2 s: listeners may judge the onset (quick) or the overall rise (gradual)'
+  note: la voix part vite (après environ 0,12 s de silence, elle arrive à environ 8 dB sous son plus fort en 40 à 140 ms, selon la fenêtre de mesure), puis enfle encore jusque vers 2 s (mesure de l’équipe
+    sur l’aperçu MP3, indicative)
+  note_en: the voice starts quickly (after about 0.12 s of silence, it reaches about 8 dB below its loudest within 40 to 140 ms, depending on the measurement window), then keeps swelling until about 2 s
+    (team measurement on the MP3 preview, indicative)
+  texte_fr: 'Une voix chantée qui part vite puis enfle : rapide (prédiction, à éprouver).'
+  texte_en: 'A singing voice that starts quickly, then swells: quick (prediction, to be tested).'
+- id: ppp-a:ep-soundAttack-05
+  realisation: a_realiser
+  region_attendue: gradual
+  rang_exemplaire: principal
+  objet: enregistrement d’un roulement de cymbale suspendue, joué avec des mailloches douces, en crescendo (d’après le nom du fichier ; la page dit seulement « roll »), environ 10 s, page « Cymbals (susp_hit_softmall_roll2_cresc.wav)
+    », par sgossner, sur Freesound (https://freesound.org/people/sgossner/sounds/375519/), licence CC0, page vérifiée le 2026-11-04
+  objet_en: recording of a suspended-cymbal roll, played with soft mallets, in crescendo (according to the file name; the page only says “roll”), about 10 s, page “Cymbals (susp_hit_softmall_roll2_cresc.wav)”,
+    by sgossner, on Freesound (https://freesound.org/people/sgossner/sounds/375519/), CC0 licence, page checked on 2026-11-04
+  preparation: comme l’épisode 03 ; même niveau d’écoute ; écouter jusqu’au plus fort du son (vers 4 s)
+  preparation_en: as in episode 03; same listening level; listen until the sound is at its loudest (around 4 s)
+  consigne: Le son part-il d’un coup, en claquant (un claquement de mains, une porte qui claque) ; vite, mais sans claquer (une touche de piano enfoncée doucement) ; ou monte-t-il peu à peu (une soufflerie
+    ou un aspirateur qui démarre) ?
+  consigne_en: Does the sound start all at once, with a snap (a hand clap, a door slamming); quickly, but without a snap (a piano key pressed gently); or does it build up little by little (a blower or a
+    vacuum cleaner starting up)?
+  conditions:
+    presentation: recording
+    distance: unknown
+    production: impact
+    bruit_de_fond: quiet
+    duree: glance
+    note: 'enregistré dans une salle de répétition, avec une paire de micros espacés (d’après la page), distance non dite (`unknown`) ; roulement : coups de mailloche rapides et répétés, notés `impact`
+      ; casque fermé ou enceintes, pièce calme ; jugement sur les 4 premières secondes ; écoute complète de 9,6 s'
+    note_en: 'recorded in a rehearsal room, with a spaced pair of microphones (according to the page), distance not given (`unknown`); roll: quick repeated mallet strokes, recorded as `impact`; closed headphones
+      or loudspeakers, quiet room; judged on the first 4 seconds; full listening of 9.6 s'
+  doute: non
+  note: le son commence doucement, environ 30 dB sous son plus fort, et n’atteint son plus fort que vers 3,8 s (mesure de l’équipe sur l’aperçu MP3, indicative) ; les coups du roulement se fondent dans
+    la montée
+  note_en: the sound begins softly, about 30 dB below its loudest, and reaches its loudest only around 3.8 s (team measurement on the MP3 preview, indicative); the strokes of the roll merge into the rise
+  texte_fr: 'Un roulement de cymbale en crescendo : progressive (prédiction, à éprouver).'
+  texte_en: 'A cymbal roll in crescendo: gradual (prediction, to be tested).'
+- id: ppp-a:ep-soundAttack-06
+  realisation: a_realiser
+  region_attendue: gradual
+  rang_exemplaire: second
+  objet: enregistrement d’une note tenue de contrebasse, jouée à l’archet sans vibrato, environ 9 s, page « Solo Contrabass - non-vibrato sustain - G3 (BKCtbss_SusNV_G#2_v3_rr1.wav) », par sgossner, sur
+    Freesound (https://freesound.org/people/sgossner/sounds/373126/), licence CC0, page vérifiée le 2026-11-04
+  objet_en: recording of a sustained double-bass note, bowed without vibrato, about 9 s, page “Solo Contrabass - non-vibrato sustain - G3 (BKCtbss_SusNV_G#2_v3_rr1.wav)”, by sgossner, on Freesound (https://freesound.org/people/sgossner/sounds/373126/),
+    CC0 licence, page checked on 2026-11-04
+  preparation: comme l’épisode 03 ; même niveau d’écoute ; juger les premières secondes
+  preparation_en: as in episode 03; same listening level; judge the first seconds
+  consigne: Le son part-il d’un coup, en claquant (un claquement de mains, une porte qui claque) ; vite, mais sans claquer (une touche de piano enfoncée doucement) ; ou monte-t-il peu à peu (une soufflerie
+    ou un aspirateur qui démarre) ?
+  consigne_en: Does the sound start all at once, with a snap (a hand clap, a door slamming); quickly, but without a snap (a piano key pressed gently); or does it build up little by little (a blower or a
+    vacuum cleaner starting up)?
+  conditions:
+    presentation: recording
+    distance: near
+    production: scraping
+    bruit_de_fond: quiet
+    duree: glance
+    note: 'enregistré dans une salle de classe, avec un micro proche et une paire de micros espacés (d’après la page) ; archet : frottement entretenu, noté `scraping` (la facette n’a pas de valeur propre
+      pour l’archet) ; casque fermé ou enceintes, jamais le haut-parleur d’un téléphone, qui rend mal les sons graves ; pièce calme ; jugement sur les premières secondes ; écoute complète de 9,0 s'
+    note_en: 'recorded in a classroom, with a close microphone and a spaced pair (according to the page); bow: sustained friction, recorded as `scraping` (the facet has no specific value for bowing); closed
+      headphones or loudspeakers, never a phone speaker, which reproduces low sounds poorly; quiet room; judged on the first seconds; full listening of 9.0 s'
+  doute: oui
+  motif_doute: 'le départ de l’archet est assez rapide, puis le son enfle : aucune source lue ne fixe la limite entre rapide et progressive'
+  motif_doute_en: 'the bow start is fairly quick, then the sound swells: no source read sets the boundary between quick and gradual'
+  note: le son atteint environ 6 dB sous son plus fort en 0,1 à 0,25 s selon la fenêtre de mesure, puis enfle encore jusque vers 4,7 s (mesure de l’équipe sur l’aperçu MP3, indicative). Même enregistrement
+    qu’un épisode de la hauteur perçue
+  note_en: the sound reaches about 6 dB below its loudest in 0.1 to 0.25 s depending on the measurement window, then keeps swelling until about 4.7 s (team measurement on the MP3 preview, indicative). Same
+    recording as an episode of perceived pitch
+  texte_fr: 'Une note de contrebasse attaquée à l’archet : progressive (prédiction, à éprouver).'
+  texte_en: 'A double-bass note started with the bow: gradual (prediction, to be tested).'

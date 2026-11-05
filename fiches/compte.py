@@ -9,7 +9,8 @@ Usage :
                                       sont complets (spec §9.7 P, point 4 bis), et qu'aucun prénom ni nom d'agent
                                       ne figure hors des fichiers autorisés (spec §13, v2.8), et que le rôle
                                       de chaque référence est dans la liste fermée ROLES_REFERENCES
-                                      (PPP_FicheType.md, spec §9.7 P ; série 15) ; code 1 sinon
+                                      (PPP_FicheType.md, spec §9.7 P ; série 15), et qu'aucun id de référence
+                                      n'est en double dans une fiche (série 97 bis) ; code 1 sinon
   python3 fiches/compte.py --noms     seulement le contrôle des noms (tout le dépôt sauf .git, local/ ; liste
                                       blanche NOMS_AUTORISES, §13 de la spec ; exceptions comptées, non signalées :
                                       docs/crash-test-0*.md, docs/guide-structure-ontologie.md, maquette/ ;
@@ -351,6 +352,16 @@ def roles_hors_liste(d):
     """Références de la fiche dont le rôle n'est pas dans ROLES_REFERENCES : liste de (id de la référence, rôle)."""
     return [(r.get('id', '?'), r.get('role')) for r in (d.get('references') or []) if r.get('role') not in ROLES_REFERENCES]
 
+def references_en_double(d):
+    """Ids de référence présents plus d'une fois dans la liste references de la fiche (série 97 bis) : liste triée."""
+    vus, doubles = set(), set()
+    for r in (d.get('references') or []):
+        rid = r.get('id')
+        if rid in vus:
+            doubles.add(rid)
+        vus.add(rid)
+    return sorted(doubles, key=str)
+
 def appels_manquants(d):
     """Toute mention nominative d'une référence dans etat_de_l_art et les note… a son appel [[id]] après sa première mention."""
     refs = d.get('references') or []
@@ -674,6 +685,10 @@ if __name__ == '__main__':
                 print('rôle de référence hors liste : %s, référence %s : « %s » (rôles admis : %s ; PPP_FicheType.md, spec §9.7 P)'
                       % (i, rid, role, ', '.join(ROLES_REFERENCES)))
                 ok = False
+        for i, d in sorted(fiches.items()):
+            for rid in references_en_double(d):
+                print('référence en double : %s, id « %s » présent plusieurs fois dans references' % (i, rid))
+                ok = False
         connues = cq_de_la_spec()
         for i, d in sorted(fiches.items()):
             f = cq_fautives(d, connues)
@@ -699,7 +714,7 @@ if __name__ == '__main__':
                 print('mesure (non bloquant) : %s : %s' % (i, msg))
         if not ok:
             sys.exit(1)
-        print('fiches/README.md : comptes à jour ; appels [[id]] complets ; cq_couvertes valides ; rôles de références dans la liste fermée ; %d fiches publiques, comme attendu ; aucun nom hors des fichiers autorisés ; exemplaires du toucher, de l’ouïe et de l’odorat comptés selon la spec.' % len(FICHES_PUBLIQUES_ATTENDUES))
+        print('fiches/README.md : comptes à jour ; appels [[id]] complets ; cq_couvertes valides ; rôles de références dans la liste fermée ; aucune référence en double ; %d fiches publiques, comme attendu ; aucun nom hors des fichiers autorisés ; exemplaires du toucher, de l’ouïe et de l’odorat comptés selon la spec.' % len(FICHES_PUBLIQUES_ATTENDUES))
     elif '--ecrire' in sys.argv:
         ecrire_readme(texte)
     elif '--noms' in sys.argv:
