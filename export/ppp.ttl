@@ -1,5 +1,5 @@
 # PPP, export SKOS des fiches publiques ; ne pas modifier à la main.
-# Licence : CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Version 2.8 ; dernier changement de contenu : 2026-11-05. Pour citer : CITATION.cff.
+# Licence : CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Version 2.8 ; dernier changement de contenu : 2026-11-06. Pour citer : CITATION.cff.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -20,7 +20,7 @@
         "SKOS vocabulary of the published PPP types (public entries), their regions, scales and reading families. The YAML entries of the repository are the source; this export is derived from them."@en ;
     dct:license <https://creativecommons.org/licenses/by/4.0/> ;
     owl:versionInfo "2.8" ;
-    dct:modified "2026-11-05"^^xsd:date ;
+    dct:modified "2026-11-06"^^xsd:date ;
     dct:creator "Lomig Unger" ,
         "Grok Bot" ;
     dct:rightsHolder "Lomig Unger" ;
@@ -50,6 +50,7 @@
         ppp:pitchClarity ,
         ppp:saturation ,
         ppp:saturationRange ,
+        ppp:soundAttack ,
         ppp:subsurfaceDepth ,
         ppp:surfaceGloss ,
         ppp:symmetry ,
@@ -3029,6 +3030,135 @@ ppp:saturationRange
     ppp:regionOf ppp:scaleContrast ;
     skos:broader ppp:scaleContrast .
 
+ppp:soundAttack
+    a skos:Concept ;
+    skos:inScheme <https://w3id.org/ppp/> ;
+    skos:notation "soundAttack" ;
+    skos:prefLabel "attaque du son"@fr ,
+        "sound attack"@en ;
+    skos:definition "La façon dont un son commence : d’un coup, comme un claquement de mains, ou peu à peu, comme un moteur qui démarre. On n’écoute que le tout début du son, pas la façon dont il s’éteint."@fr ,
+        "The way a sound begins: all at once, like a hand clap, or little by little, like an engine starting up. Only the very beginning of the sound counts, not the way it dies away."@en ;
+    skos:scopeNote "Le son part-il d’un coup, en claquant ; vite, mais sans claquer ; ou monte-t-il peu à peu ?"@fr ,
+        "Does the sound start all at once, with a snap; quickly, but without a snap; or does it build up little by little?"@en ,
+        "Une machine déjà en marche quand on arrive n’a pas d’attaque qu’on puisse entendre : le type ne s’applique pas. Un son fort n’a pas pour autant une attaque abrupte : la force du son est une autre qualité. Une cloche qui résonne longtemps n’a pas pour autant une attaque lente : elle part d’un coup, puis s’éteint lentement ; la façon dont le son s’éteint est une autre qualité (l’extinction du son)."@fr ,
+        "A machine already running when you arrive has no attack that can be heard: the type does not apply. A loud sound does not for that reason have an abrupt attack: loudness is another quality. A bell that rings for a long time does not for that reason have a slow attack: it starts all at once, then dies away slowly; the way a sound dies away is another quality (sound decay)."@en ,
+        "Trois régions, de l’attaque la plus raide à la plus lente : c’est une position de travail de l’équipe (choix de relecture (2026-11-04)), qu’aucune source ne fixe, sans borne en millisecondes ; les durées données dans les épisodes sont mesurées par l’équipe sur les enregistrements et restent indicatives. Schaeffer, lu via Chion (art. 97), distingue sept « genres d’attaque » (noms lus dans la traduction anglaise : sudden, steep, soft, flat, gentle, sforzando, non-existent) ; les trois régions de PPP sont plus grossières, sans correspondance vérifiée."@fr ,
+        "Three regions, from the steepest attack to the slowest: this is a working position of the team (review choice (2026-11-04)), set by no source, with no boundary in milliseconds; the durations given in the episodes are measured by the team on the recordings and remain indicative. Schaeffer, read via Chion (art. 97), distinguishes seven “genres of attack” (names read in the English translation: sudden, steep, soft, flat, gentle, sforzando, non-existent); the three PPP regions are coarser, with no checked correspondence."@en ;
+    skos:note "candidat ; non éprouvé"@fr ,
+        "candidate; untested"@en ;
+    skos:topConceptOf <https://w3id.org/ppp/> ;
+    ppp:measurementState <https://w3id.org/ppp/mesure/etat/methodes> ;
+    ppp:measurementSummary "Le temps de montée de l’enveloppe d’un son, pris en logarithme, est un corrélat acoustique d’une dimension commune du timbre ; calculé avec des seuils adaptés à chaque son, il donne un descripteur plus fiable : ce sont deux mesures associées proches. Le temps d’attaque perçu dit quand l’attaque s’entend, pas comment le son commence : c’est une mesure indirecte. Ces mesures se calculent sur un enregistrement ; elles ne saisissent ni la salle, ni la distance d’écoute, ni l’auditeur."@fr ,
+        "The rise time of a sound’s envelope, taken as a logarithm, is an acoustic correlate of a common dimension of timbre; computed with thresholds adapted to each sound, it gives a more reliable descriptor: these are two close associated measures. Perceived attack time tells when the attack is heard, not how the sound begins: it is an indirect measure. These measures are computed on a recording; they capture neither the room, nor the listening distance, nor the listener."@en ;
+    ppp:measurementCaveat "Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen."@fr ,
+        "The regions of this entry remain perceptual: they describe what an observer sees, hears, smells or feels by touch under the declared conditions. An associated measurement can inform an observation, but it does not set the boundaries of the regions and does not replace examination."@en ;
+    ppp:associatedMeasure <https://w3id.org/ppp/soundAttack/mesure/mcadams1995> ,
+        <https://w3id.org/ppp/soundAttack/mesure/peeters2011> ,
+        <https://w3id.org/ppp/soundAttack/mesure/gordon1987> ;
+    ppp:notRetainedMeasure <https://w3id.org/ppp/soundAttack/mesure/non-retenue-1> ;
+    ppp:hasScale <https://w3id.org/ppp/soundAttack/echelle> ;
+    skos:narrower <https://w3id.org/ppp/soundAttack/abrupt> ,
+        <https://w3id.org/ppp/soundAttack/quick> ,
+        <https://w3id.org/ppp/soundAttack/gradual> .
+
+<https://w3id.org/ppp/soundAttack/mesure/mcadams1995>
+    a ppp:AssociatedMeasure ;
+    rdfs:label "temps de montée (en logarithme)"@fr ,
+        "rise time (logarithmic)"@en ;
+    ppp:quantity "durée de la montée de l’enveloppe d’amplitude du son, au début du son"@fr ,
+        "duration of the rise of the sound’s amplitude envelope, at the onset of the sound"@en ;
+    ppp:unitOrScale "logarithme d’une durée (temps de montée en secondes)"@fr ,
+        "logarithm of a duration (rise time in seconds)"@en ;
+    ppp:gap "corrélat trouvé sur 18 sons d’instruments synthétisés ; la montée y est comptée, selon la mesure de Krimphoff et al. (1994) reprise par les auteurs, depuis 2 % du maximum de l’enveloppe jusqu’au maximum, et la valeur change si l’on change ces bornes ; se calcule sur un enregistrement : ne saisit ni la salle, ni la distance d’écoute, ni l’auditeur"@fr ,
+        "correlate found on 18 synthesized instrument sounds; the rise is counted there, following the measure of Krimphoff et al. (1994) used by the authors, from 2% of the envelope maximum up to the maximum, and the value changes if these bounds change; computed on a recording: captures neither the room, nor the listening distance, nor the listener"@en ;
+    ppp:measurementConditions "enregistrement du son ; enveloppe d’amplitude calculée ; bornes de la montée déclarées"@fr ,
+        "recording of the sound; computed amplitude envelope; rise boundaries declared"@en ;
+    ppp:proximity <https://w3id.org/ppp/mesure/proximite/proche> ;
+    dct:bibliographicCitation "McAdams, S., Winsberg, S., Donnadieu, S., De Soete, G. & Krimphoff, J. (1995). Perceptual scaling of synthesized musical timbres: Common dimensions, specificities, and latent subject classes. Psychological Research, 58(3), 177–192." .
+
+<https://w3id.org/ppp/soundAttack/mesure/peeters2011>
+    a ppp:AssociatedMeasure ;
+    rdfs:label "temps d’attaque en logarithme, avec des seuils adaptés à chaque son"@fr ,
+        "attack time as a logarithm, with thresholds adapted to each sound"@en ;
+    ppp:quantity "durée de la montée de l’enveloppe d’énergie du son, entre un début et une fin choisis pour chaque son"@fr ,
+        "duration of the rise of the sound’s energy envelope, between a start and an end chosen for each sound"@en ;
+    ppp:unitOrScale "logarithme d’une durée (en secondes)"@fr ,
+        "logarithm of a duration (in seconds)"@en ;
+    ppp:gap "descripteur calculé, dont un réglage a été fixé par les auteurs après des essais sur environ 1 500 sons d’instruments ; selon eux, des seuils fixes (par exemple de 10 % à 100 % du maximum) donnent une valeur peu fiable ; se calcule sur un enregistrement : ne saisit ni la salle, ni la distance d’écoute, ni l’auditeur"@fr ,
+        "computed descriptor, one setting of which the authors fixed after trials on about 1,500 instrument sounds; according to them, fixed thresholds (for example from 10% to 100% of the maximum) give an unreliable value; computed on a recording: captures neither the room, nor the listening distance, nor the listener"@en ;
+    ppp:measurementConditions "enregistrement du son ; enveloppe d’énergie calculée ; façon de choisir les seuils déclarée"@fr ,
+        "recording of the sound; energy envelope computed; way of choosing the thresholds declared"@en ;
+    ppp:proximity <https://w3id.org/ppp/mesure/proximite/proche> ;
+    dct:bibliographicCitation "Peeters, G., Giordano, B. L., Susini, P., Misdariis, N. & McAdams, S. (2011). The Timbre Toolbox: Extracting audio descriptors from musical signals. The Journal of the Acoustical Society of America, 130(5), 2902–2916." .
+
+<https://w3id.org/ppp/soundAttack/mesure/gordon1987>
+    a ppp:AssociatedMeasure ;
+    rdfs:label "temps d’attaque perçu"@fr ,
+        "perceived attack time"@en ;
+    ppp:quantity "moment où l’auditeur entend l’attaque, compté depuis le début physique du son"@fr ,
+        "moment at which the listener hears the attack, counted from the physical start of the sound"@en ;
+    ppp:unitOrScale "durée (en millisecondes)"@fr ,
+        "duration (in milliseconds)"@en ;
+    ppp:gap "situe le moment où l’attaque s’entend, pas la façon dont le son commence ; dépend du temps de montée et du niveau d’écoute ; trouvé sur des notes enregistrées d’instruments d’orchestre"@fr ,
+        "locates the moment at which the attack is heard, not the way the sound begins; depends on rise time and listening level; found on recorded notes of orchestral instruments"@en ;
+    ppp:measurementConditions "enregistrement du son ; niveau d’écoute déclaré"@fr ,
+        "recording of the sound; listening level declared"@en ;
+    ppp:proximity <https://w3id.org/ppp/mesure/proximite/indirecte> ;
+    dct:bibliographicCitation "Gordon, J. W. (1987). The perceptual attack time of musical tones. The Journal of the Acoustical Society of America, 82(1), 88–105." .
+
+<https://w3id.org/ppp/soundAttack/mesure/non-retenue-1>
+    a ppp:NotRetainedMeasure ;
+    rdfs:label "seuil du début perçu (environ 15 dB sous le maximum de l’enveloppe)"@fr ,
+        "perceived-onset threshold (about 15 dB below the envelope maximum)"@en ;
+    ppp:reason "situe le moment où un son commence à s’entendre, pas la façon dont il commence ; utile seulement pour fixer le niveau d’écoute"@fr ,
+        "locates the moment at which a sound begins to be heard, not the way it begins; useful only for setting the listening level"@en ;
+    dct:bibliographicCitation "Vos, J. & Rasch, R. (1981). The perceptual onset of musical tones. Perception & Psychophysics, 29(4), 323–335." .
+
+<https://w3id.org/ppp/soundAttack/echelle>
+    a skos:OrderedCollection ;
+    skos:prefLabel "échelle de « attaque du son »"@fr ,
+        "scale of “sound attack”"@en ;
+    skos:memberList ( <https://w3id.org/ppp/soundAttack/abrupt> <https://w3id.org/ppp/soundAttack/quick> <https://w3id.org/ppp/soundAttack/gradual> ) .
+
+<https://w3id.org/ppp/soundAttack/abrupt>
+    a skos:Concept ;
+    skos:inScheme <https://w3id.org/ppp/> ;
+    skos:notation "abrupt" ;
+    skos:prefLabel "attaque du son : abrupte"@fr ,
+        "sound attack: abrupt"@en ;
+    skos:hiddenLabel "abrupte"@fr ,
+        "abrupt"@en ;
+    skos:example "le son part d’un coup (un claquement de mains, une porte qui claque)"@fr ,
+        "the sound starts all at once (a hand clap, a door slamming)"@en ;
+    ppp:regionOf ppp:soundAttack ;
+    skos:broader ppp:soundAttack .
+
+<https://w3id.org/ppp/soundAttack/quick>
+    a skos:Concept ;
+    skos:inScheme <https://w3id.org/ppp/> ;
+    skos:notation "quick" ;
+    skos:prefLabel "attaque du son : rapide"@fr ,
+        "sound attack: quick"@en ;
+    skos:hiddenLabel "rapide"@fr ,
+        "quick"@en ;
+    skos:example "le son part vite, sans claquer (une touche de piano enfoncée doucement)"@fr ,
+        "the sound starts quickly, without a snap (a piano key pressed gently)"@en ;
+    ppp:regionOf ppp:soundAttack ;
+    skos:broader ppp:soundAttack .
+
+<https://w3id.org/ppp/soundAttack/gradual>
+    a skos:Concept ;
+    skos:inScheme <https://w3id.org/ppp/> ;
+    skos:notation "gradual" ;
+    skos:prefLabel "attaque du son : progressive"@fr ,
+        "sound attack: gradual"@en ;
+    skos:hiddenLabel "progressive"@fr ,
+        "gradual"@en ;
+    skos:example "le son monte peu à peu (une soufflerie ou un aspirateur qui démarre)"@fr ,
+        "the sound builds up little by little (a blower or a vacuum cleaner starting up)"@en ;
+    ppp:regionOf ppp:soundAttack ;
+    skos:broader ppp:soundAttack .
+
 ppp:surfaceGloss
     skos:related ppp:subsurfaceDepth ,
         ppp:saturation ;
@@ -3775,9 +3905,10 @@ ppp:translucency
     a skos:Collection ;
     skos:prefLabel "Son"@fr ,
         "Sound"@en ;
-    skos:scopeNote "Ce qu’on remarque en écoutant un son : celui d’un objet qu’on fait sonner (en le frappant, en le frottant), d’un appareil qui fonctionne, ou d’une voix. Une photo ne dit rien du son : elle sert seulement à reconnaître l’objet. Un enregistrement publié peut servir d’exemple, sauf pour la force du son ; sinon, on décrit l’objet et les conditions d’écoute. Cette famille est en préparation : deux fiches y sont publiées, la netteté de la hauteur et la hauteur perçue."@fr ,
-        "What you notice when you listen to a sound: that of an object you make sound (by striking or rubbing it), of a device that is running, or of a voice. A photo says nothing about sound: it only helps to recognise the object. A published recording can serve as an example, except for loudness; otherwise the object and the listening conditions are described. This family is in preparation: two entries are published so far, pitch clarity and perceived pitch."@en ,
+    skos:scopeNote "Ce qu’on remarque en écoutant un son : celui d’un objet qu’on fait sonner (en le frappant, en le frottant), d’un appareil qui fonctionne, ou d’une voix. Une photo ne dit rien du son : elle sert seulement à reconnaître l’objet. Un enregistrement publié peut servir d’exemple, sauf pour la force du son ; sinon, on décrit l’objet et les conditions d’écoute. Cette famille est en préparation : trois fiches y sont publiées, la netteté de la hauteur, la hauteur perçue et l’attaque du son."@fr ,
+        "What you notice when you listen to a sound: that of an object you make sound (by striking or rubbing it), of a device that is running, or of a voice. A photo says nothing about sound: it only helps to recognise the object. A published recording can serve as an example, except for loudness; otherwise the object and the listening conditions are described. This family is in preparation: three entries are published so far, pitch clarity, perceived pitch and sound attack."@en ,
         "Famille de lecture : aide à s’orienter, pas une hiérarchie."@fr ,
         "Reading family: a guide for orientation, not a hierarchy."@en ;
-    skos:member ppp:pitchClarity ,
+    skos:member ppp:soundAttack ,
+        ppp:pitchClarity ,
         ppp:perceivedPitch .

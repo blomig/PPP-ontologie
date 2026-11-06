@@ -89,19 +89,19 @@ familles:
     label_en: sound
     statut: en préparation   # série 49 (2026-10-15) : champ nouveau, à la demande de l'éditeur du projet (voir le Son et l'Odorat sur le site) ; build.py le lit (famille montrée « en préparation » sur le site) ; compte.py ne le lit pas (il compte les types, les familles et les introductions à relire)
     introduction: >-
-      Ce qu’on remarque en écoutant un son : celui d’un objet qu’on fait sonner (en le frappant,
-      en le frottant), d’un appareil qui fonctionne, ou d’une voix. Une photo ne dit rien du son
-      : elle sert seulement à reconnaître l’objet. Un enregistrement publié peut servir
-      d’exemple, sauf pour la force du son ; sinon, on décrit l’objet et les conditions
-      d’écoute. Cette famille est en préparation : deux fiches y sont publiées, la netteté de la
-      hauteur et la hauteur perçue.
+      Ce qu’on remarque en écoutant un son : celui d’un objet qu’on fait sonner (en le
+      frappant, en le frottant), d’un appareil qui fonctionne, ou d’une voix. Une photo ne
+      dit rien du son : elle sert seulement à reconnaître l’objet. Un enregistrement
+      publié peut servir d’exemple, sauf pour la force du son ; sinon, on décrit l’objet
+      et les conditions d’écoute. Cette famille est en préparation : trois fiches y sont
+      publiées, la netteté de la hauteur, la hauteur perçue et l’attaque du son.
     # Série 49 : famille inscrite sans fiche, à la demande de l'éditeur du projet ; écart avec T4 (« pas de famille vide »,
     # tranché) et avec la décision 1 de la série 43 (famille inscrite avec sa première fiche) : à confirmer par l'éditeur du projet.
     # Règle d'appartenance (série 43, décision 1) : tous les types dont `modalites` contient `audition`, et eux seuls ;
     # chaque type garde aussi sa famille d'aspect. Proposition et décisions : docs/famille-son-proposition.md (document de travail, non publié).
     a_relire: []
-    relecture_explicative: {date: "2026-11-03", champs: [introduction]}   # série 49 bis : introduction écrite par la relecture explicative ; série 95 (2026-11-03) : dernière phrase mise à jour (une fiche publiée), choix de relecture (2026-11-03) ; série 96 (2026-11-03) : introduction mise à jour (deux fiches publiées, la voix), choix de relecture (2026-11-03) ; série 96 bis (2026-11-03) : date portée du 2026-10-15 au 2026-11-03 (introduction relue en série 96), choix de relecture (2026-11-03)
-    types: [ppp:soundAttack, ppp:soundSharpness, ppp:soundDecay, ppp:pitchClarity, ppp:perceivedPitch]   # série 50 : premières fiches, en préparation ; série 93 (2026-11-02) : perceivedPitch (publiée en série 96)
+    relecture_explicative: {date: "2026-11-06", champs: [introduction]}   # série 49 bis : introduction écrite par la relecture explicative ; série 95 (2026-11-03) : dernière phrase mise à jour (une fiche publiée), choix de relecture (2026-11-03) ; série 96 (2026-11-03) : introduction mise à jour (deux fiches publiées, la voix), choix de relecture (2026-11-03) ; série 96 bis (2026-11-03) : date portée du 2026-10-15 au 2026-11-03 (introduction relue en série 96), choix de relecture (2026-11-03) ; série 101 (2026-11-06) : dernière phrase mise à jour (trois fiches publiées, l’attaque du son), date portée au 2026-11-06, choix de relecture (2026-11-06)
+    types: [ppp:soundAttack, ppp:soundSharpness, ppp:soundDecay, ppp:pitchClarity, ppp:perceivedPitch]   # série 50 : premières fiches, en préparation ; série 93 (2026-11-02) : perceivedPitch (publiée en série 96) ; soundAttack publiée en série 101
   - cle: odorat
     label_fr: Odorat
     label_en: smell

@@ -188,7 +188,7 @@
    "dct_license": "https://creativecommons.org/licenses/by/4.0/",
    "owl:versionInfo": "2.8",
    "dct:modified": {
-    "@value": "2026-11-05",
+    "@value": "2026-11-06",
     "@type": "xsd:date"
    },
    "dct:creator": [
@@ -223,6 +223,7 @@
     "https://w3id.org/ppp/pitchClarity",
     "https://w3id.org/ppp/saturation",
     "https://w3id.org/ppp/saturationRange",
+    "https://w3id.org/ppp/soundAttack",
     "https://w3id.org/ppp/subsurfaceDepth",
     "https://w3id.org/ppp/surfaceGloss",
     "https://w3id.org/ppp/symmetry",
@@ -5211,6 +5212,222 @@
    "broader": "https://w3id.org/ppp/scaleContrast"
   },
   {
+   "@id": "https://w3id.org/ppp/soundAttack",
+   "@type": "skos:Concept",
+   "inScheme": "https://w3id.org/ppp/",
+   "skos:notation": "soundAttack",
+   "prefLabel": {
+    "fr": "attaque du son",
+    "en": "sound attack"
+   },
+   "definition": {
+    "fr": "La façon dont un son commence : d’un coup, comme un claquement de mains, ou peu à peu, comme un moteur qui démarre. On n’écoute que le tout début du son, pas la façon dont il s’éteint.",
+    "en": "The way a sound begins: all at once, like a hand clap, or little by little, like an engine starting up. Only the very beginning of the sound counts, not the way it dies away."
+   },
+   "scopeNote": {
+    "fr": [
+     "Le son part-il d’un coup, en claquant ; vite, mais sans claquer ; ou monte-t-il peu à peu ?",
+     "Une machine déjà en marche quand on arrive n’a pas d’attaque qu’on puisse entendre : le type ne s’applique pas. Un son fort n’a pas pour autant une attaque abrupte : la force du son est une autre qualité. Une cloche qui résonne longtemps n’a pas pour autant une attaque lente : elle part d’un coup, puis s’éteint lentement ; la façon dont le son s’éteint est une autre qualité (l’extinction du son).",
+     "Trois régions, de l’attaque la plus raide à la plus lente : c’est une position de travail de l’équipe (choix de relecture (2026-11-04)), qu’aucune source ne fixe, sans borne en millisecondes ; les durées données dans les épisodes sont mesurées par l’équipe sur les enregistrements et restent indicatives. Schaeffer, lu via Chion (art. 97), distingue sept « genres d’attaque » (noms lus dans la traduction anglaise : sudden, steep, soft, flat, gentle, sforzando, non-existent) ; les trois régions de PPP sont plus grossières, sans correspondance vérifiée."
+    ],
+    "en": [
+     "Does the sound start all at once, with a snap; quickly, but without a snap; or does it build up little by little?",
+     "A machine already running when you arrive has no attack that can be heard: the type does not apply. A loud sound does not for that reason have an abrupt attack: loudness is another quality. A bell that rings for a long time does not for that reason have a slow attack: it starts all at once, then dies away slowly; the way a sound dies away is another quality (sound decay).",
+     "Three regions, from the steepest attack to the slowest: this is a working position of the team (review choice (2026-11-04)), set by no source, with no boundary in milliseconds; the durations given in the episodes are measured by the team on the recordings and remain indicative. Schaeffer, read via Chion (art. 97), distinguishes seven “genres of attack” (names read in the English translation: sudden, steep, soft, flat, gentle, sforzando, non-existent); the three PPP regions are coarser, with no checked correspondence."
+    ]
+   },
+   "note": {
+    "fr": "candidat ; non éprouvé",
+    "en": "candidate; untested"
+   },
+   "topConceptOf": "https://w3id.org/ppp/",
+   "measurementState": "https://w3id.org/ppp/mesure/etat/methodes",
+   "measurementSummary": {
+    "fr": "Le temps de montée de l’enveloppe d’un son, pris en logarithme, est un corrélat acoustique d’une dimension commune du timbre ; calculé avec des seuils adaptés à chaque son, il donne un descripteur plus fiable : ce sont deux mesures associées proches. Le temps d’attaque perçu dit quand l’attaque s’entend, pas comment le son commence : c’est une mesure indirecte. Ces mesures se calculent sur un enregistrement ; elles ne saisissent ni la salle, ni la distance d’écoute, ni l’auditeur.",
+    "en": "The rise time of a sound’s envelope, taken as a logarithm, is an acoustic correlate of a common dimension of timbre; computed with thresholds adapted to each sound, it gives a more reliable descriptor: these are two close associated measures. Perceived attack time tells when the attack is heard, not how the sound begins: it is an indirect measure. These measures are computed on a recording; they capture neither the room, nor the listening distance, nor the listener."
+   },
+   "measurementCaveat": {
+    "fr": "Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.",
+    "en": "The regions of this entry remain perceptual: they describe what an observer sees, hears, smells or feels by touch under the declared conditions. An associated measurement can inform an observation, but it does not set the boundaries of the regions and does not replace examination."
+   },
+   "associatedMeasure": [
+    "https://w3id.org/ppp/soundAttack/mesure/mcadams1995",
+    "https://w3id.org/ppp/soundAttack/mesure/peeters2011",
+    "https://w3id.org/ppp/soundAttack/mesure/gordon1987"
+   ],
+   "notRetainedMeasure": "https://w3id.org/ppp/soundAttack/mesure/non-retenue-1",
+   "hasScale": "https://w3id.org/ppp/soundAttack/echelle",
+   "narrower": [
+    "https://w3id.org/ppp/soundAttack/abrupt",
+    "https://w3id.org/ppp/soundAttack/quick",
+    "https://w3id.org/ppp/soundAttack/gradual"
+   ]
+  },
+  {
+   "@id": "https://w3id.org/ppp/soundAttack/mesure/mcadams1995",
+   "@type": "ppp:AssociatedMeasure",
+   "rdfs_label": {
+    "fr": "temps de montée (en logarithme)",
+    "en": "rise time (logarithmic)"
+   },
+   "quantity": {
+    "fr": "durée de la montée de l’enveloppe d’amplitude du son, au début du son",
+    "en": "duration of the rise of the sound’s amplitude envelope, at the onset of the sound"
+   },
+   "unitOrScale": {
+    "fr": "logarithme d’une durée (temps de montée en secondes)",
+    "en": "logarithm of a duration (rise time in seconds)"
+   },
+   "gap": {
+    "fr": "corrélat trouvé sur 18 sons d’instruments synthétisés ; la montée y est comptée, selon la mesure de Krimphoff et al. (1994) reprise par les auteurs, depuis 2 % du maximum de l’enveloppe jusqu’au maximum, et la valeur change si l’on change ces bornes ; se calcule sur un enregistrement : ne saisit ni la salle, ni la distance d’écoute, ni l’auditeur",
+    "en": "correlate found on 18 synthesized instrument sounds; the rise is counted there, following the measure of Krimphoff et al. (1994) used by the authors, from 2% of the envelope maximum up to the maximum, and the value changes if these bounds change; computed on a recording: captures neither the room, nor the listening distance, nor the listener"
+   },
+   "measurementConditions": {
+    "fr": "enregistrement du son ; enveloppe d’amplitude calculée ; bornes de la montée déclarées",
+    "en": "recording of the sound; computed amplitude envelope; rise boundaries declared"
+   },
+   "proximity": "https://w3id.org/ppp/mesure/proximite/proche",
+   "dct:bibliographicCitation": "McAdams, S., Winsberg, S., Donnadieu, S., De Soete, G. & Krimphoff, J. (1995). Perceptual scaling of synthesized musical timbres: Common dimensions, specificities, and latent subject classes. Psychological Research, 58(3), 177–192."
+  },
+  {
+   "@id": "https://w3id.org/ppp/soundAttack/mesure/peeters2011",
+   "@type": "ppp:AssociatedMeasure",
+   "rdfs_label": {
+    "fr": "temps d’attaque en logarithme, avec des seuils adaptés à chaque son",
+    "en": "attack time as a logarithm, with thresholds adapted to each sound"
+   },
+   "quantity": {
+    "fr": "durée de la montée de l’enveloppe d’énergie du son, entre un début et une fin choisis pour chaque son",
+    "en": "duration of the rise of the sound’s energy envelope, between a start and an end chosen for each sound"
+   },
+   "unitOrScale": {
+    "fr": "logarithme d’une durée (en secondes)",
+    "en": "logarithm of a duration (in seconds)"
+   },
+   "gap": {
+    "fr": "descripteur calculé, dont un réglage a été fixé par les auteurs après des essais sur environ 1 500 sons d’instruments ; selon eux, des seuils fixes (par exemple de 10 % à 100 % du maximum) donnent une valeur peu fiable ; se calcule sur un enregistrement : ne saisit ni la salle, ni la distance d’écoute, ni l’auditeur",
+    "en": "computed descriptor, one setting of which the authors fixed after trials on about 1,500 instrument sounds; according to them, fixed thresholds (for example from 10% to 100% of the maximum) give an unreliable value; computed on a recording: captures neither the room, nor the listening distance, nor the listener"
+   },
+   "measurementConditions": {
+    "fr": "enregistrement du son ; enveloppe d’énergie calculée ; façon de choisir les seuils déclarée",
+    "en": "recording of the sound; energy envelope computed; way of choosing the thresholds declared"
+   },
+   "proximity": "https://w3id.org/ppp/mesure/proximite/proche",
+   "dct:bibliographicCitation": "Peeters, G., Giordano, B. L., Susini, P., Misdariis, N. & McAdams, S. (2011). The Timbre Toolbox: Extracting audio descriptors from musical signals. The Journal of the Acoustical Society of America, 130(5), 2902–2916."
+  },
+  {
+   "@id": "https://w3id.org/ppp/soundAttack/mesure/gordon1987",
+   "@type": "ppp:AssociatedMeasure",
+   "rdfs_label": {
+    "fr": "temps d’attaque perçu",
+    "en": "perceived attack time"
+   },
+   "quantity": {
+    "fr": "moment où l’auditeur entend l’attaque, compté depuis le début physique du son",
+    "en": "moment at which the listener hears the attack, counted from the physical start of the sound"
+   },
+   "unitOrScale": {
+    "fr": "durée (en millisecondes)",
+    "en": "duration (in milliseconds)"
+   },
+   "gap": {
+    "fr": "situe le moment où l’attaque s’entend, pas la façon dont le son commence ; dépend du temps de montée et du niveau d’écoute ; trouvé sur des notes enregistrées d’instruments d’orchestre",
+    "en": "locates the moment at which the attack is heard, not the way the sound begins; depends on rise time and listening level; found on recorded notes of orchestral instruments"
+   },
+   "measurementConditions": {
+    "fr": "enregistrement du son ; niveau d’écoute déclaré",
+    "en": "recording of the sound; listening level declared"
+   },
+   "proximity": "https://w3id.org/ppp/mesure/proximite/indirecte",
+   "dct:bibliographicCitation": "Gordon, J. W. (1987). The perceptual attack time of musical tones. The Journal of the Acoustical Society of America, 82(1), 88–105."
+  },
+  {
+   "@id": "https://w3id.org/ppp/soundAttack/mesure/non-retenue-1",
+   "@type": "ppp:NotRetainedMeasure",
+   "rdfs_label": {
+    "fr": "seuil du début perçu (environ 15 dB sous le maximum de l’enveloppe)",
+    "en": "perceived-onset threshold (about 15 dB below the envelope maximum)"
+   },
+   "reason": {
+    "fr": "situe le moment où un son commence à s’entendre, pas la façon dont il commence ; utile seulement pour fixer le niveau d’écoute",
+    "en": "locates the moment at which a sound begins to be heard, not the way it begins; useful only for setting the listening level"
+   },
+   "dct:bibliographicCitation": "Vos, J. & Rasch, R. (1981). The perceptual onset of musical tones. Perception & Psychophysics, 29(4), 323–335."
+  },
+  {
+   "@id": "https://w3id.org/ppp/soundAttack/echelle",
+   "@type": "skos:OrderedCollection",
+   "prefLabel": {
+    "fr": "échelle de « attaque du son »",
+    "en": "scale of “sound attack”"
+   },
+   "memberList": [
+    "https://w3id.org/ppp/soundAttack/abrupt",
+    "https://w3id.org/ppp/soundAttack/quick",
+    "https://w3id.org/ppp/soundAttack/gradual"
+   ]
+  },
+  {
+   "@id": "https://w3id.org/ppp/soundAttack/abrupt",
+   "@type": "skos:Concept",
+   "inScheme": "https://w3id.org/ppp/",
+   "skos:notation": "abrupt",
+   "prefLabel": {
+    "fr": "attaque du son : abrupte",
+    "en": "sound attack: abrupt"
+   },
+   "hiddenLabel": {
+    "fr": "abrupte",
+    "en": "abrupt"
+   },
+   "example": {
+    "fr": "le son part d’un coup (un claquement de mains, une porte qui claque)",
+    "en": "the sound starts all at once (a hand clap, a door slamming)"
+   },
+   "regionOf": "https://w3id.org/ppp/soundAttack",
+   "broader": "https://w3id.org/ppp/soundAttack"
+  },
+  {
+   "@id": "https://w3id.org/ppp/soundAttack/quick",
+   "@type": "skos:Concept",
+   "inScheme": "https://w3id.org/ppp/",
+   "skos:notation": "quick",
+   "prefLabel": {
+    "fr": "attaque du son : rapide",
+    "en": "sound attack: quick"
+   },
+   "hiddenLabel": {
+    "fr": "rapide",
+    "en": "quick"
+   },
+   "example": {
+    "fr": "le son part vite, sans claquer (une touche de piano enfoncée doucement)",
+    "en": "the sound starts quickly, without a snap (a piano key pressed gently)"
+   },
+   "regionOf": "https://w3id.org/ppp/soundAttack",
+   "broader": "https://w3id.org/ppp/soundAttack"
+  },
+  {
+   "@id": "https://w3id.org/ppp/soundAttack/gradual",
+   "@type": "skos:Concept",
+   "inScheme": "https://w3id.org/ppp/",
+   "skos:notation": "gradual",
+   "prefLabel": {
+    "fr": "attaque du son : progressive",
+    "en": "sound attack: gradual"
+   },
+   "hiddenLabel": {
+    "fr": "progressive",
+    "en": "gradual"
+   },
+   "example": {
+    "fr": "le son monte peu à peu (une soufflerie ou un aspirateur qui démarre)",
+    "en": "the sound builds up little by little (a blower or a vacuum cleaner starting up)"
+   },
+   "regionOf": "https://w3id.org/ppp/soundAttack",
+   "broader": "https://w3id.org/ppp/soundAttack"
+  },
+  {
    "@id": "https://w3id.org/ppp/surfaceGloss",
    "related": [
     "https://w3id.org/ppp/subsurfaceDepth",
@@ -6473,15 +6690,16 @@
    },
    "scopeNote": {
     "fr": [
-     "Ce qu’on remarque en écoutant un son : celui d’un objet qu’on fait sonner (en le frappant, en le frottant), d’un appareil qui fonctionne, ou d’une voix. Une photo ne dit rien du son : elle sert seulement à reconnaître l’objet. Un enregistrement publié peut servir d’exemple, sauf pour la force du son ; sinon, on décrit l’objet et les conditions d’écoute. Cette famille est en préparation : deux fiches y sont publiées, la netteté de la hauteur et la hauteur perçue.",
+     "Ce qu’on remarque en écoutant un son : celui d’un objet qu’on fait sonner (en le frappant, en le frottant), d’un appareil qui fonctionne, ou d’une voix. Une photo ne dit rien du son : elle sert seulement à reconnaître l’objet. Un enregistrement publié peut servir d’exemple, sauf pour la force du son ; sinon, on décrit l’objet et les conditions d’écoute. Cette famille est en préparation : trois fiches y sont publiées, la netteté de la hauteur, la hauteur perçue et l’attaque du son.",
      "Famille de lecture : aide à s’orienter, pas une hiérarchie."
     ],
     "en": [
-     "What you notice when you listen to a sound: that of an object you make sound (by striking or rubbing it), of a device that is running, or of a voice. A photo says nothing about sound: it only helps to recognise the object. A published recording can serve as an example, except for loudness; otherwise the object and the listening conditions are described. This family is in preparation: two entries are published so far, pitch clarity and perceived pitch.",
+     "What you notice when you listen to a sound: that of an object you make sound (by striking or rubbing it), of a device that is running, or of a voice. A photo says nothing about sound: it only helps to recognise the object. A published recording can serve as an example, except for loudness; otherwise the object and the listening conditions are described. This family is in preparation: three entries are published so far, pitch clarity, perceived pitch and sound attack.",
      "Reading family: a guide for orientation, not a hierarchy."
     ]
    },
    "member": [
+    "https://w3id.org/ppp/soundAttack",
     "https://w3id.org/ppp/pitchClarity",
     "https://w3id.org/ppp/perceivedPitch"
    ]

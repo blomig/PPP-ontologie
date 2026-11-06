@@ -3,6 +3,8 @@
 # Série 50 (2026-10-15) : fiche en préparation, rédigée sans exemplaire ; aucun champ n’est encore relu.
 # Série 97 (2026-11-04) : sources lues et mesures complétées, porteur élargi à l’appareil et à la voix, épisodes proposés « à réaliser » ; relecture explicative à faire.
 # Série 97 bis (2026-11-04) : relecture appliquée (19 points, choix de relecture (2026-11-04)) ; références en double retirées ; note_categories ajoutée.
+# Série 101 (2026-11-06) : relecture explicative faite (choix de relecture (2026-11-06)) ; état de l’art ramené à cinq phrases ; fiche publiable (palier 2, épisodes à réaliser).
+# Série 101 bis (2026-11-06) : pincement noté `deformation`, décidé (choix de relecture (2026-11-06)) ; état de l’art, phrase 1 : « dans ces 18 sons ».
 id: ppp:soundAttack
 label_fr: attaque du son
 label_en: sound attack
@@ -187,16 +189,15 @@ references:
   verifie_sur: 'résumé lu (page de l’éditeur, Springer) ; PubMed (PMID 7279555) : métadonnées seules ; texte non lu'
   reprend: le début perçu se place quand l’enveloppe atteint un seuil relatif, environ 15 dB sous son maximum, et bouge un peu avec le niveau
   ne_reprend_pas: le détail des expériences (texte non lu)
-etat_de_l_art: 'Sources : chez McAdams et al. (1995) [[mcadams1995]], sur 18 sons d’instruments synthétisés (imitations et hybrides, de même hauteur et de même force), le logarithme du temps de montée explique
-  88 % d’une des trois dimensions communes du timbre. Cette dimension suit aussi le temps pendant lequel le son reste près de son maximum : selon les auteurs, cela suggère qu’elle sépare les sources mises
-  en vibration par une impulsion brève (un coup, un pincement) de celles entretenues (un souffle, un archet) ; dans ces sons, une attaque raide va souvent avec une extinction immédiate. Chez Grey (1977)
-  [[grey1977]], deux dimensions tiennent au début du son : les harmoniques aigus y apparaissent plus ou moins ensemble, et une énergie faible et aiguë y est plus ou moins présente ; elles touchent la couleur
-  de l’attaque plutôt que sa vitesse (résumé lu). Peeters et al. (2011) [[peeters2011]] jugent peu fiable un temps d’attaque mesuré avec des seuils fixes sur l’enveloppe, et adaptent les seuils à chaque
-  son. On entend un son commencer quand son enveloppe atteint environ 15 dB sous son maximum, et ce moment bouge un peu avec le niveau (Vos et Rasch 1981) [[vos_rasch1981]] ; le moment où l’on entend l’attaque
-  dépend du temps de montée et du niveau d’écoute (Gordon 1987) [[gordon1987]]. Schaeffer [[schaeffer1966]], lu via Chion (1983, art. 97, lu en traduction) [[chion1983]], distingue la raideur de l’attaque
-  et sa couleur, et sept « genres d’attaque » ; pour un son entretenu, l’oreille juge la raideur par la façon dont l’énergie apparaît (ses expériences de montage de bande portent sur des apparitions de
-  l’énergie d’environ 3 à 50 ms) ; pour un son frappé suivi d’une résonance, plutôt par la façon dont elle disparaît. Aucune source trouvée ne fixe des régions perçues de l’attaque, ni des bornes en millisecondes
-  entre elles. Détail : docs/bibliographie-par-type.md#groupe-son.'
+etat_de_l_art: 'Sources : chez McAdams et al. (1995) [[mcadams1995]], sur 18 sons d’instruments synthétisés de même hauteur et de même force, le logarithme du temps de montée explique 88 % d’une des trois
+  dimensions communes du timbre, une dimension qui, selon les auteurs, suggère une séparation entre les sources mises en vibration par une impulsion brève (un coup, un pincement) et les sources entretenues
+  (un souffle, un archet) ; dans ces 18 sons, une attaque raide va souvent avec une extinction immédiate. Chez Grey (1977, résumé lu) [[grey1977]], deux dimensions tiennent au début du son, plutôt à la
+  couleur de l’attaque qu’à sa vitesse (des harmoniques aigus plus ou moins simultanés, une énergie faible et aiguë plus ou moins présente) ; Peeters et al. (2011) [[peeters2011]] jugent peu fiable un temps
+  d’attaque mesuré avec des seuils fixes sur l’enveloppe, et adaptent les seuils à chaque son. On entend un son commencer quand son enveloppe atteint environ 15 dB sous son maximum, moment qui bouge un
+  peu avec le niveau (Vos et Rasch, 1981) [[vos_rasch1981]], et le moment où l’on entend l’attaque dépend du temps de montée et du niveau d’écoute (Gordon, 1987) [[gordon1987]]. Schaeffer [[schaeffer1966]],
+  lu via Chion (1983, art. 97, lu en traduction) [[chion1983]], distingue la raideur de l’attaque, sa couleur et sept « genres d’attaque » ; l’oreille juge la raideur par la façon dont l’énergie apparaît
+  pour un son entretenu (ses expériences de montage de bande portent sur des apparitions de l’énergie d’environ 3 à 50 ms), plutôt par la façon dont elle disparaît pour un son frappé suivi d’une résonance.
+  Aucune source trouvée ne fixe des régions perçues de l’attaque, ni des bornes en millisecondes entre elles (détail : docs/bibliographie-par-type.md#groupe-son).'
 etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-son
 axiomes:
 - conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
@@ -222,46 +223,25 @@ enonces_testables:
   epreuve: null
 cq_couvertes: CQ1, CQ2
 statut: candidat
-statut_note: 'en préparation (2026-11-04) : fiche rédigée, sources complétées, épisodes proposés « à réaliser » (aucun réalisé) ; tous les champs rédigés sont à relire'
+statut_note: fiche relue en langage courant (relecture explicative, 2026-11-06) ; six épisodes proposés « à réaliser », sur des enregistrements placés dans le domaine public (CC0), pas encore observés
 statut_epistemique: non éprouvé
 introduit_en: '2.8'
 modifie_en: []
 remplace_par: []
 source_de_la_fiche: 'proposition de famille « Son » (docs/famille-son-proposition.md (document de travail, non publié), séries 41 à 43) ; premier lot : décision 3 du 2026-10-14 (série 43), « recommandation
   suivie », sous la note de l’éditeur du projet dans ce document : « je suis en accrod avec toutes les propositions/ recommandations. » ; fiche rédigée le 2026-10-15 par l’équipe ; sources, mesures et épisodes
-  complétés le 2026-11-04 (choix de relecture (2026-11-04)) ; champs à valider par la relecture explicative'
+  complétés le 2026-11-04 (choix de relecture (2026-11-04)) ; relecture explicative le 2026-11-06 (choix de relecture (2026-11-06))'
 manques:
 - 'exemplaires observés : aucun épisode encore réalisé (six proposés, sur des enregistrements CC0)'
-- relecture explicative de tous les champs
 bloque_par: []
-a_relire:
-- label_fr
-- label_en
-- strate
-- définition
-- question_attentionnelle
-- contre_exemple
-- note_categories
-- mode_de_presentation
-- conditions_critiques
-- note_conditions
-- porteur
-- condition_NA
-- espace_valeurs
-- identite
-- relations
-- references
-- etat_de_l_art
-- nanay
-- transfert
-- enonces_testables
-- statut_note
-- mesure
-- episodes_a_realiser
+a_relire: []
 relecture_explicative:
-  date: null
+  date: '2026-11-06'
   champs:
-  - 'harmonisation mécanique des énoncés affichés (série 69, 2026-10-17)'
+  - harmonisation mécanique des énoncés affichés (série 69, 2026-10-17)
+  - 'label_fr, label_en, strate, définition, question_attentionnelle, contre_exemple, note_categories, mode_de_presentation, conditions_critiques, note_conditions, porteur, condition_NA, espace_valeurs,
+    identite, relations, references, nanay, transfert, enonces_testables, mesure : relus en langage courant le 2026-11-06, validés tels quels'
+  - 'etat_de_l_art, statut_note, episodes_a_realiser : relus et corrigés en langage courant le 2026-11-06'
   a_reconfirmer: []
 # Série 97 : épisodes proposés « à réaliser » (spec X17 ; choix de relecture (2026-11-04)) ; ni épreuve faite ni accord entre observateurs ; ni observateur, ni date, ni résultat.
 # Enregistrements CC0 (Creative Commons 0 : lien vers la licence lu sur chaque page), pages vérifiées le 2026-11-04 ; montées mesurées par l’équipe sur l’aperçu MP3 de chaque page (enveloppe en décibels), indicatives, non vérifiées comme bornes.
@@ -352,15 +332,13 @@ episodes_a_realiser:
     production: deformation
     bruit_de_fond: quiet
     duree: glance
-    note: enregistré dans un salon, avec une paire de micros espacés et des micros proches (d’après la page) ; corde tirée puis lâchée, notée `deformation` (la facette n’a pas de valeur propre pour le pincement
-      ; à relire) ; casque fermé ou enceintes, pièce calme ; jugement sur la première seconde ; écoute complète de 10,9 s
-    note_en: recorded in a living room, with a spaced pair and close microphones (according to the page); string pulled then released, recorded as `deformation` (the facet has no specific value for plucking;
-      to be reviewed); closed headphones or loudspeakers, quiet room; judged on the first second; full listening of 10.9 s
+    note: 'enregistré dans un salon, avec une paire de micros espacés et des micros proches (d’après la page) ; corde tirée puis lâchée, notée `deformation` (la facette n’a pas de valeur propre pour le
+      pincement : la corde tirée puis lâchée est déformée) ; casque fermé ou enceintes, pièce calme ; jugement sur la première seconde ; écoute complète de 10,9 s'
+    note_en: 'recorded in a living room, with a spaced pair and close microphones (according to the page); string pulled then released, recorded as `deformation` (the facet has no specific value for plucking:
+      the string pulled then released is deformed); closed headphones or loudspeakers, quiet room; judged on the first second; full listening of 10.9 s'
   doute: oui
-  motif_doute: 'la montée mesurée est presque aussi courte que celle d’un son frappé : aucune source lue ne fixe la limite entre abrupte et rapide ; la question cite la corde pincée comme repère, ce qui
-    peut guider la réponse'
-  motif_doute_en: 'the measured rise is almost as short as that of a struck sound: no source read sets the boundary between abrupt and quick; the question cites the plucked string as a reference, which
-    may guide the answer'
+  motif_doute: 'la montée mesurée est presque aussi courte que celle d’un son frappé : aucune source lue ne fixe la limite entre abrupte et rapide'
+  motif_doute_en: 'the measured rise is almost as short as that of a struck sound: no source read sets the boundary between abrupt and quick'
   note: environ 20 ms de silence, puis le son atteint son plus fort en 15 à 25 ms (mesure de l’équipe sur l’aperçu MP3, indicative), à peine plus lentement que les claves de l’épisode 01
   note_en: about 20 ms of silence, then the sound reaches its loudest within 15 to 25 ms (team measurement on the MP3 preview, indicative), barely more slowly than the claves of episode 01
   texte_fr: 'Une note de harpe pincée : rapide (prédiction, à éprouver).'
@@ -432,9 +410,9 @@ episodes_a_realiser:
   realisation: a_realiser
   region_attendue: gradual
   rang_exemplaire: second
-  objet: enregistrement d’une note tenue de contrebasse, jouée à l’archet sans vibrato, environ 9 s, page « Solo Contrabass - non-vibrato sustain - G3 (BKCtbss_SusNV_G#2_v3_rr1.wav) », par sgossner, sur
+  objet: enregistrement d’une note tenue de contrebasse, jouée à l’archet sans vibrato, environ 9 s, page « Solo Contrabass - non-vibrato sustain - G3 », par sgossner, sur
     Freesound (https://freesound.org/people/sgossner/sounds/373126/), licence CC0, page vérifiée le 2026-11-04
-  objet_en: recording of a sustained double-bass note, bowed without vibrato, about 9 s, page “Solo Contrabass - non-vibrato sustain - G3 (BKCtbss_SusNV_G#2_v3_rr1.wav)”, by sgossner, on Freesound (https://freesound.org/people/sgossner/sounds/373126/),
+  objet_en: recording of a sustained double-bass note, bowed without vibrato, about 9 s, page “Solo Contrabass - non-vibrato sustain - G3”, by sgossner, on Freesound (https://freesound.org/people/sgossner/sounds/373126/),
     CC0 licence, page checked on 2026-11-04
   preparation: comme l’épisode 03 ; même niveau d’écoute ; juger les premières secondes
   preparation_en: as in episode 03; same listening level; judge the first seconds
