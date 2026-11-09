@@ -885,7 +885,7 @@ Références de `famille-son-proposition.md` (document de travail, non publié),
 - Enregistrements des épisodes à réaliser de `soundAttack` (Freesound, licence CC0, lien vers la licence lu sur chaque page, pages vérifiées le 2026-11-04) : « Claves (claves_ff.wav) », https://freesound.org/people/sgossner/sounds/375640/ ; « Tubular Bells - C4 (TB_hit_C4_v4_rr1.wav) », https://freesound.org/people/sgossner/sounds/374273/ ; « Harp - D4 (KSHarp_D4_mf.wav) », https://freesound.org/people/sgossner/sounds/373565/ ; « female vocal long.wav », https://freesound.org/people/owstu/sounds/628817/ ; « Cymbals (susp_hit_softmall_roll2_cresc.wav) », https://freesound.org/people/sgossner/sounds/375519/ ; « Solo Contrabass - non-vibrato sustain - G3 (BKCtbss_SusNV_G#2_v3_rr1.wav) », https://freesound.org/people/sgossner/sounds/373126/ ; montées mesurées par l’équipe sur les aperçus MP3, indicatives.
 - Aucune source trouvée ne fixe des régions perçues de l’attaque, ni des bornes en millisecondes entre abrupte, rapide et progressive.
 
-**Série 98 (2026-11-04) : `soundDecay` (fiche en préparation, à relire ; épisodes proposés)** ; sources vérifiées le 2026-11-04 (Crossref pour chaque DOI ; pages des éditeurs ou des auteurs) ; Klatzky et al. (2000), Giordano et McAdams (2006) et Lutfi et Oh (1997) : voir plus haut (statuts mis à jour) :
+**Série 98 (2026-11-04) : `soundDecay` (fiche rédigée le 2026-11-04, publiée le 2026-11-09 ; épisodes proposés)** ; sources vérifiées le 2026-11-04 (Crossref pour chaque DOI ; pages des éditeurs ou des auteurs) ; Klatzky et al. (2000), Giordano et McAdams (2006) et Lutfi et Oh (1997) : voir plus haut (statuts mis à jour) :
 
 - McAdams, S., Chaigne, A. & Roussarie, V. (2004). The psychomechanics of simulated sound sources: Material properties of impacted bars. The Journal of the Acoustical Society of America, 115(3), 1306–1320. https://doi.org/10.1121/1.1645855 ; copie du laboratoire de l’auteur : https://www.mcgill.ca/mpcl/files/mpcl/mcadams_2004_jasa_0.pdf
   - statut de lecture : *extraits* (descripteurs du signal, discussion, conclusion) ; *résumé* (Crossref) ;
@@ -900,7 +900,7 @@ Références de `famille-son-proposition.md` (document de travail, non publié),
 - Aucune source trouvée ne fixe des régions perçues de la résonance, ni des bornes en secondes ou en décibels entre elles.
 
 
-**Série 99 (2026-11-05) : `soundSharpness` (fiche en préparation, à relire ; épisodes proposés)** ; sources vérifiées le 2026-11-05 (Crossref pour chaque DOI ; pages des éditeurs ou des auteurs) ; DIN 45692, Grey (1977), McAdams et al. (1995), Fastl et Zwicker (2007), Peeters et al. (2011), Schaeffer (1966) et Chion (1983) : voir plus haut :
+**Série 99 (2026-11-05) : `soundSharpness` (fiche rédigée le 2026-11-05, publiée le 2026-11-09 ; épisodes proposés)** ; sources vérifiées le 2026-11-05 (Crossref pour chaque DOI ; pages des éditeurs ou des auteurs) ; DIN 45692, Grey (1977), McAdams et al. (1995), Fastl et Zwicker (2007), Peeters et al. (2011), Schaeffer (1966) et Chion (1983) : voir plus haut :
 
 - Schubert, E. & Wolfe, J. (2006). Does timbral brightness scale with frequency and spectral centroid? Acta Acustica united with Acustica, 92(5), 820–825. Copie des auteurs : https://www.phys.unsw.edu.au/~jw/reprints/SchubertWolfe06.pdf (aucun DOI trouvé sur Crossref)
   - statut de lecture : *lu en entier* (copie des auteurs) ;

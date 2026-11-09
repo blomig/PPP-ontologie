@@ -188,7 +188,7 @@
    "dct_license": "https://creativecommons.org/licenses/by/4.0/",
    "owl:versionInfo": "2.8",
    "dct:modified": {
-    "@value": "2026-11-06",
+    "@value": "2026-11-09",
     "@type": "xsd:date"
    },
    "dct:creator": [
@@ -224,6 +224,8 @@
     "https://w3id.org/ppp/saturation",
     "https://w3id.org/ppp/saturationRange",
     "https://w3id.org/ppp/soundAttack",
+    "https://w3id.org/ppp/soundDecay",
+    "https://w3id.org/ppp/soundSharpness",
     "https://w3id.org/ppp/subsurfaceDepth",
     "https://w3id.org/ppp/surfaceGloss",
     "https://w3id.org/ppp/symmetry",
@@ -3745,6 +3747,7 @@
     "fr": "candidat ; non éprouvé",
     "en": "candidate; untested"
    },
+   "related": "https://w3id.org/ppp/soundSharpness",
    "topConceptOf": "https://w3id.org/ppp/",
    "measurementState": "https://w3id.org/ppp/mesure/etat/methodes",
    "measurementSummary": {
@@ -3769,6 +3772,62 @@
     "https://w3id.org/ppp/perceivedPitch/low",
     "https://w3id.org/ppp/perceivedPitch/mid",
     "https://w3id.org/ppp/perceivedPitch/high"
+   ]
+  },
+  {
+   "@id": "https://w3id.org/ppp/soundSharpness",
+   "related": "https://w3id.org/ppp/perceivedPitch",
+   "@type": "skos:Concept",
+   "inScheme": "https://w3id.org/ppp/",
+   "skos:notation": "soundSharpness",
+   "prefLabel": {
+    "fr": "acuité du son",
+    "en": "sound sharpness"
+   },
+   "altLabel": {
+    "fr": "brillance",
+    "en": "brightness"
+   },
+   "definition": {
+    "fr": "Un son peut paraître sombre, comme entendu à travers une porte, ou clair, comme un s qu’on prolonge. On décrit cette qualité sans regarder si le son est fort ou faible, ni s’il a une note haute ou basse.",
+    "en": "A sound can seem dark, as if heard through a door, or bright, like a drawn-out s. You describe this quality without looking at whether the sound is loud or soft, or whether it has a high or low note."
+   },
+   "scopeNote": {
+    "fr": [
+     "Le son paraît-il sombre, comme à travers une porte ; ni sombre ni clair ; ou clair, comme un s qu’on prolonge ?",
+     "Un son qui a une note nette, qu’on pourrait chanter, n’est pas pour autant clair au sens de cette fiche : la netteté relève de la netteté de la hauteur ; un souffle sans note peut être clair. Hauteur et acuité sont deux qualités, mais une note plus aiguë paraît en général plus claire (Schubert et Wolfe, 2006 ; Marozeau et de Cheveigné, 2007, résumé lu) : on compare des sons de hauteur voisine, ou l’on note la hauteur.",
+     "Trois régions, du son sombre au son clair : c’est une position de travail de l’équipe (choix de relecture (2026-11-05)), qu’aucune source ne fixe, sans borne en hertz ni en acum ; les centroïdes donnés dans les épisodes sont mesurés par l’équipe sur les enregistrements et restent indicatifs. L’acum fixe un point de référence (1 acum), pas des régions. Schaeffer, lu via Chion (art. 93), décrit un « site » du timbre harmonique allant du sombre au clair, perçu « avec un entraînement approprié », sans étalon : « il n’y a pas d’étalon » pour ces perceptions, et l’auteur reste « très prudent » ; il tient le bruit blanc pour sans timbre harmonique, et ne juge un bruit filtré qu’en « épaisseur » et en « couleur » (art. 92). Les régions de cette fiche couvrent aussi les bruits : elles ne reprennent pas cette échelle. Les noms des régions reprennent le site sombre-clair de Schaeffer, lu via Chion (choix de relecture (2026-11-05)), sans en reprendre l’échelle ; mots proches : « étouffé » pour sombre, « sifflant » pour clair. « Clair » ne veut pas dire « net » : la netteté d’une note relève de la netteté de la hauteur (`ppp:pitchClarity`)."
+    ],
+    "en": [
+     "Does the sound seem dark, as if through a door; neither dark nor bright; or bright, like a drawn-out s?",
+     "A sound with a clear note, one you could sing, is not bright in the sense of this entry for all that: clearness belongs to pitch clarity; a breath without a note can be bright. Pitch and sharpness are two qualities, but a higher note generally seems brighter (Schubert and Wolfe, 2006; Marozeau and de Cheveigné, 2007, abstract read): compare sounds of similar pitch, or note the pitch.",
+     "Three regions, from the dark sound to the bright sound: this is a working position of the team (review choice (2026-11-05)), set by no source, with no boundary in hertz or in acum; the centroids given in the episodes are measured by the team on the recordings and remain indicative. The acum sets a reference point (1 acum), not regions. Schaeffer, read via Chion (art. 93), describes a “site” of harmonic timbre ranging from dark to light, perceived “with appropriate training”, with no standard: “there is no standard” for these perceptions, and the author remains “very cautious”; he holds white noise to have no harmonic timbre, and judges a filtered noise only in “thickness” and “colour” (art. 92). The regions of this entry also cover noises: they do not take over this scale. The names of the regions take up Schaeffer’s dark-light site, read via Chion (review choice (2026-11-05)), without taking over its scale; close words: “muffled” for dark, “hissing” for bright. “Bright” does not mean “clear”: the clearness of a note belongs to pitch clarity (`ppp:pitchClarity`)."
+    ]
+   },
+   "note": {
+    "fr": "candidat ; non éprouvé",
+    "en": "candidate; untested"
+   },
+   "topConceptOf": "https://w3id.org/ppp/",
+   "measurementState": "https://w3id.org/ppp/mesure/etat/methodes",
+   "measurementSummary": {
+    "fr": "DIN 45692 fixe un calcul de l’acuité (Schärfe) d’un son à partir de son motif de sonie : c’est une mesure associée proche ; son unité, l’acum, vaut 1 pour un bruit large d’une bande critique, centré sur 1 kHz, à 60 dB (Zwicker et Fastl, d’après Marui et Martens, 2006). Le centroïde spectral, corrélat d’une dimension du timbre et de la brillance jugée, est une mesure associée indirecte. Toutes deux se calculent sur un enregistrement et ne saisissent ni la salle, ni la distance d’écoute, ni l’auditeur.",
+    "en": "DIN 45692 sets a calculation of the sharpness (Schärfe) of a sound from its loudness pattern: it is a close associated measure; its unit, the acum, equals 1 for a noise one critical band wide, centred on 1 kHz, at 60 dB (Zwicker and Fastl, after Marui and Martens, 2006). The spectral centroid, a correlate of a dimension of timbre and of judged brightness, is an indirect associated measure. Both are computed on a recording and capture neither the room, nor the listening distance, nor the listener."
+   },
+   "measurementCaveat": {
+    "fr": "Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.",
+    "en": "The regions of this entry remain perceptual: they describe what an observer sees, hears, smells or feels by touch under the declared conditions. An associated measurement can inform an observation, but it does not set the boundaries of the regions and does not replace examination."
+   },
+   "associatedMeasure": [
+    "https://w3id.org/ppp/soundSharpness/mesure/din45692",
+    "https://w3id.org/ppp/soundSharpness/mesure/mcadams1995"
+   ],
+   "notRetainedMeasure": "https://w3id.org/ppp/soundSharpness/mesure/non-retenue-1",
+   "hasScale": "https://w3id.org/ppp/soundSharpness/echelle",
+   "narrower": [
+    "https://w3id.org/ppp/soundSharpness/dark",
+    "https://w3id.org/ppp/soundSharpness/neitherDarkNorBright",
+    "https://w3id.org/ppp/soundSharpness/bright"
    ]
   },
   {
@@ -5240,6 +5299,7 @@
     "fr": "candidat ; non éprouvé",
     "en": "candidate; untested"
    },
+   "related": "https://w3id.org/ppp/soundDecay",
    "topConceptOf": "https://w3id.org/ppp/",
    "measurementState": "https://w3id.org/ppp/mesure/etat/methodes",
    "measurementSummary": {
@@ -5261,6 +5321,66 @@
     "https://w3id.org/ppp/soundAttack/abrupt",
     "https://w3id.org/ppp/soundAttack/quick",
     "https://w3id.org/ppp/soundAttack/gradual"
+   ]
+  },
+  {
+   "@id": "https://w3id.org/ppp/soundDecay",
+   "related": "https://w3id.org/ppp/soundAttack",
+   "@type": "skos:Concept",
+   "inScheme": "https://w3id.org/ppp/",
+   "skos:notation": "soundDecay",
+   "prefLabel": {
+    "fr": "extinction du son",
+    "en": "sound decay"
+   },
+   "altLabel": {
+    "fr": "résonance",
+    "en": "resonance"
+   },
+   "definition": {
+    "fr": "Quand on frappe ou qu’on pince un objet, le son continue un peu après le geste, puis se tait. On décrit combien de temps il continue : il s’arrête aussitôt, résonne un moment, ou résonne longtemps. On écoute la fin du son, pas son début.",
+    "en": "When you strike or pluck an object, the sound goes on a little after the gesture, then falls silent. You describe how long it goes on: it stops at once, rings for a moment, or rings for a long time. You listen to the end of the sound, not its beginning."
+   },
+   "scopeNote": {
+    "fr": [
+     "Après le coup ou le pincement, le son s’arrête-t-il tout de suite, résonne-t-il un moment, ou résonne-t-il longtemps ?",
+     "Dans une salle très réverbérante, un objet qui s’éteint aussitôt paraît résonner : c’est la salle qu’on entend, pas l’objet. « Ça sonne métal » ne dit pas que le son résonne : c’est une idée sur la matière, qui peut se tromper (un objet en métal serré dans la main pendant qu’on le frappe s’arrête court).",
+     "Trois régions, du son qui s’éteint aussitôt à celui qui résonne longtemps : c’est une position de travail de l’équipe (choix de relecture (2026-11-04)), qu’aucune source ne fixe, sans borne en secondes ni en décibels ; les durées données dans les épisodes sont mesurées par l’équipe sur les enregistrements et restent indicatives. Schaeffer, lu via Chion (art. 61), distingue deux sortes d’entretien « passif » : le son sans durée propre ou presque (un claquement de fouet, un wood-block) et le son que la résonance prolonge (un piano, une guitare). Cette distinction rejoint « s’éteint aussitôt » d’un côté, et les deux régions où le son résonne de l’autre ; elle ne sépare pas une résonance courte d’une longue. Les valeurs critiques de l’amortissement trouvées par Klatzky et al. (2000) séparent des catégories de matière sur des sons synthétisés : ce ne sont pas des bornes de régions."
+    ],
+    "en": [
+     "After the stroke or the pluck, does the sound stop at once, ring for a moment, or ring for a long time?",
+     "In a very reverberant room, an object that stops at once seems to ring: it is the room you hear, not the object. “It sounds like metal” does not say that the sound rings: it is a guess about the material, which can be wrong (a metal object held tightly in the hand while it is struck stops short).",
+     "Three regions, from the sound that stops at once to the one that rings for a long time: this is a working position of the team (review choice (2026-11-04)), set by no source, with no boundary in seconds or decibels; the durations given in the episodes are measured by the team on the recordings and remain indicative. Schaeffer, read via Chion (art. 61), distinguishes two kinds of “passive” sustainment: the sound with no duration of its own, or almost none (the crack of a whip, a woodblock), and the sound prolonged by resonance (a piano, a guitar). This distinction matches “stops at once” on one side, and the two regions where the sound rings on the other; it does not separate a short resonance from a long one. The critical values of damping found by Klatzky et al. (2000) separate material categories on synthesized sounds: they are not region boundaries."
+    ]
+   },
+   "note": {
+    "fr": "candidat ; non éprouvé",
+    "en": "candidate; untested"
+   },
+   "topConceptOf": "https://w3id.org/ppp/",
+   "measurementState": "https://w3id.org/ppp/mesure/etat/methodes",
+   "measurementSummary": {
+    "fr": "La vitesse à laquelle le son d’un objet frappé s’éteint (son amortissement) a été étudiée comme indice de la matière entendue, sur des sons synthétisés et sur des sons enregistrés. La combinaison de McAdams et al. (2004) est proposée comme corrélat de l’amortissement perçu : c’est une mesure associée proche. Le paramètre d’amortissement de Klatzky et al., proposé comme propriété de la matière, et la pente de décroissance de l’enveloppe d’énergie, un descripteur calculé, sont des mesures indirectes. Ces mesures se calculent sur un enregistrement : la réverbération de la salle s’y ajoute, le bruit de fond et la fin du fichier en fixent la fin, et elles ne saisissent ni la distance d’écoute ni l’auditeur.",
+    "en": "The speed at which the sound of a struck object dies away (its damping) has been studied as a cue to the material heard, on synthesized sounds and on recorded sounds. The combination of McAdams et al. (2004) is proposed as a correlate of perceived damping: it is a close associated measure. The damping parameter of Klatzky et al., proposed as a property of the material, and the decrease slope of the energy envelope, a computed descriptor, are indirect measures. These measures are computed on a recording: the reverberation of the room adds to them, background noise and the end of the file set their end, and they capture neither the listening distance nor the listener."
+   },
+   "measurementCaveat": {
+    "fr": "Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.",
+    "en": "The regions of this entry remain perceptual: they describe what an observer sees, hears, smells or feels by touch under the declared conditions. An associated measurement can inform an observation, but it does not set the boundaries of the regions and does not replace examination."
+   },
+   "associatedMeasure": [
+    "https://w3id.org/ppp/soundDecay/mesure/klatzky2000",
+    "https://w3id.org/ppp/soundDecay/mesure/mcadams2004",
+    "https://w3id.org/ppp/soundDecay/mesure/peeters2011"
+   ],
+   "notRetainedMeasure": [
+    "https://w3id.org/ppp/soundDecay/mesure/non-retenue-1",
+    "https://w3id.org/ppp/soundDecay/mesure/non-retenue-2"
+   ],
+   "hasScale": "https://w3id.org/ppp/soundDecay/echelle",
+   "narrower": [
+    "https://w3id.org/ppp/soundDecay/stopsAtOnce",
+    "https://w3id.org/ppp/soundDecay/ringsAMoment",
+    "https://w3id.org/ppp/soundDecay/ringsLong"
    ]
   },
   {
@@ -5426,6 +5546,337 @@
    },
    "regionOf": "https://w3id.org/ppp/soundAttack",
    "broader": "https://w3id.org/ppp/soundAttack"
+  },
+  {
+   "@id": "https://w3id.org/ppp/soundDecay/mesure/klatzky2000",
+   "@type": "ppp:AssociatedMeasure",
+   "rdfs_label": {
+    "fr": "vitesse de décroissance (amortissement)",
+    "en": "decay rate (damping)"
+   },
+   "quantity": {
+    "fr": "vitesse à laquelle l’amplitude du son décroît après le choc, selon la fréquence",
+    "en": "rate at which the amplitude of the sound decreases after the impact, depending on frequency"
+   },
+   "unitOrScale": {
+    "fr": "paramètre d’amortissement τd, sans unité, pris en logarithme : le temps qu’une composante met pour tomber à 1/e de son amplitude vaut τd divisé par sa fréquence",
+    "en": "damping parameter τd, without unit, taken as a logarithm: the time a component takes to fall to 1/e of its amplitude equals τd divided by its frequency"
+   },
+   "gap": {
+    "fr": "paramètre du modèle de synthèse, proposé par les auteurs comme propriété de la matière indépendante de la forme, pas comme mesure de la durée perçue ; étudié sur des sons synthétisés de barres fixées frappées, joués 500 ms puis coupés sans fondu (Klatzky et al. 2000) ; les valeurs critiques de τd trouvées pour classer un son parmi caoutchouc, bois, verre et acier valent pour ce modèle, pas comme bornes ; selon les auteurs, l’amortissement y variait sur une plage plus large que la fréquence ; sur des plaques réelles frappées, une mesure de l’amortissement explique les grandes catégories de matière, mais la durée du signal les explique aussi bien (Giordano et McAdams 2006) ; se calcule sur un enregistrement où la réverbération de la salle s’ajoute ; ne saisit ni la distance d’écoute ni l’auditeur",
+    "en": "a parameter of the synthesis model, proposed by the authors as a shape-invariant property of the material, not as a measure of perceived duration; studied on synthesized sounds of clamped struck bars, played for 500 ms then cut without fade (Klatzky et al. 2000); the critical values of τd found for classing a sound among rubber, wood, glass and steel hold for this model, not as boundaries; according to the authors, damping varied there over a wider range than frequency; on real struck plates, a measure of damping explains the broad categories of material, but the duration of the signal explains them equally well (Giordano and McAdams 2006); computed on a recording to which the room’s reverberation adds; captures neither the listening distance nor the listener"
+   },
+   "measurementConditions": {
+    "fr": "enregistrement du son après un geste bref ; analyse par composante ou par bande de fréquence",
+    "en": "recording of the sound after a brief gesture; analysis by component or by frequency band"
+   },
+   "proximity": "https://w3id.org/ppp/mesure/proximite/indirecte",
+   "dct:bibliographicCitation": [
+    "Klatzky, R. L., Pai, D. K. & Krotkov, E. P. (2000). Perception of material from contact sounds. Presence: Teleoperators and Virtual Environments, 9(4), 399–410.",
+    "Giordano, B. L. & McAdams, S. (2006). Material identification of real impact sounds: Effects of size variation in steel, glass, wood, and plexiglass plates. The Journal of the Acoustical Society of America, 119(2), 1171–1181."
+   ]
+  },
+  {
+   "@id": "https://w3id.org/ppp/soundDecay/mesure/mcadams2004",
+   "@type": "ppp:AssociatedMeasure",
+   "rdfs_label": {
+    "fr": "constante de décroissance de fin de son, avec le centre de gravité spectral",
+    "en": "decay constant at the end of the sound, with the spectral centre of gravity"
+   },
+   "quantity": {
+    "fr": "pente de la chute de l’enveloppe d’amplitude sur une fenêtre de 100 ms à la fin du son, combinée au centre de gravité spectral",
+    "en": "slope of the fall of the amplitude envelope over a 100 ms window at the end of the sound, combined with the spectral centre of gravity"
+   },
+   "unitOrScale": {
+    "fr": "logarithme d’une constante de décroissance (par seconde) ; centre de gravité spectral (une fréquence)",
+    "en": "logarithm of a decay constant (per second); spectral centre of gravity (a frequency)"
+   },
+   "gap": {
+    "fr": "trouvée sur des sons synthétisés de barres frappées, avec un tube résonateur, d’au plus 1 s (certains coupés à 1 s) : selon les auteurs, cette combinaison est un candidat raisonnable pour porter l’amortissement perçu (92 à 98 % de la variance des coordonnées perceptives) ; elle mêle le temps et le spectre ; la fenêtre de calcul est réglée par les auteurs ; se calcule sur un enregistrement où la réverbération de la salle s’ajoute ; ne saisit ni la distance d’écoute ni l’auditeur",
+    "en": "found on synthesized sounds of struck bars, with a tube resonator, lasting at most 1 s (some cut at 1 s): according to the authors, this combination is a reasonable candidate for carrying perceived damping (92 to 98% of the variance of the perceptual coordinates); it mixes time and spectrum; the computation window is set by the authors; computed on a recording to which the room’s reverberation adds; captures neither the listening distance nor the listener"
+   },
+   "measurementConditions": {
+    "fr": "enregistrement du son après un geste bref ; enveloppe d’amplitude et fenêtre de calcul déclarées",
+    "en": "recording of the sound after a brief gesture; amplitude envelope and computation window declared"
+   },
+   "proximity": "https://w3id.org/ppp/mesure/proximite/proche",
+   "dct:bibliographicCitation": "McAdams, S., Chaigne, A. & Roussarie, V. (2004). The psychomechanics of simulated sound sources: Material properties of impacted bars. The Journal of the Acoustical Society of America, 115(3), 1306–1320."
+  },
+  {
+   "@id": "https://w3id.org/ppp/soundDecay/mesure/peeters2011",
+   "@type": "ppp:AssociatedMeasure",
+   "rdfs_label": {
+    "fr": "pente de décroissance de l’enveloppe d’énergie",
+    "en": "decrease slope of the energy envelope"
+   },
+   "quantity": {
+    "fr": "vitesse à laquelle l’énergie du son décroît depuis son maximum, selon un modèle exponentiel",
+    "en": "speed at which the energy of the sound decreases from its maximum, according to an exponential model"
+   },
+   "unitOrScale": {
+    "fr": "coefficient de la décroissance exponentielle (pente du logarithme de l’énergie, par seconde)",
+    "en": "coefficient of the exponential decrease (slope of the logarithm of the energy, per second)"
+   },
+   "gap": {
+    "fr": "descripteur calculé, que la partie lue ne relie à aucun jugement d’écoute ; selon les auteurs, il sépare les sons non entretenus (sons frappés, pizzicato) des sons entretenus ; un seul modèle exponentiel depuis le maximum, alors que l’enveloppe d’un son frappé peut avoir deux pentes (McAdams et al. 2004) ; se calcule sur un enregistrement où la réverbération de la salle s’ajoute ; ne saisit ni la distance d’écoute ni l’auditeur",
+    "en": "a computed descriptor, which the part read links to no listening judgement; according to the authors, it separates non-sustained sounds (struck sounds, pizzicato) from sustained sounds; a single exponential model from the maximum, whereas the envelope of a struck sound can have two slopes (McAdams et al. 2004); computed on a recording to which the room’s reverberation adds; captures neither the listening distance nor the listener"
+   },
+   "measurementConditions": {
+    "fr": "enregistrement du son ; enveloppe d’énergie calculée depuis son maximum",
+    "en": "recording of the sound; energy envelope computed from its maximum"
+   },
+   "proximity": "https://w3id.org/ppp/mesure/proximite/indirecte",
+   "dct:bibliographicCitation": "Peeters, G., Giordano, B. L., Susini, P., Misdariis, N. & McAdams, S. (2011). The Timbre Toolbox: Extracting audio descriptors from musical signals. The Journal of the Acoustical Society of America, 130(5), 2902–2916."
+  },
+  {
+   "@id": "https://w3id.org/ppp/soundDecay/mesure/non-retenue-1",
+   "@type": "ppp:NotRetainedMeasure",
+   "rdfs_label": {
+    "fr": "durée effective (temps passé au-dessus de 40 % du maximum de l’enveloppe d’énergie)",
+    "en": "effective duration (time spent above 40% of the maximum of the energy envelope)"
+   },
+   "reason": {
+    "fr": "selon les auteurs, elle vise la durée perçue et dépend de la durée de l’événement : elle mêle la durée du geste et la résonance ; le seuil de 40 % est un réglage des auteurs, pas une borne entre régions",
+    "en": "according to the authors, it aims at perceived duration and depends on the duration of the event: it mixes the duration of the gesture and the resonance; the 40% threshold is a setting of the authors, not a boundary between regions"
+   },
+   "dct:bibliographicCitation": "Peeters, G., Giordano, B. L., Susini, P., Misdariis, N. & McAdams, S. (2011). The Timbre Toolbox: Extracting audio descriptors from musical signals. The Journal of the Acoustical Society of America, 130(5), 2902–2916."
+  },
+  {
+   "@id": "https://w3id.org/ppp/soundDecay/mesure/non-retenue-2",
+   "@type": "ppp:NotRetainedMeasure",
+   "rdfs_label": {
+    "fr": "durées équivalentes (temps passé à moins de 3 ou 10 dB du maximum)",
+    "en": "equivalent durations (time spent within 3 or 10 dB of the maximum)"
+   },
+   "reason": {
+    "fr": "elles ne regardent que le début de la chute, pas la résonance qui suit ; chez McAdams et al. (1995), la durée à moins de 3 dB du maximum suit une dimension qui, selon les auteurs, sépare les sons excités par une impulsion des sons entretenus : elle dit si le son est impulsif, pas comment il s’éteint",
+    "en": "they only look at the beginning of the fall, not at the resonance that follows; in McAdams et al. (1995), the duration within 3 dB of the maximum follows a dimension which, according to the authors, separates sounds excited by an impulse from sustained sounds: it says whether the sound is impulsive, not how it dies away"
+   },
+   "dct:bibliographicCitation": [
+    "McAdams, S., Chaigne, A. & Roussarie, V. (2004). The psychomechanics of simulated sound sources: Material properties of impacted bars. The Journal of the Acoustical Society of America, 115(3), 1306–1320.",
+    "McAdams, S., Winsberg, S., Donnadieu, S., De Soete, G. & Krimphoff, J. (1995). Perceptual scaling of synthesized musical timbres: Common dimensions, specificities, and latent subject classes. Psychological Research, 58(3), 177–192."
+   ]
+  },
+  {
+   "@id": "https://w3id.org/ppp/soundDecay/echelle",
+   "@type": "skos:OrderedCollection",
+   "prefLabel": {
+    "fr": "échelle de « extinction du son »",
+    "en": "scale of “sound decay”"
+   },
+   "memberList": [
+    "https://w3id.org/ppp/soundDecay/stopsAtOnce",
+    "https://w3id.org/ppp/soundDecay/ringsAMoment",
+    "https://w3id.org/ppp/soundDecay/ringsLong"
+   ]
+  },
+  {
+   "@id": "https://w3id.org/ppp/soundDecay/stopsAtOnce",
+   "@type": "skos:Concept",
+   "inScheme": "https://w3id.org/ppp/",
+   "skos:notation": "stopsAtOnce",
+   "prefLabel": {
+    "fr": "extinction du son : s’éteint aussitôt",
+    "en": "sound decay: stops at once"
+   },
+   "hiddenLabel": {
+    "fr": "s’éteint aussitôt",
+    "en": "stops at once"
+   },
+   "example": {
+    "fr": "le son s’arrête tout de suite (un coup sourd sur un coussin)",
+    "en": "the sound stops at once (a dull thud on a cushion)"
+   },
+   "regionOf": "https://w3id.org/ppp/soundDecay",
+   "broader": "https://w3id.org/ppp/soundDecay"
+  },
+  {
+   "@id": "https://w3id.org/ppp/soundDecay/ringsAMoment",
+   "@type": "skos:Concept",
+   "inScheme": "https://w3id.org/ppp/",
+   "skos:notation": "ringsAMoment",
+   "prefLabel": {
+    "fr": "extinction du son : résonne un moment",
+    "en": "sound decay: rings for a moment"
+   },
+   "hiddenLabel": {
+    "fr": "résonne un moment",
+    "en": "rings for a moment"
+   },
+   "example": {
+    "fr": "le son dure un peu (une cuillère contre une tasse)",
+    "en": "the sound lasts a little (a spoon against a cup)"
+   },
+   "regionOf": "https://w3id.org/ppp/soundDecay",
+   "broader": "https://w3id.org/ppp/soundDecay"
+  },
+  {
+   "@id": "https://w3id.org/ppp/soundDecay/ringsLong",
+   "@type": "skos:Concept",
+   "inScheme": "https://w3id.org/ppp/",
+   "skos:notation": "ringsLong",
+   "prefLabel": {
+    "fr": "extinction du son : résonne longtemps",
+    "en": "sound decay: rings for a long time"
+   },
+   "hiddenLabel": {
+    "fr": "résonne longtemps",
+    "en": "rings for a long time"
+   },
+   "example": {
+    "fr": "le son dure longtemps (une cloche d’église)",
+    "en": "the sound lasts a long time (a church bell)"
+   },
+   "regionOf": "https://w3id.org/ppp/soundDecay",
+   "broader": "https://w3id.org/ppp/soundDecay"
+  },
+  {
+   "@id": "https://w3id.org/ppp/soundSharpness/mesure/din45692",
+   "@type": "ppp:AssociatedMeasure",
+   "rdfs_label": {
+    "fr": "acuité calculée (DIN 45692)",
+    "en": "computed sharpness (DIN 45692)"
+   },
+   "quantity": {
+    "fr": "premier moment, sur l’échelle des bandes critiques (Tonheit), du motif de sonie de DIN 45631, pondéré par une fonction de poids (d’après la page de l’éditeur)",
+    "en": "first moment, on the critical-band-rate scale (Tonheit), of the DIN 45631 loudness pattern, weighted by a weighting function (according to the publisher’s page)"
+   },
+   "unitOrScale": {
+    "fr": "acum (unité décrite par Zwicker et Fastl, d’après Marui et Martens 2006 ; la page de l’éditeur de la norme ne la nomme pas)",
+    "en": "acum (unit described by Zwicker and Fastl, after Marui and Martens 2006; the page of the standard’s publisher does not name it)"
+   },
+   "gap": {
+    "fr": "calculée à partir d’un modèle de sonie (DIN 45631), donc du niveau du son, pas sur l’auditeur ; selon la page de l’éditeur, la structure spectrale fine et l’enveloppe temporelle produisent des différences de timbre que ce calcul ne saisit pas ; selon Marui et Martens (2006), une prédiction par le seul premier moment pondéré convient moins bien aux sons à large bande dont l’enveloppe spectrale varie ; se calcule sur un enregistrement étalonné : ne saisit ni la salle, ni la distance d’écoute",
+    "en": "computed from a loudness model (DIN 45631), hence from the level of the sound, not on the listener; according to the publisher’s page, the spectral fine structure and the temporal envelope produce timbre differences that this calculation does not capture; according to Marui and Martens (2006), a prediction from the weighted first moment alone suits broadband sounds with a varying spectral envelope less well; computed on a calibrated recording: captures neither the room nor the listening distance"
+   },
+   "measurementConditions": {
+    "fr": "enregistrement étalonné du son ; système de mesure conforme aux essais de la norme",
+    "en": "calibrated recording of the sound; measuring system meeting the standard’s tests"
+   },
+   "proximity": "https://w3id.org/ppp/mesure/proximite/proche",
+   "dct:bibliographicCitation": [
+    "DIN 45692:2009-08. Messtechnische Simulation der Hörempfindung Schärfe. DIN.",
+    "Fastl, H. & Zwicker, E. (2007). Psychoacoustics: Facts and Models (3e éd.). Berlin, Heidelberg : Springer.",
+    "Marui, A. & Martens, W. L. (2006). Predicting perceived sharpness of broadband noise from multiple moments of the specific loudness distribution. The Journal of the Acoustical Society of America, 119(2), EL7–EL13."
+   ]
+  },
+  {
+   "@id": "https://w3id.org/ppp/soundSharpness/mesure/mcadams1995",
+   "@type": "ppp:AssociatedMeasure",
+   "rdfs_label": {
+    "fr": "centroïde spectral",
+    "en": "spectral centroid"
+   },
+   "quantity": {
+    "fr": "fréquence moyenne du spectre, pondérée par l’amplitude (premier moment du spectre normalisé, calculé trame par trame : Peeters et al. 2011)",
+    "en": "mean frequency of the spectrum, weighted by amplitude (first moment of the normalised spectrum, computed frame by frame: Peeters et al. 2011)"
+   },
+   "unitOrScale": {
+    "fr": "hertz",
+    "en": "hertz"
+   },
+   "gap": {
+    "fr": "corrélat d’une dimension du timbre trouvée sur des sons d’instruments synthétisés, égalisés en hauteur, sonie et durée (McAdams et al. 1995 : 88 % de la variance de cette dimension ; répartition de l’énergie spectrale chez Grey 1977) ; sur des sons d’instruments, la brillance jugée suit le centroïde (r = 0,51), pas le centroïde rapporté à la fondamentale (Schubert et Wolfe 2006) ; il monte avec la hauteur, qui déplace aussi la brillance jugée (Marozeau et de Cheveigné 2007, résumé) ; ne tient pas compte de la sensibilité de l’oreille selon la fréquence ; le bruit de fond, la bande analysée et le choix amplitude ou puissance le déplacent ; se calcule sur un enregistrement : ne saisit ni la salle, ni la distance d’écoute, ni l’auditeur",
+    "en": "a correlate of a dimension of timbre found on synthesized instrument sounds, equalised in pitch, loudness and duration (McAdams et al. 1995: 88% of the variance of this dimension; spectral energy distribution in Grey 1977); on instrument sounds, judged brightness follows the centroid (r = 0.51), not the centroid relative to the fundamental (Schubert and Wolfe 2006); it rises with pitch, which also shifts judged brightness (Marozeau and de Cheveigné 2007, abstract); it does not take into account the ear’s sensitivity across frequency; background noise, the analysed band and the choice of amplitude or power shift it; computed on a recording: captures neither the room, nor the listening distance, nor the listener"
+   },
+   "measurementConditions": {
+    "fr": "enregistrement du son ; analyse spectrale déclarée (fenêtre, bande de fréquences, amplitude ou puissance)",
+    "en": "recording of the sound; declared spectral analysis (window, frequency band, amplitude or power)"
+   },
+   "proximity": "https://w3id.org/ppp/mesure/proximite/indirecte",
+   "dct:bibliographicCitation": [
+    "McAdams, S., Winsberg, S., Donnadieu, S., De Soete, G. & Krimphoff, J. (1995). Perceptual scaling of synthesized musical timbres: Common dimensions, specificities, and latent subject classes. Psychological Research, 58(3), 177–192.",
+    "Grey, J. M. (1977). Multidimensional perceptual scaling of musical timbres. The Journal of the Acoustical Society of America, 61(5), 1270–1277.",
+    "Schubert, E. & Wolfe, J. (2006). Does timbral brightness scale with frequency and spectral centroid? Acta Acustica united with Acustica, 92(5), 820–825.",
+    "Peeters, G., Giordano, B. L., Susini, P., Misdariis, N. & McAdams, S. (2011). The Timbre Toolbox: Extracting audio descriptors from musical signals. The Journal of the Acoustical Society of America, 130(5), 2902–2916.",
+    "Marozeau, J. & de Cheveigné, A. (2007). The effect of fundamental frequency on the brightness dimension of timbre. The Journal of the Acoustical Society of America, 121(1), 383–387."
+   ]
+  },
+  {
+   "@id": "https://w3id.org/ppp/soundSharpness/mesure/non-retenue-1",
+   "@type": "ppp:NotRetainedMeasure",
+   "rdfs_label": {
+    "fr": "centroïde rapporté à la fondamentale",
+    "en": "centroid relative to the fundamental"
+   },
+   "reason": {
+    "fr": "sur les sons d’instruments de Schubert et Wolfe (2006), la brillance jugée ne le suit pas (r = 0,03), alors qu’elle suit le centroïde lui-même",
+    "en": "on the instrument sounds of Schubert and Wolfe (2006), judged brightness does not follow it (r = 0.03), whereas it follows the centroid itself"
+   },
+   "dct:bibliographicCitation": "Schubert, E. & Wolfe, J. (2006). Does timbral brightness scale with frequency and spectral centroid? Acta Acustica united with Acustica, 92(5), 820–825."
+  },
+  {
+   "@id": "https://w3id.org/ppp/soundSharpness/echelle",
+   "@type": "skos:OrderedCollection",
+   "prefLabel": {
+    "fr": "échelle de « acuité du son »",
+    "en": "scale of “sound sharpness”"
+   },
+   "memberList": [
+    "https://w3id.org/ppp/soundSharpness/dark",
+    "https://w3id.org/ppp/soundSharpness/neitherDarkNorBright",
+    "https://w3id.org/ppp/soundSharpness/bright"
+   ]
+  },
+  {
+   "@id": "https://w3id.org/ppp/soundSharpness/dark",
+   "@type": "skos:Concept",
+   "inScheme": "https://w3id.org/ppp/",
+   "skos:notation": "dark",
+   "prefLabel": {
+    "fr": "acuité du son : sombre",
+    "en": "sound sharpness: dark"
+   },
+   "hiddenLabel": {
+    "fr": "sombre",
+    "en": "dark"
+   },
+   "example": {
+    "fr": "comme entendu à travers une porte ou un coussin",
+    "en": "as if heard through a door or a cushion"
+   },
+   "regionOf": "https://w3id.org/ppp/soundSharpness",
+   "broader": "https://w3id.org/ppp/soundSharpness"
+  },
+  {
+   "@id": "https://w3id.org/ppp/soundSharpness/neitherDarkNorBright",
+   "@type": "skos:Concept",
+   "inScheme": "https://w3id.org/ppp/",
+   "skos:notation": "neitherDarkNorBright",
+   "prefLabel": {
+    "fr": "acuité du son : ni sombre ni clair",
+    "en": "sound sharpness: neither dark nor bright"
+   },
+   "hiddenLabel": {
+    "fr": "ni sombre ni clair",
+    "en": "neither dark nor bright"
+   },
+   "example": {
+    "fr": "ni sombre ni clair (le souffle régulier d’un ventilateur)",
+    "en": "neither dark nor bright (the steady whoosh of a fan)"
+   },
+   "regionOf": "https://w3id.org/ppp/soundSharpness",
+   "broader": "https://w3id.org/ppp/soundSharpness"
+  },
+  {
+   "@id": "https://w3id.org/ppp/soundSharpness/bright",
+   "@type": "skos:Concept",
+   "inScheme": "https://w3id.org/ppp/",
+   "skos:notation": "bright",
+   "prefLabel": {
+    "fr": "acuité du son : clair",
+    "en": "sound sharpness: bright"
+   },
+   "hiddenLabel": {
+    "fr": "clair",
+    "en": "bright"
+   },
+   "example": {
+    "fr": "comme un s prolongé, pas un sifflet (un jet de vapeur)",
+    "en": "like a drawn-out s, not a whistle (a jet of steam)"
+   },
+   "regionOf": "https://w3id.org/ppp/soundSharpness",
+   "broader": "https://w3id.org/ppp/soundSharpness"
   },
   {
    "@id": "https://w3id.org/ppp/surfaceGloss",
@@ -6690,16 +7141,18 @@
    },
    "scopeNote": {
     "fr": [
-     "Ce qu’on remarque en écoutant un son : celui d’un objet qu’on fait sonner (en le frappant, en le frottant), d’un appareil qui fonctionne, ou d’une voix. Une photo ne dit rien du son : elle sert seulement à reconnaître l’objet. Un enregistrement publié peut servir d’exemple, sauf pour la force du son ; sinon, on décrit l’objet et les conditions d’écoute. Cette famille est en préparation : trois fiches y sont publiées, la netteté de la hauteur, la hauteur perçue et l’attaque du son.",
+     "Ce qu’on remarque en écoutant un son : celui d’un objet qu’on fait sonner (en le frappant, en le frottant), d’un appareil qui fonctionne, ou d’une voix. Une photo ne dit rien du son : elle sert seulement à reconnaître l’objet. Un enregistrement publié peut servir d’exemple, sauf pour la force du son ; sinon, on décrit l’objet et les conditions d’écoute. Cette famille est en préparation : cinq fiches y sont publiées, la netteté de la hauteur, la hauteur perçue, l’attaque du son, l’acuité du son et l’extinction du son.",
      "Famille de lecture : aide à s’orienter, pas une hiérarchie."
     ],
     "en": [
-     "What you notice when you listen to a sound: that of an object you make sound (by striking or rubbing it), of a device that is running, or of a voice. A photo says nothing about sound: it only helps to recognise the object. A published recording can serve as an example, except for loudness; otherwise the object and the listening conditions are described. This family is in preparation: three entries are published so far, pitch clarity, perceived pitch and sound attack.",
+     "What you notice when you listen to a sound: that of an object you make sound (by striking or rubbing it), of a device that is running, or of a voice. A photo says nothing about sound: it only helps to recognise the object. A published recording can serve as an example, except for loudness; otherwise the object and the listening conditions are described. This family is in preparation: five entries are published so far, pitch clarity, perceived pitch, sound attack, sound sharpness and sound decay.",
      "Reading family: a guide for orientation, not a hierarchy."
     ]
    },
    "member": [
     "https://w3id.org/ppp/soundAttack",
+    "https://w3id.org/ppp/soundSharpness",
+    "https://w3id.org/ppp/soundDecay",
     "https://w3id.org/ppp/pitchClarity",
     "https://w3id.org/ppp/perceivedPitch"
    ]

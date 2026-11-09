@@ -515,12 +515,14 @@ def ligne_familles(fiches):
 # Série 95 : `pitchClarity` entre (relecture explicative du 2026-11-03, a_relire vide, épisodes à réaliser, X17 ; choix de relecture (2026-11-03)) : 32 fiches.
 # Série 96 : `perceivedPitch` entre (relecture explicative du 2026-11-03, a_relire et bloque_par vides, épisodes à réaliser, X17 ; choix de relecture (2026-11-03)) : 33 fiches.
 # Série 101 : `soundAttack` entre (relecture explicative du 2026-11-06, a_relire vide, épisodes à réaliser, X17 ; choix de relecture (2026-11-06)) : 34 fiches.
+# Série 103 : `soundSharpness` entre (relecture explicative du 2026-11-09, a_relire vide, épisodes à réaliser, X17 ; choix de relecture (2026-11-09)) : 35 fiches.
+# Série 104 : `soundDecay` entre (relecture explicative du 2026-11-09, a_relire vide, épisodes à réaliser, X17 ; choix de relecture (2026-11-09)) : 36 fiches.
 FICHES_PUBLIQUES_ATTENDUES = {'hue', 'lightness', 'lightnessContrast', 'perceivedSize', 'perceptualDensity', 'texture',
                               'textureDirectionality', 'distribution', 'hueContrast', 'hueCount', 'hueRange', 'jointLevelOffset',
                               'jointSpacing', 'perceptualContrast', 'saturation', 'scaleContrast', 'surfaceGloss',
                               'contour', 'lightnessRange', 'saturationRange', 'symmetry', 'translucency', 'curvature',
                               'outlineIndentation', 'negativeSpace', 'localIrregularity', 'partNesting', 'subsurfaceDepth', 'perceivedDepth',
-                              'textureContrast', 'perceivedWeight', 'pitchClarity', 'perceivedPitch', 'soundAttack'}
+                              'textureContrast', 'perceivedWeight', 'pitchClarity', 'perceivedPitch', 'soundAttack', 'soundSharpness', 'soundDecay'}
 
 def publiques(paliers):
     return sorted(paliers.get('publiable', []) + paliers.get('publiable avec exemplaires incomplets', []))

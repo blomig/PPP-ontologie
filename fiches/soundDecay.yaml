@@ -3,6 +3,8 @@
 # Série 50 (2026-10-15) : fiche en préparation, rédigée sans exemplaire ; aucun champ n’est encore relu.
 # Série 98 (2026-11-04) : sources lues et mesures complétées, porteur élargi à l’appareil, épisodes proposés « à réaliser » ; relecture explicative à faire.
 # Série 98 bis (2026-11-04) : relecture appliquée (18 points) ; label « extinction du son » (« résonance » en alternatif), label anglais « sound decay » ; relecture explicative à faire.
+# Série 104 (2026-11-09) : relecture explicative faite (choix de relecture (2026-11-09)) ; épisode 06 : pincement en `deformation`, décidé (choix de relecture (2026-11-06)) ; fiche publiable (palier 2, épisodes à réaliser).
+# Série 104 bis (2026-11-09) : « # » retiré des titres de page des épisodes 03 à 05 (note écrite en mots), URL inchangées (choix de relecture (2026-11-09)).
 id: ppp:soundDecay
 label_fr: extinction du son
 label_en: sound decay
@@ -272,47 +274,26 @@ enonces_testables:
   epreuve: null
 cq_couvertes: CQ1, CQ2
 statut: candidat
-statut_note: 'en préparation (2026-11-04) : fiche rédigée, sources complétées, épisodes proposés « à réaliser » (aucun réalisé) ; tous les champs rédigés sont à relire'
+statut_note: fiche relue en langage courant (relecture explicative, 2026-11-09) ; six épisodes proposés « à réaliser », sur des enregistrements placés dans le domaine public (CC0), pas encore observés
 statut_epistemique: non éprouvé
 introduit_en: '2.8'
 modifie_en: []
 remplace_par: []
 source_de_la_fiche: 'proposition de famille « Son » (docs/famille-son-proposition.md (document de travail, non publié), séries 41 à 43) ; premier lot : décision 3 du 2026-10-14 (série 43), « recommandation
   suivie », sous la note de l’éditeur du projet dans ce document : « je suis en accrod avec toutes les propositions/ recommandations. » ; fiche rédigée le 2026-10-15 par l’équipe ; sources, mesures et épisodes
-  complétés le 2026-11-04 (choix de relecture (2026-11-04)) ; champs à valider par la relecture explicative'
+  complétés le 2026-11-04 (choix de relecture (2026-11-04)) ; relecture explicative le 2026-11-09 (choix de relecture (2026-11-09))'
 manques:
 - 'exemplaires observés : aucun épisode encore réalisé (six proposés, sur des enregistrements CC0)'
-- relecture explicative de tous les champs
 bloque_par: []
-a_relire:
-- label_fr
-- label_en
-- strate
-- définition
-- question_attentionnelle
-- contre_exemple
-- grandeur_physique_homonyme
-- note_categories
-- mode_de_presentation
-- conditions_critiques
-- note_conditions
-- porteur
-- condition_NA
-- espace_valeurs
-- identite
-- relations
-- references
-- etat_de_l_art
-- nanay
-- transfert
-- enonces_testables
-- statut_note
-- mesure
-- episodes_a_realiser
+a_relire: []
 relecture_explicative:
-  date: null
+  date: '2026-11-09'
   champs:
-  - 'harmonisation mécanique des énoncés affichés (série 69, 2026-10-17)'
+  - harmonisation mécanique des énoncés affichés (série 69, 2026-10-17)
+  - 'label_fr, label_en, strate, définition, question_attentionnelle, contre_exemple, grandeur_physique_homonyme, note_categories, mode_de_presentation, conditions_critiques, note_conditions, porteur, condition_NA,
+    espace_valeurs, identite, relations, references, etat_de_l_art, nanay, transfert, enonces_testables, mesure : relus en langage courant le 2026-11-09, validés tels quels (choix de relecture (2026-11-09))'
+  - 'statut_note, episodes_a_realiser (épisode 06 : justification du pincement alignée sur l’attaque du son) : relus et corrigés en langage courant le 2026-11-09 (choix de relecture (2026-11-09))'
+  - 'episodes_a_realiser (épisodes 03 à 05 : « # » des titres de page écrit en mots, noms de fichier donnant une autre note retirés) : corrigés le 2026-11-09 (choix de relecture (2026-11-09))'
   a_reconfirmer: []
 # Série 98 : épisodes proposés « à réaliser » (spec X17 ; choix de relecture (2026-11-04)) ; ni épreuve faite ni accord entre observateurs ; ni observateur, ni date, ni résultat.
 # Enregistrements CC0 (Creative Commons 0 : lien vers la licence lu sur chaque page), pages vérifiées le 2026-11-04 ; chutes mesurées par l’équipe sur l’aperçu MP3 de chaque page (enveloppe en décibels sous le maximum), indicatives, non vérifiées comme bornes ; aucun enregistrement des épisodes de soundAttack n’est repris.
@@ -385,10 +366,10 @@ episodes_a_realiser:
   realisation: a_realiser
   region_attendue: ringsAMoment
   rang_exemplaire: principal
-  objet: enregistrement d’une note de marimba (lames de bois frappées), note fa dièse, environ 7 s, page « Marimba - F#3 (Marimba_hit_Outrigger_G2_loud_01.wav) », par sgossner, sur Freesound (https://freesound.org/people/sgossner/sounds/373585/),
+  objet: enregistrement d’une note de marimba (lames de bois frappées), note fa dièse, environ 7 s, page « Marimba - fa dièse 3 », par sgossner, sur Freesound (https://freesound.org/people/sgossner/sounds/373585/),
     licence CC0, page vérifiée le 2026-11-04
-  objet_en: recording of a marimba note (struck wooden bars), note F sharp, about 7 s, page “Marimba - F#3 (Marimba_hit_Outrigger_G2_loud_01.wav)”, by sgossner, on Freesound (https://freesound.org/people/sgossner/sounds/373585/),
-    CC0 licence, page checked on 2026-11-04
+  objet_en: recording of a marimba note (struck wooden bars), note F sharp, about 7 s, page “Marimba - F sharp 3”, by sgossner, on Freesound (https://freesound.org/people/sgossner/sounds/373585/), CC0 licence,
+    page checked on 2026-11-04
   preparation: ouvrir la page et écouter l’enregistrement en entier, sans le télécharger ni le modifier ; régler le niveau une fois, sur cette note, à peu près comme une conversation calme, puis ne plus
     le toucher pour les autres épisodes ; juger ce que fait le son après le coup, pas l’attaque
   preparation_en: open the page and listen to the whole recording, without downloading or editing it; set the level once, on this note, roughly like a calm conversation, then leave it unchanged for the
@@ -416,9 +397,9 @@ episodes_a_realiser:
   realisation: a_realiser
   region_attendue: ringsAMoment
   rang_exemplaire: second
-  objet: enregistrement d’une note de glockenspiel (lames de métal frappées), note fa dièse aiguë, environ 4,8 s, page « Glockenspiel - F#6 (glock_medium_G6.wav) », par sgossner, sur Freesound (https://freesound.org/people/sgossner/sounds/373369/),
+  objet: enregistrement d’une note de glockenspiel (lames de métal frappées), note fa dièse aiguë, environ 4,8 s, page « Glockenspiel - fa dièse 6 », par sgossner, sur Freesound (https://freesound.org/people/sgossner/sounds/373369/),
     licence CC0, page vérifiée le 2026-11-04
-  objet_en: recording of a glockenspiel note (struck metal bars), high F sharp, about 4.8 s, page “Glockenspiel - F#6 (glock_medium_G6.wav)”, by sgossner, on Freesound (https://freesound.org/people/sgossner/sounds/373369/),
+  objet_en: recording of a glockenspiel note (struck metal bars), high F sharp, about 4.8 s, page “Glockenspiel - F sharp 6”, by sgossner, on Freesound (https://freesound.org/people/sgossner/sounds/373369/),
     CC0 licence, page checked on 2026-11-04
   preparation: comme l’épisode 03 ; même niveau d’écoute ; écouter l’enregistrement jusqu’au bout, deux ou trois fois, et juger ce que fait le son après le coup
   preparation_en: as in episode 03; same listening level; listen to the recording to the end, two or three times, and judge what the sound does after the stroke
@@ -449,9 +430,9 @@ episodes_a_realiser:
   realisation: a_realiser
   region_attendue: ringsLong
   rang_exemplaire: principal
-  objet: enregistrement d’un coup doux sur un gong (d’après le nom du fichier), note la dièse grave, environ 29 s, page « Percussion - A#2 (gongHit_p.wav) », par sgossner, sur Freesound (https://freesound.org/people/sgossner/sounds/373433/),
+  objet: enregistrement d’un coup doux sur un gong (d’après le nom du fichier), note la dièse grave, environ 29 s, page « Percussion - la dièse 2 (gongHit_p.wav) », par sgossner, sur Freesound (https://freesound.org/people/sgossner/sounds/373433/),
     licence CC0, page vérifiée le 2026-11-04
-  objet_en: recording of a soft stroke on a gong (according to the file name), low A sharp, about 29 s, page “Percussion - A#2 (gongHit_p.wav)”, by sgossner, on Freesound (https://freesound.org/people/sgossner/sounds/373433/),
+  objet_en: recording of a soft stroke on a gong (according to the file name), low A sharp, about 29 s, page “Percussion - A sharp 2 (gongHit_p.wav)”, by sgossner, on Freesound (https://freesound.org/people/sgossner/sounds/373433/),
     CC0 licence, page checked on 2026-11-04
   preparation: comme l’épisode 03 ; même niveau d’écoute ; écouter l’enregistrement jusqu’au bout, deux ou trois fois, et juger ce que fait le son après le coup
   preparation_en: as in episode 03; same listening level; listen to the recording to the end, two or three times, and judge what the sound does after the stroke
@@ -496,10 +477,10 @@ episodes_a_realiser:
     production: deformation
     bruit_de_fond: quiet
     duree: exam
-    note: micro nommé sur la page, distance et salle non dites (`unknown`) ; corde tirée puis lâchée, notée `deformation` (la facette n’a pas de valeur propre pour le pincement ; à relire) ; casque fermé
-      ou enceintes, pièce calme ; jugement sur la première note (de 0 à 10 s environ) ; écoute complète de 20 s
-    note_en: microphone named on the page, distance and room not given (`unknown`); string pulled then released, recorded as `deformation` (the facet has no specific value for plucking; to be reviewed);
-      closed headphones or loudspeakers, quiet room; judged on the first note (from 0 to about 10 s); full listening of 20 s
+    note: 'micro nommé sur la page, distance et salle non dites (`unknown`) ; corde tirée puis lâchée, notée `deformation` (la facette n’a pas de valeur propre pour le pincement : la corde tirée puis lâchée
+      est déformée) ; casque fermé ou enceintes, pièce calme ; jugement sur la première note (de 0 à 10 s environ) ; écoute complète de 20 s'
+    note_en: 'microphone named on the page, distance and room not given (`unknown`); string pulled then released, recorded as `deformation` (the facet has no specific value for plucking: the string pulled
+      then released is deformed); closed headphones or loudspeakers, quiet room; judged on the first note (from 0 to about 10 s); full listening of 20 s'
   doute: oui
   motif_doute: 'chaque note est coupée (descente rapide, puis silence numérique) avant de se taire : la fin de la résonance n’est pas entendue ; deux notes dans le même fichier ; « à vide » vient du titre
     (« Open ») : la page ne dit pas comment la corde a été pincée ni si rien ne l’a touchée ensuite'

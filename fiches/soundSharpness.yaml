@@ -3,6 +3,8 @@
 # Série 50 (2026-10-15) : fiche en préparation, rédigée sans exemplaire ; aucun champ n’est encore relu.
 # Série 99 (2026-11-05) : sources lues et mesures complétées, porteur élargi à l’appareil et à la voix, épisodes proposés « à réaliser » ; relecture explicative à faire.
 # Série 99 bis (2026-11-05) : relecture appliquée ; label anglais « sound sharpness », « brillance » en alternatif ; régions « sombre / ni sombre ni clair / clair » ; réciproque confusableWith vers perceivedPitch ; relecture explicative à faire.
+# Série 103 (2026-11-09) : relecture explicative faite (choix de relecture (2026-11-09)), champs validés tels quels ; fiche publiable (palier 2, épisodes à réaliser, tous avec doute).
+# Série 103 bis (2026-11-09) : épisode 01, texte affiché « sourd et sombre » au lieu de « grave et sourd » (« dull and dark » en anglais) (choix de relecture (2026-11-09)).
 id: ppp:soundSharpness
 label_fr: acuité du son
 label_en: sound sharpness
@@ -242,12 +244,12 @@ references:
   doi_ou_url: https://openlibrary.org/works/OL1880304W
   role: alimente
   statut_verification: vérifiée sur la source
-  verifie_le: '2026-10-15'
+  verifie_le: '2026-11-05'
   verifie_sur: sections IV et V (art. 58 à 100) lues en entier dans la traduction anglaise de Dack et North ; art. 92 et 93 relus le 2026-11-05 ; le mot « brillance » n’y a pas été trouvé (« bright » figure
     aux art. 24 et 89)
   reprend: le site du timbre harmonique, du sombre au clair, « avec un entraînement approprié », sans étalon, et la prudence de l’auteur (art. 93) ; le bruit blanc sans timbre harmonique, et le bruit filtré
     jugé en épaisseur et en couleur (art. 92 et 93)
-  ne_reprend_pas: le vocabulaire de Schaeffer comme labels ; les genres du timbre (vide-plein, rond-pointu, éclatant-mat)
+  ne_reprend_pas: l’échelle du site du timbre harmonique comme échelle de ces régions (seuls les noms sombre/clair sont repris, par choix de relecture (2026-11-05)) ; les genres du timbre (vide-plein, rond-pointu, éclatant-mat)
 - id: schaeffer1966
   citation: 'Schaeffer, P. (1966). Traité des objets musicaux. Paris : Seuil (coll. « Pierres vives »).'
   doi_ou_url: https://openlibrary.org/works/OL1318246W
@@ -290,52 +292,30 @@ enonces_testables:
   epreuve: null
 cq_couvertes: CQ1, CQ2
 statut: candidat
-statut_note: 'en préparation (2026-11-05) : fiche rédigée, sources complétées, épisodes proposés « à réaliser » (aucun réalisé) ; tous les champs rédigés sont à relire'
+statut_note: fiche relue en langage courant (relecture explicative, 2026-11-09) ; six épisodes proposés « à réaliser », sur des enregistrements placés dans le domaine public (CC0), pas encore observés
 statut_epistemique: non éprouvé
 introduit_en: '2.8'
 modifie_en: []
 remplace_par: []
 source_de_la_fiche: 'proposition de famille « Son » (docs/famille-son-proposition.md (document de travail, non publié), séries 41 à 43) ; premier lot : décision 3 du 2026-10-14 (série 43), « recommandation
   suivie », sous la note de l’éditeur du projet dans ce document : « je suis en accrod avec toutes les propositions/ recommandations. » ; fiche rédigée le 2026-10-15 par l’équipe ; sources, mesures, voix
-  comme porteur et épisodes complétés le 2026-11-05 (choix de relecture (2026-11-05)) ; champs à valider par la relecture explicative'
+  comme porteur et épisodes complétés le 2026-11-05 (choix de relecture (2026-11-05)) ; relecture explicative le 2026-11-09 (choix de relecture (2026-11-09))'
 manques:
 - 'exemplaires observés : aucun épisode encore réalisé (six proposés, sur des enregistrements CC0)'
-- relecture explicative de tous les champs
 bloque_par: []
-a_relire:
-- label_fr
-- label_en
-- strate
-- définition
-- question_attentionnelle
-- contre_exemple
-- grandeur_physique_homonyme
-- avertissement_label
-- note_categories
-- mode_de_presentation
-- conditions_critiques
-- note_conditions
-- porteur
-- condition_NA
-- espace_valeurs
-- identite
-- relations
-- references
-- etat_de_l_art
-- nanay
-- transfert
-- enonces_testables
-- statut_note
-- mesure
-- episodes_a_realiser
+a_relire: []
 relecture_explicative:
-  date: null
+  date: '2026-11-09'
   champs:
-  - 'harmonisation mécanique des énoncés affichés (série 69, 2026-10-17)'
+  - harmonisation mécanique des énoncés affichés (série 69, 2026-10-17)
+  - 'label_fr, label_en, strate, définition, question_attentionnelle, contre_exemple, grandeur_physique_homonyme, avertissement_label, note_categories, mode_de_presentation, conditions_critiques, note_conditions,
+    porteur, condition_NA, espace_valeurs, identite, relations, references, etat_de_l_art, nanay, transfert, enonces_testables, mesure, episodes_a_realiser : relus en langage courant le 2026-11-09, validés
+    tels quels (choix de relecture (2026-11-09))'
+  - 'statut_note : réécrit au style des fiches publiées le 2026-11-09 (choix de relecture (2026-11-09))'
   a_reconfirmer: []
 # Épisodes proposés « à réaliser » (choix de relecture (2026-11-05)) ; ni épreuve faite ni accord entre observateurs ; ni observateur, ni date, ni résultat.
 # Enregistrements CC0 (Creative Commons 0 : lien vers la licence lu sur chaque page), pages vérifiées le 2026-11-05 ; centroïdes mesurés par l’équipe sur l’aperçu MP3 de chaque page selon Peeters et al. (2011), réglages répétés dans chaque note
-# (Hann 60 ms / 15 ms, 20 Hz–16 kHz, trames < 30 dB sous le max, fond soustrait) ; convention d’équipe des fiches Son, pas encore un article de la spec ; indicatifs, non vérifiés comme bornes ; aucun enregistrement des épisodes de soundAttack ni de soundDecay n’est repris.
+# (Hann 60 ms / 15 ms, 20 Hz–16 kHz, trames < 30 dB sous le max, fond soustrait) ; réglages d’équipe de cette fiche, pas encore un article de la spec ; indicatifs, non vérifiés comme bornes ; aucun enregistrement des épisodes de soundAttack ni de soundDecay n’est repris.
 episodes_a_realiser:
 - id: ppp-a:ep-soundSharpness-01
   realisation: a_realiser
@@ -355,8 +335,8 @@ episodes_a_realiser:
     production: unknown
     bruit_de_fond: quiet
     duree: exam
-    note: 'bruit généré par un logiciel nommé sur la page, sans geste : production notée `unknown` (à relire) ; casque fermé ou enceintes, pièce calme ; écoute complète de 10 s'
-    note_en: 'noise generated by software named on the page, with no gesture: production recorded as `unknown` (to be reviewed); closed headphones or loudspeakers, quiet room; full listening of 10 s'
+    note: 'bruit généré par un logiciel nommé sur la page ; la page ne décrit ni objet qui sonne ni geste : production notée `unknown` ; facette critique, donc « non tranché » sur la production à l’épreuve (choix de relecture (2026-11-07)) ; casque fermé ou enceintes, pièce calme ; écoute complète de 10 s'
+    note_en: 'noise generated by software named on the page; the page describes neither a sounding object nor a gesture: production recorded as `unknown`; a critical facet, so “undecided” on production at testing (review choice (2026-11-07)); closed headphones or loudspeakers, quiet room; full listening of 10 s'
   doute: oui
   motif_doute: '« brun » vient du titre et de la page ; le centroïde d’amplitude (vers 2 570 Hz) est plus haut que celui de la voix « o » de l’épisode 02 (vers 600 Hz), alors que le centroïde de puissance
     tombe vers 180 Hz : le rangement par centroïde d’amplitude ne place donc pas ce bruit sous la voix, et bruits et voix ne se comparent pas avec cette mesure ; enregistré environ 5 dB plus fort que le
@@ -372,8 +352,8 @@ episodes_a_realiser:
     power weighs heavily for this noise (team measurement on the MP3 preview, left channel when there are two: amplitude spectral centroid following Peeters et al. (2011), 60 ms Hann frames every 15 ms,
     band from 20 Hz to 16 kHz, frames within 30 dB of the loudest, background-noise spectrum subtracted; median and interquartile range; indicative; sharpness in acum not computed (listening level not calibrated,
     standard not read))'
-  texte_fr: 'Un bruit brun, grave et sourd : sombre (prédiction, à éprouver).'
-  texte_en: 'A brown noise, low and dull: dark (prediction, to be tested).'
+  texte_fr: 'Un bruit brun, sourd et sombre : sombre (prédiction, à éprouver).'
+  texte_en: 'A brown noise, dull and dark: dark (prediction, to be tested).'
 - id: ppp-a:ep-soundSharpness-02
   realisation: a_realiser
   region_attendue: dark
@@ -429,8 +409,8 @@ episodes_a_realiser:
     production: unknown
     bruit_de_fond: quiet
     duree: exam
-    note: 'bruit généré par un logiciel nommé sur la page, sans geste : production notée `unknown` (à relire) ; casque fermé ou enceintes, pièce calme ; écoute complète de 10 s'
-    note_en: 'noise generated by software named on the page, with no gesture: production recorded as `unknown` (to be reviewed); closed headphones or loudspeakers, quiet room; full listening of 10 s'
+    note: 'bruit généré par un logiciel nommé sur la page ; la page ne décrit ni objet qui sonne ni geste : production notée `unknown` ; facette critique, donc « non tranché » sur la production à l’épreuve (choix de relecture (2026-11-07)) ; casque fermé ou enceintes, pièce calme ; écoute complète de 10 s'
+    note_en: 'noise generated by software named on the page; the page describes neither a sounding object nor a gesture: production recorded as `unknown`; a critical facet, so “undecided” on production at testing (review choice (2026-11-07)); closed headphones or loudspeakers, quiet room; full listening of 10 s'
   doute: oui
   motif_doute: 'un bruit rose peut paraître clair plutôt que médian : aucune source lue ne le range ; la page dit que les deux canaux sont décalés de 500 ms : au casque, le bruit paraît large ; « rose »
     vient du titre et de la page'
@@ -470,9 +450,9 @@ episodes_a_realiser:
       of 0.83 s
   doute: oui
   motif_doute: 'très bref ; enregistré environ 15 dB plus bas que le bruit rose de l’épisode 03 (valeur efficace de l’aperçu) : à niveau fixe, il s’entend bien plus faible ; la voyelle chantée n’est pas
-    dite ; « voix de femme » et la note viennent du titre ; même compte qu’un enregistrement de soundAttack, mais ce n’est pas le même'
+    dite ; « voix de femme » et la note viennent du titre ; même auteur sur Freesound qu’un enregistrement de soundAttack, mais un autre enregistrement'
   motif_doute_en: 'very brief; recorded about 15 dB lower than the pink noise of episode 03 (RMS value of the preview): at a fixed level, it is heard much quieter; the sung vowel is not given; “woman’s
-    voice” and the note come from the title; same account as a recording in soundAttack, but not the same one'
+    voice” and the note come from the title; same uploader on Freesound as a recording in soundAttack, but a different recording'
   note: 'centroïde médian vers 1 290 Hz (écart interquartile de 1 210 à 1 350 Hz), de 0 à 0,5 s ; fondamentale vers 200 Hz (estimation de l’équipe), voisine de celle de l’épisode 02 : le contraste entre
     ces deux voix ne vient pas de la hauteur (mesure de l’équipe sur l’aperçu MP3, canal gauche s’il y en a deux : centroïde spectral d’amplitude selon Peeters et al. (2011), trames de Hann de 60 ms tous
     les 15 ms, bande de 20 Hz à 16 kHz, trames à moins de 30 dB de la plus forte, spectre du bruit de fond soustrait ; médiane et écart interquartile ; indicative ; acuité en acum non calculée (niveau d’écoute
@@ -501,8 +481,8 @@ episodes_a_realiser:
     production: unknown
     bruit_de_fond: quiet
     duree: exam
-    note: 'bruit généré par un logiciel nommé sur la page, sans geste : production notée `unknown` (à relire) ; casque fermé ou enceintes, pièce calme ; écoute complète de 10 s'
-    note_en: 'noise generated by software named on the page, with no gesture: production recorded as `unknown` (to be reviewed); closed headphones or loudspeakers, quiet room; full listening of 10 s'
+    note: 'bruit généré par un logiciel nommé sur la page ; la page ne décrit ni objet qui sonne ni geste : production notée `unknown` ; facette critique, donc « non tranché » sur la production à l’épreuve (choix de relecture (2026-11-07)) ; casque fermé ou enceintes, pièce calme ; écoute complète de 10 s'
+    note_en: 'noise generated by software named on the page; the page describes neither a sounding object nor a gesture: production recorded as `unknown`; a critical facet, so “undecided” on production at testing (review choice (2026-11-07)); closed headphones or loudspeakers, quiet room; full listening of 10 s'
   doute: oui
   motif_doute: 'enregistré environ 9 dB plus fort que le bruit rose de l’épisode 03, et l’aperçu dépasse la pleine échelle (crêtes saturées) : à niveau fixe, il s’entend nettement plus fort, ce qui peut
     pousser vers « clair » ; « blanc » vient du titre et de la page'
