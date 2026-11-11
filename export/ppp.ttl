@@ -1,5 +1,5 @@
 # PPP, export SKOS des fiches publiques ; ne pas modifier à la main.
-# Licence : CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Version 2.8 ; dernier changement de contenu : 2026-11-10. Pour citer : CITATION.cff.
+# Licence : CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Version 2.8 ; dernier changement de contenu : 2026-11-11. Pour citer : CITATION.cff.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -20,7 +20,7 @@
         "SKOS vocabulary of the published PPP types (public entries), their regions, scales and reading families. The YAML entries of the repository are the source; this export is derived from them."@en ;
     dct:license <https://creativecommons.org/licenses/by/4.0/> ;
     owl:versionInfo "2.8" ;
-    dct:modified "2026-11-10"^^xsd:date ;
+    dct:modified "2026-11-11"^^xsd:date ;
     dct:creator "Lomig Unger" ,
         "Grok Bot" ;
     dct:rightsHolder "Lomig Unger" ;
@@ -30,6 +30,7 @@
     skos:hasTopConcept ppp:contour ,
         ppp:curvature ,
         ppp:distribution ,
+        ppp:hardnessToTouch ,
         ppp:hue ,
         ppp:hueCount ,
         ppp:hueRange ,
@@ -601,6 +602,198 @@ ppp:symmetry
         "the elements seem equally far from one another"@en ;
     ppp:regionOf ppp:distribution ;
     skos:broader ppp:distribution .
+
+ppp:hardnessToTouch
+    a skos:Concept ;
+    skos:inScheme <https://w3id.org/ppp/> ;
+    skos:notation "hardnessToTouch" ;
+    skos:prefLabel "dureté au toucher"@fr ,
+        "hardness to the touch"@en ;
+    skos:definition "Combien l’objet cède quand on le presse du bout du doigt, à l’endroit pressé : du doigt qui s’enfonce beaucoup à une surface qui ne cède pas du tout."@fr ,
+        "How much the object yields when pressed with a fingertip, at the pressed spot: from the finger sinking in a lot to a surface that does not yield at all."@en ;
+    skos:scopeNote "Si vous appuyez du bout du doigt, sans regarder, l’objet cède-t-il beaucoup, un peu, à peine, ou pas du tout ?"@fr ,
+        "If you press with your fingertip, without looking, does the object yield a lot, somewhat, barely, or not at all?"@en ,
+        "Une balle de mousse et une boule de billard peuvent avoir la même surface lisse : c’est ce qu’elles cèdent sous le doigt qui les sépare, pas leur relief (texture). Une éponge et une pâte à modeler cèdent autant ; l’une revient à sa forme, l’autre garde la marque : ce n’est pas une différence de dureté, mais de retour à la forme. Une feuille de papier se plie facilement, mais posée à plat sur une table elle ne cède pas sous le doigt : se plier n’est pas céder."@fr ,
+        "A foam ball and a billiard ball can have the same smooth surface: what sets them apart is what they yield under the finger, not their relief (texture). A sponge and modelling clay yield as much; one returns to its shape, the other keeps the mark: this is not a difference in hardness but in springing back. A sheet of paper bends easily, but laid flat on a table it does not give under the finger: bending is not yielding."@en ,
+        "quatre crans tirés des cinq exemples du ticket 4, rangés par leur proposant du plus mou au plus dur : le ballon gonflé est rangé avec la mousse à raser (le doigt s’enfonce profondément), le chapeau de champignon seul au cran « cède un peu », la pile de papier à « cède à peine », la pierre à « ne cède pas ». La proposition « Toucher » avait trois crans (« cède beaucoup », « cède un peu », « ne cède pas ») ; le ticket en distingue un de plus entre « un peu » et « pas du tout ». Position de travail : quatre crans, à une région près ; si l’épreuve ne distingue pas « cède à peine » de ses voisins, revenir à trois (accord exact). Repères du cran « cède beaucoup » : la mousse à raser reste comme repère, mais elle se déforme sans revenir, et l’examen risque la condition NA (ce qui ne garde pas de forme) ; le ballon gonflé reste au cran « cède beaucoup », avec un doute vers « cède un peu » selon le gonflage. Repères précisés (choix de relecture (2026-11-02)) : l’éponge du cran « cède beaucoup » est une éponge synthétique (mousse) sèche, car une éponge de cellulose se raidit en séchant (Rey et Vandamme, 2013) ; au cran « cède un peu », une balle de mousse dense est le repère principal, reproductible, et le chapeau de champignon le second, sa fraîcheur déclarée ; une gomme et un bouchon de liège rejoignent la pile de papier au cran « cède à peine »."@fr ,
+        "four steps drawn from the five examples of ticket 4, ranked by their proposer from softest to hardest: the inflated balloon is grouped with shaving foam (the finger sinks deeply), the mushroom cap alone in “yields somewhat”, the stack of paper in “yields barely”, the stone in “does not yield”. The “Touch” proposal had three steps (“yields a lot”, “yields somewhat”, “does not yield”); the ticket distinguishes one more between “somewhat” and “not at all”. Working position: four steps, within one region; if the test does not distinguish “yields barely” from its neighbours, go back to three (exact agreement). Reference points of the “yields a lot” step: shaving foam stays as a reference point, but it deforms without coming back, and examining it risks the NA condition (what does not keep a shape); the inflated balloon stays in the “yields a lot” step, with a doubt towards “yields somewhat” depending on how far it is inflated. Reference points made more precise (review choice (2026-11-02)): the sponge of the “yields a lot” step is a dry synthetic (foam) sponge, because a cellulose sponge stiffens as it dries (Rey and Vandamme, 2013); in the “yields somewhat” step, a dense foam ball is the main reference point, reproducible, and the mushroom cap the second, its freshness declared; an eraser and a cork stopper join the stack of paper in the “yields barely” step."@en ;
+    skos:note "candidat ; non éprouvé"@fr ,
+        "candidate; untested"@en ;
+    skos:related ppp:texture ;
+    skos:topConceptOf <https://w3id.org/ppp/> ;
+    ppp:measurementState <https://w3id.org/ppp/mesure/etat/methodes> ;
+    ppp:measurementSummary "Des mesures associées existent pour les caoutchoucs et les mousses : un appareil enfonce une pointe ou une bille avec une force réglée et relève la profondeur, ou mesure la force qu’il faut pour écraser une mousse d’une fraction donnée de son épaisseur. Elles portent sur un échantillon de matière préparé, pas sur un objet quelconque touché du doigt. En laboratoire, la mollesse perçue suit la déformabilité mesurée de caoutchoucs et la dureté jugée croît avec la dureté physique selon une loi de puissance ; ces résultats ne fixent pas de régions."@fr ,
+        "Associated measurements exist for rubbers and foams: an instrument pushes a point or a ball in with a set force and reads the depth, or measures the force needed to compress a foam by a given fraction of its thickness. They concern a prepared sample of material, not any object touched with the finger. In the laboratory, perceived softness follows the measured compliance of rubbers and judged hardness grows with physical hardness according to a power law; these results do not set regions."@en ;
+    ppp:measurementCaveat "Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen."@fr ,
+        "The regions of this entry remain perceptual: they describe what an observer sees, hears, smells or feels by touch under the declared conditions. An associated measurement can inform an observation, but it does not set the boundaries of the regions and does not replace examination."@en ;
+    ppp:associatedMeasure <https://w3id.org/ppp/hardnessToTouch/mesure/iso48_4> ,
+        <https://w3id.org/ppp/hardnessToTouch/mesure/iso48_2> ,
+        <https://w3id.org/ppp/hardnessToTouch/mesure/iso2439> ;
+    ppp:notRetainedMeasure <https://w3id.org/ppp/hardnessToTouch/mesure/non-retenue-1> ,
+        <https://w3id.org/ppp/hardnessToTouch/mesure/non-retenue-2> ;
+    ppp:hasScale <https://w3id.org/ppp/hardnessToTouch/echelle> ;
+    skos:narrower <https://w3id.org/ppp/hardnessToTouch/yieldsMuch> ,
+        <https://w3id.org/ppp/hardnessToTouch/yieldsSome> ,
+        <https://w3id.org/ppp/hardnessToTouch/yieldsBarely> ,
+        <https://w3id.org/ppp/hardnessToTouch/doesNotYield> .
+
+ppp:texture
+    skos:related ppp:hardnessToTouch ,
+        ppp:perceptualDensity ,
+        ppp:localIrregularity ,
+        ppp:textureDirectionality ;
+    a skos:Concept ;
+    skos:inScheme <https://w3id.org/ppp/> ;
+    skos:notation "texture" ;
+    skos:prefLabel "texture"@fr ,
+        "texture"@en ;
+    skos:altLabel "grain"@fr ,
+        "grain"@en ;
+    skos:definition "Taille perçue des reliefs d’une surface, à la vue ou au toucher, de la surface sans relief perceptible à la surface à gros reliefs."@fr ,
+        "The perceived size of the relief of a surface, by sight or by touch, from a surface with no perceptible relief to a surface with coarse relief."@en ;
+    skos:scopeNote "À la vue ou sous la main, la surface paraît-elle lisse, ou ses reliefs sont-ils fins, moyens ou gros ?"@fr ,
+        "To the eye or under the hand, does the surface look even (free of perceptible relief), or is its relief fine-grained, medium-grained or coarse-grained?"@en ,
+        "Un stratifié imprimé « bois » montre des veines, mais la main n’y sent aucun relief : c’est un motif de teinte et de clarté, et la texture est lisse. Une tôle gaufrée a de gros reliefs tous pareils : sa texture est grosse, sans irrégularité locale. Une page de journal en petits caractères compte beaucoup d’éléments, mais son papier peut être lisse : le nombre d’éléments relève de la densité, pas de la texture."@fr ,
+        "A printed “wood” laminate shows veins, but the hand feels no relief: it is a pattern of hue and lightness, and the texture is an even surface. A chequer plate has coarse relief, all alike: its texture is coarse-grained, with no local irregularity. A newspaper page in small print has many elements, but its paper can be an even surface: the number of elements belongs to density, not to texture."@en ;
+    skos:note "candidat ; non éprouvé"@fr ,
+        "candidate; untested"@en ,
+        "Correspondance non formelle : coarseness (Tamura, Mori et Yamawaki 1978), Tamura, H., Mori, S. & Yamawaki, T. (1978). Textural features corresponding to visual perception. IEEE Transactions on Systems, Man, and Cybernetics, 8(6), 460–473."@fr ,
+        "Informal correspondence: coarseness (Tamura, Mori et Yamawaki 1978), Tamura, H., Mori, S. & Yamawaki, T. (1978). Textural features corresponding to visual perception. IEEE Transactions on Systems, Man, and Cybernetics, 8(6), 460–473."@en ,
+        "Correspondance non formelle : roughness (Tamura, Mori et Yamawaki 1978), Tamura, H., Mori, S. & Yamawaki, T. (1978). Textural features corresponding to visual perception. IEEE Transactions on Systems, Man, and Cybernetics, 8(6), 460–473."@fr ,
+        "Informal correspondence: roughness (Tamura, Mori et Yamawaki 1978), Tamura, H., Mori, S. & Yamawaki, T. (1978). Textural features corresponding to visual perception. IEEE Transactions on Systems, Man, and Cybernetics, 8(6), 460–473."@en ;
+    skos:topConceptOf <https://w3id.org/ppp/> ;
+    ppp:measurementState <https://w3id.org/ppp/mesure/etat/methodes> ;
+    ppp:measurementSummary "La métrologie des surfaces mesure la rugosité au profilomètre (paramètres de profil, ISO 21920-2, qui remplace ISO 4287) ou sur une surface (paramètres surfaciques, ISO 25178-2). Ces mesures associées portent sur la hauteur et l’espacement des reliefs, un aspect proche de ce type (de façon indirecte pour Ra, hauteur relevée le long d’une ligne) ; elles se font sur un petit échantillon, à une échelle souvent bien plus fine que celle qu’on voit ou qu’on sent, et ne disent pas quelle taille de relief perçoit un observateur à une distance et sous un éclairage donnés."@fr ,
+        "Surface metrology measures roughness with a profilometer (profile parameters, ISO 21920-2, which replaces ISO 4287) or over an area (areal parameters, ISO 25178-2). These associated measurements concern the height and spacing of the relief, an appearance close to this type (indirectly for Ra, a height measured along a line); they are made on a small sample, at a scale often much finer than what is seen or felt, and do not say what size of relief an observer perceives at a given distance and under given lighting."@en ;
+    ppp:measurementCaveat "Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen."@fr ,
+        "The regions of this entry remain perceptual: they describe what an observer sees, hears, smells or feels by touch under the declared conditions. An associated measurement can inform an observation, but it does not set the boundaries of the regions and does not replace examination."@en ;
+    ppp:associatedMeasure <https://w3id.org/ppp/texture/mesure/iso_21920_2> ,
+        <https://w3id.org/ppp/texture/mesure/iso_25178_2> ;
+    ppp:hasScale <https://w3id.org/ppp/texture/echelle> ;
+    skos:narrower <https://w3id.org/ppp/texture/smooth> ,
+        <https://w3id.org/ppp/texture/fine> ,
+        <https://w3id.org/ppp/texture/medium> ,
+        <https://w3id.org/ppp/texture/coarse> .
+
+<https://w3id.org/ppp/hardnessToTouch/mesure/iso48_4>
+    a ppp:AssociatedMeasure ;
+    rdfs:label "dureté Shore (duromètre)"@fr ,
+        "Shore hardness (durometer)"@en ;
+    ppp:quantity "profondeur d’enfoncement d’une pointe de forme normalisée, poussée par un ressort, dans un caoutchouc"@fr ,
+        "depth of indentation of a standardised point, pushed by a spring, into a rubber"@en ;
+    ppp:unitOrScale "échelles Shore A (dureté normale), D (caoutchoucs durs), AO (caoutchoucs mous et alvéolaires), AM (pièces minces) ; ASTM D2240 décrit douze types de duromètres, dont OO"@fr ,
+        "Shore A (normal hardness), D (hard rubbers), AO (soft and cellular rubbers), AM (thin pieces) scales; ASTM D2240 describes twelve types of durometers, including OO"@en ;
+    ppp:gap "mesure la matière d’un échantillon plan d’épaisseur donnée, avec une pointe et une force fixées, pas l’objet entier à l’endroit pressé ; ne saisit ni la force variable du doigt, ni sa surface de contact, ni l’épaisseur ou le creux de l’objet (un ballon gonflé, une pile de papier), ni l’observateur ; chaque échelle ne couvre qu’une partie des matières (caoutchoucs, élastomères, mousses, gels, quelques plastiques), ni la pierre ni le métal ; ASTM D2240 le dit lui-même : « No simple relationship exists between indentation hardness determined by this test method and any fundamental property of the material tested » (section 4.1)"@fr ,
+        "measures the material of a flat sample of given thickness, with a fixed point and force, not the whole object at the pressed spot; it captures neither the variable force of the finger, nor its contact area, nor the thickness or hollowness of the object (an inflated balloon, a stack of paper), nor the observer; each scale covers only part of the materials (rubbers, elastomers, foams, gels, some plastics), neither stone nor metal; ASTM D2240 itself says so: “No simple relationship exists between indentation hardness determined by this test method and any fundamental property of the material tested” (section 4.1)"@en ;
+    ppp:measurementConditions "échantillon de caoutchouc ou d’élastomère, plan, d’épaisseur suffisante ; force et forme de la pointe fixées par l’échelle ; température de l’essai"@fr ,
+        "flat rubber or elastomer sample of sufficient thickness; force and shape of the point set by the scale; test temperature"@en ;
+    ppp:proximity <https://w3id.org/ppp/mesure/proximite/proche> ;
+    dct:bibliographicCitation "ISO 48-4:2018. Rubber, vulcanized or thermoplastic — Determination of hardness — Part 4: Indentation hardness by durometer method (Shore hardness). Genève : ISO." ,
+        "ASTM D2240-15(2021). Standard Test Method for Rubber Property—Durometer Hardness. ASTM International." .
+
+<https://w3id.org/ppp/hardnessToTouch/mesure/iso48_2>
+    a ppp:AssociatedMeasure ;
+    rdfs:label "dureté internationale du caoutchouc (IRHD)"@fr ,
+        "international rubber hardness (IRHD)"@en ;
+    ppp:quantity "enfoncement d’une bille sous une force donnée"@fr ,
+        "indentation of a ball under a given force"@en ;
+    ppp:unitOrScale "degrés IRHD, de 10 à 100 ; trois méthodes selon la dureté (N, H, L) et une pour les pièces minces (M), plus quatre pour les surfaces courbes"@fr ,
+        "IRHD degrees, from 10 to 100; three methods by hardness range (N, H, L) and one for thin pieces (M), plus four for curved surfaces"@en ;
+    ppp:gap "même écart que la dureté Shore : matière d’un caoutchouc, bille et force fixées ; ne saisit ni le doigt, ni l’objet entier, ni l’observateur ; « dureté apparente » sur surface courbe seulement par des méthodes à part"@fr ,
+        "same gap as Shore hardness: the material of a rubber, fixed ball and force; it captures neither the finger, nor the whole object, nor the observer; “apparent hardness” on a curved surface only by separate methods"@en ;
+    ppp:measurementConditions "caoutchouc vulcanisé ou thermoplastique ; surface plane (ou courbe, méthodes de dureté apparente) ; diamètre de bille et force selon la méthode"@fr ,
+        "vulcanized or thermoplastic rubber; flat surface (or curved, apparent-hardness methods); ball diameter and force according to the method"@en ;
+    ppp:proximity <https://w3id.org/ppp/mesure/proximite/proche> ;
+    dct:bibliographicCitation "ISO 48-2:2018. Rubber, vulcanized or thermoplastic — Determination of hardness — Part 2: Hardness between 10 IRHD and 100 IRHD. Genève : ISO." .
+
+<https://w3id.org/ppp/hardnessToTouch/mesure/iso2439>
+    a ppp:AssociatedMeasure ;
+    rdfs:label "dureté des mousses par indentation"@fr ,
+        "indentation hardness of foams"@en ;
+    ppp:quantity "force nécessaire pour écraser une mousse d’une fraction donnée de son épaisseur (40 % pendant 30 s, par exemple)"@fr ,
+        "force needed to compress a foam by a given fraction of its thickness (40 % for 30 s, for example)"@en ;
+    ppp:unitOrScale "force (newtons) à un taux d’indentation donné ; cinq méthodes (A à E)"@fr ,
+        "force (newtons) at a given indentation rate; five methods (A to E)"@en ;
+    ppp:gap "mesure la portance d’une mousse sous un large plateau, pas l’enfoncement sous un doigt ; la norme limite elle-même ses résultats aux conditions de l’essai ; ne s’applique qu’aux mousses de latex, d’uréthane et de PVC à cellules ouvertes ; ne saisit ni l’observateur, ni la force du doigt, ni ce qui n’est pas une mousse"@fr ,
+        "measures the load-bearing of a foam under a wide plate, not the indentation under a finger; the standard itself limits its results to the test conditions; it applies only to open-cell latex, urethane and PVC foams; it captures neither the observer, nor the force of the finger, nor anything that is not a foam"@en ;
+    ppp:measurementConditions "mousse souple à cellules ouvertes, éprouvette ou article fini ; plateau, taux d’indentation et durée fixés par la méthode"@fr ,
+        "flexible open-cell foam, test piece or finished article; plate, indentation rate and duration set by the method"@en ;
+    ppp:proximity <https://w3id.org/ppp/mesure/proximite/indirecte> ;
+    dct:bibliographicCitation "ISO 2439:2008. Flexible cellular polymeric materials — Determination of hardness (indentation technique). Genève : ISO." .
+
+<https://w3id.org/ppp/hardnessToTouch/mesure/non-retenue-1>
+    a ppp:NotRetainedMeasure ;
+    rdfs:label "échelle de Mohs"@fr ,
+        "Mohs scale"@en ;
+    ppp:reason "mesure la résistance à la rayure d’un minéral, pas ce qu’il cède sous la pression : homonyme de domaine, pas une mesure associée"@fr ,
+        "measures the scratch resistance of a mineral, not what it yields under pressure: a domain homonym, not an associated measurement"@en ;
+    dct:bibliographicCitation "U.S. National Park Service (2023). Mohs Hardness Scale. Page mise à jour le 12 avril 2023." .
+
+<https://w3id.org/ppp/hardnessToTouch/mesure/non-retenue-2>
+    a ppp:NotRetainedMeasure ;
+    rdfs:label "dureté Vickers (et Brinell)"@fr ,
+        "Vickers hardness (and Brinell)"@en ;
+    ppp:reason "mesure l’empreinte permanente qu’un pénétrateur laisse dans un métal ou un revêtement dur, pas ce qu’un objet cède sous le doigt à l’endroit pressé. Brinell : norme non consultée"@fr ,
+        "measures the permanent indentation an indenter leaves in a metal or hard coating, not what an object yields under the finger at the pressed spot. Brinell: standard not consulted"@en ;
+    dct:bibliographicCitation "ISO 6507-1:2023. Metallic materials — Vickers hardness test — Part 1: Test method. Genève : ISO." .
+
+<https://w3id.org/ppp/hardnessToTouch/echelle>
+    a skos:OrderedCollection ;
+    skos:prefLabel "échelle de « dureté au toucher »"@fr ,
+        "scale of “hardness to the touch”"@en ;
+    skos:memberList ( <https://w3id.org/ppp/hardnessToTouch/yieldsMuch> <https://w3id.org/ppp/hardnessToTouch/yieldsSome> <https://w3id.org/ppp/hardnessToTouch/yieldsBarely> <https://w3id.org/ppp/hardnessToTouch/doesNotYield> ) .
+
+<https://w3id.org/ppp/hardnessToTouch/yieldsMuch>
+    a skos:Concept ;
+    skos:inScheme <https://w3id.org/ppp/> ;
+    skos:notation "yieldsMuch" ;
+    skos:prefLabel "dureté au toucher : cède beaucoup"@fr ,
+        "hardness to the touch: yields a lot"@en ;
+    skos:hiddenLabel "cède beaucoup"@fr ,
+        "yields a lot"@en ;
+    skos:example "le doigt s’enfonce profondément (de la mousse à raser, une éponge synthétique (mousse) sèche, un ballon de baudruche gonflé)"@fr ,
+        "the finger sinks in deeply (shaving foam, a dry synthetic (foam) sponge, an inflated rubber balloon)"@en ;
+    ppp:regionOf ppp:hardnessToTouch ;
+    skos:broader ppp:hardnessToTouch .
+
+<https://w3id.org/ppp/hardnessToTouch/yieldsSome>
+    a skos:Concept ;
+    skos:inScheme <https://w3id.org/ppp/> ;
+    skos:notation "yieldsSome" ;
+    skos:prefLabel "dureté au toucher : cède un peu"@fr ,
+        "hardness to the touch: yields somewhat"@en ;
+    skos:hiddenLabel "cède un peu"@fr ,
+        "yields somewhat"@en ;
+    skos:example "le doigt s’enfonce nettement, mais la matière résiste (une balle de mousse dense, un chapeau de champignon frais)"@fr ,
+        "the finger clearly sinks in, but the material resists (a dense foam ball, a fresh mushroom cap)"@en ;
+    ppp:regionOf ppp:hardnessToTouch ;
+    skos:broader ppp:hardnessToTouch .
+
+<https://w3id.org/ppp/hardnessToTouch/yieldsBarely>
+    a skos:Concept ;
+    skos:inScheme <https://w3id.org/ppp/> ;
+    skos:notation "yieldsBarely" ;
+    skos:prefLabel "dureté au toucher : cède à peine"@fr ,
+        "hardness to the touch: yields barely"@en ;
+    skos:hiddenLabel "cède à peine"@fr ,
+        "yields barely"@en ;
+    skos:example "on sent un léger enfoncement en appuyant fort, sans voir de creux (une pile de papier, une gomme, un bouchon de liège)"@fr ,
+        "a slight give is felt when pressing hard, with no visible hollow (a stack of paper, an eraser, a cork stopper)"@en ;
+    ppp:regionOf ppp:hardnessToTouch ;
+    skos:broader ppp:hardnessToTouch .
+
+<https://w3id.org/ppp/hardnessToTouch/doesNotYield>
+    a skos:Concept ;
+    skos:inScheme <https://w3id.org/ppp/> ;
+    skos:notation "doesNotYield" ;
+    skos:prefLabel "dureté au toucher : ne cède pas"@fr ,
+        "hardness to the touch: does not yield"@en ;
+    skos:hiddenLabel "ne cède pas"@fr ,
+        "does not yield"@en ;
+    skos:example "rien ne cède sous le doigt, même en appuyant fort (une pierre)"@fr ,
+        "nothing yields under the finger, even when pressing hard (a stone)"@en ;
+    ppp:regionOf ppp:hardnessToTouch ;
+    skos:broader ppp:hardnessToTouch .
 
 ppp:hue
     a skos:Concept ;
@@ -2614,43 +2807,6 @@ ppp:perceivedWeight
     ppp:regionOf ppp:perceptualContrast ;
     skos:broader ppp:perceptualContrast .
 
-ppp:texture
-    skos:related ppp:perceptualDensity ,
-        ppp:localIrregularity ,
-        ppp:textureDirectionality ;
-    a skos:Concept ;
-    skos:inScheme <https://w3id.org/ppp/> ;
-    skos:notation "texture" ;
-    skos:prefLabel "texture"@fr ,
-        "texture"@en ;
-    skos:altLabel "grain"@fr ,
-        "grain"@en ;
-    skos:definition "Taille perçue des reliefs d’une surface, à la vue ou au toucher, de la surface sans relief perceptible à la surface à gros reliefs."@fr ,
-        "The perceived size of the relief of a surface, by sight or by touch, from a surface with no perceptible relief to a surface with coarse relief."@en ;
-    skos:scopeNote "À la vue ou sous la main, la surface paraît-elle lisse, ou ses reliefs sont-ils fins, moyens ou gros ?"@fr ,
-        "To the eye or under the hand, does the surface look even (free of perceptible relief), or is its relief fine-grained, medium-grained or coarse-grained?"@en ,
-        "Un stratifié imprimé « bois » montre des veines, mais la main n’y sent aucun relief : c’est un motif de teinte et de clarté, et la texture est lisse. Une tôle gaufrée a de gros reliefs tous pareils : sa texture est grosse, sans irrégularité locale. Une page de journal en petits caractères compte beaucoup d’éléments, mais son papier peut être lisse : le nombre d’éléments relève de la densité, pas de la texture."@fr ,
-        "A printed “wood” laminate shows veins, but the hand feels no relief: it is a pattern of hue and lightness, and the texture is an even surface. A chequer plate has coarse relief, all alike: its texture is coarse-grained, with no local irregularity. A newspaper page in small print has many elements, but its paper can be an even surface: the number of elements belongs to density, not to texture."@en ;
-    skos:note "candidat ; non éprouvé"@fr ,
-        "candidate; untested"@en ,
-        "Correspondance non formelle : coarseness (Tamura, Mori et Yamawaki 1978), Tamura, H., Mori, S. & Yamawaki, T. (1978). Textural features corresponding to visual perception. IEEE Transactions on Systems, Man, and Cybernetics, 8(6), 460–473."@fr ,
-        "Informal correspondence: coarseness (Tamura, Mori et Yamawaki 1978), Tamura, H., Mori, S. & Yamawaki, T. (1978). Textural features corresponding to visual perception. IEEE Transactions on Systems, Man, and Cybernetics, 8(6), 460–473."@en ,
-        "Correspondance non formelle : roughness (Tamura, Mori et Yamawaki 1978), Tamura, H., Mori, S. & Yamawaki, T. (1978). Textural features corresponding to visual perception. IEEE Transactions on Systems, Man, and Cybernetics, 8(6), 460–473."@fr ,
-        "Informal correspondence: roughness (Tamura, Mori et Yamawaki 1978), Tamura, H., Mori, S. & Yamawaki, T. (1978). Textural features corresponding to visual perception. IEEE Transactions on Systems, Man, and Cybernetics, 8(6), 460–473."@en ;
-    skos:topConceptOf <https://w3id.org/ppp/> ;
-    ppp:measurementState <https://w3id.org/ppp/mesure/etat/methodes> ;
-    ppp:measurementSummary "La métrologie des surfaces mesure la rugosité au profilomètre (paramètres de profil, ISO 21920-2, qui remplace ISO 4287) ou sur une surface (paramètres surfaciques, ISO 25178-2). Ces mesures associées portent sur la hauteur et l’espacement des reliefs, un aspect proche de ce type (de façon indirecte pour Ra, hauteur relevée le long d’une ligne) ; elles se font sur un petit échantillon, à une échelle souvent bien plus fine que celle qu’on voit ou qu’on sent, et ne disent pas quelle taille de relief perçoit un observateur à une distance et sous un éclairage donnés."@fr ,
-        "Surface metrology measures roughness with a profilometer (profile parameters, ISO 21920-2, which replaces ISO 4287) or over an area (areal parameters, ISO 25178-2). These associated measurements concern the height and spacing of the relief, an appearance close to this type (indirectly for Ra, a height measured along a line); they are made on a small sample, at a scale often much finer than what is seen or felt, and do not say what size of relief an observer perceives at a given distance and under given lighting."@en ;
-    ppp:measurementCaveat "Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen."@fr ,
-        "The regions of this entry remain perceptual: they describe what an observer sees, hears, smells or feels by touch under the declared conditions. An associated measurement can inform an observation, but it does not set the boundaries of the regions and does not replace examination."@en ;
-    ppp:associatedMeasure <https://w3id.org/ppp/texture/mesure/iso_21920_2> ,
-        <https://w3id.org/ppp/texture/mesure/iso_25178_2> ;
-    ppp:hasScale <https://w3id.org/ppp/texture/echelle> ;
-    skos:narrower <https://w3id.org/ppp/texture/smooth> ,
-        <https://w3id.org/ppp/texture/fine> ,
-        <https://w3id.org/ppp/texture/medium> ,
-        <https://w3id.org/ppp/texture/coarse> .
-
 <https://w3id.org/ppp/perceptualDensity/mesure/non-retenue-1>
     a ppp:NotRetainedMeasure ;
     rdfs:label "encombrement visuel calculé sur une image (Feature Congestion, Subband Entropy)"@fr ,
@@ -4158,8 +4314,8 @@ ppp:translucency
     a skos:Collection ;
     skos:prefLabel "Toucher"@fr ,
         "Touch"@en ;
-    skos:scopeNote "Ce qu'on remarque en touchant un objet : la taille de ses reliefs et le sens qu'ils suivent, la différence de texture entre deux surfaces, les endroits où la surface s'écarte de sa régularité, la courbure des surfaces, la marche entre deux parties, et le nombre de formes simples qu'on reconnaît sous la main. Au toucher, ces qualités se jugent sur l'objet lui-même, jamais sur une image."@fr ,
-        "What you notice when you touch an object: the size of its surface relief and the direction it runs in, the difference in texture between two surfaces, the places where the surface departs from its regularity, how the surfaces curve, the step between two parts, and how many simple shapes you can make out under your hand. By touch, these qualities are judged on the object itself, never on an image."@en ,
+    skos:scopeNote "Ce qu'on remarque en touchant un objet : la taille de ses reliefs et le sens qu'ils suivent, la différence de texture entre deux surfaces, les endroits où la surface s'écarte de sa régularité, la courbure des surfaces, la marche entre deux parties, le nombre de formes simples qu'on reconnaît sous la main, ce qu'il cède sous le doigt et son poids dans la main. Au toucher, ces qualités se jugent sur l'objet lui-même, jamais sur une image."@fr ,
+        "What you notice when you touch an object: the size of its surface relief and the direction it runs in, the difference in texture between two surfaces, the places where the surface departs from its regularity, how the surfaces curve, the step between two parts, how many simple shapes you can make out under your hand, what it yields under the finger and its weight in the hand. By touch, these qualities are judged on the object itself, never on an image."@en ,
         "Famille de lecture : aide à s’orienter, pas une hiérarchie."@fr ,
         "Reading family: a guide for orientation, not a hierarchy."@en ;
     skos:member ppp:texture ,
@@ -4168,6 +4324,7 @@ ppp:translucency
         ppp:localIrregularity ,
         ppp:curvature ,
         ppp:jointLevelOffset ,
+        ppp:hardnessToTouch ,
         ppp:perceivedWeight .
 
 <https://w3id.org/ppp/famille/son>

@@ -68,22 +68,25 @@ familles:
     label_en: touch
     introduction: >-
       Ce qu'on remarque en touchant un objet : la taille de ses reliefs et le sens qu'ils
-      suivent, la différence de texture entre deux surfaces, les endroits où la surface s'écarte
-      de sa régularité, la courbure des surfaces, la marche entre deux parties, et le nombre de
-      formes simples qu'on reconnaît sous la main. Au toucher, ces qualités se jugent sur l'objet
-      lui-même, jamais sur une image.
+      suivent, la différence de texture entre deux surfaces, les endroits où la surface
+      s'écarte de sa régularité, la courbure des surfaces, la marche entre deux parties, le
+      nombre de formes simples qu'on reconnaît sous la main, ce qu'il cède sous le doigt et son
+      poids dans la main. Au toucher, ces qualités se jugent sur l'objet lui-même, jamais sur
+      une image.
     # Série 27 (2026-10-12) : famille décidée par l'éditeur du projet (option C de
     # docs/famille-toucher-proposition.md). Règle d'appartenance : tous les types dont `modalites`
     # contient `toucher`, et eux seuls ; chaque type garde aussi sa famille d'aspect. Les types propres
-    # au toucher (dureté, froid, glisse, poids perçu, retour à la forme) n'ont pas encore de fiche.
+    # au toucher (dureté, froid, glisse, poids perçu, retour à la forme) n'avaient pas encore de fiche ; depuis, la dureté au toucher et le
+    # poids perçu en ont une, publiée ; le froid, la glisse et le retour à la forme n'en ont pas encore (série 105 bis, 2026-11-11).
     # Le champ `facettes` des sept fiches n'est pas encore mis à jour (étape suivante, à relire).
     # Série 28 : introduction réécrite par la relecture explicative (elle n'annonce plus de types sans fiche).
     # 2026-10-12 : introduction validée par la relecture explicative (« à relire » levé).
     a_relire: []
-    relecture_explicative: {date: "2026-10-12", champs: [introduction]}
+    # Série 105 bis (2026-11-11) : introduction complétée (ce que l'objet cède sous le doigt, son poids dans la main), date portée au 2026-11-11, choix de relecture (2026-11-11).
+    relecture_explicative: {date: "2026-11-11", champs: [introduction]}
     types: [ppp:texture, ppp:textureContrast, ppp:textureDirectionality, ppp:localIrregularity,
             ppp:curvature, ppp:jointLevelOffset, ppp:elementaryShapeCount, ppp:hardnessToTouch,
-            ppp:perceivedWeight]   # série 54 (2026-10-16) : hardnessToTouch, première fiche propre au toucher (en préparation, à relire ; ticket 4) ; série 87 (2026-10-27) : perceivedWeight (en préparation, à relire ; ticket 5, poids pour sa taille intégré)
+            ppp:perceivedWeight]   # série 54 (2026-10-16) : hardnessToTouch, première fiche propre au toucher (en préparation, à relire ; ticket 4) ; série 87 (2026-10-27) : perceivedWeight (en préparation, à relire ; ticket 5, poids pour sa taille intégré) ; hardnessToTouch publiée en série 105 (2026-11-11)
   - cle: son
     label_fr: Son
     label_en: sound
@@ -122,7 +125,7 @@ familles:
   - cle: gout
     label_fr: Goût (en bouche)
     label_en: taste (in the mouth)
-    statut: en préparation   # série 78 (2026-10-20) : comme le Son et l'Odorat, famille montrée « en préparation » tant qu'aucune fiche n'est publiée
+    statut: en préparation   # série 78 (2026-10-20) : famille montrée « en préparation », comme le Son et l'Odorat ; ce statut ne se lève pas du seul fait qu'une fiche est publiée (série 105, 2026-11-11 : le Son a des fiches publiées et reste en préparation, la force du son, `loudness`, n'ayant pas de fiche)
     introduction: >-
       Ce qu’on perçoit en bouche, et non ce qu’on aime : les saveurs, ce qui brûle ou pique, ce qui
       assèche la bouche, la résistance de la bouchée ou l’épaisseur de la gorgée, et, pour l’ensemble de ce qu’on a en bouche,

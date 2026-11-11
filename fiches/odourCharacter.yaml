@@ -1,6 +1,7 @@
 # Fiche de type PPP — ppp:odourCharacter — format : PPP_FicheType.md (spec v2.8)
 # Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_base, note_categories, avertissement_label.
 # Série 50 (2026-10-15) : fiche en préparation, rédigée sans exemplaire ; aucun champ n’est encore relu.
+# Série 106 (2026-11-11) : épisodes proposés « à réaliser » ajoutés (episodes_a_realiser) ; fiche toujours en préparation, aucun champ relu.
 id: ppp:odourCharacter
 label_fr: caractère de l’odeur
 label_en: odour character
@@ -204,15 +205,451 @@ enonces_testables:
   epreuve: null
 cq_couvertes: CQ1, CQ2
 statut: candidat
-statut_note: 'en préparation (2026-10-15) : fiche rédigée, sans exemplaire ; tous les champs rédigés sont à relire'
+statut_note: 'en préparation (2026-10-15) : fiche rédigée, sans exemplaire ; treize épisodes proposés « à réaliser » (2026-11-11), sur des objets décrits, pas encore observés ; tous les champs rédigés sont à relire'
 statut_epistemique: non éprouvé
 introduit_en: '2.8'
 modifie_en: []
 remplace_par: []
 source_de_la_fiche: proposition de famille « Odorat » (docs/famille-odorat-proposition.md (document de travail, non publié), séries 41 à 43 ; premier lot recommandé par la relecture explicative en série 49 bis, à confirmer par l’éditeur)
   ; fiche rédigée le 2026-10-15 par l’équipe, champs à valider par la relecture explicative
+# Série 106 (2026-11-11) : épisodes proposés « à réaliser » (spec X17 ; décision de l’éditeur du projet du 2026-11-02 pour le principe ; champs, détail du lot et codage des facettes : choix de relecture) ;
+# ni épreuve faite ni accord entre observateurs ; ni observateur, ni date, ni résultat. Objets et prédictions repris de la proposition de lot 9, révisés (choix de relecture (2026-11-02)) ; ids renumérotés.
+episodes_a_realiser:
+- id: ppp-a:ep-odourCharacter-01
+  realisation: a_realiser
+  region_attendue: woody
+  objet: un crayon à papier en bois de cèdre (bois nu ou verni de couleur), fraîchement taillé, avec ses copeaux
+  objet_en: a cedar-wood graphite pencil (bare or lacquered), freshly sharpened, with its shavings
+  preparation: tailler le crayon au taille-crayon juste avant (moins de 5 min), sur le pot ; garder les copeaux au fond ; noter si le bois est nu ou verni et l’essence annoncée (« cèdre » s’il est indiqué)
+  preparation_en: sharpen the pencil with a sharpener just before (less than 5 min), over the jar; keep the shavings at the bottom; note whether the wood is bare or lacquered and the announced wood (“cedar”
+    if stated)
+  consigne: 'Approchez le nez à environ 3 cm du pot ouvert, sans le toucher. Flairez calmement, deux fois au plus, sans inspirer fort. À quoi l’odeur fait-elle penser : bois, fruits, agrumes, fleurs, herbe
+    coupée, épices, fumée ou grillé, terre ou cave, résine, cuir, ou autre chose (à décrire) ? Une seule réponse, la plus nette ; « je ne sens rien » est une réponse.'
+  consigne_en: 'Bring your nose to about 3 cm from the open jar, without touching it. Sniff calmly, twice at most, without inhaling hard. What does the odour remind you of: wood, fruit, citrus, flowers,
+    cut grass, spices, smoke or roasting, earth or cellar, resin, leather, or something else (describe it)? One answer only, the clearest; “I smell nothing” is an answer.'
+  conditions:
+    presentation: unknown
+    distance: near
+    duree: glance
+    exposition: firstSniff
+    air: closed
+    yeux: 'ouverts (pot opaque : l’objet n’est pas vu)'
+    yeux_en: 'open (opaque jar: the object is not seen)'
+    note: 'pot opaque à couvercle, ouvert juste avant, tous les pots identiques ; nez à environ 3 cm du bord du pot, sans le toucher ; deux flairages calmes d’environ 2 s ; pause de 30 s entre deux pots,
+      dans la pièce aérée, sans autre neutralisation ; distance, durée et pause : protocole déclaré pour tous les épisodes d’odorat, non sourcé ; objet à la température de la pièce (vers 20 °C, valeur notée
+      ; la facette `temperature_objet` est réservée pour l’odorat, règle 10) ; codage des facettes (`near`, `glance`, `firstSniff`, `closed`) : choix de relecture (2026-11-11) ; ordre tiré au sort ; pièce
+      aérée puis fermée 10 min avant ; pas de parfum, de crème ni de tabac sur l’observateur ou le préparateur ; aucune autre épreuve d’odeur dans les 20 min précédentes (ISO 5496, 5.2) ; le caractère ne
+      se juge que si l’odeur est sentie (base : intensité ≠ « aucune odeur »)'
+    note_en: 'opaque lidded jar, opened just before, all jars identical; nose about 3 cm from the rim of the jar, without touching it; two calm sniffs of about 2 s; 30 s pause between two jars, in the aired
+      room, with no other neutralisation; distance, duration and pause: protocol declared for all smell episodes, not sourced; object at room temperature (about 20 °C, value noted; the `temperature_objet`
+      facet is reserved for smell, rule 10); facet coding (`near`, `glance`, `firstSniff`, `closed`): review choice (2026-11-11); random order; room aired then closed 10 min before; no perfume, cream or
+      tobacco on observer or preparer; no other odour test in the previous 20 min (ISO 5496, 5.2); character is judged only if an odour is smelt (base: intensity ≠ “no odour”)'
+  doute: oui
+  motif_doute: le bois des crayons est souvent un « cèdre » au sens commercial, pas une essence vérifiée ; le vernis et la mine peuvent se sentir ; voisin de « résineux » (voisinage déclaré dans la fiche)
+  motif_doute_en: pencil wood is often “cedar” in the trade sense, not a verified species; lacquer and lead may be smelt; neighbour of “resinous” (neighbourhood declared in the entry)
+  texte_fr: 'Un crayon de cèdre fraîchement taillé : rappelle le bois (prédiction, à éprouver).'
+  texte_en: 'A freshly sharpened cedar pencil: woody (prediction, to be tested).'
+- id: ppp-a:ep-odourCharacter-02
+  realisation: a_realiser
+  region_attendue: fruity
+  rang_exemplaire: principal
+  objet: une rondelle d’environ 1 cm de banane bien mûre (peau tachetée), coupée juste avant
+  objet_en: a slice of about 1 cm of a very ripe banana (speckled peel), cut just before
+  preparation: couper la rondelle moins de 5 min avant, au couteau propre ; la poser dans le pot ; noter la maturité (peau jaune, tachetée, brune)
+  preparation_en: cut the slice less than 5 min before with a clean knife; place it in the jar; note ripeness (yellow, speckled, brown peel)
+  consigne: 'Approchez le nez à environ 3 cm du pot ouvert, sans le toucher. Flairez calmement, deux fois au plus, sans inspirer fort. À quoi l’odeur fait-elle penser : bois, fruits, agrumes, fleurs, herbe
+    coupée, épices, fumée ou grillé, terre ou cave, résine, cuir, ou autre chose (à décrire) ? Une seule réponse, la plus nette ; « je ne sens rien » est une réponse.'
+  consigne_en: 'Bring your nose to about 3 cm from the open jar, without touching it. Sniff calmly, twice at most, without inhaling hard. What does the odour remind you of: wood, fruit, citrus, flowers,
+    cut grass, spices, smoke or roasting, earth or cellar, resin, leather, or something else (describe it)? One answer only, the clearest; “I smell nothing” is an answer.'
+  conditions:
+    presentation: unknown
+    distance: near
+    duree: glance
+    exposition: firstSniff
+    air: closed
+    yeux: 'ouverts (pot opaque : l’objet n’est pas vu)'
+    yeux_en: 'open (opaque jar: the object is not seen)'
+    note: 'pot opaque à couvercle, ouvert juste avant, tous les pots identiques ; nez à environ 3 cm du bord du pot, sans le toucher ; deux flairages calmes d’environ 2 s ; pause de 30 s entre deux pots,
+      dans la pièce aérée, sans autre neutralisation ; distance, durée et pause : protocole déclaré pour tous les épisodes d’odorat, non sourcé ; objet à la température de la pièce (vers 20 °C, valeur notée
+      ; la facette `temperature_objet` est réservée pour l’odorat, règle 10) ; codage des facettes (`near`, `glance`, `firstSniff`, `closed`) : choix de relecture (2026-11-11) ; ordre tiré au sort ; pièce
+      aérée puis fermée 10 min avant ; pas de parfum, de crème ni de tabac sur l’observateur ou le préparateur ; aucune autre épreuve d’odeur dans les 20 min précédentes (ISO 5496, 5.2) ; le caractère ne
+      se juge que si l’odeur est sentie (base : intensité ≠ « aucune odeur »)'
+    note_en: 'opaque lidded jar, opened just before, all jars identical; nose about 3 cm from the rim of the jar, without touching it; two calm sniffs of about 2 s; 30 s pause between two jars, in the aired
+      room, with no other neutralisation; distance, duration and pause: protocol declared for all smell episodes, not sourced; object at room temperature (about 20 °C, value noted; the `temperature_objet`
+      facet is reserved for smell, rule 10); facet coding (`near`, `glance`, `firstSniff`, `closed`): review choice (2026-11-11); random order; room aired then closed 10 min before; no perfume, cream or
+      tobacco on observer or preparer; no other odour test in the previous 20 min (ISO 5496, 5.2); character is judged only if an odour is smelt (base: intensity ≠ “no odour”)'
+  doute: non
+  note: 'ISO 5496 (Amd 1, tableau A.2) associe un ester à « very ripe banana, strawberry » : repère de catégorie, pas une preuve pour cet objet ; variante : épisode 11'
+  note_en: 'ISO 5496 (Amd 1, table A.2) associates an ester with “very ripe banana, strawberry”: a category reference, not proof for this object; variant: episode 11'
+  texte_fr: 'Une rondelle de banane mûre : rappelle les fruits (prédiction, à éprouver).'
+  texte_en: 'A slice of ripe banana: fruity (prediction, to be tested).'
+- id: ppp-a:ep-odourCharacter-03
+  realisation: a_realiser
+  region_attendue: citrus
+  objet: un zeste de citron frais, bande d’environ 2 × 5 cm prélevée sans le blanc
+  objet_en: a fresh lemon zest, a strip of about 2 × 5 cm taken without the pith
+  preparation: prélever le zeste à l’économe moins de 5 min avant, le poser peau colorée vers le haut ; laver le citron à l’eau seule avant
+  preparation_en: take the zest with a peeler less than 5 min before, coloured side up; wash the lemon with water only beforehand
+  consigne: 'Approchez le nez à environ 3 cm du pot ouvert, sans le toucher. Flairez calmement, deux fois au plus, sans inspirer fort. À quoi l’odeur fait-elle penser : bois, fruits, agrumes, fleurs, herbe
+    coupée, épices, fumée ou grillé, terre ou cave, résine, cuir, ou autre chose (à décrire) ? Une seule réponse, la plus nette ; « je ne sens rien » est une réponse.'
+  consigne_en: 'Bring your nose to about 3 cm from the open jar, without touching it. Sniff calmly, twice at most, without inhaling hard. What does the odour remind you of: wood, fruit, citrus, flowers,
+    cut grass, spices, smoke or roasting, earth or cellar, resin, leather, or something else (describe it)? One answer only, the clearest; “I smell nothing” is an answer.'
+  conditions:
+    presentation: unknown
+    distance: near
+    duree: glance
+    exposition: firstSniff
+    air: closed
+    yeux: 'ouverts (pot opaque : l’objet n’est pas vu)'
+    yeux_en: 'open (opaque jar: the object is not seen)'
+    note: 'pot opaque à couvercle, ouvert juste avant, tous les pots identiques ; nez à environ 3 cm du bord du pot, sans le toucher ; deux flairages calmes d’environ 2 s ; pause de 30 s entre deux pots,
+      dans la pièce aérée, sans autre neutralisation ; distance, durée et pause : protocole déclaré pour tous les épisodes d’odorat, non sourcé ; objet à la température de la pièce (vers 20 °C, valeur notée
+      ; la facette `temperature_objet` est réservée pour l’odorat, règle 10) ; codage des facettes (`near`, `glance`, `firstSniff`, `closed`) : choix de relecture (2026-11-11) ; ordre tiré au sort ; pièce
+      aérée puis fermée 10 min avant ; pas de parfum, de crème ni de tabac sur l’observateur ou le préparateur ; aucune autre épreuve d’odeur dans les 20 min précédentes (ISO 5496, 5.2) ; le caractère ne
+      se juge que si l’odeur est sentie (base : intensité ≠ « aucune odeur »)'
+    note_en: 'opaque lidded jar, opened just before, all jars identical; nose about 3 cm from the rim of the jar, without touching it; two calm sniffs of about 2 s; 30 s pause between two jars, in the aired
+      room, with no other neutralisation; distance, duration and pause: protocol declared for all smell episodes, not sourced; object at room temperature (about 20 °C, value noted; the `temperature_objet`
+      facet is reserved for smell, rule 10); facet coding (`near`, `glance`, `firstSniff`, `closed`): review choice (2026-11-11); random order; room aired then closed 10 min before; no perfume, cream or
+      tobacco on observer or preparer; no other odour test in the previous 20 min (ISO 5496, 5.2); character is judged only if an odour is smelt (base: intensity ≠ “no odour”)'
+  doute: non
+  texte_fr: 'Un zeste de citron : rappelle les agrumes (prédiction, à éprouver).'
+  texte_en: 'A lemon zest: citrus (prediction, to be tested).'
+- id: ppp-a:ep-odourCharacter-04
+  realisation: a_realiser
+  region_attendue: floral
+  rang_exemplaire: principal
+  objet: une rose fraîche parfumée, la fleur seule, coupée le jour même
+  objet_en: a fresh fragrant rose, the flower only, cut the same day
+  preparation: 'vérifier avant, par le préparateur, que la rose sent (beaucoup de roses de fleuriste ne sentent presque rien) ; couper la tige à 2 cm sous la fleur ; noter la couleur et l’origine (jardin,
+    fleuriste) ; variante : épisode 12'
+  preparation_en: 'the preparer checks beforehand that the rose has a scent (many florist roses smell of almost nothing); cut the stem 2 cm below the flower; note colour and origin (garden, florist); variant:
+    episode 12'
+  consigne: 'Approchez le nez à environ 3 cm du pot ouvert, sans le toucher. Flairez calmement, deux fois au plus, sans inspirer fort. À quoi l’odeur fait-elle penser : bois, fruits, agrumes, fleurs, herbe
+    coupée, épices, fumée ou grillé, terre ou cave, résine, cuir, ou autre chose (à décrire) ? Une seule réponse, la plus nette ; « je ne sens rien » est une réponse.'
+  consigne_en: 'Bring your nose to about 3 cm from the open jar, without touching it. Sniff calmly, twice at most, without inhaling hard. What does the odour remind you of: wood, fruit, citrus, flowers,
+    cut grass, spices, smoke or roasting, earth or cellar, resin, leather, or something else (describe it)? One answer only, the clearest; “I smell nothing” is an answer.'
+  conditions:
+    presentation: unknown
+    distance: near
+    duree: glance
+    exposition: firstSniff
+    air: closed
+    yeux: 'ouverts (pot opaque : l’objet n’est pas vu)'
+    yeux_en: 'open (opaque jar: the object is not seen)'
+    note: 'pot opaque à couvercle, ouvert juste avant, tous les pots identiques ; nez à environ 3 cm du bord du pot, sans le toucher ; deux flairages calmes d’environ 2 s ; pause de 30 s entre deux pots,
+      dans la pièce aérée, sans autre neutralisation ; distance, durée et pause : protocole déclaré pour tous les épisodes d’odorat, non sourcé ; objet à la température de la pièce (vers 20 °C, valeur notée
+      ; la facette `temperature_objet` est réservée pour l’odorat, règle 10) ; codage des facettes (`near`, `glance`, `firstSniff`, `closed`) : choix de relecture (2026-11-11) ; ordre tiré au sort ; pièce
+      aérée puis fermée 10 min avant ; pas de parfum, de crème ni de tabac sur l’observateur ou le préparateur ; aucune autre épreuve d’odeur dans les 20 min précédentes (ISO 5496, 5.2) ; le caractère ne
+      se juge que si l’odeur est sentie (base : intensité ≠ « aucune odeur »)'
+    note_en: 'opaque lidded jar, opened just before, all jars identical; nose about 3 cm from the rim of the jar, without touching it; two calm sniffs of about 2 s; 30 s pause between two jars, in the aired
+      room, with no other neutralisation; distance, duration and pause: protocol declared for all smell episodes, not sourced; object at room temperature (about 20 °C, value noted; the `temperature_objet`
+      facet is reserved for smell, rule 10); facet coding (`near`, `glance`, `firstSniff`, `closed`): review choice (2026-11-11); random order; room aired then closed 10 min before; no perfume, cream or
+      tobacco on observer or preparer; no other odour test in the previous 20 min (ISO 5496, 5.2); character is judged only if an odour is smelt (base: intensity ≠ “no odour”)'
+  doute: oui
+  motif_doute: une rose sans parfum ne donne rien à juger
+  motif_doute_en: a scentless rose gives nothing to judge
+  texte_fr: 'Une rose fraîche parfumée : rappelle les fleurs (prédiction, à éprouver).'
+  texte_en: 'A fresh fragrant rose: floral (prediction, to be tested).'
+- id: ppp-a:ep-odourCharacter-05
+  realisation: a_realiser
+  region_attendue: green
+  rang_exemplaire: principal
+  objet: une poignée d’herbe de pelouse fraîchement coupée (brins de 3 à 5 cm)
+  objet_en: a handful of freshly cut lawn grass (blades of 3 to 5 cm)
+  preparation: 'couper l’herbe aux ciseaux moins de 10 min avant, hors herbe traitée ; la mettre dans le pot ; variante : épisode 13'
+  preparation_en: 'cut the grass with scissors less than 10 min before, not treated grass; put it in the jar; variant: episode 13'
+  consigne: 'Approchez le nez à environ 3 cm du pot ouvert, sans le toucher. Flairez calmement, deux fois au plus, sans inspirer fort. À quoi l’odeur fait-elle penser : bois, fruits, agrumes, fleurs, herbe
+    coupée, épices, fumée ou grillé, terre ou cave, résine, cuir, ou autre chose (à décrire) ? Une seule réponse, la plus nette ; « je ne sens rien » est une réponse.'
+  consigne_en: 'Bring your nose to about 3 cm from the open jar, without touching it. Sniff calmly, twice at most, without inhaling hard. What does the odour remind you of: wood, fruit, citrus, flowers,
+    cut grass, spices, smoke or roasting, earth or cellar, resin, leather, or something else (describe it)? One answer only, the clearest; “I smell nothing” is an answer.'
+  conditions:
+    presentation: unknown
+    distance: near
+    duree: glance
+    exposition: firstSniff
+    air: closed
+    yeux: 'ouverts (pot opaque : l’objet n’est pas vu)'
+    yeux_en: 'open (opaque jar: the object is not seen)'
+    note: 'pot opaque à couvercle, ouvert juste avant, tous les pots identiques ; nez à environ 3 cm du bord du pot, sans le toucher ; deux flairages calmes d’environ 2 s ; pause de 30 s entre deux pots,
+      dans la pièce aérée, sans autre neutralisation ; distance, durée et pause : protocole déclaré pour tous les épisodes d’odorat, non sourcé ; objet à la température de la pièce (vers 20 °C, valeur notée
+      ; la facette `temperature_objet` est réservée pour l’odorat, règle 10) ; codage des facettes (`near`, `glance`, `firstSniff`, `closed`) : choix de relecture (2026-11-11) ; ordre tiré au sort ; pièce
+      aérée puis fermée 10 min avant ; pas de parfum, de crème ni de tabac sur l’observateur ou le préparateur ; aucune autre épreuve d’odeur dans les 20 min précédentes (ISO 5496, 5.2) ; le caractère ne
+      se juge que si l’odeur est sentie (base : intensité ≠ « aucune odeur »)'
+    note_en: 'opaque lidded jar, opened just before, all jars identical; nose about 3 cm from the rim of the jar, without touching it; two calm sniffs of about 2 s; 30 s pause between two jars, in the aired
+      room, with no other neutralisation; distance, duration and pause: protocol declared for all smell episodes, not sourced; object at room temperature (about 20 °C, value noted; the `temperature_objet`
+      facet is reserved for smell, rule 10); facet coding (`near`, `glance`, `firstSniff`, `closed`): review choice (2026-11-11); random order; room aired then closed 10 min before; no perfume, cream or
+      tobacco on observer or preparer; no other odour test in the previous 20 min (ISO 5496, 5.2); character is judged only if an odour is smelt (base: intensity ≠ “no odour”)'
+  doute: non
+  note: 'ISO 5496 (Amd 1, tableau A.2) associe un alcool à « crushed grass » : repère de catégorie ; risque d’allergie aux pollens'
+  note_en: 'ISO 5496 (Amd 1, table A.2) associates an alcohol with “crushed grass”: a category reference; risk of pollen allergy'
+  texte_fr: 'De l’herbe fraîchement coupée : rappelle l’herbe, la feuille (prédiction, à éprouver).'
+  texte_en: 'Freshly cut grass: green (prediction, to be tested).'
+- id: ppp-a:ep-odourCharacter-06
+  realisation: a_realiser
+  region_attendue: spicy
+  objet: trois clous de girofle entiers, secs
+  objet_en: three whole dried cloves
+  preparation: les sortir d’un bocal fermé 30 min avant ; les poser dans le pot ; ne pas les écraser
+  preparation_en: take them out of a closed jar 30 min before; place them in the jar; do not crush them
+  consigne: 'Approchez le nez à environ 3 cm du pot ouvert, sans le toucher. Flairez calmement, deux fois au plus, sans inspirer fort. À quoi l’odeur fait-elle penser : bois, fruits, agrumes, fleurs, herbe
+    coupée, épices, fumée ou grillé, terre ou cave, résine, cuir, ou autre chose (à décrire) ? Une seule réponse, la plus nette ; « je ne sens rien » est une réponse.'
+  consigne_en: 'Bring your nose to about 3 cm from the open jar, without touching it. Sniff calmly, twice at most, without inhaling hard. What does the odour remind you of: wood, fruit, citrus, flowers,
+    cut grass, spices, smoke or roasting, earth or cellar, resin, leather, or something else (describe it)? One answer only, the clearest; “I smell nothing” is an answer.'
+  conditions:
+    presentation: unknown
+    distance: near
+    duree: glance
+    exposition: firstSniff
+    air: closed
+    yeux: 'ouverts (pot opaque : l’objet n’est pas vu)'
+    yeux_en: 'open (opaque jar: the object is not seen)'
+    note: 'pot opaque à couvercle, ouvert juste avant, tous les pots identiques ; nez à environ 3 cm du bord du pot, sans le toucher ; deux flairages calmes d’environ 2 s ; pause de 30 s entre deux pots,
+      dans la pièce aérée, sans autre neutralisation ; distance, durée et pause : protocole déclaré pour tous les épisodes d’odorat, non sourcé ; objet à la température de la pièce (vers 20 °C, valeur notée
+      ; la facette `temperature_objet` est réservée pour l’odorat, règle 10) ; codage des facettes (`near`, `glance`, `firstSniff`, `closed`) : choix de relecture (2026-11-11) ; ordre tiré au sort ; pièce
+      aérée puis fermée 10 min avant ; pas de parfum, de crème ni de tabac sur l’observateur ou le préparateur ; aucune autre épreuve d’odeur dans les 20 min précédentes (ISO 5496, 5.2) ; le caractère ne
+      se juge que si l’odeur est sentie (base : intensité ≠ « aucune odeur »)'
+    note_en: 'opaque lidded jar, opened just before, all jars identical; nose about 3 cm from the rim of the jar, without touching it; two calm sniffs of about 2 s; 30 s pause between two jars, in the aired
+      room, with no other neutralisation; distance, duration and pause: protocol declared for all smell episodes, not sourced; object at room temperature (about 20 °C, value noted; the `temperature_objet`
+      facet is reserved for smell, rule 10); facet coding (`near`, `glance`, `firstSniff`, `closed`): review choice (2026-11-11); random order; room aired then closed 10 min before; no perfume, cream or
+      tobacco on observer or preparer; no other odour test in the previous 20 min (ISO 5496, 5.2); character is judged only if an odour is smelt (base: intensity ≠ “no odour”)'
+  doute: non
+  texte_fr: 'Des clous de girofle : rappellent les épices (prédiction, à éprouver).'
+  texte_en: 'Cloves: spicy (prediction, to be tested).'
+- id: ppp-a:ep-odourCharacter-07
+  realisation: a_realiser
+  region_attendue: smokyRoasted
+  objet: une cuillère à soupe de grains de café torréfiés, entiers
+  objet_en: a tablespoon of whole roasted coffee beans
+  preparation: les sortir d’un paquet ouvert depuis moins d’une semaine ; noter la torréfaction en mots (claire, moyenne, foncée) sans marque
+  preparation_en: take them from a pack opened less than a week ago; note the roast in words (light, medium, dark), no brand
+  consigne: 'Approchez le nez à environ 3 cm du pot ouvert, sans le toucher. Flairez calmement, deux fois au plus, sans inspirer fort. À quoi l’odeur fait-elle penser : bois, fruits, agrumes, fleurs, herbe
+    coupée, épices, fumée ou grillé, terre ou cave, résine, cuir, ou autre chose (à décrire) ? Une seule réponse, la plus nette ; « je ne sens rien » est une réponse.'
+  consigne_en: 'Bring your nose to about 3 cm from the open jar, without touching it. Sniff calmly, twice at most, without inhaling hard. What does the odour remind you of: wood, fruit, citrus, flowers,
+    cut grass, spices, smoke or roasting, earth or cellar, resin, leather, or something else (describe it)? One answer only, the clearest; “I smell nothing” is an answer.'
+  conditions:
+    presentation: unknown
+    distance: near
+    duree: glance
+    exposition: firstSniff
+    air: closed
+    yeux: 'ouverts (pot opaque : l’objet n’est pas vu)'
+    yeux_en: 'open (opaque jar: the object is not seen)'
+    note: 'pot opaque à couvercle, ouvert juste avant, tous les pots identiques ; nez à environ 3 cm du bord du pot, sans le toucher ; deux flairages calmes d’environ 2 s ; pause de 30 s entre deux pots,
+      dans la pièce aérée, sans autre neutralisation ; distance, durée et pause : protocole déclaré pour tous les épisodes d’odorat, non sourcé ; objet à la température de la pièce (vers 20 °C, valeur notée
+      ; la facette `temperature_objet` est réservée pour l’odorat, règle 10) ; codage des facettes (`near`, `glance`, `firstSniff`, `closed`) : choix de relecture (2026-11-11) ; ordre tiré au sort ; pièce
+      aérée puis fermée 10 min avant ; pas de parfum, de crème ni de tabac sur l’observateur ou le préparateur ; aucune autre épreuve d’odeur dans les 20 min précédentes (ISO 5496, 5.2) ; le caractère ne
+      se juge que si l’odeur est sentie (base : intensité ≠ « aucune odeur »)'
+    note_en: 'opaque lidded jar, opened just before, all jars identical; nose about 3 cm from the rim of the jar, without touching it; two calm sniffs of about 2 s; 30 s pause between two jars, in the aired
+      room, with no other neutralisation; distance, duration and pause: protocol declared for all smell episodes, not sourced; object at room temperature (about 20 °C, value noted; the `temperature_objet`
+      facet is reserved for smell, rule 10); facet coding (`near`, `glance`, `firstSniff`, `closed`): review choice (2026-11-11); random order; room aired then closed 10 min before; no perfume, cream or
+      tobacco on observer or preparer; no other odour test in the previous 20 min (ISO 5496, 5.2); character is judged only if an odour is smelt (base: intensity ≠ “no odour”)'
+  doute: oui
+  motif_doute: 'l’observateur peut répondre « café », qui n’est pas une région : on le note en « autre » avec ce mot, et la consigne rappelle « fumée ou grillé »'
+  motif_doute_en: 'the observer may answer “coffee”, which is not a region: noted as “other” with that word; the instruction mentions “smoke or roasting”'
+  texte_fr: 'Des grains de café torréfiés : rappellent le grillé (prédiction, à éprouver).'
+  texte_en: 'Roasted coffee beans: smoky, roasted (prediction, to be tested).'
+- id: ppp-a:ep-odourCharacter-08
+  realisation: a_realiser
+  region_attendue: earthy
+  objet: deux cuillères à soupe de terre de jardin, humidifiée
+  objet_en: two tablespoons of garden soil, moistened
+  preparation: prendre la terre à 5 cm de profondeur dans un jardin non traité, avec des gants ; ôter cailloux et débris ; humidifier avec une cuillère d’eau du robinet 10 min avant ; se laver les mains
+  preparation_en: take the soil at 5 cm depth in an untreated garden, wearing gloves; remove stones and debris; moisten with a spoonful of tap water 10 min before; wash hands
+  consigne: 'Approchez le nez à environ 3 cm du pot ouvert, sans le toucher. Flairez calmement, deux fois au plus, sans inspirer fort. À quoi l’odeur fait-elle penser : bois, fruits, agrumes, fleurs, herbe
+    coupée, épices, fumée ou grillé, terre ou cave, résine, cuir, ou autre chose (à décrire) ? Une seule réponse, la plus nette ; « je ne sens rien » est une réponse.'
+  consigne_en: 'Bring your nose to about 3 cm from the open jar, without touching it. Sniff calmly, twice at most, without inhaling hard. What does the odour remind you of: wood, fruit, citrus, flowers,
+    cut grass, spices, smoke or roasting, earth or cellar, resin, leather, or something else (describe it)? One answer only, the clearest; “I smell nothing” is an answer.'
+  conditions:
+    presentation: unknown
+    distance: near
+    duree: glance
+    exposition: firstSniff
+    air: closed
+    yeux: 'ouverts (pot opaque : l’objet n’est pas vu)'
+    yeux_en: 'open (opaque jar: the object is not seen)'
+    note: 'pot opaque à couvercle, ouvert juste avant, tous les pots identiques ; nez à environ 3 cm du bord du pot, sans le toucher ; deux flairages calmes d’environ 2 s ; pause de 30 s entre deux pots,
+      dans la pièce aérée, sans autre neutralisation ; distance, durée et pause : protocole déclaré pour tous les épisodes d’odorat, non sourcé ; objet à la température de la pièce (vers 20 °C, valeur notée
+      ; la facette `temperature_objet` est réservée pour l’odorat, règle 10) ; codage des facettes (`near`, `glance`, `firstSniff`, `closed`) : choix de relecture (2026-11-11) ; ordre tiré au sort ; pièce
+      aérée puis fermée 10 min avant ; pas de parfum, de crème ni de tabac sur l’observateur ou le préparateur ; aucune autre épreuve d’odeur dans les 20 min précédentes (ISO 5496, 5.2) ; le caractère ne
+      se juge que si l’odeur est sentie (base : intensité ≠ « aucune odeur »)'
+    note_en: 'opaque lidded jar, opened just before, all jars identical; nose about 3 cm from the rim of the jar, without touching it; two calm sniffs of about 2 s; 30 s pause between two jars, in the aired
+      room, with no other neutralisation; distance, duration and pause: protocol declared for all smell episodes, not sourced; object at room temperature (about 20 °C, value noted; the `temperature_objet`
+      facet is reserved for smell, rule 10); facet coding (`near`, `glance`, `firstSniff`, `closed`): review choice (2026-11-11); random order; room aired then closed 10 min before; no perfume, cream or
+      tobacco on observer or preparer; no other odour test in the previous 20 min (ISO 5496, 5.2); character is judged only if an odour is smelt (base: intensity ≠ “no odour”)'
+  doute: non
+  note: la terre varie selon le sol (noter son aspect)
+  note_en: soil varies with the ground (note its appearance)
+  texte_fr: 'De la terre de jardin humide : rappelle la terre mouillée (prédiction, à éprouver).'
+  texte_en: 'Moist garden soil: earthy (prediction, to be tested).'
+- id: ppp-a:ep-odourCharacter-09
+  realisation: a_realiser
+  region_attendue: resinous
+  objet: une dizaine d’aiguilles de pin fraîches, froissées entre les doigts
+  objet_en: about ten fresh pine needles, crushed between the fingers
+  preparation: cueillir les aiguilles sur une branche vivante le jour même ; les froisser (gants fins si on veut) juste avant de les mettre dans le pot ; noter l’arbre si connu
+  preparation_en: pick the needles from a living branch the same day; crush them (thin gloves if wished) just before putting them in the jar; note the tree if known
+  consigne: 'Approchez le nez à environ 3 cm du pot ouvert, sans le toucher. Flairez calmement, deux fois au plus, sans inspirer fort. À quoi l’odeur fait-elle penser : bois, fruits, agrumes, fleurs, herbe
+    coupée, épices, fumée ou grillé, terre ou cave, résine, cuir, ou autre chose (à décrire) ? Une seule réponse, la plus nette ; « je ne sens rien » est une réponse.'
+  consigne_en: 'Bring your nose to about 3 cm from the open jar, without touching it. Sniff calmly, twice at most, without inhaling hard. What does the odour remind you of: wood, fruit, citrus, flowers,
+    cut grass, spices, smoke or roasting, earth or cellar, resin, leather, or something else (describe it)? One answer only, the clearest; “I smell nothing” is an answer.'
+  conditions:
+    presentation: unknown
+    distance: near
+    duree: glance
+    exposition: firstSniff
+    air: closed
+    yeux: 'ouverts (pot opaque : l’objet n’est pas vu)'
+    yeux_en: 'open (opaque jar: the object is not seen)'
+    note: 'pot opaque à couvercle, ouvert juste avant, tous les pots identiques ; nez à environ 3 cm du bord du pot, sans le toucher ; deux flairages calmes d’environ 2 s ; pause de 30 s entre deux pots,
+      dans la pièce aérée, sans autre neutralisation ; distance, durée et pause : protocole déclaré pour tous les épisodes d’odorat, non sourcé ; objet à la température de la pièce (vers 20 °C, valeur notée
+      ; la facette `temperature_objet` est réservée pour l’odorat, règle 10) ; codage des facettes (`near`, `glance`, `firstSniff`, `closed`) : choix de relecture (2026-11-11) ; ordre tiré au sort ; pièce
+      aérée puis fermée 10 min avant ; pas de parfum, de crème ni de tabac sur l’observateur ou le préparateur ; aucune autre épreuve d’odeur dans les 20 min précédentes (ISO 5496, 5.2) ; le caractère ne
+      se juge que si l’odeur est sentie (base : intensité ≠ « aucune odeur »)'
+    note_en: 'opaque lidded jar, opened just before, all jars identical; nose about 3 cm from the rim of the jar, without touching it; two calm sniffs of about 2 s; 30 s pause between two jars, in the aired
+      room, with no other neutralisation; distance, duration and pause: protocol declared for all smell episodes, not sourced; object at room temperature (about 20 °C, value noted; the `temperature_objet`
+      facet is reserved for smell, rule 10); facet coding (`near`, `glance`, `firstSniff`, `closed`): review choice (2026-11-11); random order; room aired then closed 10 min before; no perfume, cream or
+      tobacco on observer or preparer; no other odour test in the previous 20 min (ISO 5496, 5.2); character is judged only if an odour is smelt (base: intensity ≠ “no odour”)'
+  doute: oui
+  motif_doute: voisin de « boisé » (voisinage déclaré) ; des aiguilles froissées peuvent aussi sembler « vert »
+  motif_doute_en: neighbour of “woody” (declared neighbourhood); crushed needles may also seem “green”
+  texte_fr: 'Des aiguilles de pin froissées : rappellent la résine (prédiction, à éprouver).'
+  texte_en: 'Crushed pine needles: resinous (prediction, to be tested).'
+- id: ppp-a:ep-odourCharacter-10
+  realisation: a_realiser
+  region_attendue: leathery
+  objet: une chute de cuir neuf, non teint si possible (tannage végétal, couleur naturelle), d’environ 5 × 5 cm
+  objet_en: an offcut of new leather, undyed if possible (vegetable-tanned, natural colour), about 5 × 5 cm
+  preparation: noter le tannage et la finition s’ils sont connus ; laisser la chute 1 h dans le pot fermé avant l’épreuve
+  preparation_en: note the tanning and finish if known; leave the offcut 1 h in the closed jar before the test
+  consigne: 'Approchez le nez à environ 3 cm du pot ouvert, sans le toucher. Flairez calmement, deux fois au plus, sans inspirer fort. À quoi l’odeur fait-elle penser : bois, fruits, agrumes, fleurs, herbe
+    coupée, épices, fumée ou grillé, terre ou cave, résine, cuir, ou autre chose (à décrire) ? Une seule réponse, la plus nette ; « je ne sens rien » est une réponse.'
+  consigne_en: 'Bring your nose to about 3 cm from the open jar, without touching it. Sniff calmly, twice at most, without inhaling hard. What does the odour remind you of: wood, fruit, citrus, flowers,
+    cut grass, spices, smoke or roasting, earth or cellar, resin, leather, or something else (describe it)? One answer only, the clearest; “I smell nothing” is an answer.'
+  conditions:
+    presentation: unknown
+    distance: near
+    duree: glance
+    exposition: firstSniff
+    air: closed
+    yeux: 'ouverts (pot opaque : l’objet n’est pas vu)'
+    yeux_en: 'open (opaque jar: the object is not seen)'
+    note: 'pot opaque à couvercle, ouvert juste avant, tous les pots identiques ; nez à environ 3 cm du bord du pot, sans le toucher ; deux flairages calmes d’environ 2 s ; pause de 30 s entre deux pots,
+      dans la pièce aérée, sans autre neutralisation ; distance, durée et pause : protocole déclaré pour tous les épisodes d’odorat, non sourcé ; objet à la température de la pièce (vers 20 °C, valeur notée
+      ; la facette `temperature_objet` est réservée pour l’odorat, règle 10) ; codage des facettes (`near`, `glance`, `firstSniff`, `closed`) : choix de relecture (2026-11-11) ; ordre tiré au sort ; pièce
+      aérée puis fermée 10 min avant ; pas de parfum, de crème ni de tabac sur l’observateur ou le préparateur ; aucune autre épreuve d’odeur dans les 20 min précédentes (ISO 5496, 5.2) ; le caractère ne
+      se juge que si l’odeur est sentie (base : intensité ≠ « aucune odeur »)'
+    note_en: 'opaque lidded jar, opened just before, all jars identical; nose about 3 cm from the rim of the jar, without touching it; two calm sniffs of about 2 s; 30 s pause between two jars, in the aired
+      room, with no other neutralisation; distance, duration and pause: protocol declared for all smell episodes, not sourced; object at room temperature (about 20 °C, value noted; the `temperature_objet`
+      facet is reserved for smell, rule 10); facet coding (`near`, `glance`, `firstSniff`, `closed`): review choice (2026-11-11); random order; room aired then closed 10 min before; no perfume, cream or
+      tobacco on observer or preparer; no other odour test in the previous 20 min (ISO 5496, 5.2); character is judged only if an odour is smelt (base: intensity ≠ “no odour”)'
+  doute: oui
+  motif_doute: un cuir teint ou fini peut sentir le produit de finition ; l’odeur varie avec le tannage ; même objet que la variante « forte » de l’intensité de l’odeur (ppp-a:ep-odourIntensity-05)
+  motif_doute_en: dyed or finished leather may smell of the finishing product; the odour varies with tanning; same object as the “strong” odour-intensity variant (ppp-a:ep-odourIntensity-05)
+  texte_fr: 'Une chute de cuir neuf : rappelle le cuir (prédiction, à éprouver).'
+  texte_en: 'A piece of new leather: leathery (prediction, to be tested).'
+- id: ppp-a:ep-odourCharacter-11
+  realisation: a_realiser
+  region_attendue: fruity
+  rang_exemplaire: second
+  objet: une fraise mûre, coupée en deux juste avant
+  objet_en: a ripe strawberry, cut in half just before
+  preparation: couper la fraise moins de 5 min avant, au couteau propre ; noter sa maturité
+  preparation_en: cut the strawberry less than 5 min before with a clean knife; note ripeness
+  consigne: 'Approchez le nez à environ 3 cm du pot ouvert, sans le toucher. Flairez calmement, deux fois au plus, sans inspirer fort. À quoi l’odeur fait-elle penser : bois, fruits, agrumes, fleurs, herbe
+    coupée, épices, fumée ou grillé, terre ou cave, résine, cuir, ou autre chose (à décrire) ? Une seule réponse, la plus nette ; « je ne sens rien » est une réponse.'
+  consigne_en: 'Bring your nose to about 3 cm from the open jar, without touching it. Sniff calmly, twice at most, without inhaling hard. What does the odour remind you of: wood, fruit, citrus, flowers,
+    cut grass, spices, smoke or roasting, earth or cellar, resin, leather, or something else (describe it)? One answer only, the clearest; “I smell nothing” is an answer.'
+  conditions:
+    presentation: unknown
+    distance: near
+    duree: glance
+    exposition: firstSniff
+    air: closed
+    yeux: 'ouverts (pot opaque : l’objet n’est pas vu)'
+    yeux_en: 'open (opaque jar: the object is not seen)'
+    note: 'pot opaque à couvercle, ouvert juste avant, tous les pots identiques ; nez à environ 3 cm du bord du pot, sans le toucher ; deux flairages calmes d’environ 2 s ; pause de 30 s entre deux pots,
+      dans la pièce aérée, sans autre neutralisation ; distance, durée et pause : protocole déclaré pour tous les épisodes d’odorat, non sourcé ; objet à la température de la pièce (vers 20 °C, valeur notée
+      ; la facette `temperature_objet` est réservée pour l’odorat, règle 10) ; codage des facettes (`near`, `glance`, `firstSniff`, `closed`) : choix de relecture (2026-11-11) ; variante facultative, passée
+      à part ; ordre tiré au sort ; au moins 20 min après les épisodes principaux ; aucune autre épreuve d’odeur dans les 20 min précédentes (ISO 5496, 5.2) ; le caractère ne se juge que si l’odeur est
+      sentie'
+    note_en: 'opaque lidded jar, opened just before, all jars identical; nose about 3 cm from the rim of the jar, without touching it; two calm sniffs of about 2 s; 30 s pause between two jars, in the aired
+      room, with no other neutralisation; distance, duration and pause: protocol declared for all smell episodes, not sourced; object at room temperature (about 20 °C, value noted; the `temperature_objet`
+      facet is reserved for smell, rule 10); facet coding (`near`, `glance`, `firstSniff`, `closed`): review choice (2026-11-11); optional variant, run separately; random order; at least 20 min after the
+      main episodes; no other odour test in the previous 20 min (ISO 5496, 5.2); character is judged only if an odour is smelt'
+  doute: non
+  texte_fr: 'Une fraise mûre coupée : rappelle les fruits (prédiction, à éprouver).'
+  texte_en: 'A cut ripe strawberry: fruity (prediction, to be tested).'
+- id: ppp-a:ep-odourCharacter-12
+  realisation: a_realiser
+  region_attendue: floral
+  rang_exemplaire: second
+  objet: une cuillère à café de fleurs de lavande séchées
+  objet_en: a teaspoon of dried lavender flowers
+  preparation: sortir les fleurs d’un bocal fermé 30 min avant ; ne pas les écraser
+  preparation_en: take the flowers out of a closed jar 30 min before; do not crush them
+  consigne: 'Approchez le nez à environ 3 cm du pot ouvert, sans le toucher. Flairez calmement, deux fois au plus, sans inspirer fort. À quoi l’odeur fait-elle penser : bois, fruits, agrumes, fleurs, herbe
+    coupée, épices, fumée ou grillé, terre ou cave, résine, cuir, ou autre chose (à décrire) ? Une seule réponse, la plus nette ; « je ne sens rien » est une réponse.'
+  consigne_en: 'Bring your nose to about 3 cm from the open jar, without touching it. Sniff calmly, twice at most, without inhaling hard. What does the odour remind you of: wood, fruit, citrus, flowers,
+    cut grass, spices, smoke or roasting, earth or cellar, resin, leather, or something else (describe it)? One answer only, the clearest; “I smell nothing” is an answer.'
+  conditions:
+    presentation: unknown
+    distance: near
+    duree: glance
+    exposition: firstSniff
+    air: closed
+    yeux: 'ouverts (pot opaque : l’objet n’est pas vu)'
+    yeux_en: 'open (opaque jar: the object is not seen)'
+    note: 'pot opaque à couvercle, ouvert juste avant, tous les pots identiques ; nez à environ 3 cm du bord du pot, sans le toucher ; deux flairages calmes d’environ 2 s ; pause de 30 s entre deux pots,
+      dans la pièce aérée, sans autre neutralisation ; distance, durée et pause : protocole déclaré pour tous les épisodes d’odorat, non sourcé ; objet à la température de la pièce (vers 20 °C, valeur notée
+      ; la facette `temperature_objet` est réservée pour l’odorat, règle 10) ; codage des facettes (`near`, `glance`, `firstSniff`, `closed`) : choix de relecture (2026-11-11) ; variante facultative, passée
+      à part ; ordre tiré au sort ; au moins 20 min après les épisodes principaux ; aucune autre épreuve d’odeur dans les 20 min précédentes (ISO 5496, 5.2) ; le caractère ne se juge que si l’odeur est
+      sentie'
+    note_en: 'opaque lidded jar, opened just before, all jars identical; nose about 3 cm from the rim of the jar, without touching it; two calm sniffs of about 2 s; 30 s pause between two jars, in the aired
+      room, with no other neutralisation; distance, duration and pause: protocol declared for all smell episodes, not sourced; object at room temperature (about 20 °C, value noted; the `temperature_objet`
+      facet is reserved for smell, rule 10); facet coding (`near`, `glance`, `firstSniff`, `closed`): review choice (2026-11-11); optional variant, run separately; random order; at least 20 min after the
+      main episodes; no other odour test in the previous 20 min (ISO 5496, 5.2); character is judged only if an odour is smelt'
+  doute: oui
+  motif_doute: la lavande peut être dite « autre » (herbe aromatique) plutôt que « fleurs »
+  motif_doute_en: lavender may be called “other” (aromatic herb) rather than “flowers”
+  texte_fr: 'Des fleurs de lavande séchées : rappellent les fleurs (prédiction, à éprouver).'
+  texte_en: 'Dried lavender flowers: floral (prediction, to be tested).'
+- id: ppp-a:ep-odourCharacter-13
+  realisation: a_realiser
+  region_attendue: green
+  rang_exemplaire: second
+  objet: une feuille de tomate froissée
+  objet_en: a crushed tomato leaf
+  preparation: cueillir la feuille le jour même ; le préparateur la froisse entre ses doigts juste avant, puis se lave les mains ; ne pas la goûter
+  preparation_en: pick the leaf the same day; the preparer crushes it between the fingers just before, then washes hands; do not taste it
+  consigne: 'Approchez le nez à environ 3 cm du pot ouvert, sans le toucher. Flairez calmement, deux fois au plus, sans inspirer fort. À quoi l’odeur fait-elle penser : bois, fruits, agrumes, fleurs, herbe
+    coupée, épices, fumée ou grillé, terre ou cave, résine, cuir, ou autre chose (à décrire) ? Une seule réponse, la plus nette ; « je ne sens rien » est une réponse.'
+  consigne_en: 'Bring your nose to about 3 cm from the open jar, without touching it. Sniff calmly, twice at most, without inhaling hard. What does the odour remind you of: wood, fruit, citrus, flowers,
+    cut grass, spices, smoke or roasting, earth or cellar, resin, leather, or something else (describe it)? One answer only, the clearest; “I smell nothing” is an answer.'
+  conditions:
+    presentation: unknown
+    distance: near
+    duree: glance
+    exposition: firstSniff
+    air: closed
+    yeux: 'ouverts (pot opaque : l’objet n’est pas vu)'
+    yeux_en: 'open (opaque jar: the object is not seen)'
+    note: 'pot opaque à couvercle, ouvert juste avant, tous les pots identiques ; nez à environ 3 cm du bord du pot, sans le toucher ; deux flairages calmes d’environ 2 s ; pause de 30 s entre deux pots,
+      dans la pièce aérée, sans autre neutralisation ; distance, durée et pause : protocole déclaré pour tous les épisodes d’odorat, non sourcé ; objet à la température de la pièce (vers 20 °C, valeur notée
+      ; la facette `temperature_objet` est réservée pour l’odorat, règle 10) ; codage des facettes (`near`, `glance`, `firstSniff`, `closed`) : choix de relecture (2026-11-11) ; variante facultative, passée
+      à part ; ordre tiré au sort ; au moins 20 min après les épisodes principaux ; aucune autre épreuve d’odeur dans les 20 min précédentes (ISO 5496, 5.2) ; le caractère ne se juge que si l’odeur est
+      sentie'
+    note_en: 'opaque lidded jar, opened just before, all jars identical; nose about 3 cm from the rim of the jar, without touching it; two calm sniffs of about 2 s; 30 s pause between two jars, in the aired
+      room, with no other neutralisation; distance, duration and pause: protocol declared for all smell episodes, not sourced; object at room temperature (about 20 °C, value noted; the `temperature_objet`
+      facet is reserved for smell, rule 10); facet coding (`near`, `glance`, `firstSniff`, `closed`): review choice (2026-11-11); optional variant, run separately; random order; at least 20 min after the
+      main episodes; no other odour test in the previous 20 min (ISO 5496, 5.2); character is judged only if an odour is smelt'
+  doute: non
+  texte_fr: 'Une feuille de tomate froissée : rappelle l’herbe, la feuille (prédiction, à éprouver).'
+  texte_en: 'A crushed tomato leaf: green (prediction, to be tested).'
 manques:
-- 'exemplaires (à renseigner : objets publics vérifiés, un épisode par objet, conditions déclarées ; objet décrit, références olfactives comme repères, X17)'
+- 'exemplaires : treize épisodes proposés « à réaliser » (episodes_a_realiser), sur des objets décrits (X17), à réaliser par plusieurs observateurs, chacun seul ; à la réalisation, l’assertion entre dans
+  fiches/exemplaires.yaml ; aucun épisode pour « autre »'
+- 'épisodes sans doute de leur auteur : « fruits » (banane, fraise), « agrumes », « herbe, feuille » (herbe coupée, feuille de tomate), « épices » et « terre » ; « bois », « fleurs », « grillé, fumé »,
+  « résine » et « cuir » n’ont que des épisodes marqués `doute: oui`'
 - 'repères de région : références olfactives à choisir (étalons, coffret), comme repères, pas comme exemplaires'
 bloque_par: []
 a_relire:
@@ -239,6 +676,7 @@ a_relire:
 - enonces_testables
 - statut_note
 - mesure
+- episodes_a_realiser
 relecture_explicative:
   date: null
   champs:

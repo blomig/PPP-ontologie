@@ -1,6 +1,7 @@
 # Fiche de type PPP — ppp:odourIntensity — format : PPP_FicheType.md (spec v2.8)
 # Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_base, note_categories, avertissement_label.
 # Série 50 (2026-10-15) : fiche en préparation, rédigée sans exemplaire ; aucun champ n’est encore relu.
+# Série 106 (2026-11-11) : épisodes proposés « à réaliser » ajoutés (episodes_a_realiser) ; fiche toujours en préparation, aucun champ relu.
 id: ppp:odourIntensity
 label_fr: intensité de l’odeur
 label_en: odour intensity
@@ -180,15 +181,194 @@ enonces_testables:
   epreuve: null
 cq_couvertes: CQ1, CQ2
 statut: candidat
-statut_note: 'en préparation (2026-10-15) : fiche rédigée, sans exemplaire ; tous les champs rédigés sont à relire'
+statut_note: 'en préparation (2026-10-15) : fiche rédigée, sans exemplaire ; cinq épisodes proposés « à réaliser » (2026-11-11), sur des objets décrits, pas encore observés ; tous les champs rédigés sont à relire'
 statut_epistemique: non éprouvé
 introduit_en: '2.8'
 modifie_en: []
 remplace_par: []
 source_de_la_fiche: proposition de famille « Odorat » (docs/famille-odorat-proposition.md (document de travail, non publié), séries 41 à 43 ; premier lot recommandé par la relecture explicative en série 49 bis, à confirmer par l’éditeur)
   ; fiche rédigée le 2026-10-15 par l’équipe, champs à valider par la relecture explicative
+# Série 106 (2026-11-11) : épisodes proposés « à réaliser » (spec X17 ; décision de l’éditeur du projet du 2026-11-02 pour le principe ; champs, détail du lot et codage des facettes : choix de relecture) ;
+# ni épreuve faite ni accord entre observateurs ; ni observateur, ni date, ni résultat. Objets et prédictions repris de la proposition de lot 9, révisés (choix de relecture (2026-11-02)) ; ids renumérotés.
+episodes_a_realiser:
+- id: ppp-a:ep-odourIntensity-01
+  realisation: a_realiser
+  region_attendue: noOdour
+  objet: une coupelle en verre clair, lisse, sans décor, d’environ 10 cm, lavée à l’eau chaude sans produit parfumé, rincée et séchée à l’air
+  objet_en: a small clear glass saucer, plain, about 10 cm, washed in hot water without scented product, rinsed and air-dried
+  preparation: laver la coupelle et le pot comme dit, sans liquide vaisselle parfumé ; la poser au fond du pot ; préparer aussi un pot témoin vide lavé de même ; noter le produit de lavage (ou « eau seule
+    »)
+  preparation_en: wash the saucer and the jar as stated, without scented washing-up liquid; place the saucer at the bottom of the jar; also prepare an empty control jar washed the same way; note the washing
+    product (or “water only”)
+  consigne: Approchez le nez à environ 3 cm du pot ouvert, sans le toucher. Flairez calmement, deux fois au plus, sans inspirer fort. Sentez-vous quelque chose ? Rien, à peine (il faut chercher), nettement
+    (sans chercher), ou fortement (l’odeur s’impose) ? Ne jugez pas si elle est agréable.
+  consigne_en: Bring your nose to about 3 cm from the open jar, without touching it. Sniff calmly, twice at most, without inhaling hard. Do you smell anything? Nothing, barely (you have to search for it),
+    distinctly (without searching), or strongly (the odour imposes itself)? Do not judge whether it is pleasant.
+  conditions:
+    presentation: unknown
+    distance: near
+    duree: glance
+    exposition: firstSniff
+    air: closed
+    yeux: 'ouverts (pot opaque : l’objet n’est pas vu)'
+    yeux_en: 'open (opaque jar: the object is not seen)'
+    note: 'pot opaque à couvercle, ouvert juste avant, tous les pots identiques ; nez à environ 3 cm du bord du pot, sans le toucher ; deux flairages calmes d’environ 2 s ; pause de 30 s entre deux pots,
+      dans la pièce aérée, sans autre neutralisation ; distance, durée et pause : protocole déclaré pour tous les épisodes d’odorat, non sourcé ; objet à la température de la pièce (vers 20 °C, valeur notée
+      ; la facette `temperature_objet` est réservée pour l’odorat, règle 10) ; codage des facettes (`near`, `glance`, `firstSniff`, `closed`) : choix de relecture (2026-11-11) ; ordre tiré au sort ; pièce
+      aérée puis fermée 10 min avant ; pas de parfum, de crème ni de tabac sur l’observateur ou le préparateur ; aucune autre épreuve d’odeur dans les 20 min précédentes (ISO 5496, 5.2)'
+    note_en: 'opaque lidded jar, opened just before, all jars identical; nose about 3 cm from the rim of the jar, without touching it; two calm sniffs of about 2 s; 30 s pause between two jars, in the aired
+      room, with no other neutralisation; distance, duration and pause: protocol declared for all smell episodes, not sourced; object at room temperature (about 20 °C, value noted; the `temperature_objet`
+      facet is reserved for smell, rule 10); facet coding (`near`, `glance`, `firstSniff`, `closed`): review choice (2026-11-11); random order; room aired then closed 10 min before; no perfume, cream or
+      tobacco on observer or preparer; no other odour test in the previous 20 min (ISO 5496, 5.2)'
+  doute: oui
+  motif_doute: 'le pot lui-même ou un reste de produit de lavage peut sentir faiblement : le pot témoin vide le contrôle'
+  motif_doute_en: 'the jar itself or a residue of washing product may smell faintly: the empty control jar checks this'
+  note: 'la coupelle dans un pot opaque remplace « une assiette en verre propre » de la fiche (choix de relecture (2026-11-02)) ; tous les pots sont identiques : le cran « aucune odeur » est donc celui
+    du pot lui-même, ce qui est déclaré'
+  note_en: the saucer in an opaque jar replaces the entry’s “a clean glass plate” (review choice (2026-11-02)); all jars are identical, so the “no odour” level is that of the jar itself, as declared
+  texte_fr: 'Une coupelle en verre propre : aucune odeur (prédiction, à éprouver).'
+  texte_en: 'A clean glass saucer: no odour (prediction, to be tested).'
+- id: ppp-a:ep-odourIntensity-02
+  realisation: a_realiser
+  region_attendue: faint
+  objet: une demi-feuille de papier blanc ordinaire pour imprimante (A4, environ 80 g/m², non imprimée), pliée en quatre
+  objet_en: half a sheet of plain white printer paper (A4, about 80 g/m², unprinted), folded in four
+  preparation: prendre la feuille au milieu d’une ramette ouverte depuis plus d’une semaine, ni neuve sortie d’emballage ni stockée près d’une odeur ; la couper, la plier, la mettre dans le pot 30 min avant
+    ; noter l’âge et le lieu de rangement de la ramette
+  preparation_en: take the sheet from the middle of a ream opened more than a week ago, neither fresh from its wrapping nor stored near an odour; cut it, fold it, put it in the jar 30 min before; note the
+    age and storage place of the ream
+  consigne: Approchez le nez à environ 3 cm du pot ouvert, sans le toucher. Flairez calmement, deux fois au plus, sans inspirer fort. Sentez-vous quelque chose ? Rien, à peine (il faut chercher), nettement
+    (sans chercher), ou fortement (l’odeur s’impose) ? Ne jugez pas si elle est agréable.
+  consigne_en: Bring your nose to about 3 cm from the open jar, without touching it. Sniff calmly, twice at most, without inhaling hard. Do you smell anything? Nothing, barely (you have to search for it),
+    distinctly (without searching), or strongly (the odour imposes itself)? Do not judge whether it is pleasant.
+  conditions:
+    presentation: unknown
+    distance: near
+    duree: glance
+    exposition: firstSniff
+    air: closed
+    yeux: 'ouverts (pot opaque : l’objet n’est pas vu)'
+    yeux_en: 'open (opaque jar: the object is not seen)'
+    note: 'pot opaque à couvercle, ouvert juste avant, tous les pots identiques ; nez à environ 3 cm du bord du pot, sans le toucher ; deux flairages calmes d’environ 2 s ; pause de 30 s entre deux pots,
+      dans la pièce aérée, sans autre neutralisation ; distance, durée et pause : protocole déclaré pour tous les épisodes d’odorat, non sourcé ; objet à la température de la pièce (vers 20 °C, valeur notée
+      ; la facette `temperature_objet` est réservée pour l’odorat, règle 10) ; codage des facettes (`near`, `glance`, `firstSniff`, `closed`) : choix de relecture (2026-11-11) ; ordre tiré au sort ; pièce
+      aérée puis fermée 10 min avant ; pas de parfum, de crème ni de tabac sur l’observateur ou le préparateur ; aucune autre épreuve d’odeur dans les 20 min précédentes (ISO 5496, 5.2)'
+    note_en: 'opaque lidded jar, opened just before, all jars identical; nose about 3 cm from the rim of the jar, without touching it; two calm sniffs of about 2 s; 30 s pause between two jars, in the aired
+      room, with no other neutralisation; distance, duration and pause: protocol declared for all smell episodes, not sourced; object at room temperature (about 20 °C, value noted; the `temperature_objet`
+      facet is reserved for smell, rule 10); facet coding (`near`, `glance`, `firstSniff`, `closed`): review choice (2026-11-11); random order; room aired then closed 10 min before; no perfume, cream or
+      tobacco on observer or preparer; no other odour test in the previous 20 min (ISO 5496, 5.2)'
+  doute: oui
+  motif_doute: 'frontière avec « aucune odeur » : un papier ancien ou rangé loin de toute odeur peut ne rien sentir ; un papier neuf peut sentir plus nettement ; le bout de bois sec, autre proposition,
+    sent selon l’essence (un pin peut sentir nettement) : non retenu'
+  motif_doute_en: 'borderline with “no odour”: old paper or paper stored away from any odour may smell of nothing; new paper may smell more distinctly; the dry piece of wood, the other proposal, smells
+    according to the species (pine may smell distinctly): not retained'
+  texte_fr: 'Une feuille de papier blanc : odeur à peine perceptible (prédiction, à éprouver).'
+  texte_en: 'A sheet of white paper: faint odour (prediction, to be tested).'
+- id: ppp-a:ep-odourIntensity-03
+  realisation: a_realiser
+  region_attendue: distinct
+  objet: une orange entière, mûre, à peau intacte (non entaillée, non grattée), à température de la pièce
+  objet_en: a whole ripe orange, intact peel (not cut or scratched), at room temperature
+  preparation: sortir l’orange du froid au moins 2 h avant ; la manipuler par le dessous sans presser la peau ; la poser dans un pot opaque assez grand (ou un bol opaque couvert) ; noter l’état de la peau
+  preparation_en: take the orange out of the cold at least 2 h before; handle it from below without pressing the peel; place it in a large enough opaque jar (or a covered opaque bowl); note the state of
+    the peel
+  consigne: Approchez le nez à environ 3 cm du pot ouvert, sans le toucher. Flairez calmement, deux fois au plus, sans inspirer fort. Sentez-vous quelque chose ? Rien, à peine (il faut chercher), nettement
+    (sans chercher), ou fortement (l’odeur s’impose) ? Ne jugez pas si elle est agréable.
+  consigne_en: Bring your nose to about 3 cm from the open jar, without touching it. Sniff calmly, twice at most, without inhaling hard. Do you smell anything? Nothing, barely (you have to search for it),
+    distinctly (without searching), or strongly (the odour imposes itself)? Do not judge whether it is pleasant.
+  conditions:
+    presentation: unknown
+    distance: near
+    duree: glance
+    exposition: firstSniff
+    air: closed
+    yeux: 'ouverts (pot opaque : l’objet n’est pas vu)'
+    yeux_en: 'open (opaque jar: the object is not seen)'
+    note: 'pot opaque à couvercle, ouvert juste avant, tous les pots identiques ; nez à environ 3 cm du bord du pot, sans le toucher ; deux flairages calmes d’environ 2 s ; pause de 30 s entre deux pots,
+      dans la pièce aérée, sans autre neutralisation ; distance, durée et pause : protocole déclaré pour tous les épisodes d’odorat, non sourcé ; objet à la température de la pièce (vers 20 °C, valeur notée
+      ; la facette `temperature_objet` est réservée pour l’odorat, règle 10) ; codage des facettes (`near`, `glance`, `firstSniff`, `closed`) : choix de relecture (2026-11-11) ; ordre tiré au sort ; pièce
+      aérée puis fermée 10 min avant ; pas de parfum, de crème ni de tabac sur l’observateur ou le préparateur ; aucune autre épreuve d’odeur dans les 20 min précédentes (ISO 5496, 5.2)'
+    note_en: 'opaque lidded jar, opened just before, all jars identical; nose about 3 cm from the rim of the jar, without touching it; two calm sniffs of about 2 s; 30 s pause between two jars, in the aired
+      room, with no other neutralisation; distance, duration and pause: protocol declared for all smell episodes, not sourced; object at room temperature (about 20 °C, value noted; the `temperature_objet`
+      facet is reserved for smell, rule 10); facet coding (`near`, `glance`, `firstSniff`, `closed`): review choice (2026-11-11); random order; room aired then closed 10 min before; no perfume, cream or
+      tobacco on observer or preparer; no other odour test in the previous 20 min (ISO 5496, 5.2)'
+  doute: oui
+  motif_doute: 'une peau intacte libère peu d’odeur : frontière avec « à peine » ; une peau pressée ou griffée pendant la manipulation fait passer à « forte » ; l’orange est aussi un exemple d’agrume, mais
+    ici on ne juge que la force'
+  motif_doute_en: 'an intact peel releases little odour: borderline with “faint”; a peel pressed or scratched during handling moves it to “strong”; the orange is also a citrus example, but here only strength
+    is judged'
+  texte_fr: 'Une orange entière non entaillée : odeur nette (prédiction, à éprouver).'
+  texte_en: 'A whole uncut orange: distinct odour (prediction, to be tested).'
+- id: ppp-a:ep-odourIntensity-04
+  realisation: a_realiser
+  region_attendue: strong
+  rang_exemplaire: principal
+  objet: une savonnette parfumée ordinaire, neuve, emballage retiré, sans marque gravée (ou marque poncée)
+  objet_en: an ordinary new scented bar of soap, wrapper removed, no engraved brand (or brand sanded off)
+  preparation: retirer l’emballage 30 min avant ; poser la savonnette dans le pot ; noter le parfum annoncé en mots génériques (« lavande », « fleuri ») sans marque
+  preparation_en: remove the wrapper 30 min before; place the soap in the jar; note the announced scent in generic words (“lavender”, “floral”), no brand
+  consigne: Approchez le nez à environ 3 cm du pot ouvert, sans le toucher. Flairez calmement, deux fois au plus, sans inspirer fort. Sentez-vous quelque chose ? Rien, à peine (il faut chercher), nettement
+    (sans chercher), ou fortement (l’odeur s’impose) ? Ne jugez pas si elle est agréable.
+  consigne_en: Bring your nose to about 3 cm from the open jar, without touching it. Sniff calmly, twice at most, without inhaling hard. Do you smell anything? Nothing, barely (you have to search for it),
+    distinctly (without searching), or strongly (the odour imposes itself)? Do not judge whether it is pleasant.
+  conditions:
+    presentation: unknown
+    distance: near
+    duree: glance
+    exposition: firstSniff
+    air: closed
+    yeux: 'ouverts (pot opaque : l’objet n’est pas vu)'
+    yeux_en: 'open (opaque jar: the object is not seen)'
+    note: 'pot opaque à couvercle, ouvert juste avant, tous les pots identiques ; nez à environ 3 cm du bord du pot, sans le toucher ; deux flairages calmes d’environ 2 s ; pause de 30 s entre deux pots,
+      dans la pièce aérée, sans autre neutralisation ; distance, durée et pause : protocole déclaré pour tous les épisodes d’odorat, non sourcé ; objet à la température de la pièce (vers 20 °C, valeur notée
+      ; la facette `temperature_objet` est réservée pour l’odorat, règle 10) ; codage des facettes (`near`, `glance`, `firstSniff`, `closed`) : choix de relecture (2026-11-11) ; ordre tiré au sort ; pièce
+      aérée puis fermée 10 min avant ; pas de parfum, de crème ni de tabac sur l’observateur ou le préparateur ; aucune autre épreuve d’odeur dans les 20 min précédentes (ISO 5496, 5.2)'
+    note_en: 'opaque lidded jar, opened just before, all jars identical; nose about 3 cm from the rim of the jar, without touching it; two calm sniffs of about 2 s; 30 s pause between two jars, in the aired
+      room, with no other neutralisation; distance, duration and pause: protocol declared for all smell episodes, not sourced; object at room temperature (about 20 °C, value noted; the `temperature_objet`
+      facet is reserved for smell, rule 10); facet coding (`near`, `glance`, `firstSniff`, `closed`): review choice (2026-11-11); random order; room aired then closed 10 min before; no perfume, cream or
+      tobacco on observer or preparer; no other odour test in the previous 20 min (ISO 5496, 5.2)'
+  doute: non
+  note: 'exemplaire principal de `strong` (choix de relecture (2026-11-02) : plus reproductible) ; le cuir neuf passe en variante (épisode 05)'
+  note_en: 'main exemplar for `strong` (review choice (2026-11-02): more reproducible); new leather becomes a variant (episode 05)'
+  texte_fr: 'Une savonnette parfumée : odeur forte (prédiction, à éprouver).'
+  texte_en: 'A scented bar of soap: strong odour (prediction, to be tested).'
+- id: ppp-a:ep-odourIntensity-05
+  realisation: a_realiser
+  region_attendue: strong
+  rang_exemplaire: second
+  objet: une chute de cuir neuf d’environ 5 × 5 cm, tannage et finition notés s’ils sont connus
+  objet_en: an offcut of new leather, about 5 × 5 cm, tanning and finish noted if known
+  preparation: laisser la chute 1 h dans le pot fermé avant l’épreuve ; noter le tannage, la teinte et la finition
+  preparation_en: leave the offcut 1 h in the closed jar before the test; note tanning, dye and finish
+  consigne: Approchez le nez à environ 3 cm du pot ouvert, sans le toucher. Flairez calmement, deux fois au plus, sans inspirer fort. Sentez-vous quelque chose ? Rien, à peine (il faut chercher), nettement
+    (sans chercher), ou fortement (l’odeur s’impose) ? Ne jugez pas si elle est agréable.
+  consigne_en: Bring your nose to about 3 cm from the open jar, without touching it. Sniff calmly, twice at most, without inhaling hard. Do you smell anything? Nothing, barely (you have to search for it),
+    distinctly (without searching), or strongly (the odour imposes itself)? Do not judge whether it is pleasant.
+  conditions:
+    presentation: unknown
+    distance: near
+    duree: glance
+    exposition: firstSniff
+    air: closed
+    yeux: 'ouverts (pot opaque : l’objet n’est pas vu)'
+    yeux_en: 'open (opaque jar: the object is not seen)'
+    note: 'pot opaque à couvercle, ouvert juste avant, tous les pots identiques ; nez à environ 3 cm du bord du pot, sans le toucher ; deux flairages calmes d’environ 2 s ; pause de 30 s entre deux pots,
+      dans la pièce aérée, sans autre neutralisation ; distance, durée et pause : protocole déclaré pour tous les épisodes d’odorat, non sourcé ; objet à la température de la pièce (vers 20 °C, valeur notée
+      ; la facette `temperature_objet` est réservée pour l’odorat, règle 10) ; codage des facettes (`near`, `glance`, `firstSniff`, `closed`) : choix de relecture (2026-11-11) ; variante facultative, passée
+      à part ; ordre tiré au sort ; au moins 20 min après les épisodes principaux ; aucune autre épreuve d’odeur dans les 20 min précédentes (ISO 5496, 5.2)'
+    note_en: 'opaque lidded jar, opened just before, all jars identical; nose about 3 cm from the rim of the jar, without touching it; two calm sniffs of about 2 s; 30 s pause between two jars, in the aired
+      room, with no other neutralisation; distance, duration and pause: protocol declared for all smell episodes, not sourced; object at room temperature (about 20 °C, value noted; the `temperature_objet`
+      facet is reserved for smell, rule 10); facet coding (`near`, `glance`, `firstSniff`, `closed`): review choice (2026-11-11); optional variant, run separately; random order; at least 20 min after the
+      main episodes; no other odour test in the previous 20 min (ISO 5496, 5.2)'
+  doute: oui
+  motif_doute: 'variabilité déclarée : l’odeur du cuir neuf dépend du tannage, de la teinture, de la finition et de l’âge de la chute ; une chute ancienne peut ne sentir que nettement'
+  motif_doute_en: 'declared variability: the odour of new leather depends on tanning, dye, finish and the age of the offcut; an older offcut may smell only distinctly'
+  texte_fr: 'Une chute de cuir neuf : odeur forte (prédiction, à éprouver ; variante).'
+  texte_en: 'A piece of new leather: strong odour (prediction, to be tested; variant).'
 manques:
-- 'exemplaires (à renseigner : objets publics vérifiés, un épisode par objet, conditions déclarées ; objet décrit, références olfactives comme repères, X17)'
+- 'exemplaires : cinq épisodes proposés « à réaliser » (episodes_a_realiser), sur des objets décrits (X17), à réaliser par plusieurs observateurs, chacun seul ; à la réalisation, l’assertion entre dans
+  fiches/exemplaires.yaml'
+- 'épisodes sans doute de leur auteur : seulement « forte » (savonnette parfumée) ; « aucune odeur », « à peine perceptible » et « nette » n’ont que des épisodes marqués `doute: oui`'
 bloque_par: []
 a_relire:
 - label_fr
@@ -212,6 +392,7 @@ a_relire:
 - enonces_testables
 - statut_note
 - mesure
+- episodes_a_realiser
 relecture_explicative:
   date: null
   champs:

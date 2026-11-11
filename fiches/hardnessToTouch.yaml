@@ -1,6 +1,9 @@
 # Fiche de type PPP — ppp:hardnessToTouch — format : PPP_FicheType.md (spec v2.8)
 # Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, mesure (rubrique proposée en série 53, docs/proposition-rubrique-mesure.md, gabarit relu ; pas encore dans PPP_FicheType.md ni lue par la maquette).
 # Série 54 (2026-10-16) : fiche en préparation, rédigée sans exemplaire à partir du ticket n° 4 (https://github.com/blomig/PPP-ontologie/issues/4) et de la proposition « Toucher » ; aucun champ n’est encore relu. Première fiche propre au toucher.
+# Série 105 (2026-11-11) : relecture explicative faite (choix de relecture (2026-11-11)) ; fiche publiable (épisodes à réaliser, X17).
+# Série 105 bis (2026-11-11) : « souplesse mesurée » devient « déformabilité mesurée » (état de l’art, mesure, référence Srinivasan et LaMotte) ; choix de relecture (2026-11-11).
+# Série 105 ter (2026-11-11) : définition (« cède ») et note de l’échelle (labels au lieu des clés de région) corrigées ; choix de relecture (2026-11-11).
 id: ppp:hardnessToTouch
 label_fr: dureté au toucher
 label_en: hardness to the touch
@@ -15,13 +18,13 @@ base_dependance:
   facteurs_non_perceptuels: []
 facettes:
 - toucher
-définition: 'Combien l’objet s’enfonce quand on le presse du bout du doigt, à l’endroit pressé : de ce qui s’enfonce beaucoup sous le doigt à ce qui ne cède pas du tout.'
+définition: 'Combien l’objet cède quand on le presse du bout du doigt, à l’endroit pressé : du doigt qui s’enfonce beaucoup à une surface qui ne cède pas du tout.'
 question_attentionnelle: Si vous appuyez du bout du doigt, sans regarder, l’objet cède-t-il beaucoup, un peu, à peine, ou pas du tout ?
 contre_exemple: 'Une balle de mousse et une boule de billard peuvent avoir la même surface lisse : c’est ce qu’elles cèdent sous le doigt qui les sépare, pas leur relief (texture). Une éponge et une pâte à modeler cèdent autant ; l’une revient à sa forme, l’autre garde la marque : ce n’est pas une différence de dureté, mais de retour à la forme. Une feuille de papier se plie facilement, mais posée à plat sur une table elle ne cède pas sous le doigt : se plier n’est pas céder.'
 grandeur_physique_homonyme: 'dureté au sens des minéralogistes (échelle de Mohs), qui est une résistance à la rayure, pas à l’enfoncement [[nps_mohs]] ; dureté des métaux (Vickers), mesurée par l’empreinte laissée [[iso6507_1]] : aucune région ne s’en déduit. Voir la rubrique « mesure ».'
 mesure:
   etat: methodes
-  synthese: 'Des mesures associées existent pour les caoutchoucs et les mousses : un appareil enfonce une pointe ou une bille avec une force réglée et relève la profondeur, ou mesure la force qu’il faut pour écraser une mousse d’une fraction donnée de son épaisseur. Elles portent sur un échantillon de matière préparé, pas sur un objet quelconque touché du doigt. En laboratoire, la mollesse perçue suit la souplesse mesurée de caoutchoucs [[srinivasan_lamotte1995]] et la dureté jugée croît avec la dureté physique selon une loi de puissance [[harper_stevens1964]] ; ces résultats ne fixent pas de régions.'
+  synthese: 'Des mesures associées existent pour les caoutchoucs et les mousses : un appareil enfonce une pointe ou une bille avec une force réglée et relève la profondeur, ou mesure la force qu’il faut pour écraser une mousse d’une fraction donnée de son épaisseur. Elles portent sur un échantillon de matière préparé, pas sur un objet quelconque touché du doigt. En laboratoire, la mollesse perçue suit la déformabilité mesurée de caoutchoucs [[srinivasan_lamotte1995]] et la dureté jugée croît avec la dureté physique selon une loi de puissance [[harper_stevens1964]] ; ces résultats ne fixent pas de régions.'
   regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
   methodes:
   - id: iso48_4
@@ -99,7 +102,14 @@ espace_valeurs:
     rang: 4
     repere: rien ne cède sous le doigt, même en appuyant fort (une pierre)
     exemplaires: []
-note_echelle: 'quatre crans tirés des cinq exemples du ticket 4, rangés par leur proposant du plus mou au plus dur : le ballon gonflé est rangé avec la mousse à raser (le doigt s’enfonce profondément), le chapeau de champignon seul au cran « cède un peu », la pile de papier à « cède à peine », la pierre à « ne cède pas ». La proposition « Toucher » (§2.2) avait trois crans (« cède beaucoup », « cède un peu », « ne cède pas ») ; le ticket en distingue un de plus entre « un peu » et « pas du tout ». Position de travail : quatre crans, E1 à une région près ; si l’épreuve ne distingue pas « cède à peine » de ses voisins, revenir à trois (spec §9.7 C, accord exact). Repères du cran « cède beaucoup » (série 54 bis) : la mousse à raser reste comme repère, mais elle se déforme sans revenir, et l’examen risque la condition NA (ce qui ne garde pas de forme) ; le ballon gonflé reste en `yieldsMuch`, avec un doute vers `yieldsSome` selon le gonflage. Repères précisés (choix de relecture (2026-11-02)) : l’éponge du cran « cède beaucoup » est une éponge synthétique (mousse) sèche, car une éponge de cellulose se raidit en séchant (Rey et Vandamme, 2013) [[rey_vandamme2013]] ; au cran « cède un peu », une balle de mousse dense est le repère principal, reproductible, et le chapeau de champignon le second, sa fraîcheur déclarée ; une gomme et un bouchon de liège rejoignent la pile de papier au cran « cède à peine ».'
+note_echelle: 'quatre crans tirés des cinq exemples du ticket 4, rangés par leur proposant du plus mou au plus dur : le ballon gonflé est rangé avec la mousse à raser (le doigt s’enfonce profondément),
+  le chapeau de champignon seul au cran « cède un peu », la pile de papier à « cède à peine », la pierre à « ne cède pas ». La proposition « Toucher » (§2.2) avait trois crans (« cède beaucoup », « cède
+  un peu », « ne cède pas ») ; le ticket en distingue un de plus entre « un peu » et « pas du tout ». Position de travail : quatre crans, E1 à une région près ; si l’épreuve ne distingue pas « cède à peine
+  » de ses voisins, revenir à trois (spec §9.7 C, accord exact). Repères du cran « cède beaucoup » : la mousse à raser reste comme repère, mais elle se déforme sans revenir, et l’examen risque la condition
+  NA (ce qui ne garde pas de forme) ; le ballon gonflé reste au cran « cède beaucoup », avec un doute vers « cède un peu » selon le gonflage. Repères précisés (choix de relecture (2026-11-02)) : l’éponge
+  du cran « cède beaucoup » est une éponge synthétique (mousse) sèche, car une éponge de cellulose se raidit en séchant (Rey et Vandamme, 2013) [[rey_vandamme2013]] ; au cran « cède un peu », une balle
+  de mousse dense est le repère principal, reproductible, et le chapeau de champignon le second, sa fraîcheur déclarée ; une gomme et un bouchon de liège rejoignent la pile de papier au cran « cède à peine
+  ».'
 identite: 'Ce que l’objet cède sous la pression du doigt, à l’endroit pressé ; pas la façon dont il revient à sa forme (retour à la forme), pas ce qui plie (souplesse au pli), pas le relief de sa surface (texture), pas la résistance à la rayure (échelle de Mohs) ; pas la dureté en bouche (`ppp:hardnessInMouth`, famille Goût : on mord la bouchée, on ne la presse pas du doigt ; l’aliment est détruit pendant qu’on le juge), sans relation.'
 relations:
 - type: confusableWith
@@ -119,7 +129,7 @@ references:
   statut_verification: vérifiée sur résumé ou source secondaire
   verifie_le: '2026-10-16'
   verifie_sur: résumé PubMed lu (PMID 7714593), relu le 2026-10-16 ; texte non lu
-  reprend: 'la mollesse se juge activement du doigt ; pour des caoutchoucs à surface déformable, elle suit la souplesse mesurée et le toucher de la peau suffit ; pour des objets rigides montés sur ressort, la discrimination est moins bonne'
+  reprend: 'la mollesse se juge activement du doigt ; pour des caoutchoucs à surface déformable, elle suit la déformabilité mesurée et le toucher de la peau suffit ; pour des objets rigides montés sur ressort, la discrimination est moins bonne'
   ne_reprend_pas: les mesures du doigt et les seuils de discrimination
 - id: harper_stevens1964
   citation: Harper, R. & Stevens, S. S. (1964). Subjective hardness of compliant materials. Quarterly Journal of Experimental Psychology, 16, 204–215.
@@ -220,7 +230,7 @@ references:
   verifie_sur: résumé (OpenAlex) lu le 2026-11-02 ; texte non lu
   reprend: 'en séchant, une éponge de cellulose rétrécit de plus de moitié et se raidit (module de compressibilité multiplié par près de cent) : une éponge de cellulose sèche n’est pas un repère du cran « cède beaucoup »'
   ne_reprend_pas: le modèle poromécanique
-etat_de_l_art: 'Sources : la dureté (ou mollesse) est une dimension du toucher des matériaux (Bergmann Tiest et Kappers 2006) [[bergmann_tiest_kappers2006]] ; la dureté jugée suit une loi de puissance de la dureté physique pour des matières souples (Harper et Stevens 1964) [[harper_stevens1964]] ; pour des caoutchoucs, la mollesse se discrimine finement au doigt et suit la souplesse mesurée (Srinivasan et LaMotte 1995) [[srinivasan_lamotte1995]] ; la déformation de la surface et l’épaisseur de l’objet comptent (Bergmann Tiest et Kappers 2009) [[bergmann_tiest_kappers2009a]]. Aucune source trouvée ne fixe des régions perçues de la dureté au toucher. Détail : docs/bibliographie-par-type.md#groupe-toucher.'
+etat_de_l_art: 'Sources : la dureté (ou mollesse) est une dimension du toucher des matériaux (Bergmann Tiest et Kappers 2006) [[bergmann_tiest_kappers2006]] ; la dureté jugée suit une loi de puissance de la dureté physique pour des matières souples (Harper et Stevens 1964) [[harper_stevens1964]] ; pour des caoutchoucs, la mollesse se discrimine finement au doigt et suit la déformabilité mesurée (Srinivasan et LaMotte 1995) [[srinivasan_lamotte1995]] ; la déformation de la surface et l’épaisseur de l’objet comptent (Bergmann Tiest et Kappers 2009) [[bergmann_tiest_kappers2009a]]. Aucune source trouvée ne fixe des régions perçues de la dureté au toucher. Détail : docs/bibliographie-par-type.md#groupe-toucher.'
 etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-toucher
 axiomes:
 - conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
@@ -244,12 +254,14 @@ enonces_testables:
   epreuve: null
 cq_couvertes: CQ1, CQ2
 statut: candidat
-statut_note: 'en préparation (2026-10-16) : fiche rédigée à partir du ticket 4, sans exemplaire ; tous les champs rédigés sont à relire'
+statut_note: fiche relue en langage courant (relecture explicative, 2026-11-11) ; six épisodes proposés « à réaliser », sur des objets décrits, pas encore observés
 statut_epistemique: non éprouvé
 introduit_en: '2.8'
 modifie_en: []
 remplace_par: []
-source_de_la_fiche: 'ticket n° 4 (https://github.com/blomig/PPP-ontologie/issues/4, suggestion de type « Dureté ») ; proposition de famille « Toucher » (docs/famille-toucher-proposition.md (document de travail, non publié), §2.2, premier lot, décisions 3 et 9) ; protocole d’échantillons (docs/protocole-echantillons-toucher.md §4.1) ; fiche rédigée le 2026-10-16 par l’équipe, champs à valider par la relecture explicative'
+source_de_la_fiche: ticket n° 4 (https://github.com/blomig/PPP-ontologie/issues/4, suggestion de type « Dureté ») ; proposition de famille « Toucher » (docs/famille-toucher-proposition.md (document de travail,
+  non publié), §2.2, premier lot, décisions 3 et 9) ; protocole d’échantillons (docs/protocole-echantillons-toucher.md §4.1) ; fiche rédigée le 2026-10-16 par l’équipe ; relecture explicative le 2026-11-11
+  (choix de relecture (2026-11-11))
 # Série 90 : épisodes proposés « à réaliser » (spec X17 ; décision de l’éditeur du projet du 2026-11-02 pour le principe ; champs et détail du lot : choix de relecture (2026-11-02)) ; ni épreuve faite ni accord entre observateurs ;
 # ni observateur, ni date, ni résultat. Objets et prédictions repris de la proposition de lot 7, révisés : choix de relecture (2026-11-02).
 episodes_a_realiser:
@@ -399,40 +411,21 @@ episodes_a_realiser:
   texte_en: 'A pebble: does not yield (prediction, to be tested).'
 manques:
 - 'exemplaires : six épisodes proposés « à réaliser » (episodes_a_realiser), à réaliser par plusieurs observateurs, chacun seul ; à la réalisation, chaque objet est mesuré et photographié (photo d’identification, X17 (g)), et l’assertion entre dans fiches/exemplaires.yaml'
-- 'épisodes sans doute de leur auteur : « cède beaucoup » (éponge synthétique sèche) et « ne cède pas » (galet), régions non voisines ; « cède un peu » et « cède à peine » n’ont que des épisodes marqués `doute: oui` ; le palier visé dépend de la relecture et de la règle X17 (f)'
+- 'épisodes sans doute de leur auteur : « cède beaucoup » (éponge synthétique sèche) et « ne cède pas » (galet), régions non voisines ; « cède un peu » et « cède à peine » n’ont que des épisodes marqués `doute: oui`'
 bloque_par: []
-a_relire:
-- label_fr
-- label_en
-- label_court
-- strate
-- définition
-- question_attentionnelle
-- contre_exemple
-- grandeur_physique_homonyme
-- mesure
-- mode_de_presentation
-- conditions_critiques
-- note_conditions
-- porteur
-- condition_NA
-- espace_valeurs
-- note_echelle
-- identite
-- relations
-- references
-- etat_de_l_art
-- nanay
-- transfert
-- enonces_testables
-- statut_note
-- episodes_a_realiser
+a_relire: []
 remarque:
 - 'série 78 bis (choix de relecture (2026-10-20), corrections de relecture) : identite complétée (pas la dureté en bouche, `ppp:hardnessInMouth`, sans relation) ; à relire'
 - 'série 90 (2026-11-02) : épisodes proposés « à réaliser » du lot 7 repris dans la fiche (décision de l’éditeur du projet du 2026-11-02 : « B : publier avec des épisodes proposés marqués « à réaliser » ») ; choix de relecture (2026-11-02) : repère « éponge synthétique (mousse) sèche » (Rey et Vandamme 2013, résumé lu, ajouté aux références) ; « cède un peu » : balle de mousse dense en repère principal, chapeau de champignon frais en second, fraîcheur déclarée ; gomme et bouchon de liège à « cède à peine » ; appui ferme appris avant l’épreuve sur une balance de cuisine (environ 1 kg), puis pression à la main. Repères, note_conditions et note_echelle mis à jour (EN et empreintes).'
 - 'série 90, correctif (choix de relecture (2026-11-02)) : épisodes réalignés sur la version révisée du lot 7 (hors dépôt) : cinq champs explicites par épisode (objet, preparation, consigne, conditions, region_attendue), éponge synthétique sans doute, balle de mousse en exemplaire principal (02) et champignon en second (03), gomme et bouchon à « cède à peine », étalonnage à environ 1 kg refait une fois à mi-épreuve ; à relire'
 relecture_explicative:
-  date: null
+  date: '2026-11-11'
   champs:
-  - 'harmonisation mécanique des énoncés affichés (série 69, 2026-10-17)'
+  - harmonisation mécanique des énoncés affichés (série 69, 2026-10-17)
+  - 'label_fr, label_en, label_court, strate, définition, question_attentionnelle, contre_exemple, grandeur_physique_homonyme, mesure, mode_de_presentation, conditions_critiques, note_conditions, porteur,
+    condition_NA, espace_valeurs, identite, relations, references, etat_de_l_art, nanay, transfert, enonces_testables, episodes_a_realiser : relus en langage courant le 2026-11-11, validés tels quels (choix
+    de relecture (2026-11-11))'
+  - 'note_echelle (code de travail retiré du texte affiché), statut_note : relus et corrigés en langage courant le 2026-11-11 (choix de relecture (2026-11-11))'
+  - 'etat_de_l_art, mesure, references (« souplesse mesurée » devient « déformabilité mesurée » : depuis la décision 9, « souplesse » ne nomme que la souplesse au pli) : corrigés le 2026-11-11 (choix de relecture (2026-11-11))'
+  - 'note_echelle (clés de région remplacées par leurs labels), définition (« cède » au lieu de « s’enfonce », comme la question attentionnelle et les régions) : corrigés le 2026-11-11 (choix de relecture (2026-11-11))'
   a_reconfirmer: []
