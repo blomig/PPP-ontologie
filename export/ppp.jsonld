@@ -188,7 +188,7 @@
    "dct_license": "https://creativecommons.org/licenses/by/4.0/",
    "owl:versionInfo": "2.8",
    "dct:modified": {
-    "@value": "2026-11-11",
+    "@value": "2026-11-12",
     "@type": "xsd:date"
    },
    "dct:creator": [
@@ -213,6 +213,7 @@
     "https://w3id.org/ppp/lightnessRange",
     "https://w3id.org/ppp/localIrregularity",
     "https://w3id.org/ppp/negativeSpace",
+    "https://w3id.org/ppp/odourIntensity",
     "https://w3id.org/ppp/outlineIndentation",
     "https://w3id.org/ppp/partNesting",
     "https://w3id.org/ppp/perceivedDepth",
@@ -3642,6 +3643,231 @@
    },
    "regionOf": "https://w3id.org/ppp/negativeSpace",
    "broader": "https://w3id.org/ppp/negativeSpace"
+  },
+  {
+   "@id": "https://w3id.org/ppp/odourIntensity",
+   "@type": "skos:Concept",
+   "inScheme": "https://w3id.org/ppp/",
+   "skos:notation": "odourIntensity",
+   "prefLabel": {
+    "fr": "intensité de l’odeur",
+    "en": "odour intensity"
+   },
+   "definition": {
+    "fr": "La force avec laquelle on sent l’odeur de l’objet, le nez approché à la distance déclarée, de l’objet qui ne sent rien à celui qui sent fort.",
+    "en": "How strongly you smell the object’s odour, with the nose at the declared distance, from the object that smells of nothing to one that smells strongly."
+   },
+   "scopeNote": {
+    "fr": [
+     "Le nez près de l’objet, sentez-vous quelque chose ? À peine, nettement, ou fortement ?",
+     "Deux objets qui libèrent autant de substance odorante peuvent ne pas sentir aussi fort ; et la même odeur paraît plus faible à celui qui y est exposé depuis longtemps. Ce que mesure un appareil n’est pas ce que décrit ce type. « Fort » n’est pas « trop fort »."
+    ],
+    "en": [
+     "With your nose near the object, do you smell anything? Barely, distinctly, or strongly?",
+     "Two objects that release as much odorous substance may not smell as strongly; and the same odour seems weaker to you if you have been exposed to it for a long time. What an instrument measures is not what this type describes. “Strong” is not “too strong”."
+    ]
+   },
+   "note": {
+    "fr": "candidat ; non éprouvé",
+    "en": "candidate; untested"
+   },
+   "topConceptOf": "https://w3id.org/ppp/",
+   "measurementState": "https://w3id.org/ppp/mesure/etat/methodes",
+   "measurementSummary": {
+    "fr": "L’intensité d’une odeur au-dessus du seuil peut se rapporter, par un jury, à une série de concentrations d’un odorant de référence, le 1-butanol : c’est une mesure associée proche. La concentration d’odeur d’un échantillon gazeux, obtenue par dilution jusqu’au seuil de détection, est une mesure associée indirecte ; aucune des deux ne se fait sur l’objet, le nez approché à la distance déclarée. Les échelles de jugement de la force de la sensation et de notation de l’intensité perçue, citées par l’état de l’art, ne sont pas des mesures associées : sans série de référence physique, elles relèvent des épreuves.",
+    "en": "The intensity of an odour above threshold can be referenced, by a panel, to a series of concentrations of a reference odorant, 1-butanol: this is a close associated measurement. The odour concentration of a gaseous sample, obtained by dilution down to the detection threshold, is an indirect associated measurement; neither is made on the object, with the nose brought to the declared distance. The judgement scales of the strength of the sensation and of rating perceived intensity, cited in the state of the art, are not associated measurements: without a physical reference series, they belong to the tests."
+   },
+   "measurementCaveat": {
+    "fr": "Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.",
+    "en": "The regions of this entry remain perceptual: they describe what an observer sees, hears, smells or feels by touch under the declared conditions. An associated measurement can inform an observation, but it does not set the boundaries of the regions and does not replace examination."
+   },
+   "associatedMeasure": [
+    "https://w3id.org/ppp/odourIntensity/mesure/astm_e544",
+    "https://w3id.org/ppp/odourIntensity/mesure/en13725"
+   ],
+   "notRetainedMeasure": [
+    "https://w3id.org/ppp/odourIntensity/mesure/non-retenue-1",
+    "https://w3id.org/ppp/odourIntensity/mesure/non-retenue-2"
+   ],
+   "hasScale": "https://w3id.org/ppp/odourIntensity/echelle",
+   "narrower": [
+    "https://w3id.org/ppp/odourIntensity/noOdour",
+    "https://w3id.org/ppp/odourIntensity/faint",
+    "https://w3id.org/ppp/odourIntensity/distinct",
+    "https://w3id.org/ppp/odourIntensity/strong"
+   ]
+  },
+  {
+   "@id": "https://w3id.org/ppp/odourIntensity/mesure/astm_e544",
+   "@type": "ppp:AssociatedMeasure",
+   "rdfs_label": {
+    "fr": "intensité d’odeur rapportée à une référence",
+    "en": "odour intensity referenced to a standard"
+   },
+   "quantity": {
+    "fr": "intensité d’odeur d’un échantillon, comparée par un jury à celles d’une série de concentrations de 1-butanol",
+    "en": "odour intensity of a sample, compared by a panel with those of a series of concentrations of 1-butanol"
+   },
+   "unitOrScale": {
+    "fr": "concentration équivalente de 1-butanol (échelle de référence de l’intensité d’odeur de l’ASTM)",
+    "en": "equivalent concentration of 1-butanol (ASTM Odor Intensity Referencing Scale)"
+   },
+   "gap": {
+    "fr": "jugée par un jury (au moins huit jugements indépendants), qui compare l’échantillon à une série de concentrations de 1-butanol ; un seul odorant de référence ; échantillon présenté selon le laboratoire (la norme ne fixe pas cette présentation) ; ne se fait pas sur l’objet, le nez approché à la distance déclarée ; ne saisit ni l’adaptation de chaque personne à l’odeur, ni l’air ambiant de l’épisode",
+    "en": "judged by a panel (at least eight independent judgements), which compares the sample with a series of 1-butanol concentrations; a single reference odorant; sample presented as the laboratory chooses (the standard does not set this presentation); not made on the object, with the nose brought to the declared distance; it captures neither each person’s adaptation to the odour nor the ambient air of the episode"
+   },
+   "measurementConditions": {
+    "fr": "jury ; série de dilutions de 1-butanol (méthode dynamique ou statique) ; présentation de l’échantillon documentée",
+    "en": "panel; series of 1-butanol dilutions (dynamic or static method); sample presentation documented"
+   },
+   "proximity": "https://w3id.org/ppp/mesure/proximite/proche",
+   "dct:bibliographicCitation": "ASTM E544-24. Standard Practice for Referencing Suprathreshold Odor Intensity. ASTM International."
+  },
+  {
+   "@id": "https://w3id.org/ppp/odourIntensity/mesure/en13725",
+   "@type": "ppp:AssociatedMeasure",
+   "rdfs_label": {
+    "fr": "concentration d’odeur (olfactométrie dynamique)",
+    "en": "odour concentration (dynamic olfactometry)"
+   },
+   "quantity": {
+    "fr": "dilution d’un échantillon gazeux nécessaire pour atteindre le seuil de détection d’un jury",
+    "en": "dilution of a gaseous sample needed to reach the detection threshold of a panel"
+   },
+   "unitOrScale": {
+    "fr": "unités d’odeur européennes par mètre cube (ouE/m³)",
+    "en": "European odour units per cubic metre (ouE/m³)"
+   },
+   "gap": {
+    "fr": "dit combien il faut diluer l’air prélevé pour atteindre le seuil, pas la force avec laquelle on sent l’odeur au-dessus du seuil ; faite sur un gaz prélevé, conçue pour les émissions de sources fixes, pas sur l’objet tenu près du nez ; ne saisit ni l’adaptation ni l’air ambiant de l’épisode ; la norme exclut elle-même la mesure de l’intensité perçue au-dessus du seuil (EN 13725, domaine d’application)",
+    "en": "says how much the sampled air must be diluted to reach the threshold, not how strongly the odour is smelled above threshold; made on a sampled gas, designed for emissions from stationary sources, not on the object held near the nose; it captures neither adaptation nor the ambient air of the episode; the standard itself excludes measuring perceived intensity above threshold (EN 13725, scope)"
+   },
+   "measurementConditions": {
+    "fr": "échantillon gazeux ; olfactomètre à dilution dynamique ; jury humain",
+    "en": "gaseous sample; dynamic-dilution olfactometer; human panel"
+   },
+   "proximity": "https://w3id.org/ppp/mesure/proximite/indirecte",
+   "dct:bibliographicCitation": "EN 13725:2022. Stationary source emissions — Determination of odour concentration by dynamic olfactometry and odour emission rate. Bruxelles : CEN."
+  },
+  {
+   "@id": "https://w3id.org/ppp/odourIntensity/mesure/non-retenue-1",
+   "@type": "ppp:NotRetainedMeasure",
+   "rdfs_label": {
+    "fr": "échelle de la force de la sensation à l’olfactomètre (VDI 3882 Blatt 1)",
+    "en": "scale of the strength of the sensation at the olfactometer (VDI 3882 Part 1)"
+   },
+   "reason": {
+    "fr": "échelle de jugement de la force de la sensation, décrite comme verbale par les sources secondaires, sans série de référence physique connue : elle relève des épreuves, pas des mesures associées ; elle s’applique à un échantillon gazeux présenté à l’olfactomètre, pas à l’objet ; norme non lue : elle sera reclassée si sa lecture montre une série de référence physique",
+    "en": "a judgement scale of the strength of the sensation, described as verbal by secondary sources, with no known physical reference series: it belongs to the tests, not to associated measurements; it applies to a gaseous sample presented at the olfactometer, not to the object; standard not read: it will be reclassified if reading it shows a physical reference series"
+   },
+   "dct:bibliographicCitation": "VDI 3882 Blatt 1:1992. Olfactometry — Determination of odour intensity (Olfaktometrie — Bestimmung der Geruchsintensität). Düsseldorf : VDI."
+  },
+  {
+   "@id": "https://w3id.org/ppp/odourIntensity/mesure/non-retenue-2",
+   "@type": "ppp:NotRetainedMeasure",
+   "rdfs_label": {
+    "fr": "échelle de magnitude étiquetée (Labeled Magnitude Scale)",
+    "en": "Labeled Magnitude Scale"
+   },
+   "reason": {
+    "fr": "échelle de notation de l’intensité perçue, sans référence physique : elle relève des épreuves, pas des mesures associées ; elle ne fournit ni stimulus ni conditions de référence, et ses ancrages verbaux sont quasi logarithmiques, alors que les quatre régions de la fiche sont ordinales",
+    "en": "a rating scale of perceived intensity, without physical reference: it belongs to the tests, not to associated measurements; it provides neither stimulus nor reference conditions, and its verbal anchors are quasi-logarithmic, whereas the four regions of this entry are ordinal"
+   },
+   "dct:bibliographicCitation": "Green, B. G., Dalton, P., Cowart, B., Shaffer, G., Rankin, K. & Higgins, J. (1996). Evaluating the ‘Labeled Magnitude Scale’ for measuring sensations of taste and smell. Chemical Senses, 21(3), 323–334."
+  },
+  {
+   "@id": "https://w3id.org/ppp/odourIntensity/echelle",
+   "@type": "skos:OrderedCollection",
+   "prefLabel": {
+    "fr": "échelle de « intensité de l’odeur »",
+    "en": "scale of “odour intensity”"
+   },
+   "memberList": [
+    "https://w3id.org/ppp/odourIntensity/noOdour",
+    "https://w3id.org/ppp/odourIntensity/faint",
+    "https://w3id.org/ppp/odourIntensity/distinct",
+    "https://w3id.org/ppp/odourIntensity/strong"
+   ]
+  },
+  {
+   "@id": "https://w3id.org/ppp/odourIntensity/noOdour",
+   "@type": "skos:Concept",
+   "inScheme": "https://w3id.org/ppp/",
+   "skos:notation": "noOdour",
+   "prefLabel": {
+    "fr": "intensité de l’odeur : aucune odeur",
+    "en": "odour intensity: no odour"
+   },
+   "hiddenLabel": {
+    "fr": "aucune odeur",
+    "en": "no odour"
+   },
+   "example": {
+    "fr": "on ne sent rien, même le nez près de l’objet (une assiette en verre propre)",
+    "en": "you smell nothing, even with your nose near the object (a clean glass plate)"
+   },
+   "regionOf": "https://w3id.org/ppp/odourIntensity",
+   "broader": "https://w3id.org/ppp/odourIntensity"
+  },
+  {
+   "@id": "https://w3id.org/ppp/odourIntensity/faint",
+   "@type": "skos:Concept",
+   "inScheme": "https://w3id.org/ppp/",
+   "skos:notation": "faint",
+   "prefLabel": {
+    "fr": "intensité de l’odeur : à peine perceptible",
+    "en": "odour intensity: barely perceptible"
+   },
+   "hiddenLabel": {
+    "fr": "à peine perceptible",
+    "en": "barely perceptible"
+   },
+   "example": {
+    "fr": "il faut chercher l’odeur pour la sentir",
+    "en": "you have to search for the odour to smell it"
+   },
+   "regionOf": "https://w3id.org/ppp/odourIntensity",
+   "broader": "https://w3id.org/ppp/odourIntensity"
+  },
+  {
+   "@id": "https://w3id.org/ppp/odourIntensity/distinct",
+   "@type": "skos:Concept",
+   "inScheme": "https://w3id.org/ppp/",
+   "skos:notation": "distinct",
+   "prefLabel": {
+    "fr": "intensité de l’odeur : nette",
+    "en": "odour intensity: distinct"
+   },
+   "hiddenLabel": {
+    "fr": "nette",
+    "en": "distinct"
+   },
+   "example": {
+    "fr": "on sent l’odeur sans la chercher",
+    "en": "you smell the odour without searching for it"
+   },
+   "regionOf": "https://w3id.org/ppp/odourIntensity",
+   "broader": "https://w3id.org/ppp/odourIntensity"
+  },
+  {
+   "@id": "https://w3id.org/ppp/odourIntensity/strong",
+   "@type": "skos:Concept",
+   "inScheme": "https://w3id.org/ppp/",
+   "skos:notation": "strong",
+   "prefLabel": {
+    "fr": "intensité de l’odeur : forte",
+    "en": "odour intensity: strong"
+   },
+   "hiddenLabel": {
+    "fr": "forte",
+    "en": "strong"
+   },
+   "example": {
+    "fr": "l’odeur s’impose dès qu’on approche (un cuir neuf, un savon parfumé)",
+    "en": "the odour is unmistakable as soon as you come near (new leather, a scented soap)"
+   },
+   "regionOf": "https://w3id.org/ppp/odourIntensity",
+   "broader": "https://w3id.org/ppp/odourIntensity"
   },
   {
    "@id": "https://w3id.org/ppp/outlineIndentation",
@@ -7417,6 +7643,25 @@
     "https://w3id.org/ppp/pitchClarity",
     "https://w3id.org/ppp/perceivedPitch"
    ]
+  },
+  {
+   "@id": "https://w3id.org/ppp/famille/odorat",
+   "@type": "skos:Collection",
+   "prefLabel": {
+    "fr": "Odorat",
+    "en": "Smell"
+   },
+   "scopeNote": {
+    "fr": [
+     "Ce qu’on remarque en sentant un objet de près. Une photo ne dit rien de l’odeur : on décrit à la place l’objet et les conditions dans lesquelles on l’a senti. Cette famille est en préparation : une fiche y est publiée, l’intensité de l’odeur.",
+     "Famille de lecture : aide à s’orienter, pas une hiérarchie."
+    ],
+    "en": [
+     "What you notice when you smell an object up close. A photo says nothing about smell: instead, the object is described, along with the conditions in which it was smelled. This family is in preparation: one entry is published so far, odour intensity.",
+     "Reading family: a guide for orientation, not a hierarchy."
+    ]
+   },
+   "member": "https://w3id.org/ppp/odourIntensity"
   }
  ]
 }

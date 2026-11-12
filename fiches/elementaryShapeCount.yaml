@@ -1,5 +1,7 @@
 # Fiche de type PPP — ppp:elementaryShapeCount — format : PPP_FicheType.md (spec v2.8)
 # Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, remarque (résumés des modifications, non compté comme champ), note_base, note_conditions, note_tolerance, bloque_par.
+# Série 107 (2026-11-11) : épisodes proposés « à réaliser » ajoutés (episodes_a_realiser) ; fiche toujours bloquée par T37.
+# Série 107 bis (2026-11-11) : a_relire complété (episodes_a_realiser) ; manques et bloque_par (question 1) complétés, sans trancher.
 id: ppp:elementaryShapeCount
 label_fr: nombre de formes élémentaires nécessaires
 label_en: number of elementary shapes needed
@@ -200,16 +202,232 @@ modifie_en: []
 remplace_par: []
 source_de_la_fiche: 'crash test 03 (docs/crash-test-03-annotation-deux-objets.md §4, proposition de texte) ; décisions de l’éditeur du projet du 2026-10-11 (T37 : formes répétées et percements comptent,
   « plusieurs mètres » = room) ; fiche créée le 2026-10-11 (série 9) par l’équipe, sur décision relayée par la coordination ; texte révisé de T37'
+# Série 107 (2026-11-11) : épisodes proposés « à réaliser » (spec X17 ; décision de l’éditeur du projet du 2026-11-02 pour le principe ; détail du lot et codage des facettes : choix de relecture) ;
+# ni épreuve faite ni accord entre observateurs ; ni observateur, ni date, ni résultat. Repris de la proposition de lot 10 (six épisodes sur huit) ; ids renumérotés ; la fiche reste bloquée par T37.
+episodes_a_realiser:
+- id: ppp-a:ep-elementaryShapeCount-01
+  realisation: a_realiser
+  region_attendue: oneShape
+  rang_exemplaire: principal
+  objet: sphère de pierre précolombienne du Diquís, exposée in situ au musée du site archéologique Finca 6 (Palmar Sur, Osa, Costa Rica) ; photographie de Diego Padilla Durán y Mariordo (Mario Roberto Durán
+    Ortiz), sur Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Esfera_de_Piedra_Museo_Sitio_Finca_6_CR_12_2020.jpg), licence CC BY-SA 4.0, « Own work » ; licence lue par l’API de Commons le
+    2026-11-02 et revérifiée le 2026-11-11
+  objet_en: pre-Columbian Diquís stone sphere, displayed in situ at the Finca 6 archaeological site museum (Palmar Sur, Osa, Costa Rica); photograph by Diego Padilla Durán y Mariordo (Mario Roberto Durán
+    Ortiz), on Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Esfera_de_Piedra_Museo_Sitio_Finca_6_CR_12_2020.jpg), CC BY-SA 4.0 licence, “Own work”; licence read through the Commons API on
+    2026-11-02 and checked again on 2026-11-11
+  preparation: afficher l’image citée, en plein écran ; ne rien recadrer
+  preparation_en: display the cited image full screen; no cropping
+  consigne: Regardez l’objet en entier, comme vu à quelques mètres. Pour le reconstruire en volume avec des formes simples (cube, sphère, cylindre…), en faudrait-il une, quelques-unes (deux à cinq), beaucoup
+    (six à une vingtaine, qu’on peut encore compter), ou plus qu’on ne peut en compter ? Chaque forme répétée compte une fois de plus ; chaque trou ou creux compte comme une forme s’il se voit un à un ;
+    sinon c’est de la texture. Ne comptez ni les motifs imprimés ni les couleurs.
+  consigne_en: Look at the whole object, as seen from a few metres. To rebuild it in volume with simple shapes (cube, sphere, cylinder…), would you need one, a few (two to five), many (six to about twenty,
+    still countable), or more than you can count? Each repeated shape counts once more; each hole or hollow counts as a shape if seen one by one; otherwise it is texture. Do not count printed patterns or
+    colours.
+  conditions:
+    presentation: screen
+    lumiere: unknown
+    distance: room
+    angle: oblique
+    duree: exam
+    yeux: ouverts
+    yeux_en: open
+    note: 'photographie de l’objet entier, affichée en plein écran, sans recadrage, sur un écran d’au moins 30 cm de diagonale (`screen`) ; objet jugé comme vu à quelques mètres (`room`, décision de l’éditeur
+      du projet sur « plusieurs mètres », T37), à l’échelle de l’image ; 30 s au plus (`exam`) ; lumière de la prise de vue non dite (`unknown`) ; répertoire de formes non fermé (T37, question 1) : la consigne
+      reprend les exemples de la question attentionnelle, sans liste ; codage des facettes : choix de relecture (2026-11-11) ; vue d’en haut, oblique (`oblique`) ; porteur : la sphère seule, pas la fosse
+      qui l’entoure'
+    note_en: 'photograph of the whole object, shown full screen, uncropped, on a screen at least 30 cm across (`screen`); object judged as seen from a few metres (`room`, project editor’s decision on “several
+      metres”, T37), at the scale of the image; 30 s at most (`exam`); lighting of the shot not given (`unknown`); shape repertoire not closed (T37, question 1): the instruction repeats the examples of
+      the attentional question, without a list; facet coding: review choice (2026-11-11); seen from above, at an angle (`oblique`); bearer: the sphere alone, not the pit around it'
+  doute: non
+  note: 'repère de la fiche : « un galet sphérique » ; une sphère reste une forme (identité de la fiche) ; mention de la licence : « Esfera de Piedra Museo Sitio Finca 6 CR 12 2020 », Diego Padilla Durán
+    y Mariordo (Mario Roberto Durán Ortiz), Wikimedia Commons, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)'
+  note_en: 'reference point of the entry: “a spherical pebble”; a sphere stays one shape (identity of the entry); licence credit: “Esfera de Piedra Museo Sitio Finca 6 CR 12 2020”, Diego Padilla Durán y
+    Mariordo (Mario Roberto Durán Ortiz), Wikimedia Commons, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)'
+  texte_fr: 'Une sphère de pierre du Diquís : une forme (prédiction, à éprouver).'
+  texte_en: 'A Diquís stone sphere: one shape (prediction, to be tested).'
+- id: ppp-a:ep-elementaryShapeCount-02
+  realisation: a_realiser
+  region_attendue: beyondCount
+  rang_exemplaire: principal
+  objet: façade ouest de la cathédrale de Cologne, avec ses deux tours, vue de face, sans échafaudage (2022) ; photographie de Raimond Spekking, sur Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Kölner_Dom_-_Westfassade_2022_ohne_Gerüst-0968.jpg),
+    licence CC BY-SA 4.0, « Own work » ; licence lue par l’API de Commons le 2026-11-02 et revérifiée le 2026-11-11
+  objet_en: west façade of Cologne Cathedral, with its two towers, seen from the front, without scaffolding (2022); photograph by Raimond Spekking, on Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Kölner_Dom_-_Westfassade_2022_ohne_Gerüst-0968.jpg),
+    CC BY-SA 4.0 licence, “Own work”; licence read through the Commons API on 2026-11-02 and checked again on 2026-11-11
+  preparation: afficher l’image citée, en plein écran ; ne rien recadrer
+  preparation_en: display the cited image full screen; no cropping
+  consigne: Regardez l’objet en entier, comme vu à quelques mètres. Pour le reconstruire en volume avec des formes simples (cube, sphère, cylindre…), en faudrait-il une, quelques-unes (deux à cinq), beaucoup
+    (six à une vingtaine, qu’on peut encore compter), ou plus qu’on ne peut en compter ? Chaque forme répétée compte une fois de plus ; chaque trou ou creux compte comme une forme s’il se voit un à un ;
+    sinon c’est de la texture. Ne comptez ni les motifs imprimés ni les couleurs.
+  consigne_en: Look at the whole object, as seen from a few metres. To rebuild it in volume with simple shapes (cube, sphere, cylinder…), would you need one, a few (two to five), many (six to about twenty,
+    still countable), or more than you can count? Each repeated shape counts once more; each hole or hollow counts as a shape if seen one by one; otherwise it is texture. Do not count printed patterns or
+    colours.
+  conditions:
+    presentation: screen
+    lumiere: unknown
+    distance: room
+    angle: frontal
+    duree: exam
+    yeux: ouverts
+    yeux_en: open
+    note: 'photographie de l’objet entier, affichée en plein écran, sans recadrage, sur un écran d’au moins 30 cm de diagonale (`screen`) ; objet jugé comme vu à quelques mètres (`room`, décision de l’éditeur
+      du projet sur « plusieurs mètres », T37), à l’échelle de l’image ; 30 s au plus (`exam`) ; lumière de la prise de vue non dite (`unknown`) ; répertoire de formes non fermé (T37, question 1) : la consigne
+      reprend les exemples de la question attentionnelle, sans liste ; codage des facettes : choix de relecture (2026-11-11) ; vue de face (`frontal`) ; porteur : la façade et ses deux tours ; les passants,
+      véhicules et panneaux du premier plan ne comptent pas ; « à quelques mètres » s’entend ici à l’échelle de l’image, la façade entière dans le cadre'
+    note_en: 'photograph of the whole object, shown full screen, uncropped, on a screen at least 30 cm across (`screen`); object judged as seen from a few metres (`room`, project editor’s decision on “several
+      metres”, T37), at the scale of the image; 30 s at most (`exam`); lighting of the shot not given (`unknown`); shape repertoire not closed (T37, question 1): the instruction repeats the examples of
+      the attentional question, without a list; facet coding: review choice (2026-11-11); seen from the front (`frontal`); bearer: the façade and its two towers; passers-by, vehicles and signs in the foreground
+      do not count; “a few metres” here means the scale of the image, the whole façade in frame'
+  doute: non
+  note: 'pinacles, gables, fenêtres et crochets répétés, en nombre bien au-delà de vingt ; mention de la licence : « Kölner Dom - Westfassade 2022 ohne Gerüst-0968 », Raimond Spekking, Wikimedia Commons,
+    CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)'
+  note_en: 'pinnacles, gables, windows and crockets repeated, far beyond twenty; licence credit: “Kölner Dom - Westfassade 2022 ohne Gerüst-0968”, Raimond Spekking, Wikimedia Commons, CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0)'
+  texte_fr: 'La façade ouest de la cathédrale de Cologne : plus de formes qu’on ne peut en compter (prédiction, à éprouver).'
+  texte_en: 'The west façade of Cologne Cathedral: more shapes than one can count (prediction, to be tested).'
+- id: ppp-a:ep-elementaryShapeCount-03
+  realisation: a_realiser
+  region_attendue: oneShape
+  rang_exemplaire: second
+  objet: un galet rond et lisse de 4 à 6 cm, sans fissure ni trou
+  objet_en: a smooth round pebble of 4 to 6 cm, without crack or hole
+  preparation: choisir un galet presque sphérique ; le laver, le sécher ; noter ses dimensions et sa masse (balance de cuisine)
+  preparation_en: choose an almost spherical pebble; wash and dry it; note its dimensions and mass (kitchen scale)
+  consigne: Les yeux fermés, explorez l’objet des deux mains, sans le casser ni le tordre, pendant 30 secondes au plus. Pour le reconstruire en volume avec des formes simples (cube, sphère, cylindre…),
+    en faudrait-il une, quelques-unes (deux à cinq), beaucoup (six à une vingtaine, qu’on peut encore compter), ou plus qu’on ne peut en compter ? Chaque forme répétée compte une fois de plus ; chaque trou
+    compte comme une forme.
+  consigne_en: With your eyes closed, explore the object with both hands, without breaking or bending it, for 30 seconds at most. To rebuild it in volume with simple shapes (cube, sphere, cylinder…), would
+    you need one, a few (two to five), many (six to about twenty, still countable), or more than you can count? Each repeated shape counts once more; each hole counts as a shape.
+  conditions:
+    presentation: inHand
+    geste: varied
+    temperature_objet: ambient
+    distance: contact
+    duree: exam
+    yeux: fermés
+    yeux_en: closed
+    note: 'objet posé dans les mains par une autre personne (`inHand`, `contact`) ; exploration libre des deux mains, sans casser ni tordre (`varied`) ; objet dans la pièce depuis au moins une heure (`ambient`)
+      ; 30 s au plus (`exam`) ; épreuve séparée de la vue, comptes jamais additionnés (T22) ; répertoire de formes non fermé (T37, question 1) : la consigne reprend les exemples de la question attentionnelle,
+      sans liste ; codage des facettes : choix de relecture (2026-11-11)'
+    note_en: 'object placed in the hands by another person (`inHand`, `contact`); free exploration with both hands, without breaking or bending (`varied`); object in the room for at least one hour (`ambient`);
+      30 s at most (`exam`); test separate from sight, counts never added together (T22); shape repertoire not closed (T37, question 1): the instruction repeats the examples of the attentional question,
+      without a list; facet coding: review choice (2026-11-11)'
+  doute: non
+  note: 'repère de la fiche : « un galet sphérique »'
+  note_en: 'reference point of the entry: “a spherical pebble”'
+  texte_fr: 'Un galet rond, exploré yeux fermés : une forme (prédiction, à éprouver).'
+  texte_en: 'A round pebble, explored with eyes closed: one shape (prediction, to be tested).'
+- id: ppp-a:ep-elementaryShapeCount-04
+  realisation: a_realiser
+  region_attendue: fewShapes
+  objet: un gros bouton de vêtement plat et rond, à quatre trous, de 2,5 à 3 cm de diamètre, sans relief ni gravure
+  objet_en: a large flat round clothing button with four holes, 2.5 to 3 cm across, with no relief or engraving
+  preparation: choisir un bouton à quatre trous bien ouverts (on doit pouvoir y glisser la pointe d’un cure-dent) ; noter diamètre et matière
+  preparation_en: choose a button with four clearly open holes (a toothpick tip must pass); note diameter and material
+  consigne: Les yeux fermés, explorez l’objet des deux mains, sans le casser ni le tordre, pendant 30 secondes au plus. Pour le reconstruire en volume avec des formes simples (cube, sphère, cylindre…),
+    en faudrait-il une, quelques-unes (deux à cinq), beaucoup (six à une vingtaine, qu’on peut encore compter), ou plus qu’on ne peut en compter ? Chaque forme répétée compte une fois de plus ; chaque trou
+    compte comme une forme.
+  consigne_en: With your eyes closed, explore the object with both hands, without breaking or bending it, for 30 seconds at most. To rebuild it in volume with simple shapes (cube, sphere, cylinder…), would
+    you need one, a few (two to five), many (six to about twenty, still countable), or more than you can count? Each repeated shape counts once more; each hole counts as a shape.
+  conditions:
+    presentation: inHand
+    geste: varied
+    temperature_objet: ambient
+    distance: contact
+    duree: exam
+    yeux: fermés
+    yeux_en: closed
+    note: 'objet posé dans les mains par une autre personne (`inHand`, `contact`) ; exploration libre des deux mains, sans casser ni tordre (`varied`) ; objet dans la pièce depuis au moins une heure (`ambient`)
+      ; 30 s au plus (`exam`) ; épreuve séparée de la vue, comptes jamais additionnés (T22) ; répertoire de formes non fermé (T37, question 1) : la consigne reprend les exemples de la question attentionnelle,
+      sans liste ; codage des facettes : choix de relecture (2026-11-11) ; ne pas avaler ; objet tenu au-dessus d’une table'
+    note_en: 'object placed in the hands by another person (`inHand`, `contact`); free exploration with both hands, without breaking or bending (`varied`); object in the room for at least one hour (`ambient`);
+      30 s at most (`exam`); test separate from sight, counts never added together (T22); shape repertoire not closed (T37, question 1): the instruction repeats the examples of the attentional question,
+      without a list; facet coding: review choice (2026-11-11); do not swallow; object held above a table'
+  doute: oui
+  motif_doute: 'compte attendu : un disque et quatre trous = 5, à la limite haute de « quelques formes » (seuil fixé avant E1, provisoire) ; de petits trous peuvent échapper au toucher'
+  motif_doute_en: 'expected count: one disc and four holes = 5, at the upper limit of “a few shapes” (threshold fixed before E1, provisional); small holes may escape touch'
+  texte_fr: 'Un bouton à quatre trous, exploré yeux fermés : quelques formes (prédiction, à éprouver).'
+  texte_en: 'A four-hole button, explored with eyes closed: a few shapes (prediction, to be tested).'
+- id: ppp-a:ep-elementaryShapeCount-05
+  realisation: a_realiser
+  region_attendue: manyShapes
+  objet: un peigne droit en bois, sans manche, de 12 à 15 dents espacées d’au moins 3 mm, sans inscription
+  objet_en: a straight wooden comb without handle, 12 to 15 teeth at least 3 mm apart, no inscription
+  preparation: compter les dents avant (préparateur) et noter le nombre ; choisir un peigne aux dents régulières
+  preparation_en: count the teeth beforehand (preparer) and note the number; choose a comb with regular teeth
+  consigne: Les yeux fermés, explorez l’objet des deux mains, sans le casser ni le tordre, pendant 30 secondes au plus. Pour le reconstruire en volume avec des formes simples (cube, sphère, cylindre…),
+    en faudrait-il une, quelques-unes (deux à cinq), beaucoup (six à une vingtaine, qu’on peut encore compter), ou plus qu’on ne peut en compter ? Chaque forme répétée compte une fois de plus ; chaque trou
+    compte comme une forme.
+  consigne_en: With your eyes closed, explore the object with both hands, without breaking or bending it, for 30 seconds at most. To rebuild it in volume with simple shapes (cube, sphere, cylinder…), would
+    you need one, a few (two to five), many (six to about twenty, still countable), or more than you can count? Each repeated shape counts once more; each hole counts as a shape.
+  conditions:
+    presentation: inHand
+    geste: varied
+    temperature_objet: ambient
+    distance: contact
+    duree: exam
+    yeux: fermés
+    yeux_en: closed
+    note: 'objet posé dans les mains par une autre personne (`inHand`, `contact`) ; exploration libre des deux mains, sans casser ni tordre (`varied`) ; objet dans la pièce depuis au moins une heure (`ambient`)
+      ; 30 s au plus (`exam`) ; épreuve séparée de la vue, comptes jamais additionnés (T22) ; répertoire de formes non fermé (T37, question 1) : la consigne reprend les exemples de la question attentionnelle,
+      sans liste ; codage des facettes : choix de relecture (2026-11-11)'
+    note_en: 'object placed in the hands by another person (`inHand`, `contact`); free exploration with both hands, without breaking or bending (`varied`); object in the room for at least one hour (`ambient`);
+      30 s at most (`exam`); test separate from sight, counts never added together (T22); shape repertoire not closed (T37, question 1): the instruction repeats the examples of the attentional question,
+      without a list; facet coding: review choice (2026-11-11)'
+  doute: non
+  note: 'compte attendu : le dos et chaque dent (forme répétée), 13 à 16 formes, qu’on peut encore compter'
+  note_en: 'expected count: the back and each tooth (repeated shape), 13 to 16 shapes, still countable'
+  texte_fr: 'Un peigne de 12 à 15 dents, exploré yeux fermés : beaucoup de formes (prédiction, à éprouver).'
+  texte_en: 'A comb with 12 to 15 teeth, explored with eyes closed: many shapes (prediction, to be tested).'
+- id: ppp-a:ep-elementaryShapeCount-06
+  realisation: a_realiser
+  region_attendue: beyondCount
+  rang_exemplaire: second
+  objet: une pomme de pin sèche et ouverte, de 6 à 10 cm, entière
+  objet_en: a dry, open pine cone, 6 to 10 cm, whole
+  preparation: choisir une pomme de pin sans écaille cassée ; la secouer pour ôter graines et débris ; noter sa longueur
+  preparation_en: choose a cone with no broken scale; shake it to remove seeds and debris; note its length
+  consigne: Les yeux fermés, explorez l’objet des deux mains, sans le casser ni le tordre, pendant 30 secondes au plus. Pour le reconstruire en volume avec des formes simples (cube, sphère, cylindre…),
+    en faudrait-il une, quelques-unes (deux à cinq), beaucoup (six à une vingtaine, qu’on peut encore compter), ou plus qu’on ne peut en compter ? Chaque forme répétée compte une fois de plus ; chaque trou
+    compte comme une forme.
+  consigne_en: With your eyes closed, explore the object with both hands, without breaking or bending it, for 30 seconds at most. To rebuild it in volume with simple shapes (cube, sphere, cylinder…), would
+    you need one, a few (two to five), many (six to about twenty, still countable), or more than you can count? Each repeated shape counts once more; each hole counts as a shape.
+  conditions:
+    presentation: inHand
+    geste: varied
+    temperature_objet: ambient
+    distance: contact
+    duree: exam
+    yeux: fermés
+    yeux_en: closed
+    note: 'objet posé dans les mains par une autre personne (`inHand`, `contact`) ; exploration libre des deux mains, sans casser ni tordre (`varied`) ; objet dans la pièce depuis au moins une heure (`ambient`)
+      ; 30 s au plus (`exam`) ; épreuve séparée de la vue, comptes jamais additionnés (T22) ; répertoire de formes non fermé (T37, question 1) : la consigne reprend les exemples de la question attentionnelle,
+      sans liste ; codage des facettes : choix de relecture (2026-11-11) ; écailles un peu piquantes : explorer sans serrer'
+    note_en: 'object placed in the hands by another person (`inHand`, `contact`); free exploration with both hands, without breaking or bending (`varied`); object in the room for at least one hour (`ambient`);
+      30 s at most (`exam`); test separate from sight, counts never added together (T22); shape repertoire not closed (T37, question 1): the instruction repeats the examples of the attentional question,
+      without a list; facet coding: review choice (2026-11-11); scales slightly prickly: explore without squeezing'
+  doute: non
+  note: écailles nombreuses et irrégulières, au-delà de ce qu’on peut compter au toucher en 30 s
+  note_en: many irregular scales, beyond what can be counted by touch in 30 s
+  texte_fr: 'Une pomme de pin, explorée yeux fermés : plus de formes qu’on ne peut en compter (prédiction, à éprouver).'
+  texte_en: 'A pine cone, explored with eyes closed: more shapes than one can count (prediction, to be tested).'
 manques:
-- 'exemplaires (aucun ; à renseigner : objets publics vérifiés, un épisode par objet, conditions déclarées)'
+- 'exemplaires (aucun) ; six épisodes proposés « à réaliser » (episodes_a_realiser) : deux en vue, sur des photos de Wikimedia Commons sous licence vérifiée (CC BY-SA 4.0), quatre au toucher, sur des objets
+  décrits ; un par région au moins, « quelques formes » seulement au toucher et marqué `doute: oui` ; pour la vue, un épisode à réaliser ne tient pas lieu d’exemplaire (X17 : toucher et odorat) ; rien ne
+  compte tant que la fiche est bloquée (T37)'
+- '« quelques formes » : aucun épisode en vue, et au toucher un seul épisode, douteux (le bouton à quatre trous, cinq formes, au seuil) ; il faut un objet nettement à trois ou quatre formes, par exemple
+  un tabouret à trois pieds et à assise ronde ; la table à quatre pieds du repère donne cinq formes et tombe sur le même seuil (choix de relecture (2026-11-11))'
+- 'une fois T37 tranchée, les épisodes de vue 01 et 02 devront devenir des exemplaires cités dans fiches/exemplaires.yaml : X17 ne fait tenir lieu d’exemplaire un épisode à réaliser que pour le toucher
+  et l’odorat (choix de relecture (2026-11-11))'
 - répertoire fermé des formes simples (question 1)
 - seuils numériques entre régions et tolérance numérique de l’épreuve
 - cq_couvertes
 bloque_par:
-- 'T37, question 1 : une liste fermée de formes simples est décidée (décision de l’éditeur du projet du 2026-10-14, série 48) ; la liste reste à établir, après une recherche de l’état de l’art (QUESTIONS-A-TRANCHER.md, T37)'
+- 'T37, question 1 : une liste fermée de formes simples est décidée (décision de l’éditeur du projet du 2026-10-14, série 48) ; la liste reste à établir, après une recherche de l’état de l’art (QUESTIONS-A-TRANCHER.md,
+  T37) ; le lot 10 propose deux formes candidates de plus, le tore et le cylindre à axe courbe ; les intégrer à la question 1 attend la lecture de Biederman (1987) [[biederman1987]] (rien n’est tranché
+  ; choix de relecture (2026-11-11))'
 - 'T37, question 4 (« formes et sous-formes » : niveaux ou compte à plat ? lien avec partNesting) : se traite avec la liste fermée'
 - 'T37, question 5 (deux sources de « plus de formes » : un type ou deux ?) : ouverte, aucune recommandation'
-- 'T37, question 6 (base de dépendance) : si la liste fermée est intégrée à la définition, le type peut devenir formel, sous la réserve du §0.3 (compter des formes suppose de voir leurs bords) ; sinon la fiche reste bloquée'
+- 'T37, question 6 (base de dépendance) : si la liste fermée est intégrée à la définition, le type peut devenir formel, sous la réserve du §0.3 (compter des formes suppose de voir leurs bords) ; sinon la
+  fiche reste bloquée'
 relecture_explicative:
   date: '2026-10-11'
   champs:
@@ -238,6 +456,7 @@ relecture_explicative:
     (voir `remarque` de la fiche) ; plus rien à relire
 a_relire:
 - mesure
+- episodes_a_realiser
 remarque:
 - 'série 12 : references modifiées (biederman1987.reprend ; hoffman_richards1984 : reprend « rien que le titre » ; kaufman1949.ne_reprend_pas)'
 - 'série 12 (corrections de la relecture explicative) : label_court, définition, contre_exemple, note_conditions, condition_NA, espace_valeurs.regions.oneShape.repere, relations.note (ppp:perceivedSize),
@@ -247,4 +466,8 @@ remarque:
 - 'série 15 : levées validées (relecture_explicative.champs) ; E3 reformulé (contour = netteté du bord) ; note_base complétée (« répertoire » expliqué, E3 mis en défaut, base à compléter, T37 question 6)
   ; à relire'
 - 'série 16 : enonces_testables validé (E3), archivé dans relecture_explicative.champs ; note_base : « base à revoir (… la compléter ou n’en déclarer aucune) » ; à relire'
-- 'série 17 : note_base validée, archivée dans relecture_explicative.champs (19 champs) ; a_relire vide'
+- 'série 17 : note_base validée, archivée dans relecture_explicative.champs (19 champs) ; a_relire : mesure, episodes_a_realiser (état au 2026-11-11 ; choix de relecture (2026-11-11))'
+- 'série 107 (2026-11-11) : episodes_a_realiser ajoutés (six épisodes à réaliser : deux en vue, quatre au toucher) ; manques (exemplaires) mis à jour ; a_relire et bloque_par inchangés (choix de relecture
+  (2026-11-11))'
+- 'série 107 bis (2026-11-11) : a_relire complété (episodes_a_realiser, comme le veut PPP_FicheType) ; remarque de la série 17 corrigée ; manques : « quelques formes » sans épisode net, épisodes de vue
+  à convertir en exemplaires après T37 ; bloque_par, question 1 : tore et cylindre à axe courbe proposés, sans trancher (choix de relecture (2026-11-11))'

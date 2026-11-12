@@ -182,7 +182,7 @@ Une nouvelle fiche porte en `a_relire` tous ses champs en langage courant et ses
 
 ### Substituts d’exemplaires (spec X17, série 90)
 
-Deux champs facultatifs, ajoutés par choix de relecture (2026-11-02), pour appliquer les décisions de l’éditeur du projet (*à relire*). Ils comptent pour les paliers de publication seulement si la fiche est relue (rien en `a_relire`) ; leurs textes se relisent avec elle (`a_relire: [episodes_a_realiser]`, `[espace_valeurs]`).
+Deux champs facultatifs, ajoutés par choix de relecture (2026-11-02), pour appliquer les décisions de l’éditeur du projet (*à relire*). Ils comptent pour les paliers de publication seulement si la fiche est relue (rien en `a_relire`) ; leurs textes se relisent avec elle (`a_relire: [episodes_a_realiser]`, `[espace_valeurs]`). Un épisode ajouté à une fiche publiée se relit avec la série qui l’ajoute : `a_relire` reste vide, et une ligne de `relecture_explicative` le dit (choix de relecture (2026-11-11)).
 
 ```
 episodes_a_realiser:          # toucher, odorat ; ouïe à défaut d'enregistrement cité sous licence libre

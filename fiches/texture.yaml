@@ -1,5 +1,8 @@
 # Fiche de type PPP — ppp:texture — format : PPP_FicheType.md (spec v2.4)
 # Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_joint, avertissement_label, note_categories, note_reference, note_dimension, note_conditions, note_echelle, note_porteur, note_base, bloque_par, note_label_alternatif.
+# Série 108 (2026-11-11) : un épisode proposé « à réaliser » au toucher ajouté (episodes_a_realiser) ; a_relire reste vide, fiche publiée.
+# Série 108 bis (2026-11-11) : consigne de l’épisode au toucher : phrase qui ne définissait que la région attendue retirée (choix de relecture (2026-11-11)).
+# Série 109 (2026-11-11) : relecture_explicative : épisodes ajoutés le 2026-11-11 relus avec leur ajout (choix de relecture (2026-11-11)).
 id: ppp:texture
 label_fr: texture
 label_en: texture
@@ -238,6 +241,43 @@ modifie_en:
 - 2.3.2
 - '2.5'
 remplace_par: []
+# Série 108 (2026-11-11) : épisode proposé « à réaliser » au toucher (spec X17 ; décision de l’éditeur du projet du 2026-11-02 pour le principe ; détail et codage des facettes : choix de relecture (2026-11-11)) ;
+# ni épreuve faite ni accord entre observateurs ; ni observateur, ni date, ni résultat. Repris de la proposition de lot 11 (épisode au toucher seulement ; les candidats en vue relèvent de fiches/exemplaires.yaml).
+episodes_a_realiser:
+- id: ppp-a:ep-texture-01
+  realisation: a_realiser
+  region_attendue: fine
+  objet: feuille de papier à dessin à grain fin, blanche, sans impression (objet ordinaire, sans marque)
+  objet_en: sheet of fine-grain white drawing paper, unprinted (ordinary, unbranded object)
+  preparation: poser la feuille à plat sur une table ; la personne testée a les yeux fermés
+  preparation_en: lay the sheet flat on a table; the participant has eyes closed
+  consigne: Les yeux fermés, effleurez la surface du bout des doigts, sans appuyer, dans plusieurs sens, pendant 30 secondes au plus. Sous les doigts, la surface paraît-elle lisse, ou ses reliefs sont-ils
+    fins, moyens ou gros ? Ne jugez ni la tiédeur ni la souplesse du papier.
+  consigne_en: With your eyes closed, brush the surface with your fingertips, without pressing, in several directions, for 30 seconds at most. Under the fingers, does the surface feel smooth, or are its
+    reliefs fine, medium or coarse? Judge neither the warmth nor the suppleness of the paper.
+  conditions:
+    presentation: tableTop
+    geste: lateralMotion
+    temperature_objet: ambient
+    distance: contact
+    duree: exam
+    yeux: fermés (ou bandés)
+    yeux_en: closed (or blindfolded)
+    note: 'feuille posée à plat sur une table (`tableTop`) ; la personne testée a les yeux fermés (ou bandés) ; bout des doigts, sans appuyer, dans plusieurs sens (`lateralMotion`) ; objet dans la pièce
+      depuis au moins une heure (`ambient`) ; 30 s au plus (`exam`) ; épreuve au toucher seul, séparée de la vue (T22) ; codage des facettes : choix de relecture (2026-11-11) ; papier à grain fin, pas du
+      papier à grain torchon (gros grain) ni du papier glacé'
+    note_en: 'sheet laid flat on a table (`tableTop`); the participant has eyes closed (or blindfolded); fingertips, without pressing, in several directions (`lateralMotion`); object in the room for at
+      least one hour (`ambient`); 30 s at most (`exam`); test by touch alone, separate from sight (T22); facet coding: review choice (2026-11-11); fine-grain paper, not rough (cold-press torchon) nor glossy
+      paper'
+  doute: oui
+  motif_doute: 'un papier à grain très fin peut se sentir lisse sous les doigts : la limite entre « lisse » et « fine » n’est pas fixée au toucher'
+  motif_doute_en: 'very fine-grain paper may feel smooth under the fingers: the touch boundary between “smooth” and “fine” is not set'
+  texte_fr: 'Une feuille de papier à dessin à grain fin, au toucher : texture fine (prédiction, à éprouver).'
+  texte_en: 'A sheet of fine-grain drawing paper, by touch: fine texture (prediction, to be tested).'
+  note: 'repère de la fiche : « un papier à dessin » ; la consigne du lot mêlait la vue et le toucher (« à la vue, ou sous la main ») alors que les yeux sont fermés : elle est réécrite pour le toucher seul
+    (choix de relecture (2026-11-11))'
+  note_en: 'reference point of the entry: “a drawing paper”; the instruction of the proposal mixed sight and touch (“by sight, or by touch”) while the eyes are closed: it is rewritten for touch alone (review
+    choice (2026-11-11))'
 a_relire: []
 relecture_explicative:
   date: '2026-10-10'
@@ -248,6 +288,7 @@ relecture_explicative:
   - exemplaires
   - etat_de_l_art (série 6)
   - references (série 6)
+  - 'episodes_a_realiser (épisodes ajoutés le 2026-11-11, relus avec leur ajout) : relus le 2026-11-11 (choix de relecture (2026-11-11))'
   a_reconfirmer: []
 manques:
 - région « fine » sans exemplaire

@@ -13,7 +13,7 @@
 - **Rôles** : *fonde* (le type ou la structure en dépend), *alimente* (fournit des distinctions, des repères ou des alignements repris), *discute* (position discutée ou en partie écartée), *contraste* (notion voisine dont PPP se distingue, par exemple une norme de mesure).
 - Ce que PPP reprend ou non de chaque source est écrit dans les fiches (`references`, champs `reprend` et `ne_reprend_pas`). Ce document donne la vue par groupe.
 - Les références ont été limitées à des sources solides (2 à 6 par groupe). Une recherche sans résultat est notée « aucune source trouvée », avec la date.
-- **Ancres stables** (spec §9.7 P, point 4) : chaque groupe a une ancre `groupe-…`, posée par une balise `<a id="…"></a>` au-dessus de son titre ; une fiche y renvoie par `etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-…`. Les ancres ne changent pas quand le titre change. Liste : `groupe-texture` (texture et ses cousins), `groupe-couleur`, `groupe-forme` (forme et contour), `groupe-organisation`, `groupe-matiere` (reflets, transparence, profondeur dans la matière), `groupe-joint` (joint et assemblage), `groupe-etagement` (étagement en plans), `groupe-contrastes`, `groupe-toucher` (toucher : deux fiches propres publiées), `groupe-son` (son : cinq fiches publiées), `groupe-odorat` (odorat : fiches en préparation, aucune publiée), `groupe-gout` (goût en bouche, texture en bouche comprise : fiches en préparation, aucune publiée) ; hors groupes de types : `groupe-sources-generales`, `groupe-non-verifiees`, `groupe-spec` ; sous-sections : `brillance-categorisations`, `refs-2-5`, `mesures-couleur` (série 55), `mesures-matiere` (série 56), `mesures-forme` (série 57), `mesures-organisation` (série 58), `mesures-derniers-groupes` (série 59), `mesures-preparation` (série 61), `mesures-irregularite-interieur` (série 67) ; gouvernance des ontologies ouvertes : `groupe-gouvernance`. Les anciennes ancres (`texture-et-ses-cousins`, `couleur`, `forme-et-contour`, `organisation`, `matiere`, `joint-et-assemblage`, `etagement-en-plans`, `contrastes`) restent comme alias ; ne plus les employer.
+- **Ancres stables** (spec §9.7 P, point 4) : chaque groupe a une ancre `groupe-…`, posée par une balise `<a id="…"></a>` au-dessus de son titre ; une fiche y renvoie par `etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-…`. Les ancres ne changent pas quand le titre change. Liste : `groupe-texture` (texture et ses cousins), `groupe-couleur`, `groupe-forme` (forme et contour), `groupe-organisation`, `groupe-matiere` (reflets, transparence, profondeur dans la matière), `groupe-joint` (joint et assemblage), `groupe-etagement` (étagement en plans), `groupe-contrastes`, `groupe-toucher` (toucher : deux fiches propres publiées), `groupe-son` (son : cinq fiches publiées), `groupe-odorat` (odorat : une fiche publiée, une en préparation), `groupe-gout` (goût en bouche, texture en bouche comprise : fiches en préparation, aucune publiée) ; hors groupes de types : `groupe-sources-generales`, `groupe-non-verifiees`, `groupe-spec` ; sous-sections : `brillance-categorisations`, `refs-2-5`, `mesures-couleur` (série 55), `mesures-matiere` (série 56), `mesures-forme` (série 57), `mesures-organisation` (série 58), `mesures-derniers-groupes` (série 59), `mesures-preparation` (série 61), `mesures-irregularite-interieur` (série 67) ; gouvernance des ontologies ouvertes : `groupe-gouvernance`. Les anciennes ancres (`texture-et-ses-cousins`, `couleur`, `forme-et-contour`, `organisation`, `matiere`, `joint-et-assemblage`, `etagement-en-plans`, `contrastes`) restent comme alias ; ne plus les employer.
 
 <a id="groupe-texture"></a>
 <a id="texture-et-ses-cousins"></a>
@@ -930,9 +930,9 @@ Références de `famille-son-proposition.md` (document de travail, non publié),
 **Non vérifié** : la hauteur virtuelle (Fastl et Zwicker, ch. 5, hors des p. 111-112 lues ; non citée) ; les unités asper et vacil ; la correspondance du cran « hauteur approximative » avec cannelé / nodal / site et calibre (non vérifiée sur le texte ; aucune association faite) ; les licences des sons publiés hors des enregistrements CC0 cités plus haut (sur Freesound, certains sons portent une clause NC, non permissive au sens de X16 ; lecture des règles, pas un avis juridique).
 
 <a id="groupe-odorat"></a>
-## Odorat (famille en préparation ; deux fiches en préparation, aucune publiée)
+## Odorat (famille en préparation ; deux fiches : une publiée, une en préparation)
 
-Références de `famille-odorat-proposition.md` (document de travail, non publié), vérifiées le 2026-10-13 (même méthode et mêmes statuts de lecture que le groupe son). À la vérification, aucune fiche n'existait. État au 2026-11-02 (`fiches/familles.yaml`, `fiches/compte.py --paliers`) : la famille `odorat` est en préparation, avec deux fiches en préparation, aucune publiable : `ppp:odourIntensity` et `ppp:odourCharacter` ; les types en réserve n'ont pas de fiche.
+Références de `famille-odorat-proposition.md` (document de travail, non publié), vérifiées le 2026-10-13 (même méthode et mêmes statuts de lecture que le groupe son). À la vérification, aucune fiche n'existait. État au 2026-11-12 (`fiches/familles.yaml`, `fiches/compte.py --paliers`) : la famille `odorat` est en préparation, avec deux fiches : `ppp:odourIntensity`, publiée le 2026-11-12 (relecture explicative ; cinq épisodes à réaliser), et `ppp:odourCharacter`, en préparation ; les types en réserve n'ont pas de fiche.
 
 **Types proposés** : `odourIntensity` (intensité de l'odeur), `odourCharacter` (caractère de l'odeur ; alternatif : qualité de l'odeur) ; en réserve : `odourPersistence` (persistance de l'odeur), `odourReach` (portée de l'odeur), `odourPungency` (piquant au nez), `nasalCooling` (froid au nez ; EN *cooling in the nose*, alternatif *nasal cooling*).
 
@@ -944,10 +944,11 @@ Références de `famille-odorat-proposition.md` (document de travail, non publi�
 - Gross-Isseroff, R. & Lancet, D. (1988). Concentration-dependent changes of perceived odor quality. *Chemical Senses*, 13(2), 191–204. https://doi.org/10.1093/chemse/13.2.191
   - statut de lecture : *résumé seulement lu* ;
   - usage : `odourCharacter`, condition critique `distance` (alimente).
-- ISO/TS 16922:2022. *Natural gas — Odorization*. ISO. https://www.iso.org/standard/83835.html. Édition en vigueur : 3.1.3 caractère d’odeur, 3.1.4 intensité d’odeur, « magnitude of the perceived odour » (numéros relevés par la relecture ; définition 3.1.4 lue dans l’extrait public de la norme ; reste du texte non lu).
+- ISO/TS 16922:2022. *Natural gas — Odorization*. ISO. https://www.iso.org/standard/83835.html. Édition en vigueur : 3.1.3 caractère d’odeur, « distinctive and identifiable feature of an odour or flavour », 3.1.4 intensité d’odeur, « magnitude of the perceived odour » (définitions 3.1.2 à 3.1.6 lues dans l’extrait public de la norme, relu le 2026-11-12 ; reste du texte non lu).
+  - usage : `odourIntensity` (alimente : 3.1.4) ; `odourCharacter` (fonde le label : 3.1.3 « caractère d’odeur »).
 - ISO/TS 16922:2002. *Natural gas — Guidelines for odorizing gases*. ISO. https://www.iso.org/standard/31135.html. **Annulée** (2013, remplacée d’abord par ISO/TR 16922:2013, elle-même remplacée par l’édition 2022, d’après les pages de l’ISO) ; gardée pour ses définitions (3.1.2 et 3.1.3).
   - statut de lecture : *extraits* (échantillon public du texte de l’édition 2002 : 3.1.2 caractère d'odeur, 3.1.3 intensité d'odeur, 3.1.5 fatigue sensorielle, 3.2.1 degré olfactif) ;
-  - usage : `odourIntensity` (alimente) ; `odourCharacter` (fonde le label : 3.1.2 « caractère d'odeur ») ; échelle de Sales non reprise (contraste).
+  - usage : plus citée par aucune fiche depuis le 2026-11-12 (l’édition annulée n’est pas citée ; l’édition en vigueur de 2022 la remplace) ; notice gardée pour l’historique ; échelle de Sales non reprise.
 - Noble, A. C., Arnold, R. A., Masuda, B. M., Pecore, S. D., Schmidt, J. O. & Stern, P. M. (1984). Progress towards a standardized system of wine aroma terminology. American Journal of Enology and Viticulture, 35(2), 107–109. https://doi.org/10.5344/ajev.1984.35.2.107
   - statut de lecture : *métadonnées* (Crossref, auteurs compris) ;
   - usage : `odourCharacter` (alimente).
@@ -984,6 +985,15 @@ Références de `famille-odorat-proposition.md` (document de travail, non publi�
 - Dalton, P. & Wysocki, C. J. (1996). The nature and duration of adaptation following long-term odor exposure. Perception & Psychophysics, 58(5), 781–792. https://doi.org/10.3758/BF03213109
   - statut de lecture : *résumé* (PubMed, PMID 8710455) ;
   - usage : facette `exposition` proposée (fonde) ; adaptation écartée comme type (alimente).
+- ISO 5496:2006. *Sensory analysis — Methodology — Initiation and training of assessors in the detection and recognition of odours* (2e éd.), et Amd 1:2018. ISO. https://www.iso.org/standard/44247.html. Intitulé français : *Analyse sensorielle — Méthodologie — Initiation et entraînement des sujets à la détection et à la reconnaissance des odeurs*.
+  - statut de lecture : *non lu ; notice de l'éditeur et article 5.2 de l'extrait public seulement* (page de l'ISO lue le 2026-11-12 : édition 2 de 2006, confirmée en 2022, toujours en vigueur ; amendement 1 de 2018 ; article 5.2 : aucune autre épreuve d'odeur dans les 20 min qui précèdent, dix substances au plus par séance, recommandé) ;
+  - usage : `odourIntensity` (alimente : protocole des épisodes à réaliser).
+- VDI 3882 Blatt 1:1992. *Olfactometry — Determination of odour intensity* (*Olfaktometrie — Bestimmung der Geruchsintensität*). Düsseldorf : VDI. https://www.vdi.de/mitgliedschaft/vdi-richtlinien/details/vdi-3882-blatt-1-olfaktometrie-bestimmung-der-geruchsintensitaet
+  - statut de lecture : *non lu, notice éditeur seulement* (page de l'éditeur lue le 2026-11-12 : édition 1992-10, « vérifiée et confirmée » ; résumé : jugement, à l'olfactomètre, de la force de la sensation que donnent des échantillons au-dessus du seuil ; un projet de révision a paru en 2021-11) ; les degrés de l'échelle ne sont connus que par des sources secondaires ;
+  - usage : `odourIntensity` (contraste : échelle de mesure existante, sur des échantillons gazeux).
+- Green et al. (1996), *Evaluating the ‘Labeled Magnitude Scale’ for measuring sensations of taste and smell* : notice complète dans le groupe [goût en bouche](#groupe-gout), https://doi.org/10.1093/chemse/21.3.323
+  - statut de lecture : *résumé* (OpenAlex ; PubMed, PMID 8670711) ; auteurs, revue et pages vérifiés sur Crossref le 2026-11-12 ;
+  - usage : `odourIntensity` (contraste : échelle de notation de l'intensité perçue, éprouvée pour les odeurs).
 - Pellegrino, R., Sinding, C., de Wijk, R. A. & Hummel, T. (2017). Habituation and adaptation to odors in humans. Physiology & Behavior, 177, 13–19
   - statut de lecture : *extrait d'index* ;
   - usage : cran `minutes` de la facette `exposition` (piste : l'habituation est rapide).
@@ -991,7 +1001,7 @@ Références de `famille-odorat-proposition.md` (document de travail, non publi�
   - statut de lecture : *extrait d'index* ;
   - usage : facette `air` (appui qualitatif ; la norme ne donne aucun seuil, et une pièce aérée n'a pas pour autant un air sans odeur).
 
-**Piste non lue, pas utilisée comme source** : Poucher (1955), *Journal of the Society of Cosmetic Chemists*, 6 (non trouvé sur Crossref). **Non vérifié** : sources perceptives sur la persistance et la portée de l'odeur d'un objet ; « sillage » et « notes » de la parfumerie ; effet de la température sur l'odeur ; terme « piquant » dans ISO 5492 ; unités de l'olfactométrie.
+**Piste non lue, pas utilisée comme source** : Poucher (1955), *Journal of the Society of Cosmetic Chemists*, 6 (non trouvé sur Crossref). **Non vérifié** : sources perceptives sur la persistance et la portée de l'odeur d'un objet ; « sillage » et « notes » de la parfumerie ; effet de la température sur l'odeur ; terme « piquant » dans ISO 5492.
 
 <a id="groupe-gout"></a>
 ## Goût en bouche (famille en préparation ; neuf fiches en préparation, aucune publiée)
@@ -1170,11 +1180,11 @@ Références de `famille-gout-proposition.md` (document de travail, non publié)
 
 Rubrique `mesure` des huit fiches alors en préparation (`elementaryShapeCount`, `odourCharacter`, `odourIntensity`, `pitchClarity`, `soundAttack`, `soundDecay`, `soundSharpness`, `textureContrast`) ; recherche du 2026-10-16. Aucune méthode robuste : `elementaryShapeCount`, `odourCharacter`, `pitchClarity` (force de hauteur, Fastl et Stoll 1979, non retenue). Les références déjà décrites ailleurs gardent leur notice : McAdams et al. (1995), Grey (1977), Klatzky et al. (2000), Giordano et McAdams (2006), Fastl et Stoll (1979), ISO 25178-2 et NPL GPG 116 (`mesures-matiere`) ; DIN 45692 (statut de lecture mis à jour : page de DIN Media lue). Aucun seuil n’est repris.
 
-- ASTM E544-18. Standard Practice for Referencing Suprathreshold Odor Intensity. https://store.astm.org/e0544-18.html
-  - statut : *vérifiée sur résumé ou source secondaire* (page de l’éditeur, résumé et Scope, sections 1.1 à 1.5, lus ; texte payant non lu) ;
+- ASTM E544-24. Standard Practice for Referencing Suprathreshold Odor Intensity. https://store.astm.org/e0544-24.html
+  - statut : *vérifiée sur résumé ou source secondaire* (non lu, notice éditeur seulement : page de l’éditeur, résumé et Scope, sections 1.1 à 1.8, relus le 2026-11-12 ; l’édition E544-24, en vigueur, remplace E544-18 ; texte payant non lu) ;
   - usage : `odourIntensity` (contraste ; mesure associée proche : intensité rapportée au 1-butanol).
 - EN 13725:2022. Stationary source emissions — Determination of odour concentration by dynamic olfactometry and odour emission rate. https://webstore.ansi.org/preview-pages/BSI/preview_30454302.pdf
-  - statut : *vérifiée sur résumé ou source secondaire* (extrait public de BS EN 13725:2022, domaine d’application, section 1, lu ; texte payant non lu) ;
+  - statut : *vérifiée sur résumé ou source secondaire* (non lu, notice éditeur seulement, plus l’extrait public de BS EN 13725:2022, domaine d’application, section 1 ; édition 2022 toujours en vigueur, vérifiée le 2026-11-12 ; texte payant non lu) ;
   - usage : `odourIntensity` (contraste ; mesure associée indirecte : concentration d’odeur).
 - DIN 45692:2009-08. Messtechnische Simulation der Hörempfindung Schärfe. https://doi.org/10.31030/1521326
   - statut : *vérifiée sur résumé ou source secondaire* (page de DIN Media lue le 2026-10-16, relue le 2026-11-05 ; l’acum n’y est pas nommée ; norme non lue) ;
@@ -1182,8 +1192,8 @@ Rubrique `mesure` des huit fiches alors en préparation (`elementaryShapeCount`,
 
 *English version.* Associated measurements of the entries in preparation (`mesure` section); search of 2026-10-16; titles in their original language. No robust method: `elementaryShapeCount`, `odourCharacter`, `pitchClarity` (pitch strength, Fastl and Stoll 1979, not retained). References described elsewhere keep their records.
 
-- ASTM E544-18, Standard Practice for Referencing Suprathreshold Odor Intensity: *public abstract and scope read* (sections 1.1–1.5); use: `odourIntensity` (close associated measurement).
-- EN 13725:2022, Stationary source emissions — Determination of odour concentration by dynamic olfactometry and odour emission rate: *public extract read* (scope, section 1); use: `odourIntensity` (indirect associated measurement).
+- ASTM E544-24, Standard Practice for Referencing Suprathreshold Odor Intensity: *not read, publisher’s notice only* (abstract and scope, sections 1.1–1.8; E544-24, current, replaces E544-18); use: `odourIntensity` (close associated measurement).
+- EN 13725:2022, Stationary source emissions — Determination of odour concentration by dynamic olfactometry and odour emission rate: *not read, notice and public extract only* (scope, section 1; 2022 edition still current); use: `odourIntensity` (indirect associated measurement).
 - DIN 45692:2009-08, Messtechnische Simulation der Hörempfindung Schärfe: *DIN Media page read* (again on 2026-11-05; the acum is not named there); standard not read; use: `soundSharpness` (close associated measurement; acum unit reported by Marui and Martens 2006).
 
 <a id="groupe-sources-generales"></a>

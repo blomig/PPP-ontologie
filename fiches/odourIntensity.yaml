@@ -2,6 +2,10 @@
 # Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_base, note_categories, avertissement_label.
 # Série 50 (2026-10-15) : fiche en préparation, rédigée sans exemplaire ; aucun champ n’est encore relu.
 # Série 106 (2026-11-11) : épisodes proposés « à réaliser » ajoutés (episodes_a_realiser) ; fiche toujours en préparation, aucun champ relu.
+# Série 110 (2026-11-12) : relecture explicative faite (choix de relecture (2026-11-12)) ; fiche publiable (épisodes à réaliser, X17).
+# Série 110 bis (2026-11-12) : ISO 5492 fonde, ISO/TS 16922 (édition 2022 seulement) alimente (choix de relecture (2026-11-12)).
+# Série 110 ter (2026-11-12) : statut de lecture d’ISO 5496 harmonisé (choix de relecture (2026-11-12)) ; ajout de VDI 3882 Blatt 1 et de la LMS à mesure.methodes suspendu (règle du gabarit, voir le journal de la spec).
+# Série 110 quater (2026-11-12) : VDI 3882 Blatt 1 et la LMS rangées dans mesure.non_retenues (règle du 2026-10-19 gardée ; choix de relecture (2026-11-12)).
 id: ppp:odourIntensity
 label_fr: intensité de l’odeur
 label_en: odour intensity
@@ -23,8 +27,9 @@ grandeur_physique_homonyme: '« intensité » au sens b) d’ISO 5492 (grandeur 
 mesure:
   etat: methodes
   synthese: 'L’intensité d’une odeur au-dessus du seuil peut se rapporter, par un jury, à une série de concentrations d’un odorant de référence, le 1-butanol [[astm_e544]] : c’est une mesure associée proche.
-    La concentration d’odeur d’un échantillon gazeux, obtenue par dilution jusqu’au seuil de détection [[en13725]], est une mesure associée indirecte. Aucune des deux ne se fait sur l’objet, le nez approché
-    à la distance déclarée.'
+    La concentration d’odeur d’un échantillon gazeux, obtenue par dilution jusqu’au seuil de détection [[en13725]], est une mesure associée indirecte ; aucune des deux ne se fait sur l’objet, le nez approché
+    à la distance déclarée. Les échelles de jugement de la force de la sensation [[vdi3882_1]] et de notation de l’intensité perçue [[green_etal1996]], citées par l’état de l’art, ne sont pas des mesures
+    associées : sans série de référence physique, elles relèvent des épreuves (E1).'
   regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
     une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
   methodes:
@@ -35,19 +40,35 @@ mesure:
     references:
     - astm_e544
     proximite: proche
-    ecart: 'jugée par un jury (au moins huit jugements indépendants), qui compare l’échantillon à une série de concentrations de 1-butanol ; un seul odorant de référence ; échantillon présenté selon le laboratoire (la norme ne fixe pas cette présentation) ; ne se fait pas sur l’objet, le nez approché à la distance déclarée ; ne saisit ni l’adaptation de chaque personne à l’odeur, ni l’air ambiant de l’épisode'
+    ecart: jugée par un jury (au moins huit jugements indépendants), qui compare l’échantillon à une série de concentrations de 1-butanol ; un seul odorant de référence ; échantillon présenté selon le laboratoire
+      (la norme ne fixe pas cette présentation) ; ne se fait pas sur l’objet, le nez approché à la distance déclarée ; ne saisit ni l’adaptation de chaque personne à l’odeur, ni l’air ambiant de l’épisode
     conditions: jury ; série de dilutions de 1-butanol (méthode dynamique ou statique) ; présentation de l’échantillon documentée
-    statut_lecture: 'lu en partie : page de l’éditeur, résumé et Scope sections 1.1 à 1.5'
+    statut_lecture: 'non lu, notice éditeur seulement (page de l’éditeur : résumé et Scope, sections 1.1 à 1.8, édition E544-24 en vigueur)'
   - id: en13725
     nom: concentration d’odeur (olfactométrie dynamique)
-    grandeur: 'dilution d’un échantillon gazeux nécessaire pour atteindre le seuil de détection d’un jury'
+    grandeur: dilution d’un échantillon gazeux nécessaire pour atteindre le seuil de détection d’un jury
     unite_ou_echelle: unités d’odeur européennes par mètre cube (ouE/m³)
     references:
     - en13725
     proximite: indirecte
-    ecart: 'dit combien il faut diluer l’air prélevé pour atteindre le seuil, pas la force avec laquelle on sent l’odeur au-dessus du seuil ; faite sur un gaz prélevé, conçue pour les émissions de sources fixes, pas sur l’objet tenu près du nez ; ne saisit ni l’adaptation ni l’air ambiant de l’épisode ; la norme exclut elle-même la mesure de l’intensité perçue au-dessus du seuil (EN 13725, domaine d’application)'
+    ecart: dit combien il faut diluer l’air prélevé pour atteindre le seuil, pas la force avec laquelle on sent l’odeur au-dessus du seuil ; faite sur un gaz prélevé, conçue pour les émissions de sources
+      fixes, pas sur l’objet tenu près du nez ; ne saisit ni l’adaptation ni l’air ambiant de l’épisode ; la norme exclut elle-même la mesure de l’intensité perçue au-dessus du seuil (EN 13725, domaine
+      d’application)
     conditions: échantillon gazeux ; olfactomètre à dilution dynamique ; jury humain
-    statut_lecture: 'résumé public lu (extrait public de BS EN 13725:2022, section 1)'
+    statut_lecture: non lu, notice éditeur seulement, plus l’extrait public du domaine d’application (section 1 de BS EN 13725:2022, édition en vigueur)
+  non_retenues:
+  - nom: échelle de la force de la sensation à l’olfactomètre (VDI 3882 Blatt 1)
+    references:
+    - vdi3882_1
+    raison: 'échelle de jugement de la force de la sensation, décrite comme verbale par les sources secondaires, sans série de référence physique connue : elle relève des épreuves (E1), pas des mesures
+      associées ; elle s’applique à un échantillon gazeux présenté à l’olfactomètre, pas à l’objet ; norme non lue : elle sera reclassée si sa lecture montre une série de référence physique'
+    statut_lecture: non lue, notice de l’éditeur seulement
+  - nom: échelle de magnitude étiquetée (Labeled Magnitude Scale)
+    references:
+    - green_etal1996
+    raison: 'échelle de notation de l’intensité perçue, sans référence physique : elle relève des épreuves (E1), pas des mesures associées ; elle ne fournit ni stimulus ni conditions de référence, et ses
+      ancrages verbaux sont quasi logarithmiques, alors que les quatre régions de la fiche sont ordinales'
+    statut_lecture: résumé lu (OpenAlex ; PubMed, PMID 8670711)
 modalites:
 - odorat
 mode_de_presentation: échantillon
@@ -97,33 +118,26 @@ ontoClean:
   dependance: +D
 references_statut: renseignées
 references:
-- id: iso_ts16922_2002
-  citation: ISO/TS 16922:2002. Natural gas — Guidelines for odorizing gases. ISO (annulée).
-  doi_ou_url: https://www.iso.org/standard/31135.html
-  role: fonde
-  statut_verification: vérifiée sur la source
-  verifie_le: '2026-10-15'
-  verifie_sur: 'extraits : échantillon public du texte (3.1.2 caractère d’odeur, 3.1.3 intensité d’odeur) ; édition annulée, gardée pour ses définitions'
-  reprend: l’intensité d’odeur, « force de la perception de l’odeur » (3.1.3)
-  ne_reprend_pas: l’échelle des degrés olfactifs (contrôle d’un gaz)
 - id: iso_ts16922_2022
   citation: ISO/TS 16922:2022. Natural gas — Odorization. ISO.
   doi_ou_url: https://www.iso.org/standard/83835.html
   role: alimente
   statut_verification: vérifiée sur résumé ou source secondaire
-  verifie_le: '2026-10-15'
-  verifie_sur: édition en vigueur ; titre, numéros des articles (3.1.3 caractère, 3.1.4 intensité) et définition de l’intensité (« magnitude of the perceived odour ») relevés par la relecture ; définition
-    3.1.4 lue dans l’extrait public de la norme ; reste du texte non lu
+  verifie_le: '2026-11-12'
+  verifie_sur: 'édition en vigueur ; titre, numéros des articles (3.1.3 caractère, 3.1.4 intensité) et définition de l’intensité (« magnitude of the perceived odour ») relevés par la relecture ; définition
+    3.1.4 lue dans l’extrait public de la norme ; reste du texte non lu ; page de l’ISO relue le 2026-11-12 : édition toujours en vigueur, marquée « à réviser » depuis le 2026-06-23 (révision en préparation)
+    ; définitions 3.1.2 à 3.1.6 lues le 2026-11-12 dans l’extrait public de la norme (plateforme de consultation de l’ISO) : 3.1.3 caractère d’odeur, « distinctive and identifiable feature of an odour or
+    flavour » ; 3.1.4 intensité d’odeur, « magnitude of the perceived odour »'
   reprend: l’intensité d’odeur (3.1.4, « magnitude of the perceived odour »), édition en vigueur
   ne_reprend_pas: le reste de la norme (odorisation du gaz)
 - id: iso5492
   citation: ISO 5492:2008. Sensory analysis — Vocabulary (2e éd.), et Amd 1:2016. ISO.
   doi_ou_url: https://www.iso.org/standard/38051.html
-  role: alimente
+  role: fonde
   statut_verification: vérifiée sur résumé ou source secondaire
-  verifie_le: '2026-10-15'
+  verifie_le: '2026-11-12'
   verifie_sur: 'extrait d’index (page de l’ISO) ; définitions par source secondaire (adoption nationale NTP-ISO 5492, en espagnol ; citations d’ISO/TS 16922) : intensité 2.8, odeur 3.18 (le 2.12 venait
-    de l’édition 1992) ; 3.32 et 3.33 non vérifiés ; texte ISO non lu'
+    de l’édition 1992) ; 3.32 et 3.33 non vérifiés ; texte ISO non lu ; page de l’ISO relue le 2026-11-12 : édition 2 confirmée en 2024, toujours en vigueur'
   reprend: 'l’intensité au sens a) : grandeur de la sensation perçue (2.8)'
   ne_reprend_pas: le sens b), grandeur du stimulus
 - id: dalton_wysocki1996
@@ -136,12 +150,14 @@ references:
   reprend: 'l’adaptation baisse l’intensité perçue : une condition (facette `exposition`)'
   ne_reprend_pas: l’adaptation comme qualité
 - id: astm_e544
-  citation: ASTM E544-18. Standard Practice for Referencing Suprathreshold Odor Intensity. ASTM International.
-  doi_ou_url: https://store.astm.org/e0544-18.html
+  citation: ASTM E544-24. Standard Practice for Referencing Suprathreshold Odor Intensity. ASTM International.
+  doi_ou_url: https://store.astm.org/e0544-24.html
   role: contraste
   statut_verification: vérifiée sur résumé ou source secondaire
-  verifie_le: '2026-10-16'
-  verifie_sur: 'page de l’éditeur lue le 2026-10-16 (résumé et Scope sections 1.1 à 1.5) : intensité d’odeur au-dessus du seuil, rapportée à l’échelle de référence de l’ASTM par comparaison avec une série de concentrations d’un odorant de référence, le 1-butanol ; présentation des vapeurs de référence fixée, présentation de l’échantillon non définie ; texte payant non lu'
+  verifie_le: '2026-11-12'
+  verifie_sur: 'non lu, notice éditeur seulement : page de l’éditeur lue le 2026-11-12 (édition E544-24, en vigueur, qui remplace E544-18 ; résumé et Scope, sections 1.1 à 1.8) : intensité d’odeur au-dessus
+    du seuil, rapportée à l’échelle de référence de l’ASTM par comparaison avec une série de concentrations d’un odorant de référence, le 1-butanol ; présentation des vapeurs de référence fixée, présentation
+    de l’échantillon non définie ; texte payant non lu'
   reprend: rien (mesure associée, rubrique « mesure »)
   ne_reprend_pas: les niveaux de l’échelle de référence comme bornes de régions
 - id: en13725
@@ -149,13 +165,52 @@ references:
   doi_ou_url: https://webstore.ansi.org/preview-pages/BSI/preview_30454302.pdf
   role: contraste
   statut_verification: vérifiée sur résumé ou source secondaire
-  verifie_le: '2026-10-16'
-  verifie_sur: 'extrait public (aperçu de BS EN 13725:2022, ANSI Webstore) lu le 2026-10-16 : domaine d’application (section 1) : concentration d’odeur d’un échantillon gazeux par olfactométrie dynamique avec un jury humain, en unités d’odeur européennes par mètre cube, déterminée par la dilution nécessaire pour atteindre le seuil de détection ; débit d’odeur de sources fixes ; texte payant non lu'
+  verifie_le: '2026-11-12'
+  verifie_sur: 'non lu, notice éditeur seulement, plus un extrait public : aperçu de BS EN 13725:2022 lu le 2026-10-16, domaine d’application (section 1) : concentration d’odeur d’un échantillon gazeux
+    par olfactométrie dynamique avec un jury humain, en unités d’odeur européennes par mètre cube, déterminée par la dilution nécessaire pour atteindre le seuil de détection ; débit d’odeur de sources fixes
+    ; édition 2022 toujours en vigueur (notices des organismes de normalisation relues le 2026-11-12) ; texte payant non lu'
   reprend: rien (mesure associée, rubrique « mesure »)
   ne_reprend_pas: les valeurs de concentration d’odeur comme bornes de régions
-etat_de_l_art: 'ISO/TS 16922 définit l’intensité d’odeur comme la « force de la perception de l’odeur » (édition 2002, annulée, 3.1.3, extraits [[iso_ts16922_2002]] ; édition en vigueur 2022, 3.1.4, « magnitude
-  of the perceived odour » [[iso_ts16922_2022]]) ; ISO 5492 (2.8) [[iso5492]] garde deux sens à l’intensité, PPP ne prend que la sensation. Dalton et Wysocki (1996) [[dalton_wysocki1996]] montrent que l’intensité
-  perçue baisse après une longue exposition (résumé lu). Aucune source trouvée ne fixe des régions perçues pour l’odeur d’un objet. Détail : docs/bibliographie-par-type.md#groupe-odorat.'
+- id: iso5496
+  citation: ISO 5496:2006. Sensory analysis — Methodology — Initiation and training of assessors in the detection and recognition of odours (2e éd.), et Amd 1:2018. ISO.
+  doi_ou_url: https://www.iso.org/standard/44247.html
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-11-12'
+  verifie_sur: 'non lu ; notice de l’éditeur et article 5.2 de l’extrait public seulement : page de l’ISO lue le 2026-11-12 (intitulé français « Analyse sensorielle — Méthodologie — Initiation et entraînement
+    des sujets à la détection et à la reconnaissance des odeurs » ; édition 2 de 2006, confirmée en 2022, toujours en vigueur ; amendement 1 de 2018) ; article 5.2, que reprennent les épisodes, lu dans
+    l’extrait public du texte ; reste du texte payant non lu'
+  reprend: 'aucune autre épreuve d’odeur dans les 20 min qui précèdent, et dix substances au plus par séance (5.2) : protocole des épisodes à réaliser'
+  ne_reprend_pas: les méthodes d’initiation et d’entraînement des sujets ; les substances de l’amendement comme exemplaires
+- id: vdi3882_1
+  citation: 'VDI 3882 Blatt 1:1992. Olfactometry — Determination of odour intensity (Olfaktometrie — Bestimmung der Geruchsintensität). Düsseldorf : VDI.'
+  doi_ou_url: https://www.vdi.de/mitgliedschaft/vdi-richtlinien/details/vdi-3882-blatt-1-olfaktometrie-bestimmung-der-geruchsintensitaet
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-11-12'
+  verifie_sur: 'non lu, notice éditeur seulement : page de l’éditeur lue le 2026-11-12 (édition 1992-10, « vérifiée et confirmée » ; résumé : jugement, à l’olfactomètre, de la force de la sensation que
+    donnent des échantillons au-dessus du seuil ; un projet de révision a paru en 2021-11) ; les degrés de son échelle ne sont connus que par des sources secondaires ; texte payant non lu'
+  reprend: 'rien (échelle de jugement de la force de la sensation, sur des échantillons gazeux : non retenue comme mesure associée, rubrique « mesure »)'
+  ne_reprend_pas: les degrés de l’échelle comme bornes de régions
+- id: green_etal1996
+  citation: Green, B. G., Dalton, P., Cowart, B., Shaffer, G., Rankin, K. & Higgins, J. (1996). Evaluating the ‘Labeled Magnitude Scale’ for measuring sensations of taste and smell. Chemical Senses, 21(3),
+    323–334.
+  doi_ou_url: https://doi.org/10.1093/chemse/21.3.323
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-11-12'
+  verifie_sur: résumé lu (OpenAlex ; PubMed, PMID 8670711) ; auteurs, revue et pages vérifiés sur Crossref le 2026-11-12 ; texte non lu
+  reprend: 'rien : une échelle de notation de l’intensité perçue, aux étiquettes verbales espacées, éprouvée pour les odeurs contre l’estimation de grandeur ; non retenue comme mesure associée (rubrique
+    « mesure »)'
+  ne_reprend_pas: les étiquettes de l’échelle comme bornes de régions
+etat_de_l_art: 'ISO 5492 (2.8) [[iso5492]] garde deux sens à l’intensité, PPP ne prend que la sensation (définition lue par source secondaire) ; l’édition en vigueur d’ISO/TS 16922 définit l’intensité d’odeur
+  comme « magnitude of the perceived odour » (2022, 3.1.4, extrait public lu [[iso_ts16922_2022]]). Les échelles de mesure existantes se font sur des échantillons de laboratoire, pas sur l’objet tenu près
+  du nez : l’échelle de référence de l’ASTM rapporte l’intensité au-dessus du seuil à une série de concentrations de 1-butanol (ASTM E544-24 [[astm_e544]]), et VDI 3882 Blatt 1 [[vdi3882_1]] fait juger
+  à l’olfactomètre la force de la sensation au-dessus du seuil (toutes deux non lues, notice de l’éditeur seulement). La concentration d’odeur d’EN 13725 [[en13725]], en unités d’odeur européennes par mètre
+  cube, compte les dilutions jusqu’au seuil de détection : ce n’est pas une échelle d’intensité perçue (non lue, notice et extrait public du domaine d’application seulement). Pour noter la sensation elle-même,
+  Green et al. (1996) [[green_etal1996]] montrent qu’une échelle à étiquettes verbales espacées (Labeled Magnitude Scale) donne pour l’intensité des odeurs les mêmes fonctions que l’estimation de grandeur
+  (résumé lu). Dalton et Wysocki (1996) [[dalton_wysocki1996]] montrent que l’intensité perçue baisse après une longue exposition (résumé lu), ISO 5496 [[iso5496]] encadre l’entraînement des sujets à la
+  détection des odeurs (non lue, notice de l’éditeur et article 5.2 de l’extrait public seulement), et aucune source trouvée ne fixe des régions perçues pour l’odeur d’un objet. Détail : docs/bibliographie-par-type.md#groupe-odorat.'
 etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-odorat
 axiomes:
 - conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
@@ -170,8 +225,7 @@ transfert: objet conçu oui (un cuir, un bois, un textile neuf) | tableau non | 
 enonces_testables:
 - id: E1
   nature: existence
-  enonce: sur 6 à 10 objets publics, accord inter-observateurs exact (échelle à trois régions ou moins, spec §9.7 C, v2.5), au-dessus du seuil fixé avant l’épreuve, à conditions critiques égales
-    (spec §9.7 H)
+  enonce: sur 6 à 10 objets publics, accord inter-observateurs à une région près, au-dessus du seuil fixé avant l’épreuve, à conditions critiques égales (spec §9.7 H) ; accord exact si l’échelle revient à trois régions (spec §9.7 C)
   statut_epistemique: non éprouvé
   epreuve: null
 - id: E4
@@ -181,13 +235,13 @@ enonces_testables:
   epreuve: null
 cq_couvertes: CQ1, CQ2
 statut: candidat
-statut_note: 'en préparation (2026-10-15) : fiche rédigée, sans exemplaire ; cinq épisodes proposés « à réaliser » (2026-11-11), sur des objets décrits, pas encore observés ; tous les champs rédigés sont à relire'
+statut_note: fiche relue en langage courant (relecture explicative, 2026-11-12) ; cinq épisodes proposés « à réaliser », sur des objets décrits, pas encore observés
 statut_epistemique: non éprouvé
 introduit_en: '2.8'
 modifie_en: []
 remplace_par: []
-source_de_la_fiche: proposition de famille « Odorat » (docs/famille-odorat-proposition.md (document de travail, non publié), séries 41 à 43 ; premier lot recommandé par la relecture explicative en série 49 bis, à confirmer par l’éditeur)
-  ; fiche rédigée le 2026-10-15 par l’équipe, champs à valider par la relecture explicative
+source_de_la_fiche: 'proposition de famille « Odorat » (docs/famille-odorat-proposition.md (document de travail, non publié), séries 41 à 43) ; premier lot : décision 3 du 2026-10-14 (série 43), recommandation
+  suivie ; fiche rédigée le 2026-10-15 par l’équipe ; épisodes proposés le 2026-11-11 ; relecture explicative le 2026-11-12 (choix de relecture (2026-11-12))'
 # Série 106 (2026-11-11) : épisodes proposés « à réaliser » (spec X17 ; décision de l’éditeur du projet du 2026-11-02 pour le principe ; champs, détail du lot et codage des facettes : choix de relecture) ;
 # ni épreuve faite ni accord entre observateurs ; ni observateur, ni date, ni résultat. Objets et prédictions repris de la proposition de lot 9, révisés (choix de relecture (2026-11-02)) ; ids renumérotés.
 episodes_a_realiser:
@@ -370,31 +424,21 @@ manques:
   fiches/exemplaires.yaml'
 - 'épisodes sans doute de leur auteur : seulement « forte » (savonnette parfumée) ; « aucune odeur », « à peine perceptible » et « nette » n’ont que des épisodes marqués `doute: oui`'
 bloque_par: []
-a_relire:
-- label_fr
-- label_en
-- strate
-- définition
-- question_attentionnelle
-- contre_exemple
-- grandeur_physique_homonyme
-- mode_de_presentation
-- conditions_critiques
-- note_conditions
-- porteur
-- condition_NA
-- espace_valeurs
-- identite
-- references
-- etat_de_l_art
-- nanay
-- transfert
-- enonces_testables
-- statut_note
-- mesure
-- episodes_a_realiser
+a_relire: []
 relecture_explicative:
-  date: null
+  date: '2026-11-12'
   champs:
-  - 'harmonisation mécanique des énoncés affichés (série 69, 2026-10-17)'
+  - harmonisation mécanique des énoncés affichés (série 69, 2026-10-17)
+  - 'label_fr, label_en, strate, définition, question_attentionnelle, contre_exemple, grandeur_physique_homonyme, mode_de_presentation, conditions_critiques, note_conditions, porteur, condition_NA, espace_valeurs,
+    identite, nanay, transfert, episodes_a_realiser : relus en langage courant le 2026-11-12, validés tels quels (choix de relecture (2026-11-12)) ; épisodes : présentation inconnue, pièce close et écarts
+    entre repères et épisodes gardés comme choisis le 2026-11-11 ; épisodes relus ici avec la fiche ; un épisode ajouté plus tard se relit avec son ajout'
+  - 'references (ISO 5496, VDI 3882 Blatt 1 et Green et al. 1996 ajoutées ; ASTM E544 portée à l’édition 2024, en vigueur ; normes payantes : non lues, notice de l’éditeur seulement), etat_de_l_art (cinq
+    phrases : définitions, échelles de mesure existantes et statut de lecture de chacune), mesure (statuts de lecture des deux normes), enonces_testables (E1 : accord à une région près, l’échelle ayant
+    quatre régions, au lieu d’un accord exact justifié à tort par une échelle à trois régions), statut_note : corrigés le 2026-11-12 (choix de relecture (2026-11-12))'
+  - 'references (ISO 5492, vocabulaire de l’analyse sensorielle, fonde la fiche ; ISO/TS 16922 l’alimente, citée dans son édition en vigueur de 2022 seulement, l’édition annulée de 2002 retirée), etat_de_l_art
+    : corrigés le 2026-11-12 (choix de relecture (2026-11-12))'
+  - 'etat_de_l_art, references (statut de lecture d’ISO 5496 : non lue, notice de l’éditeur et article 5.2 de l’extrait public seulement, le même dans l’état de l’art, la référence et la bibliographie)
+    : corrigés le 2026-11-12 (choix de relecture (2026-11-12))'
+  - 'mesure (VDI 3882 Blatt 1 et Labeled Magnitude Scale rangées parmi les mesures non retenues : échelles de jugement sans série de référence physique, qui relèvent des épreuves ; une phrase de la synthèse
+    dit pourquoi), references (ce qu’en reprend la fiche) : corrigés le 2026-11-12 (choix de relecture (2026-11-12))'
   a_reconfirmer: []

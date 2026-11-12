@@ -1,5 +1,6 @@
 # Fiche de type PPP — ppp:textureContrast — format : PPP_FicheType.md (spec v2.4)
 # Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_joint, avertissement_label, note_categories, note_reference, note_dimension, note_conditions, note_echelle, note_porteur, note_base, bloque_par.
+# Série 109 (2026-11-11) : relecture_explicative : épisodes ajoutés le 2026-11-11 relus avec leur ajout (choix de relecture (2026-11-11)) ; quatre épisodes au toucher ajoutés.
 id: ppp:textureContrast
 label_fr: contraste de texture
 label_en: texture contrast
@@ -186,6 +187,7 @@ relecture_explicative:
   - espace_valeurs.regions.label_en (validé en relecture explicative, série 31, 2026-10-12)
   - statut_note (choix de relecture, série 89, 2026-11-02)
   - mesure (choix de relecture, série 89, 2026-11-02 — glose de Sa et de Sal ajoutée)
+  - 'episodes_a_realiser (épisodes ajoutés le 2026-11-11, relus avec leur ajout) : relus le 2026-11-11 (choix de relecture (2026-11-11))'
   a_reconfirmer: []
   reconfirme:
   - champ: question_attentionnelle
@@ -198,6 +200,159 @@ relecture_explicative:
       une moyenne, ou une fine et une grosse) ou maximale (une lisse et une grosse) ?
     remarque: 'T3 option A : question reprise par la relecture explicative ; chaque mot-label porte entre parenthèses le repère de sa région, pour que « évident » (visible d’emblée) et « maximal » (aux deux bouts
       de la dimension) ne se lisent pas comme des synonymes de « fort »'
+# Série 109 (2026-11-11) : épisodes proposés « à réaliser » au toucher (spec X17 ; décision de l’éditeur du projet du 2026-11-02 pour le principe ; détail et codage des facettes : choix de relecture (2026-11-11)) ;
+# ni épreuve faite ni accord entre observateurs ; ni observateur, ni date, ni résultat. Repris de la proposition de lot 12 (épisodes au toucher seulement ; les candidats en vue relèvent de fiches/exemplaires.yaml) ; relus avec leur ajout.
+episodes_a_realiser:
+- id: ppp-a:ep-textureContrast-01
+  realisation: a_realiser
+  region_attendue: strong
+  rang_exemplaire: principal
+  objet: 'un seul objet ordinaire, sans marque : une rondelle de tronc (bois sec), d’environ 15 à 25 cm de diamètre et 2 à 4 cm d’épaisseur, une face poncée, son écorce gardée sur tout le pourtour ; termes
+    : (A) la face poncée, (B) l’écorce du pourtour'
+  objet_en: 'a single ordinary unbranded object: a dry tree-trunk slice, about 15 to 25 cm in diameter and 2 to 4 cm thick, one face sanded, its bark kept all round the rim; terms: (A) the sanded face,
+    (B) the bark on the rim'
+  preparation: choisir une rondelle sèche dont l’écorce tient sur tout le pourtour, à écailles ou crevasses de plusieurs millimètres (essence notée, par exemple pin ou chêne ; éviter le bouleau, à écorce
+    lisse) ; poncer une face jusqu’au grain 240 au moins, sans vernis ni huile, puis la dépoussiérer ; brosser l’écorce à sec ; vérifier qu’aucune écharde ne dépasse et que l’écorce ne s’effrite pas ; noter
+    le diamètre, l’épaisseur et la profondeur des crevasses (règle) ; poser la rondelle à plat, face poncée vers le haut
+  preparation_en: choose a dry slice whose bark holds all round the rim, with flakes or cracks several millimetres deep (note the species; avoid smooth-barked birch); sand one face to at least 240 grit,
+    no varnish or oil, then dust it; dry-brush the bark; check that no splinter sticks out and the bark does not crumble; note diameter, thickness and crack depth (ruler); lay the slice flat, sanded face
+    up
+  consigne: Les yeux fermés, touchez la surface A (le dessus), puis la surface B (le bord), du bout des doigts, sans appuyer. La différence de relief entre ces deux surfaces est-elle faible (même relief,
+    ou presque), modérée (une lisse et une à texture fine), évidente (une lisse et une moyenne, ou une fine et une grosse) ou maximale (une lisse et une grosse) ? Ne jugez ni la chaleur ni la dureté.
+  consigne_en: With your eyes closed, touch surface A (the top), then surface B (the rim), with your fingertips, without pressing. Is the difference in relief between these two surfaces slight (same relief,
+    or nearly), moderate (one smooth and one fine), evident (one smooth and one medium, or one fine and one coarse) or maximal (one smooth and one coarse)? Do not judge warmth or hardness.
+  conditions:
+    presentation: tableTop
+    geste: lateralMotion
+    temperature_objet: ambient
+    distance: contact
+    duree: exam
+    yeux: fermés (ou bandés)
+    yeux_en: closed (or blindfolded)
+    note: 'la rondelle posée à plat sur une table, face poncée vers le haut ; le préparateur guide la main vers A puis vers B (`tableTop`) ; la personne testée a les yeux fermés (ou bandés) ; bout des doigts,
+      sans appuyer, A puis B, une fois chacun, puis librement (`lateralMotion`) ; objets dans la pièce depuis au moins une heure (`ambient`) ; 30 s au plus pour les deux surfaces (`exam`) ; épreuve au toucher
+      seul, séparée de la vue (T22) ; codage des facettes : choix de relecture (2026-11-11) ; terme A : la face poncée ; terme B : l’écorce du pourtour ; deux zones d’un même objet, ce qui neutralise les
+      autres différences (matière, chaleur) ; se laver les mains après'
+    note_en: 'the slice laid flat on a table, sanded face up; the preparer guides the hand to A then to B (`tableTop`); the participant has eyes closed (or blindfolded); fingertips, without pressing, A
+      then B, once each, then freely (`lateralMotion`); objects in the room for at least one hour (`ambient`); 30 s at most for both surfaces (`exam`); test by touch alone, separate from sight (T22); facet
+      coding: review choice (2026-11-11); term A: the sanded face; term B: the bark on the rim; two zones of one object, which neutralises other differences (material, warmth); wash hands afterwards'
+  doute: oui
+  motif_doute: 'le bois poncé garde un fil sensible au doigt : il peut être jugé « fin » plutôt que « lisse », et le contraste tomberait à « évident » ; un ponçage plus fin (grain 400) réduit ce risque'
+  motif_doute_en: 'sanded wood keeps a grain the finger can feel: it may be judged “fine” rather than “smooth”, which would drop the contrast to “evident”; finer sanding (400 grit) lowers this risk'
+  note: 'repères de la fiche « texture » : « une écorce » (grosse) ; « lisse » pour la face poncée est une prédiction ; deux zones d’un même objet, cas typique du type (choix de relecture (2026-11-02))
+    ; variante à deux objets : épisode 02'
+  note_en: 'reference points of the texture entry: “a bark” (coarse); “smooth” for the sanded face is a prediction; two zones of one object, the typical case of the type (review choice (2026-11-02)); two-object
+    variant: episode 02'
+  texte_fr: 'Une rondelle de tronc, au toucher : entre la face poncée et l’écorce du bord, contraste de texture maximal (prédiction, à éprouver).'
+  texte_en: 'A tree-trunk slice, by touch: between the sanded face and the bark on the rim, maximal texture contrast (prediction, to be tested).'
+- id: ppp-a:ep-textureContrast-02
+  realisation: a_realiser
+  region_attendue: strong
+  rang_exemplaire: second
+  objet: 'deux objets ordinaires, sans marque : (A) un carreau de céramique émaillé, uni, brillant, d’environ 10 × 10 cm, face émaillée vers le haut ; (B) un morceau d’écorce de pin sèche, d’au moins 8
+    × 8 cm, face externe vers le haut, à écailles et crevasses de plusieurs millimètres'
+  objet_en: 'two ordinary unbranded objects: (A) a plain glossy glazed ceramic tile, about 10 × 10 cm, glazed face up; (B) a piece of dry pine bark, at least 8 × 8 cm, outer face up, with flakes and cracks
+    several millimetres deep'
+  preparation: laver et sécher le carreau ; choisir un carreau sans motif en relief ni éclat ; choisir une écorce ramassée au sol, sèche, sans moisissure ni insecte, la brosser à sec ; vérifier qu’aucune
+    écharde ne dépasse ; noter les dimensions et la profondeur des crevasses (règle)
+  preparation_en: wash and dry the tile; choose a tile with no raised pattern or chip; choose bark picked up from the ground, dry, without mould or insects, dry-brushed; check that no splinter sticks out;
+    note dimensions and crack depth (ruler)
+  consigne: Les yeux fermés, touchez la surface A, puis la surface B, du bout des doigts, sans appuyer. La différence de relief entre ces deux surfaces est-elle faible (même relief, ou presque), modérée
+    (une lisse et une à texture fine), évidente (une lisse et une moyenne, ou une fine et une grosse) ou maximale (une lisse et une grosse) ? Ne jugez ni la chaleur ni la dureté.
+  consigne_en: With your eyes closed, touch surface A, then surface B, with your fingertips, without pressing. Is the difference in relief between these two surfaces slight (same relief, or nearly), moderate
+    (one smooth and one fine), evident (one smooth and one medium, or one fine and one coarse) or maximal (one smooth and one coarse)? Do not judge warmth or hardness.
+  conditions:
+    presentation: tableTop
+    geste: lateralMotion
+    temperature_objet: ambient
+    distance: contact
+    duree: exam
+    yeux: fermés (ou bandés)
+    yeux_en: closed (or blindfolded)
+    note: 'deux objets posés côte à côte sur une table, A à gauche, B à droite (`tableTop`) ; la personne testée a les yeux fermés (ou bandés) ; bout des doigts, sans appuyer, A puis B, une fois chacun,
+      puis librement (`lateralMotion`) ; objets dans la pièce depuis au moins une heure (`ambient`) ; 30 s au plus pour les deux surfaces (`exam`) ; épreuve au toucher seul, séparée de la vue (T22) ; codage
+      des facettes : choix de relecture (2026-11-11) ; terme A : la face émaillée du carreau ; terme B : la face externe de l’écorce ; se laver les mains après'
+    note_en: 'two objects side by side on a table, A on the left, B on the right (`tableTop`); the participant has eyes closed (or blindfolded); fingertips, without pressing, A then B, once each, then freely
+      (`lateralMotion`); objects in the room for at least one hour (`ambient`); 30 s at most for both surfaces (`exam`); test by touch alone, separate from sight (T22); facet coding: review choice (2026-11-11);
+      term A: the glazed face of the tile; term B: the outer face of the bark; wash hands afterwards'
+  doute: non
+  note: 'variante à deux objets de l’épisode 01 (choix de relecture (2026-11-02)) ; repères de la fiche « texture » : « une glaçure » (lisse) et « une écorce » (grosse)'
+  note_en: 'two-object variant of episode 01 (review choice (2026-11-02)); reference points of the texture entry: “a glaze” (smooth) and “a bark” (coarse)'
+  texte_fr: 'Un carreau émaillé et un morceau d’écorce, au toucher : contraste de texture maximal (prédiction, à éprouver).'
+  texte_en: 'A glazed tile and a piece of bark, by touch: maximal texture contrast (prediction, to be tested).'
+- id: ppp-a:ep-textureContrast-03
+  realisation: a_realiser
+  region_attendue: marked
+  objet: 'deux objets ordinaires, sans marque : (A) le carreau de céramique émaillé de l’épisode 02 ; (B) un échantillon d’enduit taloché (fini à la taloche), d’environ 10 × 10 cm, à grain régulier d’environ
+    1 mm, sans peinture ou peint en mat'
+  objet_en: 'two ordinary unbranded objects: (A) the glazed ceramic tile of episode 02; (B) a float-finished render sample, about 10 × 10 cm, with an even grain of about 1 mm, unpainted or matt-painted'
+  preparation: 'reprendre le carreau de l’épisode 02 ; enduit taloché : un mur ou un échantillon déjà fait, ou un enduit prêt à l’emploi étalé sur une planchette et taloché, sec depuis au moins 48 h ; vérifier
+    qu’aucun grain ne se détache ; noter la taille du grain (règle) ; faire cet épisode dans une séance distincte des épisodes 01 et 02, ou dans un ordre tiré au sort'
+  preparation_en: 'reuse the tile of episode 02; float-finished render: an existing wall or sample, or ready-mixed render spread on a small board and floated, dry for at least 48 h; check that no grain
+    comes off; note the grain size (ruler); run this episode in a separate session from episodes 01 and 02, or in random order'
+  consigne: Les yeux fermés, touchez la surface A, puis la surface B, du bout des doigts, sans appuyer. La différence de relief entre ces deux surfaces est-elle faible (même relief, ou presque), modérée
+    (une lisse et une à texture fine), évidente (une lisse et une moyenne, ou une fine et une grosse) ou maximale (une lisse et une grosse) ? Ne jugez ni la chaleur ni la dureté.
+  consigne_en: With your eyes closed, touch surface A, then surface B, with your fingertips, without pressing. Is the difference in relief between these two surfaces slight (same relief, or nearly), moderate
+    (one smooth and one fine), evident (one smooth and one medium, or one fine and one coarse) or maximal (one smooth and one coarse)? Do not judge warmth or hardness.
+  conditions:
+    presentation: tableTop
+    geste: lateralMotion
+    temperature_objet: ambient
+    distance: contact
+    duree: exam
+    yeux: fermés (ou bandés)
+    yeux_en: closed (or blindfolded)
+    note: 'deux surfaces côte à côte sur une table, A à gauche, B à droite (ou A posé contre le mur taloché) (`tableTop`) ; la personne testée a les yeux fermés (ou bandés) ; bout des doigts, sans appuyer,
+      A puis B, une fois chacun, puis librement (`lateralMotion`) ; objets dans la pièce depuis au moins une heure (`ambient`) ; 30 s au plus pour les deux surfaces (`exam`) ; épreuve au toucher seul, séparée
+      de la vue (T22) ; codage des facettes : choix de relecture (2026-11-11) ; terme A : la face émaillée du carreau ; terme B : l’enduit taloché'
+    note_en: 'two surfaces side by side on a table, A on the left, B on the right (or A held against the floated wall) (`tableTop`); the participant has eyes closed (or blindfolded); fingertips, without
+      pressing, A then B, once each, then freely (`lateralMotion`); objects in the room for at least one hour (`ambient`); 30 s at most for both surfaces (`exam`); test by touch alone, separate from sight
+      (T22); facet coding: review choice (2026-11-11); term A: the glazed face of the tile; term B: the float-finished render'
+  doute: oui
+  motif_doute: 'le grain d’un taloché varie : fin, il serait « fin » (contraste modéré) ; gros (enduit gratté ou projeté), il serait « gros » (contraste maximal) ; la taille du grain est donc notée'
+  motif_doute_en: 'float-finish grain varies: if fine it would be “fine” (moderate contrast); if coarse (scraped or sprayed render) it would be “coarse” (maximal contrast); grain size is therefore noted'
+  note: 'contre-exemple voisin de la frontière du contraste maximal (choix de relecture (2026-11-02)) ; repère de la région évidente : « lisse contre moyenne » ; « moyenne » pour le taloché est une prédiction
+    déclarée, non tirée de la fiche « texture »'
+  note_en: 'counter-example next to the boundary of maximal contrast (review choice (2026-11-02)); evident region reference: “smooth against medium”; “medium” for float-finished render is a declared prediction,
+    not taken from the texture entry'
+  texte_fr: 'Un carreau émaillé et un enduit taloché, au toucher : contraste de texture évident (prédiction, à éprouver).'
+  texte_en: 'A glazed tile and a float-finished render, by touch: evident texture contrast (prediction, to be tested).'
+- id: ppp-a:ep-textureContrast-04
+  realisation: a_realiser
+  region_attendue: moderate
+  objet: 'deux objets ordinaires, sans marque : (A) le même carreau de céramique émaillé que l’épisode 02 ; (B) une feuille de papier à dessin blanche à grain fin, sans impression, posée à plat'
+  objet_en: 'two ordinary unbranded objects: (A) the same glazed ceramic tile as episode 02; (B) a sheet of fine-grain white drawing paper, unprinted, laid flat'
+  preparation: reprendre le carreau de l’épisode 02 ; poser la feuille à plat à côté ; papier à grain fin, ni grain torchon ni papier glacé ; faire cet épisode dans une séance distincte de l’épisode 02,
+    ou dans un ordre tiré au sort
+  preparation_en: reuse the tile of episode 02; lay the sheet flat next to it; fine-grain paper, neither rough (torchon) nor glossy; run this episode in a separate session from episode 02, or in random
+    order
+  consigne: Les yeux fermés, touchez la surface A, puis la surface B, du bout des doigts, sans appuyer. La différence de relief entre ces deux surfaces est-elle faible (même relief, ou presque), modérée
+    (une lisse et une à texture fine), évidente (une lisse et une moyenne, ou une fine et une grosse) ou maximale (une lisse et une grosse) ? Ne jugez ni la chaleur ni la dureté.
+  consigne_en: With your eyes closed, touch surface A, then surface B, with your fingertips, without pressing. Is the difference in relief between these two surfaces slight (same relief, or nearly), moderate
+    (one smooth and one fine), evident (one smooth and one medium, or one fine and one coarse) or maximal (one smooth and one coarse)? Do not judge warmth or hardness.
+  conditions:
+    presentation: tableTop
+    geste: lateralMotion
+    temperature_objet: ambient
+    distance: contact
+    duree: exam
+    yeux: fermés (ou bandés)
+    yeux_en: closed (or blindfolded)
+    note: 'deux objets posés côte à côte sur une table, A à gauche, B à droite (`tableTop`) ; la personne testée a les yeux fermés (ou bandés) ; bout des doigts, sans appuyer, A puis B, une fois chacun,
+      puis librement (`lateralMotion`) ; objets dans la pièce depuis au moins une heure (`ambient`) ; 30 s au plus pour les deux surfaces (`exam`) ; épreuve au toucher seul, séparée de la vue (T22) ; codage
+      des facettes : choix de relecture (2026-11-11) ; terme A : la face émaillée du carreau ; terme B : la feuille de papier'
+    note_en: 'two objects side by side on a table, A on the left, B on the right (`tableTop`); the participant has eyes closed (or blindfolded); fingertips, without pressing, A then B, once each, then freely
+      (`lateralMotion`); objects in the room for at least one hour (`ambient`); 30 s at most for both surfaces (`exam`); test by touch alone, separate from sight (T22); facet coding: review choice (2026-11-11);
+      term A: the glazed face of the tile; term B: the paper sheet'
+  doute: oui
+  motif_doute: 'un papier à grain très fin peut se sentir lisse : le contraste tomberait à « faible » ; un grain plus marqué le pousserait vers « évident »'
+  motif_doute_en: 'very fine-grain paper may feel smooth: the contrast would drop to “slight”; a coarser grain would push it towards “evident”'
+  note: 'contre-exemple, deux crans sous le contraste maximal (même terme A que l’épisode 02 ; choix de relecture (2026-11-02)) ; repère de la région modérée : « lisse contre fine » ; repère « fine » de
+    la fiche « texture » : « un papier à dessin » ; même carreau qu’à l’épisode 02 : seul le terme B change, de la grosse écorce au papier fin'
+  note_en: 'counter-example, two steps below maximal contrast (same term A as episode 02; review choice (2026-11-02)); moderate region reference: “smooth against fine”; texture entry “fine” reference: “a
+    drawing paper”; same tile as in 02: only term B changes, from coarse bark to fine paper'
+  texte_fr: 'Un carreau émaillé et une feuille de papier à dessin, au toucher : contraste de texture modéré (prédiction, à éprouver).'
+  texte_en: 'A glazed tile and a sheet of drawing paper, by touch: moderate texture contrast (prediction, to be tested).'
 manques:
 - 'exemplaires (au 2026-10-14) : 1401 faible relu ; 1404 modéré, 1403 évident à relire, non montrés ; sans exemplaire : maximal ; 1402 retiré, réserve T24 maintenue'
 - 'dépend des régions de la texture, elles-mêmes en position de travail (T1) ; signalé dans statut_note (série 44, à relire)'
