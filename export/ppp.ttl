@@ -1,5 +1,5 @@
 # PPP, export SKOS des fiches publiques ; ne pas modifier à la main.
-# Licence : CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Version 2.8 ; dernier changement de contenu : 2026-11-12. Pour citer : CITATION.cff.
+# Licence : CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Version 2.8 ; dernier changement de contenu : 2026-11-14. Pour citer : CITATION.cff.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -20,7 +20,7 @@
         "SKOS vocabulary of the published PPP types (public entries), their regions, scales and reading families. The YAML entries of the repository are the source; this export is derived from them."@en ;
     dct:license <https://creativecommons.org/licenses/by/4.0/> ;
     owl:versionInfo "2.8" ;
-    dct:modified "2026-11-12"^^xsd:date ;
+    dct:modified "2026-11-14"^^xsd:date ;
     dct:creator "Lomig Unger" ,
         "Grok Bot" ;
     dct:rightsHolder "Lomig Unger" ;
@@ -40,6 +40,7 @@
         ppp:lightnessRange ,
         ppp:localIrregularity ,
         ppp:negativeSpace ,
+        ppp:odourCharacter ,
         ppp:odourIntensity ,
         ppp:outlineIndentation ,
         ppp:partNesting ,
@@ -2091,6 +2092,231 @@ ppp:perceivedDepth
         "the spaces left empty read as shapes straight away"@en ;
     ppp:regionOf ppp:negativeSpace ;
     skos:broader ppp:negativeSpace .
+
+ppp:odourCharacter
+    a skos:Concept ;
+    skos:inScheme <https://w3id.org/ppp/> ;
+    skos:notation "odourCharacter" ;
+    skos:prefLabel "caractère de l’odeur"@fr ,
+        "odour character"@en ;
+    skos:altLabel "qualité de l’odeur"@fr ,
+        "odour quality"@en ;
+    skos:definition "Ce à quoi l’odeur fait penser, dite par la source qu’elle rappelle (le bois, les fruits, les fleurs, la fumée…), sans dire que l’objet est fait de cette source."@fr ,
+        "What the odour brings to mind, named by the source it recalls (wood, fruit, flowers, smoke…), without saying that the object is made of that source."@en ;
+    skos:scopeNote "L’odeur fait-elle penser au bois, aux fruits, aux agrumes, aux fleurs, à l’herbe coupée, aux épices, à la fumée ou au grillé, à la terre ou à la cave, à la résine, au cuir ?"@fr ,
+        "Does the odour bring to mind wood, fruit, citrus, flowers, cut grass, spices, smoke or toast, earth or a cellar, resin, leather?"@en ,
+        "Un plastique moulé peut sentir le bois ; un bois traité peut ne sentir que le vernis : « boisé » ne dit pas que l’objet est en bois. « Agréable », « propre » ou « écœurant » ne sont pas des caractères : ce sont des jugements."@fr ,
+        "A moulded plastic can smell of wood; a treated wood may smell only of varnish: “woody” does not say that the object is made of wood. “Pleasant”, “clean” or “sickening” are not characters: they are judgements."@en ,
+        "Régions catégorielles non ordonnées (décidé le 2026-10-14) ; liste de travail construite à partir des familles que les roues et les coffrets ont en commun, sans en reprendre une telle quelle. « Fruité (hors agrumes) » suit Castro et al. (2013), où les agrumes forment une dimension à part. Une odeur mêlée se note par plusieurs assertions, une par caractère net. Boisé et résineux sont déclarés voisins : Castro et al. (2013) les réunissent dans une même dimension (« woody, resinous »)."@fr ,
+        "Unordered categorical regions (decided on 2026-10-14); working list built from the families that the wheels and kits have in common, without taking any one of them as is. “Fruity (other than citrus)” follows Castro et al. (2013), where citrus forms a separate dimension. A mixed odour is recorded by several assertions, one per distinct character. Woody and resinous are declared neighbours: Castro et al. (2013) group them in one dimension (“woody, resinous”)."@en ;
+    skos:note "candidat ; non éprouvé"@fr ,
+        "candidate; untested"@en ;
+    skos:topConceptOf <https://w3id.org/ppp/> ;
+    ppp:measurementState <https://w3id.org/ppp/mesure/etat/aucune-methode-robuste> ;
+    ppp:measurementSummary "Aucune méthode de mesure robuste n’est connue pour ce à quoi une odeur fait penser (recherche reprise le 2026-11-14 ; première recherche le 2026-10-16). Le caractère se dit par des mots et se juge par un jury ; aucune norme ni méthode instrumentale lue ne le mesure. La roue des arômes du vin et l’atlas des profils d’odeur, cités par l’état de l’art, ne sont pas des mesures associées : ce sont des listes de mots sans référence physique normalisée ; les substances d’entraînement d’ISO 5496 servent de repères, pas de mesure."@fr ,
+        "No robust measurement method is known for what an odour calls to mind (search redone on 2026-11-14; first search on 2026-10-16). Character is expressed in words and judged by a panel; no standard or instrumental method read measures it. The wine aroma wheel and the atlas of odour profiles, cited in the state of the art, are not associated measurements: they are word lists without a standardised physical reference; the training substances of ISO 5496 serve as reference points, not as a measurement."@en ;
+    ppp:measurementCaveat "Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen."@fr ,
+        "The regions of this entry remain perceptual: they describe what an observer sees, hears, smells or feels by touch under the declared conditions. An associated measurement can inform an observation, but it does not set the boundaries of the regions and does not replace examination."@en ;
+    ppp:notRetainedMeasure <https://w3id.org/ppp/odourCharacter/mesure/non-retenue-1> ,
+        <https://w3id.org/ppp/odourCharacter/mesure/non-retenue-2> ,
+        <https://w3id.org/ppp/odourCharacter/mesure/non-retenue-3> ;
+    ppp:hasScale <https://w3id.org/ppp/odourCharacter/echelle> ;
+    skos:narrower <https://w3id.org/ppp/odourCharacter/woody> ,
+        <https://w3id.org/ppp/odourCharacter/fruity> ,
+        <https://w3id.org/ppp/odourCharacter/citrus> ,
+        <https://w3id.org/ppp/odourCharacter/floral> ,
+        <https://w3id.org/ppp/odourCharacter/green> ,
+        <https://w3id.org/ppp/odourCharacter/spicy> ,
+        <https://w3id.org/ppp/odourCharacter/smokyRoasted> ,
+        <https://w3id.org/ppp/odourCharacter/earthy> ,
+        <https://w3id.org/ppp/odourCharacter/resinous> ,
+        <https://w3id.org/ppp/odourCharacter/leathery> ,
+        <https://w3id.org/ppp/odourCharacter/other> .
+
+<https://w3id.org/ppp/odourCharacter/mesure/non-retenue-1>
+    a ppp:NotRetainedMeasure ;
+    rdfs:label "roue des arômes du vin (Noble et al. 1987)"@fr ,
+        "wine aroma wheel (Noble et al. 1987)"@en ;
+    ppp:reason "une roue de mots faite pour le vin, avec des étalons proposés pour définir les mots, mais sans référence physique normalisée : elle aide à nommer une odeur, elle ne la mesure pas ; elle nomme aussi des défauts du vin"@fr ,
+        "a wheel of words made for wine, with reference samples suggested to define the words, but without a standardised physical reference: it helps to name an odour, it does not measure it; it also names wine faults"@en ;
+    dct:bibliographicCitation "Noble, A. C., Arnold, R. A., Buechsenstein, J., Leach, E. J., Schmidt, J. O. & Stern, P. M. (1987). Modification of a standardized system of wine aroma terminology. American Journal of Enology and Viticulture, 38(2), 143–146." .
+
+<https://w3id.org/ppp/odourCharacter/mesure/non-retenue-2>
+    a ppp:NotRetainedMeasure ;
+    rdfs:label "atlas des profils d’odeur (Dravnieks 1985)"@fr ,
+        "atlas of odour profiles (Dravnieks 1985)"@en ;
+    ppp:reason "des notes données par un jury à une liste de mots, pour environ 160 substances : il dit à quoi chaque substance fait penser, sans série de référence physique pour juger l’odeur d’un objet"@fr ,
+        "scores given by a panel to a list of words, for about 160 substances: it says what each substance calls to mind, without a physical reference series for judging the odour of an object"@en ;
+    dct:bibliographicCitation "Dravnieks, A. (1985). Atlas of Odor Character Profiles (ASTM DS61). Philadelphia : ASTM. ISBN 0-8031-0456-1." .
+
+<https://w3id.org/ppp/odourCharacter/mesure/non-retenue-3>
+    a ppp:NotRetainedMeasure ;
+    rdfs:label "substances d’entraînement à la reconnaissance des odeurs (ISO 5496, amendement 1, tableau A.2)"@fr ,
+        "training substances for recognising odours (ISO 5496, Amendment 1, Table A.2)"@en ;
+    ppp:reason "des substances pures, à des dilutions fixées, chacune avec les mots qu’elle évoque : elles servent à entraîner un jury à reconnaître des odeurs, pas à juger l’odeur d’un objet ; la fiche s’en sert comme repères, pas comme mesure"@fr ,
+        "pure substances, at set dilutions, each with the words it calls to mind: they serve to train a panel to recognise odours, not to judge the odour of an object; this entry uses them as reference points, not as a measurement"@en ;
+    dct:bibliographicCitation "ISO 5496:2006. Sensory analysis — Methodology — Initiation and training of assessors in the detection and recognition of odours (2e éd.), et Amd 1:2018. ISO." .
+
+<https://w3id.org/ppp/odourCharacter/echelle>
+    a skos:Collection ;
+    skos:prefLabel "échelle de « caractère de l’odeur »"@fr ,
+        "scale of “odour character”"@en ;
+    skos:member <https://w3id.org/ppp/odourCharacter/woody> ,
+        <https://w3id.org/ppp/odourCharacter/fruity> ,
+        <https://w3id.org/ppp/odourCharacter/citrus> ,
+        <https://w3id.org/ppp/odourCharacter/floral> ,
+        <https://w3id.org/ppp/odourCharacter/green> ,
+        <https://w3id.org/ppp/odourCharacter/spicy> ,
+        <https://w3id.org/ppp/odourCharacter/smokyRoasted> ,
+        <https://w3id.org/ppp/odourCharacter/earthy> ,
+        <https://w3id.org/ppp/odourCharacter/resinous> ,
+        <https://w3id.org/ppp/odourCharacter/leathery> ,
+        <https://w3id.org/ppp/odourCharacter/other> ;
+    skos:scopeNote "Échelle nominale, sans ordre linéaire. Voisinages déclarés : boisé–résineux."@fr ,
+        "Nominal scale, with no linear order. Declared neighbourhoods: woody–resinous."@en .
+
+<https://w3id.org/ppp/odourCharacter/woody>
+    a skos:Concept ;
+    skos:inScheme <https://w3id.org/ppp/> ;
+    skos:notation "woody" ;
+    skos:prefLabel "caractère de l’odeur : boisé"@fr ,
+        "odour character: woody"@en ;
+    skos:hiddenLabel "boisé"@fr ,
+        "woody"@en ;
+    skos:example "qui rappelle le bois (un crayon de cèdre taillé)"@fr ,
+        "that recalls wood (a sharpened cedar pencil)"@en ;
+    ppp:regionOf ppp:odourCharacter ;
+    skos:broader ppp:odourCharacter .
+
+<https://w3id.org/ppp/odourCharacter/fruity>
+    a skos:Concept ;
+    skos:inScheme <https://w3id.org/ppp/> ;
+    skos:notation "fruity" ;
+    skos:prefLabel "caractère de l’odeur : fruité (hors agrumes)"@fr ,
+        "odour character: fruity (other than citrus)"@en ;
+    skos:hiddenLabel "fruité (hors agrumes)"@fr ,
+        "fruity (other than citrus)"@en ;
+    skos:example "qui rappelle les fruits, hors agrumes (une pomme, une poire)"@fr ,
+        "that recalls fruit, other than citrus (an apple, a pear)"@en ;
+    ppp:regionOf ppp:odourCharacter ;
+    skos:broader ppp:odourCharacter .
+
+<https://w3id.org/ppp/odourCharacter/citrus>
+    a skos:Concept ;
+    skos:inScheme <https://w3id.org/ppp/> ;
+    skos:notation "citrus" ;
+    skos:prefLabel "caractère de l’odeur : agrume"@fr ,
+        "odour character: citrus"@en ;
+    skos:hiddenLabel "agrume"@fr ,
+        "citrus"@en ;
+    skos:example "qui rappelle les agrumes (un zeste de citron)"@fr ,
+        "that recalls citrus (lemon zest)"@en ;
+    ppp:regionOf ppp:odourCharacter ;
+    skos:broader ppp:odourCharacter .
+
+<https://w3id.org/ppp/odourCharacter/floral>
+    a skos:Concept ;
+    skos:inScheme <https://w3id.org/ppp/> ;
+    skos:notation "floral" ;
+    skos:prefLabel "caractère de l’odeur : floral"@fr ,
+        "odour character: floral"@en ;
+    skos:hiddenLabel "floral"@fr ,
+        "floral"@en ;
+    skos:example "qui rappelle les fleurs (une rose)"@fr ,
+        "that recalls flowers (a rose)"@en ;
+    ppp:regionOf ppp:odourCharacter ;
+    skos:broader ppp:odourCharacter .
+
+<https://w3id.org/ppp/odourCharacter/green>
+    a skos:Concept ;
+    skos:inScheme <https://w3id.org/ppp/> ;
+    skos:notation "green" ;
+    skos:prefLabel "caractère de l’odeur : vert (herbe, feuille)"@fr ,
+        "odour character: green (grass, leaf)"@en ;
+    skos:hiddenLabel "vert (herbe, feuille)"@fr ,
+        "green (grass, leaf)"@en ;
+    skos:example "qui rappelle l’herbe coupée, une feuille froissée"@fr ,
+        "that recalls cut grass, a crushed leaf"@en ;
+    ppp:regionOf ppp:odourCharacter ;
+    skos:broader ppp:odourCharacter .
+
+<https://w3id.org/ppp/odourCharacter/spicy>
+    a skos:Concept ;
+    skos:inScheme <https://w3id.org/ppp/> ;
+    skos:notation "spicy" ;
+    skos:prefLabel "caractère de l’odeur : épicé"@fr ,
+        "odour character: spicy"@en ;
+    skos:hiddenLabel "épicé"@fr ,
+        "spicy"@en ;
+    skos:example "qui rappelle les épices (un clou de girofle)"@fr ,
+        "that recalls spices (a clove)"@en ;
+    ppp:regionOf ppp:odourCharacter ;
+    skos:broader ppp:odourCharacter .
+
+<https://w3id.org/ppp/odourCharacter/smokyRoasted>
+    a skos:Concept ;
+    skos:inScheme <https://w3id.org/ppp/> ;
+    skos:notation "smokyRoasted" ;
+    skos:prefLabel "caractère de l’odeur : fumé, grillé"@fr ,
+        "odour character: smoky, roasted"@en ;
+    skos:hiddenLabel "fumé, grillé"@fr ,
+        "smoky, roasted"@en ;
+    skos:example "qui rappelle la fumée ou le grillé (un feu de bois, du pain grillé)"@fr ,
+        "that recalls smoke or toast (a wood fire, toasted bread)"@en ;
+    ppp:regionOf ppp:odourCharacter ;
+    skos:broader ppp:odourCharacter .
+
+<https://w3id.org/ppp/odourCharacter/earthy>
+    a skos:Concept ;
+    skos:inScheme <https://w3id.org/ppp/> ;
+    skos:notation "earthy" ;
+    skos:prefLabel "caractère de l’odeur : terreux"@fr ,
+        "odour character: earthy"@en ;
+    skos:hiddenLabel "terreux"@fr ,
+        "earthy"@en ;
+    skos:example "qui rappelle une cave humide, de la terre mouillée"@fr ,
+        "that recalls a damp cellar, wet earth"@en ;
+    ppp:regionOf ppp:odourCharacter ;
+    skos:broader ppp:odourCharacter .
+
+<https://w3id.org/ppp/odourCharacter/resinous>
+    a skos:Concept ;
+    skos:inScheme <https://w3id.org/ppp/> ;
+    skos:notation "resinous" ;
+    skos:prefLabel "caractère de l’odeur : résineux"@fr ,
+        "odour character: resinous"@en ;
+    skos:hiddenLabel "résineux"@fr ,
+        "resinous"@en ;
+    skos:example "qui rappelle la résine (une pomme de pin)"@fr ,
+        "that recalls resin (a pine cone)"@en ;
+    ppp:regionOf ppp:odourCharacter ;
+    skos:broader ppp:odourCharacter .
+
+<https://w3id.org/ppp/odourCharacter/leathery>
+    a skos:Concept ;
+    skos:inScheme <https://w3id.org/ppp/> ;
+    skos:notation "leathery" ;
+    skos:prefLabel "caractère de l’odeur : cuir"@fr ,
+        "odour character: leathery"@en ;
+    skos:hiddenLabel "cuir"@fr ,
+        "leathery"@en ;
+    skos:example "qui rappelle le cuir"@fr ,
+        "that recalls leather"@en ;
+    ppp:regionOf ppp:odourCharacter ;
+    skos:broader ppp:odourCharacter .
+
+<https://w3id.org/ppp/odourCharacter/other>
+    a skos:Concept ;
+    skos:inScheme <https://w3id.org/ppp/> ;
+    skos:notation "other" ;
+    skos:prefLabel "caractère de l’odeur : autre (à décrire)"@fr ,
+        "odour character: other (to be described)"@en ;
+    skos:hiddenLabel "autre (à décrire)"@fr ,
+        "other (to be described)"@en ;
+    skos:example "une odeur qu’aucune région ne dit ; on la décrit dans la note"@fr ,
+        "an odour that no region names; it is described in the note"@en ;
+    ppp:regionOf ppp:odourCharacter ;
+    skos:broader ppp:odourCharacter .
 
 ppp:odourIntensity
     a skos:Concept ;
@@ -4480,8 +4706,9 @@ ppp:translucency
     a skos:Collection ;
     skos:prefLabel "Odorat"@fr ,
         "Smell"@en ;
-    skos:scopeNote "Ce qu’on remarque en sentant un objet de près. Une photo ne dit rien de l’odeur : on décrit à la place l’objet et les conditions dans lesquelles on l’a senti. Cette famille est en préparation : une fiche y est publiée, l’intensité de l’odeur."@fr ,
-        "What you notice when you smell an object up close. A photo says nothing about smell: instead, the object is described, along with the conditions in which it was smelled. This family is in preparation: one entry is published so far, odour intensity."@en ,
+    skos:scopeNote "Ce qu’on remarque en sentant un objet de près. Une photo ne dit rien de l’odeur : on décrit à la place l’objet et les conditions dans lesquelles on l’a senti. Cette famille est en préparation : deux fiches y sont publiées, l’intensité et le caractère de l’odeur."@fr ,
+        "What you notice when you smell an object up close. A photo says nothing about smell: instead, the object is described, along with the conditions in which it was smelled. This family is in preparation: two entries are published so far, odour intensity and odour character."@en ,
         "Famille de lecture : aide à s’orienter, pas une hiérarchie."@fr ,
         "Reading family: a guide for orientation, not a hierarchy."@en ;
-    skos:member ppp:odourIntensity .
+    skos:member ppp:odourIntensity ,
+        ppp:odourCharacter .

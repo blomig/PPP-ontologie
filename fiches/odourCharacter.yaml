@@ -3,6 +3,7 @@
 # Série 50 (2026-10-15) : fiche en préparation, rédigée sans exemplaire ; aucun champ n’est encore relu.
 # Série 106 (2026-11-11) : épisodes proposés « à réaliser » ajoutés (episodes_a_realiser) ; fiche toujours en préparation, aucun champ relu.
 # Série 110 bis (2026-11-12) : ISO/TS 16922 citée dans son édition en vigueur (2022) seulement, l’édition annulée de 2002 retirée (choix de relecture (2026-11-12)) ; references et etat_de_l_art restent à relire.
+# Série 111 (2026-11-14) : relecture explicative complète, champ par champ ; a_relire vidé, fiche publiable (choix de relecture (2026-11-14)).
 id: ppp:odourCharacter
 label_fr: caractère de l’odeur
 label_en: odour character
@@ -16,7 +17,7 @@ base_dependance:
   types:
   - ppp:odourIntensity
   facteurs_non_perceptuels: []
-note_base: 'Base `ppp:odourIntensity`, comme `ppp:pitchClarity` pour `perceivedPitch` (série 43, décision 5) : le caractère ne se juge que si l’intensité n’est pas « aucune odeur » (`noOdour`).'
+note_base: 'Base `ppp:odourIntensity`, comme `ppp:pitchClarity` pour `perceivedPitch` (décidé le 2026-10-14) : le caractère ne se juge que si l’intensité n’est pas « aucune odeur » (`noOdour`).'
 facettes:
 - odorat
 définition: Ce à quoi l’odeur fait penser, dite par la source qu’elle rappelle (le bois, les fruits, les fleurs, la fumée…), sans dire que l’objet est fait de cette source.
@@ -27,11 +28,30 @@ avertissement_label: '« Qualité de l’odeur » (label alternatif) se lit auss
   région se lit « qui rappelle … ».'
 mesure:
   etat: aucune_methode_robuste
-  synthese: Aucune méthode de mesure robuste n’est connue pour ce à quoi une odeur fait penser (recherche du 2026-10-16). Le caractère se dit par des mots et se juge par un jury ; aucune norme ni méthode
-    instrumentale lue ne le mesure.
+  synthese: 'Aucune méthode de mesure robuste n’est connue pour ce à quoi une odeur fait penser (recherche reprise le 2026-11-14 ; première recherche le 2026-10-16). Le caractère se dit par des mots et
+    se juge par un jury ; aucune norme ni méthode instrumentale lue ne le mesure. La roue des arômes du vin [[noble1987]] et l’atlas des profils d’odeur [[dravnieks1985]], cités par l’état de l’art, ne
+    sont pas des mesures associées : ce sont des listes de mots sans référence physique normalisée ; les substances d’entraînement d’ISO 5496 [[iso5496]] servent de repères, pas de mesure.'
   regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
     une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
   methodes: []
+  non_retenues:
+  - nom: roue des arômes du vin (Noble et al. 1987)
+    references:
+    - noble1987
+    raison: 'une roue de mots faite pour le vin, avec des étalons proposés pour définir les mots, mais sans référence physique normalisée : elle aide à nommer une odeur, elle ne la mesure pas ; elle nomme
+      aussi des défauts du vin'
+    statut_lecture: résumé lu (OpenAlex)
+  - nom: atlas des profils d’odeur (Dravnieks 1985)
+    references:
+    - dravnieks1985
+    raison: 'des notes données par un jury à une liste de mots, pour environ 160 substances : il dit à quoi chaque substance fait penser, sans série de référence physique pour juger l’odeur d’un objet'
+    statut_lecture: non lu, notice de l’éditeur seulement
+  - nom: substances d’entraînement à la reconnaissance des odeurs (ISO 5496, amendement 1, tableau A.2)
+    references:
+    - iso5496
+    raison: 'des substances pures, à des dilutions fixées, chacune avec les mots qu’elle évoque : elles servent à entraîner un jury à reconnaître des odeurs, pas à juger l’odeur d’un objet ; la fiche s’en
+      sert comme repères, pas comme mesure'
+    statut_lecture: non lue ; notice de l’éditeur, article 5.2 de l’extrait public et tableau A.2 de l’extrait public de l’amendement 1 seulement
 modalites:
 - odorat
 mode_de_presentation: échantillon
@@ -105,7 +125,9 @@ espace_valeurs:
     label_en: other (to be described)
     repere: une odeur qu’aucune région ne dit ; on la décrit dans la note
     exemplaires: []
-note_categories: 'Régions catégorielles non ordonnées (décision de l’éditeur du projet du 2026-10-14) ; liste de travail construite à partir des familles que les roues et les coffrets ont en commun, sans en reprendre une telle quelle. « Fruité (hors agrumes) » suit Castro et al. (2013) [[castro2013]], où les agrumes forment une dimension à part. Une odeur mêlée se note par plusieurs assertions, une par caractère net. Boisé et résineux sont déclarés voisins : Castro et al. (2013) [[castro2013]] les réunissent dans une même dimension (« woody, resinous »).'
+note_categories: 'Régions catégorielles non ordonnées (décidé le 2026-10-14) ; liste de travail construite à partir des familles que les roues et les coffrets ont en commun, sans en reprendre une telle
+  quelle. « Fruité (hors agrumes) » suit Castro et al. (2013) [[castro2013]], où les agrumes forment une dimension à part. Une odeur mêlée se note par plusieurs assertions, une par caractère net. Boisé
+  et résineux sont déclarés voisins : Castro et al. (2013) [[castro2013]] les réunissent dans une même dimension (« woody, resinous »).'
 identite: Ce que l’odeur rappelle, pas sa force (intensité de l’odeur), pas la matière de l’objet, pas l’agrément.
 relations: []
 ontoClean:
@@ -115,17 +137,28 @@ ontoClean:
   dependance: +D
 references_statut: renseignées
 references:
-- id: iso_ts16922_2022
-  citation: ISO/TS 16922:2022. Natural gas — Odorization. ISO.
-  doi_ou_url: https://www.iso.org/standard/83835.html
+- id: iso5492
+  citation: ISO 5492:2008. Sensory analysis — Vocabulary (2e éd.), et Amd 1:2016. ISO.
+  doi_ou_url: https://www.iso.org/standard/38051.html
   role: fonde
   statut_verification: vérifiée sur résumé ou source secondaire
   verifie_le: '2026-11-12'
+  verifie_sur: 'extrait d’index (page de l’ISO) ; définitions par source secondaire (adoption nationale NTP-ISO 5492, en espagnol ; citations d’ISO/TS 16922) : intensité 2.8, odeur 3.18 (le 2.12 venait
+    de l’édition 1992) ; 3.32 et 3.33 non vérifiés ; texte ISO non lu ; page de l’ISO relue le 2026-11-12 : édition 2 confirmée en 2024, toujours en vigueur'
+  reprend: 'le vocabulaire de l’analyse sensorielle : l’odeur, propriété perçue par l’organe olfactif quand on inspire certaines substances volatiles (3.18, par source secondaire)'
+  ne_reprend_pas: l’intensité (2.8), qui relève de la fiche de base ; le reste du vocabulaire
+- id: iso_ts16922_2022
+  citation: ISO/TS 16922:2022. Natural gas — Odorization. ISO.
+  doi_ou_url: https://www.iso.org/standard/83835.html
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-11-12'
   verifie_sur: 'édition en vigueur ; titre, numéros des articles (3.1.3 caractère, 3.1.4 intensité) et définition de l’intensité (« magnitude of the perceived odour ») relevés par la relecture ; définition
-    3.1.4 lue dans l’extrait public de la norme ; reste du texte non lu ; définitions 3.1.2 à 3.1.6 lues le 2026-11-12 dans l’extrait public de la norme (plateforme de consultation de l’ISO) : 3.1.3 caractère
-    d’odeur, « distinctive and identifiable feature of an odour or flavour » ; 3.1.4 intensité d’odeur, « magnitude of the perceived odour »'
-  reprend: le terme « caractère d’odeur » (3.1.3, « distinctive and identifiable feature of an odour or flavour »), édition en vigueur
-  ne_reprend_pas: le reste de la norme
+    3.1.4 lue dans l’extrait public de la norme ; reste du texte non lu ; page de l’ISO relue le 2026-11-12 : édition toujours en vigueur, marquée « à réviser » depuis le 2026-06-23 (révision en préparation)
+    ; définitions 3.1.2 à 3.1.6 lues le 2026-11-12 dans l’extrait public de la norme (plateforme de consultation de l’ISO) : 3.1.3 caractère d’odeur, « distinctive and identifiable feature of an odour or
+    flavour » ; 3.1.4 intensité d’odeur, « magnitude of the perceived odour »'
+  reprend: 'le terme « caractère d’odeur » (3.1.3, « distinctive and identifiable feature of an odour or flavour »), édition en vigueur : le label de la fiche'
+  ne_reprend_pas: le reste de la norme (odorisation du gaz)
 - id: castro2013
   citation: Castro, J. B., Ramanathan, A. & Chennubhotla, C. S. (2013). Categorical dimensions of human odor descriptor space revealed by non-negative matrix factorization. PLoS ONE, 8(9), e73289.
   doi_ou_url: https://doi.org/10.1371/journal.pone.0073289
@@ -173,10 +206,36 @@ references:
   verifie_sur: résumé seulement lu
   reprend: 'la qualité perçue change avec la concentration : la distance du nez est critique'
   ne_reprend_pas: les odorants et les valeurs étudiés
-etat_de_l_art: 'ISO/TS 16922 nomme le caractère d’odeur, « distinctive and identifiable feature of an odour or flavour » (édition en vigueur 2022, 3.1.3, extrait public lu [[iso_ts16922_2022]]). Zarzo et
-  Stanton (2006) [[zarzo_stanton2006]] notent qu’aucune classification n’est largement acceptée, et proposent en 2009 [[zarzo_stanton2009]] de s’accorder d’abord sur les odorants de référence (résumés lus)
-  ; Castro et al. (2013) [[castro2013]] trouvent des dimensions qui s’appliquent par catégories (lu en partie). Noble et al. (1987) [[noble1987]] appuient les descripteurs sur des étalons (résumé lu). Gross-Isseroff
-  et Lancet (1988) [[gross_isseroff_lancet1988]] montrent que la qualité perçue change avec la concentration (résumé seulement lu). Détail : docs/bibliographie-par-type.md#groupe-odorat.'
+- id: iso5496
+  citation: ISO 5496:2006. Sensory analysis — Methodology — Initiation and training of assessors in the detection and recognition of odours (2e éd.), et Amd 1:2018. ISO.
+  doi_ou_url: https://www.iso.org/standard/44247.html
+  role: alimente
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-11-14'
+  verifie_sur: 'non lu ; notice de l’éditeur, article 5.2 de l’extrait public et tableau A.2 de l’extrait public de l’amendement 1 seulement : page de l’ISO lue le 2026-11-12 (intitulé français « Analyse
+    sensorielle — Méthodologie — Initiation et entraînement des sujets à la détection et à la reconnaissance des odeurs » ; édition 2 de 2006, confirmée en 2022, toujours en vigueur) ; page de l’amendement
+    1 lue le 2026-11-14 (publié en 2018-05) ; article 5.2, que reprennent les épisodes, lu dans l’extrait public du texte ; tableau A.2 de l’amendement (substances, dilutions et mots associés, dont « very
+    ripe banana, strawberry » pour le butanoate d’éthyle et « crushed grass » pour le cis-3-hexén-1-ol) lu le 2026-11-14 dans l’extrait public de l’amendement ; reste du texte payant non lu'
+  reprend: 'aucune autre épreuve d’odeur dans les 20 min qui précèdent, et dix substances au plus par séance (5.2) : protocole des épisodes à réaliser ; mots associés de deux substances du tableau A.2 de
+    l’amendement, comme repères de région'
+  ne_reprend_pas: les méthodes d’initiation et d’entraînement des sujets ; les substances de l’amendement comme exemplaires ou comme mesure
+- id: dravnieks1985
+  citation: 'Dravnieks, A. (1985). Atlas of Odor Character Profiles (ASTM DS61). Philadelphia : ASTM. ISBN 0-8031-0456-1.'
+  doi_ou_url: https://doi.org/10.1520/DS61-EB
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-11-14'
+  verifie_sur: 'non lu, notice de l’éditeur seulement : page de l’éditeur lue le 2026-11-14 (caractère d’odeur de 160 substances et mélanges ; base de données pour la recherche ; procédures pour choisir
+    et entraîner un jury ; 354 pages) ; DOI et ISBN vérifiés sur Crossref le 2026-11-14 (version électronique datée de 1992) ; texte payant non lu'
+  reprend: 'rien : il est cité comme la base des profils qu’étudient Castro et al. (2013), et il n’est pas retenu comme mesure associée (rubrique « mesure »)'
+  ne_reprend_pas: les descripteurs et les profils de l’atlas
+etat_de_l_art: 'ISO 5492 [[iso5492]] fixe le vocabulaire de l’analyse sensorielle (définitions lues par source secondaire), et ISO/TS 16922 nomme le caractère d’odeur, « distinctive and identifiable feature
+  of an odour or flavour » (édition en vigueur 2022, 3.1.3, extrait public lu [[iso_ts16922_2022]]). Zarzo et Stanton (2006) [[zarzo_stanton2006]] notent qu’aucune classification n’est largement acceptée,
+  et proposent en 2009 [[zarzo_stanton2009]] de s’accorder d’abord sur les odorants de référence (résumés lus) ; Castro et al. (2013) [[castro2013]] trouvent, dans les profils de l’atlas de Dravnieks [[dravnieks1985]],
+  des dimensions qui s’appliquent par catégories (article lu en partie ; atlas non lu, notice de l’éditeur seulement). Pour nommer le caractère, il existe des listes et des roues de mots, comme la roue
+  des arômes du vin de Noble et al. (1987) [[noble1987]], appuyée sur des étalons proposés (résumé lu), mais aucune échelle à référence physique normalisée. ISO 5496 [[iso5496]] donne des substances pures
+  pour apprendre à reconnaître les odeurs, chacune avec ses mots (non lue ; notice de l’éditeur, article 5.2 de l’extrait public et tableau A.2 de l’extrait public de l’amendement 1 seulement) : la fiche
+  s’en sert comme repères, pas comme mesure. Gross-Isseroff et Lancet (1988) [[gross_isseroff_lancet1988]] montrent que la qualité perçue change avec la concentration (résumé seulement lu). Détail : docs/bibliographie-par-type.md#groupe-odorat.'
 etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-odorat
 axiomes:
 - conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
@@ -198,13 +257,13 @@ enonces_testables:
   epreuve: null
 cq_couvertes: CQ1, CQ2
 statut: candidat
-statut_note: 'en préparation (2026-10-15) : fiche rédigée, sans exemplaire ; treize épisodes proposés « à réaliser » (2026-11-11), sur des objets décrits, pas encore observés ; tous les champs rédigés sont à relire'
+statut_note: fiche relue en langage courant (relecture explicative, 2026-11-14) ; treize épisodes proposés « à réaliser », sur des objets décrits, pas encore observés
 statut_epistemique: non éprouvé
 introduit_en: '2.8'
 modifie_en: []
 remplace_par: []
-source_de_la_fiche: proposition de famille « Odorat » (docs/famille-odorat-proposition.md (document de travail, non publié), séries 41 à 43 ; premier lot recommandé par la relecture explicative en série 49 bis, à confirmer par l’éditeur)
-  ; fiche rédigée le 2026-10-15 par l’équipe, champs à valider par la relecture explicative
+source_de_la_fiche: 'proposition de famille « Odorat » (docs/famille-odorat-proposition.md (document de travail, non publié), séries 41 à 43) ; premier lot : décision 3 du 2026-10-14 (série 43), recommandation
+  suivie ; fiche rédigée le 2026-10-15 par l’équipe ; épisodes proposés le 2026-11-11 ; relecture explicative le 2026-11-14 (choix de relecture (2026-11-14))'
 # Série 106 (2026-11-11) : épisodes proposés « à réaliser » (spec X17 ; décision de l’éditeur du projet du 2026-11-02 pour le principe ; champs, détail du lot et codage des facettes : choix de relecture) ;
 # ni épreuve faite ni accord entre observateurs ; ni observateur, ni date, ni résultat. Objets et prédictions repris de la proposition de lot 9, révisés (choix de relecture (2026-11-02)) ; ids renumérotés.
 episodes_a_realiser:
@@ -645,33 +704,16 @@ manques:
   « résine » et « cuir » n’ont que des épisodes marqués `doute: oui`'
 - 'repères de région : références olfactives à choisir (étalons, coffret), comme repères, pas comme exemplaires'
 bloque_par: []
-a_relire:
-- label_fr
-- label_en
-- strate
-- note_base
-- définition
-- question_attentionnelle
-- contre_exemple
-- avertissement_label
-- mode_de_presentation
-- conditions_critiques
-- note_conditions
-- porteur
-- condition_NA
-- espace_valeurs
-- note_categories
-- identite
-- references
-- etat_de_l_art
-- nanay
-- transfert
-- enonces_testables
-- statut_note
-- mesure
-- episodes_a_realiser
+a_relire: []
 relecture_explicative:
-  date: null
+  date: '2026-11-14'
   champs:
-  - 'harmonisation mécanique des énoncés affichés (série 69, 2026-10-17)'
+  - harmonisation mécanique des énoncés affichés (série 69, 2026-10-17)
+  - 'label_fr, label_en, strate, définition, question_attentionnelle, contre_exemple, avertissement_label, mode_de_presentation, conditions_critiques, note_conditions, porteur, condition_NA, espace_valeurs,
+    identite, nanay, transfert, enonces_testables, episodes_a_realiser : relus en langage courant le 2026-11-14, validés tels quels (choix de relecture (2026-11-14)) ; E1 : accord exact, l’échelle étant
+    nominale ; épisodes : présentation inconnue et pièce close gardées comme choisies le 2026-11-11 ; épisodes relus ici avec la fiche ; un épisode ajouté plus tard se relit avec son ajout'
+  - 'references (ISO 5492 ajoutée, elle fonde le vocabulaire ; ISO/TS 16922:2022 l’alimente ; ISO 5496 ajoutée, citée par les épisodes : non lue, notice de l’éditeur, article 5.2 et tableau A.2 de l’amendement
+    1 des extraits publics seulement ; atlas de Dravnieks ajouté : non lu, notice de l’éditeur seulement), etat_de_l_art (cinq phrases : vocabulaire, classifications, listes et roues de mots, substances
+    de référence, effet de la concentration, avec le statut de lecture de chacune), mesure (roue du vin, atlas et substances d’entraînement rangés parmi les mesures non retenues : listes de mots ou repères
+    sans référence physique normalisée pour juger un objet), note_base et note_categories (date de décision écrite sans renvoi interne), statut_note, source_de_la_fiche : corrigés le 2026-11-14 (choix de relecture (2026-11-14))'
   a_reconfirmer: []

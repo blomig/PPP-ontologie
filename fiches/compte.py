@@ -519,13 +519,14 @@ def ligne_familles(fiches):
 # Série 104 : `soundDecay` entre (relecture explicative du 2026-11-09, a_relire vide, épisodes à réaliser, X17 ; choix de relecture (2026-11-09)) : 36 fiches.
 # Série 105 : `hardnessToTouch` entre (relecture explicative du 2026-11-11, a_relire vide, épisodes à réaliser, X17 ; choix de relecture (2026-11-11)) : 37 fiches.
 # Série 110 : `odourIntensity` entre (relecture explicative du 2026-11-12, a_relire vide, épisodes à réaliser, X17 ; choix de relecture (2026-11-12)) : 38 fiches.
+# Série 111 : `odourCharacter` entre (relecture explicative du 2026-11-14, a_relire vide, épisodes à réaliser, X17 ; choix de relecture (2026-11-14)) : 39 fiches.
 FICHES_PUBLIQUES_ATTENDUES = {'hue', 'lightness', 'lightnessContrast', 'perceivedSize', 'perceptualDensity', 'texture',
                               'textureDirectionality', 'distribution', 'hueContrast', 'hueCount', 'hueRange', 'jointLevelOffset',
                               'jointSpacing', 'perceptualContrast', 'saturation', 'scaleContrast', 'surfaceGloss',
                               'contour', 'lightnessRange', 'saturationRange', 'symmetry', 'translucency', 'curvature',
                               'outlineIndentation', 'negativeSpace', 'localIrregularity', 'partNesting', 'subsurfaceDepth', 'perceivedDepth',
                               'textureContrast', 'perceivedWeight', 'pitchClarity', 'perceivedPitch', 'soundAttack', 'soundSharpness', 'soundDecay', 'hardnessToTouch',
-                              'odourIntensity'}
+                              'odourIntensity', 'odourCharacter'}
 
 def publiques(paliers):
     return sorted(paliers.get('publiable', []) + paliers.get('publiable avec exemplaires incomplets', []))

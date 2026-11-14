@@ -113,14 +113,14 @@ familles:
     introduction: >-
       Ce qu’on remarque en sentant un objet de près. Une photo ne dit rien de l’odeur : on décrit
       à la place l’objet et les conditions dans lesquelles on l’a senti. Cette famille est en
-      préparation : une fiche y est publiée, l’intensité de l’odeur.
+      préparation : deux fiches y sont publiées, l’intensité et le caractère de l’odeur.
     # Série 49 : famille inscrite sans fiche, à la demande de l'éditeur du projet ; écart avec T4 (« pas de famille vide »,
     # tranché) et avec la décision 1 de la série 43 (famille inscrite avec sa première fiche) : à confirmer par l'éditeur du projet.
     # Règle d'appartenance (série 43, décision 1) : tous les types dont `modalites` contient `odorat`, et eux seuls ;
     # chaque type garde aussi sa famille d'aspect. Proposition et décisions : docs/famille-odorat-proposition.md (document de travail, non publié).
     a_relire: []
-    relecture_explicative: {date: "2026-11-12", champs: [introduction]}   # série 49 bis : introduction écrite par la relecture explicative ; série 110 (2026-11-12) : dernière phrase mise à jour (une fiche publiée, l’intensité de l’odeur), date portée au 2026-11-12, choix de relecture (2026-11-12)
-    types: [ppp:odourIntensity, ppp:odourCharacter]   # série 50 : premières fiches, en préparation ; odourIntensity publiée en série 110 (2026-11-12)
+    relecture_explicative: {date: "2026-11-14", champs: [introduction]}   # série 49 bis : introduction écrite par la relecture explicative ; série 110 (2026-11-12) : dernière phrase mise à jour (une fiche publiée, l’intensité de l’odeur), choix de relecture (2026-11-12) ; série 111 (2026-11-14) : dernière phrase mise à jour (deux fiches publiées, l’intensité et le caractère de l’odeur), date portée au 2026-11-14, choix de relecture (2026-11-14)
+    types: [ppp:odourIntensity, ppp:odourCharacter]   # série 50 : premières fiches, en préparation ; odourIntensity publiée en série 110 (2026-11-12), odourCharacter en série 111 (2026-11-14) ; la famille reste « en préparation » (types en réserve sans fiche)
 
   - cle: gout
     label_fr: Goût (en bouche)
