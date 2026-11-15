@@ -1,5 +1,7 @@
 # Fiche de type PPP — ppp:perceptualContrast — format : PPP_FicheType.md (spec v2.4)
 # Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_joint, avertissement_label, note_categories, note_reference, note_dimension, note_conditions, note_echelle, note_porteur, note_base, bloque_par.
+# Série 114 (2026-11-15) : lot 14 : neuf épisodes proposés « à réaliser » ajoutés (vue : sans effet sur les paliers) ; condition critique « distance » et note sur les conditions ; identité précisée face aux contrastes spécialisés, sans fusion ni retrait (choix de relecture (2026-11-15)).
+# Série 114 ter (2026-11-15) : épisodes du lot 14 : anglais de la préparation, de la note et du motif de doute ; crédits des images ; identifiants internes remplacés par des mots dans les textes des épisodes (choix de relecture (2026-11-15)).
 id: ppp:perceptualContrast
 label_fr: contraste perceptif
 label_en: perceptual contrast
@@ -43,6 +45,10 @@ mesure:
 modalites:
 - vision
 mode_de_presentation: image
+conditions_critiques:
+- distance
+note_conditions: 'La distance compte : un écart qui se voit de près peut ne plus se voir de loin, et la région « évident » se juge à distance de pièce ; on déclare donc la distance. Les autres conditions
+  critiques sont celles de la qualité comparée (par exemple la lumière et l’angle pour la brillance).'
 porteur: deux termes (zones, parties ou objets), rôle `terme` pour chacun
 arité: 2
 dimension_comparee: null
@@ -81,7 +87,9 @@ espace_valeurs:
     repere: les deux termes sont aux extrémités ou près des extrémités de la dimension comparée
     exemplaires:
     - ppp-a:pilote-0305
-identite: Un écart entre deux termes, pas une qualité d’un seul porteur (la clarté d’une zone n’est pas un contraste de clarté).
+identite: Un écart entre deux termes, pas une qualité d’un seul porteur (la clarté d’une zone n’est pas un contraste de clarté). Quand la qualité comparée a son propre contraste (clarté, teinte, texture,
+  taille), c’est la fiche de ce contraste qui donne les régions et les épreuves ; ce type-ci sert surtout aux qualités qui n’en ont pas, comme la brillance, et à montrer qu’un même couple de zones a plusieurs
+  contrastes.
 relations: []
 ontoClean:
   rigidite: +R
@@ -147,7 +155,11 @@ modifie_en:
 remplace_par: []
 a_relire: []
 remarque:
-- 'série 29 (2026-10-12, demande de la relecture explicative pour la publication bilingue) : label_en des régions weak, marked, strong : slight, evident, maximal (moderate inchangé ; clés inchangées), comme les labels FR faible, modéré, évident, maximal ; à relire ; validé en série 31'
+- 'série 29 (2026-10-12, demande de la relecture explicative pour la publication bilingue) : label_en des régions weak, marked, strong : slight, evident, maximal (moderate inchangé ; clés inchangées), comme
+  les labels FR faible, modéré, évident, maximal ; à relire ; validé en série 31'
+- 'lot 14 (2026-11-15, choix de relecture (2026-11-15)) : identité du type général face aux contrastes spécialisés ; option A, gardée : type générique, qui renvoie aux contrastes spécialisés (relations
+  specializes déjà déclarées par chacun) avec un critère d’identité précisé ; option B : retirer le type général et reporter ses exemplaires sur les spécialisés (changement d’identité, non fait) ; rien
+  n’est fusionné ni supprimé ; dimension comparée des épisodes : champ dimension_comparee (PPP_FicheType.md)'
 relecture_explicative:
   date: '2026-10-12'
   champs:
@@ -160,6 +172,10 @@ relecture_explicative:
   - etat_de_l_art (re-confirmé en relecture explicative, série 9, 2026-10-11)
   - references (validé en relecture explicative, série 9, 2026-10-11)
   - espace_valeurs.regions.label_en (validé en relecture explicative, série 31, 2026-10-12)
+  - 'conditions_critiques, note_conditions (distance déclarée ; les autres conditions sont celles de la qualité comparée) : ajoutés et relus le 2026-11-15 (choix de relecture (2026-11-15))'
+  - 'identite (critère précisé face aux contrastes spécialisés, sans fusion ni retrait) : relue le 2026-11-15 (choix de relecture (2026-11-15))'
+  - 'episodes_a_realiser (épisodes ajoutés le 2026-11-15, relus avec leur ajout) : relus le 2026-11-15 (choix de relecture (2026-11-15))'
+  - 'episodes_a_realiser (anglais de la préparation, de la note et du motif de doute ; crédit de l’auteur à côté de la licence ; identifiants internes remplacés par des mots) : relus le 2026-11-15 (choix de relecture (2026-11-15))'
   a_reconfirmer: []
   reconfirme:
   - champ: question_attentionnelle
@@ -195,7 +211,295 @@ relecture_explicative:
     avant: 'Pour la lumière, le contraste calculé (contraste de luminance : combien de fois une zone est plus lumineuse qu’une autre) ne s’accorde avec le contraste perçu que pour des images simples ; dans une image complexe, le contraste perçu varie d’un endroit à l’autre (Peli 1990, résumé lu) [[peli1990]], et des observateurs qui comparent deux photographies jugent laquelle est la plus contrastée (Haun et Peli 2013) [[haun_peli2013]]. Aucune source trouvée ne propose un contraste perçu général, valable pour toute dimension comparée (recherches du 2026-10-10 et du 2026-10-11 : Crossref, Semantic Scholar, OpenAlex). Les sources des contrastes spécialisés sont dans leurs fiches. Détail : docs/bibliographie-par-type.md#groupe-contrastes.'
     apres: 'Pour la lumière, le contraste calculé (contraste de luminance : écart de luminance entre deux zones, rapporté à la luminance moyenne ou à celle du fond) ne s’accorde avec le contraste perçu que pour des images simples ; dans une image complexe, le contraste perçu varie d’un endroit à l’autre (Peli 1990, résumé lu) [[peli1990]], et des observateurs qui comparent deux photographies jugent laquelle est la plus contrastée (Haun et Peli 2013) [[haun_peli2013]]. Aucune source trouvée ne propose un contraste perçu général, valable pour toute dimension comparée (recherches du 2026-10-10 et du 2026-10-11 : Crossref, Semantic Scholar, OpenAlex). Les sources des contrastes spécialisés sont dans leurs fiches. Détail : docs/bibliographie-par-type.md#groupe-contrastes.'
     raison: 'glose réécrite : un écart rapporté à une luminance de référence, pas un rapport (relecture du 2026-10-16)'
+  - champ: identite
+    date: '2026-11-15'
+    avant: Un écart entre deux termes, pas une qualité d’un seul porteur (la clarté d’une zone n’est pas un contraste de clarté).
+    apres: Un écart entre deux termes, pas une qualité d’un seul porteur (la clarté d’une zone n’est pas un contraste de clarté). Quand la qualité comparée a son propre contraste (clarté, teinte, texture,
+      taille), c’est la fiche de ce contraste qui donne les régions et les épreuves ; ce type-ci sert surtout aux qualités qui n’en ont pas, comme la brillance, et à montrer qu’un même couple de zones a plusieurs
+      contrastes.
+    raison: 'lot 14 : une assertion du contraste général sur une qualité qui a son contraste spécialisé double celle du spécialisé ; le critère dit lequel donne les régions et les épreuves ; choix de relecture
+      (2026-11-15) ; option gardée : type générique qui renvoie aux contrastes spécialisés (relations specializes déclarées par chacun) ; rien n’est fusionné ni retiré'
+episodes_a_realiser:
+- id: ppp-a:ep-perceptualContrast-01
+  realisation: a_realiser
+  region_attendue: moderate
+  rang_exemplaire: second
+  dimension_comparee: ppp:lightness
+  objet: 'échiquier de bois vide, sur photo ; termes : une case claire et la case foncée voisine ; image : https://commons.wikimedia.org/wiki/File:Empty_wooden_chessboard.jpg (CC0, licence vérifiée le 2026-11-15)'
+  objet_en: 'an empty wooden chessboard, in a photo; terms: a light square and the neighbouring dark square; image: https://commons.wikimedia.org/wiki/File:Empty_wooden_chessboard.jpg (CC0, licence checked
+    on 2026-11-15)'
+  preparation: afficher l’image en plein écran ; ne rien recadrer ; montrer du doigt la case claire (A), puis la case foncée voisine (B), sur la même rangée, au centre de la moitié avant
+  preparation_en: show the image full screen; do not crop anything; point to the light square (A), then to the neighbouring dark square (B), in the same row, in the middle of the front half
+  consigne: En ne regardant que la clarté (combien chaque case paraît claire ou sombre), la différence entre ces deux zones est-elle faible (on les distingue à peine), modérée (elle se voit en y regardant),
+    évidente (elle se voit d’emblée, même de loin) ou maximale (les deux zones sont aux deux bouts de cette qualité, comme le noir et le blanc) ?
+  consigne_en: Looking only at lightness (how light or dark each square looks), is the difference between these two zones slight (you can barely tell them apart), moderate (you see it when you look), evident
+    (you see it at once, even from afar) or maximal (the two zones are at the two ends of this quality, like black and white)?
+  conditions:
+    presentation: screen
+    lumiere: diffuse
+    distance: near
+    angle: oblique
+    duree: exam
+    yeux: ouverts
+    yeux_en: open
+    note: lumière, distance et angle estimés sur l’image ; écran d’au moins 30 cm de diagonale
+    note_en: light, distance and angle estimated from the image; screen at least 30 cm across the diagonal
+  doute: oui
+  motif_doute: l’écart se voit bien et pourrait être jugé « évident » (visible d’emblée) ; le registre dit déjà, pour l’éventail des clartés de ce damier, « l’écart se voit bien, mais sans noir ni blanc
+    »
+  motif_doute_en: the difference is clearly visible and could be judged “evident” (seen at once); the register already says, for the range of lightnesses of this board, “the difference is clearly visible,
+    but with neither black nor white”
+  note: 'même constat qu’un contraste de clarté (région modérée, sans exemplaire) : doublon assumé ; lié aux épisodes de la teinte et de la texture sur l’échiquier (même couple, autres dimensions)'
+  note_en: 'same finding as a lightness contrast (moderate region, no exemplar yet): an accepted duplicate; linked to the hue and texture episodes on the chessboard (same pair, other dimensions)'
+  texte_fr: 'Échiquier de bois : entre une case claire et une case foncée, contraste de clarté modéré (prédiction, à éprouver).'
+  texte_en: 'Wooden chessboard: between a light and a dark square, moderate lightness contrast (prediction, to be tested).'
+- id: ppp-a:ep-perceptualContrast-02
+  realisation: a_realiser
+  region_attendue: moderate
+  rang_exemplaire: principal
+  dimension_comparee: ppp:hue
+  objet: 'un citron et un citron vert posés côte à côte, sur photo ; termes : le citron et le citron vert ; image : https://commons.wikimedia.org/wiki/File:Lemon_and_lime.jpg (CC BY-SA 4.0, photo de Rhododendrites,
+    licence vérifiée le 2026-11-15)'
+  objet_en: 'a lemon and a lime side by side, in a photo; terms: the lemon and the lime; image: https://commons.wikimedia.org/wiki/File:Lemon_and_lime.jpg (CC BY-SA 4.0, photo by Rhododendrites, licence
+    checked on 2026-11-15)'
+  preparation: afficher l’image en plein écran ; montrer le citron (A), puis le citron vert (B)
+  preparation_en: show the image full screen; point to the lemon (A), then to the lime (B)
+  consigne: En ne regardant que la teinte (rouge, jaune, vert, bleu…), la différence entre ces deux fruits est-elle faible (on les distingue à peine), modérée (elle se voit en y regardant), évidente (elle
+    se voit d’emblée, même de loin) ou maximale (les deux sont aux deux bouts de cette qualité) ?
+  consigne_en: Looking only at hue (red, yellow, green, blue…), is the difference between these two fruits slight (you can barely tell them apart), moderate (you see it when you look), evident (you see
+    it at once, even from afar) or maximal (the two are at the two ends of this quality)?
+  conditions:
+    presentation: screen
+    lumiere: diffuse
+    distance: near
+    angle: frontal
+    duree: exam
+    yeux: ouverts
+    yeux_en: open
+    note: lumière, distance et angle estimés sur l’image
+    note_en: light, distance and angle estimated from the image
+  doute: non
+  note: 'un jaune et un vert, à un pas sur le cercle des six teintes ; même constat que l’exemplaire du contraste de teinte sur le citron et le citron vert (modéré, relu) : doublon déclaré ; pourrait, une
+    fois réalisé et entré au registre, remplacer l’exemplaire du velours côtelé (doute non levé) comme exemplaire montré de la région modérée'
+  note_en: 'a yellow and a green, one step apart on the circle of six hues; same finding as the hue contrast exemplar on the lemon and the lime (moderate, reviewed): a declared duplicate; once carried out
+    and entered in the register, it could replace the corduroy exemplar (doubt not lifted) as the shown exemplar of the moderate region'
+  texte_fr: 'Un citron et un citron vert : contraste de teinte modéré (prédiction, à éprouver).'
+  texte_en: 'A lemon and a lime: moderate hue contrast (prediction, to be tested).'
+- id: ppp-a:ep-perceptualContrast-03
+  realisation: a_realiser
+  region_attendue: weak
+  lie_a: ppp-a:ep-perceptualContrast-01
+  dimension_comparee: ppp:hue
+  objet: 'le même échiquier de bois, sur photo ; mêmes termes que pour l’échiquier ; image : https://commons.wikimedia.org/wiki/File:Empty_wooden_chessboard.jpg (CC0, licence vérifiée le 2026-11-15)'
+  objet_en: 'the same wooden chessboard, in a photo; same terms as for the chessboard; image: https://commons.wikimedia.org/wiki/File:Empty_wooden_chessboard.jpg (CC0, licence checked on 2026-11-15)'
+  preparation: comme pour l’épisode de la clarté sur l’échiquier ; faire cet épisode après lui, dans la même séance, sans dire sa réponse
+  preparation_en: as for the lightness episode on the chessboard; run this episode after it, in the same session, without giving its answer
+  consigne: En ne regardant que la teinte (rouge, orange, jaune…), sans tenir compte du clair et du sombre, la différence entre ces deux cases est-elle faible, modérée, évidente ou maximale ?
+  consigne_en: Looking only at hue, ignoring light and dark, is the difference between these two squares slight, moderate, evident or maximal?
+  conditions:
+    presentation: screen
+    lumiere: diffuse
+    distance: near
+    angle: oblique
+    duree: exam
+    yeux: ouverts
+    yeux_en: open
+  doute: non
+  note: 'deux bruns orangés, que la fiche de la teinte range dans l’orange (le brun y est un orange) : zéro pas sur le cercle ; même couple que l’épisode de la clarté sur l’échiquier, autre dimension, autre
+    région : c’est l’exemple concret demandé par la fiche (« la dimension comparée est libre »)'
+  note_en: 'two orange browns, which the hue entry places in orange (brown counts there as an orange): zero steps on the circle; same pair as the lightness episode on the chessboard, another dimension,
+    another region: this is the concrete example the entry asks for (“the compared dimension is free”)'
+  texte_fr: 'Échiquier de bois : entre une case claire et une case foncée, contraste de teinte faible (prédiction, à éprouver).'
+  texte_en: 'Wooden chessboard: between a light and a dark square, slight hue contrast (prediction, to be tested).'
+- id: ppp-a:ep-perceptualContrast-04
+  realisation: a_realiser
+  region_attendue: weak
+  lie_a: ppp-a:ep-perceptualContrast-01
+  dimension_comparee: ppp:texture
+  objet: 'le même échiquier de bois, sur photo ; mêmes termes que pour l’échiquier ; image : https://commons.wikimedia.org/wiki/File:Empty_wooden_chessboard.jpg (CC0, licence vérifiée le 2026-11-15)'
+  objet_en: 'the same wooden chessboard, in a photo; same terms as for the chessboard; image: https://commons.wikimedia.org/wiki/File:Empty_wooden_chessboard.jpg (CC0, licence checked on 2026-11-15)'
+  preparation: comme pour l’épisode de la clarté sur l’échiquier
+  preparation_en: as for the lightness episode on the chessboard
+  consigne: En ne regardant que la texture (la taille des reliefs et du grain), ni la couleur ni la clarté, la différence entre ces deux cases est-elle faible, modérée, évidente ou maximale ?
+  consigne_en: Looking only at texture (the size of the relief and grain), neither colour nor lightness, is the difference between these two squares slight, moderate, evident or maximal?
+  conditions:
+    presentation: screen
+    lumiere: diffuse
+    distance: near
+    angle: oblique
+    duree: exam
+    yeux: ouverts
+    yeux_en: open
+    note: 'la distance est critique pour la texture : de près, estimée sur l’image'
+    note_en: 'distance is critical for texture: close up, estimated from the image'
+  doute: non
+  note: deux placages de bois à fil visible, lisses à cette distance ; doublon d’un contraste de texture faible
+  note_en: two wood veneers with visible grain, smooth at this distance; a duplicate of a slight texture contrast
+  texte_fr: 'Échiquier de bois : entre une case claire et une case foncée, contraste de texture faible (prédiction, à éprouver).'
+  texte_en: 'Wooden chessboard: between a light and a dark square, slight texture contrast (prediction, to be tested).'
+- id: ppp-a:ep-perceptualContrast-05
+  realisation: a_realiser
+  region_attendue: marked
+  dimension_comparee: ppp:surfaceGloss
+  objet: 'bol à thé à glaçure sombre (Jian, Song), Metropolitan Museum of Art, n° 91.1.226 ; termes : la glaçure de l’intérieur et le pied sans glaçure ; image : https://commons.wikimedia.org/wiki/File:%E4%B8%AD%E5%9C%8B_%E5%8D%97%E5%AE%8B_%E5%BB%BA%E7%AA%AF_%E5%85%94%E6%AF%AB%E9%87%89%E8%8C%B6%E7%A2%97-Tea_Bowl_with_%E2%80%9CHare%E2%80%99s-Fur%E2%80%9D_Glaze_MET_DP372022.jpg
+    (CC0, licence vérifiée le 2026-11-15)'
+  objet_en: 'a dark-glazed tea bowl (Jian ware, Song), Metropolitan Museum of Art, no. 91.1.226; terms: the inside glaze and the unglazed foot; image: https://commons.wikimedia.org/wiki/File:%E4%B8%AD%E5%9C%8B_%E5%8D%97%E5%AE%8B_%E5%BB%BA%E7%AA%AF_%E5%85%94%E6%AF%AB%E9%87%89%E8%8C%B6%E7%A2%97-Tea_Bowl_with_%E2%80%9CHare%E2%80%99s-Fur%E2%80%9D_Glaze_MET_DP372022.jpg
+    (CC0, licence checked on 2026-11-15)'
+  preparation: afficher l’image en plein écran ; montrer la bande claire de l’intérieur (A), puis le pied gris sous la glaçure (B)
+  preparation_en: show the image full screen; point to the bright band inside the bowl (A), then to the grey foot under the glaze (B)
+  consigne: En ne regardant que les reflets (la netteté des reflets que montre chaque surface), ni la couleur ni la clarté, la différence entre ces deux surfaces est-elle faible, modérée, évidente (elle
+    se voit d’emblée, même de loin) ou maximale (l’une sans aucun reflet, l’autre comme un miroir) ?
+  consigne_en: Looking only at reflections (how sharp the reflections on each surface are), neither colour nor lightness, is the difference between these two surfaces slight, moderate, evident or maximal
+    (one with no reflection at all, the other like a mirror)?
+  conditions:
+    presentation: screen
+    lumiere: directional
+    distance: near
+    angle: oblique
+    duree: exam
+    yeux: ouverts
+    yeux_en: open
+    note: 'lumière, distance et angle estimés sur l’image : bol d’environ 13 cm vu de près, de côté et un peu d’au-dessus ; lumière de studio venue d’en haut à gauche, ombre portée à droite ; la lumière
+      et l’angle sont critiques pour la brillance, dimension comparée'
+    note_en: 'light, distance and angle estimated from the image: a bowl about 13 cm across seen close up, from the side and slightly from above; studio light from the upper left, cast shadow on the right;
+      light and angle are critical for gloss, the compared dimension'
+  doute: oui
+  motif_doute: aucun repère du contraste général ne dit combien de pas de la brillance font « évident » ; la glaçure intérieure peut être lue « satinée » (voir l’épisode du bol dans la fiche de la brillance),
+    et le contraste tomberait à « modéré »
+  motif_doute_en: no reference of the general contrast says how many steps of gloss make “evident”; the inside glaze can be read as “satin” (see the bowl episode in the gloss entry), and the contrast would
+    then drop to “moderate”
+  note: 'qualité sans contraste spécialisé : cas où le contraste général fait un travail qu’aucun spécialisé ne fait ; « évident » lu sur le repère (l’écart se voit d’emblée)'
+  note_en: 'a quality with no specialised contrast: a case where the general contrast does work that no specialised contrast does; “evident” read from the reference (the difference is seen at once)'
+  texte_fr: 'Un bol à glaçure sombre : entre l’intérieur glacé et le pied sans glaçure, contraste de brillance évident (prédiction, à éprouver).'
+  texte_en: 'A dark-glazed bowl: between the glazed inside and the unglazed foot, evident gloss contrast (prediction, to be tested).'
+- id: ppp-a:ep-perceptualContrast-06
+  realisation: a_realiser
+  region_attendue: strong
+  dimension_comparee: ppp:lightness
+  objet: 'page imprimée d’un livre, sur photo (texte noir sur papier presque blanc) ; termes : le numéro de page « 15 » et la marge voisine ; image : https://commons.wikimedia.org/wiki/File:Alice_in_Wonderland_Page_15.jpg
+    (CC0, licence vérifiée le 2026-11-15)'
+  objet_en: 'a printed book page, in a photo (black text on nearly white paper); terms: the page number “15” and the margin beside it; image: https://commons.wikimedia.org/wiki/File:Alice_in_Wonderland_Page_15.jpg
+    (CC0, licence checked on 2026-11-15)'
+  preparation: afficher l’image en plein écran ; montrer le « 15 » en haut à droite (A), puis la marge blanche à côté (B)
+  preparation_en: show the image full screen; point to the “15” at the top right (A), then to the white margin beside it (B)
+  consigne: En ne regardant que la clarté, la différence entre ces deux zones est-elle faible, modérée, évidente ou maximale (aux deux bouts, comme le noir et le blanc) ?
+  consigne_en: Looking only at lightness, is the difference between these two zones slight, moderate, evident or maximal (at the two ends, like black and white)?
+  conditions:
+    presentation: screen
+    lumiere: unknown
+    distance: near
+    angle: frontal
+    duree: exam
+    yeux: ouverts
+    yeux_en: open
+    note: conditions de l’épisode déjà réalisé sur cette page (lumière inconnue) ; la lumière n’est critique ni pour la clarté ni pour le contraste de clarté
+    note_en: conditions of the episode already carried out on this page (light unknown); light is critical neither for lightness nor for lightness contrast
+  doute: non
+  note: encre noire contre papier presque blanc ; doublon d’un contraste de clarté maximal ; sert surtout de terme de comparaison pour l’épisode de la même page imprimée, vue à 3 m
+  note_en: black ink against nearly white paper; a duplicate of a maximal lightness contrast; mainly serves as a point of comparison for the same page printed and seen from 3 m
+  texte_fr: 'Une page imprimée, vue de près : entre un chiffre et la marge, contraste de clarté maximal (prédiction, à éprouver).'
+  texte_en: 'A printed page, seen close up: between a figure and the margin, maximal lightness contrast (prediction, to be tested).'
+- id: ppp-a:ep-perceptualContrast-07
+  realisation: a_realiser
+  region_attendue: strong
+  lie_a: ppp-a:ep-perceptualContrast-06
+  dimension_comparee: ppp:lightness
+  objet: 'la même page, imprimée sur papier blanc mat de 21 × 29,7 cm, image entière ; mêmes termes ; image : https://commons.wikimedia.org/wiki/File:Alice_in_Wonderland_Page_15.jpg (CC0, licence vérifiée
+    le 2026-11-15)'
+  objet_en: 'the same page, printed on matt white paper of 21 × 29.7 cm, whole image; same terms; image: https://commons.wikimedia.org/wiki/File:Alice_in_Wonderland_Page_15.jpg (CC0, licence checked on
+    2026-11-15)'
+  preparation: imprimer l’image entière, sans recadrage, sur une feuille de 21 × 29,7 cm ; la fixer au mur à hauteur des yeux ; l’observateur se place à 3 m ; le préparateur montre le « 15 » puis la marge
+    avec une baguette
+  preparation_en: print the whole image, uncropped, on a 21 × 29.7 cm sheet; fix it to the wall at eye level; the observer stands 3 m away; the preparer points to the “15”, then to the margin, with a pointer
+  consigne: En ne regardant que la clarté, la différence entre ces deux zones est-elle faible (on les distingue à peine), modérée, évidente ou maximale ?
+  consigne_en: Looking only at lightness, is the difference between these two zones slight (barely distinguishable), moderate, evident or maximal?
+  conditions:
+    presentation: printedImage
+    lumiere: diffuse
+    distance: room
+    angle: frontal
+    duree: glance
+    yeux: ouverts
+    yeux_en: open
+    note: pièce éclairée de façon égale ; 3 m ; noter si l’observateur voit le chiffre
+    note_en: room lit evenly; 3 m; note whether the observer sees the figure
+  doute: oui
+  motif_doute: 'cas limite construit : à 3 m, un chiffre de quelques millimètres se voit à peine ; le repère de « maximal » (les deux bouts de la clarté) et celui de « faible » (on les distingue à peine)
+    conviennent tous deux : la région dépend de la distance, c’est pourquoi la distance est une condition critique de ce type'
+  motif_doute_en: 'a deliberately borderline case: from 3 m, a figure a few millimetres high is barely visible; the reference of “maximal” (the two ends of lightness) and that of “slight” (barely distinguishable)
+    both fit: the region depends on distance, which is why distance is a critical condition of this type'
+  note: épisode de contrôle ; on attend un désaccord entre observateurs, ou entre les repères
+  note_en: control episode; disagreement is expected between observers, or between the references
+  texte_fr: 'La même page, à 3 m : la région du contraste de clarté entre le chiffre et la marge n’est pas tranchée par les repères (cas limite, à éprouver).'
+  texte_en: 'The same page, at 3 m: the region of the lightness contrast between the figure and the margin is not settled by the references (borderline case, to be tested).'
+- id: ppp-a:ep-perceptualContrast-08
+  realisation: a_realiser
+  region_attendue: weak
+  dimension_comparee: ppp:lightness
+  objet: 'deux carreaux de céramique noirs, unis, sans marque, d’environ 10 × 10 cm : (A) un carreau noir mat (émail mat ou grès non émaillé), (B) un carreau noir à émail brillant ; termes : les deux faces'
+  objet_en: 'two plain black unbranded ceramic tiles, about 10 × 10 cm: (A) a matt black tile, (B) a glossy black glazed tile; terms: the two faces'
+  preparation: laver et sécher les carreaux ; les poser côte à côte sur une table claire, sous une lampe de bureau placée en haut à gauche, à environ 50 cm ; l’observateur s’assoit à 60 cm ; vérifier qu’en
+    regardant de face, aucun reflet de la lampe ne tombe sur B (sinon déplacer la lampe), puisque l’on juge ici la clarté
+  preparation_en: wash and dry the tiles; lay them side by side on a light-coloured table, under a desk lamp placed at the upper left, about 50 cm away; the observer sits 60 cm away; check that, looking
+    straight on, no reflection of the lamp falls on B (otherwise move the lamp), since lightness is judged here
+  consigne: En ne regardant que la clarté (comme sur une photo en noir et blanc), sans tenir compte des reflets, la différence entre ces deux carreaux est-elle faible, modérée, évidente ou maximale ?
+  consigne_en: Looking only at lightness (as in a black-and-white photo), ignoring reflections, is the difference between these two tiles slight, moderate, evident or maximal?
+  conditions:
+    presentation: tableTop
+    lumiere: directional
+    distance: near
+    angle: frontal
+    duree: exam
+    yeux: ouverts
+    yeux_en: open
+    note: tête immobile pour cet épisode
+    note_en: head kept still for this episode
+  doute: oui
+  motif_doute: 'un noir brillant hors reflet paraît souvent plus profond qu’un noir mat (le mat diffuse un peu de lumière) : l’écart de clarté peut être jugé « modéré » ; c’est ce que doit éprouver l’énoncé
+    de la brillance à clarté constante'
+  motif_doute_en: 'a glossy black, away from the reflection, often looks deeper than a matte black (matte scatters a little light): the lightness difference may be judged “moderate”; this is what the gloss
+    statement at constant lightness must test'
+  note: 'lié à l’épisode suivant (même paire, sur la brillance) et à l’épisode du carreau noir brillant dans la fiche de la brillance (même carreau B) ; reprend l’exemple de la fiche de la brillance, qui
+    se sépare de la clarté (« un carrelage noir mat et un noir poli ») ; vision en présence : utile pour un second régime de perception'
+  note_en: 'linked to the next episode (same pair, on gloss) and to the glossy black tile episode in the gloss entry (same tile B); takes up the example of the gloss entry, which is separable from lightness
+    (“a matte black tile and a polished black one”); vision in presence: useful for a second mode of perception'
+  texte_fr: 'Un carreau noir mat et un carreau noir brillant : contraste de clarté faible (prédiction, à éprouver).'
+  texte_en: 'A matt black tile and a glossy black tile: slight lightness contrast (prediction, to be tested).'
+- id: ppp-a:ep-perceptualContrast-09
+  realisation: a_realiser
+  region_attendue: marked
+  lie_a: ppp-a:ep-perceptualContrast-08
+  dimension_comparee: ppp:surfaceGloss
+  objet: les deux carreaux noirs de l’épisode précédent, mat et brillant ; mêmes termes
+  objet_en: the two black tiles of the previous episode, matte and glossy; same terms
+  preparation: comme pour l’épisode précédent (la clarté des carreaux noirs) ; l’observateur peut bouger la tête et incliner les carreaux
+  preparation_en: as for the previous episode (the lightness of the black tiles); the observer may move their head and tilt the tiles
+  consigne: En bougeant un peu la tête ou les carreaux, et en ne regardant que les reflets, la différence entre ces deux surfaces est-elle faible, modérée, évidente (elle se voit d’emblée) ou maximale (l’une
+    sans aucun reflet, l’autre comme un miroir) ?
+  consigne_en: Moving your head or the tiles a little, and looking only at reflections, is the difference between these two surfaces slight, moderate, evident or maximal (one with no reflection, the other
+    like a mirror)?
+  conditions:
+    presentation: tableTop
+    lumiere: directional
+    distance: near
+    angle: varied
+    duree: exam
+    yeux: ouverts
+    yeux_en: open
+  doute: oui
+  motif_doute: si le carreau brillant montre des images nettes (la fenêtre, le visage), il est « miroir » et le contraste « maximal » ; s’il ne montre que le reflet de la lampe, « évident »
+  motif_doute_en: if the glossy tile shows sharp images (the window, the face), it is “mirror” and the contrast “maximal”; if it shows only the reflection of the lamp, “evident”
+  note: 'même couple que l’épisode précédent : clarté faible, brillance évidente ou maximale ; vision en présence'
+  note_en: 'same pair as the previous episode: slight lightness, evident or maximal gloss; vision in presence'
+  texte_fr: 'Un carreau noir mat et un carreau noir brillant : contraste de brillance évident (prédiction, à éprouver).'
+  texte_en: 'A matt black tile and a glossy black tile: evident gloss contrast (prediction, to be tested).'
 manques:
-- 'exemplaires (au 2026-10-14) : 0302 faible, 0304 évident, 0305 maximal relus ; 0303 modéré, marqué discutable, non montré ; ppp-a:pilote-0301 reste retiré (T24)'
+- 'exemplaires (au 2026-10-14) : 0302 faible, 0304 évident, 0305 maximal relus ; 0303 modéré, marqué discutable, non montré ; ppp-a:pilote-0301 reste retiré (T24) ; le 2026-11-15, neuf épisodes proposés
+  « à réaliser » (vue : sans effet sur les paliers ; candidats au registre préparés à part)'
 - 'nombre et labels des régions : tranchés (T3, option A, décision de l’éditeur du projet, 2026-10-10)'
-- 'ne s’explique pas sans aide (relecture explicative, série 6) : exemple concret : le type est abstrait (la dimension comparée est libre) ; au 2026-10-14, trois régions illustrées par des exemplaires relus, sur deux dimensions (clarté, teinte) ; reste à juger si cela suffit, ou s’il faut un renvoi visible aux contrastes spécialisés'
+- 'ne s’explique pas sans aide (relecture explicative, série 6) : exemple concret : le type est abstrait (la dimension comparée est libre) ; au 2026-10-14, trois régions illustrées par des exemplaires relus,
+  sur deux dimensions (clarté, teinte) ; reste à juger si cela suffit, ou s’il faut un renvoi visible aux contrastes spécialisés ; le 2026-11-15 : l’identité renvoie aux contrastes spécialisés, et des épisodes
+  proposés montrent un même couple sur plusieurs qualités (l’échiquier : clarté, teinte, texture) et une qualité sans contraste spécialisé (la brillance) ; reste à réaliser ces épisodes ou à entrer un exemplaire'
+- 'critères des régions : « faible », « modéré » et « évident » disent ce qu’on voit, « maximal » une position sur la qualité ; un même couple peut être « maximal » de près et « faible » de loin (épisodes
+  06 et 07) ; la distance est déclarée, les repères ne changent pas (choix de relecture (2026-11-15)) ; à éprouver'
+- 'pas d’échelle de pas pour « évident » sur une qualité sans contraste spécialisé (la brillance) : le repère se lit sur ce qu’on voit ; à éprouver'

@@ -7177,8 +7177,8 @@
     "en": "matte"
    },
    "example": {
-    "fr": "aucun reflet, sous aucun angle (un plâtre, un papier buvard)",
-    "en": "no reflection, at any angle (plaster, blotting paper)"
+    "fr": "aucun reflet, même en bougeant la tête ou l’objet (un plâtre, un papier buvard)",
+    "en": "no reflection, even when you move your head or the object (plaster, blotting paper)"
    },
    "regionOf": "https://w3id.org/ppp/surfaceGloss",
    "broader": "https://w3id.org/ppp/surfaceGloss"

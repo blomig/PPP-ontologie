@@ -4217,8 +4217,8 @@ ppp:surfaceGloss
         "surface gloss: matte"@en ;
     skos:hiddenLabel "mat"@fr ,
         "matte"@en ;
-    skos:example "aucun reflet, sous aucun angle (un plâtre, un papier buvard)"@fr ,
-        "no reflection, at any angle (plaster, blotting paper)"@en ;
+    skos:example "aucun reflet, même en bougeant la tête ou l’objet (un plâtre, un papier buvard)"@fr ,
+        "no reflection, even when you move your head or the object (plaster, blotting paper)"@en ;
     ppp:regionOf ppp:surfaceGloss ;
     skos:broader ppp:surfaceGloss .
 

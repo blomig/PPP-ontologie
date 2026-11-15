@@ -1,5 +1,7 @@
 # Fiche de type PPP — ppp:scaleContrast — format : PPP_FicheType.md (spec v2.4)
 # Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_joint, avertissement_label, note_categories, note_reference, note_dimension, note_conditions, note_echelle, note_porteur, note_base, bloque_par, note_labels_regions.
+# Série 114 (2026-11-15) : lot 14 : sept épisodes proposés « à réaliser » ajoutés (vue : sans effet sur les paliers) ; condition critique « distance » et note sur les conditions (taille perçue des choses, étendue comparée) (choix de relecture (2026-11-15)).
+# Série 114 ter (2026-11-15) : épisodes du lot 14 : anglais de la préparation, de la note et du motif de doute ; crédits des images ; identifiants internes remplacés par des mots dans les textes des épisodes (choix de relecture (2026-11-15)).
 id: ppp:scaleContrast
 label_fr: contraste d’échelle
 label_en: scale contrast
@@ -38,6 +40,10 @@ mesure:
 modalites:
 - vision
 mode_de_presentation: image
+conditions_critiques:
+- distance
+note_conditions: 'On juge la taille des choses telles qu’on les perçoit, pas la place qu’elles prennent dans l’image ou dans le champ de vision. La distance compte : deux éléments à des distances très différentes
+  de l’observateur sont un cas limite, qu’on déclare. On dit aussi quelle étendue on compare (la hauteur, la longueur ou le diamètre) : deux éléments peuvent différer bien plus en surface qu’en hauteur.'
 porteur: deux termes (zones, parties ou objets), rôle `terme` pour chacun
 arité: 2
 dimension_comparee: ppp:perceivedSize
@@ -213,6 +219,9 @@ relecture_explicative:
   - labels_regions_propres (validé en relecture explicative, série 9, 2026-10-11)
   - references (validé en relecture explicative, série 9, 2026-10-11)
   - espace_valeurs.regions.label_en (validé en relecture explicative, série 31, 2026-10-12)
+  - 'conditions_critiques, note_conditions (distance ; taille perçue des choses ; étendue comparée) : ajoutés et relus le 2026-11-15 (choix de relecture (2026-11-15))'
+  - 'episodes_a_realiser (épisodes ajoutés le 2026-11-15, relus avec leur ajout) : relus le 2026-11-15 (choix de relecture (2026-11-15))'
+  - 'episodes_a_realiser (anglais de la préparation, de la note et du motif de doute ; crédit de l’auteur à côté de la licence ; identifiants internes remplacés par des mots) : relus le 2026-11-15 (choix de relecture (2026-11-15))'
   a_reconfirmer: []
   reconfirme:
   - champ: contre_exemple
@@ -290,9 +299,210 @@ relecture_explicative:
     raison: 'variation selon la culture, Himba et Anglais (relecture explicative ; le résumé dit « English participants ») ; relecture explicative (2026-10-11) : « peuvent varier », « une étude trouve »
       (seconde relecture explicative)'
     remarque: re-confirmé en relecture explicative (2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+episodes_a_realiser:
+- id: ppp-a:ep-scaleContrast-01
+  realisation: a_realiser
+  region_attendue: strong
+  rang_exemplaire: principal
+  objet: 'façade ouest de la cathédrale de Cologne et passants sur le parvis ; termes : la façade et les passants debout devant le portail central ; image : https://commons.wikimedia.org/wiki/File:K%C3%B6lner_Dom_-_Westfassade_2022_ohne_Ger%C3%BCst-0968.jpg
+    (CC BY-SA 4.0, photo de Raimond Spekking, licence vérifiée le 2026-11-15)'
+  objet_en: 'west front of Cologne Cathedral and people on the square; terms: the front and the people standing before the central portal; image: https://commons.wikimedia.org/wiki/File:K%C3%B6lner_Dom_-_Westfassade_2022_ohne_Ger%C3%BCst-0968.jpg
+    (CC BY-SA 4.0, photo by Raimond Spekking, licence checked on 2026-11-15)'
+  preparation: afficher l’image entière en plein écran (format vertical) ; montrer la façade du parvis aux flèches (A), puis les passants devant le portail central (B), pas ceux du premier plan
+  preparation_en: show the whole image full screen (portrait format); point to the front, from the square up to the spires (A), then to the people before the central portal (B), not those in the foreground
+  consigne: Entre ces deux éléments vus ensemble, les tailles sont-elles voisines, nettement différentes (l’un nettement plus grand), très différentes (l’un plusieurs fois plus grand) ou sans commune mesure
+    (un très grand élément à côté d’un très petit) ? Jugez la hauteur.
+  consigne_en: Between these two elements seen together, are the sizes similar, clearly different (one clearly bigger), very different (one several times bigger) or vastly different (a very big element
+    next to a very small one)? Judge height.
+  conditions:
+    presentation: screen
+    lumiere: directional
+    distance: far
+    angle: frontal
+    duree: exam
+    yeux: ouverts
+    yeux_en: open
+    note: 'lumière, distance et angle estimés sur l’image : façade vue de face depuis la place, soleil (ombres nettes, ciel bleu) ; les passants sont au pied de la façade, à peu près à la même distance
+      qu’elle de l’appareil'
+    note_en: 'light, distance and angle estimated from the image: the front seen straight on from the square, sunshine (sharp shadows, blue sky); the people stand at the foot of the front, at about the
+      same distance from the camera'
+  doute: non
+  note: 'repère de la région : « un pavé à côté d’une façade entière » ; ici un corps humain à côté d’une façade entière, à la même distance ; candidat à un second exemplaire de « sans commune mesure »,
+    à côté de l’exemplaire du séquoia géant (à relire) ; image à recadrer avant de la reproduire (passants de face au premier plan, un taxi, un panneau lisible) : recadrage permis par la licence, à signaler
+    comme modification'
+  note_en: 'reference of the region: “a paving stone next to a whole façade”; here a human body next to a whole façade, at the same distance; candidate for a second exemplar of “vastly different”, besides
+    the giant sequoia exemplar (still to be reviewed); the image must be cropped before it is reproduced (people facing the camera in the foreground, a taxi, a legible sign): cropping is allowed by the
+    licence, to be declared as a modification'
+  texte_fr: 'La façade ouest de la cathédrale de Cologne et les passants devant son portail : tailles sans commune mesure (prédiction, à éprouver).'
+  texte_en: 'The west front of Cologne Cathedral and the people before its portal: vastly different sizes (prediction, to be tested).'
+- id: ppp-a:ep-scaleContrast-02
+  realisation: a_realiser
+  region_attendue: strong
+  objet: 'la pyramide de Khéphren et un dromadaire couché au premier plan ; termes : la pyramide et le dromadaire ; image : https://commons.wikimedia.org/wiki/File:Camel_near_Khafre%27s_Pyramid,_Egypt.jpg
+    (CC BY-SA 4.0, photo de Myousry6666, licence vérifiée le 2026-11-15)'
+  objet_en: 'the Pyramid of Khafre and a camel lying in the foreground; terms: the pyramid and the camel; image: https://commons.wikimedia.org/wiki/File:Camel_near_Khafre%27s_Pyramid,_Egypt.jpg (CC BY-SA
+    4.0, photo by Myousry6666, licence checked on 2026-11-15)'
+  preparation: afficher l’image en plein écran ; montrer la pyramide (A), puis le dromadaire (B)
+  preparation_en: show the image full screen; point to the pyramid (A), then to the camel (B)
+  consigne: Entre ces deux éléments vus ensemble, les tailles sont-elles voisines, nettement différentes, très différentes ou sans commune mesure ? Jugez la hauteur, telle que vous percevez les choses,
+    pas leur place dans l’image.
+  consigne_en: Between these two elements seen together, are the sizes similar, clearly different, very different or vastly different? Judge height as you perceive the things, not their extent in the picture.
+  conditions:
+    presentation: screen
+    lumiere: directional
+    distance: far
+    angle: frontal
+    duree: exam
+    yeux: ouverts
+    yeux_en: open
+    note: 'lumière, distance et angle estimés sur l’image : le dromadaire à quelques mètres de l’appareil, la pyramide bien plus loin ; soleil voilé'
+    note_en: 'light, distance and angle estimated from the image: the camel a few metres from the camera, the pyramid much further away; hazy sun'
+  doute: oui
+  motif_doute: 'cas limite : dans l’image, le dromadaire occupe environ le tiers de la hauteur de la pyramide (« très différentes » si l’on juge l’image) ; perçus comme objets, une bête et une pyramide
+    sont « sans commune mesure » ; la fiche demande de juger la taille des choses telles qu’on les perçoit : l’épisode éprouve cette règle'
+  motif_doute_en: 'borderline case: in the picture, the camel takes up about a third of the pyramid’s height (“very different” if one judges the picture); perceived as objects, an animal and a pyramid are
+    “vastly different”; the entry asks for the size of things as they are perceived: the episode tests this rule'
+  note: 'épisode de contrôle : si les observateurs se partagent entre « très différentes » et « sans commune mesure », la consigne « telle que vous percevez les choses » ne suffit pas'
+  note_en: 'control episode: if observers split between “very different” and “vastly different”, the instruction “as you perceive the things” is not enough'
+  texte_fr: 'La pyramide de Khéphren et un dromadaire au premier plan : tailles sans commune mesure, si l’on juge les choses et non l’image (cas limite, à éprouver).'
+  texte_en: 'The Pyramid of Khafre and a camel in the foreground: vastly different sizes, if one judges the things and not the picture (borderline case, to be tested).'
+- id: ppp-a:ep-scaleContrast-03
+  realisation: a_realiser
+  region_attendue: marked
+  objet: 'sept poupées gigognes alignées par taille, sur photo ; termes : la plus grande (à droite) et la plus petite (à gauche) ; image : https://commons.wikimedia.org/wiki/File:7_piece_Matryoshka_dolls,_Queensland,_2021.jpg
+    (CC BY-SA 4.0, photo de Kgbo, licence vérifiée le 2026-11-15)'
+  objet_en: 'seven nesting dolls lined up by size, in a photo; terms: the largest (on the right) and the smallest (on the left); image: https://commons.wikimedia.org/wiki/File:7_piece_Matryoshka_dolls,_Queensland,_2021.jpg
+    (CC BY-SA 4.0, photo by Kgbo, licence checked on 2026-11-15)'
+  preparation: afficher l’image en plein écran ; montrer la plus grande poupée (A), puis la plus petite (B)
+  preparation_en: show the image full screen; point to the largest doll (A), then to the smallest (B)
+  consigne: Entre ces deux poupées, les tailles sont-elles voisines, nettement différentes, très différentes (l’une plusieurs fois plus grande) ou sans commune mesure ? Jugez la hauteur.
+  consigne_en: Between these two dolls, are the sizes similar, clearly different, very different (one several times bigger) or vastly different? Judge height.
+  conditions:
+    presentation: screen
+    lumiere: unknown
+    distance: near
+    angle: oblique
+    duree: exam
+    yeux: ouverts
+    yeux_en: open
+    note: 'lumière inconnue ; distance et angle estimés sur l’image (rangée fuyante vers la gauche : la petite poupée est plus loin de l’appareil)'
+    note_en: 'light unknown; distance and angle estimated from the image (the row recedes to the left: the small doll is further from the camera)'
+  doute: oui
+  motif_doute: frontière entre « très différentes » et « sans commune mesure », laissée par la fiche à l’épreuve d’accord ; la rangée fuit vers la gauche, ce qui grossit l’écart dans l’image ; la plus petite
+    poupée touche le bord gauche de l’image, un peu coupée
+  motif_doute_en: boundary between “very different” and “vastly different”, left by the entry to the agreement test; the row recedes to the left, which enlarges the difference in the picture; the smallest
+    doll touches the left edge of the picture and is slightly cut off
+  note: complète, sur le même objet, les exemplaires déjà publiés des poupées 5 et 6 (nettement différentes) et des poupées 3 et 7 (très différentes) ; la frontière entre « très différentes » et « sans
+    commune mesure » est ici éprouvée directement
+  note_en: completes, on the same object, the exemplars already published for dolls 5 and 6 (clearly different) and dolls 3 and 7 (very different); the boundary between “very different” and “vastly different”
+    is tested directly here
+  texte_fr: 'La plus grande et la plus petite de sept poupées gigognes : tailles très différentes (prédiction, à éprouver).'
+  texte_en: 'The largest and smallest of seven nesting dolls: very different sizes (prediction, to be tested).'
+- id: ppp-a:ep-scaleContrast-04
+  realisation: a_realiser
+  region_attendue: moderate
+  objet: 'un citron et un citron vert, sur photo : le citron et le citron vert ; image : https://commons.wikimedia.org/wiki/File:Lemon_and_lime.jpg (CC BY-SA 4.0, photo de Rhododendrites, licence vérifiée
+    le 2026-11-15)'
+  objet_en: 'a lemon and a lime, in a photo: the lemon and the lime; image: https://commons.wikimedia.org/wiki/File:Lemon_and_lime.jpg (CC BY-SA 4.0, photo by Rhododendrites, licence checked on 2026-11-15)'
+  preparation: 'comme pour le citron et le citron vert dans la fiche du contraste perceptif : afficher l’image en plein écran, montrer le citron (A), puis le citron vert (B)'
+  preparation_en: 'as for the lemon and the lime in the perceptual contrast entry: show the image full screen, point to the lemon (A), then to the lime (B)'
+  consigne: Entre ces deux fruits vus ensemble, les tailles sont-elles voisines, nettement différentes (l’un nettement plus grand), très différentes ou sans commune mesure ? Jugez la longueur.
+  consigne_en: Between these two fruits seen together, are the sizes similar, clearly different (one clearly bigger), very different or vastly different? Judge length.
+  conditions:
+    presentation: screen
+    lumiere: diffuse
+    distance: near
+    angle: frontal
+    duree: exam
+    yeux: ouverts
+    yeux_en: open
+  doute: oui
+  motif_doute: 'la page dit « an average sized … lemon and a smallish … lime » ; dans l’image le citron est un peu plus long : on peut défendre « voisines »'
+  motif_doute_en: 'the image page says “an average sized … lemon and a smallish … lime”; in the picture the lemon is slightly longer: “similar” can be defended'
+  note: 'même photo que le citron et le citron vert du contraste perceptif : le même couple a un contraste de teinte modéré et un contraste d’échelle modéré ou faible'
+  note_en: 'same photo as the lemon and the lime of the perceptual contrast: the same pair has a moderate hue contrast and a moderate or slight scale contrast'
+  texte_fr: 'Un citron et un petit citron vert : tailles nettement différentes (prédiction, à éprouver).'
+  texte_en: 'A lemon and a small lime: clearly different sizes (prediction, to be tested).'
+- id: ppp-a:ep-scaleContrast-05
+  realisation: a_realiser
+  region_attendue: weak
+  objet: 'deux pièces en euros, posées à plat côte à côte : (A) une pièce de 10 centimes (diamètre 19,75 mm), (B) une pièce de 20 centimes (diamètre 22,25 mm)'
+  objet_en: 'two euro coins laid flat side by side: (A) a 10-cent coin (19.75 mm), (B) a 20-cent coin (22.25 mm)'
+  preparation: poser les pièces sur une feuille blanche mate, à 2 cm l’une de l’autre, face commune vers le haut ; lampe de bureau ; l’observateur assis, à environ 50 cm ; ne pas dire leur valeur
+  preparation_en: lay the coins on a matt white sheet, 2 cm apart, common side up; desk lamp; the observer seated about 50 cm away; do not say their value
+  consigne: Entre ces deux éléments vus ensemble, les tailles sont-elles voisines, nettement différentes, très différentes ou sans commune mesure ? Jugez le diamètre.
+  consigne_en: Between these two elements seen together, are the sizes similar, clearly different, very different or vastly different? Judge the diameter.
+  conditions:
+    presentation: tableTop
+    lumiere: directional
+    distance: near
+    angle: frontal
+    duree: glance
+    yeux: ouverts
+    yeux_en: open
+  doute: oui
+  motif_doute: 'un écart de diamètre d’environ un huitième peut se voir au premier regard : on peut défendre « nettement différentes » ; la forme dentelée (« fleur espagnole ») de la pièce de 20 centimes
+    peut gêner'
+  motif_doute_en: 'a difference in diameter of about one eighth can be seen at first glance: “clearly different” can be defended; the scalloped shape (“Spanish flower”) of the 20-cent coin may get in the
+    way'
+  note: 'diamètres lus sur la page des faces communes de la Banque centrale européenne (2026-11-15) ; dans les trois épisodes des pièces et du disque, la petite pièce A reste la même et le terme B est de
+    plus en plus grand ; vision en présence : utile pour un second régime de perception'
+  note_en: 'diameters read on the European Central Bank page on the common sides of the coins (2026-11-15); in the three episodes with coins and the disc, the small coin A stays the same and term B grows
+    larger; vision in presence: useful for a second mode of perception'
+  texte_fr: 'Une pièce de 10 centimes et une de 20 centimes : tailles voisines (prédiction, à éprouver).'
+  texte_en: 'A 10-cent and a 20-cent coin: similar sizes (prediction, to be tested).'
+- id: ppp-a:ep-scaleContrast-06
+  realisation: a_realiser
+  region_attendue: moderate
+  objet: 'deux pièces en euros : (A) 1 centime (diamètre 16,25 mm), (B) 2 euros (diamètre 25,75 mm)'
+  objet_en: 'two euro coins: (A) 1 cent (16.25 mm), (B) 2 euros (25.75 mm)'
+  preparation: comme pour les pièces de 10 et de 20 centimes
+  preparation_en: as for the 10-cent and 20-cent coins
+  consigne: Entre ces deux éléments vus ensemble, les tailles sont-elles voisines, nettement différentes, très différentes ou sans commune mesure ? Jugez le diamètre.
+  consigne_en: Between these two elements seen together, are the sizes similar, clearly different, very different or vastly different? Judge the diameter.
+  conditions:
+    presentation: tableTop
+    lumiere: directional
+    distance: near
+    angle: frontal
+    duree: glance
+    yeux: ouverts
+    yeux_en: open
+  doute: non
+  note: 'B a un diamètre d’environ une fois et demie celui de A (page de la Banque centrale européenne) : l’un nettement plus grand, pas plusieurs fois ; vision en présence'
+  note_en: 'B has a diameter about one and a half times that of A (European Central Bank page): one clearly bigger, not several times; vision in presence'
+  texte_fr: 'Une pièce de 1 centime et une de 2 euros : tailles nettement différentes (prédiction, à éprouver).'
+  texte_en: 'A 1-cent and a 2-euro coin: clearly different sizes (prediction, to be tested).'
+- id: ppp-a:ep-scaleContrast-07
+  realisation: a_realiser
+  region_attendue: marked
+  objet: (A) une pièce de 1 centime (diamètre 16,25 mm), (B) un disque compact (diamètre 120 mm), posé face imprimée vers le haut, la pièce à côté
+  objet_en: (A) a 1-cent coin (16.25 mm), (B) a compact disc (120 mm), printed side up, the coin beside it
+  preparation: choisir un disque dont la face imprimée n’a ni marque ni texte lisible, ou la couvrir d’un papier blanc découpé au même diamètre ; poser la pièce à 2 cm du bord du disque
+  preparation_en: choose a disc whose printed side has no brand and no legible text, or cover it with white paper cut to the same diameter; place the coin 2 cm from the edge of the disc
+  consigne: Entre ces deux éléments vus ensemble, les tailles sont-elles voisines, nettement différentes, très différentes ou sans commune mesure ? Jugez le diamètre ; ne tenez pas compte des reflets du
+    disque.
+  consigne_en: Between these two elements seen together, are the sizes similar, clearly different, very different or vastly different? Judge the diameter; ignore the reflections of the disc.
+  conditions:
+    presentation: tableTop
+    lumiere: directional
+    distance: near
+    angle: frontal
+    duree: glance
+    yeux: ouverts
+    yeux_en: open
+  doute: non
+  note: 'diamètre du disque : 120,0 mm ± 0,3 mm (norme ECMA-130, 2e édition 1996, §8.7, lue le 2026-11-15) ; environ sept fois la pièce : « plusieurs fois plus grand » ; vision en présence'
+  note_en: 'disc diameter: 120.0 mm ± 0.3 mm (ECMA-130 standard, 2nd edition 1996, §8.7, read on 2026-11-15); about seven times the coin: “several times bigger”; vision in presence'
+  texte_fr: 'Une pièce de 1 centime et un disque compact : tailles très différentes (prédiction, à éprouver).'
+  texte_en: 'A 1-cent coin and a compact disc: very different sizes (prediction, to be tested).'
 manques:
-- 'exemplaires (au 2026-10-14) : 1501 tailles voisines, 1503 nettement différentes, 1504 très différentes relus ; 1502 sans commune mesure à relire, non montré'
-- 'ne s’explique pas sans aide (relecture explicative, série 6) : exemple concret : au 2026-10-14, trois régions illustrées par des exemplaires relus (1501, 1503, 1504) ; « sans commune mesure » (1502) à relire'
+- 'exemplaires (au 2026-10-14) : 1501 tailles voisines, 1503 nettement différentes, 1504 très différentes relus ; 1502 sans commune mesure à relire, non montré ; le 2026-11-15, sept épisodes proposés «
+  à réaliser » (vue : sans effet sur les paliers ; candidats au registre préparés à part)'
+- 'ne s’explique pas sans aide (relecture explicative, série 6) : exemple concret : au 2026-10-14, trois régions illustrées par des exemplaires relus (1501, 1503, 1504) ; « sans commune mesure » (1502)
+  à relire ; le 2026-11-15 : un épisode proposé sur photo (une façade entière et les passants à son pied) pour « sans commune mesure » ; reste à le réaliser ou à entrer un exemplaire'
+- '« sans commune mesure » en présence : aucun épisode proposé ; pour voir ensemble un très grand et un très petit élément, il faut reculer, et le petit se voit alors mal ; option gardée (choix de relecture
+  (2026-11-15)) : cette région se montre sur une image, ou en parcourant du regard ; autre option, non faite : le dire dans le repère'
 bloque_par: []
 note_labels_regions: 'Labels propres au contraste d’échelle (T34 : l’éditeur du projet a retenu l’option B le 2026-10-11, des labels propres ; les labels eux-mêmes sont une proposition de l’équipe, à valider)
   : « tailles voisines / nettement différentes / très différentes / sans commune mesure », champ `labels_regions_propres`. « Sans commune mesure » remplace « démesurées », qui peut porter un jugement (l’excès).

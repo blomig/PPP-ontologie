@@ -1,5 +1,7 @@
 # Fiche de type PPP — ppp:surfaceGloss — format : PPP_FicheType.md (spec v2.4)
 # Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_joint, avertissement_label, note_categories, note_reference, note_dimension, note_conditions, note_echelle, note_porteur, note_base, bloque_par, note_labels_regions.
+# Série 114 bis (2026-11-15) : lot 14 : quinze épisodes proposés « à réaliser » ajoutés (vue : sans effet sur les paliers) ; repère « mat » vérifiable ; note sur les conditions : consigne sur image ; relations avec translucency et subsurfaceDepth écrites aussi de ce côté (choix de relecture (2026-11-15)).
+# Série 114 ter (2026-11-15) : épisodes du lot 14 : anglais de la préparation, de la note et du motif de doute ; crédits des images ; identifiants internes remplacés par des mots dans les textes des épisodes (choix de relecture (2026-11-15)).
 id: ppp:surfaceGloss
 label_fr: brillance de surface
 label_en: surface gloss
@@ -61,8 +63,9 @@ mode_de_presentation: échantillon
 conditions_critiques:
 - lumiere
 - angle
-note_conditions: les reflets dépendent de la lumière et de l’angle de vue ; un jugement fait sur une photo dont l’angle et la lumière de prise de vue sont inconnus est « non tranché » (spec §9.7 H, règle
-  4 ; A5)
+note_conditions: 'les reflets dépendent de la lumière et de l’angle de vue ; un jugement fait sur une photo dont l’angle et la lumière de prise de vue sont inconnus est « non tranché » (spec §9.7 H, règle
+  4 ; A5). Sur une image, on ne peut ni bouger la tête ni tourner l’objet : on demande « Sur cette image, voit-on sur cette surface aucun reflet, un reflet doux et étalé, le reflet net d’une lampe ou d’une
+  fenêtre, ou des images comme dans un miroir ? », et la réponse dit seulement ce que l’image montre, sous l’angle et la lumière de la prise de vue.'
 porteur: une surface, celle d’un objet ou d’une partie
 arité: 1
 condition_NA: porteur sans surface perceptible (une lumière, un son).
@@ -75,7 +78,7 @@ espace_valeurs:
     label_fr: mat
     label_en: matte
     rang: 1
-    repere: aucun reflet, sous aucun angle (un plâtre, un papier buvard)
+    repere: aucun reflet, même en bougeant la tête ou l’objet (un plâtre, un papier buvard)
     exemplaires:
     - ppp-a:pilote-1801
   - cle: satin
@@ -119,6 +122,14 @@ relations:
   sous_conditions:
   - 'lumiere: directional'
   note: sous une lumière dirigée, une surface qui reflète comme un miroir montre des reflets très clairs à côté de zones sombres ; énoncé de structure surfaceGloss-1
+- type: separableFrom
+  cible: ppp:translucency
+  note: 'à éprouver (E2) : un verre dépoli laisse passer la lumière sans reflet net ; un carrelage noir poli ne laisse rien passer mais montre des reflets nets ; sur un verre ou une vitre, ce qu’on voit
+    à travers peut cacher un reflet ou passer pour un reflet : on ne juge que ce que la surface renvoie'
+- type: confusableWith
+  cible: ppp:subsurfaceDepth
+  note: un vernis épais montre souvent des reflets nets et laisse voir dans son épaisseur ; les reflets et l’épaisseur visible se jugent séparément ; la lumière qui ressort de l’intérieur d’une matière
+    (l’ambre, un savon translucide) peut passer pour un reflet doux ou net
 ontoClean:
   rigidite: +R
   identite_propre: +I
@@ -312,13 +323,22 @@ modifie_en:
 remplace_par: []
 source_de_la_fiche: crash tests, partie 1 (spec 2.3, docs/questions-crash-tests.md C4) ; fiche préremplie le 2026-10-10 par l’équipe, champs en langage courant à valider par la relecture explicative
 manques:
-- 'exemplaires (au 2026-10-14) : 1801 mat, 1802 satiné, 1805 brillant, 1804 miroir relus ; 1803 satiné à relire, non montré'
+- 'exemplaires (au 2026-10-14) : 1801 mat, 1802 satiné, 1805 brillant, 1804 miroir relus ; 1803 satiné à relire, non montré ; le 2026-11-15, quinze épisodes proposés « à réaliser » (vue : sans effet sur
+  les paliers ; candidats au registre préparés à part)'
 - 'labels de région : « mat / satiné / brillant / miroir », tranchés (T29, décision de l’éditeur du projet, 2026-10-10 ; clés inchangées)'
-- 'ne s’explique pas sans aide (relecture explicative, série 6) : exemple concret : l’avertissement est lourd et « brillant » est ambigu (couleur vive ou reflet net) ; au 2026-10-14, les quatre régions ont un exemplaire relu ; reste un exemple concret, en tête de fiche, qui montre la différence entre « brillant » (reflet net) et « vif » (saturation)'
+- 'ne s’explique pas sans aide (relecture explicative, série 6) : exemple concret : l’avertissement est lourd et « brillant » est ambigu (couleur vive ou reflet net) ; au 2026-10-14, les quatre régions
+  ont un exemplaire relu ; reste un exemple concret, en tête de fiche, qui montre la différence entre « brillant » (reflet net) et « vif » (saturation) ; le 2026-11-15 : épisodes proposés pour cet exemple
+  (des pigments très vifs et mats, l’intérieur d’un bol à glaçure presque noire et brillant ; en présence, un papier rouge vif et un carreau noir émaillé) ; reste à les réaliser ou à entrer un exemplaire'
+- 'frontière entre « brillant » et « miroir » : la fiche oppose le reflet net de la source et des images nettes, sans dire à partir de quand une image est nette (un émail très tendu, un noir poli) ; laissée
+  à l’épreuve d’accord (E1) (choix de relecture (2026-11-15))'
 bloque_par: []
 a_relire: []
 remarque:
-- 'série 79 (choix de relecture (2026-10-20)) : référence oqlf_brillance scindée : doi_ou_url ne garde que la fiche « brillance » ; la fiche « luminance lumineuse », sur laquelle s’appuie l’avertissement de label, devient la référence oqlf_luminance (même statut, même date de vérification) ; appel de l’état de l’art sur « l’ancien nom de la luminance » porté sur oqlf_luminance ; à relire'
+- 'série 79 (choix de relecture (2026-10-20)) : référence oqlf_brillance scindée : doi_ou_url ne garde que la fiche « brillance » ; la fiche « luminance lumineuse », sur laquelle s’appuie l’avertissement
+  de label, devient la référence oqlf_luminance (même statut, même date de vérification) ; appel de l’état de l’art sur « l’ancien nom de la luminance » porté sur oqlf_luminance ; à relire'
+- 'lot 14 (2026-11-15, choix de relecture (2026-11-15)) : relations avec ppp:translucency (separableFrom) et ppp:subsurfaceDepth (confusableWith) écrites aussi dans cette fiche, comme dans les fiches cibles
+  (relations symétriques écrites des deux côtés, comme pour T31) ; frontière brillant / miroir : option A, gardée : laissée à E1 ; option B, non faite : préciser le repère « miroir » (on reconnaît ce qui
+  est reflété)'
 relecture_explicative:
   date: '2026-10-11'
   champs:
@@ -337,6 +357,10 @@ relecture_explicative:
   - note_conditions (re-confirmé en relecture explicative, série 9, 2026-10-11)
   - 'harmonisation mécanique des énoncés affichés (série 69, 2026-10-17)'
   - 'énoncé surfaceGloss-1 : « (tend à produire) » au lieu du nom de relation (série 70, 2026-10-18)'
+  - 'espace_valeurs.regions.matte.repere (critère vérifiable : « même en bougeant la tête ou l’objet »), note_conditions (consigne sur image) : relus le 2026-11-15 (choix de relecture (2026-11-15))'
+  - 'relations (separableFrom translucency, confusableWith subsurfaceDepth, écrites aussi de ce côté, avec la même note que dans les fiches cibles) : relues le 2026-11-15 (choix de relecture (2026-11-15))'
+  - 'episodes_a_realiser (épisodes ajoutés le 2026-11-15, relus avec leur ajout) : relus le 2026-11-15 (choix de relecture (2026-11-15))'
+  - 'episodes_a_realiser (anglais de la préparation, de la note et du motif de doute ; crédit de l’auteur à côté de la licence ; identifiants internes remplacés par des mots) : relus le 2026-11-15 (choix de relecture (2026-11-15))'
   a_reconfirmer: []
   reconfirme:
   - champ: identite
@@ -389,6 +413,443 @@ relecture_explicative:
     raison: 'renvoi corrigé (relecture explicative) : la règle « facette critique inconnue = non tranché » est §9.7 H, règle 4 (avec A5), pas §9.3 ; relecture explicative (2026-10-11) : « dont l’angle et
       la lumière de prise de vue sont inconnus » (seconde relecture explicative)'
     remarque: re-confirmé en relecture explicative (2026-10-11) ; entrée archivée en série 12 (supprimée par erreur en série 9)
+  - champ: espace_valeurs.regions.matte.repere
+    date: '2026-11-15'
+    avant: aucun reflet, sous aucun angle (un plâtre, un papier buvard)
+    apres: aucun reflet, même en bougeant la tête ou l’objet (un plâtre, un papier buvard)
+    raison: 'lot 14 : « sous aucun angle » ne se vérifie pas ; le critère dit le geste de la question attentionnelle ; choix de relecture (2026-11-15)'
+  - champ: note_conditions
+    date: '2026-11-15'
+    avant: les reflets dépendent de la lumière et de l’angle de vue ; un jugement fait sur une photo dont l’angle et la lumière de prise de vue sont inconnus est « non tranché » (spec §9.7 H, règle 4 ; A5)
+    apres: 'les reflets dépendent de la lumière et de l’angle de vue ; un jugement fait sur une photo dont l’angle et la lumière de prise de vue sont inconnus est « non tranché » (spec §9.7 H, règle 4 ; A5).
+      Sur une image, on ne peut ni bouger la tête ni tourner l’objet : on demande « Sur cette image, voit-on sur cette surface aucun reflet, un reflet doux et étalé, le reflet net d’une lampe ou d’une fenêtre,
+      ou des images comme dans un miroir ? », et la réponse dit seulement ce que l’image montre, sous l’angle et la lumière de la prise de vue.'
+    raison: 'lot 14 : sur une photo, on ne peut pas bouger la tête ; la consigne sur image est écrite dans la fiche ; choix de relecture (2026-11-15)'
+episodes_a_realiser:
+- id: ppp-a:ep-surfaceGloss-01
+  realisation: a_realiser
+  region_attendue: matte
+  rang_exemplaire: principal
+  objet: 'tas de pigments en poudre très vifs, sur un étal ; porteur : le tas turquoise du centre, puis, en contrôle, le tas rouge du bas ; image : https://commons.wikimedia.org/wiki/File:Indian_pigments.jpg
+    (CC BY 2.0, photo de Dan Brady, licence vérifiée le 2026-11-15)'
+  objet_en: 'heaps of very vivid powder pigments on a stall; bearer: the turquoise heap in the centre, then, as a control, the red heap at the bottom; image: https://commons.wikimedia.org/wiki/File:Indian_pigments.jpg
+    (CC BY 2.0, photo by Dan Brady, licence checked on 2026-11-15)'
+  preparation: afficher l’image en plein écran ; montrer le tas turquoise, puis le tas rouge
+  preparation_en: show the image full screen; point to the turquoise heap, then to the red heap
+  consigne: Sur cette image, voit-on sur cette surface aucun reflet, un reflet doux et étalé, le reflet net d’une lampe ou d’une fenêtre, ou des images comme dans un miroir ? Ne jugez pas la vivacité de
+    la couleur, ni la clarté.
+  consigne_en: In this picture, does this surface show no reflection, a soft spread-out sheen, the sharp reflection of a lamp or window, or mirror-like images? Do not judge how vivid the colour is, nor
+    lightness.
+  conditions:
+    presentation: screen
+    lumiere: diffuse
+    distance: near
+    angle: oblique
+    duree: exam
+    yeux: ouverts
+    yeux_en: open
+    note: 'lumière, distance et angle estimés sur l’image : casiers de quelques dizaines de centimètres vus de près, d’au-dessus et en biais ; ombres douces, sans source visible'
+    note_en: 'light, distance and angle estimated from the image: trays a few tens of centimetres across seen close up, from above and at an angle; soft shadows, no visible source'
+  doute: non
+  note: 'exemple de tête demandé par la fiche : couleur très vive (saturation), aucun reflet ; repère « mat » de la fiche : « un papier buvard » ; l’assertion dit ce que l’image montre sous cet angle et
+    cette lumière seulement'
+  note_en: 'the head example the entry asks for: very vivid colour (saturation), no reflection; “matte” reference of the entry: “blotting paper”; the assertion says what the picture shows under this angle
+    and this light only'
+  texte_fr: 'Des tas de pigments en poudre très vifs : surface mate (prédiction, à éprouver) ; vif n’est pas brillant.'
+  texte_en: 'Heaps of very vivid powder pigments: matte surface (prediction, to be tested); vivid is not glossy.'
+- id: ppp-a:ep-surfaceGloss-02
+  realisation: a_realiser
+  region_attendue: lustrous
+  objet: 'bol à thé à glaçure sombre (Jian, Song), Metropolitan Museum of Art, n° 91.1.226 ; porteur : la glaçure de l’intérieur, où passe une bande claire allongée ; image : https://commons.wikimedia.org/wiki/File:%E4%B8%AD%E5%9C%8B_%E5%8D%97%E5%AE%8B_%E5%BB%BA%E7%AA%AF_%E5%85%94%E6%AF%AB%E9%87%89%E8%8C%B6%E7%A2%97-Tea_Bowl_with_%E2%80%9CHare%E2%80%99s-Fur%E2%80%9D_Glaze_MET_DP372022.jpg
+    (CC0, licence vérifiée le 2026-11-15)'
+  objet_en: 'a dark-glazed tea bowl (Jian ware, Song), Metropolitan Museum of Art, no. 91.1.226; bearer: the inside glaze, crossed by a long bright band; image: https://commons.wikimedia.org/wiki/File:%E4%B8%AD%E5%9C%8B_%E5%8D%97%E5%AE%8B_%E5%BB%BA%E7%AA%AF_%E5%85%94%E6%AF%AB%E9%87%89%E8%8C%B6%E7%A2%97-Tea_Bowl_with_%E2%80%9CHare%E2%80%99s-Fur%E2%80%9D_Glaze_MET_DP372022.jpg
+    (CC0, licence checked on 2026-11-15)'
+  preparation: afficher l’image en plein écran ; montrer la bande claire de l’intérieur du bol
+  preparation_en: show the image full screen; point to the bright band inside the bowl
+  consigne: Sur cette image, voit-on sur cette surface aucun reflet, un reflet doux et étalé, le reflet net d’une lampe ou d’une fenêtre, ou des images comme dans un miroir ? Ne jugez pas la vivacité de
+    la couleur, ni la clarté.
+  consigne_en: In this picture, does this surface show no reflection, a soft spread-out sheen, the sharp reflection of a lamp or window, or mirror-like images? Do not judge how vivid the colour is, nor
+    lightness.
+  conditions:
+    presentation: screen
+    lumiere: directional
+    distance: near
+    angle: oblique
+    duree: exam
+    yeux: ouverts
+    yeux_en: open
+    note: lumière, distance et angle estimés sur l’image, comme pour l’épisode du bol dans la fiche du contraste perceptif
+    note_en: light, distance and angle estimated from the image, as for the bowl episode in the perceptual contrast entry
+  doute: oui
+  motif_doute: 'la bande claire a des bords assez nets, mais elle est irisée (reflets bleutés) : on peut la lire comme un reflet doux (« satiné »), ou comme une lueur dans la glaçure (profondeur dans la
+    matière) ; la paroi extérieure ne montre qu’un reflet étalé'
+  motif_doute_en: 'the bright band has fairly sharp edges, but it is iridescent (bluish glints): it can be read as a soft sheen (“satin”), or as a glow within the glaze (depth within the material); the
+    outer wall shows only a spread-out sheen'
+  note: 'second terme de l’exemple de tête : glaçure presque noire, peu saturée, et pourtant à reflet net ; repère « brillant » : « une céramique émaillée » ; lié à l’épisode du pied du même bol (même photo,
+    pied mat) ; un exemplaire « brillant » non marqué comme douteux existe déjà (une pomme sur fond blanc)'
+  note_en: 'second term of the head example: a nearly black, weakly saturated glaze, and yet with a sharp reflection; “lustrous” reference: “glazed ceramic”; linked to the episode on the foot of the same
+    bowl (same photo, matte foot); a “lustrous” exemplar not marked as doubtful already exists (an apple on a white background)'
+  texte_fr: 'L’intérieur d’un bol à glaçure presque noire : surface brillante (prédiction, à éprouver) ; sombre n’est pas mat.'
+  texte_en: 'The inside of a nearly black glazed bowl: lustrous surface (prediction, to be tested); dark is not matte.'
+- id: ppp-a:ep-surfaceGloss-03
+  realisation: a_realiser
+  region_attendue: matte
+  lie_a: ppp-a:ep-surfaceGloss-02
+  objet: 'le même bol à thé à glaçure sombre (Jian, Song), Metropolitan Museum of Art, n° 91.1.226 ; porteur : le pied sans glaçure ; image : https://commons.wikimedia.org/wiki/File:%E4%B8%AD%E5%9C%8B_%E5%8D%97%E5%AE%8B_%E5%BB%BA%E7%AA%AF_%E5%85%94%E6%AF%AB%E9%87%89%E8%8C%B6%E7%A2%97-Tea_Bowl_with_%E2%80%9CHare%E2%80%99s-Fur%E2%80%9D_Glaze_MET_DP372022.jpg
+    (CC0, licence vérifiée le 2026-11-15)'
+  objet_en: 'the same dark-glazed tea bowl (Jian ware, Song), Metropolitan Museum of Art, no. 91.1.226; bearer: the unglazed foot; image: https://commons.wikimedia.org/wiki/File:%E4%B8%AD%E5%9C%8B_%E5%8D%97%E5%AE%8B_%E5%BB%BA%E7%AA%AF_%E5%85%94%E6%AF%AB%E9%87%89%E8%8C%B6%E7%A2%97-Tea_Bowl_with_%E2%80%9CHare%E2%80%99s-Fur%E2%80%9D_Glaze_MET_DP372022.jpg
+    (CC0, licence checked on 2026-11-15)'
+  preparation: afficher l’image en plein écran ; montrer le pied gris sous la glaçure
+  preparation_en: show the image full screen; point to the grey foot under the glaze
+  consigne: Sur cette image, voit-on sur cette surface aucun reflet, un reflet doux et étalé, le reflet net d’une lampe ou d’une fenêtre, ou des images comme dans un miroir ? Ne jugez pas la vivacité de
+    la couleur, ni la clarté.
+  consigne_en: In this picture, does this surface show no reflection, a soft spread-out sheen, the sharp reflection of a lamp or window, or mirror-like images? Do not judge how vivid the colour is, nor
+    lightness.
+  conditions:
+    presentation: screen
+    lumiere: directional
+    distance: near
+    angle: oblique
+    duree: exam
+    yeux: ouverts
+    yeux_en: open
+  doute: non
+  note: 'grès laissé brut, grenu, sans reflet sous cette lumière ; même photo que l’intérieur du bol : deux régions sur un objet, sous la même lumière'
+  note_en: 'stoneware left raw, grainy, with no reflection under this light; same photo as the inside of the bowl: two regions on one object, under the same light'
+  texte_fr: 'Le pied sans glaçure d’un bol : surface mate (prédiction, à éprouver).'
+  texte_en: 'The unglazed foot of a bowl: matte surface (prediction, to be tested).'
+- id: ppp-a:ep-surfaceGloss-04
+  realisation: a_realiser
+  region_attendue: satin
+  objet: 'un œuf brun sur fond blanc, sur photo ; porteur : la coquille, au milieu du dessus ; image : https://commons.wikimedia.org/wiki/File:Egg_on_white_background.jpg (domaine public, licence vérifiée
+    le 2026-11-15)'
+  objet_en: 'a brown egg on a white background, in a photo; bearer: the shell, middle of the top; image: https://commons.wikimedia.org/wiki/File:Egg_on_white_background.jpg (public domain, licence checked
+    on 2026-11-15)'
+  preparation: afficher l’image en plein écran ; montrer la tache claire du dessus de l’œuf
+  preparation_en: show the image full screen; point to the light patch on top of the egg
+  consigne: Sur cette image, voit-on sur cette surface aucun reflet, un reflet doux et étalé, le reflet net d’une lampe ou d’une fenêtre, ou des images comme dans un miroir ? Ne jugez pas la vivacité de
+    la couleur, ni la clarté.
+  consigne_en: In this picture, does this surface show no reflection, a soft spread-out sheen, the sharp reflection of a lamp or window, or mirror-like images? Do not judge how vivid the colour is, nor
+    lightness.
+  conditions:
+    presentation: screen
+    lumiere: diffuse
+    distance: near
+    angle: frontal
+    duree: exam
+    yeux: ouverts
+    yeux_en: open
+    note: lumière, distance et angle estimés sur l’image, comme pour l’exemplaire déjà publié de cette photo (« un reflet doux sur le dessus »)
+    note_en: light, distance and angle estimated from the image, as for the exemplar already published for this photo (“a soft sheen on top”)
+  doute: non
+  note: 'repère « satiné » de la fiche : « une coquille d’œuf » ; le reflet est une tache claire étalée, sans bord net ; candidat à un second exemplaire montré de « satiné », à côté des clés satinées (marque
+    lisible sur l’image) et du bol à glaçure bleutée (à relire)'
+  note_en: '“satin” reference of the entry: “an eggshell”; the reflection is a spread-out light patch with no sharp edge; candidate for a second shown exemplar of “satin”, besides the satin-finish spanners
+    (a brand is legible in the picture) and the bowl with a bluish glaze (still to be reviewed)'
+  texte_fr: 'Une coquille d’œuf : surface satinée (prédiction, à éprouver).'
+  texte_en: 'An eggshell: satin surface (prediction, to be tested).'
+- id: ppp-a:ep-surfaceGloss-05
+  realisation: a_realiser
+  region_attendue: lustrous
+  objet: 'un petit morceau d’ambre brut éclairé de côté, sur fond noir, sur photo ; porteur : la face tournée vers l’appareil ; image : https://commons.wikimedia.org/wiki/File:Bernstein_(kleines_Stück).jpg
+    (CC0, licence vérifiée le 2026-11-15)'
+  objet_en: 'a small raw piece of amber lit from the side, on black, in a photo; bearer: the face turned to the camera; image: https://commons.wikimedia.org/wiki/File:Bernstein_(kleines_St%C3%BCck).jpg (CC0,
+    licence checked on 2026-11-15)'
+  preparation: afficher l’image en plein écran
+  preparation_en: show the image full screen
+  consigne: Sur cette image, voit-on sur cette surface aucun reflet, un reflet doux et étalé, le reflet net d’une lampe ou d’une fenêtre, ou des images comme dans un miroir ? Ne jugez que ce qui est renvoyé
+    par la surface, pas la lumière qui semble venir de l’intérieur.
+  consigne_en: In this picture, does this surface show no reflection, a soft spread-out sheen, the sharp reflection of a lamp or window, or mirror-like images? Judge only what the surface sends back, not
+    the light that seems to come from inside.
+  conditions:
+    presentation: screen
+    lumiere: directional
+    distance: near
+    angle: oblique
+    duree: exam
+    yeux: ouverts
+    yeux_en: open
+    note: lumière, distance et angle estimés sur l’image, comme pour cet exemplaire (« une lumière forte venant d’un côté, qui traverse l’ambre »)
+    note_en: light, distance and angle estimated from the image, as for that exemplar (“a strong light from one side, passing through the amber”)
+  doute: oui
+  motif_doute: 'cas limite : de petites taches très claires, à bord net, se voient sur les arêtes ; sur une image fixe, on ne sait pas si elles sont renvoyées par la surface ou si elles viennent de l’intérieur
+    (lumière qui traverse) ; la même photo que l’exemplaire déjà publié de la profondeur dans la matière'
+  motif_doute_en: 'borderline case: small very bright spots with sharp edges can be seen on the edges; in a still image, one cannot tell whether they are sent back by the surface or come from inside (light
+    passing through); the same photo as the exemplar already published for depth within the material'
+  note: épisode de contrôle du recouvrement entre la brillance de surface et la profondeur dans la matière
+  note_en: control episode for the overlap between surface gloss and depth within the material
+  texte_fr: 'Un morceau d’ambre éclairé de côté : la brillance de sa surface n’est pas tranchée sur cette image (cas limite, à éprouver).'
+  texte_en: 'A piece of amber lit from the side: its surface gloss is not settled in this picture (borderline case, to be tested).'
+- id: ppp-a:ep-surfaceGloss-06
+  realisation: a_realiser
+  region_attendue: lustrous
+  objet: 'bocal octogonal en verre transparent, sur photo ; porteur : la paroi avant ; image : https://commons.wikimedia.org/wiki/File:Soda-lime_glass_jar_showing_bubbles_trapped_within.jpg (CC BY-SA 4.0,
+    photo de Zaereth, licence vérifiée le 2026-11-15)'
+  objet_en: 'an octagonal clear glass jar, in a photo; bearer: the front wall; image: https://commons.wikimedia.org/wiki/File:Soda-lime_glass_jar_showing_bubbles_trapped_within.jpg (CC BY-SA 4.0, photo
+    by Zaereth, licence checked on 2026-11-15)'
+  preparation: afficher l’image en plein écran
+  preparation_en: show the image full screen
+  consigne: Sur cette image, voit-on sur cette paroi aucun reflet, un reflet doux et étalé, le reflet net d’une lampe ou d’une fenêtre, ou des images comme dans un miroir ? Ne jugez que ce que la paroi
+    renvoie, pas ce qu’on voit à travers.
+  consigne_en: In this picture, does this wall show no reflection, a soft spread-out sheen, the sharp reflection of a lamp or window, or mirror-like images? Judge only what the wall sends back, not what
+    you see through it.
+  conditions:
+    presentation: screen
+    lumiere: diffuse
+    distance: near
+    angle: frontal
+    duree: exam
+    yeux: ouverts
+    yeux_en: open
+    note: lumière, distance et angle estimés sur l’image, comme pour l’exemplaire déjà publié de cette photo (« lumière douce, venue de face et d’en haut »)
+    note_en: light, distance and angle estimated from the image, as for the exemplar already published for this photo (“soft light, from the front and from above”)
+  doute: oui
+  motif_doute: 'cas limite : les lignes claires des arêtes peuvent être des reflets ou des lumières déviées par l’épaisseur du verre ; sous cette lumière douce, la paroi ne montre presque pas de reflet
+    de source, et l’on pourrait répondre « aucun reflet » pour un verre que l’on dit couramment brillant'
+  motif_doute_en: 'borderline case: the bright lines along the edges may be reflections or light bent by the thickness of the glass; under this soft light the wall shows almost no reflection of a source,
+    and one could answer “no reflection” for a glass usually called glossy'
+  note: épisode de contrôle du recouvrement entre la brillance de surface et la transparence
+  note_en: control episode for the overlap between surface gloss and translucency
+  texte_fr: 'Un bocal de verre sous lumière douce : la brillance de la paroi n’est pas tranchée sur cette image (cas limite, à éprouver).'
+  texte_en: 'A glass jar under soft light: the gloss of the wall is not settled in this picture (borderline case, to be tested).'
+- id: ppp-a:ep-surfaceGloss-07
+  realisation: a_realiser
+  region_attendue: matte
+  rang_exemplaire: principal
+  objet: 'un bloc de plâtre à mouler, coulé dans un gobelet, démoulé et sec, d’environ 6 cm de diamètre ; porteur : la face supérieure, laissée brute (non poncée)'
+  objet_en: 'a block of moulding plaster cast in a cup, unmoulded and dry, about 6 cm across; bearer: the top face, left raw'
+  preparation: gâcher le plâtre selon la notice, couler dans un gobelet en plastique, démouler après 1 h, laisser sécher au moins 48 h ; ne pas poncer ni peindre ; noter le diamètre
+  preparation_en: mix the plaster according to the instructions, pour it into a plastic cup, unmould after 1 h, leave to dry for at least 48 h; do not sand or paint; note the diameter
+  consigne: En bougeant un peu la tête ou l’objet, voit-on sur cette surface aucun reflet, un reflet doux et étalé, le reflet net d’une lampe ou d’une fenêtre, ou des images comme dans un miroir ? Ne jugez
+    pas la couleur ni la clarté.
+  consigne_en: Moving your head or the object a little, does this surface show no reflection, a soft spread-out sheen, the sharp reflection of a lamp or window, or mirror-like images? Do not judge colour
+    or lightness.
+  conditions:
+    presentation: inHand
+    lumiere: directional
+    distance: near
+    angle: varied
+    duree: exam
+    yeux: ouverts
+    yeux_en: open
+    note: installation commune des épisodes en présence, du plâtre au carreau noir brillant ; l’observateur tourne l’objet dans la lumière
+    note_en: set-up shared by the in-presence episodes, from the plaster to the glossy black tile; the observer turns the object in the light
+  doute: non
+  note: 'repère « mat » : « un plâtre » ; second régime de perception ; vision en présence'
+  note_en: '“matte” reference: “plaster”; second mode of perception; vision in presence'
+  texte_fr: 'Un bloc de plâtre brut, tourné dans la lumière d’une lampe : surface mate (prédiction, à éprouver).'
+  texte_en: 'A raw plaster block turned in lamplight: matte surface (prediction, to be tested).'
+- id: ppp-a:ep-surfaceGloss-08
+  realisation: a_realiser
+  region_attendue: satin
+  objet: 'un œuf de poule cru, coquille brune, propre et sec ; porteur : la coquille'
+  objet_en: 'a raw hen’s egg, brown shell, clean and dry; bearer: the shell'
+  preparation: essuyer l’œuf avec un chiffon sec, sans l’huiler ni le mouiller ; le tenir au-dessus d’une assiette
+  preparation_en: wipe the egg with a dry cloth, without oiling or wetting it; hold it over a plate
+  consigne: En bougeant un peu la tête ou l’objet, voit-on sur cette surface aucun reflet, un reflet doux et étalé, le reflet net d’une lampe ou d’une fenêtre, ou des images comme dans un miroir ? Ne jugez
+    pas la couleur ni la clarté.
+  consigne_en: Moving your head or the object a little, does this surface show no reflection, a soft spread-out sheen, the sharp reflection of a lamp or window, or mirror-like images? Do not judge colour
+    or lightness.
+  conditions:
+    presentation: inHand
+    lumiere: directional
+    distance: near
+    angle: varied
+    duree: exam
+    yeux: ouverts
+    yeux_en: open
+  doute: non
+  note: 'repère « satiné » : « une coquille d’œuf » ; un œuf mouillé ou huilé peut briller davantage : état déclaré ; vision en présence'
+  note_en: '“satin” reference: “an eggshell”; a wet or oiled egg may shine more: state declared; vision in presence'
+  texte_fr: 'Une coquille d’œuf brune, tournée dans la lumière : surface satinée (prédiction, à éprouver).'
+  texte_en: 'A brown eggshell turned in the light: satin surface (prediction, to be tested).'
+- id: ppp-a:ep-surfaceGloss-09
+  realisation: a_realiser
+  region_attendue: lustrous
+  objet: un carreau de céramique blanc, uni, à émail brillant, d’environ 10 × 10 cm, sans motif en relief
+  objet_en: a plain white glossy glazed ceramic tile, about 10 × 10 cm
+  preparation: laver et sécher le carreau ; vérifier qu’il n’est ni rayé ni dépoli
+  preparation_en: wash and dry the tile; check that it is neither scratched nor frosted
+  consigne: En bougeant un peu la tête ou l’objet, voit-on sur cette surface aucun reflet, un reflet doux et étalé, le reflet net d’une lampe ou d’une fenêtre, ou des images comme dans un miroir ? Ne jugez
+    pas la couleur ni la clarté.
+  consigne_en: Moving your head or the object a little, does this surface show no reflection, a soft spread-out sheen, the sharp reflection of a lamp or window, or mirror-like images? Do not judge colour
+    or lightness.
+  conditions:
+    presentation: inHand
+    lumiere: directional
+    distance: near
+    angle: varied
+    duree: exam
+    yeux: ouverts
+    yeux_en: open
+  doute: oui
+  motif_doute: 'un émail très tendu montre parfois des images nettes (la fenêtre, le visage) : on peut défendre « miroir » ; la frontière entre brillant et miroir dépend de la netteté de l’image, que la
+    fiche ne gradue pas'
+  motif_doute_en: 'a very smooth glaze sometimes shows sharp images (the window, the face): “mirror” can be defended; the boundary between lustrous and mirror depends on how sharp the image is, which the
+    entry does not grade'
+  note: 'repère « brillant » : « une céramique émaillée » ; vision en présence'
+  note_en: '“lustrous” reference: “glazed ceramic”; vision in presence'
+  texte_fr: 'Un carreau blanc émaillé, tourné dans la lumière : surface brillante (prédiction, à éprouver).'
+  texte_en: 'A white glazed tile turned in the light: lustrous surface (prediction, to be tested).'
+- id: ppp-a:ep-surfaceGloss-10
+  realisation: a_realiser
+  region_attendue: mirror
+  objet: un petit miroir plan de poche, en verre argenté, d’environ 8 cm, sans cadre ni inscription
+  objet_en: a small flat silvered-glass pocket mirror, about 8 cm, no frame or inscription
+  preparation: nettoyer le miroir ; le tenir face à la pièce
+  preparation_en: clean the mirror; hold it facing the room
+  consigne: En bougeant un peu la tête ou l’objet, voit-on sur cette surface aucun reflet, un reflet doux et étalé, le reflet net d’une lampe ou d’une fenêtre, ou des images comme dans un miroir ?
+  consigne_en: Moving your head or the object a little, does this surface show no reflection, a soft spread-out sheen, the sharp reflection of a lamp or window, or mirror-like images?
+  conditions:
+    presentation: inHand
+    lumiere: directional
+    distance: near
+    angle: varied
+    duree: exam
+    yeux: ouverts
+    yeux_en: open
+  doute: non
+  note: 'repère « miroir » : « un miroir » ; épisode d’ancrage du haut de l’échelle ; complète l’exemplaire déjà publié du lac calme dans un second régime ; vision en présence'
+  note_en: '“mirror” reference: “a mirror”; anchor episode for the top of the scale; completes the exemplar already published for the calm lake in a second mode; vision in presence'
+  texte_fr: 'Un miroir de poche : surface miroir (prédiction, à éprouver).'
+  texte_en: 'A pocket mirror: mirror surface (prediction, to be tested).'
+- id: ppp-a:ep-surfaceGloss-11
+  realisation: a_realiser
+  region_attendue: matte
+  objet: une feuille de papier de couleur rouge vif, mate (papier à dessin, non couché), d’environ 160 g/m², de 14,8 × 21 cm, non imprimée
+  objet_en: a sheet of vivid red matt coloured drawing paper (uncoated), about 160 g/m², 14.8 × 21 cm, unprinted
+  preparation: poser la feuille à côté du carreau noir brillant ; faire répondre d’abord à la question de la brillance, puis, à part, à la question de la saturation
+  preparation_en: lay the sheet next to the glossy black tile; have the gloss question answered first, then, separately, the saturation question
+  consigne: En bougeant un peu la tête ou la feuille, voit-on sur cette surface aucun reflet, un reflet doux et étalé, le reflet net d’une lampe ou d’une fenêtre, ou des images comme dans un miroir ? Ne
+    jugez pas la vivacité de la couleur.
+  consigne_en: Moving your head or the sheet a little, does this surface show no reflection, a soft spread-out sheen, the sharp reflection of a lamp or window, or mirror-like images? Do not judge how vivid
+    the colour is.
+  conditions:
+    presentation: tableTop
+    lumiere: directional
+    distance: near
+    angle: varied
+    duree: exam
+    yeux: ouverts
+    yeux_en: open
+  doute: oui
+  motif_doute: 'beaucoup de papiers de couleur ont un léger reflet étalé sous une lampe, surtout en lumière rasante : on peut défendre « satiné »'
+  motif_doute_en: 'many coloured papers show a slight spread-out sheen under a lamp, especially in grazing light: “satin” can be defended'
+  note: 'exemple de tête en présence (reprend le contre-exemple de la fiche : « un papier rouge vif peut être tout à fait mat ») ; avec le carreau noir brillant : vif et mat, sombre et brillant ; vision
+    en présence'
+  note_en: 'head example in presence (takes up the counter-example of the entry: “a vivid red paper can be completely matte”); with the glossy black tile: vivid and matte, dark and lustrous; vision in presence'
+  texte_fr: 'Un papier rouge vif : surface mate (prédiction, à éprouver) ; sa vivacité est sa saturation.'
+  texte_en: 'A vivid red paper: matte surface (prediction, to be tested); its vividness is saturation.'
+- id: ppp-a:ep-surfaceGloss-12
+  realisation: a_realiser
+  region_attendue: lustrous
+  objet: 'le carreau noir à émail brillant de l’épisode des carreaux noirs, dans la fiche du contraste perceptif (terme B) ; porteur : sa face émaillée'
+  objet_en: 'the glossy black glazed tile of the black tiles episode, in the perceptual contrast entry (term B); bearer: its glazed face'
+  preparation: comme pour le papier rouge, à côté de la feuille rouge
+  preparation_en: as for the red paper, next to the red sheet
+  consigne: En bougeant un peu la tête ou l’objet, voit-on sur cette surface aucun reflet, un reflet doux et étalé, le reflet net d’une lampe ou d’une fenêtre, ou des images comme dans un miroir ? Ne jugez
+    pas la couleur ni la clarté.
+  consigne_en: Moving your head or the object a little, does this surface show no reflection, a soft spread-out sheen, the sharp reflection of a lamp or window, or mirror-like images? Do not judge colour
+    or lightness.
+  conditions:
+    presentation: tableTop
+    lumiere: directional
+    distance: near
+    angle: varied
+    duree: exam
+    yeux: ouverts
+    yeux_en: open
+  doute: oui
+  motif_doute: 'comme pour le carreau blanc : un noir poli montre souvent des images nettes (« miroir ») ; la fiche dit seulement « reflets nets »'
+  motif_doute_en: 'as for the white tile: a polished black often shows sharp images (“mirror”); the entry only says “sharp reflections”'
+  note: reprend le contre-exemple de la fiche (« un carrelage noir poli montre des reflets nets ») ; sert aussi à l’énoncé de la brillance à clarté constante (avec le carreau noir mat) ; vision en présence
+  note_en: takes up the counter-example of the entry (“a polished black tile shows sharp reflections”); also serves the gloss statement at constant lightness (with the matte black tile); vision in presence
+  texte_fr: 'Un carreau noir émaillé : surface brillante (prédiction, à éprouver) ; sombre n’est pas mat.'
+  texte_en: 'A black glazed tile: lustrous surface (prediction, to be tested); dark is not matte.'
+- id: ppp-a:ep-surfaceGloss-13
+  realisation: a_realiser
+  region_attendue: mirror
+  lie_a: ppp-a:ep-surfaceGloss-14
+  objet: 'une vitre de fenêtre ordinaire, propre, vue de l’intérieur ; porteur : la face intérieure de la vitre'
+  objet_en: 'an ordinary clean window pane seen from inside; bearer: its inner face'
+  preparation: de nuit, dehors obscur, pièce éclairée par un plafonnier ; l’observateur à 1,5 m de la vitre ; noter l’heure et l’éclairage
+  preparation_en: at night, dark outside, room lit by a ceiling light; the observer 1.5 m from the pane; note the time and the lighting
+  consigne: En bougeant un peu la tête, voit-on sur cette vitre aucun reflet, un reflet doux et étalé, le reflet net d’une lampe, ou des images comme dans un miroir ? Ne jugez que ce que la vitre renvoie,
+    pas ce qu’on voit à travers.
+  consigne_en: Moving your head a little, does this pane show no reflection, a soft sheen, the sharp reflection of a lamp, or mirror-like images? Judge only what the pane sends back, not what you see through
+    it.
+  conditions:
+    presentation: inSitu
+    lumiere: directional
+    distance: room
+    angle: varied
+    duree: exam
+    yeux: ouverts
+    yeux_en: open
+    note: la lumière notée est celle de la pièce ; le dehors est noir
+    note_en: the light noted is that of the room; outside is dark
+  doute: non
+  note: 'de nuit, la vitre renvoie l’image de la pièce ; lié à l’épisode de la même vitre, de jour : même surface, lumière différente ; vision en présence'
+  note_en: 'at night, the pane sends back the image of the room; linked to the episode of the same pane by day: same surface, different light; vision in presence'
+  texte_fr: 'Une vitre de fenêtre, de nuit, vue d’une pièce éclairée : surface miroir (prédiction, à éprouver).'
+  texte_en: 'A window pane at night, seen from a lit room: mirror surface (prediction, to be tested).'
+- id: ppp-a:ep-surfaceGloss-14
+  realisation: a_realiser
+  region_attendue: lustrous
+  lie_a: ppp-a:ep-surfaceGloss-13
+  objet: la même vitre, de jour ; même porteur
+  objet_en: the same pane by day; same bearer
+  preparation: de jour, ciel couvert, plafonnier allumé ; même place que pour la vitre de nuit
+  preparation_en: by day, overcast sky, ceiling light on; same place as for the pane at night
+  consigne: En bougeant un peu la tête, voit-on sur cette vitre aucun reflet, un reflet doux et étalé, le reflet net d’une lampe, ou des images comme dans un miroir ? Ne jugez que ce que la vitre renvoie,
+    pas ce qu’on voit à travers.
+  consigne_en: Moving your head a little, does this pane show no reflection, a soft sheen, the sharp reflection of a lamp, or mirror-like images? Judge only what the pane sends back, not what you see through
+    it.
+  conditions:
+    presentation: inSitu
+    lumiere: diffuse
+    distance: room
+    angle: varied
+    duree: exam
+    yeux: ouverts
+    yeux_en: open
+  doute: oui
+  motif_doute: 'de jour, ce qu’on voit à travers domine : l’observateur peut répondre « aucun reflet » ou « reflet net du plafonnier » ; la région change avec la lumière pour une surface inchangée'
+  motif_doute_en: 'by day, what is seen through dominates: the observer may answer “no reflection” or “sharp reflection of the ceiling light”; the region changes with the light for an unchanged surface'
+  note: 'épisode de contrôle : illustre la lumière comme condition critique et le recouvrement avec la transparence ; un écart entre la vitre de nuit et la vitre de jour n’est pas un désaccord, puisque
+    la lumière a changé : il peut fonder un énoncé de structure'
+  note_en: 'control episode: illustrates light as a critical condition and the overlap with translucency; a difference between the pane at night and the pane by day is not a disagreement, since the light
+    has changed: it can ground a structure statement'
+  texte_fr: 'La même vitre, de jour : surface brillante, ou reflet à peine vu (prédiction, à éprouver).'
+  texte_en: 'The same pane by day: lustrous surface, or reflection barely seen (prediction, to be tested).'
+- id: ppp-a:ep-surfaceGloss-15
+  realisation: a_realiser
+  region_attendue: satin
+  objet: 'un pain de savon à la glycérine, translucide, ambré, neuf, d’environ 8 × 5 × 2,5 cm ; porteur : la grande face sans inscription'
+  objet_en: 'a new translucent amber glycerine soap bar, about 8 × 5 × 2.5 cm; bearer: the large face without lettering'
+  preparation: déballer le savon, ne pas le mouiller ; noter les dimensions ; choisir un savon sans marque en relief, ou juger la face qui n’en a pas
+  preparation_en: unwrap the soap, do not wet it; note the dimensions; choose a soap with no embossed brand, or judge the face that has none
+  consigne: En bougeant un peu la tête ou l’objet, voit-on sur cette surface aucun reflet, un reflet doux et étalé, le reflet net d’une lampe ou d’une fenêtre, ou des images comme dans un miroir ? Ne jugez
+    que ce que la surface renvoie, pas la lumière qui semble venir de l’intérieur.
+  consigne_en: Moving your head or the object a little, does this surface show no reflection, a soft spread-out sheen, the sharp reflection of a lamp or window, or mirror-like images? Judge only what the
+    surface sends back, not the light that seems to come from inside.
+  conditions:
+    presentation: inHand
+    lumiere: directional
+    distance: near
+    angle: varied
+    duree: exam
+    yeux: ouverts
+    yeux_en: open
+  doute: oui
+  motif_doute: 'cas limite : un savon neuf peut montrer un reflet net (« brillant ») ; la lueur intérieure peut être prise pour un reflet étalé ; repère de la profondeur dans la matière : « un savon translucide
+    épais » (loin dans la matière)'
+  motif_doute_en: 'borderline case: a new soap may show a sharp reflection (“lustrous”); the inner glow may be taken for a spread-out sheen; reference of depth within the material: “a thick translucent
+    soap” (far into the material)'
+  note: épisode de contrôle du recouvrement entre la brillance de surface et la profondeur dans la matière, en présence ; poser aussi, à part, la question de la profondeur dans la matière
+  note_en: control episode, in presence, for the overlap between surface gloss and depth within the material; also ask, separately, the depth-within-the-material question
+  texte_fr: 'Un savon translucide neuf : surface satinée (prédiction incertaine, à éprouver).'
+  texte_en: 'A new translucent soap bar: satin surface (uncertain prediction, to be tested).'
 alignements_externes:
 - relation: skos:relatedMatch
   cible: distinctness-of-reflected-image gloss (Hunter 1937)

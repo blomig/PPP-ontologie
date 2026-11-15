@@ -1,5 +1,6 @@
 # Fiche de type PPP — ppp:translucency — format : PPP_FicheType.md (spec v2.4)
 # Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_joint, avertissement_label, note_categories, note_reference, note_dimension, note_conditions, note_echelle, note_porteur, note_base, bloque_par.
+# Série 114 bis (2026-11-15) : note de la relation avec surfaceGloss complétée (verre et vitre), la même note étant écrite dans surfaceGloss (choix de relecture (2026-11-15)).
 id: ppp:translucency
 label_fr: transparence
 label_en: translucency
@@ -96,7 +97,8 @@ identite: Ce qu’on voit à travers une matière, pas sa clarté (un verre somb
 relations:
 - type: separableFrom
   cible: ppp:surfaceGloss
-  note: 'à éprouver (E2) : un verre dépoli laisse passer la lumière sans reflet net ; un carrelage noir poli ne laisse rien passer mais montre des reflets nets'
+  note: 'à éprouver (E2) : un verre dépoli laisse passer la lumière sans reflet net ; un carrelage noir poli ne laisse rien passer mais montre des reflets nets ; sur un verre ou une vitre, ce qu’on voit
+    à travers peut cacher un reflet ou passer pour un reflet : on ne juge que ce que la surface renvoie'
 - type: confusableWith
   cible: ppp:lightness
   note: un verre teinté sombre paraît sombre, mais on voit toujours à travers ; une matière claire n’est pas pour autant translucide
@@ -227,6 +229,7 @@ relecture_explicative:
   - note_conditions (re-confirmé en relecture explicative, série 9, 2026-10-11)
   - note_porteur (C12, lot 2 bis, 2026-10-14)
   - 'harmonisation mécanique des énoncés affichés (série 69, 2026-10-17)'
+  - 'relations.note (surfaceGloss : une phrase ajoutée ; la même note est écrite dans surfaceGloss) : relue le 2026-11-15 (choix de relecture (2026-11-15))'
   a_reconfirmer: []
   reconfirme:
   - champ: définition
