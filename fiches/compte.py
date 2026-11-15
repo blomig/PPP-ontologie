@@ -3,9 +3,11 @@
 
 Usage :
   python3 fiches/compte.py            affiche les comptes (bloc à recopier dans fiches/README.md)
-  python3 fiches/compte.py --ecrire   réécrit le bloc entre les marqueurs (refuse si un marqueur manque ou est mal placé)
-  python3 fiches/compte.py --verifier vérifie que le bloc entre <!-- compte:debut --> et <!-- compte:fin -->
-                                      de fiches/README.md est identique au calcul, et que les appels [[id]]
+  python3 fiches/compte.py --ecrire   réécrit les deux blocs entre leurs marqueurs (refuse si un marqueur manque ou est mal placé) :
+                                      comptes (<!-- compte:debut --> … <!-- compte:fin -->) et tableau des conditions
+                                      critiques par fiche (<!-- x12:debut --> … <!-- x12:fin -->, série 115)
+  python3 fiches/compte.py --verifier vérifie que les deux blocs de fiches/README.md (comptes ; conditions critiques
+                                      par fiche) sont identiques au calcul, et que les appels [[id]]
                                       sont complets (spec §9.7 P, point 4 bis), et qu'aucun prénom ni nom d'agent
                                       ne figure hors des fichiers autorisés (spec §13, v2.8), et que le rôle
                                       de chaque référence est dans la liste fermée ROLES_REFERENCES
@@ -438,7 +440,7 @@ def motifs_blocage(ids, fiches):
         m = str((fiches[i].get('bloque_par') or [''])[0])
         t = re.match(r'([TC])\d', m)
         if t:
-            motif = 'par un point %s' % t.group(1)
+            motif = 'par une question à trancher' if t.group(1) == 'T' else 'par une question des crash tests'   # série 115 : aucun code dans le README
         elif m.startswith('affichage'):
             motif = 'en attente de l’%s' % m.split(' : ')[0]
         else:
@@ -472,7 +474,7 @@ def bloc():
     pl = lambda k, sg, plu: '%d %s' % (k, sg if k == 1 else plu)   # accord : « 1 bloquée », « 1 fiche » (série 48 bis)
     lignes = [
         '<!-- compte:debut (calculé par fiches/compte.py ; ne pas corriger à la main) -->',
-        '- **%d fiches de type actives** ; **%d sans point bloquant** (`bloque_par` vide) : %d à explicabilité validée par la relecture explicative (%s), %d au langage courant validé avec exemple concret manquant (%s), %d en attente de la relecture explicative (champs à valider ou à re-confirmer : %s) ; **%s** : %s ; dont **%d minimales** (2.5, C6) : %s.'
+        '- **%d fiches de type actives** ; **%d sans point bloquant** (`bloque_par` vide) : %d à explicabilité validée par la relecture explicative (%s), %d au langage courant validé avec exemple concret manquant (%s), %d en attente de la relecture explicative (champs à valider ou à re-confirmer : %s) ; **%s** : %s ; dont **%d minimales** (créées en 2.5 à partir des verdicts des crash tests 01 et 02) : %s.'
         % (n, n - len(etats.get('bloquée', [])), len(etats.get('explicabilité validée', [])), c(etats.get('explicabilité validée', [])),
            len(etats.get('exemple concret manquant', [])), c(etats.get('exemple concret manquant', [])),
            len(etats.get('en attente de la relecture explicative', [])), c(etats.get('en attente de la relecture explicative', [])),
@@ -481,9 +483,10 @@ def bloc():
         % (len(avec_refs), n, len(distinctes), ', '.join('%d %s' % (v, k) for k, v in sorted(statuts.items())), c(sans_refs)),
         '- **Relecture explicative en attente** (`a_relire` ou `a_reconfirmer` non vides), bloquées comprises : %s (%s).' % (pl(len(attente), 'fiche', 'fiches'), c(attente)),
         '- **Sans aucun exemplaire** : %s (%s).' % (pl(len(sans_ex), 'fiche', 'fiches'), c(sans_ex)),
-        '- **Fiches publiques (X17, paliers 1 et 2)** : %d fiches publiques (%s) ; publiable : %s ; publiable avec exemplaires incomplets : %s ; pas publiable : %d fiches (détail : `python3 fiches/compte.py --paliers`).'
+        '- **Fiches publiques (règle de première publication, paliers 1 et 2)** : %d fiches publiques (%s) ; publiable : %s ; publiable avec exemplaires incomplets : %s ; pas publiable : %d fiches (détail : `python3 fiches/compte.py --paliers`).'
         % (len(publiques(paliers)), c(publiques(paliers)), c(paliers.get('publiable', [])), c(paliers.get('publiable avec exemplaires incomplets', [])), len(paliers.get('pas publiable', []))),
         ligne_familles(fiches),
+        ligne_statuts(fiches),
         '<!-- compte:fin -->',
     ]
     return '\n'.join(lignes), fiches, ex
@@ -637,9 +640,45 @@ def cq_fautives(d, connues):
     fautes = reste + [c for c in ids if c not in connues] + ['%s en double' % c for c in sorted({c for c in ids if ids.count(c) > 1})]
     return fautes or ([] if ids else ['(aucune CQ nommée)'])
 
+def ligne_statuts(fiches):
+    """Statuts éditorial et épistémique des fiches actives, et fiches réservées de reserve/ (série 115 : remplace la ligne
+    d'état écrite à la main le 2026-10-11, périmée)."""
+    n = len(fiches)
+    cpt = lambda k: ', '.join('`%s` %d' % (v, c) for v, c in sorted(__import__('collections').Counter(str(d.get(k)) for d in fiches.values()).items()))
+    res = []
+    for f in sorted(glob.glob(os.path.join(FD, 'reserve', '*.yaml'))):
+        d = yaml.safe_load(open(f, encoding='utf-8'))
+        res.append('`%s` (`%s`)' % (d['id'].replace('ppp:', ''), d.get('statut')))
+    return ('- **Statuts des %d fiches actives** : statut éditorial %s ; statut épistémique %s ; fiches réservées hors liste active (`reserve/`) : %s.'
+            % (n, cpt('statut'), cpt('statut_epistemique'), ', '.join(res) or '—'))
+
+# --- tableau des conditions critiques par fiche (série 115) ---------------------------------------------------------------
+X12_DEBUT, X12_FIN = '<!-- x12:debut', '<!-- x12:fin -->'
+ETATS_LONGS = {'explicabilité validée': 'explicabilité validée par la relecture explicative',
+               'exemple concret manquant': 'langage courant validé ; exemple concret manquant'}
+
+def bloc_conditions(fiches, ex):
+    """Toutes les fiches actives (comme le bloc des comptes), avec leur état de travail, leur palier de publication, leurs
+    conditions critiques (`conditions_critiques`, et `conditions_fixees` quand la définition fixe une facette) et le nombre
+    de régions illustrées par un exemplaire relu."""
+    lignes = ['<!-- x12:debut (calculé par fiches/compte.py ; ne pas corriger à la main) -->',
+              '| Fiche | État | Publication | Conditions critiques | Régions avec exemplaire relu |',
+              '|---|---|---|---|---|']
+    for i, d in sorted(fiches.items()):
+        e = etat(d)
+        e = ('bloquée ' + motifs_blocage([i], fiches).split('` ', 1)[1]) if e == 'bloquée' else ETATS_LONGS.get(e, e)   # « bloquée par une question à trancher »
+        cc = ', '.join('`%s`' % c for c in d.get('conditions_critiques') or []) or '—'
+        fx = d.get('conditions_fixees') or {}
+        if fx:
+            cc += ' ; fixée par la définition : ' + ', '.join('`%s` = `%s`' % kv for kv in sorted(fx.items()))
+        ill, cles = regions_illustrees(d, ex, relues_seulement=True)
+        lignes.append('| `%s` | %s | %s | %s | %d / %d |' % (i.replace('ppp:', ''), e, palier(d, ex)[0], cc, len(ill), len(cles)))
+    lignes.append('<!-- x12:fin -->')
+    return '\n'.join(lignes)
+
 MARQ_DEBUT, MARQ_FIN = '<!-- compte:debut', '<!-- compte:fin -->'
 
-def decouper_readme(r):
+def decouper_readme(r, MARQ_DEBUT=MARQ_DEBUT, MARQ_FIN=MARQ_FIN):
     """Repère le bloc généré par marqueurs en début de ligne (série 48 ter).
     Rend (bloc, fautes) : fautes signale un marqueur absent, en double ou hors début de ligne, et un titre « ## » en double."""
     lignes = r.split('\n')
@@ -662,19 +701,22 @@ def decouper_readme(r):
         fautes.append('marqueur de fin avant le marqueur de début')
     return '', fautes
 
-def ecrire_readme(texte):
-    """Remplace le bloc entre les marqueurs ; refuse d'écrire si le README ou le calcul est anormal."""
+def ecrire_readme(texte, texte_x12):
+    """Remplace les deux blocs entre leurs marqueurs ; refuse d'écrire (rien n'est écrit) si le README ou le calcul est anormal."""
     p = os.path.join(FD, 'README.md')
     r = open(p, encoding='utf-8').read()
-    actuel, fautes = decouper_readme(r)
-    if fautes or not actuel or not texte.startswith(MARQ_DEBUT) or not texte.rstrip().endswith(MARQ_FIN):
-        print('fiches/README.md : réécriture refusée (%s)' % ('; '.join(fautes) or 'bloc calculé vide ou sans marqueurs'))
-        sys.exit(1)
-    open(p, 'w', encoding='utf-8').write(r.replace(actuel, texte.rstrip('\n'), 1))
-    print('fiches/README.md : bloc de comptes réécrit.')
+    for t, (md, mf) in ((texte, (MARQ_DEBUT, MARQ_FIN)), (texte_x12, (X12_DEBUT, X12_FIN))):
+        actuel, fautes = decouper_readme(r, md, mf)
+        if fautes or not actuel or not t.startswith(md) or not t.rstrip().endswith(mf):
+            print('fiches/README.md : réécriture refusée (%s)' % ('; '.join(fautes) or 'bloc calculé vide ou sans marqueurs'))
+            sys.exit(1)
+        r = r.replace(actuel, t.rstrip('\n'), 1)
+    open(p, 'w', encoding='utf-8').write(r)
+    print('fiches/README.md : bloc de comptes et tableau des conditions critiques réécrits.')
 
 if __name__ == '__main__':
     texte, fiches, ex = bloc()
+    texte_x12 = bloc_conditions(fiches, ex)
     if '--verifier' in sys.argv:
         r = open(os.path.join(FD, 'README.md'), encoding='utf-8').read()
         actuel, fautes = decouper_readme(r)
@@ -682,7 +724,15 @@ if __name__ == '__main__':
         for f in fautes:
             print('fiches/README.md : %s' % f)
         if actuel != texte:
-            print('fiches/README.md : bloc de comptes périmé ; relancer fiches/compte.py et recopier le bloc.')
+            print('fiches/README.md : bloc de comptes périmé ; relancer fiches/compte.py --ecrire.')
+            ok = False
+        actuel_x12, fautes_x12 = decouper_readme(r, X12_DEBUT, X12_FIN)
+        for f in fautes_x12:
+            if f not in fautes:
+                print('fiches/README.md : %s' % f)
+            ok = False
+        if actuel_x12 != texte_x12:
+            print('fiches/README.md : tableau des conditions critiques périmé ; relancer fiches/compte.py --ecrire.')
             ok = False
         for i, d in sorted(fiches.items()):
             for k, rid, m in appels_manquants(d):
@@ -722,9 +772,9 @@ if __name__ == '__main__':
                 print('mesure (non bloquant) : %s : %s' % (i, msg))
         if not ok:
             sys.exit(1)
-        print('fiches/README.md : comptes à jour ; appels [[id]] complets ; cq_couvertes valides ; rôles de références dans la liste fermée ; aucune référence en double ; %d fiches publiques, comme attendu ; aucun nom hors des fichiers autorisés ; exemplaires du toucher, de l’ouïe et de l’odorat comptés selon la spec.' % len(FICHES_PUBLIQUES_ATTENDUES))
+        print('fiches/README.md : comptes à jour ; tableau des conditions critiques à jour ; appels [[id]] complets ; cq_couvertes valides ; rôles de références dans la liste fermée ; aucune référence en double ; %d fiches publiques, comme attendu ; aucun nom hors des fichiers autorisés ; exemplaires du toucher, de l’ouïe et de l’odorat comptés selon la spec.' % len(FICHES_PUBLIQUES_ATTENDUES))
     elif '--ecrire' in sys.argv:
-        ecrire_readme(texte)
+        ecrire_readme(texte, texte_x12)
     elif '--noms' in sys.argv:
         r, exc = noms_publics(avec_exceptions=True)
         for f, n, nom in r:
@@ -741,3 +791,5 @@ if __name__ == '__main__':
             print('%-28s %-40s %s' % (i, p, ' ; '.join(r + (['mention : « %s »' % mention] if mention else []))))
     else:
         print(texte)
+        print()
+        print(texte_x12)
