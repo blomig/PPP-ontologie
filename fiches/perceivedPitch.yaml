@@ -1,6 +1,7 @@
 # Fiche de type PPP — ppp:perceivedPitch — format : PPP_FicheType.md (spec v2.8)
 # Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_base, note_categories, avertissement_label.
 # Série 93 (2026-11-02) : fiche rédigée ; série 96 (2026-11-03) : relecture explicative faite (choix de relecture), fiche publiée (palier 2, épisodes à réaliser, X17).
+# Série 112 (2026-11-15) : champ optionnel condition_NA_region_base (noPitch de ppp:pitchClarity) renseigné (PPP_FicheType.md ; choix de relecture (2026-11-15)).
 id: ppp:perceivedPitch
 label_fr: hauteur perçue
 label_en: perceived pitch
@@ -94,6 +95,7 @@ note_conditions: 'la façon dont le son est produit compte (facette `production`
 porteur: un son entendu, produit par un objet, un appareil ou une voix, de la façon déclarée (facette `production`)
 arité: 1
 condition_NA: 'rien ne sonne de la façon déclarée (un objet qui ne sonne pas sous le geste déclaré) ; son sans hauteur repérable (`ppp:pitchClarity` en `noPitch` : un froissement de papier, un souffle).'
+condition_NA_region_base: noPitch
 espace_valeurs:
   echelle: ordinale
   sens_croissant: de `low` (rang 1) vers `high` (rang 3), le son paraît de plus en plus aigu
@@ -269,6 +271,7 @@ relecture_explicative:
   - 'label_fr, label_en, avertissement_label, strate, question_attentionnelle, mode_de_presentation, conditions_critiques, porteur, condition_NA, espace_valeurs, identite, references, nanay, transfert : relus en langage courant le 2026-11-03, validés tels quels'
   - 'note_base, définition, contre_exemple, grandeur_physique_homonyme, note_conditions, note_categories, relations, etat_de_l_art, enonces_testables (E2), statut_note, mesure, episodes_a_realiser : relus et corrigés en langage courant le 2026-11-03'
   - 'contre_exemple, identite, relations (alignés sur l’acuité du son : clair ou sombre ; réciproque, choix de relecture (2026-11-05))'
+  - 'condition_NA (région de la base qui rend le type sans objet : « aucune hauteur repérable » de la netteté de la hauteur) : champ ajouté le 2026-11-15, relu avec son ajout (choix de relecture (2026-11-15))'
   a_reconfirmer: []
 # Série 93 : épisodes proposés « à réaliser » (spec X17 ; choix de relecture (2026-11-02)) ; ni épreuve faite ni accord entre observateurs ; ni observateur, ni date, ni résultat.
 # Enregistrements CC0 (Creative Commons 0), pages vérifiées le 2026-11-02 ; fréquences fondamentales mesurées par l’équipe sur l’aperçu MP3 de chaque page (autocorrélation), indicatives, non vérifiées comme bornes.

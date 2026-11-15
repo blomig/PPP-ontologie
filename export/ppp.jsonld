@@ -188,7 +188,7 @@
    "dct_license": "https://creativecommons.org/licenses/by/4.0/",
    "owl:versionInfo": "2.8",
    "dct:modified": {
-    "@value": "2026-11-14",
+    "@value": "2026-11-15",
     "@type": "xsd:date"
    },
    "dct:creator": [
@@ -200,6 +200,7 @@
    "dct:bibliographicCitation": "Unger, Lomig et Grok Bot. PPP — Propriétés Perceptuelles Pertinentes : spécification d'ontologie, version 2.8, 2026-10-11. Licence CC BY 4.0. https://w3id.org/ppp.",
    "dct_source": "https://github.com/blomig/PPP-ontologie",
    "hasTopConcept": [
+    "https://w3id.org/ppp/bitterness",
     "https://w3id.org/ppp/contour",
     "https://w3id.org/ppp/curvature",
     "https://w3id.org/ppp/distribution",
@@ -505,6 +506,211 @@
     "fr": "indirecte",
     "en": "indirect"
    }
+  },
+  {
+   "@id": "https://w3id.org/ppp/bitterness",
+   "@type": "skos:Concept",
+   "inScheme": "https://w3id.org/ppp/",
+   "skos:notation": "bitterness",
+   "prefLabel": {
+    "fr": "amer",
+    "en": "bitterness"
+   },
+   "definition": {
+    "fr": "La force de la saveur amère qu’on perçoit en goûtant une portion du produit, nez pincé ou libre selon la facette `nez`, à la température déclarée : une saveur de la langue, et non l’astringence ni l’arôme.",
+    "en": "The strength of the bitter taste perceived when tasting a portion of the product, nose pinched or free according to the `nez` facet, at the declared temperature: a taste of the tongue, not astringency or aroma."
+   },
+   "scopeNote": {
+    "fr": [
+     "En bouche, est-ce amer ? À peine, nettement, ou fortement ?",
+     "Un vin rouge jeune peut assécher la bouche sans être amer : c’est l’astringence, un toucher, pas une saveur. Une odeur de café brûlé n’est pas l’amer : nez pincé, elle disparaît, l’amer reste. Le sens figuré du mot (« une remarque amère ») ne s’applique pas. « Ce café est nettement amer, et c’est un défaut » se dit comme « …et c’est une qualité » : l’amer est recherché dans le café, le chocolat noir ou l’eau tonique.",
+     "quatre régions, mêmes clés que l’intensité de l’odeur. Les repères sont des solutions de référence, pas des exemplaires, et aucune marque n’est citée (décidé le 2026-10-19). Les crans sont calés sur les solutions d’ISO 3972:2011, lues dans l’aperçu public (décidé le 2026-11-02) : eau neutre (aucun) ; caféine à 0,195 g/l, seuil d’identification du tableau 3 (à peine perceptible) ; caféine à 0,27 g/l, dilution du tableau 2 (net, provisoire : l’écart avec le cran précédent n’est que d’un facteur 1,4). Le cran « fort » reste à caler. Chaque préparation est déclarée avec sa région."
+    ],
+    "en": [
+     "In the mouth, is it bitter? Barely, distinctly, or strongly?",
+     "A young red wine can dry the mouth without being bitter: that is astringency, a touch, not a taste. A smell of burnt coffee is not bitterness: with the nose pinched it disappears, the bitterness remains. The figurative sense of the word (“a bitter remark”) does not apply. “This coffee is distinctly bitter, and that is a flaw” is said just as “…and that is a quality”: bitterness is sought in coffee, dark chocolate or tonic water.",
+     "four regions, with the same keys as odour intensity. The reference points are reference solutions, not exemplars, and no brand is cited (decided on 2026-10-19). The steps are calibrated on the solutions of ISO 3972:2011, read in the public preview (decided on 2026-11-02): neutral water (none); caffeine at 0.195 g/l, the identification threshold of table 3 (faint); caffeine at 0.27 g/l, dilution of table 2 (distinct, provisional: the gap from the previous step is only a factor of 1.4). The “strong” step remains to be calibrated. Each preparation is declared with its region."
+    ]
+   },
+   "note": {
+    "fr": "candidat ; non éprouvé",
+    "en": "candidate; untested"
+   },
+   "topConceptOf": "https://w3id.org/ppp/",
+   "measurementState": "https://w3id.org/ppp/mesure/etat/methodes",
+   "measurementSummary": {
+    "fr": "Une mesure associée indirecte existe pour la bière et le moût seulement : les unités d’amertume (méthode internationale commune de l’EBC et de l’ASBC). Elle dose surtout les iso-alpha-acides du houblon, pas l’amer perçu, et ne saisit ni l’observateur, ni la température, ni le nez. Aucune méthode proche n’est connue (recherche du 2026-10-19, reprise le 2026-11-15) : les échelles de jugement d’un jury et la méthode de sensibilité au goût, citées par l’état de l’art, ne sont pas des mesures associées.",
+    "en": "An indirect associated measurement exists for beer and wort only: bitterness units (common international method of the EBC and the ASBC). It mainly measures hop iso-alpha acids, not perceived bitterness, and captures neither the observer, nor the temperature, nor the nose. No close method is known (search of 2026-10-19, redone on 2026-11-15): panel judgement scales and the method for taste sensitivity, cited in the state of the art, are not associated measurements."
+   },
+   "measurementCaveat": {
+    "fr": "Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.",
+    "en": "The regions of this entry remain perceptual: they describe what an observer sees, hears, smells or feels by touch under the declared conditions. An associated measurement can inform an observation, but it does not set the boundaries of the regions and does not replace examination."
+   },
+   "associatedMeasure": "https://w3id.org/ppp/bitterness/mesure/ebc_9_8",
+   "notRetainedMeasure": [
+    "https://w3id.org/ppp/bitterness/mesure/non-retenue-1",
+    "https://w3id.org/ppp/bitterness/mesure/non-retenue-2"
+   ],
+   "hasScale": "https://w3id.org/ppp/bitterness/echelle",
+   "narrower": [
+    "https://w3id.org/ppp/bitterness/none",
+    "https://w3id.org/ppp/bitterness/faint",
+    "https://w3id.org/ppp/bitterness/distinct",
+    "https://w3id.org/ppp/bitterness/strong"
+   ]
+  },
+  {
+   "@id": "https://w3id.org/ppp/bitterness/mesure/ebc_9_8",
+   "@type": "ppp:AssociatedMeasure",
+   "rdfs_label": {
+    "fr": "unités d’amertume de la bière, méthode internationale (IM) commune (EBC 9.8 ; ASBC Beer-23A)",
+    "en": "beer bitterness units, common international method (IM) (EBC 9.8; ASBC Beer-23A)"
+   },
+   "quantity": {
+    "fr": "absorbance à 275 nm d’un extrait à l’isooctane de la bière acidifiée",
+    "en": "absorbance at 275 nm of an isooctane extract of the acidified beer"
+   },
+   "unitOrScale": {
+    "fr": "unités d’amertume (BU), soit 50 × A275",
+    "en": "bitterness units (BU), i.e. 50 × A275"
+   },
+   "gap": {
+    "fr": "la méthode dose surtout les iso-alpha-acides du houblon, et tout ce qui se dissout dans l’isooctane et absorbe à 275 nm, pas l’amer perçu ; pour les bières houblonnées à cru, l’ASBC renvoie elle-même à une autre méthode pour approcher l’amer perçu ; bière et moût seulement ; ni l’observateur, ni la température, ni le nez",
+    "en": "the method mainly measures hop iso-alpha acids, and anything that dissolves in isooctane and absorbs at 275 nm, not perceived bitterness; for dry-hopped beers, the ASBC itself points to another method to approach perceived bitterness; beer and wort only; neither the observer, nor the temperature, nor the nose"
+   },
+   "measurementConditions": {
+    "fr": "bière ou moût dégazé, acidifié, extrait à l’isooctane ; lecture au spectrophotomètre à 275 nm",
+    "en": "degassed, acidified beer or wort, extracted with isooctane; read on a spectrophotometer at 275 nm"
+   },
+   "proximity": "https://w3id.org/ppp/mesure/proximite/indirecte",
+   "dct:bibliographicCitation": [
+    "EBC (2020). Analytica EBC, méthode 9.8, Bitterness of Beer (IM). European Brewery Convention.",
+    "ASBC. Beer-23A, Beer Bitterness — Bitterness Units (International Method). American Society of Brewing Chemists."
+   ]
+  },
+  {
+   "@id": "https://w3id.org/ppp/bitterness/mesure/non-retenue-1",
+   "@type": "ppp:NotRetainedMeasure",
+   "rdfs_label": {
+    "fr": "gLMS et estimation de grandeur",
+    "en": "gLMS and magnitude estimation"
+   },
+   "reason": {
+    "fr": "des notes données par un jury, sans référence physique : elles servent dans l’épreuve d’accord, pas comme mesure associée. Les échelles à étiquettes ordinaires ne se comparent pas d’un groupe à l’autre ; comparer à un repère qui n’est pas un goût (un son) le permet",
+    "en": "scores given by a panel, without a physical reference: they serve in the agreement test, not as an associated measurement. Ordinary labelled scales cannot be compared from one group to another; comparing with a reference point that is not a taste (a sound) makes it possible"
+   },
+   "dct:bibliographicCitation": [
+    "Green, B. G., Shaffer, G. S. & Gilmore, M. M. (1993). Derivation and evaluation of a semantic scale of oral sensation magnitude with apparent ratio properties. Chemical Senses, 18(6), 683–702.",
+    "Green, B. G., Dalton, P., Cowart, B., Shaffer, G., Rankin, K. & Higgins, J. (1996). Evaluating the ‘Labeled Magnitude Scale’ for measuring sensations of taste and smell. Chemical Senses, 21(3), 323–334.",
+    "Bartoshuk, L. M., Duffy, V. B., Green, B. G. et al. (2004). Valid across-group comparisons with labeled scales: the gLMS versus magnitude matching. Physiology & Behavior, 82(1), 109–114."
+   ]
+  },
+  {
+   "@id": "https://w3id.org/ppp/bitterness/mesure/non-retenue-2",
+   "@type": "ppp:NotRetainedMeasure",
+   "rdfs_label": {
+    "fr": "ISO 3972:2011 (sensibilité au goût)",
+    "en": "ISO 3972:2011 (taste sensitivity)"
+   },
+   "reason": {
+    "fr": "elle mesure la sensibilité des personnes au goût, pas le produit ; ses solutions servent de repères de région",
+    "en": "it measures people’s sensitivity to taste, not the product; its solutions serve as region reference points"
+   },
+   "dct:bibliographicCitation": "ISO 3972:2011. Sensory analysis — Methodology — Method of investigating sensitivity of taste (3e éd.), et Cor 1:2012. ISO."
+  },
+  {
+   "@id": "https://w3id.org/ppp/bitterness/echelle",
+   "@type": "skos:OrderedCollection",
+   "prefLabel": {
+    "fr": "échelle de « amer »",
+    "en": "scale of “bitterness”"
+   },
+   "memberList": [
+    "https://w3id.org/ppp/bitterness/none",
+    "https://w3id.org/ppp/bitterness/faint",
+    "https://w3id.org/ppp/bitterness/distinct",
+    "https://w3id.org/ppp/bitterness/strong"
+   ]
+  },
+  {
+   "@id": "https://w3id.org/ppp/bitterness/none",
+   "@type": "skos:Concept",
+   "inScheme": "https://w3id.org/ppp/",
+   "skos:notation": "none",
+   "prefLabel": {
+    "fr": "amer : aucun",
+    "en": "bitterness: none"
+   },
+   "hiddenLabel": {
+    "fr": "aucun",
+    "en": "none"
+   },
+   "example": {
+    "fr": "de l’eau neutre, plate, sans goût ni odeur (ISO 3972, 5.1), à la température des solutions (vers 20 °C)",
+    "en": "neutral still water, tasteless and odourless (ISO 3972, 5.1), at the temperature of the solutions (about 20 °C)"
+   },
+   "regionOf": "https://w3id.org/ppp/bitterness",
+   "broader": "https://w3id.org/ppp/bitterness"
+  },
+  {
+   "@id": "https://w3id.org/ppp/bitterness/faint",
+   "@type": "skos:Concept",
+   "inScheme": "https://w3id.org/ppp/",
+   "skos:notation": "faint",
+   "prefLabel": {
+    "fr": "amer : à peine perceptible",
+    "en": "bitterness: faint"
+   },
+   "hiddenLabel": {
+    "fr": "à peine perceptible",
+    "en": "faint"
+   },
+   "example": {
+    "fr": "une solution de caféine à 0,195 g/l dans l’eau neutre, vers 20 °C (ISO 3972, tableau 3 : mélange à parts égales des dilutions et, seuil d’identification d’un jury entraîné)",
+    "en": "a solution of caffeine at 0.195 g/l in neutral water, at about 20 °C (ISO 3972, table 3: equal parts of dilutions and, the identification threshold of a trained panel)"
+   },
+   "regionOf": "https://w3id.org/ppp/bitterness",
+   "broader": "https://w3id.org/ppp/bitterness"
+  },
+  {
+   "@id": "https://w3id.org/ppp/bitterness/distinct",
+   "@type": "skos:Concept",
+   "inScheme": "https://w3id.org/ppp/",
+   "skos:notation": "distinct",
+   "prefLabel": {
+    "fr": "amer : net",
+    "en": "bitterness: distinct"
+   },
+   "hiddenLabel": {
+    "fr": "net",
+    "en": "distinct"
+   },
+   "example": {
+    "fr": "une solution de caféine à 0,27 g/l dans l’eau neutre, vers 20 °C (ISO 3972, tableau 2 : dilution, la plus forte de la série) ; cran provisoire, à confirmer avant",
+    "en": "a solution of caffeine at 0.27 g/l in neutral water, at about 20 °C (ISO 3972, table 2: dilution, the strongest of the series); provisional step, to be confirmed before"
+   },
+   "regionOf": "https://w3id.org/ppp/bitterness",
+   "broader": "https://w3id.org/ppp/bitterness"
+  },
+  {
+   "@id": "https://w3id.org/ppp/bitterness/strong",
+   "@type": "skos:Concept",
+   "inScheme": "https://w3id.org/ppp/",
+   "skos:notation": "strong",
+   "prefLabel": {
+    "fr": "amer : fort",
+    "en": "bitterness: strong"
+   },
+   "hiddenLabel": {
+    "fr": "fort",
+    "en": "strong"
+   },
+   "example": {
+    "fr": "à caler : aucune solution d’ISO 3972 plus forte que 0,27 g/l n’est à goûter (la solution mère du tableau 1, 0,54 g/l, sert à préparer les dilutions) ; repère à choisir avant l’épreuve",
+    "en": "to be calibrated: no ISO 3972 solution stronger than 0.27 g/l is meant to be tasted (the stock solution of table 1, 0.54 g/l, is used to prepare the dilutions); reference point to be chosen before the test"
+   },
+   "regionOf": "https://w3id.org/ppp/bitterness",
+   "broader": "https://w3id.org/ppp/bitterness"
   },
   {
    "@id": "https://w3id.org/ppp/contour",
@@ -8013,6 +8219,25 @@
     "https://w3id.org/ppp/odourIntensity",
     "https://w3id.org/ppp/odourCharacter"
    ]
+  },
+  {
+   "@id": "https://w3id.org/ppp/famille/gout",
+   "@type": "skos:Collection",
+   "prefLabel": {
+    "fr": "Goût (en bouche)",
+    "en": "Taste (in the mouth)"
+   },
+   "scopeNote": {
+    "fr": [
+     "Ce qu’on perçoit en bouche, et non ce qu’on aime. On y range les saveurs, ce qui brûle ou pique, ce qui assèche la bouche, la résistance de la bouchée et l’épaisseur de la gorgée. On y range aussi, pour tout ce qu’on a en bouche à la fois, le nombre de composantes qu’on distingue, leur force, celle qui l’emporte et le temps pendant lequel il en reste quelque chose. Une photo ne dit rien du goût : on décrit le produit et les conditions dans lesquelles on l’a goûté. Cette famille est en préparation : une fiche y est publiée, l’amer.",
+     "Famille de lecture : aide à s’orienter, pas une hiérarchie."
+    ],
+    "en": [
+     "What you perceive in the mouth, not what you like. It covers tastes, what burns or tingles, what dries the mouth, how the mouthful resists and how thick the sip is. It also covers, for everything in the mouth at once, how many components you can tell apart, how strong they are, which one prevails and how long something of it remains. A photo says nothing about taste: the product is described, along with the conditions in which it was tasted. This family is in preparation: one entry is published so far, bitterness.",
+     "Reading family: a guide for orientation, not a hierarchy."
+    ]
+   },
+   "member": "https://w3id.org/ppp/bitterness"
   }
  ]
 }

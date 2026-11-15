@@ -4,6 +4,7 @@
 # Série 106 (2026-11-11) : épisodes proposés « à réaliser » ajoutés (episodes_a_realiser) ; fiche toujours en préparation, aucun champ relu.
 # Série 110 bis (2026-11-12) : ISO/TS 16922 citée dans son édition en vigueur (2022) seulement, l’édition annulée de 2002 retirée (choix de relecture (2026-11-12)) ; references et etat_de_l_art restent à relire.
 # Série 111 (2026-11-14) : relecture explicative complète, champ par champ ; a_relire vidé, fiche publiable (choix de relecture (2026-11-14)).
+# Série 112 (2026-11-15) : champs optionnels espace_valeurs.choix_multiples (oui) et condition_NA_region_base (noOdour) renseignés (PPP_FicheType.md ; choix de relecture (2026-11-15)).
 id: ppp:odourCharacter
 label_fr: caractère de l’odeur
 label_en: odour character
@@ -63,8 +64,10 @@ note_conditions: 'la distance du nez est critique (facette `distance`, spec §9.
 porteur: l’objet ou la partie qu’on sent, à l’air ambiant
 arité: 1
 condition_NA: 'objet sans odeur sous la condition (intensité `noOdour`, « aucune odeur ») : la base n’est pas remplie.'
+condition_NA_region_base: noOdour
 espace_valeurs:
   echelle: nominale
+  choix_multiples: oui
   voisinages:
   - - woody
     - resinous
@@ -715,5 +718,6 @@ relecture_explicative:
   - 'references (ISO 5492 ajoutée, elle fonde le vocabulaire ; ISO/TS 16922:2022 l’alimente ; ISO 5496 ajoutée, citée par les épisodes : non lue, notice de l’éditeur, article 5.2 et tableau A.2 de l’amendement
     1 des extraits publics seulement ; atlas de Dravnieks ajouté : non lu, notice de l’éditeur seulement), etat_de_l_art (cinq phrases : vocabulaire, classifications, listes et roues de mots, substances
     de référence, effet de la concentration, avec le statut de lecture de chacune), mesure (roue du vin, atlas et substances d’entraînement rangés parmi les mesures non retenues : listes de mots ou repères
-    sans référence physique normalisée pour juger un objet), note_base et note_categories (date de décision écrite sans renvoi interne), statut_note, source_de_la_fiche : corrigés le 2026-11-14 (choix de relecture (2026-11-14))'
+    sans référence physique normalisée pour juger un objet), note_base, note_categories (date de décision écrite sans renvoi interne), statut_note, source_de_la_fiche : corrigés le 2026-11-14 (choix de relecture (2026-11-14))'
+  - 'espace_valeurs (choix multiples : une odeur mêlée se note par plusieurs régions, une par caractère net, comme le dit la note des catégories), condition_NA (région de la base qui rend le type sans objet : « aucune odeur » de l’intensité de l’odeur) : champs ajoutés le 2026-11-15, relus avec leur ajout (choix de relecture (2026-11-15))'
   a_reconfirmer: []

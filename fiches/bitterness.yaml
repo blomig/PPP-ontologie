@@ -1,6 +1,7 @@
 # Fiche de type PPP — ppp:bitterness — format : PPP_FicheType.md (spec v2.8)
 # Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_base, note_porteur, note_echelle, note_label_alternatif, mesure (rubrique proposée en série 53, docs/proposition-rubrique-mesure.md).
 # Série 78 (2026-10-20) : fiche en préparation de la famille « Goût (en bouche) », rédigée sans exemplaire à partir de la proposition « Goût » ; aucun champ n’est encore relu.
+# Série 113 (2026-11-15) : relecture explicative complète, champ par champ ; a_relire vidé, fiche publiable avec exemplaires incomplets (repères de région ; choix de relecture (2026-11-15)).
 id: ppp:bitterness
 label_fr: amer
 label_en: bitterness
@@ -21,12 +22,13 @@ question_attentionnelle: En bouche, est-ce amer ? À peine, nettement, ou fortem
 contre_exemple: 'Un vin rouge jeune peut assécher la bouche sans être amer : c’est l’astringence, un toucher, pas une saveur. Une odeur de café brûlé n’est pas l’amer : nez pincé, elle disparaît, l’amer
   reste. Le sens figuré du mot (« une remarque amère ») ne s’applique pas. « Ce café est nettement amer, et c’est un défaut » se dit comme « …et c’est une qualité » : l’amer est recherché dans le café,
   le chocolat noir ou l’eau tonique.'
-grandeur_physique_homonyme: 'l’« amertume » des brasseurs, en unités d’amertume (BU), est une teneur en iso-alpha-acides du houblon mesurée par absorbance, pas l’amer perçu [[ebc_9_8]] : aucune région ne
-  s’en déduit. Voir la rubrique « mesure ».'
+grandeur_physique_homonyme: 'l’« amertume » des brasseurs, en unités d’amertume (BU), se mesure par absorbance sur un extrait de la bière : elle dose surtout les iso-alpha-acides du houblon, pas l’amer
+  perçu [[ebc_9_8]] : aucune région ne s’en déduit. Voir la rubrique « mesure ».'
 mesure:
   etat: methodes
   synthese: 'Une mesure associée indirecte existe pour la bière et le moût seulement : les unités d’amertume (méthode internationale commune de l’EBC et de l’ASBC). Elle dose surtout les iso-alpha-acides
-    du houblon, pas l’amer perçu, et ne saisit ni l’observateur, ni la température, ni le nez. Aucune méthode proche n’est connue (recherche du 2026-10-19).'
+    du houblon, pas l’amer perçu, et ne saisit ni l’observateur, ni la température, ni le nez. Aucune méthode proche n’est connue (recherche du 2026-10-19, reprise le 2026-11-15) : les échelles de jugement
+    d’un jury [[green1993lms]] et la méthode de sensibilité au goût [[iso3972]], citées par l’état de l’art, ne sont pas des mesures associées.'
   regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
     une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
   methodes:
@@ -38,23 +40,23 @@ mesure:
     - ebc_9_8
     - asbc_beer_23a
     proximite: indirecte
-    ecart: la méthode dose surtout les iso-alpha-acides du houblon, pas l’amer perçu ; le texte d’EBC 9.8 (2.3, connu par source secondaire) dit lui-même que, pour les bières houblonnées à cru et les bières
-      colorées, les BU sont plus élevées que l’amertume perçue ; bière et moût seulement ; ni l’observateur, ni la température, ni le nez
-    conditions: bière filtrée, dégazée, vers 20 °C ; résultat faussé par certains additifs (acide sorbique, saccharine…)
-    statut_lecture: extrait d’index (page « Master the Method » de l’ASBC ; pages de l’EBC et de BrewUp, mise à jour de 2020) ; texte d’EBC 9.8 par source secondaire (copie tierce)
+    ecart: la méthode dose surtout les iso-alpha-acides du houblon, et tout ce qui se dissout dans l’isooctane et absorbe à 275 nm, pas l’amer perçu ; pour les bières houblonnées à cru, l’ASBC renvoie elle-même
+      à une autre méthode pour approcher l’amer perçu ; bière et moût seulement ; ni l’observateur, ni la température, ni le nez
+    conditions: bière ou moût dégazé, acidifié, extrait à l’isooctane ; lecture au spectrophotomètre à 275 nm
+    statut_lecture: 'notice de l’éditeur seulement : page « Master the Method » de l’ASBC et résumé de la méthode 9.8 sur le site de l’EBC, relus le 2026-11-15 ; texte des méthodes non lu'
   non_retenues:
   - nom: gLMS et estimation de grandeur
     references:
     - green1993lms
     - green1996lms
     - bartoshuk2004
-    raison: jugements d’un jury sans référence physique ; à reprendre dans le protocole de l’épreuve d’accord (E1). Les échelles à étiquettes classiques ne se comparent pas d’un groupe à l’autre ; l’appariement
-      à un repère non gustatif (un son) le permet
+    raison: 'des notes données par un jury, sans référence physique : elles servent dans l’épreuve d’accord (E1), pas comme mesure associée. Les échelles à étiquettes ordinaires ne se comparent pas d’un
+      groupe à l’autre ; comparer à un repère qui n’est pas un goût (un son) le permet'
     statut_lecture: résumés (Green et al., 1993 et 1996, sur OpenAlex ; Bartoshuk et al., 2004)
   - nom: ISO 3972:2011 (sensibilité au goût)
     references:
     - iso3972
-    raison: mesure la sensibilité des sujets, pas l’objet ; ses solutions servent de repères de région
+    raison: elle mesure la sensibilité des personnes au goût, pas le produit ; ses solutions servent de repères de région
     statut_lecture: extraits (aperçu public)
 modalites:
 - bouche
@@ -67,9 +69,8 @@ note_conditions: 'règle 12 (spec §9.7 H) : `nez` est critique pour tout type d
   facultative qui n’identifie personne (règle 12).'
 porteur: le produit identifié dont on goûte une portion (nature, origine, lot, date de production ou d’ouverture, conservation, concentration pour une boisson préparée) ; la portion goûtée n’est pas le
   porteur
-note_porteur: 'porteur des types de saveur : le produit identifié (proposition « Goût », section 6, et choix de relecture du 2026-10-19, 8.1 point 4) ; la définition dit pourtant « en goûtant une portion
-  du produit » : la portion est ce qu’on goûte, pas ce qui porte la qualité. Pour un produit naturel, le lot ne garantit pas la saveur (maturité, conservation, temps depuis l’ouverture) : ces informations
-  vont dans l’épisode.'
+note_porteur: 'porteur des types de saveur : le produit identifié (choix de relecture du 2026-10-19) ; la définition dit pourtant « en goûtant une portion du produit » : la portion est ce qu’on goûte, pas
+  ce qui porte la qualité. Pour un produit naturel, le lot ne garantit pas la saveur (maturité, conservation, temps depuis l’ouverture) : ces informations vont dans l’épisode.'
 arité: 1
 condition_NA: 'objet non destiné à la bouche (un cuir, un bois verni, un métal : ce n’est ni sûr ni reproductible) ; produit qu’on ne goûte pas (photo, description) : une photo ne compte jamais'
 espace_valeurs:
@@ -145,7 +146,9 @@ espace_valeurs:
     rang: 4
     repere: 'à caler : aucune solution d’ISO 3972 plus forte que 0,27 g/l n’est à goûter (la solution mère du tableau 1, 0,54 g/l, sert à préparer les dilutions) ; repère à choisir avant l’épreuve'
     exemplaires: []
-note_echelle: 'quatre régions, clés reprises de `odourIntensity` (proposition « Goût », 2.2). Les repères sont des solutions de référence, pas des exemplaires (X17), et aucune marque n’est citée (décision 5 de l’éditeur du projet, 2026-10-19). Série 90 (choix de relecture (2026-11-02), suivant la décision de l’éditeur du projet (2026-11-02) : « B : les repères de région (solutions ISO 3972, alun 1 g/l) ») : les crans sont calés sur les solutions d’ISO 3972:2011 [[iso3972]], lues dans l’aperçu public : eau neutre (aucun) ; caféine à 0,195 g/l, seuil d’identification du tableau 3 (à peine perceptible) ; caféine à 0,27 g/l, dilution D1 du tableau 2 (net, provisoire : l’écart avec le cran précédent n’est que d’un facteur 1,4). Le cran « fort » reste à caler. Chaque préparation est déclarée dans le champ `preparation` de sa région (X17).'
+note_echelle: 'quatre régions, mêmes clés que l’intensité de l’odeur. Les repères sont des solutions de référence, pas des exemplaires, et aucune marque n’est citée (décidé le 2026-10-19). Les crans sont
+  calés sur les solutions d’ISO 3972:2011 [[iso3972]], lues dans l’aperçu public (décidé le 2026-11-02) : eau neutre (aucun) ; caféine à 0,195 g/l, seuil d’identification du tableau 3 (à peine perceptible)
+  ; caféine à 0,27 g/l, dilution D1 du tableau 2 (net, provisoire : l’écart avec le cran précédent n’est que d’un facteur 1,4). Le cran « fort » reste à caler. Chaque préparation est déclarée avec sa région.'
 identite: 'La force de la saveur amère, perçue sur la langue ; pas l’astringence (un toucher : la bouche qui sèche ou râpe), pas l’odeur en bouche (arôme en bouche, en réserve), pas le piquant (piquant
   en bouche), pas l’agrément.'
 relations:
@@ -173,9 +176,12 @@ references:
   doi_ou_url: https://www.iso.org/standard/50110.html
   role: fonde
   statut_verification: vérifiée sur résumé ou source secondaire
-  verifie_le: '2026-11-02'
-  verifie_sur: 'extraits : aperçu public de l’édition 2011 diffusé par iTeh Standards (https://standards.iteh.ai/catalog/standards/sist/9d3b5579-aea7-40d6-9216-d4825f5a0a83/iso-3972-2011 ; l’aperçu de iso.org ne montre que les points 1 à 3) : points 5.1, 7.2, 8.1, tableaux 1, 2 et 3, relus le 2026-11-02 ; norme confirmée le 2023-09-21 ; Cor 1:2012 non lu ; texte complet non lu'
-  reprend: l’eau neutre du point 5.1 ; la caféine à 0,195 g/l (tableau 3) et à 0,27 g/l (tableau 2, D1) comme repères de région ; même température (vers 20 °C) pour les échantillons et l’eau ; rinçage et attente entre deux prises
+  verifie_le: '2026-11-15'
+  verifie_sur: 'extraits : aperçu public de l’édition 2011 diffusé par iTeh Standards (https://standards.iteh.ai/catalog/standards/sist/9d3b5579-aea7-40d6-9216-d4825f5a0a83/iso-3972-2011 ; l’aperçu de iso.org
+    ne montre que les points 1 à 3) : points 5.1, 7.2, 8.1, tableaux 1, 2 et 3, relus le 2026-11-02 ; norme confirmée le 2023-09-21 ; Cor 1:2012 non lu ; texte complet non lu ; page de l’ISO relue le 2026-11-15
+    : édition 3 de 2011, confirmée en 2023, toujours en vigueur'
+  reprend: l’eau neutre du point 5.1 ; la caféine à 0,195 g/l (tableau 3) et à 0,27 g/l (tableau 2, D1) comme repères de région ; même température (vers 20 °C) pour les échantillons et l’eau ; rinçage et
+    attente entre deux prises
   ne_reprend_pas: 'la solution mère du tableau 1 (0,54 g/l), qui sert à préparer les dilutions ; l’usage de la norme pour vérifier des dégustateurs (contraste : elle mesure la sensibilité des sujets)'
 - id: lawless2004
   citation: Lawless, H. T., Schlake, S., Smythe, J., Lim, J., Yang, H., Chapman, K. & Bolton, B. (2004). Metallic taste and retronasal smell. Chemical Senses, 29(1), 25–33.
@@ -266,26 +272,30 @@ references:
   doi_ou_url: https://brewup.eu/ebc-analytica/beer/bitterness-of-beer-im/9.8
   role: contraste
   statut_verification: vérifiée sur résumé ou source secondaire
-  verifie_le: '2026-10-19'
-  verifie_sur: extrait d’index (pages de l’EBC et de BrewUp, mise à jour de 2020) ; texte de la méthode par source secondaire (copie tierce) (statut repris de docs/bibliographie-par-type.md#groupe-gout)
-  reprend: les unités d’amertume de la bière, mesure associée indirecte
+  verifie_le: '2026-11-15'
+  verifie_sur: 'notice de l’éditeur seulement : résumé de la méthode 9.8 lu le 2026-11-15 sur le site de l’EBC (« bitter substances in beer, which are mainly iso-α-acids » ; mise à jour de 2020, essai sur
+    des bières houblonnées à cru) ; texte de la méthode non lu'
+  reprend: les unités d’amertume de la bière, mesure associée indirecte, qui dosent surtout les iso-alpha-acides
   ne_reprend_pas: toute borne de région
 - id: asbc_beer_23a
   citation: ASBC. Beer-23A, Beer Bitterness — Bitterness Units (International Method). American Society of Brewing Chemists.
   doi_ou_url: https://www.asbcnet.org/Methods/BeerMethods/pages/Beer-23-MasterMethod.aspx
   role: contraste
   statut_verification: vérifiée sur résumé ou source secondaire
-  verifie_le: '2026-10-19'
-  verifie_sur: extrait d’index (page « Master the Method » de l’ASBC) ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
-  reprend: la même méthode internationale, côté ASBC
+  verifie_le: '2026-11-15'
+  verifie_sur: 'notice de l’éditeur seulement : page « Master the Method » de l’ASBC lue le 2026-11-15 (extrait à l’isooctane de la bière acidifiée, absorbance à 275 nm multipliée par 50 ; mesure tout ce
+    qui se dissout dans l’isooctane et absorbe à 275 nm ; pour les bières houblonnées à cru, une autre méthode, Beer-23F, « may be a more appropriate method for assessing the perceived bitterness ») ; texte
+    de la méthode non lu'
+  reprend: 'la même méthode internationale, côté ASBC : principe de la mesure et limites dites par l’éditeur'
   ne_reprend_pas: toute borne de région
 etat_de_l_art: 'Chez les mammifères, des cellules distinctes, chacune avec ses récepteurs, détectent les cinq saveurs de base, dont l’amer (Chandrashekar et al., 2006 [[chandrashekar2006]] ; travail surtout
-  mené chez la souris) ; la notion même de saveur de base est discutée (Erickson, 2008 [[erickson2008]]), et l’amer est donc un type à une dimension, pas une coordonnée d’une décomposition. L’amer varie
-  beaucoup d’une personne à l’autre (Bartoshuk et al., 1994 [[bartoshuk1994]]), et comparer les intensités vécues par deux personnes est un problème de méthode (Bartoshuk, 2000 [[bartoshuk2000]]). Le test
-  du nez pincé sépare la saveur de l’odeur rétronasale (Lawless et al., 2004 [[lawless2004]]). Les solutions de caféine d’ISO 3972:2011 [[iso3972]] servent de repères ; les échelles de jury (Green et al.,
-  1993 [[green1993lms]] ; Green et al., 1996 [[green1996lms]] ; Bartoshuk et al., 2004 [[bartoshuk2004]]) ne sont pas des mesures. Dans le vin, l’éthanol et le pH changent l’amertume (Fontoin et al., 2008
-  [[fontoin2008]]) ; à faible degré, l’éthanol est surtout amer (Nolden et Hayes, 2015 [[nolden_hayes2015]]). Aucune source lue ne teste l’accord entre observateurs sur des crans d’amer à repères égaux.
-  Détail : docs/bibliographie-par-type.md#groupe-gout.'
+  mené chez la souris), mais la notion même de saveur de base est discutée (Erickson, 2008 [[erickson2008]]) : l’amer est ici un type à une dimension, pas une coordonnée de toute saveur (résumés lus). L’amer
+  varie beaucoup d’une personne à l’autre (Bartoshuk et al., 1994 [[bartoshuk1994]]), et comparer les intensités vécues par deux personnes est un problème de méthode (Bartoshuk, 2000 [[bartoshuk2000]])
+  (résumés lus). Le test du nez pincé sépare la saveur de l’odeur qui monte de la bouche vers le nez (Lawless et al., 2004 [[lawless2004]]) ; dans le vin, l’éthanol et le pH changent l’amertume (Fontoin
+  et al., 2008 [[fontoin2008]]), et à faible degré l’éthanol est surtout amer (Nolden et Hayes, 2015 [[nolden_hayes2015]]) (résumés lus). Pour situer l’amer, il existe des solutions de caféine normalisées,
+  prises ici comme repères de région (ISO 3972:2011 [[iso3972]], aperçu public lu), des échelles de jugement d’un jury sans référence physique (Green et al., 1993 [[green1993lms]] ; Green et al., 1996 [[green1996lms]]
+  ; Bartoshuk et al., 2004 [[bartoshuk2004]] ; résumés lus), et les unités d’amertume de la bière, qui dosent surtout des composés du houblon (EBC 9.8 [[ebc_9_8]] ; ASBC Beer-23A [[asbc_beer_23a]] ; notices
+  de l’éditeur seulement). Aucune source lue ne teste l’accord entre observateurs sur des crans d’amer à repères égaux. Détail : docs/bibliographie-par-type.md#groupe-gout.'
 etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-gout
 axiomes:
 - conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
@@ -310,50 +320,34 @@ enonces_testables:
   epreuve: null
 cq_couvertes: CQ1, CQ2
 statut: candidat
-statut_note: 'en préparation (2026-10-20) : fiche créée en série 78, sans exemplaire ni épreuve d’accord ; tous les champs rédigés sont à relire'
+statut_note: 'fiche relue en langage courant (relecture explicative, 2026-11-15) ; pas d’exemplaire : quatre repères de région, trois solutions préparées (dont une provisoire) et un repère à caler'
 statut_epistemique: non éprouvé
 introduit_en: '2.8'
 modifie_en: []
 remplace_par: []
 source_de_la_fiche: 'création du type : décision de l’éditeur du projet (2026-10-19, décision 5a ; 2026-10-20, série 76, premier lot, proposition « Goût », 2.2 à 2.4 et 8.2) ; famille « Goût (en bouche)
   » : décision de l’éditeur du projet (2026-10-19, décision 1) ; contenu repris de la proposition « Goût » (docs/famille-gout-proposition.md (document de travail, non publié), sections 2, 5, 6 et 7) ; le
-  reste (porteur, crans, repères, facettes critiques, classement des mesures, rédaction) : choix de relecture (2026-10-19 et 2026-10-20) ; fiche créée le 2026-10-20 (série 78)'
+  reste (porteur, crans, repères, facettes critiques, classement des mesures, rédaction) : choix de relecture (2026-10-19 et 2026-10-20) ; fiche créée le 2026-10-20 (série 78) ; relecture explicative le
+  2026-11-15 (choix de relecture (2026-11-15))'
 manques:
-- 'exemplaires : aucun. Décision 5 de l’éditeur du projet (2026-10-19) : pas d’exemplaire en V1 pour le goût, des repères de région à la place. Si des exemples sont cherchés plus tard, ce seront des objets publics seulement (produits identifiés, sans marque citée), jamais des objets privés'
-- 'épreuve d’accord E1 à faire : portions du même lot, au même moment, repères de région goûtés avant de juger (proposition « Goût », section 6, point 2)'
-- 'repère du cran « fort » à caler (aucune solution d’ISO 3972 plus forte que 0,27 g/l n’est à goûter) ; cran « net » provisoire (0,27 g/l, à un facteur 1,4 du cran « à peine perceptible », marqué `doute: oui`), à confirmer avant E1 (choix de relecture (2026-11-02), série 90)'
+- 'exemplaires : aucun ; pour le goût, pas d’exemplaire en V1, des repères de région à la place (décidé le 2026-10-19) ; si des exemples sont cherchés plus tard, ce seront des objets publics seulement (produits
+  identifiés, sans marque citée), jamais des objets privés'
+- 'épreuve d’accord E1 à faire : portions du même lot, au même moment, repères de région goûtés avant de juger'
+- 'repère du cran « fort » à caler (aucune solution d’ISO 3972 plus forte que 0,27 g/l n’est à goûter) ; cran « net » provisoire (0,27 g/l, à un facteur 1,4 du cran « à peine perceptible », marqué `doute:
+  oui`), à confirmer avant E1 (choix de relecture (2026-11-02))'
 bloque_par: []
-a_relire:
-- label_fr
-- label_en
-- labels_alternatifs
-- labels_alternatifs_en
-- strate
-- définition
-- question_attentionnelle
-- contre_exemple
-- grandeur_physique_homonyme
-- mesure
-- mode_de_presentation
-- conditions_critiques
-- note_conditions
-- porteur
-- note_porteur
-- condition_NA
-- espace_valeurs
-- note_echelle
-- identite
-- relations
-- references
-- etat_de_l_art
-- nanay
-- transfert
-- enonces_testables
-- statut_note
+a_relire: []
 remarque:
 - 'série 78 bis (choix de relecture (2026-10-20), corrections de relecture) : nom de la méthode `ebc_9_8` : « méthode internationale (IM) commune » ; glose de « rétronasale » à la première occurrence ; à relire'
 - 'série 90 (choix de relecture (2026-11-02), suivant la décision de l’éditeur du projet (2026-11-02) : « B : les repères de région (solutions ISO 3972, alun 1 g/l) ») : repères calés sur ISO 3972 (aperçu public relu le 2026-11-02), champ `preparation` ajouté ; « fort » à caler ; à relire'
 relecture_explicative:
-  date: null
-  champs: []
+  date: '2026-11-15'
+  champs:
+  - 'label_fr, label_en, labels_alternatifs, labels_alternatifs_en, strate, définition, question_attentionnelle, contre_exemple, mode_de_presentation, conditions_critiques, note_conditions, porteur, condition_NA,
+    espace_valeurs, identite, relations, nanay, transfert, enonces_testables : relus en langage courant le 2026-11-15, validés tels quels (choix de relecture (2026-11-15)) ; E1 : accord à une région près,
+    l’échelle ayant quatre régions ; repères : solutions d’ISO 3972 gardées comme choisies le 2026-11-02, cran « net » provisoire et cran « fort » à caler'
+  - 'grandeur_physique_homonyme et mesure (les unités d’amertume dosent surtout les iso-alpha-acides, d’après les pages publiques de l’EBC et de l’ASBC ; ce qui ne s’appuyait que sur le texte payant, connu
+    par une copie tierce, est retiré ; raisons des mesures non retenues en mots simples ; une phrase de la synthèse dit pourquoi les échelles de jury et ISO 3972 ne sont pas des mesures associées), references
+    (statuts de lecture des deux méthodes de la bière : notice de l’éditeur seulement ; ISO 3972 relue sur la page de l’ISO), etat_de_l_art (cinq phrases, avec le statut de lecture de chaque source), note_porteur,
+    note_echelle (renvois internes et mentions de rôle remplacés par les dates de décision), statut_note, manques : corrigés le 2026-11-15 (choix de relecture (2026-11-15))'
   a_reconfirmer: []

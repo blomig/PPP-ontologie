@@ -14,6 +14,8 @@ Les champs marqués — ne s’appliquent pas à tous les patrons.
 
 *2026-10-19 (série 72 bis, décision de l’éditeur du projet ; spec §9.7 P, point 7)* : rappel, dans le patron, de la règle permanente : état de l’art et échelles de mesure existantes, avec sources et statut de lecture. Pour un type, la rubrique `mesure` (gabarit : `docs/proposition-rubrique-mesure.md`) et `references` y satisfont.
 
+*2026-11-15 (série 112, demande acceptée, choix de relecture (2026-11-15) ; amendement de la ceinture, §0.2 : échelles et régions, bases de dépendance ; le noyau ne change pas)* : deux champs optionnels. (1) `espace_valeurs.choix_multiples: oui` : sur une échelle nominale, les régions peuvent se combiner sur un même porteur ; absent ou `non`, un seul choix. Justification : `ppp:odourCharacter` notait déjà en mots qu’une odeur mêlée se dit par plusieurs assertions, une par caractère net ; le champ le dit en clair à la machine, sans changer le patron P1 (une région par assertion). (2) `condition_NA_region_base: <clé>` : la clé de la région de la base qui rend le type sans objet, la base étant déjà citée dans `base_dependance.types`. Justification : `condition_NA` disait cette région seulement dans une phrase (« intensité `noOdour` ») ; le champ la rend lisible et vérifiable. Le champ est écrit à côté de `condition_NA`, et non dessous (`condition_NA.region_base`), parce que `condition_NA` est une phrase affichée et traduite : en faire une liste de clés changerait son affichage et sa traduction (choix par défaut de la série 112, à confirmer). Renseignés : `ppp:odourCharacter` (les deux), `ppp:perceivedPitch` (`noPitch` de `ppp:pitchClarity`). `fiches/compte.py` ne contrôle pas le format des champs du patron : rien n’y est ajouté.
+
 *v2.8 (2026-10-12, série 34, décisions de l’éditeur du projet)* : champ optionnel `labels_alternatifs_en` (T38 : labels alternatifs anglais, affichés et cherchables sur le site anglais ; pendant de `labels_alternatifs`, en français) ; `conditions_critiques` : `distance` et `angle` déclarables par un type à deux sens quand ils sont critiques à la vue (spec §9.7 H, règle 3, exception ; règle 4 : « sans objet » n’est pas « inconnu »).
 
 *v2.6 (2026-10-11, série 7)* : champ optionnel `labels_regions_propres` d’un contraste spécialisé (spec §9.7 B, T34) ; renvoi de `etat_de_l_art` au format `docs/bibliographie-par-type.md#groupe-…` et appel des références par `[[id]]` (spec §9.7 P) ; usage des images (`usage`, `lien_externe`, spec X16, Q15).
@@ -76,11 +78,13 @@ arité:              # P2
 dimension_comparee: # P2 contraste : un spécialisé (ex. ppp:lightnessContrast) fixe ici l’id d’un type P1 ; le général (ppp:perceptualContrast) la laisse vide, chaque assertion déclare alors ppp:comparedDimension (spec §9.7 B)
 # ce_qui_est_saillant : réservé hors V1 (spec §9.9), ne pas remplir
 condition_NA:       # quand la carte d’identité coche « non applicable » (sans décision de calendrier)
+condition_NA_region_base:  # optionnel (2026-11-15) : la clé de la région de la base qui rend le type sans objet (ex. `noOdour` de ppp:odourIntensity pour ppp:odourCharacter) ; le type qui la porte est cité dans base_dependance.types ; absent : aucune région de la base ne le rend sans objet
 
 espace_valeurs:
   echelle:          nominale | ordinale | intervalle | ratio   # nominale : régions = catégories
   sens_croissant:   # ordinale : du rang 1 vers le rang n, ce qui augmente
   voisinages:       # nominale : voisinages déclarés, sinon aucune adjacence
+  choix_multiples:  # optionnel (2026-11-15), nominale seulement : oui quand les régions ne sont pas ordonnées et peuvent se combiner sur un même porteur (une odeur qui rappelle à la fois le cuir et la fumée), chaque région dans sa propre assertion ; absent ou non : un seul choix
   numerique:        non | oui (unité / jauge)
   regions:
     - cle:          # anglais, lowerCamelCase, passe le test de neutralité, jamais réemployée
