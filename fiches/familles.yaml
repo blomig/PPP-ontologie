@@ -139,7 +139,7 @@ familles:
     # Proposition et décisions : docs/famille-gout-proposition.md (document de travail, non publié), sections 2, 3 et 8.
     a_relire: []
     relecture_explicative: {date: "2026-11-15", champs: [introduction]}   # série 113 bis (2026-11-15) : introduction relue et réécrite en phrases courtes, FR et EN, choix de relecture (2026-11-15)
-    types: [ppp:bitterness, ppp:oralPungency, ppp:astringency, ppp:hardnessInMouth, ppp:oralThickness, ppp:flavourComplexity, ppp:flavourIntensity, ppp:flavourBalance, ppp:tastePersistence]   # série 78 : premier lot et lot CIEL, en préparation ; bitterness publiée en série 113 (2026-11-15) ; introduction : dernière phrase mise à jour (série 113), puis relue en série 113 bis (choix de relecture (2026-11-15))
+    types: [ppp:bitterness, ppp:oralPungency, ppp:astringency, ppp:hardnessInMouth, ppp:oralThickness, ppp:flavourComponentCount, ppp:flavourIntensity, ppp:flavourDominance, ppp:tastePersistence]   # série 78 : premier lot et lot CIEL, en préparation ; bitterness publiée en série 113 (2026-11-15) ; introduction : dernière phrase mise à jour (série 113), puis relue en série 113 bis (choix de relecture (2026-11-15))
 
 hors_registre:
   - cle: temps

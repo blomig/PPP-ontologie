@@ -123,8 +123,8 @@ relations:
   cible: ppp:astringency
   note: 'une astringence forte fait juger forte toute la portion : on juge l’ensemble, pas l’astringence seule'
 - type: confusableWith
-  cible: ppp:flavourComplexity
-  note: 'une portion forte paraît « riche » : la complexité jugée va avec la force ; on juge ici une force, pas un compte'
+  cible: ppp:flavourComponentCount
+  note: 'une portion forte est dite « riche » : ce que des dégustateurs appellent « complexité » va avec la force ; on juge ici une force, pas un compte'
 ontoClean:
   rigidite: +R
   identite_propre: +I

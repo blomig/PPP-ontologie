@@ -1,16 +1,12 @@
-# Fiche de type PPP — ppp:flavourComplexity — format : PPP_FicheType.md (spec v2.8)
+# Fiche de type PPP — ppp:flavourComponentCount — format : PPP_FicheType.md (spec v2.8)
 # Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_base, note_porteur, note_echelle, note_label_alternatif, mesure (rubrique proposée en série 53, docs/proposition-rubrique-mesure.md).
 # Série 78 (2026-10-20) : fiche en préparation de la famille « Goût (en bouche) », rédigée sans exemplaire à partir de la proposition « Goût » ; aucun champ n’est encore relu.
-id: ppp:flavourComplexity
-label_fr: nombre de composantes
-label_en: number of components
-labels_alternatifs:
-- complexité
-labels_alternatifs_en:
-- complexity
-note_label_alternatif: '« complexité » (EN complexity) est un label alternatif d’atelier, marqué comme tel : en dégustation, le mot porte une valence (A10), et la complexité y est vue comme « désirable
-  » (Parr et al., 2011 [[parr2011]]). « Complexe » et « riche » restent au lexique d’atelier (§9.7 K). Homonyme : la complexité globale reste une grille d’analyse et n’est pas un type (spec §9.10) ; ce
-  comptage ne la réintroduit pas.'
+id: ppp:flavourComponentCount
+label_fr: nombre de composantes distinguées
+label_en: number of distinguished components
+labels_alternatifs: []
+labels_alternatifs_en: []
+note_label_alternatif: '« Complexité », « complexe » ou « riche », employés en dégustation, jugent plutôt qu’ils ne décrivent : le mot y désigne une qualité « désirable » (Parr et al., 2011 [[parr2011]]), alors que la fiche décrit seulement combien de composantes on distingue. Ces mots ne sont donc pas des labels alternatifs, parce qu’aucun label ne doit qualifier en bien ou en mal (règle de neutralité de la spécification) ; ils vont au lexique d’atelier, tenu hors des fiches de type, qui relie les mots du travail aux ids. Homonyme : la complexité globale n’est pas un type, mais une grille d’analyse qui croise plusieurs types ; ce comptage ne la réintroduit pas.'
 patron: P1
 sorte: qualité
 sous_sorte: —
@@ -139,14 +135,11 @@ espace_valeurs:
     repere: on sent qu’il y en a plus, mais on ne peut plus les séparer ni les compter
     exemplaires: []
 note_echelle: 'comptage ordinal à crans bas (proposition « Goût », 2.8.1 ; clé `beyondCount` reprise de `elementaryShapeCount`) : on ne distingue guère plus de trois ou quatre composantes dans un mélange, même entraîné (Livermore et Laing, 1996 [[livermore_laing1996]] ; Jinks et Laing, 1999 [[jinks_laing1999a]] [[jinks_laing1999b]] ; Jinks et Laing, 2001 [[jinks_laing2001]] ; limite attribuée à Laing et Francis, 1989 [[laing_francis1989]], par Jinks et Laing, 2001). Au-delà de trois, un cran de plus ne serait pas partagé : le dernier cran dit qu’on ne compte plus. Série 90 (choix de relecture (2026-11-02), suivant la décision de l’éditeur du projet (2026-11-02) : « B : les repères de région (solutions ISO 3972, alun 1 g/l) ») : le cran « une » est calé sur la solution de saccharose à 5,76 g/l d’ISO 3972 [[iso3972]] ; le cran « deux » reste à caler (un mélange n’est pas une solution de la norme) ; ce qui compte comme « composante » est à fixer aussi.'
-identite: 'Un compte de composantes distinguées dans la portion, pas une force ni un caractère : pas l’intensité d’ensemble (intensité (goût)), pas la longueur, pas l’arôme en bouche (en réserve, qui nomme
-  un caractère au lieu de compter). Analogie déclarée, sans relation, avec les types de comptage d’autres sens, `ppp:hueCount` (nombre de teintes) et `ppp:elementaryShapeCount` (nombre de formes élémentaires)
-  : même forme d’espace de valeurs (un compte ordinal à crans bas, borné par ce qu’on saisit d’un coup), autre porteur et autre sens (Q13, option c). Ce n’est pas la complexité globale, qui reste une grille
-  d’analyse (§9.10).'
+identite: 'Un compte de composantes distinguées dans la portion, pas une force ni un caractère : pas l’intensité d’ensemble (intensité (goût)), pas la longueur, pas l’arôme en bouche (en réserve, qui nomme un caractère au lieu de compter). Analogie déclarée, sans relation, avec les types de comptage d’autres sens, le nombre de teintes et le nombre de formes élémentaires : même forme d’espace de valeurs (on compte par petits crans, jusqu’à ce qu’on ne puisse plus tout distinguer d’un coup), autre porteur et autre sens ; réunir ces types d’un sens à l’autre n’est pas décidé avant les épreuves d’accord. Ce n’est pas la complexité globale, qui reste une grille d’analyse et non un type. Ancien nom : `flavourComplexity`, remplacé par un nom qui décrit ce qu’on note (un compte de composantes distinguées) plutôt que par un mot qui porte une valeur.'
 relations:
 - type: confusableWith
   cible: ppp:tastePersistence
-  note: 'la complexité jugée va avec la persistance : une portion dont la trace dure paraît « riche » ; on compte ce qui se distingue à la phase déclarée, pas combien de temps cela dure'
+  note: 'ce que des dégustateurs appellent « complexité » va avec la persistance : une portion dont la trace dure est dite « riche » ; on compte ce qui se distingue à la phase déclarée, pas combien de temps cela dure'
 ontoClean:
   rigidite: +R
   identite_propre: +I
@@ -264,7 +257,7 @@ references:
   statut_verification: vérifiée sur résumé ou source secondaire
   verifie_le: '2026-10-20'
   verifie_sur: résumé et extraits (introduction) (statut repris de docs/bibliographie-par-type.md#groupe-gout)
-  reprend: 'la complexité est vue en dégustation comme « désirable » : le mot porte une valence (label d’atelier seulement)'
+  reprend: 'la complexité est vue en dégustation comme « désirable » : le mot porte une valeur (lexique d’atelier seulement, pas un label)'
   ne_reprend_pas: les représentations selon l’expertise
 - id: goodstein2014
   citation: 'Goodstein, E. S., Bohlscheid, J. C., Evans, M. & Ross, C. F. (2014). Perception of flavor finish in model white wine: A time-intensity study. Food Quality and Preference, 36, 50–60.'
@@ -344,15 +337,14 @@ references:
 etat_de_l_art: 'On ne distingue guère plus de trois ou quatre composantes dans un mélange d’odeurs, même entraîné (Livermore et Laing, 1996 [[livermore_laing1996]]) ; avec seize odorants, l’identification
   tombe au hasard, et l’analyse se limiterait à « environ trois composantes » (Jinks et Laing, 1999 [[jinks_laing1999a]] [[jinks_laing1999b]]) ; un mélange est perçu en partie comme un tout (Jinks et Laing,
   2001 [[jinks_laing2001]], qui attribuent la limite à Laing et Francis, 1989 [[laing_francis1989]]). En bouche, trois saveurs au plus sont identifiées (Laing et al., 2002 [[laing2002]]), et deux composantes
-  dans des mélanges de quatre à six odeurs et saveurs (Marshall et al., 2006 [[marshall2006]]). Des consommateurs lient la complexité à la persistance, à la force et au nombre d’arômes (Meillon et al.,
-  2010 [[meillon2010]]), ou à l’harmonie plutôt qu’à la séparabilité (Schlich et al., 2015 [[schlich2015]]) ; l’expertise tient surtout au vocabulaire (Hughson et Boakes, 2002 [[hughson_boakes2002]]), et
-  la complexité y est vue comme « désirable » (Parr et al., 2011 [[parr2011]]). Dans un vin modèle à quatre composés, l’écart entre les notes s’efface (Goodstein et al., 2014 [[goodstein2014]]). La CPG-O
+  dans des mélanges de quatre à six odeurs et saveurs (Marshall et al., 2006 [[marshall2006]]). Ce que des consommateurs appellent « complexité » va avec la persistance, la force et le nombre d’arômes (Meillon et al.,
+  2010 [[meillon2010]]), ou avec ce qu’ils nomment « harmonie » plutôt qu’avec la séparabilité (Schlich et al., 2015 [[schlich2015]]) ; l’expertise tient surtout au vocabulaire (Hughson et Boakes, 2002 [[hughson_boakes2002]]), et le mot « complexité » y désigne une qualité « désirable » (Parr et al., 2011 [[parr2011]]). Dans un vin modèle à quatre composés, l’écart entre les notes s’efface (Goodstein et al., 2014 [[goodstein2014]]). La CPG-O
   compte des composés, pas des composantes perçues (Delahunty et al., 2006 [[delahunty2006]]). Aucune source lue ne teste l’accord entre observateurs sur un compte de composantes en bouche à crans bas.
   Détail : docs/bibliographie-par-type.md#groupe-gout.'
 etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-gout
 axiomes:
 - conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
-  validation: Toute assertion de type ppp:flavourComplexity a exactement un ppp:about.
+  validation: Toute assertion de type ppp:flavourComponentCount a exactement un ppp:about.
 - conceptuel: Les 4 régions sont deux à deux disjointes et totalement ordonnées par rang.
   validation: Les 4 ppp:Region de l’échelle du type ont des ppp:rank distincts, de 1 à 4 ; une assertion a au plus un ppp:inRegion.
 - conceptuel: Une région de cet espace n’est pas un sous-type du type.

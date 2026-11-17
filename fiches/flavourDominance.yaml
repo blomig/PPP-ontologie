@@ -1,16 +1,12 @@
-# Fiche de type PPP — ppp:flavourBalance — format : PPP_FicheType.md (spec v2.8)
+# Fiche de type PPP — ppp:flavourDominance — format : PPP_FicheType.md (spec v2.8)
 # Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_base, note_porteur, note_echelle, note_label_alternatif, mesure (rubrique proposée en série 53, docs/proposition-rubrique-mesure.md).
 # Série 78 (2026-10-20) : fiche en préparation de la famille « Goût (en bouche) », rédigée sans exemplaire à partir de la proposition « Goût » ; aucun champ n’est encore relu.
-id: ppp:flavourBalance
+id: ppp:flavourDominance
 label_fr: composante dominante
 label_en: dominant component
-labels_alternatifs:
-- équilibre
-labels_alternatifs_en:
-- balance
-note_label_alternatif: '« équilibre » (EN balance) est un label alternatif d’atelier, marqué comme tel ; l’id `flavourBalance` est gardé pour ne pas changer d’id d’un document à l’autre. « Harmonieux »,
-  « bien équilibré », « déséquilibré » sont des jugements : ils ne sont ni des régions ni des labels alternatifs, parce qu’ils qualifient une région en bien ou en mal (A10) ; ils vont au lexique d’atelier
-  (§9.7 K), qui renvoie « équilibré » au type, jamais à la région `noneDominant`.'
+labels_alternatifs: []
+labels_alternatifs_en: []
+note_label_alternatif: '« Équilibre », « équilibré », « harmonieux », « bien équilibré » ou « déséquilibré », employés en dégustation, jugent plutôt qu’ils ne décrivent : ils disent si l’ensemble est bon ou mauvais, alors que la fiche décrit seulement quelle composante l’emporte. Ces mots ne sont donc ni des labels alternatifs ni des régions, parce qu’aucun label, aucune région ni aucune définition ne doit qualifier en bien ou en mal (règle de neutralité de la spécification) ; ils vont au lexique d’atelier, tenu hors des fiches de type, qui relie les mots du travail aux ids et renvoie « équilibré » au type, jamais à la région « aucune dominante perçue ».'
 patron: P1
 sorte: qualité
 sous_sorte: —
@@ -228,9 +224,7 @@ espace_valeurs:
     repere: aucune composante ne l’emporte sur les autres
     exemplaires: []
 note_echelle: 'une seule dimension, nominale (choix de relecture, 2026-10-20, série 77 ter ; C7) : la composante perçue comme la plus forte, ou aucune. La dominance est ici la force relative perçue, pas la dominance de la TDS, qui est attentionnelle (Pineau et al., 2009 [[pineau2009]], dont la définition complète est connue par Visalli et Galmarini, 2024 [[visalli2024]]). Le degré de dominance (légère ; nette ; forte) n’est pas retenu : il part en réserve, comme type distinct éventuel, sans id. Aucun voisinage n’est déclaré entre les valeurs. Les repères sont des solutions goûtées seules pour reconnaître chaque composante, pas des exemplaires ; la liste des valeurs doit être fixée avant E1 et contenir l’arôme (Clark et Lawless, 1994 [[clark_lawless1994]]). Série 90 (choix de relecture (2026-11-02), suivant la décision de l’éditeur du projet (2026-11-02) : « B : les repères de région (solutions ISO 3972, alun 1 g/l) ») : les repères des cinq saveurs sont les solutions du tableau 3 d’ISO 3972:2011 [[iso3972]], goûtées seules ; celui de l’astringence, l’alun à 1 g/l (Lee et Lawless, 1991 [[lee_lawless1991]]), forme à déclarer. Le piquant reste à caler ; l’arôme et « aucune » n’ont pas de solution.'
-identite: 'Laquelle des composantes l’emporte, pas une force d’ensemble (intensité (goût)) ni la force d’une qualité (types du premier lot) ; pas un rapport de composition (le rapport °Brix / acidité n’en
-  est pas une définition) ; pas la composante qui attire l’attention (dominance de la TDS ; notion réservée hors V1, spec §9.9) ; pas l’agrément. Les valeurs ne renvoient pas à des types : le sucré, l’acide, le salé,
-  l’umami et l’arôme en bouche sont encore en réserve.'
+identite: 'Laquelle des composantes l’emporte, pas une force d’ensemble (intensité (goût)) ni la force d’une qualité prise à part (l’amer, le piquant…) ; pas un rapport de composition (le rapport °Brix / acidité n’en est pas une définition) ; pas l’agrément. Ce n’est pas non plus la dominance de la TDS (dominance temporelle des sensations) : la fiche dit quelle composante l’emporte dans ce qu’on a en bouche, alors que la TDS relève quelle sensation retient l’attention à chaque instant ; ce qui retient l’attention est tenu hors du périmètre de la première version de la spécification. Les valeurs ne renvoient pas à des types : le sucré, l’acide, le salé, l’umami et l’arôme en bouche sont encore en réserve. Ancien nom : `flavourBalance`, remplacé par un nom qui décrit ce qu’on note (laquelle des composantes l’emporte) plutôt que par un mot qui porte un jugement.'
 relations:
 - type: confusableWith
   cible: ppp:flavourIntensity
@@ -439,7 +433,7 @@ references:
   verifie_sur: 'résumé (OpenAlex) relu le 2026-11-02 : « using 1 g/l alum as a reference material, since it is relatively low in perceived bitterness and sourness, but produces pronounced drying, roughing, puckery/drawing sensations » ; la forme de l’alun et le solvant ne sont pas précisés ; texte non lu'
   reprend: l’alun à 1 g/l comme matériau de référence de l’astringence, goûté seul
   ne_reprend_pas: les courbes temps-intensité comme mesure
-etat_de_l_art: 'Peynaud et Blouin (2022) [[peynaud2022]] consacrent un chapitre aux « Interférences et équilibres des saveurs », dont la définition de l’équilibre n’est pas lue (non vérifié). Dans un mélange,
+etat_de_l_art: 'Peynaud et Blouin (2022) [[peynaud2022]] consacrent un chapitre aux « Interférences et équilibres des saveurs », dont la définition du mot « équilibre » n’est pas lue (non vérifié). Dans un mélange,
   les saveurs se renforcent, s’additionnent ou se suppriment selon l’intensité (Keast et Breslin, 2003 [[keast_breslin2003]]) ; dans le vin blanc, l’acide supprime le sucré plus que l’inverse (Zamora et
   al., 2006 [[zamora2006]]) ; l’éthanol et le pH changent l’astringence et l’amertume (Fontoin et al., 2008 [[fontoin2008]]) ; à faible degré, l’éthanol est surtout amer, à fort degré surtout brûlant (Nolden
   et Hayes, 2015 [[nolden_hayes2015]]). La TDS définit l’attribut dominant comme celui qui attire l’attention, pas forcément le plus intense (Pineau et al., 2009 [[pineau2009]], cité par Visalli et Galmarini,
@@ -448,7 +442,7 @@ etat_de_l_art: 'Peynaud et Blouin (2022) [[peynaud2022]] consacrent un chapitre 
 etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-gout
 axiomes:
 - conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
-  validation: Toute assertion de type ppp:flavourBalance a exactement un ppp:about.
+  validation: Toute assertion de type ppp:flavourDominance a exactement un ppp:about.
 - conceptuel: Une région de cet espace n’est pas un sous-type du type.
   validation: Aucune ppp:Region n’est sujet ou objet de ppp:specializes.
 nanay: Oui — passer de « je goûte ce vin » à « je regarde quelle composante l’emporte » change la description (on compare les composantes entre elles au lieu de les suivre une à une).

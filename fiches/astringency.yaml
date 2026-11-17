@@ -26,8 +26,7 @@ grandeur_physique_homonyme: 'la teneur en polyphénols totaux (« tanins ») d�
   « mesure ».'
 mesure:
   etat: methodes
-  synthese: 'Une mesure associée indirecte existe pour le thé seulement : les polyphénols totaux par la méthode au réactif de Folin-Ciocalteu (ISO 14502-1). Les polyphénols totaux ne sont pas l’astringence
-    perçue. Les mesures physiques (frottement, précipitation des protéines salivaires) sont citées par une revue, mais non lues. Aucune méthode proche n’est connue (recherche du 2026-10-19).'
+  synthese: 'Une mesure associée indirecte existe pour le thé seulement : les polyphénols totaux par la méthode au réactif de Folin-Ciocalteu (ISO 14502-1). Les polyphénols totaux ne sont pas l’astringence perçue. Des mesures de laboratoire (frottement, indice de précipitation des protéines de la salive) existent dans la recherche, sans norme ; une revue lue en résumé juge qu’aucune ne suffit seule à prédire l’astringence perçue (Wang et al., 2024). Aucune méthode proche n’est connue : aucune ne se rapporte à une référence physique normalisée (recherches du 2026-10-19 et du 2026-11-17).'
   regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
     une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
   methodes:
@@ -51,19 +50,18 @@ mesure:
     raison: jugements d’un jury sans référence physique ; à reprendre dans le protocole de l’épreuve d’accord (E1) ; le guide ASTM suit une seule sensation après une seule prise, ce qui exclut les prises
       répétées
     statut_lecture: extrait d’index (page de l’ASTM) ; résumés (Lee et Lawless, 1991 ; Pineau et al., 2009)
-  - nom: mesures physiques (frottement, précipitation des protéines salivaires)
+  - nom: mesures de laboratoire (frottement, indice de précipitation des protéines de la salive)
     references:
     - bajec2008
-    raison: 'citées par une revue, non lues : non vérifié'
-    statut_lecture: non vérifié (revue lue en résumé seulement)
+    - wang2024astr
+    raison: 'méthodes de recherche sans norme ni référence physique normalisée ; chacune ne suit qu’un mécanisme, et aucune ne suffit seule à prédire l’astringence perçue (Wang et al., 2024, résumé)'
+    statut_lecture: 'résumés seulement (Bajec et Pickering, 2008 ; Wang et al., 2024, relu le 2026-11-17) ; les méthodes elles-mêmes ne sont pas lues'
 modalites:
 - bouche
 mode_de_presentation: échantillon
 conditions_critiques:
 - avant
-note_conditions: 'règle 12 (spec §9.7 H) : `avant` est critique, parce que l’astringence s’accumule d’une gorgée à l’autre (Green, 1993 [[green1993astr]]) ; on suit l’ordre des gorgées avec cette facette.
-  `moment` n’est pas critique (proposition « Goût », 5.1). `nez` n’est pas critique (ce n’est pas une saveur) ; `temperature_bouchee` est à éprouver. `duree` : les sous-qualités se notent pendant cinq à
-  six minutes et décroissent à peu près de façon exponentielle (Lee et Lawless, 1991 [[lee_lawless1991]]) : le temps entre la prise et le jugement est déclaré. La salive va en note d’épisode.'
+note_conditions: 'règle 12 (spec §9.7 H) : `avant` est critique, parce que l’astringence s’accumule d’une gorgée à l’autre (Green, 1993 [[green1993astr]]) ; on suit l’ordre des gorgées avec cette facette. `moment` n’est pas critique. `nez` n’est pas critique (ce n’est pas une saveur) ; `temperature_bouchee` est à éprouver. `duree` : les sous-qualités se notent pendant cinq à six minutes et décroissent à peu près de façon exponentielle (Lee et Lawless, 1991 [[lee_lawless1991]]) : le temps entre la prise et le jugement est déclaré. La salive va en note d’épisode.'
 porteur: le produit identifié dont on goûte une portion (nature, origine, lot, date de production ou d’ouverture, conservation, concentration pour une boisson préparée) ; la portion goûtée n’est pas le
   porteur
 note_porteur: même porteur que les types de saveur (proposition « Goût », section 6 ; choix de relecture du 2026-10-19, 8.1 point 4), bien que l’astringence soit un toucher et qu’elle se sente sur la bouche
@@ -99,13 +97,13 @@ espace_valeurs:
     label_fr: à peine perceptible
     label_en: faint
     rang: 2
-    repere: aucun repère fixé (à choisir avant l’épreuve, par dilution de la solution d’alun du cran « nette » ?)
+    repere: 'aucun repère fixé : à choisir avant l’épreuve d’accord ; une dilution de la solution d’alun du cran « nette » est une piste, non éprouvée'
     exemplaires: []
   - cle: distinct
     label_fr: nette
     label_en: distinct
     rang: 3
-    repere: 'une solution d’alun à 1 g/l dans l’eau neutre, vers 20 °C : matériau de référence peu amer et peu acide mais nettement asséchant (Lee et Lawless, 1991) ; cran provisoire, à caler avant E1 (« forte » reste possible)'
+    repere: 'une solution d’alun à 1 g/l dans l’eau neutre, vers 20 °C : matériau de référence peu amer et peu acide mais nettement asséchant (Lee et Lawless, 1991) ; cran provisoire, à caler avant l’épreuve d’accord (« forte » reste possible)'
     preparation:
       substance: 'alun (forme non précisée par la source : à déclarer à la préparation)'
       substance_en: 'alum (form not stated by the source: to be declared when prepared)'
@@ -128,9 +126,9 @@ espace_valeurs:
     label_fr: forte
     label_en: strong
     rang: 4
-    repere: aucun repère fixé (à choisir avant l’épreuve)
+    repere: 'aucun repère fixé : à choisir avant l’épreuve d’accord'
     exemplaires: []
-note_echelle: 'quatre régions, comme pour l’amer, au féminin (proposition « Goût », 2.4). ISO 3972 ne donne pas de solution pour l’astringence ; le repère proposé est l’alun à 1 g/l, recommandé comme matériau de référence (Lee et Lawless, 1991 [[lee_lawless1991]] ; décision 5 de l’éditeur du projet, 2026-10-19). Le cran « nette » est un choix de relecture provisoire (2026-10-20), à caler avant E1 : le résumé de la source dit que l’alun à 1 g/l produit des sensations « pronounced » (asséchantes, râpeuses, qui resserrent la bouche), si bien que le cran « forte » reste possible (choix de relecture (2026-10-20), série 78 bis). Plusieurs sous-qualités (sécheresse, râpeux, bouche qui se resserre) sont réunies ici ; un deuxième lot pourrait les séparer si l’épreuve E1 ne passe pas. Série 90 (choix de relecture (2026-11-02), suivant la décision de l’éditeur du projet (2026-11-02) : « B : les repères de région (solutions ISO 3972, alun 1 g/l) ») : la solution d’alun est préparée dans l’eau neutre d’ISO 3972 [[iso3972]] (5.1), vers 20 °C (7.2 d) ; la forme de l’alun, que le résumé de la source ne précise pas, est à déclarer à la préparation ; le cran « aucune » est calé sur cette eau. Les crans « à peine perceptible » et « forte » restent à caler.'
+note_echelle: 'quatre régions, comme pour l’amer, au féminin. ISO 3972 ne donne pas de solution pour l’astringence ; le repère retenu est l’alun à 1 g/l, recommandé comme matériau de référence (Lee et Lawless, 1991 [[lee_lawless1991]]) ; des repères de région plutôt que des exemplaires, comme décidé le 2026-10-19. Le cran « nette » est provisoire (choix de relecture (2026-10-20)), à caler avant l’épreuve d’accord : le résumé de la source dit que l’alun à 1 g/l produit des sensations « pronounced » (asséchantes, râpeuses, qui resserrent la bouche), si bien que le cran « forte » reste possible. Plusieurs sous-qualités (sécheresse, râpeux, bouche qui se resserre) sont réunies ici ; des types distincts pourraient les séparer si l’épreuve d’accord ne passe pas. Comme décidé le 2026-11-02, la solution d’alun est préparée dans l’eau neutre d’ISO 3972 [[iso3972]] (5.1), vers 20 °C (7.2 d) ; la forme de l’alun, que le résumé de la source ne précise pas, est à déclarer à la préparation ; le cran « aucune » est calé sur cette eau. Les crans « à peine perceptible » et « forte » restent à caler.'
 identite: 'La force avec laquelle la bouche elle-même se sèche, râpe ou se resserre, état cumulatif qui reste après la gorgée ; pas une saveur (amer, acide en réserve), pas une texture de la bouchée (dureté
   en bouche, épaisseur en bouche : une résistance à la mastication), pas la longueur (une durée de trace), pas l’agrément.'
 relations: []
@@ -177,6 +175,15 @@ references:
   verifie_sur: résumé ; texte non lu (les mesures physiques qu’il cite ne sont pas lues) (statut repris de docs/bibliographie-par-type.md#groupe-gout)
   reprend: la revue des mécanismes et de la perception de l’astringence, méthodes de mesure comprises
   ne_reprend_pas: les mesures physiques qu’elle cite (non lues)
+- id: wang2024astr
+  citation: 'Wang, S., Smyth, H. E., Olarte Mantilla, S. M., Stokes, J. R. & Smith, P. A. (2024). Astringency and its sub-qualities: a review of astringency mechanisms and methods for measuring saliva lubrication. Chemical Senses, 49, bjae016.'
+  doi_ou_url: https://doi.org/10.1093/chemse/bjae016
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-11-17'
+  verifie_sur: 'résumé (dépôt UQ eSpace, métadonnées Crossref) relu le 2026-11-17 : « one chemical or physical approach can only provide a single measure of astringency determined by a specific mechanism » ; texte non lu'
+  reprend: les mesures chimiques ou physiques imitent chacune un mécanisme ; aucune ne suffit seule à prédire l’astringence perçue
+  ne_reprend_pas: le détail des méthodes, et les sous-qualités comme types distincts
 - id: fontoin2008
   citation: Fontoin, H., Saucier, C., Teissedre, P.-L. & Glories, Y. (2008). Effect of pH, ethanol and acidity on astringency and bitterness of grape seed tannin oligomers in model wine solution. Food Quality
     and Preference, 19(3), 286–291.
@@ -224,11 +231,7 @@ references:
   verifie_sur: 'extraits : aperçu public de l’édition 2011 diffusé par iTeh Standards (https://standards.iteh.ai/catalog/standards/sist/9d3b5579-aea7-40d6-9216-d4825f5a0a83/iso-3972-2011 ; l’aperçu de iso.org ne montre que les points 1 à 3) : points 5.1, 7.2, 8.1, tableaux 1, 2 et 3, relus le 2026-11-02 ; norme confirmée le 2023-09-21 ; Cor 1:2012 non lu ; texte complet non lu'
   reprend: l’eau neutre du point 5.1 et la température d’environ 20 °C (7.2 d) pour la solution d’alun et pour le cran « aucune »
   ne_reprend_pas: les solutions des saveurs de base (la norme ne traite pas l’astringence)
-etat_de_l_art: 'L’astringence se sent même entre la gencive et la lèvre, où il n’y a pas de papilles, et diminue quand on lubrifie la bouche : c’est surtout un toucher (Breslin et al., 1993 [[breslin1993]]).
-  Green (1993) [[green1993astr]] l’attribue à une hausse du frottement, quand les protéines de la salive précipitent ; elle s’accumule d’une gorgée à l’autre. Lee et Lawless (1991) [[lee_lawless1991]] y
-  distinguent plusieurs sous-qualités, notées pendant cinq à six minutes, et recommandent l’alun à 1 g/l comme matériau de référence ; Bajec et Pickering (2008) [[bajec2008]] en font la revue. Dans un vin
-  modèle, l’éthanol et le pH changent l’astringence (Fontoin et al., 2008 [[fontoin2008]]). La seule mesure associée trouvée, ISO 14502-1:2005 [[iso14502_1]], porte sur les polyphénols du thé ; le temps-intensité
-  (ASTM E1909-24 [[astm_e1909]]) et la TDS (Pineau et al., 2009 [[pineau2009]]) sont des jugements de jury. Aucune source lue ne teste l’accord entre observateurs sur des crans d’astringence. Détail : docs/bibliographie-par-type.md#groupe-gout.'
+etat_de_l_art: 'L’astringence se sent même entre la gencive et la lèvre, où il n’y a pas de papilles, et diminue quand on lubrifie la bouche : c’est surtout un toucher (Breslin et al., 1993 [[breslin1993]]), que Green (1993) [[green1993astr]] attribue à une hausse du frottement quand les protéines de la salive précipitent, et qui s’accumule d’une gorgée à l’autre (résumés lus). Lee et Lawless (1991) [[lee_lawless1991]] y distinguent plusieurs sous-qualités, notées pendant cinq à six minutes, et recommandent l’alun à 1 g/l comme matériau de référence ; Bajec et Pickering (2008) [[bajec2008]] en font la revue, et dans un vin modèle l’éthanol et le pH changent l’astringence (Fontoin et al., 2008 [[fontoin2008]]) (résumés lus). Des mesures de laboratoire imitent ce qui se passe en bouche (frottement, précipitation des protéines de la salive), mais une revue juge qu’aucune ne suffit seule à prédire l’astringence perçue (Wang et al., 2024 [[wang2024astr]], résumé lu). La seule méthode normalisée trouvée, ISO 14502-1:2005 [[iso14502_1]], dose les polyphénols du thé et non l’astringence (aperçu public lu) ; le temps-intensité (ASTM E1909-24 [[astm_e1909]], page de l’éditeur seulement) et la TDS (Pineau et al., 2009 [[pineau2009]], résumé lu) sont des jugements de jury. Aucune source lue ne teste l’accord entre observateurs sur des crans d’astringence. Détail : docs/bibliographie-par-type.md#groupe-gout.'
 etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-gout
 axiomes:
 - conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
@@ -296,6 +299,7 @@ a_relire:
 - enonces_testables
 - statut_note
 remarque:
+- 'série 116 (choix de relecture (2026-11-17), préparation de la relecture explicative) : état de l’art ramené à cinq phrases avec le statut de lecture de chaque source ; revue de Wang et al. (2024) ajoutée (résumé lu) ; mesures de laboratoire classées non retenues (aucune norme) ; renvois internes retirés de note_echelle et note_conditions ; repères « à peine perceptible » et « forte » toujours à caler ; à relire'
 - 'série 78 bis (choix de relecture (2026-10-20), corrections de relecture) : cran « nette » de l’alun provisoire, « forte » possible (repère, note_echelle, manques) ; à relire'
 - 'série 90 (choix de relecture (2026-11-02), suivant la décision de l’éditeur du projet (2026-11-02) : « B : les repères de région (solutions ISO 3972, alun 1 g/l) ») : eau et alun à 1 g/l calés (Lee et Lawless 1991, résumé relu ; eau et température d’ISO 3972, ajoutée aux références) ; à relire'
 relecture_explicative:
