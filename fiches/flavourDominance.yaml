@@ -17,10 +17,7 @@ base_dependance:
   - ppp:oralPungency
   - ppp:astringency
   facteurs_non_perceptuels: []
-note_base: 'Base proposée (strate semi-formel, à vérifier ; proposition « Goût », 2.8) : la composante dominante se lit sur des composantes perçues. Les valeurs nominales (`sweet`, `sour`…) ne renvoient
-  pas à des types : ce sont des valeurs de l’espace de valeurs (choix de relecture, 2026-10-20), et le sucré et l’acide, en réserve, ne bloquent pas la fiche. Seuls des ids définis sont cités (A12) : l’amer,
-  le piquant en bouche et l’astringence, tous trois formels (A9). Le sucré, l’acide, le salé, l’umami et l’arôme en bouche sont encore en réserve, sans id : ils entreront dans la base quand leurs fiches
-  existeront ; la base déclarée est donc incomplète. Les deux types de texture du premier lot n’y sont pas : la définition exclut la texture de la bouchée (choix de relecture (2026-10-20), série 78 bis).'
+note_base: 'Base proposée (strate semi-formel, à vérifier ; proposition « Goût ») : la composante dominante se lit sur des composantes perçues. Les valeurs nominales (`sweet`, `sour`…) ne renvoient pas à des types : ce sont des valeurs de l’espace de valeurs (choix de relecture, 2026-10-20), et le sucré et l’acide, en réserve, ne bloquent pas la fiche. Seuls des ids définis sont cités (règle de la spécification : tout id cité par une fiche est défini) : l’amer, le piquant en bouche et l’astringence, tous trois formels (règle des strates : la base d’un type semi-formel compte au moins un type formel). Le sucré, l’acide, le salé, l’umami et l’arôme en bouche sont encore en réserve, sans id : ils entreront dans la base quand leurs fiches existeront ; la base déclarée est donc incomplète. Les deux types de texture en bouche (dureté en bouche, épaisseur en bouche) n’y sont pas : la définition exclut la texture de la bouchée (choix de relecture (2026-10-20)).'
 facettes:
 - gout
 définition: 'La composante perçue comme la plus forte parmi les composantes principales de la portion en bouche (sucré, acide, amer, salé, umami, astringence, piquant ou chaleur de l’alcool, arôme en bouche),
@@ -57,18 +54,18 @@ mesure:
     references:
     - green1993lms
     - green1996lms
-    raison: jugements d’un jury sans référence physique ; à reprendre dans le protocole de l’épreuve d’accord (E1)
-    statut_lecture: 'résumés (Green et al., 1993 et 1996) ; estimation de grandeur : aucune source lue (Stevens, 1957, retiré en série 90 : métadonnées seulement)'
+    raison: 'jugements d’un jury sans référence physique ; à reprendre dans le protocole de l’épreuve d’accord'
+    statut_lecture: 'résumés (Green et al., 1993 et 1996) ; estimation de grandeur : aucune source lue (Stevens, 1957, retiré le 2026-11-02 : métadonnées seulement)'
   - nom: échelles de panel et notes sur une échelle de complexité, d’intensité ou d’équilibre, dont le questionnaire de complexité de Medel et al. (2009)
     references:
     - medel2009
-    raison: jugements d’un jury sans référence physique ; à reprendre dans le protocole de l’épreuve d’accord (E1)
+    raison: 'jugements d’un jury sans référence physique ; à reprendre dans le protocole de l’épreuve d’accord'
     statut_lecture: métadonnées (Medel et al., 2009 ; contenu par source secondaire)
   - nom: méthode temps-intensité (ASTM E1909-24) et TDS
     references:
     - astm_e1909
     - pineau2009
-    raison: jugements d’un jury sans référence physique ; à reprendre dans le protocole de l’épreuve d’accord (E1)
+    raison: 'jugements d’un jury sans référence physique ; à reprendre dans le protocole de l’épreuve d’accord'
     statut_lecture: extrait d’index (page de l’ASTM) ; résumé (Pineau et al., 2009)
 modalites:
 - bouche
@@ -78,12 +75,9 @@ conditions_critiques:
 - moment
 - temperature_bouchee
 - avant
-note_conditions: 'règle 12 (spec §9.7 H) : `nez` est critique (avec le nez pincé, l’arôme sort des composantes possibles, et le sucré « par l’odeur » aussi : Lim et Johnson, 2011 [[lim_johnson2011]]) ;
-  `moment` est critique (les notes n’ont ni la même durée ni le même pic d’intensité dans la finale : Goodstein et al., 2014 [[goodstein2014]] ; la plus forte peut donc changer, ce qui reste à tester par
-  E1) ; `temperature_bouchee` est critique (sucré : Talavera et al., 2005 [[talavera2005]]) ; `avant` est critique (l’astringence est cumulative [[green1993astr]]).'
+note_conditions: 'conditions d’observation en bouche (spécification) : `nez` est critique (avec le nez pincé, l’arôme sort des composantes possibles, et le sucré « par l’odeur » aussi : Lim et Johnson, 2011 [[lim_johnson2011]]) ; `moment` est critique (les notes n’ont ni la même durée ni le même pic d’intensité dans la finale : Goodstein et al., 2014 [[goodstein2014]] ; la plus forte peut donc changer, ce qui reste à tester par l’épreuve d’accord) ; `temperature_bouchee` est critique (sucré : Talavera et al., 2005 [[talavera2005]]) ; `avant` est critique (l’astringence est cumulative [[green1993astr]]).'
 porteur: la portion en bouche (la gorgée ou la bouchée) d’un produit identifié, voie rétronasale (de l’arrière de la bouche vers le nez) comprise
-note_porteur: 'porteur des trois premiers types du lot CIEL (choix de relecture, 2026-10-20 ; proposition « Goût », 2.8) : la portion en bouche, et non le produit identifié, parce que ces jugements portent
-  sur ce qui est en bouche à un moment donné et changent pendant la dégustation [[pineau2009]]. L’objet du registre reste le produit identifié ; la portion en est la partie jugée (§9.7 I).'
+note_porteur: 'porteur commun au nombre de composantes distinguées, à l’intensité (goût) et à la composante dominante (choix de relecture, 2026-10-20 ; proposition « Goût ») : la portion en bouche, et non le produit identifié, parce que ces jugements portent sur ce qui est en bouche à un moment donné et changent pendant la dégustation [[pineau2009]]. L’objet du registre reste le produit identifié ; la portion en est la partie jugée (règle des parties d’un objet, dans la spécification).'
 arité: 1
 condition_NA: 'objet non destiné à la bouche (un cuir, un bois verni, un métal : ce n’est ni sûr ni reproductible) ; produit qu’on ne goûte pas (photo, description) : une photo ne compte jamais'
 espace_valeurs:
@@ -223,7 +217,7 @@ espace_valeurs:
     label_en: no dominant component perceived
     repere: aucune composante ne l’emporte sur les autres
     exemplaires: []
-note_echelle: 'une seule dimension, nominale (choix de relecture, 2026-10-20, série 77 ter ; C7) : la composante perçue comme la plus forte, ou aucune. La dominance est ici la force relative perçue, pas la dominance de la TDS, qui est attentionnelle (Pineau et al., 2009 [[pineau2009]], dont la définition complète est connue par Visalli et Galmarini, 2024 [[visalli2024]]). Le degré de dominance (légère ; nette ; forte) n’est pas retenu : il part en réserve, comme type distinct éventuel, sans id. Aucun voisinage n’est déclaré entre les valeurs. Les repères sont des solutions goûtées seules pour reconnaître chaque composante, pas des exemplaires ; la liste des valeurs doit être fixée avant E1 et contenir l’arôme (Clark et Lawless, 1994 [[clark_lawless1994]]). Série 90 (choix de relecture (2026-11-02), suivant la décision de l’éditeur du projet (2026-11-02) : « B : les repères de région (solutions ISO 3972, alun 1 g/l) ») : les repères des cinq saveurs sont les solutions du tableau 3 d’ISO 3972:2011 [[iso3972]], goûtées seules ; celui de l’astringence, l’alun à 1 g/l (Lee et Lawless, 1991 [[lee_lawless1991]]), forme à déclarer. Le piquant reste à caler ; l’arôme et « aucune » n’ont pas de solution.'
+note_echelle: 'une seule dimension, nominale (choix de relecture, 2026-10-20 ; un type par dimension, décidé le 2026-10-14) : la composante perçue comme la plus forte, ou aucune. La dominance est ici la force relative perçue, pas la dominance de la TDS, qui est attentionnelle (Pineau et al., 2009 [[pineau2009]], dont la définition complète est connue par Visalli et Galmarini, 2024 [[visalli2024]]). Le degré de dominance (légère ; nette ; forte) n’est pas retenu : il part en réserve, comme type distinct éventuel, sans id. Aucun voisinage n’est déclaré entre les valeurs. Les repères sont des solutions goûtées seules pour reconnaître chaque composante, pas des exemplaires ; la liste des valeurs doit être fixée avant l’épreuve d’accord et contenir l’arôme (Clark et Lawless, 1994 [[clark_lawless1994]]). Choix de relecture (2026-11-02), suivant la décision du 2026-11-02 sur les repères de région (solutions d’ISO 3972, alun à 1 g/l) : les repères des cinq saveurs sont les solutions du tableau 3 d’ISO 3972:2011 [[iso3972]], goûtées seules ; celui de l’astringence, l’alun à 1 g/l (Lee et Lawless, 1991 [[lee_lawless1991]]), forme à déclarer. Le piquant reste à caler ; l’arôme et « aucune » n’ont pas de solution.'
 identite: 'Laquelle des composantes l’emporte, pas une force d’ensemble (intensité (goût)) ni la force d’une qualité prise à part (l’amer, le piquant…) ; pas un rapport de composition (le rapport °Brix / acidité n’en est pas une définition) ; pas l’agrément. Ce n’est pas non plus la dominance de la TDS (dominance temporelle des sensations) : la fiche dit quelle composante l’emporte dans ce qu’on a en bouche, alors que la TDS relève quelle sensation retient l’attention à chaque instant ; ce qui retient l’attention est tenu hors du périmètre de la première version de la spécification. Les valeurs ne renvoient pas à des types : le sucré, l’acide, le salé, l’umami et l’arôme en bouche sont encore en réserve. Ancien nom : `flavourBalance`, remplacé par un nom qui décrit ce qu’on note (laquelle des composantes l’emporte) plutôt que par un mot qui porte un jugement.'
 relations:
 - type: confusableWith
@@ -300,7 +294,7 @@ references:
   statut_verification: vérifiée sur résumé ou source secondaire
   verifie_le: '2026-10-20'
   verifie_sur: résumé (PubMed) ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
-  reprend: 'la liste des réponses offertes change ce qu’on note (effet de « halo-dumping ») : la liste des valeurs est fixée avant E1 et contient l’arôme'
+  reprend: 'la liste des réponses offertes change ce qu’on note (effet de « halo-dumping ») : la liste des valeurs est fixée avant l’épreuve d’accord et contient l’arôme'
   ne_reprend_pas: les détails du protocole temps-intensité
 - id: lim_johnson2011
   citation: Lim, J. & Johnson, M. B. (2011). Potential mechanisms of retronasal odor referral to the mouth. Chemical Senses, 36(3), 283–289.
@@ -450,8 +444,7 @@ transfert: objet conçu oui (une recette, un assemblage, une boisson) | tableau 
 enonces_testables:
 - id: E1
   nature: existence
-  enonce: après l’épreuve du premier lot, sur 6 à 10 produits identifiés (portions du même lot, au même moment), accord inter-observateurs exact sur la valeur (échelle nominale), au-dessus du seuil fixé
-    avant l’épreuve, à `nez`, `moment`, `temperature_bouchee` et `avant` égaux (spec §9.7 H, règle 12), la liste des valeurs offertes fixée avant l’épreuve et contenant l’arôme
+  enonce: 'après l’épreuve d’accord des cinq premiers types du goût (amer, piquant en bouche, astringence, dureté en bouche, épaisseur en bouche), sur 6 à 10 produits identifiés (portions du même lot, au même moment), accord inter-observateurs exact sur la valeur (échelle nominale), au-dessus du seuil fixé avant l’épreuve, à `nez`, `moment`, `temperature_bouchee` et `avant` égaux (conditions d’observation en bouche de la spécification), la liste des valeurs offertes fixée avant l’épreuve et contenant l’arôme'
   statut_epistemique: non éprouvé
   epreuve: null
 - id: E4
@@ -461,7 +454,7 @@ enonces_testables:
   epreuve: null
 cq_couvertes: CQ1, CQ2
 statut: candidat
-statut_note: 'en préparation (2026-10-20) : fiche créée en série 78, sans exemplaire ni épreuve d’accord ; tous les champs rédigés sont à relire'
+statut_note: 'en préparation (2026-10-20) : fiche créée le 2026-10-20, sans exemplaire ni épreuve d’accord ; tous les champs rédigés sont à relire'
 statut_epistemique: non éprouvé
 introduit_en: '2.8'
 modifie_en: []
@@ -470,13 +463,13 @@ source_de_la_fiche: 'création du type : décision de l’éditeur du projet (20
   (2026-10-19, décision 1) ; contenu repris de la proposition « Goût » (docs/famille-gout-proposition.md (document de travail, non publié), sections 2, 5, 6 et 7) ; le reste (porteur, crans, repères, facettes
   critiques, classement des mesures, rédaction) : choix de relecture (2026-10-19 et 2026-10-20) ; fiche créée le 2026-10-20 (série 78)'
 manques:
-- 'exemplaires : aucun. Décision 5 de l’éditeur du projet (2026-10-19) : pas d’exemplaire en V1 pour le goût, des repères de région à la place. Si des exemples sont cherchés plus tard, ce seront des objets publics seulement (produits identifiés, sans marque citée), jamais des objets privés'
-- 'épreuve d’accord E1 à faire : portions du même lot, au même moment, repères de région goûtés avant de juger (proposition « Goût », section 6, point 2) ; elle suit celle du premier lot (lot CIEL)'
+- 'exemplaires : aucun. Décidé le 2026-10-19 : pas d’exemplaire pour le goût dans la première version, des repères de région à la place. Si des exemples sont cherchés plus tard, ce seront des objets publics seulement (produits identifiés, sans marque citée), jamais des objets privés'
+- 'épreuve d’accord à faire : portions du même lot, au même moment, repères de région goûtés avant de juger (proposition « Goût ») ; elle suit celle des cinq premiers types du goût (amer, piquant en bouche, astringence, dureté en bouche, épaisseur en bouche)'
 - 'définition de l’équilibre chez Peynaud (chapitre non lu) : non vérifiée'
-- aucune source ne teste l’accord sur une dominante en bouche ; liste des valeurs offertes à fixer avant E1
-- 'repère du piquant : aucun repère public sûr (à caler, X17, série 90) ; forme de l’alun à déclarer (série 90)'
+- 'aucune source ne teste l’accord sur une dominante en bouche ; liste des valeurs offertes à fixer avant l’épreuve d’accord'
+- 'repère du piquant : aucun repère public sûr (à caler, comme le demande la règle des paliers de publication, choix du 2026-11-02) ; forme de l’alun à déclarer (choix du 2026-11-02)'
 - 'degré de dominance (légère ; nette ; forte) : en réserve, sans id'
-- 'base incomplète : le sucré, l’acide, le salé, l’umami et l’arôme en bouche sont en réserve, sans id ; la fiche ne cite que des ids définis (A12)'
+- 'base incomplète : le sucré, l’acide, le salé, l’umami et l’arôme en bouche sont en réserve, sans id ; la fiche ne cite que des ids définis (règle de la spécification : tout id cité par une fiche est défini)'
 bloque_par: []
 a_relire:
 - label_fr

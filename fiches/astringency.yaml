@@ -6,8 +6,7 @@ label_fr: astringence
 label_en: astringency
 labels_alternatifs: []
 labels_alternatifs_en: []
-note_label_alternatif: '« sec » est écarté des labels : un biscuit sec manque d’eau (texture), un vin « sec » au sens courant est peu sucré (saveur) ; seul un vin qui « assèche » la bouche est astringent
-  (proposition « Goût », 2.7).'
+note_label_alternatif: '« sec » est écarté des labels : un biscuit sec manque d’eau (texture), un vin « sec » au sens courant est peu sucré (saveur) ; seul un vin qui « assèche » la bouche est astringent (proposition « Goût »).'
 patron: P1
 sorte: qualité
 sous_sorte: —
@@ -47,8 +46,7 @@ mesure:
     - astm_e1909
     - lee_lawless1991
     - pineau2009
-    raison: jugements d’un jury sans référence physique ; à reprendre dans le protocole de l’épreuve d’accord (E1) ; le guide ASTM suit une seule sensation après une seule prise, ce qui exclut les prises
-      répétées
+    raison: 'jugements d’un jury sans référence physique ; à reprendre dans le protocole de l’épreuve d’accord ; le guide ASTM suit une seule sensation après une seule prise, ce qui exclut les prises répétées'
     statut_lecture: extrait d’index (page de l’ASTM) ; résumés (Lee et Lawless, 1991 ; Pineau et al., 2009)
   - nom: mesures de laboratoire (frottement, indice de précipitation des protéines de la salive)
     references:
@@ -61,11 +59,10 @@ modalites:
 mode_de_presentation: échantillon
 conditions_critiques:
 - avant
-note_conditions: 'règle 12 (spec §9.7 H) : `avant` est critique, parce que l’astringence s’accumule d’une gorgée à l’autre (Green, 1993 [[green1993astr]]) ; on suit l’ordre des gorgées avec cette facette. `moment` n’est pas critique. `nez` n’est pas critique (ce n’est pas une saveur) ; `temperature_bouchee` est à éprouver. `duree` : les sous-qualités se notent pendant cinq à six minutes et décroissent à peu près de façon exponentielle (Lee et Lawless, 1991 [[lee_lawless1991]]) : le temps entre la prise et le jugement est déclaré. La salive va en note d’épisode.'
+note_conditions: 'conditions d’observation en bouche (spécification) : `avant` est critique, parce que l’astringence s’accumule d’une gorgée à l’autre (Green, 1993 [[green1993astr]]) ; on suit l’ordre des gorgées avec cette facette. `moment` n’est pas critique. `nez` n’est pas critique (ce n’est pas une saveur) ; `temperature_bouchee` est à éprouver. `duree` : les sous-qualités se notent pendant cinq à six minutes et décroissent à peu près de façon exponentielle (Lee et Lawless, 1991 [[lee_lawless1991]]) : le temps entre la prise et le jugement est déclaré. La salive va en note d’épisode.'
 porteur: le produit identifié dont on goûte une portion (nature, origine, lot, date de production ou d’ouverture, conservation, concentration pour une boisson préparée) ; la portion goûtée n’est pas le
   porteur
-note_porteur: même porteur que les types de saveur (proposition « Goût », section 6 ; choix de relecture du 2026-10-19, 8.1 point 4), bien que l’astringence soit un toucher et qu’elle se sente sur la bouche
-  elle-même.
+note_porteur: 'même porteur que les types de saveur (proposition « Goût » ; choix de relecture du 2026-10-19), bien que l’astringence soit un toucher et qu’elle se sente sur la bouche elle-même.'
 arité: 1
 condition_NA: 'objet non destiné à la bouche (un cuir, un bois verni, un métal : ce n’est ni sûr ni reproductible) ; produit qu’on ne goûte pas (photo, description) : une photo ne compte jamais'
 espace_valeurs:
@@ -245,8 +242,7 @@ transfert: objet conçu oui (une boisson, une infusion, un vin) | tableau non | 
 enonces_testables:
 - id: E1
   nature: existence
-  enonce: 'sur 6 à 10 produits identifiés (portions du même lot, au même moment), accord inter-observateurs à une région près, au-dessus du seuil fixé avant l’épreuve, à conditions critiques égales (`avant`
-    : première prise ou après rinçage ; spec §9.7 H, règle 12), la solution d’alun de référence goûtée avant de juger, à temps égal après la prise'
+  enonce: 'sur 6 à 10 produits identifiés (portions du même lot, au même moment), accord inter-observateurs à une région près, au-dessus du seuil fixé avant l’épreuve, à conditions critiques égales (`avant` : première prise ou après rinçage ; conditions d’observation en bouche de la spécification), la solution d’alun de référence goûtée avant de juger, à temps égal après la prise'
   statut_epistemique: non éprouvé
   epreuve: null
 - id: E4
@@ -256,7 +252,7 @@ enonces_testables:
   epreuve: null
 cq_couvertes: CQ1, CQ2
 statut: candidat
-statut_note: 'en préparation (2026-10-20) : fiche créée en série 78, sans exemplaire ni épreuve d’accord ; tous les champs rédigés sont à relire'
+statut_note: 'en préparation (2026-10-20) : fiche créée le 2026-10-20, sans exemplaire ni épreuve d’accord ; tous les champs rédigés sont à relire'
 statut_epistemique: non éprouvé
 introduit_en: '2.8'
 modifie_en: []
@@ -265,9 +261,9 @@ source_de_la_fiche: 'création du type : décision de l’éditeur du projet (20
   » : décision de l’éditeur du projet (2026-10-19, décision 1) ; contenu repris de la proposition « Goût » (docs/famille-gout-proposition.md (document de travail, non publié), sections 2, 5, 6 et 7) ; le
   reste (porteur, crans, repères, facettes critiques, classement des mesures, rédaction) : choix de relecture (2026-10-19 et 2026-10-20) ; fiche créée le 2026-10-20 (série 78)'
 manques:
-- 'exemplaires : aucun. Décision 5 de l’éditeur du projet (2026-10-19) : pas d’exemplaire en V1 pour le goût, des repères de région à la place. Si des exemples sont cherchés plus tard, ce seront des objets publics seulement (produits identifiés, sans marque citée), jamais des objets privés'
-- 'épreuve d’accord E1 à faire : portions du même lot, au même moment, repères de région goûtés avant de juger (proposition « Goût », section 6, point 2)'
-- 'repères des crans « à peine perceptible » et « forte » à caler ; cran de l’alun à 1 g/l provisoire (« nette », marqué `doute: oui`), à caler avant E1 : la source dit « pronounced », « forte » reste possible (choix de relecture (2026-10-20), série 78 bis) ; forme de l’alun à déclarer (série 90)'
+- 'exemplaires : aucun. Décidé le 2026-10-19 : pas d’exemplaire pour le goût dans la première version, des repères de région à la place. Si des exemples sont cherchés plus tard, ce seront des objets publics seulement (produits identifiés, sans marque citée), jamais des objets privés'
+- 'épreuve d’accord à faire : portions du même lot, au même moment, repères de région goûtés avant de juger (proposition « Goût »)'
+- 'repères des crans « à peine perceptible » et « forte » à caler ; cran de l’alun à 1 g/l provisoire (« nette », marqué `doute: oui`), à caler avant l’épreuve d’accord : la source dit « pronounced », « forte » reste possible (choix de relecture (2026-10-20)) ; forme de l’alun à déclarer (choix du 2026-11-02)'
 - 'mesures physiques de l’astringence (frottement, précipitation des protéines salivaires) : non lues'
 bloque_par: []
 a_relire:

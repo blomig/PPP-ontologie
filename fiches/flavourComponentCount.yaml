@@ -17,10 +17,7 @@ base_dependance:
   - ppp:oralPungency
   - ppp:astringency
   facteurs_non_perceptuels: []
-note_base: 'Base proposée (strate semi-formel, à vérifier ; proposition « Goût », 2.8) : on compte des composantes perçues par d’autres types, comme le nombre de formes élémentaires a le contour pour base.
-  Seuls des ids définis sont cités (A12) : l’amer, le piquant en bouche et l’astringence, tous trois formels (A9). Le sucré, l’acide, le salé, l’umami et l’arôme en bouche sont encore en réserve, sans id
-  : ils entreront dans la base quand leurs fiches existeront ; la base déclarée est donc incomplète. Les deux types de texture du premier lot n’y sont pas : la définition exclut la texture de la bouchée
-  (choix de relecture (2026-10-20), série 78 bis).'
+note_base: 'Base proposée (strate semi-formel, à vérifier ; proposition « Goût ») : on compte des composantes perçues par d’autres types, comme le nombre de formes élémentaires a le contour pour base. Seuls des ids définis sont cités (règle de la spécification : tout id cité par une fiche est défini) : l’amer, le piquant en bouche et l’astringence, tous trois formels (règle des strates : la base d’un type semi-formel compte au moins un type formel). Le sucré, l’acide, le salé, l’umami et l’arôme en bouche sont encore en réserve, sans id : ils entreront dans la base quand leurs fiches existeront ; la base déclarée est donc incomplète. Les deux types de texture en bouche (dureté en bouche, épaisseur en bouche) n’y sont pas : la définition exclut la texture de la bouchée (choix de relecture (2026-10-20)).'
 facettes:
 - gout
 définition: 'Le nombre de composantes (saveurs, arômes par voie rétronasale (de l’arrière de la bouche vers le nez), sensations du trijumeau (le nerf qui sent la brûlure du piment, le froid de la menthe,
@@ -53,18 +50,18 @@ mesure:
     references:
     - green1993lms
     - green1996lms
-    raison: jugements d’un jury sans référence physique ; à reprendre dans le protocole de l’épreuve d’accord (E1)
-    statut_lecture: 'résumés (Green et al., 1993 et 1996) ; estimation de grandeur : aucune source lue (Stevens, 1957, retiré en série 90 : métadonnées seulement)'
+    raison: 'jugements d’un jury sans référence physique ; à reprendre dans le protocole de l’épreuve d’accord'
+    statut_lecture: 'résumés (Green et al., 1993 et 1996) ; estimation de grandeur : aucune source lue (Stevens, 1957, retiré le 2026-11-02 : métadonnées seulement)'
   - nom: échelles de panel et notes sur une échelle de complexité, d’intensité ou d’équilibre, dont le questionnaire de complexité de Medel et al. (2009)
     references:
     - medel2009
-    raison: jugements d’un jury sans référence physique ; à reprendre dans le protocole de l’épreuve d’accord (E1)
+    raison: 'jugements d’un jury sans référence physique ; à reprendre dans le protocole de l’épreuve d’accord'
     statut_lecture: métadonnées (Medel et al., 2009 ; contenu par source secondaire)
   - nom: méthode temps-intensité (ASTM E1909-24) et TDS
     references:
     - astm_e1909
     - pineau2009
-    raison: jugements d’un jury sans référence physique ; à reprendre dans le protocole de l’épreuve d’accord (E1)
+    raison: 'jugements d’un jury sans référence physique ; à reprendre dans le protocole de l’épreuve d’accord'
     statut_lecture: extrait d’index (page de l’ASTM) ; résumé (Pineau et al., 2009)
   - nom: CPG-O par intensité directe
     references:
@@ -83,12 +80,9 @@ mode_de_presentation: échantillon
 conditions_critiques:
 - nez
 - moment
-note_conditions: 'règle 12 (spec §9.7 H) : `nez` est critique : fermer le nez retire les arômes du compte (Lawless et al., 2004 [[lawless2004]]). `moment` est critique : le compte change pendant la dégustation
-  (Pineau et al., 2009 [[pineau2009]]) ; l’épisode déclare la phase (`chewing` : « pendant la mastication, ou gorgée gardée en bouche »), et E1 compare à `moment` égal. `temperature_bouchee` et `avant`
-  sont à éprouver.'
+note_conditions: 'conditions d’observation en bouche (spécification) : `nez` est critique : fermer le nez retire les arômes du compte (Lawless et al., 2004 [[lawless2004]]). `moment` est critique : le compte change pendant la dégustation (Pineau et al., 2009 [[pineau2009]]) ; l’épisode déclare la phase (`chewing` : « pendant la mastication, ou gorgée gardée en bouche »), et l’épreuve d’accord compare à `moment` égal. `temperature_bouchee` et `avant` sont à éprouver.'
 porteur: la portion en bouche (la gorgée ou la bouchée) d’un produit identifié, voie rétronasale comprise
-note_porteur: 'porteur des trois premiers types du lot CIEL (choix de relecture, 2026-10-20 ; proposition « Goût », 2.8) : la portion en bouche, et non le produit identifié, parce que ces jugements portent
-  sur ce qui est en bouche à un moment donné et changent pendant la dégustation [[pineau2009]]. L’objet du registre reste le produit identifié ; la portion en est la partie jugée (§9.7 I).'
+note_porteur: 'porteur commun au nombre de composantes distinguées, à l’intensité (goût) et à la composante dominante (choix de relecture, 2026-10-20 ; proposition « Goût ») : la portion en bouche, et non le produit identifié, parce que ces jugements portent sur ce qui est en bouche à un moment donné et changent pendant la dégustation [[pineau2009]]. L’objet du registre reste le produit identifié ; la portion en est la partie jugée (règle des parties d’un objet, dans la spécification).'
 arité: 1
 condition_NA: 'objet non destiné à la bouche (un cuir, un bois verni, un métal : ce n’est ni sûr ni reproductible) ; produit qu’on ne goûte pas (photo, description) : une photo ne compte jamais'
 espace_valeurs:
@@ -134,7 +128,7 @@ espace_valeurs:
     rang: 4
     repere: on sent qu’il y en a plus, mais on ne peut plus les séparer ni les compter
     exemplaires: []
-note_echelle: 'comptage ordinal à crans bas (proposition « Goût », 2.8.1 ; clé `beyondCount` reprise de `elementaryShapeCount`) : on ne distingue guère plus de trois ou quatre composantes dans un mélange, même entraîné (Livermore et Laing, 1996 [[livermore_laing1996]] ; Jinks et Laing, 1999 [[jinks_laing1999a]] [[jinks_laing1999b]] ; Jinks et Laing, 2001 [[jinks_laing2001]] ; limite attribuée à Laing et Francis, 1989 [[laing_francis1989]], par Jinks et Laing, 2001). Au-delà de trois, un cran de plus ne serait pas partagé : le dernier cran dit qu’on ne compte plus. Série 90 (choix de relecture (2026-11-02), suivant la décision de l’éditeur du projet (2026-11-02) : « B : les repères de région (solutions ISO 3972, alun 1 g/l) ») : le cran « une » est calé sur la solution de saccharose à 5,76 g/l d’ISO 3972 [[iso3972]] ; le cran « deux » reste à caler (un mélange n’est pas une solution de la norme) ; ce qui compte comme « composante » est à fixer aussi.'
+note_echelle: 'comptage ordinal à crans bas (proposition « Goût » ; clé `beyondCount` reprise de `elementaryShapeCount`) : on ne distingue guère plus de trois ou quatre composantes dans un mélange, même entraîné (Livermore et Laing, 1996 [[livermore_laing1996]] ; Jinks et Laing, 1999 [[jinks_laing1999a]] [[jinks_laing1999b]] ; Jinks et Laing, 2001 [[jinks_laing2001]] ; limite attribuée à Laing et Francis, 1989 [[laing_francis1989]], par Jinks et Laing, 2001). Au-delà de trois, un cran de plus ne serait pas partagé : le dernier cran dit qu’on ne compte plus. Choix de relecture (2026-11-02), suivant la décision du 2026-11-02 sur les repères de région (solutions d’ISO 3972, alun à 1 g/l) : le cran « une » est calé sur la solution de saccharose à 5,76 g/l d’ISO 3972 [[iso3972]] ; le cran « deux » reste à caler (un mélange n’est pas une solution de la norme) ; ce qui compte comme « composante » est à fixer aussi.'
 identite: 'Un compte de composantes distinguées dans la portion, pas une force ni un caractère : pas l’intensité d’ensemble (intensité (goût)), pas la longueur, pas l’arôme en bouche (en réserve, qui nomme un caractère au lieu de compter). Analogie déclarée, sans relation, avec les types de comptage d’autres sens, le nombre de teintes et le nombre de formes élémentaires : même forme d’espace de valeurs (on compte par petits crans, jusqu’à ce qu’on ne puisse plus tout distinguer d’un coup), autre porteur et autre sens ; réunir ces types d’un sens à l’autre n’est pas décidé avant les épreuves d’accord. Ce n’est pas la complexité globale, qui reste une grille d’analyse et non un type. Ancien nom : `flavourComplexity`, remplacé par un nom qui décrit ce qu’on note (un compte de composantes distinguées) plutôt que par un mot qui porte une valeur.'
 relations:
 - type: confusableWith
@@ -354,8 +348,7 @@ transfert: objet conçu oui (une recette, un assemblage, une boisson) | tableau 
 enonces_testables:
 - id: E1
   nature: existence
-  enonce: après l’épreuve du premier lot, sur 6 à 10 produits identifiés (portions du même lot, au même moment), accord inter-observateurs à une région près, au-dessus du seuil fixé avant l’épreuve, à `nez`
-    et `moment` égaux (spec §9.7 H, règle 12), la liste de ce qui compte comme composante fixée avant l’épreuve
+  enonce: 'après l’épreuve d’accord des cinq premiers types du goût (amer, piquant en bouche, astringence, dureté en bouche, épaisseur en bouche), sur 6 à 10 produits identifiés (portions du même lot, au même moment), accord inter-observateurs à une région près, au-dessus du seuil fixé avant l’épreuve, à `nez` et `moment` égaux (conditions d’observation en bouche de la spécification), la liste de ce qui compte comme composante fixée avant l’épreuve'
   statut_epistemique: non éprouvé
   epreuve: null
 - id: E4
@@ -365,7 +358,7 @@ enonces_testables:
   epreuve: null
 cq_couvertes: CQ1, CQ2
 statut: candidat
-statut_note: 'en préparation (2026-10-20) : fiche créée en série 78, sans exemplaire ni épreuve d’accord ; tous les champs rédigés sont à relire'
+statut_note: 'en préparation (2026-10-20) : fiche créée le 2026-10-20, sans exemplaire ni épreuve d’accord ; tous les champs rédigés sont à relire'
 statut_epistemique: non éprouvé
 introduit_en: '2.8'
 modifie_en: []
@@ -374,12 +367,12 @@ source_de_la_fiche: 'création du type : décision de l’éditeur du projet (20
   (2026-10-19, décision 1) ; contenu repris de la proposition « Goût » (docs/famille-gout-proposition.md (document de travail, non publié), sections 2, 5, 6 et 7) ; le reste (porteur, crans, repères, facettes
   critiques, classement des mesures, rédaction) : choix de relecture (2026-10-19 et 2026-10-20) ; fiche créée le 2026-10-20 (série 78)'
 manques:
-- 'exemplaires : aucun. Décision 5 de l’éditeur du projet (2026-10-19) : pas d’exemplaire en V1 pour le goût, des repères de région à la place. Si des exemples sont cherchés plus tard, ce seront des objets publics seulement (produits identifiés, sans marque citée), jamais des objets privés'
-- 'épreuve d’accord E1 à faire : portions du même lot, au même moment, repères de région goûtés avant de juger (proposition « Goût », section 6, point 2) ; elle suit celle du premier lot (lot CIEL)'
-- ce qui compte comme « composante » est à fixer avant E1 ; la texture de la bouchée en est exclue (choix de relecture (2026-10-20), série 78 bis)
-- aucune source ne teste un compte de composantes en bouche à crans bas par E1
-- 'base incomplète : le sucré, l’acide, le salé, l’umami et l’arôme en bouche sont en réserve, sans id ; la fiche ne cite que des ids définis (A12)'
-- 'repères « à caler » (X17, série 90) : crans « deux », « trois » et « au-delà » ; un seul cran calé (« une ») : palier 2 au mieux après relecture, palier 1 hors d’atteinte'
+- 'exemplaires : aucun. Décidé le 2026-10-19 : pas d’exemplaire pour le goût dans la première version, des repères de région à la place. Si des exemples sont cherchés plus tard, ce seront des objets publics seulement (produits identifiés, sans marque citée), jamais des objets privés'
+- 'épreuve d’accord à faire : portions du même lot, au même moment, repères de région goûtés avant de juger (proposition « Goût ») ; elle suit celle des cinq premiers types du goût (amer, piquant en bouche, astringence, dureté en bouche, épaisseur en bouche)'
+- 'ce qui compte comme « composante » est à fixer avant l’épreuve d’accord ; la texture de la bouchée en est exclue (choix de relecture (2026-10-20))'
+- 'aucune source ne teste un compte de composantes en bouche à crans bas par une épreuve d’accord'
+- 'base incomplète : le sucré, l’acide, le salé, l’umami et l’arôme en bouche sont en réserve, sans id ; la fiche ne cite que des ids définis (règle de la spécification : tout id cité par une fiche est défini)'
+- 'repères « à caler » (règle des paliers de publication, choix du 2026-11-02) : crans « deux », « trois » et « au-delà » ; un seul cran calé (« une ») : au mieux « publiable avec exemplaires incomplets » après relecture, « publiable » hors d’atteinte'
 bloque_par: []
 a_relire:
 - label_fr
