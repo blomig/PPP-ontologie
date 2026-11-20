@@ -1,6 +1,6 @@
 # Fiche de type PPP — ppp:astringency — format : PPP_FicheType.md (spec v2.8)
 # Champs de travail hors patron : a_relire, relecture_explicative (date, champs relus en langage courant ; a_reconfirmer), manques, source_de_la_fiche, statut_note, note_base, note_porteur, note_echelle, note_label_alternatif, mesure (rubrique proposée en série 53, docs/proposition-rubrique-mesure.md).
-# Série 78 (2026-10-20) : fiche en préparation de la famille « Goût (en bouche) », rédigée sans exemplaire à partir de la proposition « Goût » ; aucun champ n’est encore relu.
+# Série 78 (2026-10-20) : fiche en préparation de la famille « Goût (en bouche) », rédigée sans exemplaire à partir de la proposition « Goût » ; vingt champs relus en langage courant le 2026-11-20, les autres restent à relire ; six épisodes à réaliser ajoutés le 2026-11-20.
 id: ppp:astringency
 label_fr: astringence
 label_en: astringency
@@ -21,11 +21,10 @@ question_attentionnelle: Après la gorgée ou la bouchée, la bouche se sèche-t
 contre_exemple: 'Ce n’est pas l’amer : l’astringence se sent même entre la gencive et la lèvre, où il n’y a pas de papilles. Ce n’est pas une texture : la texture est une résistance de la bouchée quand
   on la mâche ; l’astringence est un état de la bouche, qui reste après que l’aliment est parti et s’accumule d’une gorgée à l’autre. « Ce thé est nettement astringent, et c’est un défaut » se dit comme
   « …et c’est une qualité ».'
-grandeur_physique_homonyme: 'la teneur en polyphénols totaux (« tanins ») d’un thé ou d’un vin [[iso14502_1]] : une composition, pas l’astringence perçue ; aucune région ne s’en déduit. Voir la rubrique
-  « mesure ».'
+grandeur_physique_homonyme: 'la teneur en polyphénols totaux (« tanins ») d’un thé [[iso14502_1]] ou d’un vin : une composition, pas l’astringence perçue ; aucune région ne s’en déduit. Voir la rubrique « mesure ».'
 mesure:
   etat: methodes
-  synthese: 'Une mesure associée indirecte existe pour le thé seulement : les polyphénols totaux par la méthode au réactif de Folin-Ciocalteu (ISO 14502-1). Les polyphénols totaux ne sont pas l’astringence perçue. Des mesures de laboratoire (frottement, indice de précipitation des protéines de la salive) existent dans la recherche, sans norme ; une revue lue en résumé juge qu’aucune ne suffit seule à prédire l’astringence perçue (Wang et al., 2024). Aucune méthode proche n’est connue : aucune ne se rapporte à une référence physique normalisée (recherches du 2026-10-19 et du 2026-11-17).'
+  synthese: 'Une mesure associée indirecte existe pour le thé seulement : les polyphénols totaux par la méthode au réactif de Folin-Ciocalteu (ISO 14502-1). Les polyphénols totaux ne sont pas l’astringence perçue. Des mesures de laboratoire (frottement, indice de précipitation des protéines de la salive) existent dans la recherche, sans norme ; une revue lue en résumé juge qu’aucune ne suffit seule à prédire l’astringence perçue (Wang et al., 2024). Une échelle générale d’intensité appliquée à des solutions d’alun (Fleming et al., 2016) est un jugement de jury, et l’alun à 0,7 g/l proposé comme étalon pour l’évaluation sensorielle du thé noir (Drobna et al., 2004) est un étalon de matière apparié à un produit : ni l’un ni l’autre ne se rapporte à une référence physique normalisée. Aucune méthode proche n’est connue : aucune ne se rapporte à une référence physique normalisée (recherches du 2026-10-19, du 2026-11-17 et du 2026-11-20).'
   regions_indispensables: 'Les régions de cette fiche restent perceptives : elles décrivent ce qu’un observateur voit, entend, sent ou touche dans les conditions déclarées. Une mesure associée peut éclairer
     une observation, mais elle ne définit pas les bornes des régions et ne remplace pas l’examen.'
   methodes:
@@ -48,6 +47,12 @@ mesure:
     - pineau2009
     raison: 'jugements d’un jury sans référence physique ; à reprendre dans le protocole de l’épreuve d’accord ; le guide ASTM suit une seule sensation après une seule prise, ce qui exclut les prises répétées'
     statut_lecture: extrait d’index (page de l’ASTM) ; résumés (Lee et Lawless, 1991 ; Pineau et al., 2009)
+  - nom: échelle générale d’intensité appliquée à des solutions (alun, acide tannique, acide malique) et alun à 0,7 g/l comme étalon proposé pour l’évaluation sensorielle du thé noir
+    references:
+    - fleming2016
+    - drobna2004
+    raison: 'un jugement de jury (échelle générale d’intensité gLMS, de « à peine détectable » à « la plus forte sensation imaginable », dont « forte » vaut pour toutes les sensations et où « astringence » est définie par des aliments) et un étalon de matière apparié à un produit (l’alun à 0,7 g/l, retenu pour l’évaluation sensorielle du thé noir parce qu’il est peu amer et peu acide) ; ni l’un ni l’autre ne se rapporte à une référence physique normalisée, et aucun ne donne un niveau sur l’échelle à quatre régions de la fiche ; utiles pour situer des solutions, mais ils ne définissent pas une région'
+    statut_lecture: 'Fleming et al. (2016) : texte en libre accès lu en partie (méthode, résultats, figure 1 lue approximativement ; discussion non lue) ; Drobna et al. (2004) : résumé lu le 2026-11-20 ; texte non lu'
   - nom: mesures de laboratoire (frottement, indice de précipitation des protéines de la salive)
     references:
     - bajec2008
@@ -94,38 +99,40 @@ espace_valeurs:
     label_fr: à peine perceptible
     label_en: faint
     rang: 2
-    repere: 'aucun repère fixé : à choisir avant l’épreuve d’accord ; une dilution de la solution d’alun du cran « nette » est une piste, non éprouvée'
+    repere: 'aucun repère calé ; supposition, à éprouver : des dilutions à 0,125, 0,25 et 0,50 g/l de la solution d’alun du cran « nette » (eau neutre, vers 20 °C) seraient les candidats ; aucune source lue ne place une concentration à ce cran ; les quatre régions de la fiche sont ordonnées entre elles et ne sont pas rapportées aux crans de l’échelle générale d’intensité'
     exemplaires: []
   - cle: distinct
     label_fr: nette
     label_en: distinct
     rang: 3
-    repere: 'une solution d’alun à 1 g/l dans l’eau neutre, vers 20 °C : matériau de référence peu amer et peu acide mais nettement asséchant (Lee et Lawless, 1991) ; cran provisoire, à caler avant l’épreuve d’accord (« forte » reste possible)'
+    repere: 'une solution d’alun (dodécahydraté de qualité alimentaire, forme retenue pour la préparation) à 1 g/l dans l’eau neutre, vers 20 °C : matériau de référence peu amer et peu acide mais nettement asséchant (Lee et Lawless, 1991) ; cran gardé mais douteux : les sources lues ne confirment pas son niveau'
     preparation:
-      substance: 'alun (forme non précisée par la source : à déclarer à la préparation)'
-      substance_en: 'alum (form not stated by the source: to be declared when prepared)'
+      substance: 'alun : sulfate d’aluminium et de potassium dodécahydraté de qualité alimentaire (E 522), AlK(SO4)2·12H2O, 474,38 g/mol ; forme retenue pour la préparation (choix de protocole, choix de relecture (2026-11-20)), non donnée par les sources lues'
+      substance_en: 'alum: food-grade aluminium potassium sulphate dodecahydrate (E 522), AlK(SO4)2·12H2O, 474.38 g/mol; form retained for the preparation (protocol choice, review choice (2026-11-20)), not given by the sources read'
       concentration: 1 g/l
       concentration_en: 1 g/l
       solvant: eau neutre, plate, sans goût ni odeur, de dureté connue de préférence (ISO 3972, 5.1)
       solvant_en: neutral still water, tasteless and odourless, preferably of known hardness (ISO 3972, 5.1)
       temperature: vers 20 °C, comme l’eau de rinçage (ISO 3972, 7.2 d)
       temperature_en: about 20 °C, like the rinsing water (ISO 3972, 7.2 d)
-      origine: 'Lee et Lawless (1991), résumé : alun à 1 g/l comme matériau de référence ; eau et température reprises d’ISO 3972:2011 (5.1, 7.2 d) : choix de relecture (2026-11-02)'
-      origine_en: 'Lee and Lawless (1991), abstract: alum at 1 g/l as reference material; water and temperature taken from ISO 3972:2011 (5.1, 7.2 d): review choice (2026-11-02)'
+      origine: 'Lee et Lawless (1991), résumé : alun à 1 g/l comme matériau de référence ; forme : identité de l’additif E 522 d’après l’avis de l’EFSA (2018, texte lu en partie), choix de protocole ; eau et température reprises d’ISO 3972:2011 (5.1, 7.2 d) : choix de relecture (2026-11-02 et 2026-11-20)'
+      origine_en: 'Lee and Lawless (1991), abstract: alum at 1 g/l as reference material; form: identity of the additive E 522 according to the 2018 EFSA opinion (text partly read), protocol choice; water and temperature taken from ISO 3972:2011 (5.1, 7.2 d): review choice (2026-11-02 and 2026-11-20)'
       source:
       - lee_lawless1991
       - iso3972
+      - fleming2016
+      - efsa2018
       doute: oui
-      motif_doute: 'forme de l’alun non précisée (dodécahydraté ou anhydre : jusqu’à 1,8 fois plus de sel actif)'
-      motif_doute_en: 'form of the alum not stated (dodecahydrate or anhydrous: up to 1.8 times more active salt)'
+      motif_doute: 'niveau non confirmé : « pronounced » dans le résumé de Lee et Lawless pour 1 g/l, mais, par lecture approximative de la figure 1 de Fleming et al. (2016), l’astringence d’ensemble de l’alun de 1,5 à 6 g/l est d’environ 11 à 18 sur une échelle générale d’intensité (indicatif seulement), et 1 g/l est sous la plage testée ; forme de l’alun choisie, non donnée par les sources lues : à confirmer par l’épreuve d’accord (anhydre : jusqu’à 1,8 fois plus de sel actif)'
+      motif_doute_en: 'level not confirmed: “pronounced” in the abstract of Lee and Lawless for 1 g/l, but, by approximate reading of figure 1 of Fleming et al. (2016), the overall astringency of alum from 1.5 to 6 g/l is about 11 to 18 on a general intensity scale (indicative only), and 1 g/l is below the tested range; form of the alum chosen, not given by the sources read: to be confirmed by the agreement test (anhydrous: up to 1.8 times more active salt)'
     exemplaires: []
   - cle: strong
     label_fr: forte
     label_en: strong
     rang: 4
-    repere: 'aucun repère fixé : à choisir avant l’épreuve d’accord'
+    repere: 'aucun repère calé ; supposition, à éprouver : des solutions d’alun à 3,00 g/l, puis 4,50 g/l au besoin, seraient les candidates (concentrations d’une série publiée, Fleming et al., 2016, reprises comme candidates et non comme crans), 1,50 g/l servant de contrôle pour « nette » et 6,00 g/l restant en réserve ; aucune source lue ne place une concentration à ce cran ; les quatre régions de la fiche sont ordonnées entre elles et ne sont pas rapportées aux crans de l’échelle générale d’intensité'
     exemplaires: []
-note_echelle: 'quatre régions, comme pour l’amer, au féminin. ISO 3972 ne donne pas de solution pour l’astringence ; le repère retenu est l’alun à 1 g/l, recommandé comme matériau de référence (Lee et Lawless, 1991 [[lee_lawless1991]]) ; des repères de région plutôt que des exemplaires, comme décidé le 2026-10-19. Le cran « nette » est provisoire (choix de relecture (2026-10-20)), à caler avant l’épreuve d’accord : le résumé de la source dit que l’alun à 1 g/l produit des sensations « pronounced » (asséchantes, râpeuses, qui resserrent la bouche), si bien que le cran « forte » reste possible. Plusieurs sous-qualités (sécheresse, râpeux, bouche qui se resserre) sont réunies ici ; des types distincts pourraient les séparer si l’épreuve d’accord ne passe pas. Comme décidé le 2026-11-02, la solution d’alun est préparée dans l’eau neutre d’ISO 3972 [[iso3972]] (5.1), vers 20 °C (7.2 d) ; la forme de l’alun, que le résumé de la source ne précise pas, est à déclarer à la préparation ; le cran « aucune » est calé sur cette eau. Les crans « à peine perceptible » et « forte » restent à caler.'
+note_echelle: 'quatre régions, comme pour l’amer, au féminin. ISO 3972 ne donne pas de solution pour l’astringence ; le repère retenu pour « nette » est l’alun à 1 g/l, recommandé comme matériau de référence (Lee et Lawless, 1991 [[lee_lawless1991]]) ; des repères de région plutôt que des exemplaires, comme décidé le 2026-10-19. Choix de relecture (2026-11-20) : le cran « nette » est gardé pour l’alun à 1 g/l, et non « forte » : le résumé de Lee et Lawless dit « pronounced » (marqué), qui ne dit pas « fort » ; sur les courbes de la figure 1 de Fleming et al. (2016) [[fleming2016]], lues approximativement, la note d’astringence d’ensemble de l’alun de 1,5 à 6 g/l va d’environ 11 à environ 18 sur une échelle générale d’intensité (gLMS : « faible » 6, « modérée » 17, « forte » 35, ce dernier cran valant pour toutes les sensations, et « astringence » y étant définie par des aliments, non par un étalon), ce qui n’est qu’indicatif et ne place aucun cran de la fiche ; le cran reste douteux, puisqu’aucune source lue ne le confirme et que 1 g/l est sous la plage testée. Plusieurs sous-qualités (sécheresse, râpeux, bouche qui se resserre) sont réunies ici ; des types distincts pourraient les séparer si l’épreuve d’accord ne passe pas, et le calage d’un seul cran d’intensité ne tranche pas ce point. Comme décidé le 2026-11-02, la solution d’alun est préparée dans l’eau neutre d’ISO 3972 [[iso3972]] (5.1), vers 20 °C (7.2 d). Sa forme est un choix de protocole (choix de relecture (2026-11-20)) : sulfate d’aluminium et de potassium dodécahydraté de qualité alimentaire (E 522, masse molaire 474,38 g/mol, d’après l’avis de l’EFSA de 2018 [[efsa2018]]) ; c’est la forme retenue pour la préparation, non donnée par les sources lues (Lee et Lawless ne la précisent pas dans leur résumé), à confirmer par l’épreuve d’accord ; le cran « aucune » est calé sur cette eau. Les crans « à peine perceptible » et « forte » ne sont pas calés : aucune source lue ne donne de solution pour l’un ni pour l’autre, et l’alun n’est pas interchangeable avec les tanins (un acide baisse l’astringence de l’alun et augmente celle des composés phénoliques : Peleg et al., 1998 [[peleg1998]]), si bien qu’un repère d’alun peut mal représenter un thé ou un vin ; aucune autre substance n’est proposée à goûter, et le repère n’est pas un aliment. Les candidats sont des suppositions à éprouver, chacun marqué `doute: oui` dans son épisode : pour « à peine perceptible », des dilutions à 0,125, 0,25 et 0,50 g/l de la solution à 1 g/l ; pour « forte », des solutions à 3,00 g/l, puis 4,50 g/l au besoin, 6,00 g/l restant en réserve ; la solution à 1,50 g/l sert de contrôle pour « nette » (épisode 10) et n’est pas candidate à « forte ». Ces concentrations viennent de la série publiée de Fleming et al. (2016), reprises comme candidates et non comme crans ; leur protocole n’est pas repris (gorgées de 10 ml, eau d’osmose inverse, au moins 2 min entre deux prises ; ici, 15 ml, eau d’ISO 3972, 5 min) ; les quatre régions de la fiche sont ordonnées entre elles et ne sont pas rapportées aux crans de l’échelle générale d’intensité, et l’on ne convertit pas l’une dans l’autre ; il se peut qu’aucune de ces concentrations ne soit jugée « forte » par les observateurs. Critères écrits avant la séance de calage : « à peine perceptible » serait la plus forte des dilutions sous 1 g/l que tous les observateurs distinguent de l’eau et que les deux tiers au moins jugent « à peine perceptible » ; « forte » serait la plus faible des candidates (3,00 g/l, puis 4,50 g/l, puis 6,00 g/l si besoin) que les deux tiers au moins jugent « forte » et que tous jugent au moins « nette » ; « nette » serait la concentration que les deux tiers au moins jugent « nette » : si le 1 g/l n’est pas jugé « nette » par les deux tiers au moins, le cran « nette » est recalé sur la concentration qui répond à ce critère, sans préjuger de laquelle ; si aucune concentration ne remplit ces conditions, aucun repère n’est fixé. La décision se prend sur le dépouillement, selon ces critères et sur l’effectif annoncé avant la séance. La sensation pouvant s’accumuler d’une prise à l’autre (Green, 1993 [[green1993astr]]), l’ordre est croissant, les séances sont limitées, et les crans calés vaudront pour les conditions déclarées (`avant`, délai de jugement), non « en soi ».'
 identite: 'La force avec laquelle la bouche elle-même se sèche, râpe ou se resserre, état cumulatif qui reste après la gorgée ; pas une saveur (amer, acide en réserve), pas une texture de la bouchée (dureté
   en bouche, épaisseur en bouche : une résistance à la mastication), pas la longueur (une durée de trace), pas l’agrément.'
 relations: []
@@ -142,7 +149,7 @@ references:
   role: fonde
   statut_verification: vérifiée sur résumé ou source secondaire
   verifie_le: '2026-10-19'
-  verifie_sur: résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout)
+  verifie_sur: 'résumé ; texte non lu (statut repris de docs/bibliographie-par-type.md#groupe-gout) ; résumé relu le 2026-11-20 : alun à 10 g/l, soit 21,1 mM, sans nom de forme (le calcul correspond à la forme dodécahydratée, 474 g/mol, mais la source ne la déclare pas)'
   reprend: 'l’astringence se sent entre la gencive et la lèvre, sans papilles, et diminue quand on lubrifie la bouche : c’est surtout un toucher'
   ne_reprend_pas: les protocoles détaillés
 - id: green1993astr
@@ -163,6 +170,42 @@ references:
   verifie_sur: 'résumé (OpenAlex) relu le 2026-11-02 : « using 1 g/l alum as a reference material, since it is relatively low in perceived bitterness and sourness, but produces pronounced drying, roughing, puckery/drawing sensations » ; la forme de l’alun et le solvant ne sont pas précisés ; texte non lu'
   reprend: plusieurs sous-qualités (sécheresse, râpeux, bouche qui se resserre), qui décroissent en cinq à six minutes ; l’alun à 1 g/l comme matériau de référence
   ne_reprend_pas: les courbes temps-intensité comme mesure
+- id: fleming2016
+  citation: Fleming, E. E., Ziegler, G. R. & Hayes, J. E. (2016). Investigating mixture interactions of astringent stimuli using the isobole approach. Chemical Senses, 41(7), 601–610.
+  doi_ou_url: https://doi.org/10.1093/chemse/bjw064
+  role: alimente
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-11-20'
+  verifie_sur: 'DOI vérifié sur Crossref le 2026-11-20 ; volume, numéro et pages (41(7), 601–610) vérifiés sur PubMed et PMC le 2026-11-20 (Crossref ne les donne pas : enregistrement en ligne seulement) ; texte en libre accès (PMC) lu en partie : méthode, tableau 1, résultats, figure 1 ; discussion non lue ; échelle générale d’intensité (gLMS) à crans « à peine détectable » 1,4, « faible » 6, « modérée » 17, « forte » 35, « très forte » 52, « le plus fort imaginable » 100, où « astringence » est définie par des aliments (thé ou café sans lait, jus de canneberge, fruit pas mûr, vin rouge, chocolat noir) et non par un étalon ; plage d’alun testée : 1,5 à 6 g/l ; figure 1 (« Perceived Astringency of Malic Acid, Tannic Acid, and Alum », astringence d’ensemble, moyennes du groupe) : valeurs d’alun lues approximativement sur la figure, environ 11 à 1,5 g/l et environ 18 à 6 g/l, fonction publiée 10,1 × c^0,329 ; la forme de l’alun n’a pas été relevée ; statut « vérifiée sur la source » pour ces points seulement (liste fermée du patron : aucun autre statut ne convient à un texte lu en partie)'
+  reprend: 'la plage d’alun testée (1,5 à 6 g/l, tableau 1), les crans de l’échelle générale d’intensité (gLMS : 1,4 ; 6 ; 17 ; 35 ; 52 ; 100) et, par lecture approximative de la figure 1, une note d’astringence d’ensemble d’environ 11 à 18 pour cet alun ; indicatif seulement'
+  ne_reprend_pas: 'les modèles de mélange (isobole) ; les valeurs lues sur une courbe ne sont pas des repères et ne se convertissent pas en crans de la fiche'
+- id: drobna2004
+  citation: Drobna, Z., Wismer, W. V. & Goonewardene, L. A. (2004). Selection of an astringency reference standard for the sensory evaluation of black tea. Journal of Sensory Studies, 19(2), 119–132.
+  doi_ou_url: https://doi.org/10.1111/j.1745-459X.2004.tb00140.x
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-11-20'
+  verifie_sur: 'DOI vérifié sur Crossref le 2026-11-20 ; résumé lu ; texte non lu'
+  reprend: 'l’alun à 0,7 g/l proposé comme étalon pour l’évaluation sensorielle du thé noir : des étalons possibles sont comparés, en temps-intensité, à une infusion de thé noir standard, et l’alun à 0,7 g/l est retenu parce qu’il est peu amer et peu acide'
+  ne_reprend_pas: 'le choix de l’alun pour le thé noir comme repère de région : un étalon de matière apparié à un produit, sans niveau sur une échelle de la fiche'
+- id: efsa2018
+  citation: EFSA Panel on Food Additives and Nutrient Sources added to Food (ANS) (2018). Re-evaluation of aluminium sulphates (E 520–523) and sodium aluminium phosphate (E 541) as food additives. EFSA Journal, 16(7), 5372.
+  doi_ou_url: https://doi.org/10.2903/j.efsa.2018.5372
+  role: alimente
+  statut_verification: vérifiée sur la source
+  verifie_le: '2026-11-20'
+  verifie_sur: 'DOI vérifié sur Crossref le 2026-11-20 ; texte en libre accès (PMC) lu en partie : résumé et identité de l’additif E 522 (section 3.1.1 : sulfate d’aluminium et de potassium dodécahydraté, AlK(SO4)2·12H2O, masse molaire 474,38 g/mol ; forme anhydre 258,21 g/mol), que l’avis rapporte d’après le règlement (UE) n° 231/2012 et le JECFA (2011) ; ces deux textes n’ont pas été ouverts'
+  reprend: 'l’identité de l’additif E 522 et la masse molaire de la forme dodécahydratée, pour déclarer la forme de l’alun du cran « nette » ; la forme anhydre apporte jusqu’à 1,8 fois plus de sel actif à masse égale (calcul sur les deux masses molaires)'
+  ne_reprend_pas: 'les évaluations de sécurité, les usages autorisés et les doses de référence'
+- id: peleg1998
+  citation: Peleg, H., Bodine, K. K. & Noble, A. C. (1998). The influence of acid on astringency of alum and phenolic compounds. Chemical Senses, 23(3), 371–378.
+  doi_ou_url: https://doi.org/10.1093/chemse/23.3.371
+  role: contraste
+  statut_verification: vérifiée sur résumé ou source secondaire
+  verifie_le: '2026-11-20'
+  verifie_sur: 'DOI vérifié sur Crossref le 2026-11-20 ; résumé lu (PubMed) ; texte non lu'
+  reprend: 'l’astringence de l’alun baisse avec un acide, alors que celle des composés phénoliques monte : l’alun ne peut pas remplacer les astringents phénoliques dans les études psychophysiques'
+  ne_reprend_pas: 'les mécanismes proposés (chélation de l’aluminium, affinité des phénols) et les concentrations'
 - id: bajec2008
   citation: 'Bajec, M. R. & Pickering, G. J. (2008). Astringency: Mechanisms and perception. Critical Reviews in Food Science and Nutrition, 48(9), 858–875.'
   doi_ou_url: https://doi.org/10.1080/10408390701724223
@@ -228,7 +271,7 @@ references:
   verifie_sur: 'extraits : aperçu public de l’édition 2011 diffusé par iTeh Standards (https://standards.iteh.ai/catalog/standards/sist/9d3b5579-aea7-40d6-9216-d4825f5a0a83/iso-3972-2011 ; l’aperçu de iso.org ne montre que les points 1 à 3) : points 5.1, 7.2, 8.1, tableaux 1, 2 et 3, relus le 2026-11-02 ; norme confirmée le 2023-09-21 ; Cor 1:2012 non lu ; texte complet non lu'
   reprend: l’eau neutre du point 5.1 et la température d’environ 20 °C (7.2 d) pour la solution d’alun et pour le cran « aucune »
   ne_reprend_pas: les solutions des saveurs de base (la norme ne traite pas l’astringence)
-etat_de_l_art: 'L’astringence se sent même entre la gencive et la lèvre, où il n’y a pas de papilles, et diminue quand on lubrifie la bouche : c’est surtout un toucher (Breslin et al., 1993 [[breslin1993]]), que Green (1993) [[green1993astr]] attribue à une hausse du frottement quand les protéines de la salive précipitent, et qui s’accumule d’une gorgée à l’autre (résumés lus). Lee et Lawless (1991) [[lee_lawless1991]] y distinguent plusieurs sous-qualités, notées pendant cinq à six minutes, et recommandent l’alun à 1 g/l comme matériau de référence ; Bajec et Pickering (2008) [[bajec2008]] en font la revue, et dans un vin modèle l’éthanol et le pH changent l’astringence (Fontoin et al., 2008 [[fontoin2008]]) (résumés lus). Des mesures de laboratoire imitent ce qui se passe en bouche (frottement, précipitation des protéines de la salive), mais une revue juge qu’aucune ne suffit seule à prédire l’astringence perçue (Wang et al., 2024 [[wang2024astr]], résumé lu). La seule méthode normalisée trouvée, ISO 14502-1:2005 [[iso14502_1]], dose les polyphénols du thé et non l’astringence (aperçu public lu) ; le temps-intensité (ASTM E1909-24 [[astm_e1909]], page de l’éditeur seulement) et la TDS (Pineau et al., 2009 [[pineau2009]], résumé lu) sont des jugements de jury. Aucune source lue ne teste l’accord entre observateurs sur des crans d’astringence. Détail : docs/bibliographie-par-type.md#groupe-gout.'
+etat_de_l_art: 'L’astringence se sent même entre la gencive et la lèvre, où il n’y a pas de papilles, et diminue quand on lubrifie la bouche : c’est surtout un toucher (Breslin et al., 1993 [[breslin1993]]), que Green (1993) [[green1993astr]] attribue à une hausse du frottement quand les protéines de la salive précipitent, et qui s’accumule d’une gorgée à l’autre (résumés lus). Lee et Lawless (1991) [[lee_lawless1991]] y distinguent plusieurs sous-qualités, notées pendant cinq à six minutes, et recommandent l’alun à 1 g/l comme matériau de référence ; Bajec et Pickering (2008) [[bajec2008]] en font la revue, et dans un vin modèle l’éthanol et le pH changent l’astringence (Fontoin et al., 2008 [[fontoin2008]]) (résumés lus). Sur les courbes de la figure 1 de Fleming et al. (2016) [[fleming2016]] (texte en libre accès lu en partie, lecture approximative), la note d’astringence d’ensemble de solutions d’alun de 1,5 à 6 g/l va d’environ 11 à environ 18 sur une échelle générale d’intensité (gLMS, où « forte » = 35 vaut pour toutes les sensations) : c’est indicatif seulement, comme les jugements de jury du temps-intensité (ASTM E1909-24 [[astm_e1909]], page de l’éditeur seulement) et de la TDS (Pineau et al., 2009 [[pineau2009]], résumé lu) ; l’alun à 0,7 g/l est proposé comme étalon pour l’évaluation sensorielle du thé noir (Drobna et al., 2004 [[drobna2004]], résumé lu), apparié à un produit, sans niveau sur l’échelle de la fiche. Des mesures de laboratoire imitent ce qui se passe en bouche (frottement, précipitation des protéines de la salive), mais une revue juge qu’aucune ne suffit seule à prédire l’astringence perçue (Wang et al., 2024 [[wang2024astr]], résumé lu) ; la seule méthode normalisée trouvée, ISO 14502-1:2005 [[iso14502_1]], dose les polyphénols du thé et non l’astringence (aperçu public lu). Aucune source lue ne teste l’accord entre observateurs sur des crans d’astringence, ni ne donne de solution jugée « à peine perceptible » ou « forte », et l’alun n’est pas interchangeable avec les tanins (un acide baisse l’astringence de l’alun et augmente celle des composés phénoliques : Peleg et al., 1998 [[peleg1998]], résumé lu). Détail : docs/bibliographie-par-type.md#groupe-gout.'
 etat_de_l_art_renvoi: docs/bibliographie-par-type.md#groupe-gout
 axiomes:
 - conceptuel: Toute qualité particulière de ce type inhère à exactement un porteur.
@@ -252,7 +295,7 @@ enonces_testables:
   epreuve: null
 cq_couvertes: CQ1, CQ2
 statut: candidat
-statut_note: 'en préparation (2026-10-20) : fiche créée le 2026-10-20, sans exemplaire ni épreuve d’accord ; tous les champs rédigés sont à relire'
+statut_note: 'en préparation (2026-11-20) : vingt champs relus en langage courant le 2026-11-20 ; restent à relire la mesure, les repères et la note d’échelle, les références, l’état de l’art, les énoncés testables, les épisodes à réaliser et ce statut ; les repères « à peine perceptible » et « forte » ne sont pas calés (des candidats à éprouver sont proposés), le cran « nette » est douteux, aucune épreuve d’accord ; six épisodes à réaliser, aucun encore réalisé'
 statut_epistemique: non éprouvé
 introduit_en: '2.8'
 modifie_en: []
@@ -260,45 +303,217 @@ remplace_par: []
 source_de_la_fiche: 'création du type : décision de l’éditeur du projet (2026-10-19, décision 5a ; 2026-10-20, série 76, premier lot, proposition « Goût », 2.2 à 2.4 et 8.2) ; famille « Goût (en bouche)
   » : décision de l’éditeur du projet (2026-10-19, décision 1) ; contenu repris de la proposition « Goût » (docs/famille-gout-proposition.md (document de travail, non publié), sections 2, 5, 6 et 7) ; le
   reste (porteur, crans, repères, facettes critiques, classement des mesures, rédaction) : choix de relecture (2026-10-19 et 2026-10-20) ; fiche créée le 2026-10-20 (série 78)'
+episodes_a_realiser:
+- id: ppp-a:ep-astringency-07
+  realisation: a_realiser
+  region_attendue: faint
+  objet: 'solution d’alun (sulfate d’aluminium et de potassium dodécahydraté) à 0,125 g/l dans l’eau neutre, vers 20 °C'
+  objet_en: 'alum solution (aluminium potassium sulphate dodecahydrate) at 0.125 g/l in neutral water, at about 20 °C'
+  preparation: 'sulfate d’aluminium et de potassium dodécahydraté de qualité alimentaire (E 522), AlK(SO4)2·12H2O ; forme, lot et qualité notés ; solution mère à 1,00 g/l pesée au centième de gramme dans l’eau neutre, plate, sans goût ni odeur, de dureté connue de préférence (ISO 3972, 5.1), vers 20 °C (7.2 d) ; dilution au huitième dans la même eau (125 ml de mère complétés à 1 l) ; préparée le jour même'
+  preparation_en: 'food-grade aluminium potassium sulphate dodecahydrate (E 522), AlK(SO4)2·12H2O; form, batch and grade noted; stock solution at 1.00 g/l weighed to the hundredth of a gram in neutral still water, tasteless and odourless, preferably of known hardness (ISO 3972, 5.1), at about 20 °C (7.2 d); diluted eightfold in the same water (125 ml of stock made up to 1 l); prepared the same day'
+  consigne: 'Prenez la gorgée, faites-la passer dans toute la bouche environ 5 s, recrachez, puis attendez 15 s sans boire. La bouche se sèche-t-elle, râpe-t-elle, se resserre-t-elle ? Pas du tout, à peine, nettement, ou fortement ? Ne jugez ni l’amer ni l’acide.'
+  consigne_en: 'Take the sip, move it around the whole mouth for about 5 s, spit it out, then wait 15 s without drinking. Does your mouth dry, feel rough or pucker? Not at all, faintly, distinctly, or strongly? Judge neither bitterness nor sourness.'
+  conditions:
+    presentation: unknown
+    lumiere: unknown
+    distance: contact
+    angle: unknown
+    duree: exam
+    nez: open
+    temperature_bouchee: ambient
+    avant: afterRinse
+    moment: residual
+    yeux: ouverts
+    yeux_en: open
+    note: 'série basse, ordre croissant : eau neutre (première prise de la séance), 0,125, 0,25, 0,50, puis 1,00 g/l ; `avant` suit cet ordre ; gorgée d’environ 15 ml, tenue environ 5 s dans toute la bouche puis recrachée dans un crachoir individuel ; jugement 15 s après avoir recraché ; rinçage à l’eau neutre vers 20 °C, puis pause de 5 min entre deux prises ; ordre croissant (l’astringence s’accumule d’une prise à l’autre) ; gobelets à code de trois chiffres, préparateur différent de l’observateur ; solution incolore ; sécurité : adultes volontaires seulement, hors mineurs, personnes enceintes ou qui allaitent ; arrêt libre dès une gêne ; six prises au plus par séance ; une seule série au-dessus de 1 g/l par jour ; solutions étiquetées, jamais confondues avec l’eau de boisson'
+    note_en: 'low series, ascending order: neutral water (first sample of the session), 0.125, 0.25, 0.50, then 1.00 g/l; `avant` follows that order; sip of about 15 ml, held about 5 s around the whole mouth then spat into an individual spittoon; judgement 15 s after spitting; rinse with neutral water at about 20 °C, then a 5 min break between two samples; ascending order (astringency builds up from one sample to the next); cups with a three-digit code, preparer different from the observer; colourless solution; safety: adult volunteers only, not minors, pregnant or breastfeeding people; free to stop at the first discomfort; six samples at most per session; one series above 1 g/l per day only; solutions labelled, never mixed up with drinking water'
+  doute: oui
+  motif_doute: 'aucune source lue ne place 0,125 g/l à un cran ; cette dilution peut ne pas être distinguée de l’eau'
+  motif_doute_en: 'no source read places 0.125 g/l at a scale step; this dilution may not be distinguished from water'
+  note: 'candidate de la série de calage du cran « à peine perceptible » (facteur 2 à partir de 1 g/l) ; critères écrits dans la note de l’échelle'
+  note_en: 'candidate in the calibration series for the “faint” step (factor of 2 from 1 g/l); criteria written in the scale note'
+  texte_fr: 'Une solution d’alun à 0,125 g/l : la bouche se sèche à peine (prédiction, à éprouver ; peut aussi n’être pas distinguée de l’eau).'
+  texte_en: 'A 0.125 g/l alum solution: the mouth dries faintly (prediction, to be tested; it may also not be distinguished from water).'
+- id: ppp-a:ep-astringency-08
+  realisation: a_realiser
+  region_attendue: faint
+  objet: 'solution d’alun (sulfate d’aluminium et de potassium dodécahydraté) à 0,25 g/l dans l’eau neutre, vers 20 °C'
+  objet_en: 'alum solution (aluminium potassium sulphate dodecahydrate) at 0.25 g/l in neutral water, at about 20 °C'
+  preparation: 'comme ppp-a:ep-astringency-07 ; dilution au quart de la solution mère à 1,00 g/l dans la même eau (250 ml de mère complétés à 1 l)'
+  preparation_en: 'as in ppp-a:ep-astringency-07; stock solution at 1.00 g/l diluted fourfold in the same water (250 ml of stock made up to 1 l)'
+  consigne: 'Prenez la gorgée, faites-la passer dans toute la bouche environ 5 s, recrachez, puis attendez 15 s sans boire. La bouche se sèche-t-elle, râpe-t-elle, se resserre-t-elle ? Pas du tout, à peine, nettement, ou fortement ? Ne jugez ni l’amer ni l’acide.'
+  consigne_en: 'Take the sip, move it around the whole mouth for about 5 s, spit it out, then wait 15 s without drinking. Does your mouth dry, feel rough or pucker? Not at all, faintly, distinctly, or strongly? Judge neither bitterness nor sourness.'
+  conditions:
+    presentation: unknown
+    lumiere: unknown
+    distance: contact
+    angle: unknown
+    duree: exam
+    nez: open
+    temperature_bouchee: ambient
+    avant: afterRinse
+    moment: residual
+    yeux: ouverts
+    yeux_en: open
+    note: 'série basse, ordre croissant : eau neutre (première prise de la séance), 0,125, 0,25, 0,50, puis 1,00 g/l ; `avant` suit cet ordre ; gorgée d’environ 15 ml, tenue environ 5 s dans toute la bouche puis recrachée dans un crachoir individuel ; jugement 15 s après avoir recraché ; rinçage à l’eau neutre vers 20 °C, puis pause de 5 min entre deux prises ; ordre croissant (l’astringence s’accumule d’une prise à l’autre) ; gobelets à code de trois chiffres, préparateur différent de l’observateur ; solution incolore ; sécurité : adultes volontaires seulement, hors mineurs, personnes enceintes ou qui allaitent ; arrêt libre dès une gêne ; six prises au plus par séance ; une seule série au-dessus de 1 g/l par jour ; solutions étiquetées, jamais confondues avec l’eau de boisson'
+    note_en: 'low series, ascending order: neutral water (first sample of the session), 0.125, 0.25, 0.50, then 1.00 g/l; `avant` follows that order; sip of about 15 ml, held about 5 s around the whole mouth then spat into an individual spittoon; judgement 15 s after spitting; rinse with neutral water at about 20 °C, then a 5 min break between two samples; ascending order (astringency builds up from one sample to the next); cups with a three-digit code, preparer different from the observer; colourless solution; safety: adult volunteers only, not minors, pregnant or breastfeeding people; free to stop at the first discomfort; six samples at most per session; one series above 1 g/l per day only; solutions labelled, never mixed up with drinking water'
+  doute: oui
+  motif_doute: 'aucune source lue ne place 0,25 g/l à un cran ; « aucune » et « nette » restent possibles'
+  motif_doute_en: 'no source read places 0.25 g/l at a scale step; “none” and “distinct” remain possible'
+  note: 'candidate possible du cran « à peine perceptible », selon les critères de la note de l’échelle'
+  note_en: 'possible candidate for the “faint” step, according to the criteria in the scale note'
+  texte_fr: 'Une solution d’alun à 0,25 g/l : la bouche se sèche à peine (prédiction, à éprouver).'
+  texte_en: 'A 0.25 g/l alum solution: the mouth dries faintly (prediction, to be tested).'
+- id: ppp-a:ep-astringency-09
+  realisation: a_realiser
+  region_attendue: faint
+  objet: 'solution d’alun (sulfate d’aluminium et de potassium dodécahydraté) à 0,50 g/l dans l’eau neutre, vers 20 °C'
+  objet_en: 'alum solution (aluminium potassium sulphate dodecahydrate) at 0.50 g/l in neutral water, at about 20 °C'
+  preparation: 'comme ppp-a:ep-astringency-07 ; dilution de moitié de la solution mère à 1,00 g/l dans la même eau (500 ml de mère complétés à 1 l)'
+  preparation_en: 'as in ppp-a:ep-astringency-07; stock solution at 1.00 g/l diluted twofold in the same water (500 ml of stock made up to 1 l)'
+  consigne: 'Prenez la gorgée, faites-la passer dans toute la bouche environ 5 s, recrachez, puis attendez 15 s sans boire. La bouche se sèche-t-elle, râpe-t-elle, se resserre-t-elle ? Pas du tout, à peine, nettement, ou fortement ? Ne jugez ni l’amer ni l’acide.'
+  consigne_en: 'Take the sip, move it around the whole mouth for about 5 s, spit it out, then wait 15 s without drinking. Does your mouth dry, feel rough or pucker? Not at all, faintly, distinctly, or strongly? Judge neither bitterness nor sourness.'
+  conditions:
+    presentation: unknown
+    lumiere: unknown
+    distance: contact
+    angle: unknown
+    duree: exam
+    nez: open
+    temperature_bouchee: ambient
+    avant: afterRinse
+    moment: residual
+    yeux: ouverts
+    yeux_en: open
+    note: 'série basse, ordre croissant : eau neutre (première prise de la séance), 0,125, 0,25, 0,50, puis 1,00 g/l ; `avant` suit cet ordre ; gorgée d’environ 15 ml, tenue environ 5 s dans toute la bouche puis recrachée dans un crachoir individuel ; jugement 15 s après avoir recraché ; rinçage à l’eau neutre vers 20 °C, puis pause de 5 min entre deux prises ; ordre croissant (l’astringence s’accumule d’une prise à l’autre) ; gobelets à code de trois chiffres, préparateur différent de l’observateur ; solution incolore ; sécurité : adultes volontaires seulement, hors mineurs, personnes enceintes ou qui allaitent ; arrêt libre dès une gêne ; six prises au plus par séance ; une seule série au-dessus de 1 g/l par jour ; solutions étiquetées, jamais confondues avec l’eau de boisson'
+    note_en: 'low series, ascending order: neutral water (first sample of the session), 0.125, 0.25, 0.50, then 1.00 g/l; `avant` follows that order; sip of about 15 ml, held about 5 s around the whole mouth then spat into an individual spittoon; judgement 15 s after spitting; rinse with neutral water at about 20 °C, then a 5 min break between two samples; ascending order (astringency builds up from one sample to the next); cups with a three-digit code, preparer different from the observer; colourless solution; safety: adult volunteers only, not minors, pregnant or breastfeeding people; free to stop at the first discomfort; six samples at most per session; one series above 1 g/l per day only; solutions labelled, never mixed up with drinking water'
+  doute: oui
+  motif_doute: 'à mi-chemin du 1 g/l provisoire de « nette » : « nette » est possible ; le 0,7 g/l de Drobna et al. (2004, résumé), non intercalé ici, tombe entre 0,50 et 1,00 g/l'
+  motif_doute_en: 'halfway to the provisional 1 g/l of “distinct”: “distinct” is possible; the 0.7 g/l of Drobna et al. (2004, abstract), not inserted here, falls between 0.50 and 1.00 g/l'
+  note: 'point de la série de calage ; peut servir à recaler « nette » si le 1 g/l n’est pas jugé « nette »'
+  note_en: 'point in the calibration series; may help reset “distinct” if 1 g/l is not judged “distinct”'
+  texte_fr: 'Une solution d’alun à 0,50 g/l : la bouche se sèche à peine (prédiction prudente, à éprouver ; « nette » possible).'
+  texte_en: 'A 0.50 g/l alum solution: the mouth dries faintly (cautious prediction, to be tested; “distinct” is possible).'
+- id: ppp-a:ep-astringency-10
+  realisation: a_realiser
+  region_attendue: distinct
+  objet: 'solution d’alun (sulfate d’aluminium et de potassium dodécahydraté) à 1,50 g/l dans l’eau neutre, vers 20 °C'
+  objet_en: 'alum solution (aluminium potassium sulphate dodecahydrate) at 1.50 g/l in neutral water, at about 20 °C'
+  preparation: 'sulfate d’aluminium et de potassium dodécahydraté de qualité alimentaire (E 522), AlK(SO4)2·12H2O ; forme, lot et qualité notés ; 1,50 g pesés au centième de gramme pour 1 l de l’eau neutre, plate, sans goût ni odeur, de dureté connue de préférence (ISO 3972, 5.1), vers 20 °C ; préparée le jour même'
+  preparation_en: 'food-grade aluminium potassium sulphate dodecahydrate (E 522), AlK(SO4)2·12H2O; form, batch and grade noted; 1.50 g weighed to the hundredth of a gram for 1 l of neutral still water, tasteless and odourless, preferably of known hardness (ISO 3972, 5.1), at about 20 °C; prepared the same day'
+  consigne: 'Prenez la gorgée, faites-la passer dans toute la bouche environ 5 s, recrachez, puis attendez 15 s sans boire. La bouche se sèche-t-elle, râpe-t-elle, se resserre-t-elle ? Pas du tout, à peine, nettement, ou fortement ? Ne jugez ni l’amer ni l’acide.'
+  consigne_en: 'Take the sip, move it around the whole mouth for about 5 s, spit it out, then wait 15 s without drinking. Does your mouth dry, feel rough or pucker? Not at all, faintly, distinctly, or strongly? Judge neither bitterness nor sourness.'
+  conditions:
+    presentation: unknown
+    lumiere: unknown
+    distance: contact
+    angle: unknown
+    duree: exam
+    nez: open
+    temperature_bouchee: ambient
+    avant: afterRinse
+    moment: residual
+    yeux: ouverts
+    yeux_en: open
+    note: 'série haute, ordre croissant : 1,00, 1,50, puis 3,00 g/l ; `avant` suit cet ordre ; concentration la plus basse de la série publiée de Fleming et al. (2016), reprise ici avec 15 ml recrachés dans l’eau d’ISO 3972, sans son protocole ; gorgée d’environ 15 ml, tenue environ 5 s dans toute la bouche puis recrachée dans un crachoir individuel ; jugement 15 s après avoir recraché ; rinçage à l’eau neutre vers 20 °C, puis pause de 5 min entre deux prises ; ordre croissant (l’astringence s’accumule d’une prise à l’autre) ; gobelets à code de trois chiffres, préparateur différent de l’observateur ; solution incolore ; sécurité : adultes volontaires seulement, hors mineurs, personnes enceintes ou qui allaitent ; arrêt libre dès une gêne ; six prises au plus par séance ; une seule série au-dessus de 1 g/l par jour ; solutions étiquetées, jamais confondues avec l’eau de boisson'
+    note_en: 'high series, ascending order: 1.00, 1.50, then 3.00 g/l; `avant` follows that order; lowest concentration of the published series of Fleming et al. (2016), taken here as 15 ml spat out in ISO 3972 water, without its protocol; sip of about 15 ml, held about 5 s around the whole mouth then spat into an individual spittoon; judgement 15 s after spitting; rinse with neutral water at about 20 °C, then a 5 min break between two samples; ascending order (astringency builds up from one sample to the next); cups with a three-digit code, preparer different from the observer; colourless solution; safety: adult volunteers only, not minors, pregnant or breastfeeding people; free to stop at the first discomfort; six samples at most per session; one series above 1 g/l per day only; solutions labelled, never mixed up with drinking water'
+  doute: oui
+  motif_doute: '1,50 g/l est une concentration d’une série publiée (Fleming et al., 2016), non un cran de la fiche ; son cran n’est pas connu : « nette » est une supposition'
+  motif_doute_en: '1.50 g/l is a concentration from a published series (Fleming et al., 2016), not a step of the entry; its step is not known: “distinct” is a supposition'
+  note: 'premier point au-dessus de 1 g/l ; contrôle pour « nette » ; région attendue « nette » par proximité, c’est une supposition'
+  note_en: 'first point above 1 g/l; control for “distinct”; expected region “distinct” by proximity, this is a supposition'
+  texte_fr: 'Une solution d’alun à 1,50 g/l : la bouche se sèche nettement (supposition, à éprouver).'
+  texte_en: 'A 1.50 g/l alum solution: the mouth dries distinctly (supposition, to be tested).'
+- id: ppp-a:ep-astringency-11
+  realisation: a_realiser
+  region_attendue: strong
+  objet: 'solution d’alun (sulfate d’aluminium et de potassium dodécahydraté) à 3,00 g/l dans l’eau neutre, vers 20 °C'
+  objet_en: 'alum solution (aluminium potassium sulphate dodecahydrate) at 3.00 g/l in neutral water, at about 20 °C'
+  preparation: 'sulfate d’aluminium et de potassium dodécahydraté de qualité alimentaire (E 522), AlK(SO4)2·12H2O ; forme, lot et qualité notés ; 3,00 g pesés au centième de gramme pour 1 l de l’eau neutre, plate, sans goût ni odeur, de dureté connue de préférence (ISO 3972, 5.1), vers 20 °C ; préparée le jour même'
+  preparation_en: 'food-grade aluminium potassium sulphate dodecahydrate (E 522), AlK(SO4)2·12H2O; form, batch and grade noted; 3.00 g weighed to the hundredth of a gram for 1 l of neutral still water, tasteless and odourless, preferably of known hardness (ISO 3972, 5.1), at about 20 °C; prepared the same day'
+  consigne: 'Prenez la gorgée, faites-la passer dans toute la bouche environ 5 s, recrachez, puis attendez 15 s sans boire. La bouche se sèche-t-elle, râpe-t-elle, se resserre-t-elle ? Pas du tout, à peine, nettement, ou fortement ? Ne jugez ni l’amer ni l’acide.'
+  consigne_en: 'Take the sip, move it around the whole mouth for about 5 s, spit it out, then wait 15 s without drinking. Does your mouth dry, feel rough or pucker? Not at all, faintly, distinctly, or strongly? Judge neither bitterness nor sourness.'
+  conditions:
+    presentation: unknown
+    lumiere: unknown
+    distance: contact
+    angle: unknown
+    duree: exam
+    nez: open
+    temperature_bouchee: ambient
+    avant: afterRinse
+    moment: residual
+    yeux: ouverts
+    yeux_en: open
+    note: 'série haute, ordre croissant : 1,00, 1,50, puis 3,00 g/l ; `avant` suit cet ordre ; dernière prise de sa séance ; concentration de la série publiée de Fleming et al. (2016), sans son protocole ; gorgée d’environ 15 ml, tenue environ 5 s dans toute la bouche puis recrachée dans un crachoir individuel ; jugement 15 s après avoir recraché ; rinçage à l’eau neutre vers 20 °C, puis pause de 5 min entre deux prises ; ordre croissant (l’astringence s’accumule d’une prise à l’autre) ; gobelets à code de trois chiffres, préparateur différent de l’observateur ; solution incolore ; sécurité : adultes volontaires seulement, hors mineurs, personnes enceintes ou qui allaitent ; arrêt libre dès une gêne ; six prises au plus par séance ; une seule série au-dessus de 1 g/l par jour ; solutions étiquetées, jamais confondues avec l’eau de boisson'
+    note_en: 'high series, ascending order: 1.00, 1.50, then 3.00 g/l; `avant` follows that order; last sample of its session; concentration from the published series of Fleming et al. (2016), without its protocol; sip of about 15 ml, held about 5 s around the whole mouth then spat into an individual spittoon; judgement 15 s after spitting; rinse with neutral water at about 20 °C, then a 5 min break between two samples; ascending order (astringency builds up from one sample to the next); cups with a three-digit code, preparer different from the observer; colourless solution; safety: adult volunteers only, not minors, pregnant or breastfeeding people; free to stop at the first discomfort; six samples at most per session; one series above 1 g/l per day only; solutions labelled, never mixed up with drinking water'
+  doute: oui
+  motif_doute: 'aucune source lue ne place 3,00 g/l au cran « forte » de la fiche ; c’est une concentration d’une série publiée, pas un libellé de cran ; « nette » reste possible'
+  motif_doute_en: 'no source read places 3.00 g/l at the “strong” step of the entry; it is a concentration from a published series, not a step label; “distinct” remains possible'
+  note: 'candidate principale proposée du cran « forte », selon les critères de la note de l’échelle ; supposition'
+  note_en: 'proposed main candidate for the “strong” step, according to the criteria in the scale note; supposition'
+  texte_fr: 'Une solution d’alun à 3,00 g/l : la bouche se sèche fortement (supposition, à éprouver).'
+  texte_en: 'A 3.00 g/l alum solution: the mouth dries strongly (supposition, to be tested).'
+- id: ppp-a:ep-astringency-12
+  realisation: a_realiser
+  region_attendue: strong
+  objet: 'solution d’alun (sulfate d’aluminium et de potassium dodécahydraté) à 4,50 g/l dans l’eau neutre, vers 20 °C'
+  objet_en: 'alum solution (aluminium potassium sulphate dodecahydrate) at 4.50 g/l in neutral water, at about 20 °C'
+  preparation: 'sulfate d’aluminium et de potassium dodécahydraté de qualité alimentaire (E 522), AlK(SO4)2·12H2O ; forme, lot et qualité notés ; 4,50 g pesés au centième de gramme pour 1 l de l’eau neutre, plate, sans goût ni odeur, de dureté connue de préférence (ISO 3972, 5.1), vers 20 °C ; préparée le jour même'
+  preparation_en: 'food-grade aluminium potassium sulphate dodecahydrate (E 522), AlK(SO4)2·12H2O; form, batch and grade noted; 4.50 g weighed to the hundredth of a gram for 1 l of neutral still water, tasteless and odourless, preferably of known hardness (ISO 3972, 5.1), at about 20 °C; prepared the same day'
+  consigne: 'Prenez la gorgée, faites-la passer dans toute la bouche environ 5 s, recrachez, puis attendez 15 s sans boire. La bouche se sèche-t-elle, râpe-t-elle, se resserre-t-elle ? Pas du tout, à peine, nettement, ou fortement ? Ne jugez ni l’amer ni l’acide.'
+  consigne_en: 'Take the sip, move it around the whole mouth for about 5 s, spit it out, then wait 15 s without drinking. Does your mouth dry, feel rough or pucker? Not at all, faintly, distinctly, or strongly? Judge neither bitterness nor sourness.'
+  conditions:
+    presentation: unknown
+    lumiere: unknown
+    distance: contact
+    angle: unknown
+    duree: exam
+    nez: open
+    temperature_bouchee: ambient
+    avant: afterRinse
+    moment: residual
+    yeux: ouverts
+    yeux_en: open
+    note: 'à ne présenter que si 3,00 g/l n’a pas suffi aux critères de la note de l’échelle, un autre jour (une seule série au-dessus de 1 g/l par jour), en dernière prise de sa séance ; ordre croissant ; 6,00 g/l reste en réserve, non déposé, seulement si 4,50 g/l ne suffit pas, avec le même protocole ; gorgée d’environ 15 ml, tenue environ 5 s dans toute la bouche puis recrachée dans un crachoir individuel ; jugement 15 s après avoir recraché ; rinçage à l’eau neutre vers 20 °C, puis pause de 5 min entre deux prises ; ordre croissant (l’astringence s’accumule d’une prise à l’autre) ; gobelets à code de trois chiffres, préparateur différent de l’observateur ; solution incolore ; sécurité : adultes volontaires seulement, hors mineurs, personnes enceintes ou qui allaitent ; arrêt libre dès une gêne ; six prises au plus par séance ; une seule série au-dessus de 1 g/l par jour ; solutions étiquetées, jamais confondues avec l’eau de boisson'
+    note_en: 'to be presented only if 3.00 g/l did not meet the criteria in the scale note, on another day (one series above 1 g/l per day only), as the last sample of its session; ascending order; 6.00 g/l is kept in reserve, not filed, only if 4.50 g/l is not enough, under the same protocol; sip of about 15 ml, held about 5 s around the whole mouth then spat into an individual spittoon; judgement 15 s after spitting; rinse with neutral water at about 20 °C, then a 5 min break between two samples; ascending order (astringency builds up from one sample to the next); cups with a three-digit code, preparer different from the observer; colourless solution; safety: adult volunteers only, not minors, pregnant or breastfeeding people; free to stop at the first discomfort; six samples at most per session; one series above 1 g/l per day only; solutions labelled, never mixed up with drinking water'
+  doute: oui
+  motif_doute: 'concentration d’une série publiée (Fleming et al., 2016), non un cran de la fiche ; séance conditionnelle ; effet local plus marqué attendu, non mesuré ici'
+  motif_doute_en: 'concentration from a published series (Fleming et al., 2016), not a step of the entry; conditional session; a stronger local effect is expected, not measured here'
+  note: 'seconde candidate du cran « forte », selon les critères de la note de l’échelle ; supposition ; 6,00 g/l reste en réserve'
+  note_en: 'second candidate for the “strong” step, according to the criteria in the scale note; supposition; 6.00 g/l is kept in reserve'
+  texte_fr: 'Une solution d’alun à 4,50 g/l : la bouche se sèche fortement (supposition, à éprouver ; séance seulement si 3,00 g/l n’y suffit pas).'
+  texte_en: 'A 4.50 g/l alum solution: the mouth dries strongly (supposition, to be tested; session only if 3.00 g/l is not enough).'
 manques:
-- 'exemplaires : aucun. Décidé le 2026-10-19 : pas d’exemplaire pour le goût dans la première version, des repères de région à la place. Si des exemples sont cherchés plus tard, ce seront des objets publics seulement (produits identifiés, sans marque citée), jamais des objets privés'
+- 'exemplaires : aucun. Décidé le 2026-10-19 : pas d’exemplaire pour le goût dans la première version, des repères de région à la place. Si des exemples sont cherchés plus tard, ce seront des objets publics seulement (produits identifiés, sans marque citée), jamais des objets privés ; six épisodes « à réaliser » (episodes_a_realiser), des solutions d’alun, portent le calage des repères : ils ne sont pas des exemplaires d’aliments et aucun n’est réalisé'
 - 'épreuve d’accord à faire : portions du même lot, au même moment, repères de région goûtés avant de juger (proposition « Goût »)'
-- 'repères des crans « à peine perceptible » et « forte » à caler ; cran de l’alun à 1 g/l provisoire (« nette », marqué `doute: oui`), à caler avant l’épreuve d’accord : la source dit « pronounced », « forte » reste possible (choix de relecture (2026-10-20)) ; forme de l’alun à déclarer (choix du 2026-11-02)'
+- 'repère « à peine perceptible » : non calé ; aucune source lue ne donne de solution (alun ou autre) jugée « à peine perceptible » ; candidats, à éprouver : dilutions à 0,125, 0,25 et 0,50 g/l de la solution à 1 g/l (épisodes 07 à 09) ; critères de décision dans la note de l’échelle ; effectif des observateurs du calage à fixer avant la séance (choix de relecture (2026-11-20))'
+- 'repère « forte » : non calé ; aucune source lue ne place une concentration d’alun à ce cran ; candidats, à éprouver : 3,00 g/l, puis 4,50 g/l au besoin (épisodes 11 et 12), 6,00 g/l en réserve, non déposé ; 1,50 g/l (épisode 10) sert de contrôle pour « nette » ; la lecture approximative des courbes de Fleming et al. (2016) (environ 11 à 18 sur le gLMS pour l’alun de 1,5 à 6 g/l) n’est qu’indicative, sur une échelle générale, sans lien établi avec les régions de la fiche : elle laisse penser que « forte » pourrait demander plus de 4,50 g/l (supposition, non un fait) ; il se peut qu’aucune de ces concentrations ne soit jugée « forte » par les observateurs (choix de relecture (2026-11-20))'
+- 'lecture de la figure 1 de Fleming et al. (2016) à refaire : valeurs d’alun lues approximativement sur les courbes (astringence d’ensemble, moyennes du groupe) ; les moyennes de chaque point ne sont pas transcrites dans le texte lu ; échelle générale d’intensité, donc indicative seulement ; discussion de l’article non lue (choix de relecture (2026-11-20))'
+- 'cran « nette » (alun à 1 g/l) douteux, marqué `doute: oui` : gardé de préférence à « forte » (« pronounced » dans le résumé de Lee et Lawless ; texte non lu), mais 1 g/l est sous la plage testée par Fleming et al. (2016) ; forme de l’alun : choix de protocole (dodécahydraté de qualité alimentaire, E 522, d’après l’avis de l’EFSA de 2018), non donné par les sources lues, à confirmer par l’épreuve d’accord (choix de relecture (2026-11-20)) ; le texte de Lee et Lawless (1991) pourrait la donner'
+- 'acide tannique et vin tannique : non proposés à goûter, hors épisodes (substance non alimentaire d’un côté ; de l’autre alcool, et aucune source lue ne place un vin à « forte ») ; l’alun et les tanins ne sont pas interchangeables (Peleg et al., 1998) : un repère d’alun peut mal représenter un thé ou un vin (choix de relecture (2026-11-20))'
+- 'relation avec l’épaisseur en bouche ou la dureté en bouche : aucune écrite ; aucune source lue ne la soutient avec un type de relation du patron (le résumé de Smith et al., 1996, seul lu, dit que l’épaississement d’une solution de tanin baisse l’astringence jugée ; Gawel et al., 2000, texte en libre accès lu en partie, non en entier, listent les sensations comme distinctes) ; à trancher par une relecture humaine (choix de relecture (2026-11-20))'
 - 'mesures physiques de l’astringence (frottement, précipitation des protéines salivaires) : non lues'
 bloque_par: []
 a_relire:
-- label_fr
-- label_en
-- labels_alternatifs
-- labels_alternatifs_en
-- note_label_alternatif
-- strate
-- définition
-- question_attentionnelle
-- contre_exemple
-- grandeur_physique_homonyme
 - mesure
-- mode_de_presentation
-- conditions_critiques
-- note_conditions
-- porteur
-- note_porteur
-- condition_NA
 - espace_valeurs
 - note_echelle
-- identite
-- relations
 - references
 - etat_de_l_art
-- nanay
-- transfert
 - enonces_testables
 - statut_note
+- episodes_a_realiser
 remarque:
+- 'série 119 bis (choix de relecture (2026-11-20), corrections de la série 119) : phrase « entre faible et modérée » revenue dans `motif_doute` du repère « nette » (FR, EN) remplacée par la lecture approximative de la figure 1 de Fleming et al. (2016), indicative ; « forte » : candidats 3,00 puis 4,50 g/l, 6,00 g/l en réserve, 1,50 g/l contrôle de « nette », plus aucune phrase sur un 1 g/l qui relèverait de « forte » ; régions ordonnées entre elles, non rapportées aux crans de l’échelle générale ; critère de « nette » recalable sur la concentration qui y répond ; manques complété ; à relire'
+- 'série 119 (choix de relecture (2026-11-20), repères candidats et épisodes) : forme de l’alun déclarée comme choix de protocole (dodécahydraté de qualité alimentaire, E 522 ; identité et masse molaire vérifiées sur l’avis de l’EFSA 2018, texte lu en partie), non donnée par les sources lues ; « à peine perceptible » et « forte » : des candidats à éprouver (0,125, 0,25, 0,50 g/l ; 3,00, 4,50 g/l, 6,00 g/l en réserve ; 1,50 g/l contrôle de « nette » : corrigé en 119 bis), sans préparation déclarée dans le repère de région, pour qu’une valeur sans source ne compte pas comme repère calé ; critères de décision écrits dans la note de l’échelle ; six épisodes « à réaliser » ajoutés (07 à 12 : les épisodes 01 à 06 d’un document de travail ne sont pas dans le dépôt) ; acide tannique et vin tannique exclus des épisodes ; références ajoutées : EFSA 2018, Peleg et al. 1998 ; à relire'
+- 'série 118 bis (choix de relecture (2026-11-20), corrections de la série 118) : citation de Fleming et al. (2016) complétée (41(7), 601–610, vérifiés sur PubMed et PMC) ; Drobna et al. (2004) : formulation corrigée (« étalon proposé pour l’évaluation sensorielle du thé noir ») ; lecture de Fleming reformulée : lecture approximative de la figure 1 (astringence d’ensemble, gLMS), indicative seulement, plus aucune formule qui place « forte » au-dessus de 6 g/l ; lecture à refaire (manques) ; à relire'
+- 'série 118 (choix de relecture (2026-11-20), repères et relecture explicative) : cran « nette » gardé pour l’alun à 1 g/l (« pronounced » ne dit pas « fort » ; lecture approximative de la figure 1 de Fleming et al., 2016, indicative seulement) avec `doute: oui` et un motif mis à jour ; forme de l’alun toujours non déclarée par une source lue ; repères « à peine perceptible » et « forte » non calés (aucune source lue ne donne de solution) ; échelle étiquetée et alun du thé noir classés non retenus ; relation avec l’épaisseur ou la dureté en bouche : aucune écrite ; vingt champs relus en langage courant ; la fiche reste en préparation'
 - 'série 116 (choix de relecture (2026-11-17), préparation de la relecture explicative) : état de l’art ramené à cinq phrases avec le statut de lecture de chaque source ; revue de Wang et al. (2024) ajoutée (résumé lu) ; mesures de laboratoire classées non retenues (aucune norme) ; renvois internes retirés de note_echelle et note_conditions ; repères « à peine perceptible » et « forte » toujours à caler ; à relire'
 - 'série 78 bis (choix de relecture (2026-10-20), corrections de relecture) : cran « nette » de l’alun provisoire, « forte » possible (repère, note_echelle, manques) ; à relire'
 - 'série 90 (choix de relecture (2026-11-02), suivant la décision de l’éditeur du projet (2026-11-02) : « B : les repères de région (solutions ISO 3972, alun 1 g/l) ») : eau et alun à 1 g/l calés (Lee et Lawless 1991, résumé relu ; eau et température d’ISO 3972, ajoutée aux références) ; à relire'
 relecture_explicative:
-  date: null
-  champs: []
+  date: '2026-11-20'
+  champs:
+  - 'label_fr, label_en, labels_alternatifs, labels_alternatifs_en, note_label_alternatif, strate, définition, question_attentionnelle, contre_exemple, grandeur_physique_homonyme, mode_de_presentation, conditions_critiques, note_conditions, porteur, note_porteur, condition_NA, identite, relations, nanay, transfert : relus en langage courant le 2026-11-20 (choix de relecture (2026-11-20)) ; une seule correction de fond : dans grandeur_physique_homonyme, la norme de dosage des polyphénols ne vise que le thé et n’est plus citée pour le vin ; neutralité vérifiée (aucun mot d’appréciation dans le label, les régions ou la définition) ; distinction avec la sécheresse, le râpeux et l’amer vérifiée dans la définition, le contre-exemple et l’identité ; relecture faite sans lecteur humain : à confirmer par une relecture humaine'
   a_reconfirmer: []
