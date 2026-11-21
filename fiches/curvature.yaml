@@ -42,6 +42,12 @@ conditions_critiques:
 - angle
 - distance
 note_conditions: 'à la vue, vu de biais, un cercle paraît une ellipse et une courbe peut paraître droite ; de loin, une courbe large paraît droite (le repère de `slightlyCurved` dit « vu de près ») : l’angle et la distance sont critiques. Au toucher, la distance vaut toujours `contact` et l’angle est sans objet (on suit le bord du bout des doigts, geste `contourFollowing`) : ils restent déclarés critiques, et une assertion tactile n’est pas « non tranché » pour autant (spec §9.7 H, règles 3 et 4, décision de l’éditeur du projet du 2026-10-12, T22, option (b)).'
+ancrage:
+  dimension: espace
+  dimension_en: space
+  note_ancrage: 'l’écart d’un bord, d’un trait ou d’une surface à la droite ou au plan est une propriété de leur tracé dans l’espace, à la vue comme sous la main'
+  note_ancrage_en: 'the departure of an edge, a line or a surface from the straight line or the plane is a property of its course in space, to sight as under the hand'
+  empreinte: 'f08d7b8e'
 porteur: un tronçon de bord, de trait ou de surface, d’un objet ou d’une partie, désigné dans l’assertion (jugement local, note_porteur)
 note_porteur: 'La courbure se juge localement, sur le tronçon que désigne l’assertion, pas sur toute la silhouette : un contour dont la courbure change (un S, un vase au col droit et à la panse ronde) reçoit
   une assertion par tronçon (`#col`, `#panse`), sans moyenne (A5 : une assertion, un porteur). Un tronçon qui paraît à la fois droit et courbe est à découper. Position de travail, révisable par l’éditeur du projet (T30).'

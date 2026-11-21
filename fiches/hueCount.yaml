@@ -41,6 +41,12 @@ conditions_critiques:
 - presentation
 - distance
 note_conditions: de loin, des petites taches de teintes différentes se mêlent et le nombre vu baisse ; sur un écran ou un imprimé, les teintes peuvent différer
+ancrage:
+  dimension: espace
+  dimension_en: space
+  note_ancrage: 'les teintes se comptent dans une zone ou une composition étendue, saisie d’un coup d’œil'
+  note_ancrage_en: 'the hues are counted in an extended area or composition, grasped at a glance'
+  empreinte: '138c9b9b'
 porteur: une zone ou une composition
 arité: 1
 condition_NA: 'zone achromatique (blanc, gris, noir) : aucune teinte.'

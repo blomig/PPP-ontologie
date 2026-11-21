@@ -43,6 +43,12 @@ conditions_critiques:
 - presentation
 - distance
 note_conditions: sur un écran ou un imprimé, les teintes peuvent différer ; de loin, des petites taches de teintes différentes se mêlent
+ancrage:
+  dimension: espace
+  dimension_en: space
+  note_ancrage: 'l’éventail se lit entre les teintes réparties dans une zone ou une composition étendue'
+  note_ancrage_en: 'the range is read between the hues spread over an extended area or composition'
+  empreinte: 'e99b0c78'
 porteur: une zone ou une composition
 arité: 1
 condition_NA: zone achromatique (blanc, gris, noir).

@@ -54,6 +54,12 @@ conditions_critiques:
 - angle
 note_conditions: 'l’impression de voir dans la matière dépend de la lumière et de l’angle de vue ; sur une photo dont la lumière et l’angle de prise de vue sont inconnus : « non tranché » (spec §9.7 H,
   règle 4 ; A5)'
+ancrage:
+  dimension: espace
+  dimension_en: space
+  note_ancrage: 'l’impression de voir sous la surface, dans l’épaisseur, est une configuration en profondeur'
+  note_ancrage_en: 'the impression of seeing under the surface, into the thickness, is a configuration in depth'
+  empreinte: 'f3905eb3'
 porteur: une partie ou un objet vu avec son épaisseur (une glaçure, un vernis, un bloc de pierre)
 arité: 1
 condition_NA: 'porteur sans matière (une lumière, une ombre). Une matière opaque est applicable : le regard s’arrête à sa surface, elle est dans la région « en surface » (repère « une pierre opaque »),

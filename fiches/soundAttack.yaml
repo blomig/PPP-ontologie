@@ -79,6 +79,12 @@ note_conditions: 'l’attaque dépend de la façon dont le son est produit (face
   1981 ; Gordon, 1987) [[vos_rasch1981]] [[gordon1987]]. Un enregistrement doit commencer avant le son : un début coupé retire une partie de la montée. Piège : pour un son frappé suivi d’une résonance,
   l’oreille juge la raideur de l’attaque plus par la façon dont le son s’éteint que par la façon dont il apparaît (Chion, 1983, art. 97) [[chion1983]] ; on s’efforce de juger le début du son, et la résonance
   à part.'
+ancrage:
+  dimension: temps
+  dimension_en: time
+  note_ancrage: 'la façon dont le son commence, d’un coup ou peu à peu, n’existe que dans le déroulement de son début'
+  note_ancrage_en: 'the way the sound begins, at once or little by little, exists only in the unfolding of its beginning'
+  empreinte: 'c47ed232'
 porteur: un son qui commence pendant l’écoute, produit par un objet, un appareil ou une voix, de la façon déclarée (facette `production`)
 arité: 1
 condition_NA: son déjà en cours quand l’écoute commence (une machine en marche), ou rien ne sonne de la façon déclarée (un objet qui ne sonne pas sous le geste déclaré).

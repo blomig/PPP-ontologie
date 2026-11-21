@@ -77,6 +77,15 @@ conditions_critiques:
 - exposition
 note_conditions: la distance du nez (facette `distance`) et le temps passé dans l’odeur avant de juger (facette `exposition`) sont critiques (spec §9.7 H, règle 10) ; l’air (pièce close ou aérée) est noté
   dans l’épisode, comme les autres odeurs présentes et l’état de l’observateur.
+ancrage:
+  dimension: temps
+  dimension_en: time
+  note_ancrage: 'la force de l’odeur se sent sur le déroulement de l’inspiration et baisse quand on la sent longtemps : elle se lit dans ce déroulement, à la distance déclarée, sans configuration étendue'
+  note_ancrage_en: 'the strength of the odour is felt over the course of the sniff and drops when one smells it for long: it is read in this unfolding, at the declared distance, without an extended configuration'
+  empreinte: 'a45a6dee'
+  doute: oui
+  motif_doute: 'la distance déclarée est une donnée d’espace, et la force peut se juger en une seule inspiration ; le classement est discutable'
+  motif_doute_en: 'the declared distance is a spatial datum, and the strength can be judged in a single sniff; the classification is debatable'
 porteur: l’objet ou la partie qu’on sent (pas l’odeur d’une pièce entière)
 arité: 1
 condition_NA: objet qu’on ne peut pas approcher du nez (sous vitrine fermée).

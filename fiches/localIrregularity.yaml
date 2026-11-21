@@ -65,6 +65,12 @@ conditions_critiques:
 note_conditions: 'de loin, des écarts légers cessent de se voir ; dans l’intérieur d’une matière, le contre-jour ou une lumière de côté sur fond sombre révèlent bulles et nuages, et c’est en tournant l’objet
   qu’on voit l’intérieur ; la lumière reste en note (spec §9.7 H, règle 3) ; angle est critique pour la vue, par l’exception de cette règle ; dans l’intérieur, le jugement se fait à la vue seulement.
   Sur une photo, si l’on ne peut pas dire si l’écart est dans l’intérieur ou en surface : « non tranché ».'
+ancrage:
+  dimension: espace
+  dimension_en: space
+  note_ancrage: 'les endroits irréguliers se situent dans une surface, un trait, un bord ou l’intérieur d’une matière, par rapport à la régularité de l’ensemble : une configuration étendue'
+  note_ancrage_en: 'the irregular places are located in a surface, a line, an edge or the inside of a material, against the regularity of the whole: an extended configuration'
+  empreinte: '5d8bdebc'
 porteur: une surface, un trait ou un bord ; ou l’intérieur d’une matière qui laisse voir dedans (verre, résine, pierre translucide)
 note_porteur: 'Intérieur : on ne juge que ce qui se voit dans l’épaisseur, il faut donc que la matière laisse passer la lumière. Sur une matière opaque, seule la surface se juge. Une bulle se distingue d’une
   piqûre parce qu’elle glisse sous la surface quand on tourne l’objet et qu’elle ne casse pas le reflet. Si on ne peut pas trancher (photo), on écrit « non tranché ». Au toucher, seule la surface compte.

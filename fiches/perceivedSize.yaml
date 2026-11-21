@@ -44,6 +44,12 @@ conditions_critiques:
 - distance
 note_conditions: 'sur une image, la taille se juge d’après la scène montrée (note_reference) ; de loin ou sur un écran, les repères du corps manquent ; le cran « plus petit que le bout du doigt » demande
   de voir l’élément d’assez près (distance `contact` ou `near`) ou sur une image qui le montre de près à côté d’un repère du corps (un doigt, une main) : sinon, l’assertion reste non tranchée'
+ancrage:
+  dimension: espace
+  dimension_en: space
+  note_ancrage: 'ce que l’élément paraît mesurer est une étendue'
+  note_ancrage_en: 'what the element appears to measure is an extent'
+  empreinte: '085411cc'
 porteur: un élément, une partie ou un objet
 arité: 1
 condition_NA: porteur sans étendue perceptible.

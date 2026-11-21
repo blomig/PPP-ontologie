@@ -47,6 +47,12 @@ note_conditions: 'le compte dépend de ce qu’on voit de l’objet : toutes ses
   est à éprouver à part (T22, à trancher). Le « régime déclaré » de la définition renvoie aux conditions de perception (spec §9.7 H).'
 note_tolerance: une forme simple suffit quand l’écart avec la forme réelle est invisible au régime déclaré ; pour l’épreuve, une valeur numérique unique, commune à tous les annotateurs, est à fixer avant
   E1 (rapport du crash test 03, §4.1 ; aucune valeur proposée).
+ancrage:
+  dimension: espace
+  dimension_en: space
+  note_ancrage: 'le nombre de formes simples se lit dans la configuration en volume de l’objet ; faire le tour de l’objet prend du temps, mais ce temps n’est que celui de l’observation'
+  note_ancrage_en: 'the number of simple shapes is read in the volumetric configuration of the object; walking around the object takes time, but this is only the time of the observation'
+  empreinte: 'cebd7a77'
 porteur: un objet ou une partie vu dans son ensemble (une seule configuration par assertion)
 arité: 1
 condition_NA: porteur sans volume perceptible (un trait, un aplat) ; sur une photo, le porteur est l’objet photographié, pas l’image.

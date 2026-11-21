@@ -30,6 +30,12 @@ mesure:
 modalites:
 - vision
 mode_de_presentation: image
+ancrage:
+  dimension: espace
+  dimension_en: space
+  note_ancrage: 'les espaces laissés libres entre les éléments sont une configuration étendue'
+  note_ancrage_en: 'the spaces left free between the elements are an extended configuration'
+  empreinte: 'b0128d90'
 porteur: une configuration (composition, objet, façade)
 arité: 1
 condition_NA: composition sans espace laissé libre entre les éléments.

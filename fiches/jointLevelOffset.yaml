@@ -43,6 +43,12 @@ conditions_critiques:
 - angle
 - distance
 note_conditions: 'à la vue, un léger décalage se voit surtout sous un regard rasant ; de loin, un léger décalage paraît de même plan : les repères des régions nomment la distance ; l’angle et la distance sont critiques. Au toucher, la distance vaut toujours `contact` et l’angle est sans objet (le doigt sent la marche en passant d’une surface à l’autre) : ils restent déclarés critiques, et une assertion tactile n’est pas « non tranché » pour autant (spec §9.7 H, règles 3 et 4, décision de l’éditeur du projet du 2026-10-12, T22, option (b)).'
+ancrage:
+  dimension: espace
+  dimension_en: space
+  note_ancrage: 'la différence de niveau entre deux surfaces au joint est une configuration étendue, à la vue comme sous le doigt'
+  note_ancrage_en: 'the difference in level between two surfaces at the joint is an extended configuration, to sight as under the finger'
+  empreinte: 'e53d4b51'
 porteur: la partie « joint » de l’objet (app:<objet>#joint-…)
 arité: 1
 condition_NA: objet d’une seule pièce, sans joint perceptible.

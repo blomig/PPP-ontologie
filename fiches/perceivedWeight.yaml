@@ -58,6 +58,15 @@ mode_de_presentation: échantillon
 conditions_critiques:
 - geste
 note_conditions: 'le jugement se fait en soulevant l’objet et en le soupesant, sans appuyer le bras ni la main (facette `geste` : `unsupportedHolding`, spec §9.7 H, règle 8) [[klatzky_reed2009]] ; objet tenu en main (`inHand`), durée `glance`. On ne juge pas en portant l’objet : l’effort, la fatigue et la durée s’en mêlent. La prise, la répartition de la masse, la vue et la température de l’objet vont en note d’épisode, sans facette : une prise ferme abolit l’illusion matière-poids pour des objets légers (Ellis et Lederman 1999) [[ellis_lederman1999]] ; la lourdeur d’un objet qu’on manie suit sa répartition de masse (Amazeen et Turvey 1996) [[amazeen_turvey1996]] ; voir l’objet change ce qu’on en attend, mais l’illusion taille-poids naît aussi sans voir (Ellis et Lederman 1993) [[ellis_lederman1993]] ; la température figure parmi les causes d’illusions de poids (Buckingham 2014) [[buckingham2014]]. Épreuve sans voir de préférence, ou yeux ouverts déclarés ; un objet de « deux mains » (carton de livres, sac de riz) se juge yeux ouverts, exception déclarée pour la sécurité, soulevé depuis une table et non depuis le sol, à une masse visée de 10 kg (plafond : 12 kg) (choix de relecture (2026-11-02)). Une photo ne dit rien du poids : aucune assertion sur image ; qu’un objet ait l’air lourd est une attente (poids apparent, piste visuelle hors du périmètre actuel), pas une assertion de ce type.'
+ancrage:
+  dimension: temps
+  dimension_en: time
+  note_ancrage: 'le poids ne se sent que pendant qu’on soulève et soupèse l’objet : la valeur se réalise dans ce geste, et non dans une configuration étendue'
+  note_ancrage_en: 'weight is felt only while one lifts and hefts the object: the value is realised in this gesture, and not in an extended configuration'
+  empreinte: '39a6cbf6'
+  doute: oui
+  motif_doute: 'le geste est bref et la valeur est un effort ; on peut soutenir que le temps n’est que celui de l’observation, ou que le mouvement de la main rend l’espace constitutif aussi'
+  motif_doute_en: 'the gesture is brief and the value is an effort; one can argue that time is only that of the observation, or that the movement of the hand makes space constitutive too'
 porteur: 'un objet qu’on peut soulever d’une main ou des deux, pris en entier (pas une partie d’objet ni une matière en général : une boîte de métal mince est légère alors que le métal est lourd pour sa taille)'
 arité: 1
 condition_NA: 'objet qu’on ne peut pas ou qu’on n’a pas le droit de soulever (un mur, une façade, une œuvre de musée, un meuble fixé, un objet trop lourd pour être soulevé sans risque) ; objet vu seulement en image.'

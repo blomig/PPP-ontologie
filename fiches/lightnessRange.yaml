@@ -46,6 +46,12 @@ conditions_critiques:
 - distance
 note_conditions: 'une ombre ou un reflet sur un objet courbe fait varier ce qu’on voit : on juge les clartés de la matière, pas celles de l’éclairage (à éprouver) ; de loin, de petites taches claires et
   sombres se mêlent'
+ancrage:
+  dimension: espace
+  dimension_en: space
+  note_ancrage: 'l’écart se lit entre les clartés réparties dans une zone ou une composition étendue'
+  note_ancrage_en: 'the range is read between the lightnesses spread over an extended area or composition'
+  empreinte: 'b434f66b'
 porteur: une zone ou une composition
 arité: 1
 condition_NA: zone trop petite pour montrer plus d’une clarté (un point).

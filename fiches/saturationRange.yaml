@@ -45,6 +45,12 @@ conditions_critiques:
 - presentation
 - lumiere
 note_conditions: sur un écran ou un imprimé, la saturation vue peut différer ; une lumière vive peut faire paraître une couleur plus grisée ou plus vive
+ancrage:
+  dimension: espace
+  dimension_en: space
+  note_ancrage: 'l’écart se lit entre les saturations réparties dans une zone ou une composition étendue'
+  note_ancrage_en: 'the range is read between the saturations spread over an extended area or composition'
+  empreinte: '92a1618c'
 porteur: une zone ou une composition
 arité: 1
 condition_NA: zone trop petite pour montrer plus d’une couleur (un point).

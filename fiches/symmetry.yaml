@@ -42,6 +42,12 @@ mode_de_presentation: image
 conditions_critiques:
 - angle
 note_conditions: vue de biais, une forme symétrique paraît déformée ; l’angle de vue doit être déclaré
+ancrage:
+  dimension: espace
+  dimension_en: space
+  note_ancrage: 'la correspondance de part et d’autre d’un axe ou autour d’un centre est une configuration étendue'
+  note_ancrage_en: 'the correspondence on either side of an axis or around a centre is an extended configuration'
+  empreinte: '978cd573'
 porteur: une configuration (forme, objet, composition)
 arité: 1
 condition_NA: porteur sans configuration de parties perceptibles (un aplat).

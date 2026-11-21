@@ -100,6 +100,12 @@ note_conditions: 'un geste bref déclaré (facette `production` : en général `
   son jusqu’au niveau du bruit de fond) [[giordano_mcadams2006]] ; l’épisode dit si le son se tait avant la fin du fichier. Sur des sons très brefs (10 à 200 ms), un son qui s’éteint paraît plus court qu’un
   son qui monte (Schlauch et al., 2001, résumé) [[schlauch2001]]. Piège : pour un son frappé suivi d’une résonance, l’oreille juge la raideur de l’attaque plus par la façon dont le son s’éteint que par
   la façon dont il apparaît (Chion, 1983, art. 97) [[chion1983]] : on s’efforce de juger la résonance à part de l’attaque.'
+ancrage:
+  dimension: temps
+  dimension_en: time
+  note_ancrage: 'le temps pendant lequel le son continue après le geste est la valeur même'
+  note_ancrage_en: 'the time during which the sound goes on after the gesture is the value itself'
+  empreinte: '0592c4b3'
 porteur: un son produit par un geste bref sur un objet ou un appareil (un coup, un pincement, un déclenchement), dont on écoute la fin (facette `production`)
 arité: 1
 condition_NA: 'son entretenu, qui dure tant qu’on l’alimente (une machine en marche, un souffle, une voix) : quand l’apport d’énergie cesse, sa fin n’est pas une résonance de l’objet. Chion (1983, art.

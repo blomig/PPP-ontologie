@@ -63,6 +63,12 @@ note_conditions: 'règle 12 (spec §9.7 H) : `nez` est critique, déclaré par l
   dans la définition, et `moment` n’est pas déclaré critique. Une assertion faite à une autre phase que celle que fixe la définition est invalide pour ce type, et le contrôle du site la refuse
   ; l’observation reste en note d’épisode. `unknown` est accepté, mais exclu de E1 (choix de relecture (2026-10-20), série 78 bis). `temperature_bouchee` et `avant` sont à éprouver. Avalé ou recraché va
   dans l’épisode.'
+ancrage:
+  dimension: temps
+  dimension_en: time
+  note_ancrage: 'la valeur est une durée, celle pendant laquelle quelque chose de la portion reste perçu après l’avoir avalée ou recrachée'
+  note_ancrage_en: 'the value is a duration, that during which something of the portion is still perceived after swallowing or spitting it out'
+  empreinte: 'd4d63bac'
 porteur: la portion qu’on vient d’avaler ou de recracher (d’un produit identifié) ; ce qui en reste perçu
 note_porteur: 'porteur propre à la longueur (choix de relecture, 2026-10-20 ; proposition « Goût », 2.8.4) : la portion avalée ou recrachée, et non la portion en bouche des trois autres types du lot. L’objet
   du registre reste le produit identifié (§9.7 I).'

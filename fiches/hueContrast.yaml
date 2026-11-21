@@ -68,6 +68,12 @@ mode_de_presentation: image
 conditions_critiques:
 - presentation
 note_conditions: sur un écran ou un imprimé, les teintes peuvent différer de celles de l’objet
+ancrage:
+  dimension: espace
+  dimension_en: space
+  note_ancrage: 'la différence se lit entre deux termes vus ensemble, côte à côte, dans une même configuration'
+  note_ancrage_en: 'the difference is read between two terms seen together, side by side, in a single configuration'
+  empreinte: '5061aeae'
 porteur: deux termes (zones, parties ou objets), rôle `terme` pour chacun
 arité: 2
 dimension_comparee: ppp:hue

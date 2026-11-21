@@ -44,6 +44,12 @@ conditions_critiques:
 note_conditions: 'le bruit de fond masque la note (facette `bruit_de_fond`) ; la façon dont le son est produit compte aussi (facette `production` : un geste sur un objet, un appareil qui fonctionne, une
   voix) : le même objet ne sonne pas pareil frappé ou frotté (spec §9.7 H, règle 9). Pour un enregistrement (`presentation: recording`), ces facettes décrivent la prise de son ; l’écoute (casque ou enceintes,
   niveau réglé une fois) est notée dans l’épisode.'
+ancrage:
+  dimension: temps
+  dimension_en: time
+  note_ancrage: 'on n’entend une note précise, approximative ou aucune qu’au fil du son : la valeur se réalise dans son déroulement'
+  note_ancrage_en: 'one hears a precise note, an approximate one or none only as the sound goes on: the value is realised in its unfolding'
+  empreinte: '4649d0bf'
 porteur: un son entendu, produit par un objet, un appareil ou une voix, de la façon déclarée (facette `production`)
 arité: 1
 condition_NA: rien ne sonne de la façon déclarée (un objet qui ne sonne pas sous le geste déclaré).

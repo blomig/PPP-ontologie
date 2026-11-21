@@ -39,6 +39,12 @@ mesure:
 modalites:
 - vision
 mode_de_presentation: image
+ancrage:
+  dimension: espace
+  dimension_en: space
+  note_ancrage: 'la répartition des éléments, en paquets ou régulière, est une configuration étendue'
+  note_ancrage_en: 'the spread of the elements, in clusters or regular, is an extended configuration'
+  empreinte: 'e21a7276'
 porteur: une configuration de zones ou d’éléments
 arité: 1
 condition_NA: moins de trois éléments distincts.

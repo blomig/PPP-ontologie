@@ -76,6 +76,15 @@ conditions_critiques:
 - temperature_bouchee
 - avant
 note_conditions: 'conditions d’observation en bouche (spécification) : `nez` est critique (avec le nez pincé, l’arôme sort des composantes possibles, et le sucré « par l’odeur » aussi : Lim et Johnson, 2011 [[lim_johnson2011]]) ; `moment` est critique (les notes n’ont ni la même durée ni le même pic d’intensité dans la finale : Goodstein et al., 2014 [[goodstein2014]] ; la plus forte peut donc changer, ce qui reste à tester par l’épreuve d’accord) ; `temperature_bouchee` est critique (sucré : Talavera et al., 2005 [[talavera2005]]) ; `avant` est critique (l’astringence est cumulative [[green1993astr]]).'
+ancrage:
+  dimension: temps
+  dimension_en: time
+  note_ancrage: 'la composante qui l’emporte se juge sur le déroulement de la portion en bouche, où les composantes montent et s’éteignent à des rythmes différents'
+  note_ancrage_en: 'the component that prevails is judged over the unfolding of the portion in the mouth, where the components rise and fade at different rates'
+  empreinte: '3393eed5'
+  doute: oui
+  motif_doute: 'la dominance peut changer au cours de la dégustation ; si on la juge à un seul moment, le temps est le cadre du jugement plutôt que sa matière'
+  motif_doute_en: 'dominance can change during tasting; if it is judged at a single moment, time is the frame of the judgement rather than its matter'
 porteur: la portion en bouche (la gorgée ou la bouchée) d’un produit identifié, voie rétronasale (de l’arrière de la bouche vers le nez) comprise
 note_porteur: 'porteur commun au nombre de composantes distinguées, à l’intensité (goût) et à la composante dominante (choix de relecture, 2026-10-20 ; proposition « Goût ») : la portion en bouche, et non le produit identifié, parce que ces jugements portent sur ce qui est en bouche à un moment donné et changent pendant la dégustation [[pineau2009]]. L’objet du registre reste le produit identifié ; la portion en est la partie jugée (règle des parties d’un objet, dans la spécification).'
 arité: 1

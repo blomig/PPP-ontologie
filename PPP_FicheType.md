@@ -18,6 +18,8 @@ Les champs marqués — ne s’appliquent pas à tous les patrons.
 
 *2026-11-15 (série 114, choix de relecture (2026-11-15) ; amendement de la ceinture, §0.2 ; le noyau ne change pas)* : bloc `episodes_a_realiser`. (1) Champ facultatif `dimension_comparee`, pour un épisode du contraste général (`ppp:perceptualContrast`) : la qualité comparée, que l’assertion écrite à la réalisation déclarera comme `ppp:comparedDimension` (axiome 3 de la fiche). Justification : le lot 14 ne pouvait l’écrire que dans la consigne et la note, où rien ne la vérifie. (2) Les épisodes de la vue sont permis : ils préparent un exemplaire ou un second régime (E5), mais ne changent pas le palier, car X17 ne vise que le toucher, l’odorat et l’ouïe à défaut d’enregistrement ; pour la vue, la voie reste un exemplaire dans `fiches/exemplaires.yaml`.
 
+*2026-11-21 (série 120, choix de relecture (2026-11-21) ; amendement de la ceinture, §0.2 ; le noyau ne change pas ; spec §9.7 Q)* : bloc `ancrage`, rempli dans toutes les fiches actives et dans la réserve. Il dit selon quelle dimension la valeur du type se distribue ou se réalise dans le porteur tel qu’il est perçu : `dimension` (liste fermée : espace | temps | espace et temps), `note_ancrage` (une phrase qui justifie le choix), leurs pendants anglais `dimension_en` et `note_ancrage_en`, l’empreinte du français, et `doute: oui` avec un motif quand le classement est discutable. C’est un test de cohérence, pour qu’aucune fiche ne suppose sans le dire un modèle visuel ; il ne change ni les paliers ni la publiabilité. L’anglais est écrit dans la fiche, pas dans le gabarit `fiches/en/`, parce que le contrôle du site refuse dans un gabarit une clé que la maquette ne déclare pas traduisible.
+
 *v2.8 (2026-10-12, série 34, décisions de l’éditeur du projet)* : champ optionnel `labels_alternatifs_en` (T38 : labels alternatifs anglais, affichés et cherchables sur le site anglais ; pendant de `labels_alternatifs`, en français) ; `conditions_critiques` : `distance` et `angle` déclarables par un type à deux sens quand ils sont critiques à la vue (spec §9.7 H, règle 3, exception ; règle 4 : « sans objet » n’est pas « inconnu »).
 
 *v2.6 (2026-10-11, série 7)* : champ optionnel `labels_regions_propres` d’un contraste spécialisé (spec §9.7 B, T34) ; renvoi de `etat_de_l_art` au format `docs/bibliographie-par-type.md#groupe-…` et appel des références par `[[id]]` (spec §9.7 P) ; usage des images (`usage`, `lien_externe`, spec X16, Q15).
@@ -75,6 +77,13 @@ mode_de_presentation:  image | séquence | échantillon | protocole   # minimum 
 conditions_critiques: []   # optionnel (v2.3) : facettes du régime de perception dont la région dépend fortement, parmi presentation | lumiere | distance | angle | duree | geste | temperature_objet | production | bruit_de_fond | exposition | air | nez | temperature_bouchee | avant | moment (`production` et `bruit_de_fond` pour un type de l’ouïe seule, `exposition` et `air` pour un type de l’odorat seul : spec §9.7 H, règles 9 et 10, série 43, à relire ; `geste` et `temperature_objet` pour un type au toucher seul : spec §9.7 H, règles 3 et 8 ; `distance` et `angle` restent déclarables par un type à deux sens s’ils sont critiques à la vue : règle 3, exception, série 34) ; une facette critique `unknown` dans l’épisode impose « non tranché » (spec §9.7 H, A5)
 conditions_fixees: {}     # optionnel (série 78 ter, choix de relecture (2026-10-20)) : valeurs de facette que la définition du type impose, ex. `conditions_fixees: {moment: firstBite}` ; une assertion dont l’épisode déclare une autre valeur est invalide pour ce type, et le contrôle du site la refuse, l’observation restant en note d’épisode ; `unknown` est accepté, noté « non tranché » et exclu de E1. Une facette de `conditions_fixees` est d’office comparée à valeur égale dans E1 ; la mettre aussi dans `conditions_critiques` ne change rien (spec §9.7 H, règle 12)
 
+ancrage:            # (2026-11-21, spec §9.7 Q) selon quelle dimension la valeur se distribue ou se réalise dans le porteur tel qu’il est perçu ; test de cohérence, sans thèse sur la nature de l’espace et du temps
+  dimension:        espace | temps | espace et temps   # temps : la valeur n’existe qu’à travers un déroulement (rythme, montée et persistance en bouche, évolution d’une odeur) ; espace : elle se lit dans une configuration étendue, même saisie d’un coup d’œil ; espace et temps : les deux sont constitutifs, et non simplement présents. Qu’une observation prenne du temps ne suffit pas
+  dimension_en:     space | time | space and time
+  note_ancrage:     # une phrase, en français, qui justifie le choix
+  note_ancrage_en:  # la même phrase, écrite en anglais
+  empreinte:        # langues.empreinte(note_ancrage), entre guillemets
+  doute:            # oui quand le classement est discutable, avec motif_doute et motif_doute_en ; absent sinon
 porteur:            # P1 : exactement 1. P2 : arité ≥ 2, rôles nommés. P3 : l’épisode.
 arité:              # P2
 dimension_comparee: # P2 contraste : un spécialisé (ex. ppp:lightnessContrast) fixe ici l’id d’un type P1 ; le général (ppp:perceptualContrast) la laisse vide, chaque assertion déclare alors ppp:comparedDimension (spec §9.7 B)
@@ -273,6 +282,12 @@ grandeur_physique_homonyme: masse volumique (densité au sens physique), aucune 
 modalites:          [vision]   # ajouter `toucher` à `modalites` quand la fiche est décrite et éprouvée au toucher ; second type seulement si l’accord ne passe pas d’un sens à l’autre (Q13)
 mode_de_presentation: image
 
+ancrage:
+  dimension:        espace
+  dimension_en:     space
+  note_ancrage:     'la quantité d’éléments distincts se rapporte à la taille de l’objet ou de la zone : une configuration étendue'
+  note_ancrage_en:  'the quantity of distinct elements is related to the size of the object or area: an extended configuration'
+  empreinte:        '105c3014'
 porteur:            un objet d’attention, ou une partie / une zone
 arité:              1
 condition_NA:       porteur sans étendue perceptible (point, instant isolé).

@@ -85,6 +85,15 @@ note_conditions: 'règle 12 (spec §9.7 H) : `moment` est critique pour les type
   de relecture (2026-10-20), série 78 bis). Juger la dureté puis une autre texture d’une même bouchée donne deux épisodes. `nez` n’est pas critique ; `temperature_bouchee` et `avant` sont à éprouver. Le
   nombre de coups de dent et la taille de la bouchée vont dans l’épisode, sans facette ; la salive est une note d’épisode ; la dentition relève de l’état de l’observateur (note facultative), chacun mâchant
   à sa façon (Brown et al., 1994 [[brown1994]] ; Kohyama et al., 2002 [[kohyama2002]]).'
+ancrage:
+  dimension: temps
+  dimension_en: time
+  note_ancrage: 'la dureté se réalise dans un événement, le premier coup de dent ou la première pression de la langue, et non dans une configuration étendue'
+  note_ancrage_en: 'hardness is realised in an event, the first bite or the first press of the tongue, and not in an extended configuration'
+  empreinte: '1a4e44cf'
+  doute: oui
+  motif_doute: 'le coup de dent est bref et la valeur est une force ; on pourrait aussi la classer comme l’enfoncement d’un volume, donc dans l’espace'
+  motif_doute_en: 'the bite is brief and the value is a force; one could also classify it as the yielding of a volume, hence in space'
 porteur: la bouchée (la portion en bouche) d’un produit identifié, au premier coup de dent
 note_porteur: 'porteur des types de texture : la bouchée ou la gorgée (choix de relecture, 2026-10-20 ; proposition « Goût », 2.7). Ce porteur change pendant qu’on le juge, puisque la mastication le détruit
   : d’où la facette `moment`. L’objet du registre reste le produit identifié (« ce pain ») ; la bouchée en est la portion sur laquelle porte l’assertion, à la manière d’une partie (§9.7 I).'

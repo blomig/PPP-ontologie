@@ -46,6 +46,15 @@ mode_de_presentation: image
 conditions_critiques:
 - distance
 note_conditions: de loin, des reliefs fins cessent de se voir et deux surfaces paraissent de même texture
+ancrage:
+  dimension: espace
+  dimension_en: space
+  note_ancrage: 'la différence de taille des reliefs se lit entre deux surfaces vues ensemble, ou touchées tour à tour : une comparaison d’étendues'
+  note_ancrage_en: 'the difference in relief size is read between two surfaces seen together, or touched in turn: a comparison of extents'
+  empreinte: '29213430'
+  doute: oui
+  motif_doute: 'au toucher, les deux surfaces se comparent l’une après l’autre et les reliefs fins se sentent en faisant glisser le doigt : le temps pourrait être constitutif'
+  motif_doute_en: 'to the touch, the two surfaces are compared one after the other and fine reliefs are felt by sliding the finger: time could be constitutive'
 porteur: deux termes (zones, parties ou objets), rôle `terme` pour chacun
 arité: 2
 dimension_comparee: ppp:texture

@@ -41,6 +41,12 @@ mode_de_presentation: image
 conditions_critiques:
 - distance
 note_conditions: de loin, des éléments distincts se fondent et la zone paraît moins dense ou uniforme
+ancrage:
+  dimension: espace
+  dimension_en: space
+  note_ancrage: 'la quantité d’éléments distincts se rapporte à la taille de l’objet ou de la zone : une configuration étendue'
+  note_ancrage_en: 'the quantity of distinct elements is related to the size of the object or area: an extended configuration'
+  empreinte: '105c3014'
 porteur: un objet d’attention, ou une partie / une zone
 arité: 1
 condition_NA: porteur sans étendue perceptible (point, instant isolé). Une surface uniforme est APPLICABLE, en région `uniform`.

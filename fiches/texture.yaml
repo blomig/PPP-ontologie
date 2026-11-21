@@ -59,6 +59,15 @@ conditions_critiques:
 - distance
 note_conditions: 'la taille perçue des reliefs dépend de la distance (les repères des régions la nomment) ; la lumière rasante révèle les reliefs à la vue, mais n’est pas critique au toucher : non déclarée
   critique (T22)'
+ancrage:
+  dimension: espace
+  dimension_en: space
+  note_ancrage: 'la taille des reliefs se lit dans une surface étendue, à la vue comme sous la main'
+  note_ancrage_en: 'the size of the reliefs is read in an extended surface, to sight as under the hand'
+  empreinte: '180c316b'
+  doute: oui
+  motif_doute: 'au toucher, les reliefs fins se sentent surtout en faisant glisser le doigt : le mouvement pourrait rendre le temps constitutif, ce qui donnerait « espace et temps »'
+  motif_doute_en: 'to the touch, fine reliefs are felt mainly by sliding the finger: the movement could make time constitutive, which would give “space and time”'
 porteur: 'une surface : celle d’un objet ou d’une partie (la matière vue ou touchée). « Matière = porteur » : à confirmer (spec §10, §11).'
 arité: 1
 condition_NA: porteur sans surface perceptible (une lumière, un son). Une surface sans relief perceptible est APPLICABLE, en région `smooth`.

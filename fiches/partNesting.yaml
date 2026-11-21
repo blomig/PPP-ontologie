@@ -36,6 +36,12 @@ mode_de_presentation: image
 conditions_critiques:
 - distance
 note_conditions: de loin, les plus petites parties cessent de se voir et des niveaux disparaissent
+ancrage:
+  dimension: espace
+  dimension_en: space
+  note_ancrage: 'les parties contenues dans des parties forment une configuration étendue sur plusieurs niveaux'
+  note_ancrage_en: 'parts contained in parts form an extended configuration over several levels'
+  empreinte: '8dbe0070'
 porteur: une configuration (objet, composition, façade)
 arité: 1
 condition_NA: porteur sans parties perceptibles (un galet uni).

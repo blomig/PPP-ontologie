@@ -50,6 +50,15 @@ mode_de_presentation: échantillon
 conditions_critiques:
 - distance
 note_conditions: de loin, des reliefs fins cessent de se voir ; la lumière rasante les révèle à la vue, mais n’est pas critique au toucher (T22)
+ancrage:
+  dimension: espace
+  dimension_en: space
+  note_ancrage: 'le sens commun des reliefs se lit dans une surface étendue, à la vue comme sous la main'
+  note_ancrage_en: 'the common direction of the reliefs is read in an extended surface, to sight as under the hand'
+  empreinte: 'd3737322'
+  doute: oui
+  motif_doute: 'au toucher, le sens des reliefs se sent en faisant glisser le doigt dans plusieurs directions : le mouvement pourrait rendre le temps constitutif'
+  motif_doute_en: 'to the touch, the direction of the reliefs is felt by sliding the finger in several directions: the movement could make time constitutive'
 porteur: une surface, celle d’un objet ou d’une partie
 arité: 1
 condition_NA: surface sans relief perceptible (un verre poli, un stratifié imprimé lisse) ; un motif imprimé ou peint sans relief ne rend pas le type applicable.

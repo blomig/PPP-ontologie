@@ -65,6 +65,15 @@ mode_de_presentation: échantillon
 conditions_critiques:
 - avant
 note_conditions: 'conditions d’observation en bouche (spécification) : `avant` est critique, parce que l’astringence s’accumule d’une gorgée à l’autre (Green, 1993 [[green1993astr]]) ; on suit l’ordre des gorgées avec cette facette. `moment` n’est pas critique. `nez` n’est pas critique (ce n’est pas une saveur) ; `temperature_bouchee` est à éprouver. `duree` : les sous-qualités se notent pendant cinq à six minutes et décroissent à peu près de façon exponentielle (Lee et Lawless, 1991 [[lee_lawless1991]]) : le temps entre la prise et le jugement est déclaré. La salive va en note d’épisode.'
+ancrage:
+  dimension: temps
+  dimension_en: time
+  note_ancrage: 'le dessèchement monte après la gorgée, persiste et s’accumule d’une gorgée à l’autre : la valeur n’existe qu’à travers ce déroulement, et l’endroit de la bouche où on la sent ne la définit pas'
+  note_ancrage_en: 'the drying rises after the sip, persists and builds up from one sip to the next: the value exists only through this unfolding, and the place in the mouth where it is felt does not define it'
+  empreinte: '5eab7498'
+  doute: oui
+  motif_doute: 'un seul jugement, après une gorgée, peut se lire comme une force à un moment donné ; le temps est alors le cadre de l’observation plus que ce qui la constitue'
+  motif_doute_en: 'a single judgement after one sip can be read as a strength at a given moment; time is then the frame of the observation rather than what constitutes it'
 porteur: le produit identifié dont on goûte une portion (nature, origine, lot, date de production ou d’ouverture, conservation, concentration pour une boisson préparée) ; la portion goûtée n’est pas le
   porteur
 note_porteur: 'même porteur que les types de saveur (proposition « Goût » ; choix de relecture du 2026-10-19), bien que l’astringence soit un toucher et qu’elle se sente sur la bouche elle-même.'

@@ -61,6 +61,15 @@ conditions_critiques:
 note_conditions: 'la distance du nez est critique (facette `distance`, spec §9.7 H, règle 10) : la qualité perçue d’une odeur change avec sa concentration (Gross-Isseroff et Lancet, 1988, résumé seulement
   lu) [[gross_isseroff_lancet1988]] ; l’exposition (règle 10) agit sur l’intensité, son effet sur le caractère n’est pas sourcé ; les autres odeurs présentes et l’état de l’observateur sont notés dans l’épisode.
   Les références olfactives (étalons, coffrets) servent de repères de région, pas d’exemplaires (X17).'
+ancrage:
+  dimension: temps
+  dimension_en: time
+  note_ancrage: 'ce que l’odeur rappelle se dégage pendant qu’on la sent et peut évoluer d’une inspiration à l’autre : la valeur se réalise dans ce déroulement, l’odeur n’offrant pas de configuration étendue'
+  note_ancrage_en: 'what the odour recalls emerges while one smells it and can change from one sniff to the next: the value is realised in this unfolding, the odour offering no extended configuration'
+  empreinte: '371113ed'
+  doute: oui
+  motif_doute: 'le caractère peut se juger en une seule inspiration ; le temps serait alors le cadre de l’observation et non ce qui la constitue'
+  motif_doute_en: 'the character can be judged in a single sniff; time would then be the frame of the observation and not what constitutes it'
 porteur: l’objet ou la partie qu’on sent, à l’air ambiant
 arité: 1
 condition_NA: 'objet sans odeur sous la condition (intensité `noOdour`, « aucune odeur ») : la base n’est pas remplie.'

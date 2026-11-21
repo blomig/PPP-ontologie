@@ -49,6 +49,12 @@ conditions_critiques:
 - distance
 note_conditions: 'La distance compte : un écart qui se voit de près peut ne plus se voir de loin, et la région « évident » se juge à distance de pièce ; on déclare donc la distance. Les autres conditions
   critiques sont celles de la qualité comparée (par exemple la lumière et l’angle pour la brillance).'
+ancrage:
+  dimension: espace
+  dimension_en: space
+  note_ancrage: 'la différence se lit entre deux termes vus ensemble, côte à côte, dans une même configuration'
+  note_ancrage_en: 'the difference is read between two terms seen together, side by side, in a single configuration'
+  empreinte: '5061aeae'
 porteur: deux termes (zones, parties ou objets), rôle `terme` pour chacun
 arité: 2
 dimension_comparee: null

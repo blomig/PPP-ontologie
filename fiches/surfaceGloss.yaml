@@ -66,6 +66,12 @@ conditions_critiques:
 note_conditions: 'les reflets dépendent de la lumière et de l’angle de vue ; un jugement fait sur une photo dont l’angle et la lumière de prise de vue sont inconnus est « non tranché » (spec §9.7 H, règle
   4 ; A5). Sur une image, on ne peut ni bouger la tête ni tourner l’objet : on demande « Sur cette image, voit-on sur cette surface aucun reflet, un reflet doux et étalé, le reflet net d’une lampe ou d’une
   fenêtre, ou des images comme dans un miroir ? », et la réponse dit seulement ce que l’image montre, sous l’angle et la lumière de la prise de vue.'
+ancrage:
+  dimension: espace
+  dimension_en: space
+  note_ancrage: 'la netteté des reflets se lit dans les images que la surface renvoie de ce qui l’entoure, une configuration étendue'
+  note_ancrage_en: 'the sharpness of the reflections is read in the images the surface returns of its surroundings, an extended configuration'
+  empreinte: '5769284c'
 porteur: une surface, celle d’un objet ou d’une partie
 arité: 1
 condition_NA: porteur sans surface perceptible (une lumière, un son).

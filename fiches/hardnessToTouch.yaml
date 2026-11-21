@@ -70,6 +70,15 @@ conditions_critiques:
 - geste
 - temperature_objet
 note_conditions: 'le jugement se fait en pressant (facette `geste` : `pressure`, spec §9.7 H, règle 8), du bout de l’index, perpendiculairement à la surface, puis on relâche ; la température de l’objet (facette `temperature_objet`) change la dureté de certaines matières (beurre, cire, chocolat) : elle est critique. La force (« sans appuyer », « appui ferme »), la partie de la main (bout du doigt ou paume), la durée de l’appui, la main nue ou gantée et l’état de la peau vont en note d’épisode, sans facette. L’appui ferme s’apprend avant l’épreuve sur une balance de cuisine : presser du bout de l’index jusqu’à environ 1 kg affiché, puis presser l’objet à la main de la même façon ; cet étalonnage se refait une fois à mi-épreuve (après trois objets) et la force visée se déclare ; cet appui appris n’est pas une mesure de la dureté (choix de relecture (2026-11-02)). Objet posé à plat sur une table dure (`tableTop`) pour qu’il ne bouge pas, ou touché sur place (`inSitu`) ; durée `glance`. Épreuve sans voir : on presse plus fort quand on s’attend à un objet rigide (Klatzky et Reed, 2009) [[klatzky_reed2009]]. Une photo ne dit rien de la dureté : aucune assertion sur image, sauf indice visuel déclaré (un coussin creusé, une mousse écrasée), qui reste une assertion de vue sur cet indice, pas sur la dureté (spec X17 ; protocole d’échantillons, docs/protocole-echantillons-toucher.md §4.1).'
+ancrage:
+  dimension: espace
+  dimension_en: space
+  note_ancrage: 'la valeur est ce que le doigt enfonce à l’endroit pressé, une étendue de l’objet à cet endroit ; la pression prend du temps, mais ce temps n’est que celui du geste'
+  note_ancrage_en: 'the value is how far the finger sinks at the pressed spot, an extent of the object at that place; pressing takes time, but this is only the time of the gesture'
+  empreinte: '7feeb33e'
+  doute: oui
+  motif_doute: 'le cédé ne se sent que pendant la pression : on peut soutenir que le geste, donc le temps, est constitutif, ce qui donnerait « espace et temps »'
+  motif_doute_en: 'the yielding is felt only during the press: one can argue that the gesture, hence time, is constitutive, which would give “space and time”'
 porteur: 'un objet, ou une partie d’objet, à l’endroit pressé (pas la matière en général : une boîte de métal mince cède alors que le métal est dur)'
 arité: 1
 condition_NA: 'objet qu’on n’a pas le droit ou pas la possibilité de presser (œuvre de musée, objet fragile ou dangereux) ; ce qui ne garde pas de forme sous le doigt (un liquide, un gaz) ; objet vu seulement en image.'

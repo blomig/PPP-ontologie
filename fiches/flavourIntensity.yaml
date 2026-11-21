@@ -73,6 +73,15 @@ conditions_critiques:
 note_conditions: 'règle 12 (spec §9.7 H) : `nez` est critique (avec le nez pincé, la part rétronasale disparaît [[lawless2004]]) ; `moment` est critique (l’intensité monte puis baisse) ; `temperature_bouchee`
   est critique (le sucré varie avec la température : Talavera et al., 2005 [[talavera2005]]) ; `avant` est critique (piquant et astringence s’accumulent [[green1993astr]] ; l’irritation par l’éthanol diminue
   d’une prise à l’autre : Prescott et Swain-Campbell, 2000 [[prescott2000]]).'
+ancrage:
+  dimension: temps
+  dimension_en: time
+  note_ancrage: 'la force de l’ensemble monte et décroît pendant que la portion est en bouche : elle se lit sur ce déroulement, à un moment déclaré'
+  note_ancrage_en: 'the strength of the whole rises and falls while the portion is in the mouth: it is read on this unfolding, at a declared moment'
+  empreinte: 'a9fff442'
+  doute: oui
+  motif_doute: 'la force se juge à un moment déclaré ; on peut soutenir que le déroulement est le cadre du jugement et non ce qui le constitue'
+  motif_doute_en: 'the strength is judged at a declared moment; one can argue that the unfolding is the frame of the judgement rather than what constitutes it'
 porteur: la portion en bouche (la gorgée ou la bouchée) d’un produit identifié, voie rétronasale comprise
 note_porteur: 'porteur des trois premiers types du lot CIEL (choix de relecture, 2026-10-20 ; proposition « Goût », 2.8) : la portion en bouche, et non le produit identifié, parce que ces jugements portent
   sur ce qui est en bouche à un moment donné et changent pendant la dégustation [[pineau2009]]. L’objet du registre reste le produit identifié ; la portion en est la partie jugée (§9.7 I).'

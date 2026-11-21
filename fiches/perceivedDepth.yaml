@@ -39,6 +39,12 @@ conditions_critiques:
 - distance
 - angle
 note_conditions: une image fige un seul point de vue ; la distance et l’angle changent les plans qu’on distingue
+ancrage:
+  dimension: espace
+  dimension_en: space
+  note_ancrage: 'les plans rangés les uns devant les autres sont une configuration en profondeur'
+  note_ancrage_en: 'the planes ranged one in front of another are a configuration in depth'
+  empreinte: '2148c42e'
 porteur: une scène, une composition ou un objet vu dans son ensemble
 arité: 1
 condition_NA: porteur sans étendue perceptible.

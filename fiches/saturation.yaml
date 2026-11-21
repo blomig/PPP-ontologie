@@ -55,6 +55,15 @@ mode_de_presentation: image
 conditions_critiques:
 - presentation
 note_conditions: un écran ou un imprimé peut rendre une couleur plus ou moins vive que sur l’objet
+ancrage:
+  dimension: espace
+  dimension_en: space
+  note_ancrage: 'la saturation est celle d’une zone étendue, saisie d’un coup d’œil, sans déroulement'
+  note_ancrage_en: 'the saturation is that of an extended area, grasped at a glance, without any unfolding'
+  empreinte: 'c881eda5'
+  doute: oui
+  motif_doute: 'la saturation d’une zone n’est pas une configuration : l’étendue la porte sans la définir, et la règle « configuration étendue » s’y applique mal'
+  motif_doute_en: 'the saturation of an area is not a configuration: the extent carries it without defining it, and the rule “extended configuration” fits it poorly'
 porteur: une zone, une partie ou un objet
 arité: 1
 condition_NA: porteur sans surface ni lumière perceptible. Un gris est APPLICABLE, en région `neutral`.

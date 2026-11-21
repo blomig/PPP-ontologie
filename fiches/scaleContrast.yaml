@@ -44,6 +44,12 @@ conditions_critiques:
 - distance
 note_conditions: 'On juge la taille des choses telles qu’on les perçoit, pas la place qu’elles prennent dans l’image ou dans le champ de vision. La distance compte : deux éléments à des distances très différentes
   de l’observateur sont un cas limite, qu’on déclare. On dit aussi quelle étendue on compare (la hauteur, la longueur ou le diamètre) : deux éléments peuvent différer bien plus en surface qu’en hauteur.'
+ancrage:
+  dimension: espace
+  dimension_en: space
+  note_ancrage: 'la différence de taille se lit entre deux éléments vus ensemble, dans une même configuration'
+  note_ancrage_en: 'the difference in size is read between two elements seen together, in a single configuration'
+  empreinte: 'a0ec8c9f'
 porteur: deux termes (zones, parties ou objets), rôle `terme` pour chacun
 arité: 2
 dimension_comparee: ppp:perceivedSize

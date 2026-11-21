@@ -74,6 +74,15 @@ note_conditions: 'règle 12 (spec §9.7 H) : `avant` est critique, parce que la 
   et Swain-Campbell, 2000 [[prescott2000]]). `duree` compte : la sensation monte et dure, on ne juge pas à la première seconde ; le temps passé en bouche avant de juger est déclaré. `nez` n’est pas critique
   (ce n’est pas une saveur) ; `temperature_bouchee` est à éprouver (la capsaïcine active un canal qui répond aussi à la chaleur [[caterina1997]]). L’état de l’observateur (supergoûteurs) est une note facultative
   qui n’identifie personne.'
+ancrage:
+  dimension: temps
+  dimension_en: time
+  note_ancrage: 'la brûlure ou le picotement montent, culminent et persistent après la gorgée : la force se lit sur ce déroulement, à un moment déclaré'
+  note_ancrage_en: 'the burning or tingling rises, peaks and persists after the sip: the strength is read on this unfolding, at a declared moment'
+  empreinte: 'a67540a8'
+  doute: oui
+  motif_doute: 'la force se juge à un moment déclaré ; on peut soutenir que le déroulement est le cadre du jugement et non ce qui le constitue'
+  motif_doute_en: 'the strength is judged at a declared moment; one can argue that the unfolding is the frame of the judgement rather than what constitutes it'
 porteur: le produit identifié dont on goûte une portion (nature, origine, lot, date de production ou d’ouverture, conservation, concentration pour une boisson préparée) ; la portion goûtée n’est pas le
   porteur
 note_porteur: même porteur que les autres types de saveur et de trijumeau (proposition « Goût », section 6 ; choix de relecture du 2026-10-19, 8.1 point 4).

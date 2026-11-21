@@ -62,6 +62,12 @@ conditions_critiques:
 - lumiere
 - presentation
 note_conditions: la transparence se juge à contre-jour ou devant un fond ; valeur `backlit` de la facette lumière proposée en spec 2.3.1 (T23)
+ancrage:
+  dimension: espace
+  dimension_en: space
+  note_ancrage: 'ce que la matière laisse voir de ce qui est derrière elle se lit dans une configuration en profondeur, saisie d’un coup d’œil'
+  note_ancrage_en: 'what the material lets through of what lies behind it is read in a configuration in depth, grasped at a glance'
+  empreinte: '46a30966'
 porteur: une partie ou un objet vu avec son épaisseur (une plaque, une paroi, un récipient)
 note_porteur: 'Couche mince posée sur un support opaque (un vernis, une laque, une glaçure) : la couche est une partie (§9.7 I). Sa transparence se juge par ce qu’elle laisse voir du support, qui tient lieu de fond, à condition que le support montre quelque chose à reconnaître (sous un vernis clair, on voit nettement le veinage du bois : `transparent`) ; ou sur un échantillon de la même couche, seul, devant un fond ou à contre-jour. Si l’on ne peut faire ni l’un ni l’autre (par exemple sur un support uni), on écrit « non tranché », jamais `opaque` par défaut. Position de travail prudente (C12, docs/questions-crash-tests.md) ; le cas met à l’épreuve la base de `ppp:subsurfaceDepth` (E3).'
 arité: 1

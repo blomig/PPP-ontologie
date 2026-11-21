@@ -20,6 +20,15 @@ contre_exemple: 'Le nombre d’éléments relève de la densité : on peut être
 modalites:
 - vision
 mode_de_presentation: image
+ancrage:
+  dimension: espace
+  dimension_en: space
+  note_ancrage: 'la force avec laquelle une qualité se manifeste est lue dans une zone, une partie ou un objet vus'
+  note_ancrage_en: 'the strength with which a quality shows is read in a seen area, part or object'
+  empreinte: '6a8af200'
+  doute: oui
+  motif_doute: 'type en attente : l’intensité d’une saveur ou d’une odeur relèverait du temps, et celle d’une couleur porte sur une zone sans en être une configuration'
+  motif_doute_en: 'type on hold: the intensity of a taste or an odour would belong to time, and that of a colour bears on an area without being a configuration of it'
 porteur: une zone, une partie ou un objet
 arité: 1
 condition_NA: à définir.

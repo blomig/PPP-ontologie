@@ -46,6 +46,12 @@ mode_de_presentation: image
 conditions_critiques:
 - distance
 note_conditions: de loin, un bord progressif peut paraître franc ; la distance d’observation doit être déclarée
+ancrage:
+  dimension: espace
+  dimension_en: space
+  note_ancrage: 'le passage d’une zone à ce qui l’entoure se lit dans la largeur de la transition, une configuration étendue saisie d’un coup d’œil'
+  note_ancrage_en: 'the passage from an area to its surroundings is read in the width of the transition, an extended configuration grasped at a glance'
+  empreinte: '65093617'
 porteur: une zone ou une forme (le bord qui la délimite)
 arité: 1
 condition_NA: porteur sans bord perceptible (un aplat qui couvre tout le champ).

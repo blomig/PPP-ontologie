@@ -69,6 +69,12 @@ Les suites : Nanay 2018 (*The Monist*) étend l’analyse aux scènes ordinaires
 
 ---
 
+## 3 bis. Ancrage spatio-temporel des types (ajout du 2026-11-21, série 120 ; spec §9.7 Q)
+
+Chez **Kant** (*Critique de la raison pure*, Esthétique transcendantale, A19–49/B33–73), l’espace est la forme du sens externe et le temps la condition formelle de toute apparition ; PPP n’en reprend pas la thèse transcendantale (posture réaliste) et n’en tire qu’un test : chaque fiche déclare si sa valeur se réalise dans l’espace, dans le temps, ou dans les deux (*statut* : vérifiée sur la source, extraits de la traduction anglaise de Guyer et Wood lus en ligne le 2026-11-21, B37, A23, A34/B50-51 ; les bornes A19–49/B33–73 sont la pagination d’usage, non vérifiée page à page). **Gärdenfors 2000** range les dimensions spatiales (hauteur, largeur, profondeur) parmi les dimensions de qualité et décrit le temps comme une dimension à une seule coordonnée, rangée comme la droite des réels (*statut* : vérifiée sur résumé ou source secondaire : table des matières, un article de l’auteur qui reprend les exemples spatiaux, et un support de cours pour le temps ; le livre n’a pas été ouvert). **Strawson 1959** (*Individuals*, chapitre 2, « Sounds ») imagine un monde purement auditif, temporel sans être spatial, et se demande si l’on pourrait y réidentifier des particuliers (*statut* : vérifiée sur résumé ou source secondaire : deux articles et une page universitaire qui le citent, dont la p. 65). **O’Callaghan 2007** (*Sounds*) tient les sons pour des événements situés près de leur source, « créatures du temps », et plaide contre un modèle de la perception tiré de la vue seule (*statut* : vérifiée sur résumé ou source secondaire : résumé de l’éditeur). *PPP reprend* le refus d’un modèle visuel implicite et le goût, l’odorat et l’ouïe comme cas test ; *PPP se distingue* en ne tirant aucune thèse sur la nature de l’espace et du temps, et en n’utilisant pas de métrique (échelles de mesure : sans objet).
+
+---
+
 ## 4. Ontologies fondationnelles et méthode
 
 **DOLCE** (Masolo et al. 2003 ; Borgo et al. 2022) distingue la **qualité** individuelle (la couleur de *cette* rose), qui inhère à une entité, sa **valeur** (quale) et l’**espace de qualités** où se situe le quale. Engagement « descriptif », orienté vers les catégories cognitives et linguistiques.
@@ -150,6 +156,7 @@ Les suites : Nanay 2018 (*The Monist*) étend l’analyse aux scènes ordinaires
 - Hastings, J., Ceusters, W., Smith, B. & Mulligan, K. (2011). The Emotion Ontology: Enabling interdisciplinary research in the affective sciences. In *Modeling and Using Context (CONTEXT 2011)*, LNCS 6967, Springer, 119–123. DOI 10.1007/978-3-642-24279-3_14
 - Hopkins, R. (2017). *Aesthetics as Philosophy of Perception*, by Bence Nanay [recension]. *The British Journal of Aesthetics*, 57(3), 340–344. DOI 10.1093/aesthj/ayw047
 - Irvin, S., Schellekens, E., Nanay, B. & Smith, M. (2019). Is psychology relevant to aesthetics? A symposium. *Estetika: The European Journal of Aesthetics*, 56(1), 87–138. DOI 10.33134/eeja.185
+- Kant, I. (1781/1787). *Kritik der reinen Vernunft* ; trad. angl. P. Guyer & A. W. Wood, *Critique of Pure Reason*, Cambridge University Press, 1998, DOI 10.1017/CBO9780511804649 ; Esthétique transcendantale, A19–49/B33–73 (ajout du 2026-11-21 ; extraits lus en ligne, voir §3 bis)
 - Lakatos, I. (1978). *The Methodology of Scientific Research Programmes* (Philosophical Papers, vol. 1, J. Worrall & G. Currie dir.). Cambridge University Press. DOI 10.1017/CBO9780511621123
 - Levinson, J. (1984). Aesthetic supervenience. *The Southern Journal of Philosophy*, 22(S1), 93–110. DOI 10.1111/j.2041-6962.1984.tb01552.x
 - Logue, H. (2018). Can we visually experience aesthetic properties? In A. Bergqvist & R. Cowan (dir.), *Evaluative Perception*, Oxford University Press. DOI 10.1093/oso/9780198786054.003.0003
@@ -165,6 +172,7 @@ Les suites : Nanay 2018 (*The Monist*) étend l’analyse aux scènes ordinaires
 - Nanay, B. (2018). The aesthetic experience of artworks and everyday scenes. *The Monist*, 101(1), 71–82. DOI 10.1093/monist/onx037
 - Nanay, B. (2019). *Aesthetics: A Very Short Introduction*. Oxford University Press. DOI 10.1093/actrade/9780198826613.001.0001
 - Nanay, B. (2023). *Mental Imagery: Philosophy, Psychology, Neuroscience*. Oxford University Press. DOI 10.1093/oso/9780198809500.001.0001
+- O’Callaghan, C. (2007). *Sounds: A Philosophical Theory*. Oxford University Press. DOI 10.1093/acprof:oso/9780199215928.001.0001 (ajout du 2026-11-21 ; résumé de l’éditeur lu, livre non ouvert)
 - Popper, K. (1934). *Logik der Forschung*. Springer, Vienne ; trad. angl. *The Logic of Scientific Discovery*, Hutchinson, 1959 ; rééd. Routledge. DOI (rééd. Routledge) 10.4324/9780203994627
 - Rao, A. R. & Lohse, G. L. (1996). Towards a texture naming system: Identifying relevant dimensions of texture. *Vision Research*, 36(11), 1649–1669. DOI 10.1016/0042-6989(95)00202-2 (vérifié le 2026-10-10)
 - Richards, B. (2016). Cognitive penetrability, context, and aesthetics: Nanay and Danto on the Gallery of Indiscernibles. *Philosophical Psychology*, 29(7), 981–992. DOI 10.1080/09515089.2016.1219126
@@ -177,6 +185,7 @@ Les suites : Nanay 2018 (*The Monist*) étend l’analyse aux scènes ordinaires
 - Stokes, D. (2014). Cognitive penetration and the perception of art. *Dialectica*, 68(1), 1–34. DOI 10.1111/1746-8361.12049
 - Stokes, D. (2016). Recension de B. Nanay, *Aesthetics as Philosophy of Perception*. *Notre Dame Philosophical Reviews*, 2016.08.10. https://ndpr.nd.edu/reviews/aesthetics-as-philosophy-of-perception/
 - Stokes, D. (2018). Rich perceptual content and aesthetic properties. In A. Bergqvist & R. Cowan (dir.), *Evaluative Perception*, Oxford University Press. DOI 10.1093/oso/9780198786054.003.0002
+- Strawson, P. F. (1959). *Individuals: An Essay in Descriptive Metaphysics*. Methuen, Londres ; chapitre 2, « Sounds » (ajout du 2026-11-21 ; vu par sources secondaires, livre non ouvert, aucun DOI consulté)
 - Tamura, H., Mori, S. & Yamawaki, T. (1978). Textural features corresponding to visual perception. *IEEE Transactions on Systems, Man, and Cybernetics*, 8(6), 460–473. DOI 10.1109/TSMC.1978.4309999 (vérifié le 2026-10-10 : métadonnées Crossref, résumé IEEE Xplore ; texte intégral non lu)
 - Université d'Auckland, COMPSCI 708, « CBIR: Texture Features » (notes de cours, G. Gimel'farb) : https://www.cs.auckland.ac.nz/courses/compsci708s1c/lectures/Glect-html/topic4c708FSC.htm (source secondaire, consultée le 2026-10-10)
 - Wagemans, J., Elder, J. H., Kubovy, M., Palmer, S. E., Peterson, M. A., Singh, M. & von der Heydt, R. (2012). A century of Gestalt psychology in visual perception: I. Perceptual grouping and figure–ground organization. *Psychological Bulletin*, 138(6), 1172–1217. DOI 10.1037/a0029333

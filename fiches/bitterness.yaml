@@ -67,6 +67,15 @@ note_conditions: 'règle 12 (spec §9.7 H) : `nez` est critique pour tout type d
   température) [[lawless2004]]. `temperature_bouchee` et `avant` sont à éprouver pour l’amer. `duree` : le temps passé en bouche avant de juger ; environ 30 s entre deux prises et un rinçage à l’eau après
   chaque série, comme dans ISO 3972:2011 [[iso3972]]. La salive, ce qu’on a mangé avant, avalé ou recraché vont en note d’épisode ; l’état de l’observateur (sensibilité au PROP, âge, tabac) est une note
   facultative qui n’identifie personne (règle 12).'
+ancrage:
+  dimension: temps
+  dimension_en: time
+  note_ancrage: 'l’amer apparaît, culmine et s’attarde pendant la dégustation : sa force se lit sur ce déroulement, à un moment déclaré, et non dans une configuration étendue'
+  note_ancrage_en: 'bitterness appears, peaks and lingers during tasting: its strength is read on this unfolding, at a declared moment, and not in an extended configuration'
+  empreinte: 'b20f616c'
+  doute: oui
+  motif_doute: 'la force se juge à un moment déclaré ; on peut soutenir que le déroulement est le cadre du jugement et non ce qui le constitue'
+  motif_doute_en: 'the strength is judged at a declared moment; one can argue that the unfolding is the frame of the judgement rather than what constitutes it'
 porteur: le produit identifié dont on goûte une portion (nature, origine, lot, date de production ou d’ouverture, conservation, concentration pour une boisson préparée) ; la portion goûtée n’est pas le
   porteur
 note_porteur: 'porteur des types de saveur : le produit identifié (choix de relecture du 2026-10-19) ; la définition dit pourtant « en goûtant une portion du produit » : la portion est ce qu’on goûte, pas

@@ -42,6 +42,12 @@ mode_de_presentation: image
 conditions_critiques:
 - distance
 note_conditions: de loin, un écart étroit cesse de se voir
+ancrage:
+  dimension: espace
+  dimension_en: space
+  note_ancrage: 'la largeur de l’écart au joint est une étendue'
+  note_ancrage_en: 'the width of the gap at the joint is an extent'
+  empreinte: '48c9c9df'
 porteur: la partie « joint » de l’objet (app:<objet>#joint-…)
 arité: 1
 condition_NA: objet d’une seule pièce, sans joint perceptible.

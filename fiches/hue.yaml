@@ -54,6 +54,15 @@ mode_de_presentation: image
 conditions_critiques:
 - presentation
 note_conditions: sur un écran ou un imprimé, la teinte peut différer de celle de l’objet ; la couleur de la lumière n’a pas encore de facette (T23)
+ancrage:
+  dimension: espace
+  dimension_en: space
+  note_ancrage: 'la teinte est celle d’une zone étendue, saisie d’un coup d’œil, sans déroulement'
+  note_ancrage_en: 'the hue is that of an extended area, grasped at a glance, without any unfolding'
+  empreinte: 'f0a6a204'
+  doute: oui
+  motif_doute: 'la teinte d’une zone n’est pas une configuration : l’étendue la porte sans la définir, et la règle « configuration étendue » s’y applique mal'
+  motif_doute_en: 'the hue of an area is not a configuration: the extent carries it without defining it, and the rule “extended configuration” fits it poorly'
 porteur: une zone, une partie ou un objet
 arité: 1
 condition_NA: zone achromatique (blanc, gris, noir).

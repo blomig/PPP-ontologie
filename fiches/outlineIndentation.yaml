@@ -43,6 +43,12 @@ conditions_critiques:
 - angle
 - distance
 note_conditions: la silhouette change avec le point de vue ; de loin, les petites découpures disparaissent
+ancrage:
+  dimension: espace
+  dimension_en: space
+  note_ancrage: 'la silhouette qui rentre et sort contre son fond est une configuration étendue, saisie d’un coup d’œil'
+  note_ancrage_en: 'the silhouette going in and out against its background is an extended configuration, grasped at a glance'
+  empreinte: '7e5263e5'
 porteur: un objet ou une partie vu en entier contre un fond
 arité: 1
 condition_NA: objet ou partie dont on ne voit pas la silhouette entière (vu de trop près, ou sans fond distinct).

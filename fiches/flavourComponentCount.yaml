@@ -81,6 +81,15 @@ conditions_critiques:
 - nez
 - moment
 note_conditions: 'conditions d’observation en bouche (spécification) : `nez` est critique : fermer le nez retire les arômes du compte (Lawless et al., 2004 [[lawless2004]]). `moment` est critique : le compte change pendant la dégustation (Pineau et al., 2009 [[pineau2009]]) ; l’épisode déclare la phase (`chewing` : « pendant la mastication, ou gorgée gardée en bouche »), et l’épreuve d’accord compare à `moment` égal. `temperature_bouchee` et `avant` sont à éprouver.'
+ancrage:
+  dimension: temps
+  dimension_en: time
+  note_ancrage: 'les composantes se distinguent les unes après les autres pendant que la portion est en bouche puis s’éteint : le compte se fait sur ce déroulement, la bouche n’offrant pas de configuration étendue à parcourir'
+  note_ancrage_en: 'the components are told apart one after another while the portion is in the mouth and then fades: the count is made over this unfolding, the mouth offering no extended configuration to scan'
+  empreinte: '67952dd7'
+  doute: oui
+  motif_doute: 'on peut tenir que les composantes sont présentes ensemble et que seule leur découverte prend du temps, ce qui ne suffit pas à classer en « temps »'
+  motif_doute_en: 'one can hold that the components are present together and that only discovering them takes time, which is not enough to classify under “time”'
 porteur: la portion en bouche (la gorgée ou la bouchée) d’un produit identifié, voie rétronasale comprise
 note_porteur: 'porteur commun au nombre de composantes distinguées, à l’intensité (goût) et à la composante dominante (choix de relecture, 2026-10-20 ; proposition « Goût ») : la portion en bouche, et non le produit identifié, parce que ces jugements portent sur ce qui est en bouche à un moment donné et changent pendant la dégustation [[pineau2009]]. L’objet du registre reste le produit identifié ; la portion en est la partie jugée (règle des parties d’un objet, dans la spécification).'
 arité: 1

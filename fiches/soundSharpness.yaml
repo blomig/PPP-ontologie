@@ -88,6 +88,12 @@ note_conditions: 'aucun obstacle (porte, paroi, tissu) entre la source et l’or
   compte (facette `production`). Le niveau d’écoute est réglé une fois, puis laissé fixe pour tous les sons comparés : l’acuité calculée part du motif de sonie [[din45692]], donc du niveau, même si Schubert
   et Wolfe (2006) n’observent pas d’effet net de la sonie sur leurs sons [[schubert_wolfe2006]]. Piège : la hauteur déplace l’acuité jugée, une note plus aiguë paraissant plus claire [[schubert_wolfe2006]]
   [[marozeau_decheveigne2007]] ; on compare des sons de hauteur voisine, ou l’on note la hauteur.'
+ancrage:
+  dimension: temps
+  dimension_en: time
+  note_ancrage: 'un son ne paraît sombre ou clair qu’en durant : la valeur se réalise dans le déroulement du son, et l’endroit d’où il vient ne la définit pas'
+  note_ancrage_en: 'a sound sounds dark or bright only by lasting: the value is realised in the unfolding of the sound, and the place it comes from does not define it'
+  empreinte: '124e8b1d'
 porteur: le son d’un objet, d’un appareil ou d’une voix, sous un geste, un fonctionnement ou une émission déclarés
 arité: 1
 condition_NA: 'objet, appareil ou voix qui ne sonne pas sous le geste, le fonctionnement ou l’émission déclarés. La voix est admise par choix de relecture (2026-11-05) : Schubert et Wolfe (2006) jugent

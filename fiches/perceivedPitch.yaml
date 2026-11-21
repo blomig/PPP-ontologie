@@ -92,6 +92,12 @@ note_conditions: 'la façon dont le son est produit compte (facette `production`
   (spec §9.7 H, règle 9). Pour un enregistrement (`presentation: recording`), ces facettes décrivent la prise de son ; l’écoute se déclare dans la note : casque ou enceintes, jamais le haut-parleur d’un
   téléphone, car beaucoup de petits appareils ne rendent pas les sons graves [[mcdermott_oxenham2008]] ; on entend souvent encore la même note, mais une note très grave peut presque disparaître (choix de
   relecture (2026-11-03)) ; niveau réglé une fois, puis non modifié, pour qu’un son plus fort ne passe pas pour plus aigu.'
+ancrage:
+  dimension: temps
+  dimension_en: time
+  note_ancrage: 'un son n’a de hauteur qu’en durant : la note se réalise dans le déroulement du son, et l’endroit d’où il vient ne la définit pas'
+  note_ancrage_en: 'a sound has a pitch only by lasting: the note is realised in the unfolding of the sound, and the place it comes from does not define it'
+  empreinte: 'cc2d1535'
 porteur: un son entendu, produit par un objet, un appareil ou une voix, de la façon déclarée (facette `production`)
 arité: 1
 condition_NA: 'rien ne sonne de la façon déclarée (un objet qui ne sonne pas sous le geste déclaré) ; son sans hauteur repérable (`ppp:pitchClarity` en `noPitch` : un froissement de papier, un souffle).'
